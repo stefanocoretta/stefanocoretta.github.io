@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stefano Coretta on Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/</link>
+    <link>/</link>
     <description>Recent content in Stefano Coretta on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,11 +11,90 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Research output</title>
+      <link>/output/</link>
+      <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/output/</guid>
+      <description>&lt;h2&gt;
+Talks and posters
+&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;Vowel duration and tongue root advancement in Italian and Polish.&amp;lt;/em&amp;gt; Talk presented at Ultrafest VIII, 4 Oct, University of Potsdam, Germany.&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://stefanocoretta.altervista.org/documents/2017-ultrafest.pdf&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-download fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/stefanocoretta/2017-ultrafest&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;A streamlined workflow for &amp;quot;doing phonetics by computer&amp;quot; (using Praat and R).&amp;lt;/em&amp;gt; Talk presented at the Postgraduate Academic Research in Linguistics at York (PARLAY), 15 Sep, University of York, UK.&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://stefanocoretta.altervista.org/documents/2017-parlay.pdf&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-download fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/stefanocoretta/speakr-demo&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;Towards an articulatory based typology of laryngeal effects on vowel duration.&amp;lt;/em&amp;gt; Poster presented at the 25th Manchester Phonology Meeting (25mfm), 25–27 May, University of Manchester.&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://stefanocoretta.altervista.org/documents/2017-mfm.pdf&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-download fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/stefanocoretta/ma-thesis-york&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;Reproducibility and phonetic research: a computational workflow.&amp;lt;/em&amp;gt; Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28–29 April, University of Manchester.&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://nbviewer.jupyter.org/github/stefanocoretta/reproducible-phonetics/blob/master/slides.pdf&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-download fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/stefanocoretta/reproducible-phonetics&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2015&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;A new case of “rhinoglottophilia:” from nasalisation to aspiration.&amp;lt;/em&amp;gt; Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESoHPh2), 3–4 December, University of Edinburgh.&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://stefanocoretta.altervista.org/documents/2015-esohph.pdf&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-download fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2&gt;
+Software and packages
+&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;tidymv&amp;lt;/em&amp;gt;, Tidy Model Visualisation&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://github.com/stefanocoretta/tidymv&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;rticulate&amp;lt;/em&amp;gt;, Ultrasound Tongue Imaging in R&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://github.com/stefanocoretta/rticulate&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2017&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;speakr&amp;lt;/em&amp;gt;, an R wrapper for the phonetic software Praat&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/stefanocoretta/speakr&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2016&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;SFM exporter&amp;lt;/em&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://stefanocoretta.shinyapps.io/sfm-exporter/&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2016&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;language-praat&amp;lt;/em&amp;gt;, PRAAT scripting language support in the Atom Editor&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://atom.io/packages/language-praat&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;td&amp;gt;2013&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;em&amp;gt;phonrule&amp;lt;/em&amp;gt;, LaTeX macros for typesetting phonological rules&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;https://www.ctan.org/pkg/phonrule&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-external-link fa-lg&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Research</title>
-      <link>https://stefanocoretta.github.io/research/</link>
+      <link>/research/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/research/</guid>
+      <guid>/research/</guid>
       <description>&lt;p&gt;My research interests gravitate towards the study of &lt;em&gt;human language&lt;/em&gt; and of &lt;em&gt;speech sounds,&lt;/em&gt;&lt;strong&gt; &lt;/strong&gt;from a variety of intersecting perspectives. In particular, I am interested in speech production, sound change and computational modelling. For my PhD project (supervised by Dr &lt;a href=&#34;http://www.bermudez-otero.com/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ricardo Bermúdez-Otero&lt;/a&gt; and Dr &lt;a href=&#34;https://sites.google.com/site/patrycjastrycharczuk/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrycja Strycharczuk&lt;/a&gt;), I am currently investigating the effect of consonant voicing on vowel duration, using &lt;a href=&#34;https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ultrasound tongue imaging&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Electroglottograph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;electroglottography&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;My position regarding phonology can be summarised as follows:&lt;/p&gt;
 &lt;ul&gt;

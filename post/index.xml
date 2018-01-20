@@ -12,25 +12,21 @@
     
     <item>
       <title>Short review of phonological databases</title>
-      <link>/short-review-phonological-databases/</link>
+      <link>/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 13:29:41 +0000</pubDate>
       
-      <guid>/short-review-phonological-databases/</guid>
-      <description>
-
-&lt;p&gt;List of available phonological databases (to my knowledge):&lt;/p&gt;
-
+      <guid>/post/2014-06-30-short-review-phonological-databases/</guid>
+      <description>&lt;p&gt;List of available phonological databases (to my knowledge):&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;UCLA Phonological Segment Inventory Database (&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34; target=&#34;_blank&#34;&gt;UPSID&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Lyon-Albuquerque Phonological Systems Database (&lt;a href=&#34;http://www.lapsyd.ddl.ish-lyon.cnrs.fr&#34; target=&#34;_blank&#34;&gt;LAPSyD&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Phonetics Information Base and Lexicon (&lt;a href=&#34;http://phoible.org&#34; target=&#34;_blank&#34;&gt;PHOIBLE&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;UCLA Phonological Segment Inventory Database (&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34;&gt;UPSID&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Lyon-Albuquerque Phonological Systems Database (&lt;a href=&#34;http://www.lapsyd.ddl.ish-lyon.cnrs.fr&#34;&gt;LAPSyD&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Phonetics Information Base and Lexicon (&lt;a href=&#34;http://phoible.org&#34;&gt;PHOIBLE&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;World Atlas of Language Structures (&lt;a title=&#34;WALS&#34; href=&#34;http://wals.info&#34; target=&#34;_blank&#34;&gt;WALS&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;South American Phonological Inventory Database (&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34; target=&#34;_blank&#34;&gt;SAPhon&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;South American Phonological Inventory Database (&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Indo-European Phonological Inventory Database (&lt;a title=&#34;IEPhon&#34; href=&#34;http://iephon.unipv.it/database/&#34; target=&#34;_blank&#34;&gt;IEPhon&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;ucla-phonological-segment-inventory-database&#34;&gt;UCLA Phonological Segment Inventory Database&lt;/h1&gt;
-
+&lt;section id=&#34;uclaphonologicalsegment-inventorydatabase&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;UCLA Phonological Segment Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 451 languages&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: genetically balanced&lt;/li&gt;
@@ -39,9 +35,9 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language, number of sounds, frequency index, family and phonetic features&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;lyon-albuquerque-phonological-systems-database&#34;&gt;Lyon-Albuquerque Phonological Systems Database&lt;/h1&gt;
-
+&lt;/section&gt;
+&lt;section id=&#34;lyon-albuquerque-phonological-systems-database&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;Lyon-Albuquerque Phonological Systems Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: (in progress)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced&lt;/li&gt;
@@ -50,9 +46,9 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, classification), sounds (table format), phonetic features, syllable&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: segment table, boolean (sound, feature, area, family, syllable)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;phonetics-information-base-and-lexicon&#34;&gt;Phonetics Information Base and Lexicon&lt;/h1&gt;
-
+&lt;/section&gt;
+&lt;section id=&#34;phonetics-information-base-and-lexicon&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;Phonetics Information Base and Lexicon&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 1,010 languages&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced&lt;/li&gt;
@@ -61,9 +57,9 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso), sounds (list format), source&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;world-atlas-of-language-structures&#34;&gt;World Atlas of Language Structures&lt;/h1&gt;
-
+&lt;/section&gt;
+&lt;section id=&#34;world-atlas-of-language-structures&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;World Atlas of Language Structures&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  2,679 languages&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: balanced&lt;/li&gt;
@@ -72,9 +68,9 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, genus, family, macroarea; list format),  characteristics (list format)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list and map&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;south-american-phonological-inventory-database&#34;&gt;South American Phonological Inventory Database&lt;/h1&gt;
-
+&lt;/section&gt;
+&lt;section id=&#34;south-americanphonologicalinventorydatabase&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;South American Phonological Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  359 languages&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced, South America&lt;/li&gt;
@@ -83,9 +79,9 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, family, country; list format and map),  sounds (table)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;indo-european-phonological-inventory-database&#34;&gt;Indo-European Phonological Inventory Database&lt;/h1&gt;
-
+&lt;/section&gt;
+&lt;section id=&#34;indo-european-phonologicalinventorydatabase&#34; class=&#34;level1&#34;&gt;
+&lt;h1&gt;Indo-European Phonological Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  18 languages&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced, Indo-European family&lt;/li&gt;
@@ -94,6 +90,7 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, family, country; list format and map),  sounds (table)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/section&gt;
 </description>
     </item>
     

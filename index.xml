@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stefano Coretta on Stefano Coretta</title>
-    <link>/</link>
+    <link>https://stefanocoretta.github.io/</link>
     <description>Recent content in Stefano Coretta on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,11 +11,152 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Vowel formants trajectories and tidy data</title>
+      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <description>&lt;p&gt;With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.&lt;/p&gt;
+&lt;p&gt;Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset.
+In this format, separate columns contain formant values for each interval within the vowel.
+Normally, values are extracted every 10% or 5% intervals within the vowel.&lt;/p&gt;
+&lt;p&gt;To work with formant trajectories data in &lt;code&gt;R&lt;/code&gt;, we need instead a ‘long format’ dataset.
+In a long format dataset, the percent intervals are layed out in rows, rather then columns.&lt;/p&gt;
+&lt;p&gt;We start by reading in the formant data, which were kindly provided by &lt;a href=&#34;http://tiny.cc/sjn&#34;&gt;Stephen Nichols&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories &amp;lt;- read_csv(&amp;quot;./static/data/nichols-2018/tulemupepelako.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   Vowel = col_character(),
+##   Word = col_character()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## See spec(...) for full column specifications.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 61
+##    Time Vowel Word      Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35
+##   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1  194. u     tulemupe…     43.3  406.  439.  453.  456.  430.  357.  314.
+## 2  194. e     tulemupe…    103.   503.  517.  537.  564.  556.  362.  315.
+## 3  194. u     tulemupe…     14.1  290.  288.  286.  283.  281.  281.  282.
+## 4  194. e     tulemupe…     75.7  440.  441.  439.  429.  386.  269.  250.
+## 5  194. e     tulemupe…     68.2  437.  445.  479.  562.  622.  605.  523.
+## 6  195. a     tulemupe…     89.8  800.  736.  662.  543.  447.  564.  768.
+## 7  195. o     tulemupe…     98.5  482.  463.  471.  326.  316.  573. 1511.
+## # ... with 50 more variables: F1_40 &amp;lt;dbl&amp;gt;, F1_45 &amp;lt;dbl&amp;gt;, F1_50 &amp;lt;dbl&amp;gt;,
+## #   F1_55 &amp;lt;dbl&amp;gt;, F1_60 &amp;lt;dbl&amp;gt;, F1_65 &amp;lt;dbl&amp;gt;, F1_70 &amp;lt;dbl&amp;gt;, F1_75 &amp;lt;dbl&amp;gt;,
+## #   F1_80 &amp;lt;dbl&amp;gt;, F1_85 &amp;lt;dbl&amp;gt;, F1_90 &amp;lt;dbl&amp;gt;, F1_95 &amp;lt;dbl&amp;gt;, F2_05 &amp;lt;dbl&amp;gt;,
+## #   F2_10 &amp;lt;dbl&amp;gt;, F2_15 &amp;lt;dbl&amp;gt;, F2_20 &amp;lt;dbl&amp;gt;, F2_25 &amp;lt;dbl&amp;gt;, F2_30 &amp;lt;dbl&amp;gt;,
+## #   F2_35 &amp;lt;dbl&amp;gt;, F2_40 &amp;lt;dbl&amp;gt;, F2_45 &amp;lt;dbl&amp;gt;, F2_50 &amp;lt;dbl&amp;gt;, F2_55 &amp;lt;dbl&amp;gt;,
+## #   F2_60 &amp;lt;dbl&amp;gt;, F2_65 &amp;lt;dbl&amp;gt;, F2_70 &amp;lt;dbl&amp;gt;, F2_75 &amp;lt;dbl&amp;gt;, F2_80 &amp;lt;dbl&amp;gt;,
+## #   F2_85 &amp;lt;dbl&amp;gt;, F2_90 &amp;lt;dbl&amp;gt;, F2_95 &amp;lt;dbl&amp;gt;, F3_05 &amp;lt;dbl&amp;gt;, F3_10 &amp;lt;dbl&amp;gt;,
+## #   F3_15 &amp;lt;dbl&amp;gt;, F3_20 &amp;lt;dbl&amp;gt;, F3_25 &amp;lt;dbl&amp;gt;, F3_30 &amp;lt;dbl&amp;gt;, F3_35 &amp;lt;dbl&amp;gt;,
+## #   F3_40 &amp;lt;dbl&amp;gt;, F3_45 &amp;lt;dbl&amp;gt;, F3_50 &amp;lt;dbl&amp;gt;, F3_55 &amp;lt;dbl&amp;gt;, F3_60 &amp;lt;dbl&amp;gt;,
+## #   F3_65 &amp;lt;dbl&amp;gt;, F3_70 &amp;lt;dbl&amp;gt;, F3_75 &amp;lt;dbl&amp;gt;, F3_80 &amp;lt;dbl&amp;gt;, F3_85 &amp;lt;dbl&amp;gt;,
+## #   F3_90 &amp;lt;dbl&amp;gt;, F3_95 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word &lt;em&gt;tulemupepelako&lt;/em&gt; ‘we are praying for her’ (Bemba, [&lt;code&gt;bemb1257&lt;/code&gt;]).
+It’s a toy dataset of course, just for purpose of illustration, so not very exciting!&lt;/p&gt;
+&lt;p&gt;The values for each 5% interval for each formant are in separate columns.
+For plotting and modelling, though, we need the data to be in a ‘tidy’ format &lt;span class=&#34;citation&#34;&gt;(Wickham 2014)&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;each observation unit is in a separate row&lt;/li&gt;
+&lt;li&gt;each variable is a separate column&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In our case, each observation unit is a 5% interval.
+As for the variables, they are: time in the recording, word, vowel, vowel duration, F1, F2, and F3.&lt;/p&gt;
+&lt;p&gt;The first step towards a long format data set is to gather all the columns that have formant values to a column indicating the formant plus interval (like ‘F1_05’) and the value of that formant in that interval.
+We can use &lt;code&gt;gather()&lt;/code&gt; for this.&lt;/p&gt;
+&lt;p&gt;In the following chunks, I will illustrate the results of each step separately by saving the output of the functions to variables.
+Later in this post, you’ll find a pipe chain with all functions without intermediate outputs.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_gath &amp;lt;- gather(trajectories, &amp;quot;formant&amp;quot;, &amp;quot;value&amp;quot;, F1_05:F3_95)
+trajectories_gath&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 399 x 6
+##     Time Vowel Word           Duration formant value
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1  194. u     tulemupepelako     43.3 F1_05    406.
+##  2  194. e     tulemupepelako    103.  F1_05    503.
+##  3  194. u     tulemupepelako     14.1 F1_05    290.
+##  4  194. e     tulemupepelako     75.7 F1_05    440.
+##  5  194. e     tulemupepelako     68.2 F1_05    437.
+##  6  195. a     tulemupepelako     89.8 F1_05    800.
+##  7  195. o     tulemupepelako     98.5 F1_05    482.
+##  8  194. u     tulemupepelako     43.3 F1_10    439.
+##  9  194. e     tulemupepelako    103.  F1_10    517.
+## 10  194. u     tulemupepelako     14.1 F1_10    288.
+## # ... with 389 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have a column &lt;code&gt;formant&lt;/code&gt; with the formant plus interval label, and a column &lt;code&gt;value&lt;/code&gt; with its value (in Hertz in our case).&lt;/p&gt;
+&lt;p&gt;The next step is to separate the label of the formant plus interval into two separate columns: one for &lt;code&gt;formant&lt;/code&gt;, and one for &lt;code&gt;interval&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_sep &amp;lt;- separate(trajectories_gath, formant, c(&amp;quot;formant&amp;quot;, &amp;quot;interval&amp;quot;), convert = TRUE)
+trajectories_sep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 399 x 7
+##     Time Vowel Word           Duration formant interval value
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+##  1  194. u     tulemupepelako     43.3 F1             5  406.
+##  2  194. e     tulemupepelako    103.  F1             5  503.
+##  3  194. u     tulemupepelako     14.1 F1             5  290.
+##  4  194. e     tulemupepelako     75.7 F1             5  440.
+##  5  194. e     tulemupepelako     68.2 F1             5  437.
+##  6  195. a     tulemupepelako     89.8 F1             5  800.
+##  7  195. o     tulemupepelako     98.5 F1             5  482.
+##  8  194. u     tulemupepelako     43.3 F1            10  439.
+##  9  194. e     tulemupepelako    103.  F1            10  517.
+## 10  194. u     tulemupepelako     14.1 F1            10  288.
+## # ... with 389 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can create individual columns for each formant from F1 to F3.
+We can achieve this with &lt;code&gt;spread()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_spr &amp;lt;- spread(trajectories_sep, formant, value)
+trajectories_spr&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 133 x 8
+##     Time Vowel Word           Duration interval    F1    F2    F3
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1  194. u     tulemupepelako     43.3        5  406. 1205. 2626.
+##  2  194. u     tulemupepelako     43.3       10  439. 1226. 2556.
+##  3  194. u     tulemupepelako     43.3       15  453. 1246. 2507.
+##  4  194. u     tulemupepelako     43.3       20  456. 1291. 2451.
+##  5  194. u     tulemupepelako     43.3       25  430. 1418. 2331.
+##  6  194. u     tulemupepelako     43.3       30  357. 1555. 2268.
+##  7  194. u     tulemupepelako     43.3       35  314. 1603. 2335.
+##  8  194. u     tulemupepelako     43.3       40  288. 1709. 2437.
+##  9  194. u     tulemupepelako     43.3       45  286. 1712. 2461.
+## 10  194. u     tulemupepelako     43.3       50  327. 1747. 2470.
+## # ... with 123 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What we have now is a long format dataset, with separate columns for each formant, and individual rows for each vowel interval.&lt;/p&gt;
+&lt;div id=&#34;the-pipe-chain&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The pipe chain&lt;/h2&gt;
+&lt;p&gt;All the steps above can be chained by using the pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories &amp;lt;- trajectories %&amp;gt;%
+  gather(&amp;quot;formant&amp;quot;, &amp;quot;value&amp;quot;, F1_05:F3_95) %&amp;gt;%
+  separate(formant, c(&amp;quot;formant&amp;quot;, &amp;quot;interval&amp;quot;), convert = TRUE) %&amp;gt;%
+  spread(formant, value)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can finally easily plot the formant trajectories.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories %&amp;gt;%
+  ggplot(aes(x = interval)) +
+  geom_smooth(aes(y = F1), se = FALSE, colour = &amp;quot;red&amp;quot;) +
+  geom_smooth(aes(y = F2), se = FALSE, colour = &amp;quot;green&amp;quot;) +
+  geom_smooth(aes(y = F3), se = FALSE, colour = &amp;quot;blue&amp;quot;) +
+  facet_wrap(~ Vowel) +
+  ylab(&amp;quot;Hertz&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39;
+## `geom_smooth()` using method = &amp;#39;loess&amp;#39;
+## `geom_smooth()` using method = &amp;#39;loess&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-wickham2014&#34;&gt;
+&lt;p&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10). Foundation for Open Access Statistics:1–23. &lt;a href=&#34;https://doi.org/http://dx.doi.org/10.18637/jss.v059.i10&#34; class=&#34;uri&#34;&gt;https://doi.org/http://dx.doi.org/10.18637/jss.v059.i10&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Research output</title>
-      <link>/output/</link>
+      <link>https://stefanocoretta.github.io/output/</link>
       <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/output/</guid>
+      <guid>https://stefanocoretta.github.io/output/</guid>
       <description>&lt;h2&gt;Talks and posters&lt;/h2&gt;
 
 &lt;table&gt;
@@ -90,24 +231,24 @@
     
     <item>
       <title>Research</title>
-      <link>/research/</link>
+      <link>https://stefanocoretta.github.io/research/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/research/</guid>
+      <guid>https://stefanocoretta.github.io/research/</guid>
       <description>&lt;p&gt;My research interests gravitate towards the study of &lt;em&gt;human language&lt;/em&gt; and of &lt;em&gt;speech sounds,&lt;/em&gt;&lt;strong&gt; &lt;/strong&gt;from a variety of intersecting perspectives. In particular, I am interested in speech production, sound change and computational modelling. For my PhD project (supervised by Dr &lt;a href=&#34;http://www.bermudez-otero.com/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ricardo Bermúdez-Otero&lt;/a&gt; and Dr &lt;a href=&#34;https://sites.google.com/site/patrycjastrycharczuk/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrycja Strycharczuk&lt;/a&gt;), I am currently investigating the effect of consonant voicing on vowel duration, using &lt;a href=&#34;https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ultrasound tongue imaging&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Electroglottograph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;electroglottography&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;My position regarding phonology can be summarised as follows:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;it is a &lt;strong&gt;dynamic system&lt;/strong&gt; &lt;span class=&#34;citation&#34; data-cites=&#34;thelen2006 vihman2014&#34;&gt;(Thelen and Smith 2006; Vihman 2014)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;it is part of a complex &lt;strong&gt;socio-cultural system&lt;/strong&gt; &lt;span class=&#34;citation&#34; data-cites=&#34;boer2015 foulkes2006 thompson2016&#34;&gt;(Boer 2015; Foulkes and Docherty 2006; Thompson, Kirby, and Smith 2016)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;it is a complex &lt;strong&gt;physical system&lt;/strong&gt; &lt;span class=&#34;citation&#34; data-cites=&#34;ohala1990 ohala2005&#34;&gt;(Ohala 1990, 2005)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is a &lt;strong&gt;dynamic system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Thelen and Smith 2006; Vihman 2014)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is part of a complex &lt;strong&gt;socio-cultural system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Boer 2015; Foulkes and Docherty 2006; Thompson, Kirby, and Smith 2016)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is a complex &lt;strong&gt;physical system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Ohala 1990, 2005)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;it is a complex &lt;strong&gt;neuro-cognitive system&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;it is &lt;em&gt;rich&lt;/em&gt; in details &lt;span class=&#34;citation&#34; data-cites=&#34;johnson1997 pierrehumbert2001 bybee2002&#34;&gt;(Johnson 1997; Pierrehumbert 2001; Bybee 2002)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;it is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34; data-cites=&#34;wedel2007 wedel2011&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is &lt;em&gt;rich&lt;/em&gt; in details &lt;span class=&#34;citation&#34;&gt;(Johnson 1997; Pierrehumbert 2001; Bybee 2002)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I also consider these statements as extendable to language as a holistic system.&lt;/p&gt;
-&lt;section id=&#34;academic-interests&#34; class=&#34;level3&#34;&gt;
+&lt;div id=&#34;academic-interests&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Academic interests&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Phonetics and Phonology (PhonPhon)&lt;/li&gt;
@@ -118,8 +259,8 @@
 &lt;li&gt;Computer science and technology&lt;/li&gt;
 &lt;li&gt;Data science&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&#34;references&#34; class=&#34;level3 unnumbered&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-boer2015&#34;&gt;
@@ -159,27 +300,27 @@
 &lt;p&gt;———. 2011. “Self-Organization in Phonology.” In &lt;em&gt;The Blackwell Companion to Phonology&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Wikipedia and the “Dialects of Italy”</title>
-      <link>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
+      <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
       
-      <guid>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
+      <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/d/dd/Dialetti_parlati_in_Italia.png&#34; alt=&#34;Map showing the dialects of Italy.&#34; width=&#34;371&#34; height=&#34;480&#34; align=&#34;right&#34; hspace=10/&gt; The &lt;strong&gt;Italian Wikipedia&lt;/strong&gt; has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: &lt;a href=&#34;https://it.wikipedia.org/wiki/Speciale:Statistiche&#34; target=&#34;_blank&#34;&gt;Italian Wikipedia Statistics&lt;/a&gt;). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: &lt;a href=&#34;https://stats.wikimedia.org/EN/Sitemap.htm&#34; target=&#34;_blank&#34;&gt;Wikipedia Statistics&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Nevertheless, the &lt;strong&gt;linguistics&lt;/strong&gt; presence suffers from a variety of cyber-diseases. According to the figures described on the page of the Italian &lt;a href=&#34;https://it.wikipedia.org/wiki/Progetto:Linguistica&#34; target=&#34;_blank&#34;&gt;Linguistics WikiProject&lt;/a&gt;, out of 890 articles, &lt;a href=&#34;https://it.wikipedia.org/wiki/Categoria:Senza_fonti_-_linguistica&#34; target=&#34;_blank&#34;&gt;250&lt;/a&gt; don’t cite proper sources for their information and about &lt;a href=&#34;https://it.wikipedia.org/wiki/Categoria:Stub_-_linguistica&#34; target=&#34;_blank&#34;&gt;270&lt;/a&gt; are stubs that need to be expanded.&lt;/p&gt;
 &lt;p&gt;But one topic in particular has been recently called to our attention (I’m a Wikipedia editor myself): the “&lt;strong&gt;dialects of Italy.&lt;/strong&gt;”&lt;/p&gt;
-&lt;p&gt;The problem is twofold: on the one hand, “dialects of Italy” refers to heterogeneous entities and, on the other, there is no agreement on how to define a “dialect” &lt;span class=&#34;citation&#34; data-cites=&#34;cysouw2013&#34;&gt;(nor a “language,” for that matter; see Cysouw and Good’s &lt;a href=&#34;http://scholarspace.manoa.hawaii.edu/handle/10125/4606&#34; target=&#34;_blank&#34;&gt;article&lt;/a&gt; about this, Cysouw and Good 2013)&lt;/span&gt;. This is further complicated by the rooted misunderstanding of linguistics facts and concepts that the general public usually has.&lt;/p&gt;
+&lt;p&gt;The problem is twofold: on the one hand, “dialects of Italy” refers to heterogeneous entities and, on the other, there is no agreement on how to define a “dialect” &lt;span class=&#34;citation&#34;&gt;(nor a “language,” for that matter; see Cysouw and Good’s &lt;a href=&#34;http://scholarspace.manoa.hawaii.edu/handle/10125/4606&#34; target=&#34;_blank&#34;&gt;article&lt;/a&gt; about this, Cysouw and Good 2013)&lt;/span&gt;. This is further complicated by the rooted misunderstanding of linguistics facts and concepts that the general public usually has.&lt;/p&gt;
 &lt;p&gt;All of this, together with the “poor sourcing” problem, led to chaos: see the &lt;a href=&#34;https://it.wikipedia.org/wiki/Discussioni_progetto:Linguistica/Archivio15#Un_argomento_cruciale&#34; target=&#34;_blank&#34;&gt;lengthy discussion&lt;/a&gt; about what to call a dialect and what a language (the title &lt;em&gt;Un argomento cruciale&lt;/em&gt;, ‘A critical topic,’ should be enough for grasping the seriousness of the matter).&lt;/p&gt;
 &lt;p&gt;Some time ago, a decision has been made to use the term “language” for any linguistic entity that had a code from the ISO 639-3 (to be sure, that’s from Ethnologue, by SIL), and “dialect” for entities without a code. This created an inconvenient precedent: since no Italian scientific source uses labels like “Piedmontese language” (&lt;em&gt;lingua piemontese&lt;/em&gt;) or “Calabrian language” (&lt;em&gt;lingua calabrese&lt;/em&gt;), Wikipedia came to be a primary source of this use, thus contradicting one of the main tenets of the open encyclopaedia. That is: &lt;strong&gt;no original research&lt;/strong&gt; (NOR).&lt;/p&gt;
 &lt;p&gt;The reaction of the laypeople is: “Wikipedia calls it a language, so it is indeed.” This is backed up by the (misled but widespread) notion of dialect as a “lower and/or corrupted variety of Italian,” further strengthened by the idea that Wikipedia is authoritative with no exceptions. But let me stress it again, &lt;strong&gt;no academic source labels the mentioned linguistic entities of Italy as “languages.”&lt;/strong&gt; Sorry folks.&lt;/p&gt;
 &lt;p&gt;But why is that? Well, tradition. The dialects of Italy have been called that since long and it would be extremely difficult to ask Italian linguists to stop calling them that way. However, no (sensible) linguist would consider them as corruptions of the Italian language.&lt;/p&gt;
-&lt;p&gt;As an emblematic example, &lt;span class=&#34;citation&#34; data-cites=&#34;loporcaro2009&#34;&gt;(Loporcaro 2009, 4–5)&lt;/span&gt; succinctly gives us an interesting perspective: “Derivando indipendentemente dal latino, i dialetti come il padovano, il napoletano ecc. sono lingue sorelle dell’italiano.” (trad: “Independently deriving from Latin, the dialects such as Paduan, Neapolitan, etc. are &lt;em&gt;sister languages&lt;/em&gt; of Italian.”). Although Loporcaro stresses the fact that what are normally labelled as “dialects” are languages, he is probably forced to still call them “dialects.” The point is, no one has ever called the dialects of Italy using the apposition “language” (2018 EDIT: probably until recently): so no “Paduan language,” nor “Neapolitan language.” Hence, this use in Wikipedia is totally unjustified.&lt;/p&gt;
+&lt;p&gt;As an emblematic example, &lt;span class=&#34;citation&#34;&gt;(Loporcaro 2009, 4–5)&lt;/span&gt; succinctly gives us an interesting perspective: “Derivando indipendentemente dal latino, i dialetti come il padovano, il napoletano ecc. sono lingue sorelle dell’italiano.” (trad: “Independently deriving from Latin, the dialects such as Paduan, Neapolitan, etc. are &lt;em&gt;sister languages&lt;/em&gt; of Italian.”). Although Loporcaro stresses the fact that what are normally labelled as “dialects” are languages, he is probably forced to still call them “dialects.” The point is, no one has ever called the dialects of Italy using the apposition “language” (2018 EDIT: probably until recently): so no “Paduan language,” nor “Neapolitan language.” Hence, this use in Wikipedia is totally unjustified.&lt;/p&gt;
 &lt;p&gt;Luckily, the trend in the encyclopaedia of abusing of the ISO 639 is in the process of being counteracted and some Wikipedians are making an effort to take the situation back under control. In the meantime, read the Cysouw and Good’s article mentioned early if you didn’t already.&lt;/p&gt;
-&lt;section id=&#34;references&#34; class=&#34;level3 unnumbered&#34;&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-cysouw2013&#34;&gt;
@@ -189,16 +330,16 @@
 &lt;p&gt;Loporcaro, Michele. 2009. &lt;em&gt;Profilo Linguistico Dei Dialetti Italiani&lt;/em&gt;. Bari: Laterza.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Short review of phonological databases</title>
-      <link>/post/2014-06-30-short-review-phonological-databases/</link>
+      <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 13:29:41 +0000</pubDate>
       
-      <guid>/post/2014-06-30-short-review-phonological-databases/</guid>
+      <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
       <description>&lt;p&gt;List of available phonological databases (to my knowledge):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;UCLA Phonological Segment Inventory Database (&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34;&gt;UPSID&lt;/a&gt;)&lt;/li&gt;
@@ -208,7 +349,7 @@
 &lt;li&gt;South American Phonological Inventory Database (&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Indo-European Phonological Inventory Database (&lt;a title=&#34;IEPhon&#34; href=&#34;http://iephon.unipv.it/database/&#34; target=&#34;_blank&#34;&gt;IEPhon&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;section id=&#34;uclaphonologicalsegment-inventorydatabase&#34; class=&#34;level1&#34;&gt;
+&lt;div id=&#34;uclaphonologicalsegment-inventorydatabase&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;UCLA Phonological Segment Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 451 languages&lt;/li&gt;
@@ -218,8 +359,8 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language, number of sounds, frequency index, family and phonetic features&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&#34;lyon-albuquerque-phonological-systems-database&#34; class=&#34;level1&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lyon-albuquerque-phonological-systems-database&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Lyon-Albuquerque Phonological Systems Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: (in progress)&lt;/li&gt;
@@ -229,8 +370,8 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, classification), sounds (table format), phonetic features, syllable&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: segment table, boolean (sound, feature, area, family, syllable)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&#34;phonetics-information-base-and-lexicon&#34; class=&#34;level1&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;phonetics-information-base-and-lexicon&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Phonetics Information Base and Lexicon&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 1,010 languages&lt;/li&gt;
@@ -240,8 +381,8 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso), sounds (list format), source&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&#34;world-atlas-of-language-structures&#34; class=&#34;level1&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;world-atlas-of-language-structures&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;World Atlas of Language Structures&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  2,679 languages&lt;/li&gt;
@@ -251,8 +392,8 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, genus, family, macroarea; list format),  characteristics (list format)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list and map&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&#34;south-americanphonologicalinventorydatabase&#34; class=&#34;level1&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;south-americanphonologicalinventorydatabase&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;South American Phonological Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  359 languages&lt;/li&gt;
@@ -262,8 +403,8 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, family, country; list format and map),  sounds (table)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
-&lt;section id=&#34;indo-european-phonologicalinventorydatabase&#34; class=&#34;level1&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;indo-european-phonologicalinventorydatabase&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Indo-European Phonological Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  18 languages&lt;/li&gt;
@@ -273,7 +414,7 @@
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, family, country; list format and map),  sounds (table)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     

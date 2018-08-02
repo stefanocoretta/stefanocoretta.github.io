@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="generator" content="Hugo 0.46" />
   <meta name="author" content="Stefano Coretta">
   <meta name="description" content="PhD student in Linguistics">
 
@@ -299,15 +299,15 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <pre class="r"><code>trajectories</code></pre>
 <pre><code>## # A tibble: 7 x 61
-##    Time Vowel Word      Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35
-##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  194. u     tulemupe…     43.3  406.  439.  453.  456.  430.  357.  314.
-## 2  194. e     tulemupe…    103.   503.  517.  537.  564.  556.  362.  315.
-## 3  194. u     tulemupe…     14.1  290.  288.  286.  283.  281.  281.  282.
-## 4  194. e     tulemupe…     75.7  440.  441.  439.  429.  386.  269.  250.
-## 5  194. e     tulemupe…     68.2  437.  445.  479.  562.  622.  605.  523.
-## 6  195. a     tulemupe…     89.8  800.  736.  662.  543.  447.  564.  768.
-## 7  195. o     tulemupe…     98.5  482.  463.  471.  326.  316.  573. 1511.
+##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35
+##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  194. u     tule…     43.3  406.  439.  453.  456.  430.  357.  314.
+## 2  194. e     tule…    103.   503.  517.  537.  564.  556.  362.  315.
+## 3  194. u     tule…     14.1  290.  288.  286.  283.  281.  281.  282.
+## 4  194. e     tule…     75.7  440.  441.  439.  429.  386.  269.  250.
+## 5  194. e     tule…     68.2  437.  445.  479.  562.  622.  605.  523.
+## 6  195. a     tule…     89.8  800.  736.  662.  543.  447.  564.  768.
+## 7  195. o     tule…     98.5  482.  463.  471.  326.  316.  573. 1511.
 ## # ... with 50 more variables: F1_40 &lt;dbl&gt;, F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;,
 ## #   F1_55 &lt;dbl&gt;, F1_60 &lt;dbl&gt;, F1_65 &lt;dbl&gt;, F1_70 &lt;dbl&gt;, F1_75 &lt;dbl&gt;,
 ## #   F1_80 &lt;dbl&gt;, F1_85 &lt;dbl&gt;, F1_90 &lt;dbl&gt;, F1_95 &lt;dbl&gt;, F2_05 &lt;dbl&gt;,
@@ -401,16 +401,16 @@ trajectories_spr</code></pre>
   geom_smooth(aes(y = F3), se = FALSE, colour = &quot;blue&quot;) +
   facet_wrap(~ Vowel) +
   ylab(&quot;Hertz&quot;)</code></pre>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39;
-## `geom_smooth()` using method = &#39;loess&#39;
-## `geom_smooth()` using method = &#39;loess&#39;</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
+## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
+## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png" width="672" /></p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
 <div id="refs" class="references">
 <div id="ref-wickham2014">
-<p>Wickham, Hadley. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10). Foundation for Open Access Statistics:1–23. <a href="https://doi.org/10.18637/jss.v059.i10" class="uri">https://doi.org/10.18637/jss.v059.i10</a>.</p>
+<p>Wickham, Hadley. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10). Foundation for Open Access Statistics: 1–23. <a href="https://doi.org/10.18637/jss.v059.i10" class="uri">https://doi.org/10.18637/jss.v059.i10</a>.</p>
 </div>
 </div>
 </div>

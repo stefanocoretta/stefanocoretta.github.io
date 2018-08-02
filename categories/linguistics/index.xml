@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linguistics on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/categories/linguistics/</link>
+    <description>Recent content in Linguistics on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Stefano Coretta</copyright>
+    <lastBuildDate>Fri, 02 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://stefanocoretta.github.io/categories/linguistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vowel formants trajectories and tidy data</title>
+      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <description>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.
+Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset. In this format, separate columns contain formant values for each interval within the vowel. Normally, values are extracted every 10% or 5% intervals within the vowel.</description>
+    </item>
+    
+    <item>
+      <title>Wikipedia and the “Dialects of Italy”</title>
+      <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
+      <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
+      <description>The Italian Wikipedia has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia Statistics). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: Wikipedia Statistics).
+Nevertheless, the linguistics presence suffers from a variety of cyber-diseases. According to the figures described on the page of the Italian Linguistics WikiProject, out of 890 articles, 250 don’t cite proper sources for their information and about 270 are stubs that need to be expanded.</description>
+    </item>
+    
+    <item>
+      <title>Short review of phonological databases</title>
+      <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
+      <pubDate>Mon, 30 Jun 2014 13:29:41 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
+      <description>List of available phonological databases (to my knowledge):
+ UCLA Phonological Segment Inventory Database (UPSID) Lyon-Albuquerque Phonological Systems Database (LAPSyD) Phonetics Information Base and Lexicon (PHOIBLE) World Atlas of Language Structures (WALS) South American Phonological Inventory Database (SAPhon) Indo-European Phonological Inventory Database (IEPhon)  UCLA Phonological Segment Inventory Database  number of records: 451 languages type of sample: genetically balanced interface: desktop and web data: inventory, language family, comments, source searchable: for language, number of sounds, frequency index, family and phonetic features search display: list   Lyon-Albuquerque Phonological Systems Database  number of records: (in progress) type of sample: not balanced interface: web data: consonant and vowel inventories, syllable structure, stress and tone systems, language location and classification searchable: for language (name, iso, classification), sounds (table format), phonetic features, syllable search display: segment table, boolean (sound, feature, area, family, syllable)   Phonetics Information Base and Lexicon  number of records: 1,010 languages type of sample: not balanced interface: web data: inventory, segment class, language location searchable: for language (name, iso), sounds (list format), source search display: list   World Atlas of Language Structures  number of records: 2,679 languages type of sample: balanced interface: desktop and web data: size of consonant inventory, size of vowel inventory, consonant-vowel ratio, voicing and gaps in plosive system, uvular consonant, glottalized consonants, velar nasal, reduplication searchable: for language (name, iso, genus, family, macroarea; list format), characteristics (list format) search display: list and map   South American Phonological Inventory Database  number of records: 359 languages type of sample: not balanced, South America interface: web data: segment inventory, suprasegmentals, language (name, iso, family, country) searchable: for language (name, iso, family, country; list format and map), sounds (table) search display: table, list and map   Indo-European Phonological Inventory Database  number of records: 18 languages type of sample: not balanced, Indo-European family interface: web data: segment inventory, language (name, family, area) searchable: for language (name, family, country; list format and map), sounds (table) search display: table, list and map   </description>
+    </item>
+    
+  </channel>
+</rss>

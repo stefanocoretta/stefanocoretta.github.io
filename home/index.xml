@@ -8,7 +8,20 @@
     <language>en-uk</language>
     <copyright>&amp;copy; 2017 Stefano Coretta</copyright>
     <lastBuildDate>Fri, 29 Dec 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://stefanocoretta.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://stefanocoretta.github.io/home/about/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/home/about/</guid>
+      <description>Welcome to the homepage of Stefano Coretta (IPA: [ˈsteˑfano koˈrɛtta]).
+I am a second year PhD student at the University of Manchester. I am also joint Phonetics Lab assistant (with Stephen Nichols; Director: Dr. Patrycja Strycharczuk). My area of research is linguistics with a particular focus in phonetics and phonology—the study of speech sounds and their relation with human language.
+I’m interested in questions like How do we produce the sounds we use in our daily communication?</description>
+    </item>
     
   </channel>
 </rss>

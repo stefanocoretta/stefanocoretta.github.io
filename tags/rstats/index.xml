@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017 Stefano Coretta</copyright>
-    <lastBuildDate>Fri, 02 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://stefanocoretta.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Plotting tongue contours with ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
+      <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &amp;quot;loess&amp;quot;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.
+To show the shortcomings of using geom_smooth() and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me).</description>
+    </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>

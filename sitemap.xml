@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</loc>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</loc>
       <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     </url>
@@ -80,6 +89,16 @@
     
       <loc>https://stefanocoretta.github.io/tags/data-processing/</loc>
       <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://stefanocoretta.github.io/tags/data-viz/</loc>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -188,6 +207,16 @@
     
     <url>
     
+      <loc>https://stefanocoretta.github.io/categories/linguistics/</loc>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://stefanocoretta.github.io/tags/linguistics/</loc>
       <lastmod>2018-03-02T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -198,18 +227,8 @@
     
     <url>
     
-      <loc>https://stefanocoretta.github.io/categories/linguistics/</loc>
-      <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://stefanocoretta.github.io/tags/phonetics/</loc>
-      <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -219,7 +238,7 @@
     <url>
     
       <loc>https://stefanocoretta.github.io/tags/phonology/</loc>
-      <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -248,7 +267,7 @@
     <url>
     
       <loc>https://stefanocoretta.github.io/tags/rstats/</loc>
-      <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -299,6 +318,36 @@
     
       <loc>https://stefanocoretta.github.io/tags/time-series/</loc>
       <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://stefanocoretta.github.io/tags/tongue-contours/</loc>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://stefanocoretta.github.io/tags/ultrasound/</loc>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://stefanocoretta.github.io/tags/uti/</loc>
+      <lastmod>2018-08-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

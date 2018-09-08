@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.47.1" />
+  <meta name="author" content="Stefano Coretta">
+  <meta name="description" content="PhD student in Linguistics">
+
+  
+  <link rel="alternate" hreflang="en-uk" href="https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://stefanocoretta.github.io/index.xml" type="application/rss+xml" title="Stefano Coretta">
+  <link rel="feed" href="https://stefanocoretta.github.io/index.xml" type="application/rss+xml" title="Stefano Coretta">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@StefanoCoretta">
+  <meta property="twitter:creator" content="@StefanoCoretta">
+  
+  <meta property="og:site_name" content="Stefano Coretta">
+  <meta property="og:url" content="https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/">
+  <meta property="og:title" content="Plotting tongue contours with ggplot2 | Stefano Coretta">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-uk">
+  
+  <meta property="article:published_time" content="2018-08-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-08-23T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Plotting tongue contours with ggplot2 | Stefano Coretta</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Stefano Coretta</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/research">
+            
+            <span>Research</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/output">
+            
+            <span>Output</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/post">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Plotting tongue contours with ggplot2</h1>
+
+      
+
+<div class="article-metadata">
+
+  
+  <span class="article-date">
+    
+    <time datetime="2018-08-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      23 August 2018
+    </time>
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/linguistics">Linguistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Plotting%20tongue%20contours%20with%20ggplot2&amp;url=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fplotting-tongue-contours-with-ggplot2%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fplotting-tongue-contours-with-ggplot2%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fplotting-tongue-contours-with-ggplot2%2f&amp;title=Plotting%20tongue%20contours%20with%20ggplot2"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fplotting-tongue-contours-with-ggplot2%2f&amp;title=Plotting%20tongue%20contours%20with%20ggplot2"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Plotting%20tongue%20contours%20with%20ggplot2&amp;body=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fplotting-tongue-contours-with-ggplot2%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>When plotting tongue contours data obtained from ultrasound tongue imaging in <code>R</code> using <code>ggplot2</code>, a common option to smooth over the individual contours and show the general pattern is to use <code>geom_smooth(methood = &quot;loess&quot;)</code>. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</p>
+<p>To show the shortcomings of using <code>geom_smooth()</code> and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):</p>
+<pre class="r"><code>select(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2)</code></pre>
+<pre><code>## # A tibble: 1,239 x 7
+##    rec_date            fan_line     X     Y word  vowel c2   
+##    &lt;chr&gt;                  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+##  1 29/11/2016 15:10:52        6  37.4  9.25 pada  a     d    
+##  2 29/11/2016 15:21:30        6  38.6 13.1  pada  a     d    
+##  3 29/11/2016 15:10:52        7  34.4 10.3  pada  a     d    
+##  4 29/11/2016 15:11:03        7  34.3  9.81 pata  a     t    
+##  5 29/11/2016 15:11:14        7  34.6 11.0  podo  o     d    
+##  6 29/11/2016 15:13:39        7  34.3  9.65 pada  a     d    
+##  7 29/11/2016 15:16:05        7  34.8 11.5  pada  a     d    
+##  8 29/11/2016 15:17:07        7  34.5 10.5  putu  u     t    
+##  9 29/11/2016 15:19:45        7  34.3  9.64 putu  u     t    
+## 10 29/11/2016 15:21:30        7  35.4 13.8  pada  a     d    
+## # ... with 1,229 more rows</code></pre>
+<p><code>rec_date</code> is the date and time of recording. Each observed tongue contour has a unique <code>rec_date</code> (this will come in handy later). <code>fan_line</code> is the number of the line in the fan coordinate system used by Articulate Assistant Advanced (which I used to record the data). <code>X</code> and <code>Y</code> are the horizontal and vertical position of each point on the contour. The unit is millimeters. <code>word</code>, <code>vowel</code> and <code>c2</code> are self-explanatory.</p>
+<p>Let’s start by plotting the smoothed contours by vowel and consonant.</p>
+<pre class="r"><code>tongue_data %&gt;%
+  ggplot(aes(X, Y)) +
+  geom_smooth(aes(colour = vowel), method = &quot;loess&quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png" width="672" /></p>
+<p>We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.</p>
+<p>To see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.</p>
+<pre class="r"><code>tongue_data %&gt;%
+  ggplot(aes(X, Y)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(aes(colour = vowel), method = &quot;loess&quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png" width="672" /></p>
+<p>While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.</p>
+<p>This happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.</p>
+<p>An alternative (if you don’t like points) is to use <code>geom_path()</code> to plot the individual tongue contours as lines. <code>geom_path()</code> connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).</p>
+<p>To do so, we can use <code>rec_date</code> (which identifies the individual contours) and <code>fan_line</code> which indicates the orders of points (for each contour, there a maximum 42 points/fan lines; NAs have been excluded).</p>
+<pre class="r"><code>tongue_data &lt;- tongue_data %&gt;%
+  arrange(rec_date, fan_line)
+
+tongue_data</code></pre>
+<pre><code>## # A tibble: 1,239 x 30
+##    speaker seconds rec_date prompt label TT_displacement… TT_velocity
+##    &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;       &lt;dbl&gt;
+##  1 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  2 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  3 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  4 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  5 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  6 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  7 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  8 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  9 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+## 10 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+## # ... with 1,229 more rows, and 23 more variables: TT_velocity_abs &lt;dbl&gt;,
+## #   TD_displacement_sm &lt;dbl&gt;, TD_velocity &lt;dbl&gt;, TD_velocity_abs &lt;dbl&gt;,
+## #   TR_displacement_sm &lt;dbl&gt;, TR_velocity &lt;dbl&gt;, TR_velocity_abs &lt;dbl&gt;,
+## #   fan_line &lt;int&gt;, X &lt;dbl&gt;, Y &lt;dbl&gt;, word &lt;chr&gt;, language &lt;chr&gt;,
+## #   sex &lt;chr&gt;, item &lt;int&gt;, ipa &lt;chr&gt;, c1 &lt;chr&gt;, c1_phonation &lt;chr&gt;,
+## #   vowel &lt;chr&gt;, anteropost &lt;chr&gt;, height &lt;chr&gt;, c2 &lt;chr&gt;,
+## #   c2_phonation &lt;chr&gt;, c2_place &lt;chr&gt;</code></pre>
+<p>We can now use <code>geom_path()</code>. The argument <code>group = rec_date</code> ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).</p>
+<pre class="r"><code>tongue_data %&gt;%
+  ggplot(aes(X, Y)) +
+  geom_path(aes(group = rec_date, colour = vowel), alpha = 0.5) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png" width="672" /></p>
+<p>The tongue root in /u/ is now properly rendered.</p>
+<p>But what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?</p>
+<p>An option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by <code>fan_line</code> and then <code>summarise()</code> it. Plotting can then be done with <code>geom_path()</code> and <code>geom_polygon()</code>. All together, the code looks like this.</p>
+<pre class="r"><code>xy_mean &lt;- tongue_data %&gt;%
+  group_by(fan_line, vowel, c2) %&gt;%
+  summarise(
+    X_mean = mean(X, na.rm = TRUE),
+    Y_mean = mean(Y, na.rm = TRUE)
+  )
+
+xy_ci &lt;- tongue_data %&gt;%
+  group_by(fan_line, vowel, c2) %&gt;%
+  summarise(
+    X_CI_low = t.test(X)$conf.int[1],
+    X_CI_up = t.test(X)$conf.int[2],
+    Y_CI_low = t.test(Y)$conf.int[1],
+    Y_CI_up = t.test(Y)$conf.int[2]
+  )
+
+ci_upper &lt;- xy_ci %&gt;%
+  dplyr::select(-X_CI_low, -Y_CI_low) %&gt;%
+  dplyr::rename(
+    CI_X = X_CI_up,
+    CI_Y = Y_CI_up
+  )
+
+ci_lower &lt;- xy_ci %&gt;%
+  dplyr::select(-X_CI_up, -Y_CI_up) %&gt;%
+  dplyr::arrange(dplyr::desc(fan_line)) %&gt;%
+  dplyr::rename(
+    CI_X = X_CI_low,
+    CI_Y = Y_CI_low
+  )
+
+ci &lt;- rbind(ci_upper, ci_lower)
+
+ggplot(xy_mean, aes(X_mean, Y_mean)) +
+  geom_polygon(data = ci, aes(x = CI_X, y = CI_Y), alpha = 0.2) +
+  geom_path(aes(X_mean, Y_mean, colour = vowel)) +
+  facet_grid(c2 ~ vowel) +
+  coord_fixed() +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png" width="672" /></p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/rstats">rstats</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/phonetics">phonetics</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/phonology">phonology</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/data-viz">data viz</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/uti">uti</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/ultrasound">ultrasound</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/tongue-contours">tongue contours</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/vowel-formants-trajectories-and-tidy-data/">Vowel formants trajectories and tidy data</a></li>
+    
+    <li><a href="/post/2014-06-30-short-review-phonological-databases/">Short review of phonological databases</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Stefano Coretta &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

@@ -11,17 +11,138 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Plotting tongue contours with ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
+      <description>&lt;p&gt;When plotting tongue contours data obtained from ultrasound tongue imaging in &lt;code&gt;R&lt;/code&gt; using &lt;code&gt;ggplot2&lt;/code&gt;, a common option to smooth over the individual contours and show the general pattern is to use &lt;code&gt;geom_smooth(methood = &amp;quot;loess&amp;quot;)&lt;/code&gt;. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.&lt;/p&gt;
+&lt;p&gt;To show the shortcomings of using &lt;code&gt;geom_smooth()&lt;/code&gt; and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,239 x 7
+##    rec_date            fan_line     X     Y word  vowel c2   
+##    &amp;lt;chr&amp;gt;                  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;
+##  1 29/11/2016 15:10:52        6  37.4  9.25 pada  a     d    
+##  2 29/11/2016 15:21:30        6  38.6 13.1  pada  a     d    
+##  3 29/11/2016 15:10:52        7  34.4 10.3  pada  a     d    
+##  4 29/11/2016 15:11:03        7  34.3  9.81 pata  a     t    
+##  5 29/11/2016 15:11:14        7  34.6 11.0  podo  o     d    
+##  6 29/11/2016 15:13:39        7  34.3  9.65 pada  a     d    
+##  7 29/11/2016 15:16:05        7  34.8 11.5  pada  a     d    
+##  8 29/11/2016 15:17:07        7  34.5 10.5  putu  u     t    
+##  9 29/11/2016 15:19:45        7  34.3  9.64 putu  u     t    
+## 10 29/11/2016 15:21:30        7  35.4 13.8  pada  a     d    
+## # ... with 1,229 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;rec_date&lt;/code&gt; is the date and time of recording. Each observed tongue contour has a unique &lt;code&gt;rec_date&lt;/code&gt; (this will come in handy later). &lt;code&gt;fan_line&lt;/code&gt; is the number of the line in the fan coordinate system used by Articulate Assistant Advanced (which I used to record the data). &lt;code&gt;X&lt;/code&gt; and &lt;code&gt;Y&lt;/code&gt; are the horizontal and vertical position of each point on the contour. The unit is millimeters. &lt;code&gt;word&lt;/code&gt;, &lt;code&gt;vowel&lt;/code&gt; and &lt;code&gt;c2&lt;/code&gt; are self-explanatory.&lt;/p&gt;
+&lt;p&gt;Let’s start by plotting the smoothed contours by vowel and consonant.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
+  ggplot(aes(X, Y)) +
+  geom_smooth(aes(colour = vowel), method = &amp;quot;loess&amp;quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.&lt;/p&gt;
+&lt;p&gt;To see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
+  ggplot(aes(X, Y)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(aes(colour = vowel), method = &amp;quot;loess&amp;quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.&lt;/p&gt;
+&lt;p&gt;This happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.&lt;/p&gt;
+&lt;p&gt;An alternative (if you don’t like points) is to use &lt;code&gt;geom_path()&lt;/code&gt; to plot the individual tongue contours as lines. &lt;code&gt;geom_path()&lt;/code&gt; connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).&lt;/p&gt;
+&lt;p&gt;To do so, we can use &lt;code&gt;rec_date&lt;/code&gt; (which identifies the individual contours) and &lt;code&gt;fan_line&lt;/code&gt; which indicates the orders of points (for each contour, there a maximum 42 points/fan lines; NAs have been excluded).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data &amp;lt;- tongue_data %&amp;gt;%
+  arrange(rec_date, fan_line)
+
+tongue_data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,239 x 30
+##    speaker seconds rec_date prompt label TT_displacement… TT_velocity
+##    &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;            &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+##  1 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  2 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  3 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  4 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  5 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  6 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  7 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  8 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  9 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+## 10 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+## # ... with 1,229 more rows, and 23 more variables: TT_velocity_abs &amp;lt;dbl&amp;gt;,
+## #   TD_displacement_sm &amp;lt;dbl&amp;gt;, TD_velocity &amp;lt;dbl&amp;gt;, TD_velocity_abs &amp;lt;dbl&amp;gt;,
+## #   TR_displacement_sm &amp;lt;dbl&amp;gt;, TR_velocity &amp;lt;dbl&amp;gt;, TR_velocity_abs &amp;lt;dbl&amp;gt;,
+## #   fan_line &amp;lt;int&amp;gt;, X &amp;lt;dbl&amp;gt;, Y &amp;lt;dbl&amp;gt;, word &amp;lt;chr&amp;gt;, language &amp;lt;chr&amp;gt;,
+## #   sex &amp;lt;chr&amp;gt;, item &amp;lt;int&amp;gt;, ipa &amp;lt;chr&amp;gt;, c1 &amp;lt;chr&amp;gt;, c1_phonation &amp;lt;chr&amp;gt;,
+## #   vowel &amp;lt;chr&amp;gt;, anteropost &amp;lt;chr&amp;gt;, height &amp;lt;chr&amp;gt;, c2 &amp;lt;chr&amp;gt;,
+## #   c2_phonation &amp;lt;chr&amp;gt;, c2_place &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can now use &lt;code&gt;geom_path()&lt;/code&gt;. The argument &lt;code&gt;group = rec_date&lt;/code&gt; ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
+  ggplot(aes(X, Y)) +
+  geom_path(aes(group = rec_date, colour = vowel), alpha = 0.5) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The tongue root in /u/ is now properly rendered.&lt;/p&gt;
+&lt;p&gt;But what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?&lt;/p&gt;
+&lt;p&gt;An option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by &lt;code&gt;fan_line&lt;/code&gt; and then &lt;code&gt;summarise()&lt;/code&gt; it. Plotting can then be done with &lt;code&gt;geom_path()&lt;/code&gt; and &lt;code&gt;geom_polygon()&lt;/code&gt;. All together, the code looks like this.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;xy_mean &amp;lt;- tongue_data %&amp;gt;%
+  group_by(fan_line, vowel, c2) %&amp;gt;%
+  summarise(
+    X_mean = mean(X, na.rm = TRUE),
+    Y_mean = mean(Y, na.rm = TRUE)
+  )
+
+xy_ci &amp;lt;- tongue_data %&amp;gt;%
+  group_by(fan_line, vowel, c2) %&amp;gt;%
+  summarise(
+    X_CI_low = t.test(X)$conf.int[1],
+    X_CI_up = t.test(X)$conf.int[2],
+    Y_CI_low = t.test(Y)$conf.int[1],
+    Y_CI_up = t.test(Y)$conf.int[2]
+  )
+
+ci_upper &amp;lt;- xy_ci %&amp;gt;%
+  dplyr::select(-X_CI_low, -Y_CI_low) %&amp;gt;%
+  dplyr::rename(
+    CI_X = X_CI_up,
+    CI_Y = Y_CI_up
+  )
+
+ci_lower &amp;lt;- xy_ci %&amp;gt;%
+  dplyr::select(-X_CI_up, -Y_CI_up) %&amp;gt;%
+  dplyr::arrange(dplyr::desc(fan_line)) %&amp;gt;%
+  dplyr::rename(
+    CI_X = X_CI_low,
+    CI_Y = Y_CI_low
+  )
+
+ci &amp;lt;- rbind(ci_upper, ci_lower)
+
+ggplot(xy_mean, aes(X_mean, Y_mean)) +
+  geom_polygon(data = ci, aes(x = CI_X, y = CI_Y), alpha = 0.2) +
+  geom_path(aes(X_mean, Y_mean, colour = vowel)) +
+  facet_grid(c2 ~ vowel) +
+  coord_fixed() +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Vowel formants trajectories and tidy data</title>
       <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>&lt;p&gt;With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.&lt;/p&gt;
-&lt;p&gt;Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset.
-In this format, separate columns contain formant values for each interval within the vowel.
-Normally, values are extracted every 10% or 5% intervals within the vowel.&lt;/p&gt;
-&lt;p&gt;To work with formant trajectories data in &lt;code&gt;R&lt;/code&gt;, we need instead a ‘long format’ dataset.
-In a long format dataset, the percent intervals are layed out in rows, rather then columns.&lt;/p&gt;
+&lt;p&gt;Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset. In this format, separate columns contain formant values for each interval within the vowel. Normally, values are extracted every 10% or 5% intervals within the vowel.&lt;/p&gt;
+&lt;p&gt;To work with formant trajectories data in &lt;code&gt;R&lt;/code&gt;, we need instead a ‘long format’ dataset. In a long format dataset, the percent intervals are layed out in rows, rather then columns.&lt;/p&gt;
 &lt;p&gt;We start by reading in the formant data, which were kindly provided by &lt;a href=&#34;http://tiny.cc/sjn&#34;&gt;Stephen Nichols&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories &amp;lt;- read_csv(&amp;quot;./static/data/nichols-2018/tulemupepelako.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Parsed with column specification:
@@ -53,20 +174,15 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 ## #   F3_40 &amp;lt;dbl&amp;gt;, F3_45 &amp;lt;dbl&amp;gt;, F3_50 &amp;lt;dbl&amp;gt;, F3_55 &amp;lt;dbl&amp;gt;, F3_60 &amp;lt;dbl&amp;gt;,
 ## #   F3_65 &amp;lt;dbl&amp;gt;, F3_70 &amp;lt;dbl&amp;gt;, F3_75 &amp;lt;dbl&amp;gt;, F3_80 &amp;lt;dbl&amp;gt;, F3_85 &amp;lt;dbl&amp;gt;,
 ## #   F3_90 &amp;lt;dbl&amp;gt;, F3_95 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word &lt;em&gt;tulemupepelako&lt;/em&gt; ‘we are praying for her’ (Bemba, [&lt;code&gt;bemb1257&lt;/code&gt;]).
-It’s a toy dataset of course, just for purpose of illustration, so not very exciting!&lt;/p&gt;
-&lt;p&gt;The values for each 5% interval for each formant are in separate columns.
-For plotting and modelling, though, we need the data to be in a ‘tidy’ format &lt;span class=&#34;citation&#34;&gt;(Wickham 2014)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word &lt;em&gt;tulemupepelako&lt;/em&gt; ‘we are praying for her’ (Bemba, [&lt;code&gt;bemb1257&lt;/code&gt;]). It’s a toy dataset of course, just for purpose of illustration, so not very exciting!&lt;/p&gt;
+&lt;p&gt;The values for each 5% interval for each formant are in separate columns. For plotting and modelling, though, we need the data to be in a ‘tidy’ format &lt;span class=&#34;citation&#34;&gt;(Wickham 2014)&lt;/span&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;each observation unit is in a separate row&lt;/li&gt;
 &lt;li&gt;each variable is a separate column&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In our case, each observation unit is a 5% interval.
-As for the variables, they are: time in the recording, word, vowel, vowel duration, F1, F2, and F3.&lt;/p&gt;
-&lt;p&gt;The first step towards a long format data set is to gather all the columns that have formant values to a column indicating the formant plus interval (like ‘F1_05’) and the value of that formant in that interval.
-We can use &lt;code&gt;gather()&lt;/code&gt; for this.&lt;/p&gt;
-&lt;p&gt;In the following chunks, I will illustrate the results of each step separately by saving the output of the functions to variables.
-Later in this post, you’ll find a pipe chain with all functions without intermediate outputs.&lt;/p&gt;
+&lt;p&gt;In our case, each observation unit is a 5% interval. As for the variables, they are: time in the recording, word, vowel, vowel duration, F1, F2, and F3.&lt;/p&gt;
+&lt;p&gt;The first step towards a long format data set is to gather all the columns that have formant values to a column indicating the formant plus interval (like ‘F1_05’) and the value of that formant in that interval. We can use &lt;code&gt;gather()&lt;/code&gt; for this.&lt;/p&gt;
+&lt;p&gt;In the following chunks, I will illustrate the results of each step separately by saving the output of the functions to variables. Later in this post, you’ll find a pipe chain with all functions without intermediate outputs.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_gath &amp;lt;- gather(trajectories, &amp;quot;formant&amp;quot;, &amp;quot;value&amp;quot;, F1_05:F3_95)
 trajectories_gath&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 399 x 6
@@ -101,8 +217,7 @@ trajectories_sep&lt;/code&gt;&lt;/pre&gt;
 ##  9  194. e     tulemupepelako    103.  F1            10  517.
 ## 10  194. u     tulemupepelako     14.1 F1            10  288.
 ## # ... with 389 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we can create individual columns for each formant from F1 to F3.
-We can achieve this with &lt;code&gt;spread()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now we can create individual columns for each formant from F1 to F3. We can achieve this with &lt;code&gt;spread()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_spr &amp;lt;- spread(trajectories_sep, formant, value)
 trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 133 x 8
@@ -144,7 +259,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-wickham2014&#34;&gt;
-&lt;p&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10). Foundation for Open Access Statistics: 1–23. &lt;a href=&#34;https://doi.org/10.18637/jss.v059.i10&#34; class=&#34;uri&#34;&gt;https://doi.org/10.18637/jss.v059.i10&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10). Foundation for Open Access Statistics: 1–23. doi:&lt;a href=&#34;https://doi.org/10.18637/jss.v059.i10&#34;&gt;10.18637/jss.v059.i10&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -264,11 +379,11 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;it is a &lt;strong&gt;dynamic system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Thelen and Smith 2006; Vihman 2014)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;it is part of a complex &lt;strong&gt;socio-cultural system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Boer 2015; Foulkes and Docherty 2006; Thompson, Kirby, and Smith 2016)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;it is a complex &lt;strong&gt;physical system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Ohala 1990, 2005)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is a complex &lt;strong&gt;physical system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Ohala 1990; Ohala 2005)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;it is a complex &lt;strong&gt;neuro-cognitive system&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;it is &lt;em&gt;rich&lt;/em&gt; in details &lt;span class=&#34;citation&#34;&gt;(Johnson 1997; Pierrehumbert 2001; Bybee 2002)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;it is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007; Wedel 2011)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I also consider these statements as extendable to language as a holistic system.&lt;/p&gt;
@@ -288,7 +403,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-boer2015&#34;&gt;
-&lt;p&gt;Boer, Bart de. 2015. “Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.” &lt;em&gt;Journal of Phonetics.&lt;/em&gt; 53: 79–87. &lt;a href=&#34;https://doi.org/10.1016/j.wocn.2015.07.001&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1016/j.wocn.2015.07.001&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Boer, Bart de. 2015. “Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.” &lt;em&gt;Journal of Phonetics.&lt;/em&gt; 53: 79–87. doi:&lt;a href=&#34;https://doi.org/10.1016/j.wocn.2015.07.001&#34;&gt;10.1016/j.wocn.2015.07.001&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-bybee2002&#34;&gt;
 &lt;p&gt;Bybee, Joan. 2002. “Phonological Evidence for Exemplar Storage of Multiword Sequences.” &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.&lt;/p&gt;
@@ -312,13 +427,13 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thelen, Esther, and Linda B. Smith. 2006. “Dynamic Systems Theories.” In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-thompson2016&#34;&gt;
-&lt;p&gt;Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. “Culture Shapes the Evolution of Cognition.” &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–5. &lt;a href=&#34;https://doi.org/10.1073/pnas.1523631113&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1073/pnas.1523631113&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. “Culture Shapes the Evolution of Cognition.” &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–5. doi:&lt;a href=&#34;https://doi.org/10.1073/pnas.1523631113&#34;&gt;10.1073/pnas.1523631113&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-vihman2014&#34;&gt;
 &lt;p&gt;Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: The First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-wedel2007&#34;&gt;
-&lt;p&gt;Wedel, Andrew B. 2007. “Feedback and Regularity in the Lexicon.” &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85. &lt;a href=&#34;https://doi.org/10.1017/S0952675707001145&#34; class=&#34;uri&#34;&gt;https://doi.org/10.1017/S0952675707001145&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wedel, Andrew B. 2007. “Feedback and Regularity in the Lexicon.” &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85. doi:&lt;a href=&#34;https://doi.org/10.1017/S0952675707001145&#34;&gt;10.1017/S0952675707001145&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-wedel2011&#34;&gt;
 &lt;p&gt;———. 2011. “Self-Organization in Phonology.” In &lt;em&gt;The Blackwell Companion to Phonology&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
@@ -348,7 +463,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-cysouw2013&#34;&gt;
-&lt;p&gt;Cysouw, Michael, and Jeff Good. 2013. “Languoid, Doculect, and Glossonym: Formalizing the Notion ‘Language’.” &lt;em&gt;Language Documentation &amp;amp; Conservation&lt;/em&gt; 7: 331–59. &lt;a href=&#34;https://doi.org/10125/4606&#34; class=&#34;uri&#34;&gt;https://doi.org/10125/4606&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Cysouw, Michael, and Jeff Good. 2013. “Languoid, Doculect, and Glossonym: Formalizing the Notion ‘Language’.” &lt;em&gt;Language Documentation &amp;amp; Conservation&lt;/em&gt; 7: 331–59. doi:&lt;a href=&#34;https://doi.org/10125/4606&#34;&gt;10125/4606&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-loporcaro2009&#34;&gt;
 &lt;p&gt;Loporcaro, Michele. 2009. &lt;em&gt;Profilo Linguistico Dei Dialetti Italiani&lt;/em&gt;. Bari: Laterza.&lt;/p&gt;

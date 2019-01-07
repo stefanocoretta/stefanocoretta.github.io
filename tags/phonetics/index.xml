@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Phonetics on Stefano Coretta</title>
+    <title>phonetics on Stefano Coretta</title>
     <link>https://stefanocoretta.github.io/tags/phonetics/</link>
-    <description>Recent content in Phonetics on Stefano Coretta</description>
+    <description>Recent content in phonetics on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017 Stefano Coretta</copyright>
-    <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://stefanocoretta.github.io/tags/phonetics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
+      <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
+      <description>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.</description>
+    </item>
     
     <item>
       <title>Plotting tongue contours with ggplot2</title>
@@ -18,8 +27,7 @@
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
-      <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &amp;quot;loess&amp;quot;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.
-To show the shortcomings of using geom_smooth() and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me).</description>
+      <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &amp;quot;loess&amp;quot;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</description>
     </item>
     
     <item>
@@ -38,7 +46,7 @@ Sometimes, the output of the Praat script used for extracting formats data gives
       <pubDate>Mon, 30 Jun 2014 13:29:41 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
-      <description>List of available phonological databases (to my knowledge):
+      <description> List of available phonological databases (to my knowledge):
  UCLA Phonological Segment Inventory Database (UPSID) Lyon-Albuquerque Phonological Systems Database (LAPSyD) Phonetics Information Base and Lexicon (PHOIBLE) World Atlas of Language Structures (WALS) South American Phonological Inventory Database (SAPhon) Indo-European Phonological Inventory Database (IEPhon)  UCLA Phonological Segment Inventory Database  number of records: 451 languages type of sample: genetically balanced interface: desktop and web data: inventory, language family, comments, source searchable: for language, number of sounds, frequency index, family and phonetic features search display: list   Lyon-Albuquerque Phonological Systems Database  number of records: (in progress) type of sample: not balanced interface: web data: consonant and vowel inventories, syllable structure, stress and tone systems, language location and classification searchable: for language (name, iso, classification), sounds (table format), phonetic features, syllable search display: segment table, boolean (sound, feature, area, family, syllable)   Phonetics Information Base and Lexicon  number of records: 1,010 languages type of sample: not balanced interface: web data: inventory, segment class, language location searchable: for language (name, iso), sounds (list format), source search display: list   World Atlas of Language Structures  number of records: 2,679 languages type of sample: balanced interface: desktop and web data: size of consonant inventory, size of vowel inventory, consonant-vowel ratio, voicing and gaps in plosive system, uvular consonant, glottalized consonants, velar nasal, reduplication searchable: for language (name, iso, genus, family, macroarea; list format), characteristics (list format) search display: list and map   South American Phonological Inventory Database  number of records: 359 languages type of sample: not balanced, South America interface: web data: segment inventory, suprasegmentals, language (name, iso, family, country) searchable: for language (name, iso, family, country; list format and map), sounds (table) search display: table, list and map   Indo-European Phonological Inventory Database  number of records: 18 languages type of sample: not balanced, Indo-European family interface: web data: segment inventory, language (name, family, area) searchable: for language (name, family, country; list format and map), sounds (table) search display: table, list and map   </description>
     </item>
     

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>literate programming on Stefano Coretta</title>
+    <link>/tags/literate-programming/</link>
+    <description>Recent content in literate programming on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2017 Stefano Coretta</copyright>
+    <lastBuildDate>Wed, 26 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/literate-programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Literate programming with Praat</title>
+      <link>/post/literate-programming-with-praat/</link>
+      <pubDate>Wed, 26 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/literate-programming-with-praat/</guid>
+      <description>This post quickly illustrates how to apply a literate programming flow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need Go for installing this package.)
+What is literate programming? Literate Praat To generate the Praat script and its documentation, you have to:
+ Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by lmt.</description>
+    </item>
+    
+  </channel>
+</rss>

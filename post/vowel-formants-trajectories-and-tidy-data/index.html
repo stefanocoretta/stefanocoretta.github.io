@@ -328,7 +328,7 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 ## 5  194. e     tule…     68.2  437.  445.  479.  562.  622.  605.  523.
 ## 6  195. a     tule…     89.8  800.  736.  662.  543.  447.  564.  768.
 ## 7  195. o     tule…     98.5  482.  463.  471.  326.  316.  573. 1511.
-## # ... with 50 more variables: F1_40 &lt;dbl&gt;, F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;,
+## # … with 50 more variables: F1_40 &lt;dbl&gt;, F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;,
 ## #   F1_55 &lt;dbl&gt;, F1_60 &lt;dbl&gt;, F1_65 &lt;dbl&gt;, F1_70 &lt;dbl&gt;, F1_75 &lt;dbl&gt;,
 ## #   F1_80 &lt;dbl&gt;, F1_85 &lt;dbl&gt;, F1_90 &lt;dbl&gt;, F1_95 &lt;dbl&gt;, F2_05 &lt;dbl&gt;,
 ## #   F2_10 &lt;dbl&gt;, F2_15 &lt;dbl&gt;, F2_20 &lt;dbl&gt;, F2_25 &lt;dbl&gt;, F2_30 &lt;dbl&gt;,
@@ -368,7 +368,7 @@ trajectories_gath</code></pre>
 ##  8  194. u     tulemupepelako     43.3 F1_10    439.
 ##  9  194. e     tulemupepelako    103.  F1_10    517.
 ## 10  194. u     tulemupepelako     14.1 F1_10    288.
-## # ... with 389 more rows</code></pre>
+## # … with 389 more rows</code></pre>
 <p>Now we have a column <code>formant</code> with the formant plus interval label, and a column <code>value</code> with its value (in Hertz in our case).</p>
 <p>The next step is to separate the label of the formant plus interval into two separate columns: one for <code>formant</code>, and one for <code>interval</code>.</p>
 <pre class="r"><code>trajectories_sep &lt;- separate(trajectories_gath, formant, c(&quot;formant&quot;, &quot;interval&quot;), convert = TRUE)
@@ -386,7 +386,7 @@ trajectories_sep</code></pre>
 ##  8  194. u     tulemupepelako     43.3 F1            10  439.
 ##  9  194. e     tulemupepelako    103.  F1            10  517.
 ## 10  194. u     tulemupepelako     14.1 F1            10  288.
-## # ... with 389 more rows</code></pre>
+## # … with 389 more rows</code></pre>
 <p>Now we can create individual columns for each formant from F1 to F3.
 We can achieve this with <code>spread()</code>.</p>
 <pre class="r"><code>trajectories_spr &lt;- spread(trajectories_sep, formant, value)
@@ -404,7 +404,7 @@ trajectories_spr</code></pre>
 ##  8  194. u     tulemupepelako     43.3       40  288. 1709. 2437.
 ##  9  194. u     tulemupepelako     43.3       45  286. 1712. 2461.
 ## 10  194. u     tulemupepelako     43.3       50  327. 1747. 2470.
-## # ... with 123 more rows</code></pre>
+## # … with 123 more rows</code></pre>
 <p>What we have now is a long format dataset, with separate columns for each formant, and individual rows for each vowel interval.</p>
 <div id="the-pipe-chain" class="section level2">
 <h2>The pipe chain</h2>

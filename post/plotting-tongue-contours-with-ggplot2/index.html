@@ -318,7 +318,7 @@
 ##  8 29/11/2016 15:17:07        7  34.5 10.5  putu  u     t    
 ##  9 29/11/2016 15:19:45        7  34.3  9.64 putu  u     t    
 ## 10 29/11/2016 15:21:30        7  35.4 13.8  pada  a     d    
-## # ... with 1,229 more rows</code></pre>
+## # … with 1,229 more rows</code></pre>
 <p><code>rec_date</code> is the date and time of recording. Each observed tongue contour has a unique <code>rec_date</code> (this will come in handy later). <code>fan_line</code> is the number of the line in the fan coordinate system used by Articulate Assistant Advanced (which I used to record the data). <code>X</code> and <code>Y</code> are the horizontal and vertical position of each point on the contour. The unit is millimeters. <code>word</code>, <code>vowel</code> and <code>c2</code> are self-explanatory.</p>
 <p>Let’s start by plotting the smoothed contours by vowel and consonant.</p>
 <pre class="r"><code>tongue_data %&gt;%
@@ -359,7 +359,7 @@ tongue_data</code></pre>
 ##  8 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
 ##  9 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
 ## 10 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
-## # ... with 1,229 more rows, and 23 more variables: TT_velocity_abs &lt;dbl&gt;,
+## # … with 1,229 more rows, and 23 more variables: TT_velocity_abs &lt;dbl&gt;,
 ## #   TD_displacement_sm &lt;dbl&gt;, TD_velocity &lt;dbl&gt;, TD_velocity_abs &lt;dbl&gt;,
 ## #   TR_displacement_sm &lt;dbl&gt;, TR_velocity &lt;dbl&gt;, TR_velocity_abs &lt;dbl&gt;,
 ## #   fan_line &lt;int&gt;, X &lt;dbl&gt;, Y &lt;dbl&gt;, word &lt;chr&gt;, language &lt;chr&gt;,

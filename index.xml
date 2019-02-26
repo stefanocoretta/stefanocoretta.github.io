@@ -160,7 +160,7 @@ There is indeed a dozen languages with this system in South America alone (data 
       <description>
 
 
-&lt;p&gt;When plotting tongue contours data obtained from ultrasound tongue imaging in &lt;code&gt;R&lt;/code&gt; using &lt;code&gt;ggplot2&lt;/code&gt;, a common option to smooth over the individual contours and show the general pattern is to use &lt;code&gt;geom_smooth(methood = &amp;quot;loess&amp;quot;)&lt;/code&gt;. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.&lt;/p&gt;
+&lt;p&gt;When plotting tongue contours data obtained from ultrasound tongue imaging in &lt;code&gt;R&lt;/code&gt; using &lt;code&gt;ggplot2&lt;/code&gt;, a common option to smooth over the individual contours and show the general pattern is to use &lt;code&gt;geom_smooth(methood = &#34;loess&#34;)&lt;/code&gt;. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.&lt;/p&gt;
 &lt;p&gt;To show the shortcomings of using &lt;code&gt;geom_smooth()&lt;/code&gt; and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1,239 x 7
@@ -628,7 +628,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;But one topic in particular has been recently called to our attention (I’m a Wikipedia editor myself): the “&lt;strong&gt;dialects of Italy.&lt;/strong&gt;”&lt;/p&gt;
 &lt;p&gt;The problem is twofold: on the one hand, “dialects of Italy” refers to heterogeneous entities and, on the other, there is no agreement on how to define a “dialect” &lt;span class=&#34;citation&#34;&gt;(nor a “language,” for that matter; see Cysouw and Good’s &lt;a href=&#34;http://scholarspace.manoa.hawaii.edu/handle/10125/4606&#34; target=&#34;_blank&#34;&gt;article&lt;/a&gt; about this, Cysouw and Good 2013)&lt;/span&gt;. This is further complicated by the rooted misunderstanding of linguistics facts and concepts that the general public usually has.&lt;/p&gt;
 &lt;p&gt;All of this, together with the “poor sourcing” problem, led to chaos: see the &lt;a href=&#34;https://it.wikipedia.org/wiki/Discussioni_progetto:Linguistica/Archivio15#Un_argomento_cruciale&#34; target=&#34;_blank&#34;&gt;lengthy discussion&lt;/a&gt; about what to call a dialect and what a language (the title &lt;em&gt;Un argomento cruciale&lt;/em&gt;, ‘A critical topic,’ should be enough for grasping the seriousness of the matter).&lt;/p&gt;
-&lt;p&gt;Some time ago, a decision has been made to use the term “language” for any linguistic entity that had a code from the ISO 639-3 (to be sure, that’s from Ethnologue, by SIL), and “dialect” for entities without a code. This created an inconvenient precedent: since no Italian scientific source uses labels like “Piedmontese language” (_lingua piemontese_) or “Calabrian language” (_lingua calabrese_), Wikipedia came to be a primary source of this use, thus contradicting one of the main tenets of the open encyclopaedia. That is: &lt;strong&gt;no original research&lt;/strong&gt; (NOR).&lt;/p&gt;
+&lt;p&gt;Some time ago, a decision has been made to use the term “language” for any linguistic entity that had a code from the ISO 639-3 (to be sure, that’s from Ethnologue, by SIL), and “dialect” for entities without a code. This created an inconvenient precedent: since no Italian scientific source uses labels like “Piedmontese language” (&lt;em&gt;lingua piemontese&lt;/em&gt;) or “Calabrian language” (&lt;em&gt;lingua calabrese&lt;/em&gt;), Wikipedia came to be a primary source of this use, thus contradicting one of the main tenets of the open encyclopaedia. That is: &lt;strong&gt;no original research&lt;/strong&gt; (NOR).&lt;/p&gt;
 &lt;p&gt;The reaction of the laypeople is: “Wikipedia calls it a language, so it is indeed.” This is backed up by the (misled but widespread) notion of dialect as a “lower and/or corrupted variety of Italian,” further strengthened by the idea that Wikipedia is authoritative with no exceptions. But let me stress it again, &lt;strong&gt;no academic source labels the mentioned linguistic entities of Italy as “languages.”&lt;/strong&gt; Sorry folks.&lt;/p&gt;
 &lt;p&gt;But why is that? Well, tradition. The dialects of Italy have been called that since long and it would be extremely difficult to ask Italian linguists to stop calling them that way. However, no (sensible) linguist would consider them as corruptions of the Italian language.&lt;/p&gt;
 &lt;p&gt;As an emblematic example, &lt;span class=&#34;citation&#34;&gt;(Loporcaro 2009, 4–5)&lt;/span&gt; succinctly gives us an interesting perspective: “Derivando indipendentemente dal latino, i dialetti come il padovano, il napoletano ecc. sono lingue sorelle dell’italiano.” (trad: “Independently deriving from Latin, the dialects such as Paduan, Neapolitan, etc. are &lt;em&gt;sister languages&lt;/em&gt; of Italian.”). Although Loporcaro stresses the fact that what are normally labelled as “dialects” are languages, he is probably forced to still call them “dialects.” The point is, no one has ever called the dialects of Italy using the apposition “language” (2018 EDIT: probably until recently): so no “Paduan language,” nor “Neapolitan language.” Hence, this use in Wikipedia is totally unjustified.&lt;/p&gt;
@@ -665,7 +665,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;South American Phonological Inventory Database (&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Indo-European Phonological Inventory Database (&lt;a title=&#34;IEPhon&#34; href=&#34;http://iephon.unipv.it/database/&#34; target=&#34;_blank&#34;&gt;IEPhon&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;uclaphonologicalsegment-inventorydatabase&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;ucla-phonological-segment-inventory-database&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;UCLA Phonological Segment Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 451 languages&lt;/li&gt;
@@ -709,7 +709,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list and map&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;south-americanphonologicalinventorydatabase&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;south-american-phonological-inventory-database&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;South American Phonological Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  359 languages&lt;/li&gt;
@@ -720,7 +720,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;indo-european-phonologicalinventorydatabase&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;indo-european-phonological-inventory-database&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Indo-European Phonological Inventory Database&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;:  18 languages&lt;/li&gt;

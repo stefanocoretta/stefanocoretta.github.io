@@ -217,21 +217,21 @@
 <div class="article-metadata">
 
   
+  
   <span class="article-date">
     
     <time datetime="2018-08-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
       23 August 2018
     </time>
   </span>
-  
 
-  
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
     6 min read
   </span>
   
+
   
 
   
@@ -302,7 +302,7 @@
         
 
 
-<p>When plotting tongue contours data obtained from ultrasound tongue imaging in <code>R</code> using <code>ggplot2</code>, a common option to smooth over the individual contours and show the general pattern is to use <code>geom_smooth(methood = &quot;loess&quot;)</code>. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</p>
+<p>When plotting tongue contours data obtained from ultrasound tongue imaging in <code>R</code> using <code>ggplot2</code>, a common option to smooth over the individual contours and show the general pattern is to use <code>geom_smooth(methood = "loess")</code>. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</p>
 <p>To show the shortcomings of using <code>geom_smooth()</code> and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):</p>
 <pre class="r"><code>select(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2)</code></pre>
 <pre><code>## # A tibble: 1,239 x 7

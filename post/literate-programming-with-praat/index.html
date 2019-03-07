@@ -28,10 +28,12 @@
   
     
   
-  <meta name="description" content="PhD Student">
+  <meta name="description" content="This post quickly illustrates how to apply a literate programming flow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need Go for installing this package.)
+What is literate programming? Literate Praat To generate the Praat script and its documentation, you have to:
+ Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by lmt.">
 
   
-  <link rel="alternate" hreflang="en-uk" href="https://stefanocoretta.github.io/authors/admin/">
+  <link rel="alternate" hreflang="en-uk" href="/post/literate-programming-with-praat/">
 
   
 
@@ -98,15 +100,15 @@
   
 
   
-  <link rel="alternate" href="https://stefanocoretta.github.io/authors/admin/index.xml" type="application/rss+xml" title="Stefano Coretta">
-  <link rel="feed" href="https://stefanocoretta.github.io/authors/admin/index.xml" type="application/rss+xml" title="Stefano Coretta">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Stefano Coretta">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Stefano Coretta">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://stefanocoretta.github.io/authors/admin/">
+  <link rel="canonical" href="/post/literate-programming-with-praat/">
 
   
   
@@ -121,19 +123,23 @@
   <meta property="twitter:creator" content="@stefanocoretta">
   
   <meta property="og:site_name" content="Stefano Coretta">
-  <meta property="og:url" content="https://stefanocoretta.github.io/authors/admin/">
-  <meta property="og:title" content="admin | Stefano Coretta">
-  <meta property="og:description" content="PhD Student"><meta property="og:image" content="https://stefanocoretta.github.io/img/icon-192.png">
+  <meta property="og:url" content="/post/literate-programming-with-praat/">
+  <meta property="og:title" content="Literate programming with Praat | Stefano Coretta">
+  <meta property="og:description" content="This post quickly illustrates how to apply a literate programming flow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need Go for installing this package.)
+What is literate programming? Literate Praat To generate the Praat script and its documentation, you have to:
+ Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by lmt."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-uk">
   
+  <meta property="article:published_time" content="2018-12-26T00:00:00&#43;00:00">
   
+  <meta property="article:modified_time" content="2018-12-26T00:00:00&#43;00:00">
+  
+
   
 
   
 
-  
-
-  <title>admin | Stefano Coretta</title>
+  <title>Literate programming with Praat | Stefano Coretta</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -307,16 +313,218 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
 
 
 
-<section id="about" class="pt-5">
-  <div class="container">
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Literate programming with Praat</h1>
+
+  
+
+  
     
-    
+
+
+
+<meta content="2018-12-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2018-12-26 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
     
       
+    
+    <time>26 December 2018</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/linguistics/">Linguistics</a>, 
+    
+    <a href="/categories/methods/">Methods</a>
+    
+  </span>
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Literate%20programming%20with%20Praat&amp;url=%2fpost%2fliterate-programming-with-praat%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fliterate-programming-with-praat%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fliterate-programming-with-praat%2f&amp;title=Literate%20programming%20with%20Praat"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fliterate-programming-with-praat%2f&amp;title=Literate%20programming%20with%20Praat"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Literate%20programming%20with%20Praat&amp;body=%2fpost%2fliterate-programming-with-praat%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>This post quickly illustrates how to apply a literate programming flow to Praat scripting.
+To be able to reproduce the steps described here you need the latest version of <a href="https://pandoc.org" target="_blank">pandoc</a> and the <a href="https://github.com/driusan/lmt" target="_blank">Literate Markdown Tangler</a> (<code>lmt</code>, you will need <a href="https://golang.org" target="_blank">Go</a> for installing this package.)</p>
+
+<h2 id="what-is-literate-programming">What is literate programming?</h2>
+
+<h2 id="literate-praat">Literate Praat</h2>
+
+<p>To generate the Praat script and its documentation, you have to:</p>
+
+<ol>
+<li>Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by <code>lmt</code>.</li>
+<li>Use <code>lmt</code> to tangle the code from the source file into a standalone Praat script.</li>
+<li>Use pandoc with a custom syntax highlighter to generate the documentation of the script.</li>
+</ol>
+
+<h3 id="the-source-file">The source file</h3>
+
+<h3 id="tangle-the-code">Tangle the code</h3>
+
+<p>Make sure that you installed <code>lmt</code>.
+To tangle the code into a standalone Praat script, run the following line, where <code>my-script.praat.md</code> is your Praat source file:</p>
+
+<pre><code>lmt my-script.praat.md
+</code></pre>
+
+<h3 id="weave-the-documentation">Weave the documentation</h3>
+
+<p>Make sure that you installed pandoc.
+To highlight Praat code in the documentation, you need to download some pandoc files from <a href="/files/pandoc-praat.zip">here</a>.
+The files are contained in a zipped folder named <code>pandoc-praat</code>.
+Place this folder in a convenient location on your computer (so that it is easy to call the files inside it from the terminal).</p>
+
+<p>To weave the documentation, run the following by replacing the path with the path to the <code>pandoc-praat/</code> folder on your computer:</p>
+
+<pre><code>pandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=&lt;your-path-here&gt;/pandoc-praat/praat.xml
+</code></pre>
+
+<p>A <code>.pdf</code> file named <code>doc.pdf</code> containing the documentation of the script is creted.</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/data-processing/">data processing</a>
+  
+  <a class="badge badge-light" href="/tags/phonetics/">phonetics</a>
+  
+  <a class="badge badge-light" href="/tags/documentation/">documentation</a>
+  
+  <a class="badge badge-light" href="/tags/praat/">praat</a>
+  
+  <a class="badge badge-light" href="/tags/literate-programming/">literate programming</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
 
 
 
@@ -329,154 +537,98 @@
 
 
 
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/author/admin/avatar_hubcc143e885b9e1a6a78c2e436543825b_108157_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
 
-
-<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email person-address">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      
-      <img class="portrait" src="/author/admin/avatar_hubcc143e885b9e1a6a78c2e436543825b_108157_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
-      
-
-      <div class="portrait-title">
-        <h2 itemprop="name">Stefano Coretta</h2>
-        <h3 itemprop="jobTitle">PhD Student</h3>
-
-        
-        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          
-          <span itemprop="name">The University of Manchester</span>
-          
-        </h3>
-        
-
-        <h3 itemprop="jobTitle" style="color: #8b000e;">stefano.coretta@manchester.ac.uk</h3>
-      </div>
-
-      <link itemprop="url" href="">
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://twitter.com/StefanoCoretta" target="_blank" rel="noopener">
-            <i class="fab fa-twitter big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://www.researchgate.net/profile/Stefano_Coretta" target="_blank" rel="noopener">
-            <i class="ai ai-researchgate big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://github.com/stefanocoretta" target="_blank" rel="noopener">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8" itemprop="description">
-
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/authors/admin">Stefano Coretta</a></h5>
+    <h6 class="card-subtitle">PhD Student</h6>
     
-    
-
-    <p>Welcome to the homepage of Stefano Coretta (IPA: [ˈsteˑfano koˈrɛtta]).</p>
-
-<p>I am a third year PhD student at the University of Manchester. My area of research is linguistics with a particular focus in phonetics and phonology—the study of speech sounds and their relation with human language.</p>
-
-<p>I’m interested in questions like <em>How do we produce the sounds we use in our daily communication?, How do these sounds create a system?, What are the attested sound systems of the languages of the world, and why are they the way they are? and What can we learn about human cognition from the knowledge of how sound systems work?</em></p>
-
-
-    <div class="row">
-
+    <ul class="network-icon" aria-hidden="true">
       
-      <div class="col-md-5">
-        <h3>Interests</h3>
-        <ul class="ul-interests">
-          
-          <li>Phonetics and Phonology</li>
-          
-          <li>Typology and Diachronic Linguistics</li>
-          
-          <li>Data Science</li>
-          
-        </ul>
-      </div>
       
-
       
-      <div class="col-md-7">
-        <h3>Education</h3>
-        <ul class="ul-edu fa-ul">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">MA in Phonetics and Phonology, 2016</p>
-              <p class="institution">University of York, UK</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">MA in Theoretical and Applied Linguistics, 2013</p>
-              <p class="institution">University of Pavia, Italy</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
       
-
-    </div>
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/StefanoCoretta" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://www.researchgate.net/profile/Stefano_Coretta" target="_blank" rel="noopener">
+          <i class="ai ai-researchgate"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/stefanocoretta" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
   </div>
 </div>
 
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/vowel-formants-trajectories-and-tidy-data/">Vowel formants trajectories and tidy data</a></li>
+          
+          <li><a href="/post/plotting-tongue-contours-with-ggplot2/">Plotting tongue contours with ggplot2</a></li>
+          
+          <li><a href="/post/2014-06-30-short-review-phonological-databases/">Short review of phonological databases</a></li>
+          
+        </ul>
+      </div>
+      
     
 
     
-    
-    
-</section>
 
+    
+
+
+  </div>
+</article>
 
 <div class="container">
   <footer class="site-footer">

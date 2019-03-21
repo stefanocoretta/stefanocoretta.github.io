@@ -51,7 +51,7 @@
     <item>
       <title>data processing</title>
       <link>https://stefanocoretta.github.io/tags/data-processing/</link>
-      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/tags/data-processing/</guid>
       <description></description>
@@ -103,6 +103,15 @@
     </item>
     
     <item>
+      <title>documentation</title>
+      <link>https://stefanocoretta.github.io/tags/documentation/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>formant trajectories</title>
       <link>https://stefanocoretta.github.io/tags/formant-trajectories/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
@@ -148,9 +157,18 @@
     </item>
     
     <item>
+      <title>literate programming</title>
+      <link>https://stefanocoretta.github.io/tags/literate-programming/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/literate-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>phonetics</title>
       <link>https://stefanocoretta.github.io/tags/phonetics/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/tags/phonetics/</guid>
       <description></description>
@@ -162,6 +180,15 @@
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/tags/phonology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>praat</title>
+      <link>https://stefanocoretta.github.io/tags/praat/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/praat/</guid>
       <description></description>
     </item>
     

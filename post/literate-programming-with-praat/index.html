@@ -28,12 +28,11 @@
   
     
   
-  <meta name="description" content="This post quickly illustrates how to apply a literate programming flow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need Go for installing this package.)
-What is literate programming? Literate Praat To generate the Praat script and its documentation, you have to:
- Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by lmt.">
+  <meta name="description" content="This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
+What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.">
 
   
-  <link rel="alternate" hreflang="en-uk" href="/post/literate-programming-with-praat/">
+  <link rel="alternate" hreflang="en-uk" href="https://stefanocoretta.github.io/post/literate-programming-with-praat/">
 
   
 
@@ -100,15 +99,15 @@ What is literate programming? Literate Praat To generate the Praat script and it
   
 
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Stefano Coretta">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Stefano Coretta">
+  <link rel="alternate" href="https://stefanocoretta.github.io/index.xml" type="application/rss+xml" title="Stefano Coretta">
+  <link rel="feed" href="https://stefanocoretta.github.io/index.xml" type="application/rss+xml" title="Stefano Coretta">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/literate-programming-with-praat/">
+  <link rel="canonical" href="https://stefanocoretta.github.io/post/literate-programming-with-praat/">
 
   
   
@@ -123,16 +122,15 @@ What is literate programming? Literate Praat To generate the Praat script and it
   <meta property="twitter:creator" content="@stefanocoretta">
   
   <meta property="og:site_name" content="Stefano Coretta">
-  <meta property="og:url" content="/post/literate-programming-with-praat/">
+  <meta property="og:url" content="https://stefanocoretta.github.io/post/literate-programming-with-praat/">
   <meta property="og:title" content="Literate programming with Praat | Stefano Coretta">
-  <meta property="og:description" content="This post quickly illustrates how to apply a literate programming flow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need Go for installing this package.)
-What is literate programming? Literate Praat To generate the Praat script and its documentation, you have to:
- Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by lmt."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
+What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document."><meta property="og:image" content="https://stefanocoretta.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-uk">
   
-  <meta property="article:published_time" content="2018-12-26T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-03-21T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-12-26T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2019-03-21T00:00:00&#43;00:00">
   
 
   
@@ -343,8 +341,8 @@ What is literate programming? Literate Praat To generate the Praat script and it
 
 
 
-<meta content="2018-12-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2018-12-26 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-03-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-03-21 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -357,7 +355,7 @@ What is literate programming? Literate Praat To generate the Praat script and it
     
       
     
-    <time>26 December 2018</time>
+    <time>21 March 2019</time>
   </span>
   
 
@@ -366,7 +364,7 @@ What is literate programming? Literate Praat To generate the Praat script and it
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    4 min read
   </span>
   
 
@@ -394,35 +392,35 @@ What is literate programming? Literate Praat To generate the Praat script and it
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Literate%20programming%20with%20Praat&amp;url=%2fpost%2fliterate-programming-with-praat%2f"
+         href="https://twitter.com/intent/tweet?text=Literate%20programming%20with%20Praat&amp;url=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fliterate-programming-with-praat%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fliterate-programming-with-praat%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fliterate-programming-with-praat%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fliterate-programming-with-praat%2f&amp;title=Literate%20programming%20with%20Praat"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fliterate-programming-with-praat%2f&amp;title=Literate%20programming%20with%20Praat"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fliterate-programming-with-praat%2f&amp;title=Literate%20programming%20with%20Praat"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fliterate-programming-with-praat%2f&amp;title=Literate%20programming%20with%20Praat"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Literate%20programming%20with%20Praat&amp;body=%2fpost%2fliterate-programming-with-praat%2f">
+         href="mailto:?subject=Literate%20programming%20with%20Praat&amp;body=https%3a%2f%2fstefanocoretta.github.io%2fpost%2fliterate-programming-with-praat%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -460,10 +458,45 @@ What is literate programming? Literate Praat To generate the Praat script and it
     <div class="article-style" itemprop="articleBody">
       
 
-<p>This post quickly illustrates how to apply a literate programming flow to Praat scripting.
-To be able to reproduce the steps described here you need the latest version of <a href="https://pandoc.org" target="_blank">pandoc</a> and the <a href="https://github.com/driusan/lmt" target="_blank">Literate Markdown Tangler</a> (<code>lmt</code>, you will need <a href="https://golang.org" target="_blank">Go</a> for installing this package.)</p>
+<p><img src="/img/praat-literate.png" alt="Literate Praat example" /></p>
+
+<p>This post quickly illustrates how to apply a literate programming workflow to Praat scripting.
+To be able to reproduce the steps described here you need the latest version of <a href="https://pandoc.org" target="_blank">pandoc</a> and the <a href="https://github.com/driusan/lmt" target="_blank">Literate Markdown Tangler</a> (<code>lmt</code>, you will need to install <a href="https://golang.org" target="_blank">Go</a> first to install <code>lmt</code>).</p>
 
 <h2 id="what-is-literate-programming">What is literate programming?</h2>
+
+<p>In <a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank">literate programming</a>, one writes both code and plain text which explains what the code does in a single document.
+Natural language and programming language are interleaved in the document in a way that is reader-oriented, rather than software oriented.
+So, for example, the code can be included in an order that is different from the order it should have had the document been a script.</p>
+
+<p>This programming paradigm allows developers to focus on documenting their code in a more natural way.
+This has the double advantage of aiding a new user in understanding what the code does and helping the author of the code to develop the code following a logic that can be different from the logic of the code&rsquo;s programming language.</p>
+
+<p>In general, from a literate source file (a file containing both natural language and programming code) it is possible to obtain a documentation file (by the process called <em>weaving</em>) and a script file (by the process called <em>tangling</em>) which is interpretable by the target programming language.</p>
+
+<p><a href="https://www.markdownguide.org" target="_blank">Markdown</a>, a simple but effective mark-up language, allows mixing natural language (with rich formatting) and code in a single document.
+<a href="https://pandoc.org" target="_blank">Pandoc</a> is a software utility which can convert documents from and to a variety of formats.
+The conversion relevant to us is from Markdown to PDF.
+Converting Markdown to PDF corresponds to the weaving process mentioned above, i.e. creating a richly formatted documentation of the code.
+Pandoc has syntax highlighting capabilities, and Praat syntax is supported, so that your documentation will also be easier to interpret.
+The <code>Literate Markdown Tangler</code>, by Dave MacFarlane, is a software written in <a href="https://golang.org" target="_blank">Go</a> that instead can be used to tangle (extract) the code from the source file into a scripting file.</p>
+
+<p>Pandoc and <code>lmt</code> can be used together to develop a literate programming workflow with Praat scripting.
+This means that you can develop a Praat script by laying out the pieces of the script in the source file and explain what the various parts of the script do in using natural language.
+<code>lmt</code> further allows the user to create &ldquo;blocks&rdquo; of code that can be referenced in other blocks and reused.
+If you wanna generate a PDF version of the documentation, you can convert the source file to a PDF with Pandoc.</p>
+
+<p>The figure at the top of this post shows an example of a literate Praat source file.</p>
+
+<p>The following sections will point you to the software and files that need to be installed/copied and will show how to use literate programming with Praat scripting.</p>
+
+<h2 id="necessary-software">Necessary software</h2>
+
+<ol>
+<li>You need to install the latest version of Pandoc, which can be found <a href="https://pandoc.org/installing.html" target="_blank">here</a>. After installing, be sure you can run this command from your command line GUI: <code>pandoc --version</code>. If a version is returned, Pandoc is working on your system.</li>
+<li>Install Go from <a href="https://golang.org" target="_blank">here</a> and set it up, then download and install <code>lmt</code> from <a href="https://github.com/driusan/lmt" target="_blank">here</a>.</li>
+<li>Download and unzip the content of <a href="/files/pandoc-praat.zip">this zip</a> to a convenient directory (usually, in <code>.pandoc/</code> in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.</li>
+</ol>
 
 <h2 id="literate-praat">Literate Praat</h2>
 
@@ -477,27 +510,34 @@ To be able to reproduce the steps described here you need the latest version of 
 
 <h3 id="the-source-file">The source file</h3>
 
+<p>The source file will contain text, Markdown markup, and code enclosed between back-ticks.
+The following is an example of how such file would look like.</p>
+
+<p><img src="/img/basic.png" alt="Literate Praat basic example" /></p>
+
 <h3 id="tangle-the-code">Tangle the code</h3>
 
-<p>Make sure that you installed <code>lmt</code>.
-To tangle the code into a standalone Praat script, run the following line, where <code>my-script.praat.md</code> is your Praat source file:</p>
+<p>To tangle the code into a standalone Praat script, run the following line from your command line GUI, where <code>my-script.praat.md</code> is your Praat source file:</p>
 
 <pre><code>lmt my-script.praat.md
 </code></pre>
 
+<p>The scripts defined in the source file will be output in the same directory as the source file (to learn more on how this works, check the <code>lmt</code> README on GitHub).</p>
+
 <h3 id="weave-the-documentation">Weave the documentation</h3>
 
-<p>Make sure that you installed pandoc.
-To highlight Praat code in the documentation, you need to download some pandoc files from <a href="/files/pandoc-praat.zip">here</a>.
-The files are contained in a zipped folder named <code>pandoc-praat</code>.
-Place this folder in a convenient location on your computer (so that it is easy to call the files inside it from the terminal).</p>
-
-<p>To weave the documentation, run the following by replacing the path with the path to the <code>pandoc-praat/</code> folder on your computer:</p>
+<p>To weave the documentation, run the following by replacing the syntax definition path with the path to the <code>pandoc-praat/</code> folder on your computer:</p>
 
 <pre><code>pandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=&lt;your-path-here&gt;/pandoc-praat/praat.xml
 </code></pre>
 
-<p>A <code>.pdf</code> file named <code>doc.pdf</code> containing the documentation of the script is creted.</p>
+<p>This line of code tells Pandoc to convert from Markdown to PDF and where to find the files for highlighting Praat code.</p>
+
+<p>A <code>.pdf</code> file named <code>doc.pdf</code> containing the documentation of the script will be created when the line is run.</p>
+
+<h2 id="syntax-highlighting-in-your-editor">Syntax highlighting in your editor</h2>
+
+<p>If you are after an editor that has syntax highlighting for Praat, I suggest you to try out (Atom)[<a href="https://atom.io" target="_blank">https://atom.io</a>] and the package <a href="https://atom.io/packages/language-praat" target="_blank">language-praat</a> (disclaimer, I am the author of the package 😉).</p>
 
     </div>
 
@@ -612,6 +652,8 @@ Place this folder in a convenient location on your computer (so that it is easy 
         <ul>
           
           <li><a href="/post/vowel-formants-trajectories-and-tidy-data/">Vowel formants trajectories and tidy data</a></li>
+          
+          <li><a href="/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/">On the phonotactic restrictions of Proto-Indoeuropean roots</a></li>
           
           <li><a href="/post/plotting-tongue-contours-with-ggplot2/">Plotting tongue contours with ggplot2</a></li>
           

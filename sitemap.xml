@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://stefanocoretta.github.io/post/literate-programming-with-praat/</loc>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</loc>
       <lastmod>2019-01-06T00:00:00+00:00</lastmod>
     </url>
@@ -127,7 +135,16 @@
     <url>
     
       <loc>https://stefanocoretta.github.io/categories/linguistics/</loc>
-      <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://stefanocoretta.github.io/categories/methods/</loc>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -144,7 +161,7 @@
     <url>
     
       <loc>https://stefanocoretta.github.io/</loc>
-      <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -179,7 +196,7 @@
     <url>
     
       <loc>https://stefanocoretta.github.io/tags/data-processing/</loc>
-      <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -232,6 +249,15 @@
     
     <url>
     
+      <loc>https://stefanocoretta.github.io/tags/documentation/</loc>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://stefanocoretta.github.io/tags/formant-trajectories/</loc>
       <lastmod>2018-03-02T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -277,8 +303,17 @@
     
     <url>
     
+      <loc>https://stefanocoretta.github.io/tags/literate-programming/</loc>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://stefanocoretta.github.io/tags/phonetics/</loc>
-      <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -288,6 +323,15 @@
     
       <loc>https://stefanocoretta.github.io/tags/phonology/</loc>
       <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://stefanocoretta.github.io/tags/praat/</loc>
+      <lastmod>2019-03-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

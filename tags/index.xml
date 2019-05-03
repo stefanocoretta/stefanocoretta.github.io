@@ -7,10 +7,217 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
-    <lastBuildDate>Tue, 04 Aug 2015 13:11:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://stefanocoretta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>open science</title>
+      <link>https://stefanocoretta.github.io/tags/open-science/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/open-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phonetics</title>
+      <link>https://stefanocoretta.github.io/tags/phonetics/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/phonetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducibility</title>
+      <link>https://stefanocoretta.github.io/tags/reproducibility/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://stefanocoretta.github.io/tags/statistics/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data processing</title>
+      <link>https://stefanocoretta.github.io/tags/data-processing/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/data-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://stefanocoretta.github.io/tags/documentation/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>literate programming</title>
+      <link>https://stefanocoretta.github.io/tags/literate-programming/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/literate-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>praat</title>
+      <link>https://stefanocoretta.github.io/tags/praat/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/praat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://stefanocoretta.github.io/tags/tutorial/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diachrony</title>
+      <link>https://stefanocoretta.github.io/tags/diachrony/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/diachrony/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phonology</title>
+      <link>https://stefanocoretta.github.io/tags/phonology/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/phonology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proto-indoeuropean</title>
+      <link>https://stefanocoretta.github.io/tags/proto-indoeuropean/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/proto-indoeuropean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typology</title>
+      <link>https://stefanocoretta.github.io/tags/typology/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/typology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data viz</title>
+      <link>https://stefanocoretta.github.io/tags/data-viz/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/data-viz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstats</title>
+      <link>https://stefanocoretta.github.io/tags/rstats/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tongue contours</title>
+      <link>https://stefanocoretta.github.io/tags/tongue-contours/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/tongue-contours/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ultrasound</title>
+      <link>https://stefanocoretta.github.io/tags/ultrasound/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/ultrasound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uti</title>
+      <link>https://stefanocoretta.github.io/tags/uti/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/uti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>formant trajectories</title>
+      <link>https://stefanocoretta.github.io/tags/formant-trajectories/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/formant-trajectories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>formants</title>
+      <link>https://stefanocoretta.github.io/tags/formants/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/formants/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linguistics</title>
+      <link>https://stefanocoretta.github.io/tags/linguistics/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/linguistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidy data</title>
+      <link>https://stefanocoretta.github.io/tags/tidy-data/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/tidy-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time series</title>
+      <link>https://stefanocoretta.github.io/tags/time-series/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/time-series/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ethnologue</title>
@@ -40,92 +247,11 @@
     </item>
     
     <item>
-      <title>computational linguistics</title>
-      <link>https://stefanocoretta.github.io/tags/computational-linguistics/</link>
-      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/computational-linguistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data processing</title>
-      <link>https://stefanocoretta.github.io/tags/data-processing/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/data-processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data viz</title>
-      <link>https://stefanocoretta.github.io/tags/data-viz/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/data-viz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>databases</title>
-      <link>https://stefanocoretta.github.io/tags/databases/</link>
-      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/databases/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>diachrony</title>
-      <link>https://stefanocoretta.github.io/tags/diachrony/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/diachrony/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>dialect</title>
       <link>https://stefanocoretta.github.io/tags/dialect/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/tags/dialect/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>distinctive features</title>
-      <link>https://stefanocoretta.github.io/tags/distinctive-features/</link>
-      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/distinctive-features/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>documentation</title>
-      <link>https://stefanocoretta.github.io/tags/documentation/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/documentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>formant trajectories</title>
-      <link>https://stefanocoretta.github.io/tags/formant-trajectories/</link>
-      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/formant-trajectories/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>formants</title>
-      <link>https://stefanocoretta.github.io/tags/formants/</link>
-      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/formants/</guid>
       <description></description>
     </item>
     
@@ -148,60 +274,6 @@
     </item>
     
     <item>
-      <title>linguistics</title>
-      <link>https://stefanocoretta.github.io/tags/linguistics/</link>
-      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/linguistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>literate programming</title>
-      <link>https://stefanocoretta.github.io/tags/literate-programming/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/literate-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>phonetics</title>
-      <link>https://stefanocoretta.github.io/tags/phonetics/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/phonetics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>phonology</title>
-      <link>https://stefanocoretta.github.io/tags/phonology/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/phonology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>praat</title>
-      <link>https://stefanocoretta.github.io/tags/praat/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/praat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>proto-indoeuropean</title>
-      <link>https://stefanocoretta.github.io/tags/proto-indoeuropean/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/proto-indoeuropean/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>romance</title>
       <link>https://stefanocoretta.github.io/tags/romance/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
@@ -211,83 +283,38 @@
     </item>
     
     <item>
-      <title>rstats</title>
-      <link>https://stefanocoretta.github.io/tags/rstats/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/rstats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>statistics</title>
-      <link>https://stefanocoretta.github.io/tags/statistics/</link>
-      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tidy data</title>
-      <link>https://stefanocoretta.github.io/tags/tidy-data/</link>
-      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/tidy-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>time series</title>
-      <link>https://stefanocoretta.github.io/tags/time-series/</link>
-      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/time-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tongue contours</title>
-      <link>https://stefanocoretta.github.io/tags/tongue-contours/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/tongue-contours/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>typology</title>
-      <link>https://stefanocoretta.github.io/tags/typology/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/typology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ultrasound</title>
-      <link>https://stefanocoretta.github.io/tags/ultrasound/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/ultrasound/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>uti</title>
-      <link>https://stefanocoretta.github.io/tags/uti/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/uti/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>wikipedia</title>
       <link>https://stefanocoretta.github.io/tags/wikipedia/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/tags/wikipedia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computational linguistics</title>
+      <link>https://stefanocoretta.github.io/tags/computational-linguistics/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/computational-linguistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>databases</title>
+      <link>https://stefanocoretta.github.io/tags/databases/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>distinctive features</title>
+      <link>https://stefanocoretta.github.io/tags/distinctive-features/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/distinctive-features/</guid>
       <description></description>
     </item>
     

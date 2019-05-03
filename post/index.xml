@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>An estimate of number of speakers per study in phonetics</title>
+      <link>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
+      <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
+Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
+    </item>
+    
+    <item>
       <title>Literate programming with Praat</title>
       <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
@@ -66,8 +76,7 @@ Nevertheless, the linguistics presence suffers from a variety of cyber-diseases.
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
-      <description> List of available phonological databases (updated 2019-03-22):
- UCLA Phonological Segment Inventory Database (UPSID) Lyon-Albuquerque Phonological Systems Database (LAPSyD) Phonetics Information Base and Lexicon (PHOIBLE) World Atlas of Language Structures (WALS) South American Phonological Inventory Database (SAPhon) BDPROTO Proto-language segment inventories (DBPROTO) Database of Eurasian phonological inventories (link) Indo-European Phonological Inventory Database (IEPhon, dead link)  UCLA Phonological Segment Inventory Database  number of records: 451 languages type of sample: genetically balanced interface: desktop and web data: inventory, language family, comments, source searchable: for language, number of sounds, frequency index, family and phonetic features search display: list   Lyon-Albuquerque Phonological Systems Database  number of records: (in progress) type of sample: not balanced interface: web data: consonant and vowel inventories, syllable structure, stress and tone systems, language location and classification searchable: for language (name, iso, classification), sounds (table format), phonetic features, syllable search display: segment table, boolean (sound, feature, area, family, syllable)   Phonetics Information Base and Lexicon  number of records: 1,010 languages type of sample: not balanced interface: web data: inventory, segment class, language location searchable: for language (name, iso), sounds (list format), source search display: list   World Atlas of Language Structures  number of records: 2,679 languages type of sample: balanced interface: desktop and web data: size of consonant inventory, size of vowel inventory, consonant-vowel ratio, voicing and gaps in plosive system, uvular consonant, glottalized consonants, velar nasal, reduplication searchable: for language (name, iso, genus, family, macroarea; list format), characteristics (list format) search display: list and map   South American Phonological Inventory Database  number of records: 359 languages type of sample: not balanced, South America interface: web data: segment inventory, suprasegmentals, language (name, iso, family, country) searchable: for language (name, iso, family, country; list format and map), sounds (table) search display: table, list and map   BDPROTO Proto-language segment inventories  number of records: 137 languages type of sample: genialogical diversity, convenience sample interface: offline (csv, sql) data: segment inventory, suprasegmentals, language (name, iso, family, homeland, time depth) searchable: yes search display: none   Database of Eurasian phonological inventories  number of records: 416 languages type of sample: interface: web and offline (json) data: segment inventory, suprasegmentals, language (name, family, group) searchable: segment inventory, language, location search display: map, list, segments table   Indo-European Phonological Inventory Database [dead link]  number of records: 18 languages type of sample: not balanced, Indo-European family interface: web data: segment inventory, language (name, family, area) searchable: for language (name, family, country; list format and map), sounds (table) search display: table, list and map   </description>
+      <description>A review of available phonological databases (2014).</description>
     </item>
     
   </channel>

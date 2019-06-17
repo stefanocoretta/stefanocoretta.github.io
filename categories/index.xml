@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
-    <lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://stefanocoretta.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Methods</title>
+      <link>https://stefanocoretta.github.io/categories/methods/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/categories/methods/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linguistics</title>
@@ -18,15 +27,6 @@
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/categories/linguistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Methods</title>
-      <link>https://stefanocoretta.github.io/categories/methods/</link>
-      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/categories/methods/</guid>
       <description></description>
     </item>
     

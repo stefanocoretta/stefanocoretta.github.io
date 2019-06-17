@@ -178,6 +178,12 @@
   </url>
   
   <url>
+    <loc>https://stefanocoretta.github.io/tags/ggplot2/</loc>
+    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://stefanocoretta.github.io/tags/linguistics/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -288,6 +294,11 @@
   
   <url>
     <loc>https://stefanocoretta.github.io/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

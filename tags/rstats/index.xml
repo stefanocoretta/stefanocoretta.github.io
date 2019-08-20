@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rstats on Stefano Coretta</title>
-    <link>/tags/rstats/</link>
+    <link>https://stefanocoretta.github.io/tags/rstats/</link>
     <description>Recent content in rstats on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stefanocoretta.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
-      <link>/post/plot-prior-distributions-with-ggplot2/</link>
+      <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/plot-prior-distributions-with-ggplot2/</guid>
+      <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
       <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
-library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.2.0 ✔ purrr 0.3.2 ## ✔ tibble 2.</description>
+library(tidyverse) ## ── Attaching packages ──────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.2.1 ✔ purrr 0.3.2 ## ✔ tibble 2.</description>
     </item>
     
     <item>
       <title>Plotting tongue contours with ggplot2</title>
-      <link>/post/plotting-tongue-contours-with-ggplot2/</link>
+      <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/plotting-tongue-contours-with-ggplot2/</guid>
+      <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
       <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</description>
     </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
-      <link>/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.
 Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset. In this format, separate columns contain formant values for each interval within the vowel. Normally, values are extracted every 10% or 5% intervals within the vowel.</description>
     </item>

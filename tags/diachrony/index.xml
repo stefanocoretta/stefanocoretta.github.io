@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>diachrony on Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/tags/diachrony/</link>
+    <link>/tags/diachrony/</link>
     <description>Recent content in diachrony on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://stefanocoretta.github.io/tags/diachrony/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/diachrony/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
-      <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
+      <link>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
+      <guid>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
       <description>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.</description>
     </item>
     

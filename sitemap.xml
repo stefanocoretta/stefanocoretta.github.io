@@ -3,311 +3,311 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://stefanocoretta.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/categories/methods/</loc>
+    <loc>/categories/methods/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</loc>
+    <loc>/post/plot-prior-distributions-with-ggplot2/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/</loc>
-    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/</loc>
+    <loc>/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/data-viz/</loc>
+    <loc>/tags/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/rstats/</loc>
+    <loc>/tags/data-viz/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/statistics/</loc>
+    <loc>/tags/rstats/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/tidy-data/</loc>
+    <loc>/tags/statistics/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</loc>
+    <loc>/tags/tidy-data/</loc>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/categories/linguistics/</loc>
-    <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/open-science/</loc>
+    <loc>/categories/linguistics/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/phonetics/</loc>
+    <loc>/tags/open-science/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/reproducibility/</loc>
+    <loc>/tags/phonetics/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/literate-programming-with-praat/</loc>
+    <loc>/tags/reproducibility/</loc>
+    <lastmod>2019-05-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/literate-programming-with-praat/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/data-processing/</loc>
+    <loc>/tags/data-processing/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/documentation/</loc>
+    <loc>/tags/documentation/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/literate-programming/</loc>
+    <loc>/tags/literate-programming/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/praat/</loc>
+    <loc>/tags/praat/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/tutorial/</loc>
+    <loc>/tags/tutorial/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</loc>
+    <loc>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</loc>
     <lastmod>2019-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/diachrony/</loc>
-    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/phonology/</loc>
-    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/proto-indoeuropean/</loc>
+    <loc>/tags/diachrony/</loc>
     <lastmod>2019-01-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/typology/</loc>
+    <loc>/tags/phonology/</loc>
     <lastmod>2019-01-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</loc>
+    <loc>/tags/proto-indoeuropean/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/typology/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/plotting-tongue-contours-with-ggplot2/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/tongue-contours/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/ultrasound/</loc>
+    <loc>/tags/tongue-contours/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/uti/</loc>
+    <loc>/tags/ultrasound/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</loc>
+    <loc>/tags/uti/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/vowel-formants-trajectories-and-tidy-data/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/formant-trajectories/</loc>
+    <loc>/tags/formant-trajectories/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/formants/</loc>
+    <loc>/tags/formants/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/ggplot2/</loc>
+    <loc>/tags/ggplot2/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/linguistics/</loc>
+    <loc>/tags/linguistics/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/time-series/</loc>
+    <loc>/tags/time-series/</loc>
     <lastmod>2018-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/output/</loc>
+    <loc>/output/</loc>
     <lastmod>2018-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/research/</loc>
+    <loc>/research/</loc>
     <lastmod>2018-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2018-01-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/ethnologue/</loc>
+    <loc>/tags/ethnologue/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/italian/</loc>
+    <loc>/tags/italian/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/italy/</loc>
+    <loc>/tags/italy/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</loc>
+    <loc>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/dialect/</loc>
-    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/iso639/</loc>
+    <loc>/tags/dialect/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/language/</loc>
+    <loc>/tags/iso639/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/romance/</loc>
+    <loc>/tags/language/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/wikipedia/</loc>
+    <loc>/tags/romance/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</loc>
+    <loc>/tags/wikipedia/</loc>
+    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/2014-06-30-short-review-phonological-databases/</loc>
     <lastmod>2014-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/computational-linguistics/</loc>
-    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/databases/</loc>
+    <loc>/tags/computational-linguistics/</loc>
     <lastmod>2014-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/distinctive-features/</loc>
+    <loc>/tags/databases/</loc>
     <lastmod>2014-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/authors/</loc>
+    <loc>/tags/distinctive-features/</loc>
+    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/publication_types/</loc>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
     <priority>0</priority>
   </url>
   

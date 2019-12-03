@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>romance on Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/tags/romance/</link>
+    <link>/tags/romance/</link>
     <description>Recent content in romance on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Tue, 04 Aug 2015 13:11:55 +0000</lastBuildDate>
     
-	<atom:link href="https://stefanocoretta.github.io/tags/romance/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/romance/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Wikipedia and the “Dialects of Italy”</title>
-      <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
+      <link>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
+      <guid>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
       <description>The Italian Wikipedia has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia Statistics). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: Wikipedia Statistics).
 Nevertheless, the linguistics presence suffers from a variety of cyber-diseases. According to the figures described on the page of the Italian Linguistics WikiProject, out of 890 articles, 250 don’t cite proper sources for their information and about 270 are stubs that need to be expanded.</description>
     </item>

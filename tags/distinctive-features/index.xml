@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>distinctive features on Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/tags/distinctive-features/</link>
+    <link>/tags/distinctive-features/</link>
     <description>Recent content in distinctive features on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Mon, 30 Jun 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://stefanocoretta.github.io/tags/distinctive-features/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/distinctive-features/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Short review of phonological databases</title>
-      <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
+      <link>/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
+      <guid>/post/2014-06-30-short-review-phonological-databases/</guid>
       <description>A review of available phonological databases (2014).</description>
     </item>
     

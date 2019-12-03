@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data processing on Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/tags/data-processing/</link>
+    <link>/tags/data-processing/</link>
     <description>Recent content in data processing on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Thu, 21 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://stefanocoretta.github.io/tags/data-processing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/data-processing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Literate programming with Praat</title>
-      <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
+      <link>/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/literate-programming-with-praat/</guid>
+      <guid>/post/literate-programming-with-praat/</guid>
       <description>This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
 What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.</description>
     </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
-      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <link>/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <guid>/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.
 Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset. In this format, separate columns contain formant values for each interval within the vowel. Normally, values are extracted every 10% or 5% intervals within the vowel.</description>
     </item>

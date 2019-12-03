@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Methods on Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/categories/methods/</link>
+    <link>/categories/methods/</link>
     <description>Recent content in Methods on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://stefanocoretta.github.io/categories/methods/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/methods/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
-      <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
+      <link>/post/plot-prior-distributions-with-ggplot2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
+      <guid>/post/plot-prior-distributions-with-ggplot2/</guid>
       <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
@@ -26,20 +26,20 @@ library(tidyverse) ## ── Attaching packages ─────── tidyverse 
     
     <item>
       <title>An estimate of number of speakers per study in phonetics</title>
-      <link>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
+      <link>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
+      <guid>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
       <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
 Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
     </item>
     
     <item>
       <title>Literate programming with Praat</title>
-      <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
+      <link>/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stefanocoretta.github.io/post/literate-programming-with-praat/</guid>
+      <guid>/post/literate-programming-with-praat/</guid>
       <description>This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
 What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.</description>
     </item>

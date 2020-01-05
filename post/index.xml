@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Stefano Coretta</title>
-    <link>/post/</link>
+    <link>https://stefanocoretta.github.io/post/</link>
     <description>Recent content in Blog on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
     <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stefanocoretta.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
-      <link>/post/plot-prior-distributions-with-ggplot2/</link>
+      <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/plot-prior-distributions-with-ggplot2/</guid>
+      <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
       <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
@@ -26,68 +26,68 @@ library(tidyverse) ## ── Attaching packages ─────── tidyverse 
     
     <item>
       <title>An estimate of number of speakers per study in phonetics</title>
-      <link>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
+      <link>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
+      <guid>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
       <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
 Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
     </item>
     
     <item>
       <title>Literate programming with Praat</title>
-      <link>/post/literate-programming-with-praat/</link>
+      <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/literate-programming-with-praat/</guid>
+      <guid>https://stefanocoretta.github.io/post/literate-programming-with-praat/</guid>
       <description>This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
 What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.</description>
     </item>
     
     <item>
       <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
-      <link>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
+      <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
+      <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
       <description>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.</description>
     </item>
     
     <item>
       <title>Plotting tongue contours with ggplot2</title>
-      <link>/post/plotting-tongue-contours-with-ggplot2/</link>
+      <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/plotting-tongue-contours-with-ggplot2/</guid>
+      <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
       <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</description>
     </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
-      <link>/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.
 Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset. In this format, separate columns contain formant values for each interval within the vowel. Normally, values are extracted every 10% or 5% intervals within the vowel.</description>
     </item>
     
     <item>
       <title>Wikipedia and the “Dialects of Italy”</title>
-      <link>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
+      <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
       
-      <guid>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
+      <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
       <description>The Italian Wikipedia has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia Statistics). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: Wikipedia Statistics).
 Nevertheless, the linguistics presence suffers from a variety of cyber-diseases. According to the figures described on the page of the Italian Linguistics WikiProject, out of 890 articles, 250 don’t cite proper sources for their information and about 270 are stubs that need to be expanded.</description>
     </item>
     
     <item>
       <title>Short review of phonological databases</title>
-      <link>/post/2014-06-30-short-review-phonological-databases/</link>
+      <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/2014-06-30-short-review-phonological-databases/</guid>
+      <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
       <description>A review of available phonological databases (2014).</description>
     </item>
     

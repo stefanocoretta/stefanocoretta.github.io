@@ -551,10 +551,10 @@ tongue_data</code></pre>
 ## # … with 1,229 more rows, and 23 more variables: TT_velocity_abs &lt;dbl&gt;,
 ## #   TD_displacement_sm &lt;dbl&gt;, TD_velocity &lt;dbl&gt;, TD_velocity_abs &lt;dbl&gt;,
 ## #   TR_displacement_sm &lt;dbl&gt;, TR_velocity &lt;dbl&gt;, TR_velocity_abs &lt;dbl&gt;,
-## #   fan_line &lt;int&gt;, X &lt;dbl&gt;, Y &lt;dbl&gt;, word &lt;chr&gt;, language &lt;chr&gt;,
-## #   sex &lt;chr&gt;, item &lt;int&gt;, ipa &lt;chr&gt;, c1 &lt;chr&gt;, c1_phonation &lt;chr&gt;,
-## #   vowel &lt;chr&gt;, anteropost &lt;chr&gt;, height &lt;chr&gt;, c2 &lt;chr&gt;,
-## #   c2_phonation &lt;chr&gt;, c2_place &lt;chr&gt;</code></pre>
+## #   fan_line &lt;int&gt;, X &lt;dbl&gt;, Y &lt;dbl&gt;, word &lt;chr&gt;, language &lt;chr&gt;, sex &lt;chr&gt;,
+## #   item &lt;int&gt;, ipa &lt;chr&gt;, c1 &lt;chr&gt;, c1_phonation &lt;chr&gt;, vowel &lt;chr&gt;,
+## #   anteropost &lt;chr&gt;, height &lt;chr&gt;, c2 &lt;chr&gt;, c2_phonation &lt;chr&gt;,
+## #   c2_place &lt;chr&gt;</code></pre>
 <p>We can now use <code>geom_path()</code>. The argument <code>group = rec_date</code> ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).</p>
 <pre class="r"><code>tongue_data %&gt;%
   ggplot(aes(X, Y)) +

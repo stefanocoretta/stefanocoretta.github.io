@@ -510,26 +510,25 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <pre class="r"><code>trajectories</code></pre>
 <pre><code>## # A tibble: 7 x 61
-##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35
-##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  194. u     tule…     43.3  406.  439.  453.  456.  430.  357.  314.
-## 2  194. e     tule…    103.   503.  517.  537.  564.  556.  362.  315.
-## 3  194. u     tule…     14.1  290.  288.  286.  283.  281.  281.  282.
-## 4  194. e     tule…     75.7  440.  441.  439.  429.  386.  269.  250.
-## 5  194. e     tule…     68.2  437.  445.  479.  562.  622.  605.  523.
-## 6  195. a     tule…     89.8  800.  736.  662.  543.  447.  564.  768.
-## 7  195. o     tule…     98.5  482.  463.  471.  326.  316.  573. 1511.
-## # … with 50 more variables: F1_40 &lt;dbl&gt;, F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;,
-## #   F1_55 &lt;dbl&gt;, F1_60 &lt;dbl&gt;, F1_65 &lt;dbl&gt;, F1_70 &lt;dbl&gt;, F1_75 &lt;dbl&gt;,
-## #   F1_80 &lt;dbl&gt;, F1_85 &lt;dbl&gt;, F1_90 &lt;dbl&gt;, F1_95 &lt;dbl&gt;, F2_05 &lt;dbl&gt;,
-## #   F2_10 &lt;dbl&gt;, F2_15 &lt;dbl&gt;, F2_20 &lt;dbl&gt;, F2_25 &lt;dbl&gt;, F2_30 &lt;dbl&gt;,
-## #   F2_35 &lt;dbl&gt;, F2_40 &lt;dbl&gt;, F2_45 &lt;dbl&gt;, F2_50 &lt;dbl&gt;, F2_55 &lt;dbl&gt;,
-## #   F2_60 &lt;dbl&gt;, F2_65 &lt;dbl&gt;, F2_70 &lt;dbl&gt;, F2_75 &lt;dbl&gt;, F2_80 &lt;dbl&gt;,
-## #   F2_85 &lt;dbl&gt;, F2_90 &lt;dbl&gt;, F2_95 &lt;dbl&gt;, F3_05 &lt;dbl&gt;, F3_10 &lt;dbl&gt;,
-## #   F3_15 &lt;dbl&gt;, F3_20 &lt;dbl&gt;, F3_25 &lt;dbl&gt;, F3_30 &lt;dbl&gt;, F3_35 &lt;dbl&gt;,
-## #   F3_40 &lt;dbl&gt;, F3_45 &lt;dbl&gt;, F3_50 &lt;dbl&gt;, F3_55 &lt;dbl&gt;, F3_60 &lt;dbl&gt;,
-## #   F3_65 &lt;dbl&gt;, F3_70 &lt;dbl&gt;, F3_75 &lt;dbl&gt;, F3_80 &lt;dbl&gt;, F3_85 &lt;dbl&gt;,
-## #   F3_90 &lt;dbl&gt;, F3_95 &lt;dbl&gt;</code></pre>
+##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
+##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  194. u     tule…     43.3  406.  439.  453.  456.  430.  357.  314.  288.
+## 2  194. e     tule…    103.   503.  517.  537.  564.  556.  362.  315.  295.
+## 3  194. u     tule…     14.1  290.  288.  286.  283.  281.  281.  282.  295.
+## 4  194. e     tule…     75.7  440.  441.  439.  429.  386.  269.  250.  318.
+## 5  194. e     tule…     68.2  437.  445.  479.  562.  622.  605.  523.  618.
+## 6  195. a     tule…     89.8  800.  736.  662.  543.  447.  564.  768.  358.
+## 7  195. o     tule…     98.5  482.  463.  471.  326.  316.  573. 1511. 1389.
+## # … with 49 more variables: F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;, F1_55 &lt;dbl&gt;, F1_60 &lt;dbl&gt;,
+## #   F1_65 &lt;dbl&gt;, F1_70 &lt;dbl&gt;, F1_75 &lt;dbl&gt;, F1_80 &lt;dbl&gt;, F1_85 &lt;dbl&gt;,
+## #   F1_90 &lt;dbl&gt;, F1_95 &lt;dbl&gt;, F2_05 &lt;dbl&gt;, F2_10 &lt;dbl&gt;, F2_15 &lt;dbl&gt;,
+## #   F2_20 &lt;dbl&gt;, F2_25 &lt;dbl&gt;, F2_30 &lt;dbl&gt;, F2_35 &lt;dbl&gt;, F2_40 &lt;dbl&gt;,
+## #   F2_45 &lt;dbl&gt;, F2_50 &lt;dbl&gt;, F2_55 &lt;dbl&gt;, F2_60 &lt;dbl&gt;, F2_65 &lt;dbl&gt;,
+## #   F2_70 &lt;dbl&gt;, F2_75 &lt;dbl&gt;, F2_80 &lt;dbl&gt;, F2_85 &lt;dbl&gt;, F2_90 &lt;dbl&gt;,
+## #   F2_95 &lt;dbl&gt;, F3_05 &lt;dbl&gt;, F3_10 &lt;dbl&gt;, F3_15 &lt;dbl&gt;, F3_20 &lt;dbl&gt;,
+## #   F3_25 &lt;dbl&gt;, F3_30 &lt;dbl&gt;, F3_35 &lt;dbl&gt;, F3_40 &lt;dbl&gt;, F3_45 &lt;dbl&gt;,
+## #   F3_50 &lt;dbl&gt;, F3_55 &lt;dbl&gt;, F3_60 &lt;dbl&gt;, F3_65 &lt;dbl&gt;, F3_70 &lt;dbl&gt;,
+## #   F3_75 &lt;dbl&gt;, F3_80 &lt;dbl&gt;, F3_85 &lt;dbl&gt;, F3_90 &lt;dbl&gt;, F3_95 &lt;dbl&gt;</code></pre>
 <p>The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word <em>tulemupepelako</em> ‘we are praying for her’ (Bemba, [<code>bemb1257</code>]).
 It’s a toy dataset of course, just for purpose of illustration, so not very exciting!</p>
 <p>The values for each 5% interval for each formant are in separate columns.

@@ -6,7 +6,7 @@
     <description>Recent content on Stefano Coretta</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-uk</language>
-    <copyright>&amp;copy; 2017-2019 Stefano Coretta</copyright>
+    <copyright>&amp;copy; 2017-2020 Stefano Coretta</copyright>
     <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -793,85 +793,6 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Research</title>
-      <link>https://stefanocoretta.github.io/research/</link>
-      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/research/</guid>
-      <description>
-
-
-&lt;p&gt;My research interests gravitate towards the study of &lt;em&gt;human language&lt;/em&gt; and of &lt;em&gt;speech sounds&lt;/em&gt;, from a variety of intersecting perspectives. In particular, I am interested in speech production, sound change and computational modelling. For my PhD project &lt;em&gt;Vowel duration and consonant voicing: A production study.&lt;/em&gt; (supervised by Dr &lt;a href=&#34;http://www.bermudez-otero.com/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ricardo Bermúdez-Otero&lt;/a&gt; and Dr &lt;a href=&#34;https://sites.google.com/site/patrycjastrycharczuk/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrycja Strycharczuk&lt;/a&gt;), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, &lt;a href=&#34;https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ultrasound tongue imaging&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Electroglottograph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;electroglottography&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;My position regarding phonology can be summarised as follows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Phonology is a &lt;strong&gt;dynamic system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Thelen and Smith 2006; Vihman 2014)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Phonology is part of a complex &lt;strong&gt;socio-cultural system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Boer 2015; Foulkes and Docherty 2006; Thompson, Kirby, and Smith 2016)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Phonology is a complex &lt;strong&gt;physical system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Ohala 1990, 2005)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Phonology is a complex &lt;strong&gt;neuro-cognitive system&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;It is &lt;em&gt;rich&lt;/em&gt; in details &lt;span class=&#34;citation&#34;&gt;(Johnson 1997; Pierrehumbert 2001; Bybee 2002)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;It is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I also consider these statements to be extendable to Language as a holistic system.&lt;/p&gt;
-&lt;div id=&#34;academic-interests&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Academic interests&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Phonetics and Phonology (PhonPhon)&lt;/li&gt;
-&lt;li&gt;Quantitative Methods and Statistics&lt;/li&gt;
-&lt;li&gt;Language description&lt;/li&gt;
-&lt;li&gt;Typology and Diachronic linguistics&lt;/li&gt;
-&lt;li&gt;Phonology–morphosyntax interaction&lt;/li&gt;
-&lt;li&gt;Graphemics&lt;/li&gt;
-&lt;li&gt;Computer science and technology&lt;/li&gt;
-&lt;li&gt;Data science&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
-&lt;h3&gt;References&lt;/h3&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-boer2015&#34;&gt;
-&lt;p&gt;Boer, Bart de. 2015. “Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.” &lt;em&gt;Journal of Phonetics.&lt;/em&gt; 53: 79–87. &lt;a href=&#34;https://doi.org/10.1016/j.wocn.2015.07.001&#34;&gt;https://doi.org/10.1016/j.wocn.2015.07.001&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-bybee2002&#34;&gt;
-&lt;p&gt;Bybee, Joan. 2002. “Phonological Evidence for Exemplar Storage of Multiword Sequences.” &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-foulkes2006&#34;&gt;
-&lt;p&gt;Foulkes, Paul, and Gerard Docherty. 2006. “The Social Life of Phonetics and Phonology.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 34 (4): 409–38.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-johnson1997&#34;&gt;
-&lt;p&gt;Johnson, Keith. 1997. “Speech Perception Without Speaker Normalization: An Exemplar Model.” In &lt;em&gt;Talker Variability in Speech Processing&lt;/em&gt;, edited by Keith Johnson and John W. Mullenix, 145–65. San Diego, CA: Academic Press.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-ohala1990&#34;&gt;
-&lt;p&gt;Ohala, John J. 1990. “There Is No Interface Between Phonology and Phonetics: A Personal View.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 18 (2): 153–72.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-ohala2005&#34;&gt;
-&lt;p&gt;———. 2005. “The Marriage of Phonetics and Phonology.” &lt;em&gt;Acoustical Science and Technology&lt;/em&gt; 26 (5): 418–22.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-pierrehumbert2001&#34;&gt;
-&lt;p&gt;Pierrehumbert, Janet B. 2001. “Exemplar Dynamics: Word Frequency, Lenition and Contrast.” In &lt;em&gt;Frequency and the Emergence of Linguistic Structure&lt;/em&gt;, edited by Joan L. Bybee and Paul J. Hopper, 137–57. Amsterdam Philadelphia: John Benjamins Publishing Company.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-thelen2006&#34;&gt;
-&lt;p&gt;Thelen, Esther, and Linda B. Smith. 2006. “Dynamic Systems Theories.” In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-thompson2016&#34;&gt;
-&lt;p&gt;Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. “Culture Shapes the Evolution of Cognition.” &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–5. &lt;a href=&#34;https://doi.org/10.1073/pnas.1523631113&#34;&gt;https://doi.org/10.1073/pnas.1523631113&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-vihman2014&#34;&gt;
-&lt;p&gt;Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: The First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-wedel2007&#34;&gt;
-&lt;p&gt;Wedel, Andrew B. 2007. “Feedback and Regularity in the Lexicon.” &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85. &lt;a href=&#34;https://doi.org/10.1017/S0952675707001145&#34;&gt;https://doi.org/10.1017/S0952675707001145&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-wedel2011&#34;&gt;
-&lt;p&gt;———. 2011. “Self-Organization in Phonology.” In &lt;em&gt;The Blackwell Companion to Phonology&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Wikipedia and the “Dialects of Italy”</title>
       <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
@@ -1011,6 +932,84 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, family, country; list format and map), sounds (table)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://stefanocoretta.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/research/</guid>
+      <description>
+
+&lt;p&gt;My research interests gravitate towards the study of &lt;em&gt;human language&lt;/em&gt; and of &lt;em&gt;speech sounds&lt;/em&gt;, from a variety of intersecting perspectives. In particular, I am interested in speech production, sound change and computational modelling. For my PhD project &lt;em&gt;Vowel duration and consonant voicing: A production study&lt;/em&gt; (supervised by Dr &lt;a href=&#34;http://www.bermudez-otero.com/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ricardo Bermúdez-Otero&lt;/a&gt; and Dr &lt;a href=&#34;https://sites.google.com/site/patrycjastrycharczuk/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrycja Strycharczuk&lt;/a&gt;), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, &lt;a href=&#34;https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ultrasound tongue imaging&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Electroglottograph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;electroglottography&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;My position regarding phonology can be summarised as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Phonology is a &lt;strong&gt;dynamic system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Thelen and Smith 2006; Vihman 2014)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Phonology is part of a complex &lt;strong&gt;socio-cultural system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Boer 2015; Foulkes and Docherty 2006; Thompson, Kirby, and Smith 2016)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Phonology is a complex &lt;strong&gt;physical system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Ohala 1990, 2005)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Phonology is a complex &lt;strong&gt;neuro-cognitive system&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;It is &lt;em&gt;rich&lt;/em&gt; in details &lt;span class=&#34;citation&#34;&gt;(Johnson 1997; Pierrehumbert 2001; Bybee 2002)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;It is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also consider these statements to be extendable to Language as a holistic system.&lt;/p&gt;
+&lt;div id=&#34;academic-interests&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Academic interests&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Phonetics and Phonology (PhonPhon)&lt;/li&gt;
+&lt;li&gt;Quantitative Methods and Statistics&lt;/li&gt;
+&lt;li&gt;Language description&lt;/li&gt;
+&lt;li&gt;Typology and Diachronic linguistics&lt;/li&gt;
+&lt;li&gt;Phonology–morphosyntax interaction&lt;/li&gt;
+&lt;li&gt;Graphemics&lt;/li&gt;
+&lt;li&gt;Computer science and technology&lt;/li&gt;
+&lt;li&gt;Data science&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-boer2015&#34;&gt;
+&lt;p&gt;Boer, Bart de. 2015. “Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.” &lt;em&gt;Journal of Phonetics.&lt;/em&gt; 53: 79–87. &lt;a href=&#34;https://doi.org/10.1016/j.wocn.2015.07.001&#34;&gt;https://doi.org/10.1016/j.wocn.2015.07.001&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-bybee2002&#34;&gt;
+&lt;p&gt;Bybee, Joan. 2002. “Phonological Evidence for Exemplar Storage of Multiword Sequences.” &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-foulkes2006&#34;&gt;
+&lt;p&gt;Foulkes, Paul, and Gerard Docherty. 2006. “The Social Life of Phonetics and Phonology.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 34 (4): 409–38.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-johnson1997&#34;&gt;
+&lt;p&gt;Johnson, Keith. 1997. “Speech Perception Without Speaker Normalization: An Exemplar Model.” In &lt;em&gt;Talker Variability in Speech Processing&lt;/em&gt;, edited by Keith Johnson and John W. Mullenix, 145–65. San Diego, CA: Academic Press.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ohala1990&#34;&gt;
+&lt;p&gt;Ohala, John J. 1990. “There Is No Interface Between Phonology and Phonetics: A Personal View.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 18 (2): 153–72.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ohala2005&#34;&gt;
+&lt;p&gt;———. 2005. “The Marriage of Phonetics and Phonology.” &lt;em&gt;Acoustical Science and Technology&lt;/em&gt; 26 (5): 418–22.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-pierrehumbert2001&#34;&gt;
+&lt;p&gt;Pierrehumbert, Janet B. 2001. “Exemplar Dynamics: Word Frequency, Lenition and Contrast.” In &lt;em&gt;Frequency and the Emergence of Linguistic Structure&lt;/em&gt;, edited by Joan L. Bybee and Paul J. Hopper, 137–57. Amsterdam Philadelphia: John Benjamins Publishing Company.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-thelen2006&#34;&gt;
+&lt;p&gt;Thelen, Esther, and Linda B. Smith. 2006. “Dynamic Systems Theories.” In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-thompson2016&#34;&gt;
+&lt;p&gt;Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. “Culture Shapes the Evolution of Cognition.” &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–5. &lt;a href=&#34;https://doi.org/10.1073/pnas.1523631113&#34;&gt;https://doi.org/10.1073/pnas.1523631113&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-vihman2014&#34;&gt;
+&lt;p&gt;Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: The First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wedel2007&#34;&gt;
+&lt;p&gt;Wedel, Andrew B. 2007. “Feedback and Regularity in the Lexicon.” &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85. &lt;a href=&#34;https://doi.org/10.1017/S0952675707001145&#34;&gt;https://doi.org/10.1017/S0952675707001145&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-wedel2011&#34;&gt;
+&lt;p&gt;———. 2011. “Self-Organization in Phonology.” In &lt;em&gt;The Blackwell Companion to Phonology&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

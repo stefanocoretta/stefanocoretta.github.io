@@ -1,24 +1,155 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>typology on Stefano Coretta</title>
+    <title>typology | Stefano Coretta</title>
     <link>https://stefanocoretta.github.io/tags/typology/</link>
-    <description>Recent content in typology on Stefano Coretta</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2017-2020 Stefano Coretta</copyright>
-    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://stefanocoretta.github.io/tags/typology/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://stefanocoretta.github.io/tags/typology/index.xml" rel="self" type="application/rss+xml" />
+    <description>typology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>typology</title>
+      <link>https://stefanocoretta.github.io/tags/typology/</link>
+    </image>
     
     <item>
       <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
       <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
-      <description>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.</description>
+      <description>
+
+
+&lt;p&gt;Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants.
+In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root.
+I will focus here on stops and laryngeal features.
+Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.&lt;/p&gt;
+&lt;p&gt;The traditional reconstruction of Proto-Indoeuropean (PIE) stops includes the following laryngeal oppositions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Voiceless unaspirated stops (T),&lt;/li&gt;
+&lt;li&gt;Voiced unaspirated stops (D), and&lt;/li&gt;
+&lt;li&gt;Voiced aspirated (murmured) stops (Dʰ).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The possible logical combinations of these laryngeal contrasts in a CVC- root, reviewed in &lt;span class=&#34;citation&#34;&gt;Cooper (2009)&lt;/span&gt;, are the following (the base ablaut vowel /e/ is used for illustrative purposes):&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;th&gt;Dʰ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;TeT&lt;/td&gt;
+&lt;td&gt;TeD&lt;/td&gt;
+&lt;td&gt;**TeDʰ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;D&lt;/td&gt;
+&lt;td&gt;DeT&lt;/td&gt;
+&lt;td&gt;**DeD&lt;/td&gt;
+&lt;td&gt;DeDʰ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Dʰ&lt;/td&gt;
+&lt;td&gt;**DʰeT&lt;/td&gt;
+&lt;td&gt;DʰeD&lt;/td&gt;
+&lt;td&gt;DʰeDʰ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The double asterisks signal those combinations which are not attested in the reconstructed PIE lexicon, namely **TeDʰ, **DED, and **DʰeT.
+Typologically, these restrictions, in combination with the reconstructed laryngeal oppositions, are somewhat baffling.
+There are no known languages which unequivocably contrasts voiceless stops with voiced stops and voiced aspirated stops.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Gamkrelidze and Ivanov (1994)&lt;/span&gt; and others have used this typological incongruence (with other aspects of the reconstructed PIE phonology) to argue that the reconstructed voiced (D) stops were in fact a type of ejective or glottalised consonants (which gave the name ‘Glottalic theory’).
+I’ll argue here that a reinterpretation of the restrictions seen above within Glottalic theory offers a sensible and more typologically grounded account of such restrictions.&lt;/p&gt;
+&lt;p&gt;According to Glottalic theory, voiced stops (D) are glottalised consonants (T’), voiced aspirated stops (Dʰ) are voiced stops with aspirated allophones (D), and the voiceless stops are voiceless stops with aspirated allophones (T).
+The re-thought laryngeal contrasts thus are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Voiceless stops (T),&lt;/li&gt;
+&lt;li&gt;Voiced stops (D),&lt;/li&gt;
+&lt;li&gt;Glottalised (ejective) stops (T’).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s now rewrite the restriction table above:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;T’&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;TeT&lt;/td&gt;
+&lt;td&gt;TeT’&lt;/td&gt;
+&lt;td&gt;**TeD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;T’&lt;/td&gt;
+&lt;td&gt;T’eT&lt;/td&gt;
+&lt;td&gt;**T’eT’&lt;/td&gt;
+&lt;td&gt;T’eD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;D&lt;/td&gt;
+&lt;td&gt;**DeT&lt;/td&gt;
+&lt;td&gt;DeT’&lt;/td&gt;
+&lt;td&gt;DeD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The restriction **T’eT’ seems now more plausible, since it involves a typologically less common type of stop.
+(I remember from my time at the University of Pavia Prof. Gianguido Manzelli telling us there are American languages which have exactly this phonotactic restriction. Unfortunately I fail to remember which these are.)
+But what about **TeD and **DeT?&lt;/p&gt;
+&lt;p&gt;If we observe the attested combinations, a pattern emerges:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;TeT&lt;/td&gt;
+&lt;td&gt;DeD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;T’eT&lt;/td&gt;
+&lt;td&gt;T’eD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;TeT’&lt;/td&gt;
+&lt;td&gt;DeT’&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;There seems to be an opposition between ‘T-roots’ and ‘D-roots’, where T’ stops are kind of neutral stops (they can appear in both type of roots).
+My thought on this is that, speculatively, the T~D contrast derives from an earlier suprasegmental contrast that was assigned to the root, rather than to the individual stops.
+This could have been something like stress, tone, pitch, or else (also, think about word-level nasality in South American languages, in which a word is either all nasal or oral).&lt;/p&gt;
+&lt;p&gt;If indeed roots could be specified as having the T feature (whatever that was) or the D feature, then it is possible that the glottalised (ejective) stops T’ were immune to changes acted by the root-level T~D distinction.
+Ejective stops in particular are strongly articulated consonants, and this might explain their resilience to being affected by suprasegmental properties of the root.&lt;/p&gt;
+&lt;p&gt;Thus, the reconstructed original laryngeal system might have contrasted voiceless stops and ejective stops.
+There is indeed a dozen languages with this system in South America alone (data from the &lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt; database v1.1.4), for example Alacalufe (Alacalufan), Chulupí (Mataco), and Selk’nam (Chon).&lt;/p&gt;
+&lt;p&gt;All this is of course internal reconstruction, so highly speculative, and as mentioned above, it is not meant to be more than brainstorming. I hope that the potential readers had fun reading this anyway and I am happy to hear about their thoughts.&lt;/p&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-cooper2009&#34;&gt;
+&lt;p&gt;Cooper, Adam I. 2009. “Similarity Avoidance in the Proto-Indo-European Root.” &lt;em&gt;University of Pennsylvania Working Papers in Linguistics&lt;/em&gt; 15 (1): 8.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-gamkrelidze1994&#34;&gt;
+&lt;p&gt;Gamkrelidze, Thomas Valerianis, and Vyacheslav Vsevolodovich Ivanov. 1994. &lt;em&gt;Indo-European and the Indo-Europeans: A Reconstruction and Historical Analysis of a Proto-Language and a Proto-Culture.&lt;/em&gt; Translated by J. Nichols. Berlin–New York: Mouton de Gruyter.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

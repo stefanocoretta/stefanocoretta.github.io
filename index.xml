@@ -3,20 +3,19 @@
   <channel>
     <title>Stefano Coretta</title>
     <link>https://stefanocoretta.github.io/</link>
-    <description>Recent content on Stefano Coretta</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2017-2020 Stefano Coretta</copyright>
-    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Stefano Coretta</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Thu, 11 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Stefano Coretta</title>
+      <link>https://stefanocoretta.github.io/</link>
+    </image>
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
       <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
       <description>
 
@@ -93,7 +92,6 @@ ggplot() +
       <title>An estimate of number of speakers per study in phonetics</title>
       <link>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
       <description>
 
@@ -151,90 +149,59 @@ The majority of studies have obtained data from 10 speakers or less, independent
       <title>Literate programming with Praat</title>
       <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/literate-programming-with-praat/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/praat-literate.png&#34; alt=&#34;Literate Praat example&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/praat-literate.png&#34; alt=&#34;Literate Praat example&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This post quickly illustrates how to apply a literate programming workflow to Praat scripting.
-To be able to reproduce the steps described here you need the latest version of &lt;a href=&#34;https://pandoc.org&#34; target=&#34;_blank&#34;&gt;pandoc&lt;/a&gt; and the &lt;a href=&#34;https://github.com/driusan/lmt&#34; target=&#34;_blank&#34;&gt;Literate Markdown Tangler&lt;/a&gt; (&lt;code&gt;lmt&lt;/code&gt;, you will need to install &lt;a href=&#34;https://golang.org&#34; target=&#34;_blank&#34;&gt;Go&lt;/a&gt; first to install &lt;code&gt;lmt&lt;/code&gt;).&lt;/p&gt;
-
+To be able to reproduce the steps described here you need the latest version of &lt;a href=&#34;https://pandoc.org&#34;&gt;pandoc&lt;/a&gt; and the &lt;a href=&#34;https://github.com/driusan/lmt&#34;&gt;Literate Markdown Tangler&lt;/a&gt; (&lt;code&gt;lmt&lt;/code&gt;, you will need to install &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt; first to install &lt;code&gt;lmt&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id=&#34;what-is-literate-programming&#34;&gt;What is literate programming?&lt;/h2&gt;
-
-&lt;p&gt;In &lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34; target=&#34;_blank&#34;&gt;literate programming&lt;/a&gt;, one writes both code and plain text which explains what the code does in a single document.
+&lt;p&gt;In &lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34;&gt;literate programming&lt;/a&gt;, one writes both code and plain text which explains what the code does in a single document.
 Natural language and programming language are interleaved in the document in a way that is reader-oriented, rather than software oriented.
 So, for example, the code can be included in an order that is different from the order it should have had the document been a script.&lt;/p&gt;
-
 &lt;p&gt;This programming paradigm allows developers to focus on documenting their code in a more natural way.
 This has the double advantage of aiding a new user in understanding what the code does and helping the author of the code to develop the code following a logic that can be different from the logic of the code&amp;rsquo;s programming language.&lt;/p&gt;
-
 &lt;p&gt;In general, from a literate source file (a file containing both natural language and programming code) it is possible to obtain a documentation file (by the process called &lt;em&gt;weaving&lt;/em&gt;) and a script file (by the process called &lt;em&gt;tangling&lt;/em&gt;) which is interpretable by the target programming language.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.markdownguide.org&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt;, a simple but effective mark-up language, allows mixing natural language (with rich formatting) and code in a single document.
-&lt;a href=&#34;https://pandoc.org&#34; target=&#34;_blank&#34;&gt;Pandoc&lt;/a&gt; is a software utility which can convert documents from and to a variety of formats.
+&lt;p&gt;&lt;a href=&#34;https://www.markdownguide.org&#34;&gt;Markdown&lt;/a&gt;, a simple but effective mark-up language, allows mixing natural language (with rich formatting) and code in a single document.
+&lt;a href=&#34;https://pandoc.org&#34;&gt;Pandoc&lt;/a&gt; is a software utility which can convert documents from and to a variety of formats.
 The conversion relevant to us is from Markdown to PDF.
 Converting Markdown to PDF corresponds to the weaving process mentioned above, i.e. creating a richly formatted documentation of the code.
 Pandoc has syntax highlighting capabilities, and Praat syntax is supported, so that your documentation will also be easier to interpret.
-The &lt;code&gt;Literate Markdown Tangler&lt;/code&gt;, by Dave MacFarlane, is a software written in &lt;a href=&#34;https://golang.org&#34; target=&#34;_blank&#34;&gt;Go&lt;/a&gt; that instead can be used to tangle (extract) the code from the source file into a scripting file.&lt;/p&gt;
-
+The &lt;code&gt;Literate Markdown Tangler&lt;/code&gt;, by Dave MacFarlane, is a software written in &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt; that instead can be used to tangle (extract) the code from the source file into a scripting file.&lt;/p&gt;
 &lt;p&gt;Pandoc and &lt;code&gt;lmt&lt;/code&gt; can be used together to develop a literate programming workflow with Praat scripting.
 This means that you can develop a Praat script by laying out the pieces of the script in the source file and explain what the various parts of the script do in using natural language.
 &lt;code&gt;lmt&lt;/code&gt; further allows the user to create &amp;ldquo;blocks&amp;rdquo; of code that can be referenced in other blocks and reused.
 If you wanna generate a PDF version of the documentation, you can convert the source file to a PDF with Pandoc.&lt;/p&gt;
-
 &lt;p&gt;The figure at the top of this post shows an example of a literate Praat source file.&lt;/p&gt;
-
 &lt;p&gt;The following sections will point you to the software and files that need to be installed/copied and will show how to use literate programming with Praat scripting.&lt;/p&gt;
-
 &lt;h2 id=&#34;necessary-software&#34;&gt;Necessary software&lt;/h2&gt;
-
 &lt;ol&gt;
-&lt;li&gt;You need to install the latest version of Pandoc, which can be found &lt;a href=&#34;https://pandoc.org/installing.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. After installing, be sure you can run this command from your command line GUI: &lt;code&gt;pandoc --version&lt;/code&gt;. If a version is returned, Pandoc is working on your system.&lt;/li&gt;
-&lt;li&gt;Install Go from &lt;a href=&#34;https://golang.org&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and set it up, then download and install &lt;code&gt;lmt&lt;/code&gt; from &lt;a href=&#34;https://github.com/driusan/lmt&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;You need to install the latest version of Pandoc, which can be found &lt;a href=&#34;https://pandoc.org/installing.html&#34;&gt;here&lt;/a&gt;. After installing, be sure you can run this command from your command line GUI: &lt;code&gt;pandoc --version&lt;/code&gt;. If a version is returned, Pandoc is working on your system.&lt;/li&gt;
+&lt;li&gt;Install Go from &lt;a href=&#34;https://golang.org&#34;&gt;here&lt;/a&gt; and set it up, then download and install &lt;code&gt;lmt&lt;/code&gt; from &lt;a href=&#34;https://github.com/driusan/lmt&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Download and unzip the content of &lt;a href=&#34;https://stefanocoretta.github.io/files/pandoc-praat.zip&#34;&gt;this zip&lt;/a&gt; to a convenient directory (usually, in &lt;code&gt;.pandoc/&lt;/code&gt; in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h2 id=&#34;literate-praat&#34;&gt;Literate Praat&lt;/h2&gt;
-
 &lt;p&gt;To generate the Praat script and its documentation, you have to:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by &lt;code&gt;lmt&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;lmt&lt;/code&gt; to tangle the code from the source file into a standalone Praat script.&lt;/li&gt;
 &lt;li&gt;Use pandoc with a custom syntax highlighter to generate the documentation of the script.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h3 id=&#34;the-source-file&#34;&gt;The source file&lt;/h3&gt;
-
 &lt;p&gt;The source file will contain text, Markdown markup, and code enclosed between back-ticks.
 The following is an example of how such file would look like.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/basic.png&#34; alt=&#34;Literate Praat basic example&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/basic.png&#34; alt=&#34;Literate Praat basic example&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;tangle-the-code&#34;&gt;Tangle the code&lt;/h3&gt;
-
 &lt;p&gt;To tangle the code into a standalone Praat script, run the following line from your command line GUI, where &lt;code&gt;my-script.praat.md&lt;/code&gt; is your Praat source file:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;lmt my-script.praat.md
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;The scripts defined in the source file will be output in the same directory as the source file (to learn more on how this works, check the &lt;code&gt;lmt&lt;/code&gt; README on GitHub).&lt;/p&gt;
-
 &lt;h3 id=&#34;weave-the-documentation&#34;&gt;Weave the documentation&lt;/h3&gt;
-
 &lt;p&gt;To weave the documentation, run the following by replacing the syntax definition path with the path to the &lt;code&gt;pandoc-praat/&lt;/code&gt; folder on your computer:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;pandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=&amp;lt;your-path-here&amp;gt;/pandoc-praat/praat.xml
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;This line of code tells Pandoc to convert from Markdown to PDF and where to find the files for highlighting Praat code.&lt;/p&gt;
-
 &lt;p&gt;A &lt;code&gt;.pdf&lt;/code&gt; file named &lt;code&gt;doc.pdf&lt;/code&gt; containing the documentation of the script will be created when the line is run.&lt;/p&gt;
-
 &lt;h2 id=&#34;syntax-highlighting-in-your-editor&#34;&gt;Syntax highlighting in your editor&lt;/h2&gt;
-
-&lt;p&gt;If you are after an editor that has syntax highlighting for Praat, I suggest you to try out (Atom)[&lt;a href=&#34;https://atom.io&#34; target=&#34;_blank&#34;&gt;https://atom.io&lt;/a&gt;] and the package &lt;a href=&#34;https://atom.io/packages/language-praat&#34; target=&#34;_blank&#34;&gt;language-praat&lt;/a&gt; (disclaimer, I am the author of the package 😉).&lt;/p&gt;
+&lt;p&gt;If you are after an editor that has syntax highlighting for Praat, I suggest you to try out (Atom)[https://atom.io] and the package &lt;a href=&#34;https://atom.io/packages/language-praat&#34;&gt;language-praat&lt;/a&gt; (disclaimer, I am the author of the package 😉).&lt;/p&gt;
 </description>
     </item>
     
@@ -242,7 +209,6 @@ The following is an example of how such file would look like.&lt;/p&gt;
       <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
       <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
       <description>
 
@@ -383,7 +349,6 @@ There is indeed a dozen languages with this system in South America alone (data 
       <title>Plotting tongue contours with ggplot2</title>
       <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
       <description>
 
@@ -510,7 +475,6 @@ ggplot(xy_mean, aes(X_mean, Y_mean)) +
       <title>Vowel formants trajectories and tidy data</title>
       <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>
 
@@ -653,10 +617,8 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
       <title>Research output</title>
       <link>https://stefanocoretta.github.io/output/</link>
       <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/output/</guid>
       <description>&lt;h2&gt;Papers&lt;/h2&gt;
-
 &lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;forthcoming&lt;/td&gt;
@@ -677,9 +639,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
     &lt;td&gt;&lt;a href=https://osf.io/bfyhr/ target=&#34;_blank&#34;&gt;&lt;i class=&#34;fa fa-external-link-alt fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;h2&gt;Talks and posters&lt;/h2&gt;
-
 &lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;2019&lt;/td&gt;
@@ -754,9 +714,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
     &lt;td&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
-
 &lt;h2&gt;Software and packages&lt;/h2&gt;
-
 &lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;2017&lt;/td&gt;
@@ -796,7 +754,6 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
       <title>Research</title>
       <link>https://stefanocoretta.github.io/research/</link>
       <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/research/</guid>
       <description>
 
@@ -862,7 +819,6 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
       <title>Wikipedia and the “Dialects of Italy”</title>
       <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
       <description>
 
@@ -895,7 +851,6 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
       <title>Short review of phonological databases</title>
       <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
       <description>
 

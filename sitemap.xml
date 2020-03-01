@@ -1,17 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stefanocoretta.github.io/post/</loc>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stefanocoretta.github.io/categories/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/data-viz/</loc>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/categories/methods/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -20,39 +28,23 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/</loc>
-    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/</loc>
-    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/data-viz/</loc>
-    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://stefanocoretta.github.io/tags/rstats/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/statistics/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/</loc>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/tidy-data/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -63,25 +55,36 @@
   <url>
     <loc>https://stefanocoretta.github.io/categories/linguistics/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/open-science/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/phonetics/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/reproducibility/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/data-processing/</loc>
+    <lastmod>2019-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/documentation/</loc>
+    <lastmod>2019-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/literate-programming/</loc>
+    <lastmod>2019-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -90,33 +93,18 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/data-processing/</loc>
-    <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/documentation/</loc>
-    <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/literate-programming/</loc>
-    <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://stefanocoretta.github.io/tags/praat/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/tutorial/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/diachrony/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -125,27 +113,18 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/diachrony/</loc>
-    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://stefanocoretta.github.io/tags/phonology/</loc>
     <lastmod>2019-01-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/proto-indoeuropean/</loc>
     <lastmod>2019-01-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/typology/</loc>
     <lastmod>2019-01-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -156,19 +135,41 @@
   <url>
     <loc>https://stefanocoretta.github.io/tags/tongue-contours/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/ultrasound/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/uti/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/formant-trajectories/</loc>
+    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/formants/</loc>
+    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/ggplot2/</loc>
+    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/linguistics/</loc>
+    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/time-series/</loc>
+    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -177,37 +178,12 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/formant-trajectories/</loc>
-    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/formants/</loc>
-    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/ggplot2/</loc>
-    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/linguistics/</loc>
-    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/time-series/</loc>
-    <lastmod>2018-03-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://stefanocoretta.github.io/output/</loc>
+    <lastmod>2018-01-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/</loc>
     <lastmod>2018-01-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -217,26 +193,43 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/post/</loc>
-    <lastmod>2018-01-01T00:00:00+01:00</lastmod>
+    <loc>https://stefanocoretta.github.io/tags/dialect/</loc>
+    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/ethnologue/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/iso639/</loc>
+    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/italian/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/tags/italy/</loc>
     <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/language/</loc>
+    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/romance/</loc>
+    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stefanocoretta.github.io/tags/wikipedia/</loc>
+    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
   </url>
   
   <url>
@@ -245,33 +238,18 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/dialect/</loc>
-    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://stefanocoretta.github.io/tags/computational-linguistics/</loc>
+    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/iso639/</loc>
-    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://stefanocoretta.github.io/tags/databases/</loc>
+    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/language/</loc>
-    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/romance/</loc>
-    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/wikipedia/</loc>
-    <lastmod>2015-08-04T13:11:55+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://stefanocoretta.github.io/tags/distinctive-features/</loc>
+    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -280,35 +258,15 @@
   </url>
   
   <url>
-    <loc>https://stefanocoretta.github.io/tags/computational-linguistics/</loc>
-    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/databases/</loc>
-    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://stefanocoretta.github.io/tags/distinctive-features/</loc>
-    <lastmod>2014-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://stefanocoretta.github.io/authors/admin/</loc>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/authors/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stefanocoretta.github.io/publication_types/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

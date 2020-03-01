@@ -1,94 +1,758 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Stefano Coretta</title>
+    <title>Blog | Stefano Coretta</title>
     <link>https://stefanocoretta.github.io/post/</link>
-    <description>Recent content in Blog on Stefano Coretta</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2017-2020 Stefano Coretta</copyright>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://stefanocoretta.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://stefanocoretta.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blog</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Blog</title>
+      <link>https://stefanocoretta.github.io/post/</link>
+    </image>
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
       <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
-      <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
-In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
-Let’s load the tidyverse first.
-library(tidyverse) ## ── Attaching packages ────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.2.1 ✓ purrr 0.3.3 ## ✓ tibble 2.</description>
+      <description>
+
+
+&lt;p&gt;The choice of priors is a fundamental step of the Bayesian inference process. &lt;span class=&#34;citation&#34;&gt;Vasishth et al. (2018)&lt;/span&gt; recommend plotting the chosen priors to see if they are reasonable.&lt;/p&gt;
+&lt;p&gt;In this post I will show how to easily plot prior distributions in &lt;a href=&#34;https://ggplot2.tidyverse.org&#34;&gt;ggplot2&lt;/a&gt; (which is part of the &lt;a href=&#34;https://www.tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Let’s load the tidyverse first.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.2.1     ✓ purrr   0.3.3
+## ✓ tibble  2.1.3     ✓ dplyr   0.8.4
+## ✓ tidyr   1.0.2     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ───────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_set(theme_minimal()) # I just like this theme :)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;plotting-your-priors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plotting your priors&lt;/h2&gt;
+&lt;p&gt;Let’s start with a simple normal prior with &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; = 0 and &lt;em&gt;sd&lt;/em&gt; = 1.&lt;/p&gt;
+&lt;p&gt;The plot is initialised with an empty call to &lt;code&gt;ggplot()&lt;/code&gt;.
+As aesthetics, you only need to specify the range of &lt;em&gt;x&lt;/em&gt; values in &lt;code&gt;aes()&lt;/code&gt;.
+Here, we use &lt;code&gt;c(-4, 4)&lt;/code&gt;, meaning that the &lt;em&gt;x&lt;/em&gt;-axis of this plot will have these limits.
+For a normal distribution, it is useful to set the limits as the mean ± 4 times the standard deviation (this ensures all the distribution is shown).&lt;/p&gt;
+&lt;p&gt;The function &lt;code&gt;ggplot2::stat_function()&lt;/code&gt; allows us to specify a distribution family with the &lt;code&gt;fun&lt;/code&gt; argument.
+This arguments takes the density function (the R functions of the form &lt;em&gt;dxxx&lt;/em&gt;) of the chosen distribution family, so for the normal (Gaussian) distribution we use &lt;code&gt;dnorm()&lt;/code&gt;.
+The argument &lt;code&gt;n&lt;/code&gt; specifies the number of points along which to calculate the distribution (here &lt;code&gt;101&lt;/code&gt;), while &lt;code&gt;args&lt;/code&gt; takes a list with the parameters of the distribution (here the mean &lt;code&gt;0&lt;/code&gt; and standard deviation &lt;code&gt;1&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() +
+  aes(x = c(-4, 4)) +
+  stat_function(fun = dnorm, n = 101, args = list(0, 1)) +
+  labs(title = &amp;quot;Normal (Gaussian) distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/normal-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;If you are using a half-normal prior, you can plot it by setting one of the limits to the mean.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() +
+  # the mean is 0, only positive number are shown
+  aes(x = c(0, 4)) +
+  stat_function(fun = dnorm, n = 101, args = list(0, 1)) +
+  labs(title = &amp;quot;Half-normal distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/half-normal-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;A beta prior will be bounded between 0 and 1, so we can specify that in &lt;code&gt;aes()&lt;/code&gt;.
+The beta distribution has two arguments, &lt;code&gt;shape1&lt;/code&gt; and &lt;code&gt;shape2&lt;/code&gt; (here &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() +
+  aes(x = c(0, 1)) +
+  stat_function(fun = dbeta, n = 101, args = list(2, 5)) +
+  labs(title = &amp;quot;Beta distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/beta-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another common distribution is the Cauchy.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() +
+  aes(x = c(-10, 10)) +
+  stat_function(fun = dcauchy, n = 201, args = list(-2, 1)) +
+  labs(title = &amp;quot;Cauchy distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/cauchy-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The Poisson distribution can be plotted by changing the type of &lt;code&gt;geom&lt;/code&gt; and using an &lt;code&gt;n&lt;/code&gt; that creates only integers.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# the range 0:20 includes 21 integers, so n = 21
+ggplot() +
+  aes(x = c(0, 20)) +
+  stat_function(fun = dpois, n = 21, args = list(4), geom = &amp;quot;point&amp;quot;) +
+  labs(title = &amp;quot;Poisson distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/poisson-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Of course any family with a corresponding &lt;em&gt;dxxx&lt;/em&gt; function can be plotted (see &lt;code&gt;?Distributions&lt;/code&gt; and package-provided families).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-vasishth2018&#34;&gt;
+&lt;p&gt;Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. “Bayesian Data Analysis in the Phonetic Sciences: A Tutorial Introduction.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61. &lt;a href=&#34;https://doi.org/10.1016/j.wocn.2018.07.008&#34;&gt;https://doi.org/10.1016/j.wocn.2018.07.008&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>An estimate of number of speakers per study in phonetics</title>
       <link>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
-      <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
-Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
+      <description>
+
+
+&lt;p&gt;A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies.
+Here’s the tweet.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? &lt;a href=&#34;https://twitter.com/hashtag/OpenScience?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#OpenScience&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/phonetics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#phonetics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/replication?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#replication&lt;/a&gt;
+&lt;/p&gt;
+— Stefano Coretta (&lt;span class=&#34;citation&#34;&gt;@StefanoCoretta&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/StefanoCoretta/status/1116692106700103680?ref_src=twsrc%5Etfw&#34;&gt;April 12, 2019&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Thankfully, &lt;a href=&#34;https://timo-roettger.weebly.com&#34;&gt;Timo Roettger&lt;/a&gt; has pointed me to a dataset he and &lt;a href=&#34;http://gordon.faculty.linguistics.ucsb.edu&#34;&gt;Matthew Gordon&lt;/a&gt; created for a study on the &lt;a href=&#34;https://osf.io/9r2cd/&#34;&gt;acoustic correlates of word stress&lt;/a&gt;, and he suggested to look at how the median number of speakers changed (or not) through the years.
+The &lt;a href=&#34;https://osf.io/765q4/&#34;&gt;dataset&lt;/a&gt; reports, among other things, the number of participants in the surveyed studies.
+&lt;a href=&#34;http://www.acsu.buffalo.edu/~cdicanio/&#34;&gt;Christian DiCanio&lt;/a&gt; has also thoughtfully noted that language endangerment should be taken into consideration in any enquiry about number of speakers.&lt;/p&gt;
+&lt;div id=&#34;general-trends&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;General trends&lt;/h2&gt;
+&lt;p&gt;The dataset contains data from 113 studies, published between 1955 and 2017 (the bulk of studies is within the range 1990-2017 though).
+The median number of speakers per study is 5.
+The histogram below illustrates that most studies have around 10 speakers or less, and that there are a few outliers with 30-40 speakers.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/hist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;number-of-speakers-through-the-years&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Number of speakers through the years&lt;/h2&gt;
+&lt;p&gt;We now turn to the number of speakers through the years.
+I can’t really say that there is a clear trend, if not for the fact that the studies with more than 30 speakers are (unsurprisingly) more recent.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/year-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;number-of-speakers-by-linguistic-affiliation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Number of speakers by linguistic affiliation&lt;/h2&gt;
+&lt;p&gt;The following bar chart shows the median number of speakers in studies by genetic affiliation.
+The colour of the bars indicates the number of studies.
+Indo-European languages stand out in terms of number of studies (&amp;gt; 30), although the number of speakers does not fare better than other less-reachable language families.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This plot is the same as the one above, but families have been categorised by number of studies in two categories: up to 5 studies vs. 5 or more.
+It is not surprising that Uralic, Indo-European, Turkic, Afro-Asiatic and Austronesian stand out.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;number-of-speakers-by-endangerment-status&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Number of speakers by endangerment status&lt;/h2&gt;
+&lt;p&gt;Information on the endangerment status of the languages in the dataset was obtained from &lt;a href=&#34;https://glottolog.org/meta/downloads&#34;&gt;GlottoLog&lt;/a&gt;.
+The following strip chart show the number of speakers for each of the studies (each point) categorised by the endangerment of the language.
+Of course there are way more studies on safe languages, and if we focus on the first three categories of endangerment (safe, vulnerable, definitely endangered) there is a tendency to have a decreasing number of speakers.
+Considering though that we are talking of very low numbers of speakers (5-10) I am not sure it is actually relevant that definitely endangered languages have a lower median than safe languages.
+Difficult to say anything about higher endangerment levels given the low number of studies.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/status-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;While of course making generalisations based on this cursory analysis would not be wise, there seems to be a tendency for studies to have a very low number of speakers (median 5 speakers over study).
+The majority of studies have obtained data from 10 speakers or less, independent of publication year and endangerment status of the language enquired.&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Literate programming with Praat</title>
       <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/literate-programming-with-praat/</guid>
-      <description>This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
-What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/praat-literate.png&#34; alt=&#34;Literate Praat example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This post quickly illustrates how to apply a literate programming workflow to Praat scripting.
+To be able to reproduce the steps described here you need the latest version of &lt;a href=&#34;https://pandoc.org&#34;&gt;pandoc&lt;/a&gt; and the &lt;a href=&#34;https://github.com/driusan/lmt&#34;&gt;Literate Markdown Tangler&lt;/a&gt; (&lt;code&gt;lmt&lt;/code&gt;, you will need to install &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt; first to install &lt;code&gt;lmt&lt;/code&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;what-is-literate-programming&#34;&gt;What is literate programming?&lt;/h2&gt;
+&lt;p&gt;In &lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34;&gt;literate programming&lt;/a&gt;, one writes both code and plain text which explains what the code does in a single document.
+Natural language and programming language are interleaved in the document in a way that is reader-oriented, rather than software oriented.
+So, for example, the code can be included in an order that is different from the order it should have had the document been a script.&lt;/p&gt;
+&lt;p&gt;This programming paradigm allows developers to focus on documenting their code in a more natural way.
+This has the double advantage of aiding a new user in understanding what the code does and helping the author of the code to develop the code following a logic that can be different from the logic of the code&amp;rsquo;s programming language.&lt;/p&gt;
+&lt;p&gt;In general, from a literate source file (a file containing both natural language and programming code) it is possible to obtain a documentation file (by the process called &lt;em&gt;weaving&lt;/em&gt;) and a script file (by the process called &lt;em&gt;tangling&lt;/em&gt;) which is interpretable by the target programming language.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.markdownguide.org&#34;&gt;Markdown&lt;/a&gt;, a simple but effective mark-up language, allows mixing natural language (with rich formatting) and code in a single document.
+&lt;a href=&#34;https://pandoc.org&#34;&gt;Pandoc&lt;/a&gt; is a software utility which can convert documents from and to a variety of formats.
+The conversion relevant to us is from Markdown to PDF.
+Converting Markdown to PDF corresponds to the weaving process mentioned above, i.e. creating a richly formatted documentation of the code.
+Pandoc has syntax highlighting capabilities, and Praat syntax is supported, so that your documentation will also be easier to interpret.
+The &lt;code&gt;Literate Markdown Tangler&lt;/code&gt;, by Dave MacFarlane, is a software written in &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt; that instead can be used to tangle (extract) the code from the source file into a scripting file.&lt;/p&gt;
+&lt;p&gt;Pandoc and &lt;code&gt;lmt&lt;/code&gt; can be used together to develop a literate programming workflow with Praat scripting.
+This means that you can develop a Praat script by laying out the pieces of the script in the source file and explain what the various parts of the script do in using natural language.
+&lt;code&gt;lmt&lt;/code&gt; further allows the user to create &amp;ldquo;blocks&amp;rdquo; of code that can be referenced in other blocks and reused.
+If you wanna generate a PDF version of the documentation, you can convert the source file to a PDF with Pandoc.&lt;/p&gt;
+&lt;p&gt;The figure at the top of this post shows an example of a literate Praat source file.&lt;/p&gt;
+&lt;p&gt;The following sections will point you to the software and files that need to be installed/copied and will show how to use literate programming with Praat scripting.&lt;/p&gt;
+&lt;h2 id=&#34;necessary-software&#34;&gt;Necessary software&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;You need to install the latest version of Pandoc, which can be found &lt;a href=&#34;https://pandoc.org/installing.html&#34;&gt;here&lt;/a&gt;. After installing, be sure you can run this command from your command line GUI: &lt;code&gt;pandoc --version&lt;/code&gt;. If a version is returned, Pandoc is working on your system.&lt;/li&gt;
+&lt;li&gt;Install Go from &lt;a href=&#34;https://golang.org&#34;&gt;here&lt;/a&gt; and set it up, then download and install &lt;code&gt;lmt&lt;/code&gt; from &lt;a href=&#34;https://github.com/driusan/lmt&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download and unzip the content of &lt;a href=&#34;https://stefanocoretta.github.io/files/pandoc-praat.zip&#34;&gt;this zip&lt;/a&gt; to a convenient directory (usually, in &lt;code&gt;.pandoc/&lt;/code&gt; in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;literate-praat&#34;&gt;Literate Praat&lt;/h2&gt;
+&lt;p&gt;To generate the Praat script and its documentation, you have to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by &lt;code&gt;lmt&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;lmt&lt;/code&gt; to tangle the code from the source file into a standalone Praat script.&lt;/li&gt;
+&lt;li&gt;Use pandoc with a custom syntax highlighter to generate the documentation of the script.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-source-file&#34;&gt;The source file&lt;/h3&gt;
+&lt;p&gt;The source file will contain text, Markdown markup, and code enclosed between back-ticks.
+The following is an example of how such file would look like.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/basic.png&#34; alt=&#34;Literate Praat basic example&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tangle-the-code&#34;&gt;Tangle the code&lt;/h3&gt;
+&lt;p&gt;To tangle the code into a standalone Praat script, run the following line from your command line GUI, where &lt;code&gt;my-script.praat.md&lt;/code&gt; is your Praat source file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lmt my-script.praat.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The scripts defined in the source file will be output in the same directory as the source file (to learn more on how this works, check the &lt;code&gt;lmt&lt;/code&gt; README on GitHub).&lt;/p&gt;
+&lt;h3 id=&#34;weave-the-documentation&#34;&gt;Weave the documentation&lt;/h3&gt;
+&lt;p&gt;To weave the documentation, run the following by replacing the syntax definition path with the path to the &lt;code&gt;pandoc-praat/&lt;/code&gt; folder on your computer:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=&amp;lt;your-path-here&amp;gt;/pandoc-praat/praat.xml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This line of code tells Pandoc to convert from Markdown to PDF and where to find the files for highlighting Praat code.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;.pdf&lt;/code&gt; file named &lt;code&gt;doc.pdf&lt;/code&gt; containing the documentation of the script will be created when the line is run.&lt;/p&gt;
+&lt;h2 id=&#34;syntax-highlighting-in-your-editor&#34;&gt;Syntax highlighting in your editor&lt;/h2&gt;
+&lt;p&gt;If you are after an editor that has syntax highlighting for Praat, I suggest you to try out (Atom)[https://atom.io] and the package &lt;a href=&#34;https://atom.io/packages/language-praat&#34;&gt;language-praat&lt;/a&gt; (disclaimer, I am the author of the package 😉).&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
       <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
-      <description>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.</description>
+      <description>
+
+
+&lt;p&gt;Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants.
+In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root.
+I will focus here on stops and laryngeal features.
+Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.&lt;/p&gt;
+&lt;p&gt;The traditional reconstruction of Proto-Indoeuropean (PIE) stops includes the following laryngeal oppositions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Voiceless unaspirated stops (T),&lt;/li&gt;
+&lt;li&gt;Voiced unaspirated stops (D), and&lt;/li&gt;
+&lt;li&gt;Voiced aspirated (murmured) stops (Dʰ).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The possible logical combinations of these laryngeal contrasts in a CVC- root, reviewed in &lt;span class=&#34;citation&#34;&gt;Cooper (2009)&lt;/span&gt;, are the following (the base ablaut vowel /e/ is used for illustrative purposes):&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;th&gt;Dʰ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;TeT&lt;/td&gt;
+&lt;td&gt;TeD&lt;/td&gt;
+&lt;td&gt;**TeDʰ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;D&lt;/td&gt;
+&lt;td&gt;DeT&lt;/td&gt;
+&lt;td&gt;**DeD&lt;/td&gt;
+&lt;td&gt;DeDʰ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Dʰ&lt;/td&gt;
+&lt;td&gt;**DʰeT&lt;/td&gt;
+&lt;td&gt;DʰeD&lt;/td&gt;
+&lt;td&gt;DʰeDʰ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The double asterisks signal those combinations which are not attested in the reconstructed PIE lexicon, namely **TeDʰ, **DED, and **DʰeT.
+Typologically, these restrictions, in combination with the reconstructed laryngeal oppositions, are somewhat baffling.
+There are no known languages which unequivocably contrasts voiceless stops with voiced stops and voiced aspirated stops.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Gamkrelidze and Ivanov (1994)&lt;/span&gt; and others have used this typological incongruence (with other aspects of the reconstructed PIE phonology) to argue that the reconstructed voiced (D) stops were in fact a type of ejective or glottalised consonants (which gave the name ‘Glottalic theory’).
+I’ll argue here that a reinterpretation of the restrictions seen above within Glottalic theory offers a sensible and more typologically grounded account of such restrictions.&lt;/p&gt;
+&lt;p&gt;According to Glottalic theory, voiced stops (D) are glottalised consonants (T’), voiced aspirated stops (Dʰ) are voiced stops with aspirated allophones (D), and the voiceless stops are voiceless stops with aspirated allophones (T).
+The re-thought laryngeal contrasts thus are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Voiceless stops (T),&lt;/li&gt;
+&lt;li&gt;Voiced stops (D),&lt;/li&gt;
+&lt;li&gt;Glottalised (ejective) stops (T’).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s now rewrite the restriction table above:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;T’&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;td&gt;TeT&lt;/td&gt;
+&lt;td&gt;TeT’&lt;/td&gt;
+&lt;td&gt;**TeD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;T’&lt;/td&gt;
+&lt;td&gt;T’eT&lt;/td&gt;
+&lt;td&gt;**T’eT’&lt;/td&gt;
+&lt;td&gt;T’eD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;D&lt;/td&gt;
+&lt;td&gt;**DeT&lt;/td&gt;
+&lt;td&gt;DeT’&lt;/td&gt;
+&lt;td&gt;DeD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The restriction **T’eT’ seems now more plausible, since it involves a typologically less common type of stop.
+(I remember from my time at the University of Pavia Prof. Gianguido Manzelli telling us there are American languages which have exactly this phonotactic restriction. Unfortunately I fail to remember which these are.)
+But what about **TeD and **DeT?&lt;/p&gt;
+&lt;p&gt;If we observe the attested combinations, a pattern emerges:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;T&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;TeT&lt;/td&gt;
+&lt;td&gt;DeD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;T’eT&lt;/td&gt;
+&lt;td&gt;T’eD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;TeT’&lt;/td&gt;
+&lt;td&gt;DeT’&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;There seems to be an opposition between ‘T-roots’ and ‘D-roots’, where T’ stops are kind of neutral stops (they can appear in both type of roots).
+My thought on this is that, speculatively, the T~D contrast derives from an earlier suprasegmental contrast that was assigned to the root, rather than to the individual stops.
+This could have been something like stress, tone, pitch, or else (also, think about word-level nasality in South American languages, in which a word is either all nasal or oral).&lt;/p&gt;
+&lt;p&gt;If indeed roots could be specified as having the T feature (whatever that was) or the D feature, then it is possible that the glottalised (ejective) stops T’ were immune to changes acted by the root-level T~D distinction.
+Ejective stops in particular are strongly articulated consonants, and this might explain their resilience to being affected by suprasegmental properties of the root.&lt;/p&gt;
+&lt;p&gt;Thus, the reconstructed original laryngeal system might have contrasted voiceless stops and ejective stops.
+There is indeed a dozen languages with this system in South America alone (data from the &lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt; database v1.1.4), for example Alacalufe (Alacalufan), Chulupí (Mataco), and Selk’nam (Chon).&lt;/p&gt;
+&lt;p&gt;All this is of course internal reconstruction, so highly speculative, and as mentioned above, it is not meant to be more than brainstorming. I hope that the potential readers had fun reading this anyway and I am happy to hear about their thoughts.&lt;/p&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-cooper2009&#34;&gt;
+&lt;p&gt;Cooper, Adam I. 2009. “Similarity Avoidance in the Proto-Indo-European Root.” &lt;em&gt;University of Pennsylvania Working Papers in Linguistics&lt;/em&gt; 15 (1): 8.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-gamkrelidze1994&#34;&gt;
+&lt;p&gt;Gamkrelidze, Thomas Valerianis, and Vyacheslav Vsevolodovich Ivanov. 1994. &lt;em&gt;Indo-European and the Indo-Europeans: A Reconstruction and Historical Analysis of a Proto-Language and a Proto-Culture.&lt;/em&gt; Translated by J. Nichols. Berlin–New York: Mouton de Gruyter.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Plotting tongue contours with ggplot2</title>
       <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
-      <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</description>
+      <description>
+
+
+&lt;p&gt;When plotting tongue contours data obtained from ultrasound tongue imaging in &lt;code&gt;R&lt;/code&gt; using &lt;code&gt;ggplot2&lt;/code&gt;, a common option to smooth over the individual contours and show the general pattern is to use &lt;code&gt;geom_smooth(methood = &#34;loess&#34;)&lt;/code&gt;. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.&lt;/p&gt;
+&lt;p&gt;To show the shortcomings of using &lt;code&gt;geom_smooth()&lt;/code&gt; and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,239 x 7
+##    rec_date            fan_line     X     Y word  vowel c2   
+##    &amp;lt;chr&amp;gt;                  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;
+##  1 29/11/2016 15:10:52        6  37.4  9.25 pada  a     d    
+##  2 29/11/2016 15:21:30        6  38.6 13.1  pada  a     d    
+##  3 29/11/2016 15:10:52        7  34.4 10.3  pada  a     d    
+##  4 29/11/2016 15:11:03        7  34.3  9.81 pata  a     t    
+##  5 29/11/2016 15:11:14        7  34.6 11.0  podo  o     d    
+##  6 29/11/2016 15:13:39        7  34.3  9.65 pada  a     d    
+##  7 29/11/2016 15:16:05        7  34.8 11.5  pada  a     d    
+##  8 29/11/2016 15:17:07        7  34.5 10.5  putu  u     t    
+##  9 29/11/2016 15:19:45        7  34.3  9.64 putu  u     t    
+## 10 29/11/2016 15:21:30        7  35.4 13.8  pada  a     d    
+## # … with 1,229 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;rec_date&lt;/code&gt; is the date and time of recording. Each observed tongue contour has a unique &lt;code&gt;rec_date&lt;/code&gt; (this will come in handy later). &lt;code&gt;fan_line&lt;/code&gt; is the number of the line in the fan coordinate system used by Articulate Assistant Advanced (which I used to record the data). &lt;code&gt;X&lt;/code&gt; and &lt;code&gt;Y&lt;/code&gt; are the horizontal and vertical position of each point on the contour. The unit is millimeters. &lt;code&gt;word&lt;/code&gt;, &lt;code&gt;vowel&lt;/code&gt; and &lt;code&gt;c2&lt;/code&gt; are self-explanatory.&lt;/p&gt;
+&lt;p&gt;Let’s start by plotting the smoothed contours by vowel and consonant.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
+  ggplot(aes(X, Y)) +
+  geom_smooth(aes(colour = vowel), method = &amp;quot;loess&amp;quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.&lt;/p&gt;
+&lt;p&gt;To see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
+  ggplot(aes(X, Y)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(aes(colour = vowel), method = &amp;quot;loess&amp;quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.&lt;/p&gt;
+&lt;p&gt;This happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.&lt;/p&gt;
+&lt;p&gt;An alternative (if you don’t like points) is to use &lt;code&gt;geom_path()&lt;/code&gt; to plot the individual tongue contours as lines. &lt;code&gt;geom_path()&lt;/code&gt; connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).&lt;/p&gt;
+&lt;p&gt;To do so, we can use &lt;code&gt;rec_date&lt;/code&gt; (which identifies the individual contours) and &lt;code&gt;fan_line&lt;/code&gt; which indicates the orders of points (for each contour, there a maximum 42 points/fan lines; NAs have been excluded).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data &amp;lt;- tongue_data %&amp;gt;%
+  arrange(rec_date, fan_line)
+
+tongue_data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,239 x 30
+##    speaker seconds rec_date prompt label TT_displacement… TT_velocity
+##    &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;            &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+##  1 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  2 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  3 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  4 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  5 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  6 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  7 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  8 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+##  9 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+## 10 it01       1.11 29/11/2… Dico … max_…             77.4       -7.18
+## # … with 1,229 more rows, and 23 more variables: TT_velocity_abs &amp;lt;dbl&amp;gt;,
+## #   TD_displacement_sm &amp;lt;dbl&amp;gt;, TD_velocity &amp;lt;dbl&amp;gt;, TD_velocity_abs &amp;lt;dbl&amp;gt;,
+## #   TR_displacement_sm &amp;lt;dbl&amp;gt;, TR_velocity &amp;lt;dbl&amp;gt;, TR_velocity_abs &amp;lt;dbl&amp;gt;,
+## #   fan_line &amp;lt;int&amp;gt;, X &amp;lt;dbl&amp;gt;, Y &amp;lt;dbl&amp;gt;, word &amp;lt;chr&amp;gt;, language &amp;lt;chr&amp;gt;, sex &amp;lt;chr&amp;gt;,
+## #   item &amp;lt;int&amp;gt;, ipa &amp;lt;chr&amp;gt;, c1 &amp;lt;chr&amp;gt;, c1_phonation &amp;lt;chr&amp;gt;, vowel &amp;lt;chr&amp;gt;,
+## #   anteropost &amp;lt;chr&amp;gt;, height &amp;lt;chr&amp;gt;, c2 &amp;lt;chr&amp;gt;, c2_phonation &amp;lt;chr&amp;gt;,
+## #   c2_place &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can now use &lt;code&gt;geom_path()&lt;/code&gt;. The argument &lt;code&gt;group = rec_date&lt;/code&gt; ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
+  ggplot(aes(X, Y)) +
+  geom_path(aes(group = rec_date, colour = vowel), alpha = 0.5) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The tongue root in /u/ is now properly rendered.&lt;/p&gt;
+&lt;p&gt;But what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?&lt;/p&gt;
+&lt;p&gt;An option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by &lt;code&gt;fan_line&lt;/code&gt; and then &lt;code&gt;summarise()&lt;/code&gt; it. Plotting can then be done with &lt;code&gt;geom_path()&lt;/code&gt; and &lt;code&gt;geom_polygon()&lt;/code&gt;. All together, the code looks like this.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;xy_mean &amp;lt;- tongue_data %&amp;gt;%
+  group_by(fan_line, vowel, c2) %&amp;gt;%
+  summarise(
+    X_mean = mean(X, na.rm = TRUE),
+    Y_mean = mean(Y, na.rm = TRUE)
+  )
+
+xy_ci &amp;lt;- tongue_data %&amp;gt;%
+  group_by(fan_line, vowel, c2) %&amp;gt;%
+  summarise(
+    X_CI_low = t.test(X)$conf.int[1],
+    X_CI_up = t.test(X)$conf.int[2],
+    Y_CI_low = t.test(Y)$conf.int[1],
+    Y_CI_up = t.test(Y)$conf.int[2]
+  )
+
+ci_upper &amp;lt;- xy_ci %&amp;gt;%
+  dplyr::select(-X_CI_low, -Y_CI_low) %&amp;gt;%
+  dplyr::rename(
+    CI_X = X_CI_up,
+    CI_Y = Y_CI_up
+  )
+
+ci_lower &amp;lt;- xy_ci %&amp;gt;%
+  dplyr::select(-X_CI_up, -Y_CI_up) %&amp;gt;%
+  dplyr::arrange(dplyr::desc(fan_line)) %&amp;gt;%
+  dplyr::rename(
+    CI_X = X_CI_low,
+    CI_Y = Y_CI_low
+  )
+
+ci &amp;lt;- rbind(ci_upper, ci_lower)
+
+ggplot(xy_mean, aes(X_mean, Y_mean)) +
+  geom_polygon(data = ci, aes(x = CI_X, y = CI_Y), alpha = 0.2) +
+  geom_path(aes(X_mean, Y_mean, colour = vowel)) +
+  facet_grid(c2 ~ vowel) +
+  coord_fixed() +
+  theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
       <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
-      <description>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.
-Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset. In this format, separate columns contain formant values for each interval within the vowel. Normally, values are extracted every 10% or 5% intervals within the vowel.</description>
+      <description>
+
+
+&lt;p&gt;With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.&lt;/p&gt;
+&lt;p&gt;Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset.
+In this format, separate columns contain formant values for each interval within the vowel.
+Normally, values are extracted every 10% or 5% intervals within the vowel.&lt;/p&gt;
+&lt;p&gt;To work with formant trajectories data in &lt;code&gt;R&lt;/code&gt;, we need instead a ‘long format’ dataset.
+In a long format dataset, the percent intervals are layed out in rows, rather then columns.&lt;/p&gt;
+&lt;p&gt;We start by reading in the formant data, which were kindly provided by &lt;a href=&#34;http://tiny.cc/sjn&#34;&gt;Stephen Nichols&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories &amp;lt;- read_csv(&amp;quot;./static/data/nichols-2018/tulemupepelako.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   Vowel = col_character(),
+##   Word = col_character()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## See spec(...) for full column specifications.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 61
+##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
+##   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1  194. u     tule…     43.3  406.  439.  453.  456.  430.  357.  314.  288.
+## 2  194. e     tule…    103.   503.  517.  537.  564.  556.  362.  315.  295.
+## 3  194. u     tule…     14.1  290.  288.  286.  283.  281.  281.  282.  295.
+## 4  194. e     tule…     75.7  440.  441.  439.  429.  386.  269.  250.  318.
+## 5  194. e     tule…     68.2  437.  445.  479.  562.  622.  605.  523.  618.
+## 6  195. a     tule…     89.8  800.  736.  662.  543.  447.  564.  768.  358.
+## 7  195. o     tule…     98.5  482.  463.  471.  326.  316.  573. 1511. 1389.
+## # … with 49 more variables: F1_45 &amp;lt;dbl&amp;gt;, F1_50 &amp;lt;dbl&amp;gt;, F1_55 &amp;lt;dbl&amp;gt;, F1_60 &amp;lt;dbl&amp;gt;,
+## #   F1_65 &amp;lt;dbl&amp;gt;, F1_70 &amp;lt;dbl&amp;gt;, F1_75 &amp;lt;dbl&amp;gt;, F1_80 &amp;lt;dbl&amp;gt;, F1_85 &amp;lt;dbl&amp;gt;,
+## #   F1_90 &amp;lt;dbl&amp;gt;, F1_95 &amp;lt;dbl&amp;gt;, F2_05 &amp;lt;dbl&amp;gt;, F2_10 &amp;lt;dbl&amp;gt;, F2_15 &amp;lt;dbl&amp;gt;,
+## #   F2_20 &amp;lt;dbl&amp;gt;, F2_25 &amp;lt;dbl&amp;gt;, F2_30 &amp;lt;dbl&amp;gt;, F2_35 &amp;lt;dbl&amp;gt;, F2_40 &amp;lt;dbl&amp;gt;,
+## #   F2_45 &amp;lt;dbl&amp;gt;, F2_50 &amp;lt;dbl&amp;gt;, F2_55 &amp;lt;dbl&amp;gt;, F2_60 &amp;lt;dbl&amp;gt;, F2_65 &amp;lt;dbl&amp;gt;,
+## #   F2_70 &amp;lt;dbl&amp;gt;, F2_75 &amp;lt;dbl&amp;gt;, F2_80 &amp;lt;dbl&amp;gt;, F2_85 &amp;lt;dbl&amp;gt;, F2_90 &amp;lt;dbl&amp;gt;,
+## #   F2_95 &amp;lt;dbl&amp;gt;, F3_05 &amp;lt;dbl&amp;gt;, F3_10 &amp;lt;dbl&amp;gt;, F3_15 &amp;lt;dbl&amp;gt;, F3_20 &amp;lt;dbl&amp;gt;,
+## #   F3_25 &amp;lt;dbl&amp;gt;, F3_30 &amp;lt;dbl&amp;gt;, F3_35 &amp;lt;dbl&amp;gt;, F3_40 &amp;lt;dbl&amp;gt;, F3_45 &amp;lt;dbl&amp;gt;,
+## #   F3_50 &amp;lt;dbl&amp;gt;, F3_55 &amp;lt;dbl&amp;gt;, F3_60 &amp;lt;dbl&amp;gt;, F3_65 &amp;lt;dbl&amp;gt;, F3_70 &amp;lt;dbl&amp;gt;,
+## #   F3_75 &amp;lt;dbl&amp;gt;, F3_80 &amp;lt;dbl&amp;gt;, F3_85 &amp;lt;dbl&amp;gt;, F3_90 &amp;lt;dbl&amp;gt;, F3_95 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word &lt;em&gt;tulemupepelako&lt;/em&gt; ‘we are praying for her’ (Bemba, [&lt;code&gt;bemb1257&lt;/code&gt;]).
+It’s a toy dataset of course, just for purpose of illustration, so not very exciting!&lt;/p&gt;
+&lt;p&gt;The values for each 5% interval for each formant are in separate columns.
+For plotting and modelling, though, we need the data to be in a ‘tidy’ format &lt;span class=&#34;citation&#34;&gt;(Wickham 2014)&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;each observation unit is in a separate row&lt;/li&gt;
+&lt;li&gt;each variable is a separate column&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In our case, each observation unit is a 5% interval.
+As for the variables, they are: time in the recording, word, vowel, vowel duration, F1, F2, and F3.&lt;/p&gt;
+&lt;p&gt;The first step towards a long format data set is to gather all the columns that have formant values to a column indicating the formant plus interval (like ‘F1_05’) and the value of that formant in that interval.
+We can use &lt;code&gt;gather()&lt;/code&gt; for this.&lt;/p&gt;
+&lt;p&gt;In the following chunks, I will illustrate the results of each step separately by saving the output of the functions to variables.
+Later in this post, you’ll find a pipe chain with all functions without intermediate outputs.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_gath &amp;lt;- gather(trajectories, &amp;quot;formant&amp;quot;, &amp;quot;value&amp;quot;, F1_05:F3_95)
+trajectories_gath&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 399 x 6
+##     Time Vowel Word           Duration formant value
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1  194. u     tulemupepelako     43.3 F1_05    406.
+##  2  194. e     tulemupepelako    103.  F1_05    503.
+##  3  194. u     tulemupepelako     14.1 F1_05    290.
+##  4  194. e     tulemupepelako     75.7 F1_05    440.
+##  5  194. e     tulemupepelako     68.2 F1_05    437.
+##  6  195. a     tulemupepelako     89.8 F1_05    800.
+##  7  195. o     tulemupepelako     98.5 F1_05    482.
+##  8  194. u     tulemupepelako     43.3 F1_10    439.
+##  9  194. e     tulemupepelako    103.  F1_10    517.
+## 10  194. u     tulemupepelako     14.1 F1_10    288.
+## # … with 389 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have a column &lt;code&gt;formant&lt;/code&gt; with the formant plus interval label, and a column &lt;code&gt;value&lt;/code&gt; with its value (in Hertz in our case).&lt;/p&gt;
+&lt;p&gt;The next step is to separate the label of the formant plus interval into two separate columns: one for &lt;code&gt;formant&lt;/code&gt;, and one for &lt;code&gt;interval&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_sep &amp;lt;- separate(trajectories_gath, formant, c(&amp;quot;formant&amp;quot;, &amp;quot;interval&amp;quot;), convert = TRUE)
+trajectories_sep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 399 x 7
+##     Time Vowel Word           Duration formant interval value
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+##  1  194. u     tulemupepelako     43.3 F1             5  406.
+##  2  194. e     tulemupepelako    103.  F1             5  503.
+##  3  194. u     tulemupepelako     14.1 F1             5  290.
+##  4  194. e     tulemupepelako     75.7 F1             5  440.
+##  5  194. e     tulemupepelako     68.2 F1             5  437.
+##  6  195. a     tulemupepelako     89.8 F1             5  800.
+##  7  195. o     tulemupepelako     98.5 F1             5  482.
+##  8  194. u     tulemupepelako     43.3 F1            10  439.
+##  9  194. e     tulemupepelako    103.  F1            10  517.
+## 10  194. u     tulemupepelako     14.1 F1            10  288.
+## # … with 389 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can create individual columns for each formant from F1 to F3.
+We can achieve this with &lt;code&gt;spread()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories_spr &amp;lt;- spread(trajectories_sep, formant, value)
+trajectories_spr&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 133 x 8
+##     Time Vowel Word           Duration interval    F1    F2    F3
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1  194. u     tulemupepelako     43.3        5  406. 1205. 2626.
+##  2  194. u     tulemupepelako     43.3       10  439. 1226. 2556.
+##  3  194. u     tulemupepelako     43.3       15  453. 1246. 2507.
+##  4  194. u     tulemupepelako     43.3       20  456. 1291. 2451.
+##  5  194. u     tulemupepelako     43.3       25  430. 1418. 2331.
+##  6  194. u     tulemupepelako     43.3       30  357. 1555. 2268.
+##  7  194. u     tulemupepelako     43.3       35  314. 1603. 2335.
+##  8  194. u     tulemupepelako     43.3       40  288. 1709. 2437.
+##  9  194. u     tulemupepelako     43.3       45  286. 1712. 2461.
+## 10  194. u     tulemupepelako     43.3       50  327. 1747. 2470.
+## # … with 123 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What we have now is a long format dataset, with separate columns for each formant, and individual rows for each vowel interval.&lt;/p&gt;
+&lt;div id=&#34;the-pipe-chain&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The pipe chain&lt;/h2&gt;
+&lt;p&gt;All the steps above can be chained by using the pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories &amp;lt;- trajectories %&amp;gt;%
+  gather(&amp;quot;formant&amp;quot;, &amp;quot;value&amp;quot;, F1_05:F3_95) %&amp;gt;%
+  separate(formant, c(&amp;quot;formant&amp;quot;, &amp;quot;interval&amp;quot;), convert = TRUE) %&amp;gt;%
+  spread(formant, value)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can finally easily plot the formant trajectories.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories %&amp;gt;%
+  ggplot(aes(x = interval)) +
+  geom_smooth(aes(y = F1), se = FALSE, colour = &amp;quot;red&amp;quot;) +
+  geom_smooth(aes(y = F2), se = FALSE, colour = &amp;quot;green&amp;quot;) +
+  geom_smooth(aes(y = F3), se = FALSE, colour = &amp;quot;blue&amp;quot;) +
+  facet_wrap(~ Vowel) +
+  ylab(&amp;quot;Hertz&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
+## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
+## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-wickham2014&#34;&gt;
+&lt;p&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23. &lt;a href=&#34;https://doi.org/10.18637/jss.v059.i10&#34;&gt;https://doi.org/10.18637/jss.v059.i10&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Wikipedia and the “Dialects of Italy”</title>
       <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
-      <description>The Italian Wikipedia has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia Statistics). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: Wikipedia Statistics).
-Nevertheless, the linguistics presence suffers from a variety of cyber-diseases. According to the figures described on the page of the Italian Linguistics WikiProject, out of 890 articles, 250 don’t cite proper sources for their information and about 270 are stubs that need to be expanded.</description>
+      <description>
+
+
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/d/dd/Dialetti_parlati_in_Italia.png&#34; alt=&#34;Map showing the dialects of Italy.&#34; width=&#34;371&#34; height=&#34;480&#34; align=&#34;right&#34; hspace=10/&gt; The &lt;strong&gt;Italian Wikipedia&lt;/strong&gt; has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: &lt;a href=&#34;https://it.wikipedia.org/wiki/Speciale:Statistiche&#34; target=&#34;_blank&#34;&gt;Italian Wikipedia Statistics&lt;/a&gt;). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: &lt;a href=&#34;https://stats.wikimedia.org/EN/Sitemap.htm&#34; target=&#34;_blank&#34;&gt;Wikipedia Statistics&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Nevertheless, the &lt;strong&gt;linguistics&lt;/strong&gt; presence suffers from a variety of cyber-diseases. According to the figures described on the page of the Italian &lt;a href=&#34;https://it.wikipedia.org/wiki/Progetto:Linguistica&#34; target=&#34;_blank&#34;&gt;Linguistics WikiProject&lt;/a&gt;, out of 890 articles, &lt;a href=&#34;https://it.wikipedia.org/wiki/Categoria:Senza_fonti_-_linguistica&#34; target=&#34;_blank&#34;&gt;250&lt;/a&gt; don’t cite proper sources for their information and about &lt;a href=&#34;https://it.wikipedia.org/wiki/Categoria:Stub_-_linguistica&#34; target=&#34;_blank&#34;&gt;270&lt;/a&gt; are stubs that need to be expanded.&lt;/p&gt;
+&lt;p&gt;But one topic in particular has been recently called to our attention (I’m a Wikipedia editor myself): the “&lt;strong&gt;dialects of Italy.&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;The problem is twofold: on the one hand, “dialects of Italy” refers to heterogeneous entities and, on the other, there is no agreement on how to define a “dialect” &lt;span class=&#34;citation&#34;&gt;(nor a “language,” for that matter; see Cysouw and Good’s &lt;a href=&#34;http://scholarspace.manoa.hawaii.edu/handle/10125/4606&#34; target=&#34;_blank&#34;&gt;article&lt;/a&gt; about this, Cysouw and Good 2013)&lt;/span&gt;. This is further complicated by the rooted misunderstanding of linguistics facts and concepts that the general public usually has.&lt;/p&gt;
+&lt;p&gt;All of this, together with the “poor sourcing” problem, led to chaos: see the &lt;a href=&#34;https://it.wikipedia.org/wiki/Discussioni_progetto:Linguistica/Archivio15#Un_argomento_cruciale&#34; target=&#34;_blank&#34;&gt;lengthy discussion&lt;/a&gt; about what to call a dialect and what a language (the title &lt;em&gt;Un argomento cruciale&lt;/em&gt;, ‘A critical topic,’ should be enough for grasping the seriousness of the matter).&lt;/p&gt;
+&lt;p&gt;Some time ago, a decision has been made to use the term “language” for any linguistic entity that had a code from the ISO 639-3 (to be sure, that’s from Ethnologue, by SIL), and “dialect” for entities without a code. This created an inconvenient precedent: since no Italian scientific source uses labels like “Piedmontese language” (&lt;em&gt;lingua piemontese&lt;/em&gt;) or “Calabrian language” (&lt;em&gt;lingua calabrese&lt;/em&gt;), Wikipedia came to be a primary source of this use, thus contradicting one of the main tenets of the open encyclopaedia. That is: &lt;strong&gt;no original research&lt;/strong&gt; (NOR).&lt;/p&gt;
+&lt;p&gt;The reaction of the laypeople is: “Wikipedia calls it a language, so it is indeed.” This is backed up by the (misled but widespread) notion of dialect as a “lower and/or corrupted variety of Italian,” further strengthened by the idea that Wikipedia is authoritative with no exceptions. But let me stress it again, &lt;strong&gt;no academic source labels the mentioned linguistic entities of Italy as “languages.”&lt;/strong&gt; Sorry folks.&lt;/p&gt;
+&lt;p&gt;But why is that? Well, tradition. The dialects of Italy have been called that since long and it would be extremely difficult to ask Italian linguists to stop calling them that way. However, no (sensible) linguist would consider them as corruptions of the Italian language.&lt;/p&gt;
+&lt;p&gt;As an emblematic example, &lt;span class=&#34;citation&#34;&gt;(Loporcaro 2009, 4–5)&lt;/span&gt; succinctly gives us an interesting perspective: “Derivando indipendentemente dal latino, i dialetti come il padovano, il napoletano ecc. sono lingue sorelle dell’italiano.” (trad: “Independently deriving from Latin, the dialects such as Paduan, Neapolitan, etc. are &lt;em&gt;sister languages&lt;/em&gt; of Italian.”). Although Loporcaro stresses the fact that what are normally labelled as “dialects” are languages, he is probably forced to still call them “dialects.” The point is, no one has ever called the dialects of Italy using the apposition “language” (2018 EDIT: probably until recently): so no “Paduan language,” nor “Neapolitan language.” Hence, this use in Wikipedia is totally unjustified.&lt;/p&gt;
+&lt;p&gt;Luckily, the trend in the encyclopaedia of abusing of the ISO 639 is in the process of being counteracted and some Wikipedians are making an effort to take the situation back under control. In the meantime, read the Cysouw and Good’s article mentioned early if you didn’t already.&lt;/p&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-cysouw2013&#34;&gt;
+&lt;p&gt;Cysouw, Michael, and Jeff Good. 2013. “Languoid, Doculect, and Glossonym: Formalizing the Notion ‘Language’.” &lt;em&gt;Language Documentation &amp;amp; Conservation&lt;/em&gt; 7: 331–59. &lt;a href=&#34;https://doi.org/10125/4606&#34;&gt;https://doi.org/10125/4606&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-loporcaro2009&#34;&gt;
+&lt;p&gt;Loporcaro, Michele. 2009. &lt;em&gt;Profilo Linguistico Dei Dialetti Italiani&lt;/em&gt;. Bari: Laterza.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Short review of phonological databases</title>
       <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
-      <description>A review of available phonological databases (2014).</description>
+      <description>
+
+
+&lt;p&gt;List of available phonological databases (updated 2019-03-22):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UCLA Phonological Segment Inventory Database (&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34;&gt;UPSID&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Lyon-Albuquerque Phonological Systems Database (&lt;a href=&#34;http://www.lapsyd.ddl.ish-lyon.cnrs.fr&#34;&gt;LAPSyD&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Phonetics Information Base and Lexicon (&lt;a href=&#34;http://phoible.org&#34;&gt;PHOIBLE&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;World Atlas of Language Structures (&lt;a href=&#34;http://wals.info&#34;&gt;WALS&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;South American Phonological Inventory Database (&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;BDPROTO Proto-language segment inventories (&lt;a href=&#34;https://github.com/bdproto/bdproto&#34;&gt;DBPROTO&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Database of Eurasian phonological inventories (&lt;a href=&#34;http://eurasianphonology.info&#34;&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Indo-European Phonological Inventory Database (&lt;a href=&#34;https://studiumanistici.unipv.it/?pagina=p&amp;amp;id=494&#34;&gt;IEPhon&lt;/a&gt;, dead link)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;ucla-phonological-segment-inventory-database1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34;&gt;UCLA Phonological Segment Inventory Database&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 451 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: genetically balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: desktop and web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: inventory, language family, comments, source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language, number of sounds, frequency index, family and phonetic features&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lyon-albuquerque-phonological-systems-database2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://www.lapsyd.ddl.ish-lyon.cnrs.fr&#34;&gt;Lyon-Albuquerque Phonological Systems Database&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: (in progress)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: consonant and vowel inventories, syllable structure, stress and tone systems, language location and classification&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, classification), sounds (table format), phonetic features, syllable&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: segment table, boolean (sound, feature, area, family, syllable)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;phonetics-information-base-and-lexicon3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://phoible.org&#34;&gt;Phonetics Information Base and Lexicon&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 1,010 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: inventory, segment class, language location&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso), sounds (list format), source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;world-atlas-of-language-structures6&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://wals.info&#34;&gt;World Atlas of Language Structures&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 2,679 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: desktop and web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: size of consonant inventory, size of vowel inventory, consonant-vowel ratio, voicing and gaps in plosive system, uvular consonant, glottalized consonants, velar nasal, reduplication&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, genus, family, macroarea; list format), characteristics (list format)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list and map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;south-american-phonological-inventory-database4&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;South American Phonological Inventory Database&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 359 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced, South America&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, suprasegmentals, language (name, iso, family, country)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, family, country; list format and map), sounds (table)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bdproto-proto-language-segment-inventories7&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;https://github.com/bdproto/bdproto&#34;&gt;BDPROTO Proto-language segment inventories&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 137 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: genialogical diversity, convenience sample&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: offline (csv, sql)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, suprasegmentals, language (name, iso, family, homeland, time depth)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: yes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: none&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;database-of-eurasian-phonological-inventories8&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://eurasianphonology.info&#34;&gt;Database of Eurasian phonological inventories&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 416 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web and offline (json)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, suprasegmentals, language (name, family, group)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: segment inventory, language, location&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: map, list, segments table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;indo-european-phonological-inventory-database5-dead-link&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;https://studiumanistici.unipv.it/?pagina=p&amp;amp;id=494&#34;&gt;Indo-European Phonological Inventory Database&lt;/a&gt; [dead link]&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 18 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced, Indo-European family&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, language (name, family, area)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, family, country; list format and map), sounds (table)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

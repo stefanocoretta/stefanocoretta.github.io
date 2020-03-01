@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>distinctive features on Stefano Coretta</title>
+    <title>distinctive features | Stefano Coretta</title>
     <link>https://stefanocoretta.github.io/tags/distinctive-features/</link>
-    <description>Recent content in distinctive features on Stefano Coretta</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2017-2020 Stefano Coretta</copyright>
-    <lastBuildDate>Mon, 30 Jun 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://stefanocoretta.github.io/tags/distinctive-features/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://stefanocoretta.github.io/tags/distinctive-features/index.xml" rel="self" type="application/rss+xml" />
+    <description>distinctive features</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 30 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>distinctive features</title>
+      <link>https://stefanocoretta.github.io/tags/distinctive-features/</link>
+    </image>
     
     <item>
       <title>Short review of phonological databases</title>
       <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
-      <description>A review of available phonological databases (2014).</description>
+      <description>
+
+
+&lt;p&gt;List of available phonological databases (updated 2019-03-22):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UCLA Phonological Segment Inventory Database (&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34;&gt;UPSID&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Lyon-Albuquerque Phonological Systems Database (&lt;a href=&#34;http://www.lapsyd.ddl.ish-lyon.cnrs.fr&#34;&gt;LAPSyD&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Phonetics Information Base and Lexicon (&lt;a href=&#34;http://phoible.org&#34;&gt;PHOIBLE&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;World Atlas of Language Structures (&lt;a href=&#34;http://wals.info&#34;&gt;WALS&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;South American Phonological Inventory Database (&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;SAPhon&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;BDPROTO Proto-language segment inventories (&lt;a href=&#34;https://github.com/bdproto/bdproto&#34;&gt;DBPROTO&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Database of Eurasian phonological inventories (&lt;a href=&#34;http://eurasianphonology.info&#34;&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Indo-European Phonological Inventory Database (&lt;a href=&#34;https://studiumanistici.unipv.it/?pagina=p&amp;amp;id=494&#34;&gt;IEPhon&lt;/a&gt;, dead link)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;ucla-phonological-segment-inventory-database1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://web.phonetik.uni-frankfurt.de/upsid.html&#34;&gt;UCLA Phonological Segment Inventory Database&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 451 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: genetically balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: desktop and web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: inventory, language family, comments, source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language, number of sounds, frequency index, family and phonetic features&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lyon-albuquerque-phonological-systems-database2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://www.lapsyd.ddl.ish-lyon.cnrs.fr&#34;&gt;Lyon-Albuquerque Phonological Systems Database&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: (in progress)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: consonant and vowel inventories, syllable structure, stress and tone systems, language location and classification&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, classification), sounds (table format), phonetic features, syllable&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: segment table, boolean (sound, feature, area, family, syllable)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;phonetics-information-base-and-lexicon3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://phoible.org&#34;&gt;Phonetics Information Base and Lexicon&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 1,010 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: inventory, segment class, language location&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso), sounds (list format), source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;world-atlas-of-language-structures6&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://wals.info&#34;&gt;World Atlas of Language Structures&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 2,679 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: balanced&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: desktop and web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: size of consonant inventory, size of vowel inventory, consonant-vowel ratio, voicing and gaps in plosive system, uvular consonant, glottalized consonants, velar nasal, reduplication&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, genus, family, macroarea; list format), characteristics (list format)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: list and map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;south-american-phonological-inventory-database4&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://linguistics.berkeley.edu/~saphon/en/&#34;&gt;South American Phonological Inventory Database&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 359 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced, South America&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, suprasegmentals, language (name, iso, family, country)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, iso, family, country; list format and map), sounds (table)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bdproto-proto-language-segment-inventories7&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;https://github.com/bdproto/bdproto&#34;&gt;BDPROTO Proto-language segment inventories&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 137 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: genialogical diversity, convenience sample&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: offline (csv, sql)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, suprasegmentals, language (name, iso, family, homeland, time depth)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: yes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: none&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;database-of-eurasian-phonological-inventories8&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;http://eurasianphonology.info&#34;&gt;Database of Eurasian phonological inventories&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 416 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web and offline (json)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, suprasegmentals, language (name, family, group)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: segment inventory, language, location&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: map, list, segments table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;indo-european-phonological-inventory-database5-dead-link&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;https://studiumanistici.unipv.it/?pagina=p&amp;amp;id=494&#34;&gt;Indo-European Phonological Inventory Database&lt;/a&gt; [dead link]&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;number of records&lt;/strong&gt;: 18 languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type of sample&lt;/strong&gt;: not balanced, Indo-European family&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interface&lt;/strong&gt;: web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: segment inventory, language (name, family, area)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;searchable&lt;/strong&gt;: for language (name, family, country; list format and map), sounds (table)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search display&lt;/strong&gt;: table, list and map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

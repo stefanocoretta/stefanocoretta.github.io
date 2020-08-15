@@ -5,12 +5,78 @@
     <link>https://stefanocoretta.github.io/categories/methods/</link>
       <atom:link href="https://stefanocoretta.github.io/categories/methods/index.xml" rel="self" type="application/rss+xml" />
     <description>Methods</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Methods</title>
       <link>https://stefanocoretta.github.io/categories/methods/</link>
     </image>
+    
+    <item>
+      <title>Plotting prior distributions with ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
+      <description>
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;The choice of priors is a fundamental step of the Bayesian inference process. &lt;span class=&#34;citation&#34;&gt;Vasishth et al. (2018)&lt;/span&gt; recommend plotting the chosen priors to see if they are reasonable.&lt;/p&gt;
+&lt;p&gt;In this post I will show how to easily plot prior distributions in &lt;a href=&#34;https://ggplot2.tidyverse.org&#34;&gt;ggplot2&lt;/a&gt; (which is part of the &lt;a href=&#34;https://www.tidyverse.org&#34;&gt;tidyverse&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Let’s load the tidyverse first.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ───────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.1
+## ✓ tidyr   1.1.1     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ──────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_set(theme_minimal()) # I just like this theme :)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;plotting-your-priors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plotting your priors&lt;/h2&gt;
+&lt;p&gt;Let’s start with a simple normal prior with &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; = 0 and &lt;em&gt;sd&lt;/em&gt; = 1.&lt;/p&gt;
+&lt;p&gt;The plot is initialised with an empty call to &lt;code&gt;ggplot()&lt;/code&gt;.
+As aesthetics, you only need to specify the range of &lt;em&gt;x&lt;/em&gt; values in &lt;code&gt;aes()&lt;/code&gt;.
+Here, we use &lt;code&gt;c(-4, 4)&lt;/code&gt;, meaning that the &lt;em&gt;x&lt;/em&gt;-axis of this plot will have these limits.
+For a normal distribution, it is useful to set the limits as the mean ± 4 times the standard deviation (this ensures all the distribution is shown).&lt;/p&gt;
+&lt;p&gt;The function &lt;code&gt;ggplot2::stat_function()&lt;/code&gt; allows us to specify a distribution family with the &lt;code&gt;fun&lt;/code&gt; argument.
+This arguments takes the density function (the R functions of the form &lt;em&gt;dxxx&lt;/em&gt;) of the chosen distribution family, so for the normal (Gaussian) distribution we use &lt;code&gt;dnorm()&lt;/code&gt;.
+The argument &lt;code&gt;n&lt;/code&gt; specifies the number of points along which to calculate the distribution (here &lt;code&gt;101&lt;/code&gt;), while &lt;code&gt;args&lt;/code&gt; takes a list with the parameters of the distribution (here the mean &lt;code&gt;0&lt;/code&gt; and standard deviation &lt;code&gt;1&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = tibble(x = -4:4), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(1)) +
+  labs(title = &amp;quot;Normal (Gaussian) distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/normal-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;A beta prior will be bounded between 0 and 1, so we can specify that in &lt;code&gt;aes()&lt;/code&gt;.
+The beta distribution has two arguments, &lt;code&gt;shape1&lt;/code&gt; and &lt;code&gt;shape2&lt;/code&gt; (here &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = tibble(x = 0:1), aes(x)) +
+  stat_function(fun = dbeta, n = 101, args = list(2, 5)) +
+  labs(title = &amp;quot;Beta distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/beta-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another common distribution is the Cauchy.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = tibble(x = -10:10), aes(x)) +
+  stat_function(fun = dcauchy, n = 201, args = list(-2, 1)) +
+  labs(title = &amp;quot;Cauchy distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/cauchy-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The Poisson distribution can be plotted by changing the type of &lt;code&gt;geom&lt;/code&gt; and using an &lt;code&gt;n&lt;/code&gt; that creates only integers.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# the range 0:20 includes 21 integers, so n = 21
+ggplot(data = tibble(x = 0:20), aes(x)) +
+  stat_function(fun = dpois, n = 21, args = list(4), geom = &amp;quot;point&amp;quot;) +
+  labs(title = &amp;quot;Poisson distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/poisson-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Of course any family with a corresponding &lt;em&gt;dxxx&lt;/em&gt; function can be plotted (see &lt;code&gt;?Distributions&lt;/code&gt; and package-provided families).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-vasishth2018&#34;&gt;
+&lt;p&gt;Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. “Bayesian Data Analysis in the Phonetic Sciences: A Tutorial Introduction.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>An estimate of number of speakers per study in phonetics</title>

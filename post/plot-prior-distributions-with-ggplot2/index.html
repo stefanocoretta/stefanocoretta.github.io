@@ -31,7 +31,7 @@
   <meta name="description" content="The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
-library(tidyverse) ## ── Attaching packages ────────────────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.0 ✓ purrr 0.">
+library(tidyverse) ## ── Attaching packages ───────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.2 ✓ purrr 0.">
 
   
   <link rel="alternate" hreflang="en-uk" href="https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/">
@@ -240,7 +240,7 @@ library(tidyverse) ## ── Attaching packages ──────────�
   <meta property="og:description" content="The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
-library(tidyverse) ## ── Attaching packages ────────────────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.0 ✓ purrr 0."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+library(tidyverse) ## ── Attaching packages ───────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.2 ✓ purrr 0."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-uk">
   
     
@@ -292,7 +292,7 @@ library(tidyverse) ## ── Attaching packages ──────────�
       "url": "img/https://stefanocoretta.github.io/"
     }
   },
-  "description": "The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.\nIn this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).\nLet’s load the tidyverse first.\nlibrary(tidyverse) ## ── Attaching packages ────────────────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.0 ✓ purrr 0."
+  "description": "The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.\nIn this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).\nLet’s load the tidyverse first.\nlibrary(tidyverse) ## ── Attaching packages ───────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.2 ✓ purrr 0."
 }
 </script>
 
@@ -510,10 +510,6 @@ library(tidyverse) ## ── Attaching packages ──────────�
       
 
       
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-      </li>
-      
 
       
 
@@ -620,12 +616,12 @@ library(tidyverse) ## ── Attaching packages ──────────�
 <p>In this post I will show how to easily plot prior distributions in <a href="https://ggplot2.tidyverse.org">ggplot2</a> (which is part of the <a href="https://www.tidyverse.org">tidyverse</a>).</p>
 <p>Let’s load the tidyverse first.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
-## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
-## ✓ tidyr   1.0.3     ✓ stringr 1.4.0
+<pre><code>## ── Attaching packages ───────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.1
+## ✓ tidyr   1.1.1     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ───────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ──────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>theme_set(theme_minimal()) # I just like this theme :)</code></pre>
@@ -639,35 +635,24 @@ For a normal distribution, it is useful to set the limits as the mean ± 4 times
 <p>The function <code>ggplot2::stat_function()</code> allows us to specify a distribution family with the <code>fun</code> argument.
 This arguments takes the density function (the R functions of the form <em>dxxx</em>) of the chosen distribution family, so for the normal (Gaussian) distribution we use <code>dnorm()</code>.
 The argument <code>n</code> specifies the number of points along which to calculate the distribution (here <code>101</code>), while <code>args</code> takes a list with the parameters of the distribution (here the mean <code>0</code> and standard deviation <code>1</code>).</p>
-<pre class="r"><code>ggplot() +
-  aes(x = c(-4, 4)) +
-  stat_function(fun = dnorm, n = 101, args = list(0, 1)) +
+<pre class="r"><code>ggplot(data = tibble(x = -4:4), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(1)) +
   labs(title = &quot;Normal (Gaussian) distribution&quot;)</code></pre>
 <p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/normal-1.png" width="672" /></p>
-<p>If you are using a half-normal prior, you can plot it by setting one of the limits to the mean.</p>
-<pre class="r"><code>ggplot() +
-  # the mean is 0, only positive number are shown
-  aes(x = c(0, 4)) +
-  stat_function(fun = dnorm, n = 101, args = list(0, 1)) +
-  labs(title = &quot;Half-normal distribution&quot;)</code></pre>
-<p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/half-normal-1.png" width="672" /></p>
 <p>A beta prior will be bounded between 0 and 1, so we can specify that in <code>aes()</code>.
 The beta distribution has two arguments, <code>shape1</code> and <code>shape2</code> (here <code>2</code> and <code>5</code>).</p>
-<pre class="r"><code>ggplot() +
-  aes(x = c(0, 1)) +
+<pre class="r"><code>ggplot(data = tibble(x = 0:1), aes(x)) +
   stat_function(fun = dbeta, n = 101, args = list(2, 5)) +
   labs(title = &quot;Beta distribution&quot;)</code></pre>
 <p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/beta-1.png" width="672" /></p>
 <p>Another common distribution is the Cauchy.</p>
-<pre class="r"><code>ggplot() +
-  aes(x = c(-10, 10)) +
+<pre class="r"><code>ggplot(data = tibble(x = -10:10), aes(x)) +
   stat_function(fun = dcauchy, n = 201, args = list(-2, 1)) +
   labs(title = &quot;Cauchy distribution&quot;)</code></pre>
 <p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/cauchy-1.png" width="672" /></p>
 <p>The Poisson distribution can be plotted by changing the type of <code>geom</code> and using an <code>n</code> that creates only integers.</p>
 <pre class="r"><code># the range 0:20 includes 21 integers, so n = 21
-ggplot() +
-  aes(x = c(0, 20)) +
+ggplot(data = tibble(x = 0:20), aes(x)) +
   stat_function(fun = dpois, n = 21, args = list(4), geom = &quot;point&quot;) +
   labs(title = &quot;Poisson distribution&quot;)</code></pre>
 <p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/poisson-1.png" width="672" /></p>

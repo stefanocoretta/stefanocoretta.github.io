@@ -625,24 +625,44 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://stefanocoretta.github.io/output/</guid>
       <description>&lt;h2&gt;Papers&lt;/h2&gt;
+&lt;span style=&#34;font-size: 60%; display: block&#34;&gt;
+  &lt;span class=&#34;osi-preprint&#34;&gt;&lt;/span&gt; = &lt;b&gt;Preprint&lt;/b&gt; (author manuscript &lt;em&gt;prior&lt;/em&gt; to peer-review).
+  &lt;span class=&#34;osi-postprint&#34;&gt;&lt;/span&gt; = &lt;b&gt;Postprint&lt;/b&gt; (accepted author manuscript &lt;em&gt;after&lt;/em&gt; to peer-review, same content as published version).
+  &lt;span class=&#34;osi-published&#34;&gt;&lt;/span&gt; = &lt;b&gt;Published&lt;/b&gt; version (accepted manuscript with publisher&#39;s formatting, same content as postprint).
+  &lt;span class=&#34;osi-prereg&#34;&gt;&lt;/span&gt; = &lt;b&gt;Preregistration&lt;/b&gt;.
+  &lt;span class=&#34;osi-compendium&#34;&gt;&lt;/span&gt; = &lt;b&gt;Research compendium&lt;/b&gt; (data and code). &lt;i class=&#34;fa fa-lock-open fa-lg&#34;&gt;&lt;/i&gt; = &lt;b&gt;Open access&lt;/b&gt;.
+&lt;/span&gt;
+&lt;br&gt;
 &lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;2020&lt;/td&gt;
-    &lt;td&gt;Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven. A cross cultural analysis of early prelinguistic gesture development and its relationship to language development. &lt;em&gt;Child Development&lt;/em&gt;. DOI: &lt;a href=&#34;http://doi.org/10.1111/cdev.13406&#34; target=&#34;_blank&#34;&gt;10.1111/cdev.13406&lt;/a&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;a href=https://srcd.onlinelibrary.wiley.com/doi/epdf/10.1111/cdev.13406 target=&#34;_blank&#34;&gt;&lt;i class=&#34;fa fa-download fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;a href=https://doi.org/10.1111/cdev.13406 target=&#34;_blank&#34;&gt;&lt;i class=&#34;fa fa-external-link-alt fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;
+    Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven. A cross cultural analysis of early prelinguistic gesture development and its relationship to language development. &lt;em&gt;Child Development&lt;/em&gt;. DOI: &lt;a href=&#34;http://doi.org/10.1111/cdev.13406&#34; target=&#34;_blank&#34;&gt;10.1111/cdev.13406&lt;/a&gt;.
+    &lt;br&gt;
+    &lt;a href=https://doi.org/10.1111/cdev.13406 target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-published&#34; style=&#34;font-size: 150%&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;&lt;i class=&#34;fa fa-lock-open fa-lg&#34;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;2020&lt;/td&gt;
-    &lt;td&gt;Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish. &lt;em&gt;Journal of the Acoustical Society of America&lt;/em&gt; 147. 245-259. DOI: &lt;a href=&#34;http://doi.org/10.1121/10.0000556&#34; target=&#34;_blank&#34;&gt;10.1121/10.0000556&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;
+    Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish. &lt;em&gt;Journal of the Acoustical Society of America&lt;/em&gt; 147. 245-259. DOI: &lt;a href=&#34;http://doi.org/10.1121/10.0000556&#34; target=&#34;_blank&#34;&gt;10.1121/10.0000556&lt;/a&gt;.
+    &lt;br&gt;
+    &lt;a href=https://doi.org/10.31219/osf.io/zrqyx target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-postprint&#34; style=&#34;font-size: 150%&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=http://doi.org/10.1121/10.0000556 target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-published&#34; style=&#34;font-size: 150%&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=https://osf.io/d245b/ target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-compendium&#34; style=&#34;font-size: 150%&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/td&gt;
     &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;a href=https://osf.io/d245b/ target=&#34;_blank&#34;&gt;&lt;i class=&#34;fa fa-external-link-alt fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;2019&lt;/td&gt;
-    &lt;td&gt;An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish. &lt;em&gt;Glossa: a journal of general linguistics&lt;/em&gt; 4(1) 125. 1-25. DOI: &lt;a href=&#34;http://doi.org/10.5334/gjgl.869&#34; target=&#34;_blank&#34;&gt;10.5334/gjgl.869&lt;/a&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;a href=https://osf.io/bfyhr/ target=&#34;_blank&#34;&gt;&lt;i class=&#34;fa fa-external-link-alt fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;
+    An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish. &lt;em&gt;Glossa: a journal of general linguistics&lt;/em&gt; 4(1) 125. 1-25. DOI: &lt;a href=&#34;http://doi.org/10.5334/gjgl.869&#34; target=&#34;_blank&#34;&gt;10.5334/gjgl.869&lt;/a&gt;.
+    &lt;br&gt;
+    &lt;a href=http://doi.org/10.5334/gjgl.869 target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-published&#34; style=&#34;font-size: 150%&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=https://osf.io/bfyhr/ target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-compendium&#34; style=&#34;font-size: 150%&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;&lt;i class=&#34;fa fa-lock-open fa-lg&#34;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;PhD thesis&lt;/h2&gt;

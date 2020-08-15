@@ -51,9 +51,11 @@ I can’t really say that there is a clear trend, if not for the fact that the s
 &lt;p&gt;The following bar chart shows the median number of speakers in studies by genetic affiliation.
 The colour of the bars indicates the number of studies.
 Indo-European languages stand out in terms of number of studies (&amp;gt; 30), although the number of speakers does not fare better than other less-reachable language families.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This plot is the same as the one above, but families have been categorised by number of studies in two categories: up to 5 studies vs. 5 or more.
 It is not surprising that Uralic, Indo-European, Turkic, Afro-Asiatic and Austronesian stand out.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;number-of-speakers-by-endangerment-status&#34; class=&#34;section level2&#34;&gt;

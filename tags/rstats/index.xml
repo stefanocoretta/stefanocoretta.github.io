@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rstats | Stefano Coretta</title>
-    <link>https://stefanocoretta.github.io/tags/rstats/</link>
-      <atom:link href="https://stefanocoretta.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/rstats/</link>
+      <atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     <description>rstats</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>rstats</title>
-      <link>https://stefanocoretta.github.io/tags/rstats/</link>
+      <link>/tags/rstats/</link>
     </image>
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
-      <link>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</link>
+      <link>/post/plot-prior-distributions-with-ggplot2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://stefanocoretta.github.io/post/plot-prior-distributions-with-ggplot2/</guid>
+      <guid>/post/plot-prior-distributions-with-ggplot2/</guid>
       <description>
-&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The choice of priors is a fundamental step of the Bayesian inference process. &lt;span class=&#34;citation&#34;&gt;Vasishth et al. (2018)&lt;/span&gt; recommend plotting the chosen priors to see if they are reasonable.&lt;/p&gt;
@@ -47,24 +47,24 @@ The argument &lt;code&gt;n&lt;/code&gt; specifies the number of points along whi
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = tibble(x = -4:4), aes(x)) +
   stat_function(fun = dnorm, n = 101, args = list(1)) +
   labs(title = &amp;quot;Normal (Gaussian) distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/normal-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/normal-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;A beta prior will be bounded between 0 and 1, so we can specify that in &lt;code&gt;aes()&lt;/code&gt;.
 The beta distribution has two arguments, &lt;code&gt;shape1&lt;/code&gt; and &lt;code&gt;shape2&lt;/code&gt; (here &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;5&lt;/code&gt;).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = tibble(x = 0:1), aes(x)) +
   stat_function(fun = dbeta, n = 101, args = list(2, 5)) +
   labs(title = &amp;quot;Beta distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/beta-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/beta-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Another common distribution is the Cauchy.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = tibble(x = -10:10), aes(x)) +
   stat_function(fun = dcauchy, n = 201, args = list(-2, 1)) +
   labs(title = &amp;quot;Cauchy distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/cauchy-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/cauchy-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The Poisson distribution can be plotted by changing the type of &lt;code&gt;geom&lt;/code&gt; and using an &lt;code&gt;n&lt;/code&gt; that creates only integers.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# the range 0:20 includes 21 integers, so n = 21
 ggplot(data = tibble(x = 0:20), aes(x)) +
   stat_function(fun = dpois, n = 21, args = list(4), geom = &amp;quot;point&amp;quot;) +
   labs(title = &amp;quot;Poisson distribution&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/poisson-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/poisson-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Of course any family with a corresponding &lt;em&gt;dxxx&lt;/em&gt; function can be plotted (see &lt;code&gt;?Distributions&lt;/code&gt; and package-provided families).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
@@ -80,11 +80,11 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
     
     <item>
       <title>Plotting tongue contours with ggplot2</title>
-      <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
+      <link>/post/plotting-tongue-contours-with-ggplot2/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
+      <guid>/post/plotting-tongue-contours-with-ggplot2/</guid>
       <description>
-&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;When plotting tongue contours data obtained from ultrasound tongue imaging in &lt;code&gt;R&lt;/code&gt; using &lt;code&gt;ggplot2&lt;/code&gt;, a common option to smooth over the individual contours and show the general pattern is to use &lt;code&gt;geom_smooth(methood = &#34;loess&#34;)&lt;/code&gt;. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.&lt;/p&gt;
@@ -112,7 +112,7 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
   coord_fixed() +
   facet_grid(c2 ~ vowel) +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.&lt;/p&gt;
 &lt;p&gt;To see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
@@ -122,7 +122,7 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
   coord_fixed() +
   facet_grid(c2 ~ vowel) +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.&lt;/p&gt;
 &lt;p&gt;This happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.&lt;/p&gt;
 &lt;p&gt;An alternative (if you don’t like points) is to use &lt;code&gt;geom_path()&lt;/code&gt; to plot the individual tongue contours as lines. &lt;code&gt;geom_path()&lt;/code&gt; connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).&lt;/p&gt;
@@ -158,7 +158,7 @@ tongue_data&lt;/code&gt;&lt;/pre&gt;
   coord_fixed() +
   facet_grid(c2 ~ vowel) +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The tongue root in /u/ is now properly rendered.&lt;/p&gt;
 &lt;p&gt;But what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?&lt;/p&gt;
 &lt;p&gt;An option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by &lt;code&gt;fan_line&lt;/code&gt; and then &lt;code&gt;summarise()&lt;/code&gt; it. Plotting can then be done with &lt;code&gt;geom_path()&lt;/code&gt; and &lt;code&gt;geom_polygon()&lt;/code&gt;. All together, the code looks like this.&lt;/p&gt;
@@ -201,17 +201,17 @@ ggplot(xy_mean, aes(X_mean, Y_mean)) +
   facet_grid(c2 ~ vowel) +
   coord_fixed() +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
-      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <link>/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <guid>/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>
-&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.&lt;/p&gt;
@@ -335,7 +335,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
 ## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
 ## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;

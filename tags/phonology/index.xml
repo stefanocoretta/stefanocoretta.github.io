@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>phonology | Stefano Coretta</title>
-    <link>/tags/phonology/</link>
-      <atom:link href="/tags/phonology/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stefanocoretta.github.io/tags/phonology/</link>
+      <atom:link href="https://stefanocoretta.github.io/tags/phonology/index.xml" rel="self" type="application/rss+xml" />
     <description>phonology</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>phonology</title>
-      <link>/tags/phonology/</link>
+      <link>https://stefanocoretta.github.io/tags/phonology/</link>
     </image>
     
     <item>
       <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
-      <link>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
+      <link>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</link>
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
+      <guid>https://stefanocoretta.github.io/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants.
@@ -155,11 +155,11 @@ There is indeed a dozen languages with this system in South America alone (data 
     
     <item>
       <title>Plotting tongue contours with ggplot2</title>
-      <link>/post/plotting-tongue-contours-with-ggplot2/</link>
+      <link>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/post/plotting-tongue-contours-with-ggplot2/</guid>
+      <guid>https://stefanocoretta.github.io/post/plotting-tongue-contours-with-ggplot2/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;When plotting tongue contours data obtained from ultrasound tongue imaging in &lt;code&gt;R&lt;/code&gt; using &lt;code&gt;ggplot2&lt;/code&gt;, a common option to smooth over the individual contours and show the general pattern is to use &lt;code&gt;geom_smooth(methood = &#34;loess&#34;)&lt;/code&gt;. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.&lt;/p&gt;
@@ -187,7 +187,7 @@ There is indeed a dozen languages with this system in South America alone (data 
   coord_fixed() +
   facet_grid(c2 ~ vowel) +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/smooth-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.&lt;/p&gt;
 &lt;p&gt;To see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tongue_data %&amp;gt;%
@@ -197,7 +197,7 @@ There is indeed a dozen languages with this system in South America alone (data 
   coord_fixed() +
   facet_grid(c2 ~ vowel) +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/points-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.&lt;/p&gt;
 &lt;p&gt;This happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.&lt;/p&gt;
 &lt;p&gt;An alternative (if you don’t like points) is to use &lt;code&gt;geom_path()&lt;/code&gt; to plot the individual tongue contours as lines. &lt;code&gt;geom_path()&lt;/code&gt; connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).&lt;/p&gt;
@@ -233,7 +233,7 @@ tongue_data&lt;/code&gt;&lt;/pre&gt;
   coord_fixed() +
   facet_grid(c2 ~ vowel) +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The tongue root in /u/ is now properly rendered.&lt;/p&gt;
 &lt;p&gt;But what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?&lt;/p&gt;
 &lt;p&gt;An option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by &lt;code&gt;fan_line&lt;/code&gt; and then &lt;code&gt;summarise()&lt;/code&gt; it. Plotting can then be done with &lt;code&gt;geom_path()&lt;/code&gt; and &lt;code&gt;geom_polygon()&lt;/code&gt;. All together, the code looks like this.&lt;/p&gt;
@@ -276,17 +276,17 @@ ggplot(xy_mean, aes(X_mean, Y_mean)) +
   facet_grid(c2 ~ vowel) +
   coord_fixed() +
   theme(legend.position = &amp;quot;none&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-08-23-plotting-tongue-contours-with-ggplot2_files/figure-html/mean-path-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
-      <link>/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.&lt;/p&gt;
@@ -410,7 +410,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
 ## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
 ## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
@@ -425,11 +425,11 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Short review of phonological databases</title>
-      <link>/post/2014-06-30-short-review-phonological-databases/</link>
+      <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>/post/2014-06-30-short-review-phonological-databases/</guid>
+      <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;List of available phonological databases (updated 2019-03-22):&lt;/p&gt;

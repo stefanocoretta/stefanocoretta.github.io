@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ethnologue | Stefano Coretta</title>
-    <link>/tags/ethnologue/</link>
-      <atom:link href="/tags/ethnologue/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stefanocoretta.github.io/tags/ethnologue/</link>
+      <atom:link href="https://stefanocoretta.github.io/tags/ethnologue/index.xml" rel="self" type="application/rss+xml" />
     <description>Ethnologue</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Tue, 04 Aug 2015 13:11:55 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Ethnologue</title>
-      <link>/tags/ethnologue/</link>
+      <link>https://stefanocoretta.github.io/tags/ethnologue/</link>
     </image>
     
     <item>
       <title>Wikipedia and the “Dialects of Italy”</title>
-      <link>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
+      <link>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</link>
       <pubDate>Tue, 04 Aug 2015 13:11:55 +0000</pubDate>
-      <guid>/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
+      <guid>https://stefanocoretta.github.io/post/2015-08-04-wikipedia-and-the-dialects-of-italy/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/d/dd/Dialetti_parlati_in_Italia.png&#34; alt=&#34;Map showing the dialects of Italy.&#34; width=&#34;371&#34; height=&#34;480&#34; align=&#34;right&#34; hspace=10/&gt; The &lt;strong&gt;Italian Wikipedia&lt;/strong&gt; has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: &lt;a href=&#34;https://it.wikipedia.org/wiki/Speciale:Statistiche&#34; target=&#34;_blank&#34;&gt;Italian Wikipedia Statistics&lt;/a&gt;). That’s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: &lt;a href=&#34;https://stats.wikimedia.org/EN/Sitemap.htm&#34; target=&#34;_blank&#34;&gt;Wikipedia Statistics&lt;/a&gt;).&lt;/p&gt;

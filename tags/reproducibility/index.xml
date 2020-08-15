@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>reproducibility | Stefano Coretta</title>
-    <link>/tags/reproducibility/</link>
-      <atom:link href="/tags/reproducibility/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stefanocoretta.github.io/tags/reproducibility/</link>
+      <atom:link href="https://stefanocoretta.github.io/tags/reproducibility/index.xml" rel="self" type="application/rss+xml" />
     <description>reproducibility</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>reproducibility</title>
-      <link>/tags/reproducibility/</link>
+      <link>https://stefanocoretta.github.io/tags/reproducibility/</link>
     </image>
     
     <item>
       <title>An estimate of number of speakers per study in phonetics</title>
-      <link>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
+      <link>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
-      <guid>/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
+      <guid>https://stefanocoretta.github.io/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies.
@@ -38,13 +38,13 @@ The &lt;a href=&#34;https://osf.io/765q4/&#34;&gt;dataset&lt;/a&gt; reports, amo
 &lt;p&gt;The dataset contains data from 113 studies, published between 1955 and 2017 (the bulk of studies is within the range 1990-2017 though).
 The median number of speakers per study is 5.
 The histogram below illustrates that most studies have around 10 speakers or less, and that there are a few outliers with 30-40 speakers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/hist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/hist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;number-of-speakers-through-the-years&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Number of speakers through the years&lt;/h2&gt;
 &lt;p&gt;We now turn to the number of speakers through the years.
 I can’t really say that there is a clear trend, if not for the fact that the studies with more than 30 speakers are (unsurprisingly) more recent.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/year-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/year-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;number-of-speakers-by-linguistic-affiliation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Number of speakers by linguistic affiliation&lt;/h2&gt;
@@ -52,11 +52,11 @@ I can’t really say that there is a clear trend, if not for the fact that the s
 The colour of the bars indicates the number of studies.
 Indo-European languages stand out in terms of number of studies (&amp;gt; 30), although the number of speakers does not fare better than other less-reachable language families.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This plot is the same as the one above, but families have been categorised by number of studies in two categories: up to 5 studies vs. 5 or more.
 It is not surprising that Uralic, Indo-European, Turkic, Afro-Asiatic and Austronesian stand out.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/participants-affiliation-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;number-of-speakers-by-endangerment-status&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Number of speakers by endangerment status&lt;/h2&gt;
@@ -66,7 +66,7 @@ Of course there are way more studies on safe languages, and if we focus on the f
 Considering though that we are talking of very low numbers of speakers (5-10) I am not sure it is actually relevant that definitely endangered languages have a lower median than safe languages.
 Difficult to say anything about higher endangerment levels given the low number of studies.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: `fun.y` is deprecated. Use `fun` instead.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/status-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2019-05-03-an-estimate-of-number-of-speakers-per-study-in-phonetics_files/figure-html/status-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;While of course making generalisations based on this cursory analysis would not be wise, there seems to be a tendency for studies to have a very low number of speakers (median 5 speakers over study).
 The majority of studies have obtained data from 10 speakers or less, independent of publication year and endangerment status of the language enquired.&lt;/p&gt;
 &lt;/div&gt;

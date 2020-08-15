@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linguistics | Stefano Coretta</title>
-    <link>/tags/linguistics/</link>
-      <atom:link href="/tags/linguistics/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stefanocoretta.github.io/tags/linguistics/</link>
+      <atom:link href="https://stefanocoretta.github.io/tags/linguistics/index.xml" rel="self" type="application/rss+xml" />
     <description>linguistics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Fri, 02 Mar 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>linguistics</title>
-      <link>/tags/linguistics/</link>
+      <link>https://stefanocoretta.github.io/tags/linguistics/</link>
     </image>
     
     <item>
       <title>Vowel formants trajectories and tidy data</title>
-      <link>/post/vowel-formants-trajectories-and-tidy-data/</link>
+      <link>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</link>
       <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>/post/vowel-formants-trajectories-and-tidy-data/</guid>
+      <guid>https://stefanocoretta.github.io/post/vowel-formants-trajectories-and-tidy-data/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.&lt;/p&gt;
@@ -142,7 +142,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
 ## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;
 ## `geom_smooth()` using method = &amp;#39;loess&amp;#39; and formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/post/2018-03-02-vowel-formants-trajectories-and-tidy-data_files/figure-html/trajectory-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
@@ -157,11 +157,11 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Short review of phonological databases</title>
-      <link>/post/2014-06-30-short-review-phonological-databases/</link>
+      <link>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</link>
       <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>/post/2014-06-30-short-review-phonological-databases/</guid>
+      <guid>https://stefanocoretta.github.io/post/2014-06-30-short-review-phonological-databases/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;List of available phonological databases (updated 2019-03-22):&lt;/p&gt;

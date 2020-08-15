@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>literate programming | Stefano Coretta</title>
-    <link>/tags/literate-programming/</link>
-      <atom:link href="/tags/literate-programming/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stefanocoretta.github.io/tags/literate-programming/</link>
+      <atom:link href="https://stefanocoretta.github.io/tags/literate-programming/index.xml" rel="self" type="application/rss+xml" />
     <description>literate programming</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Thu, 21 Mar 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>literate programming</title>
-      <link>/tags/literate-programming/</link>
+      <link>https://stefanocoretta.github.io/tags/literate-programming/</link>
     </image>
     
     <item>
       <title>Literate programming with Praat</title>
-      <link>/post/literate-programming-with-praat/</link>
+      <link>https://stefanocoretta.github.io/post/literate-programming-with-praat/</link>
       <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/literate-programming-with-praat/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/praat-literate.png&#34; alt=&#34;Literate Praat example&#34;&gt;&lt;/p&gt;
+      <guid>https://stefanocoretta.github.io/post/literate-programming-with-praat/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/praat-literate.png&#34; alt=&#34;Literate Praat example&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This post quickly illustrates how to apply a literate programming workflow to Praat scripting.
 To be able to reproduce the steps described here you need the latest version of &lt;a href=&#34;https://pandoc.org&#34;&gt;pandoc&lt;/a&gt; and the &lt;a href=&#34;https://github.com/driusan/lmt&#34;&gt;Literate Markdown Tangler&lt;/a&gt; (&lt;code&gt;lmt&lt;/code&gt;, you will need to install &lt;a href=&#34;https://golang.org&#34;&gt;Go&lt;/a&gt; first to install &lt;code&gt;lmt&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id=&#34;what-is-literate-programming&#34;&gt;What is literate programming?&lt;/h2&gt;
@@ -43,7 +43,7 @@ If you wanna generate a PDF version of the documentation, you can convert the so
 &lt;ol&gt;
 &lt;li&gt;You need to install the latest version of Pandoc, which can be found &lt;a href=&#34;https://pandoc.org/installing.html&#34;&gt;here&lt;/a&gt;. After installing, be sure you can run this command from your command line GUI: &lt;code&gt;pandoc --version&lt;/code&gt;. If a version is returned, Pandoc is working on your system.&lt;/li&gt;
 &lt;li&gt;Install Go from &lt;a href=&#34;https://golang.org&#34;&gt;here&lt;/a&gt; and set it up, then download and install &lt;code&gt;lmt&lt;/code&gt; from &lt;a href=&#34;https://github.com/driusan/lmt&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Download and unzip the content of &lt;a href=&#34;/files/pandoc-praat.zip&#34;&gt;this zip&lt;/a&gt; to a convenient directory (usually, in &lt;code&gt;.pandoc/&lt;/code&gt; in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.&lt;/li&gt;
+&lt;li&gt;Download and unzip the content of &lt;a href=&#34;https://stefanocoretta.github.io/files/pandoc-praat.zip&#34;&gt;this zip&lt;/a&gt; to a convenient directory (usually, in &lt;code&gt;.pandoc/&lt;/code&gt; in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;literate-praat&#34;&gt;Literate Praat&lt;/h2&gt;
 &lt;p&gt;To generate the Praat script and its documentation, you have to:&lt;/p&gt;
@@ -55,7 +55,7 @@ If you wanna generate a PDF version of the documentation, you can convert the so
 &lt;h3 id=&#34;the-source-file&#34;&gt;The source file&lt;/h3&gt;
 &lt;p&gt;The source file will contain text, Markdown markup, and code enclosed between back-ticks.
 The following is an example of how such file would look like.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/basic.png&#34; alt=&#34;Literate Praat basic example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stefanocoretta.github.io/img/basic.png&#34; alt=&#34;Literate Praat basic example&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;tangle-the-code&#34;&gt;Tangle the code&lt;/h3&gt;
 &lt;p&gt;To tangle the code into a standalone Praat script, run the following line from your command line GUI, where &lt;code&gt;my-script.praat.md&lt;/code&gt; is your Praat source file:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;lmt my-script.praat.md

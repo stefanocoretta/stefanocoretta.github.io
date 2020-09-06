@@ -27,8 +27,8 @@
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ── Attaching packages ───────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.3     ✓ dplyr   1.0.1
-## ✓ tidyr   1.1.1     ✓ stringr 1.4.0
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ── Conflicts ──────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
@@ -798,11 +798,31 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 
 
 &lt;p&gt;My research focusses on &lt;em&gt;speech production&lt;/em&gt;.
-In particular, I am interested in the study of speech sounds from a variety of intersecting perspectives, inlcuding acoustics, articulation, descriptive linguistics, historical lingusitics (sound change), comparative linguistic (typology), and computational modelling.&lt;/p&gt;
-&lt;p&gt;As part of my PhD research at the University of Machester, supervised by Dr &lt;a href=&#34;http://www.bermudez-otero.com/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ricardo Bermúdez-Otero&lt;/a&gt; and Dr &lt;a href=&#34;https://sites.google.com/site/patrycjastrycharczuk/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrycja Strycharczuk&lt;/a&gt;), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, &lt;a href=&#34;https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ultrasound tongue imaging&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Electroglottograph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;electroglottography&lt;/a&gt;.
+In particular, I am interested in the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling.&lt;/p&gt;
+&lt;div id=&#34;projects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;p&gt;As part of my PhD research at the University of Manchester, supervised by Dr &lt;a href=&#34;http://www.bermudez-otero.com/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ricardo Bermúdez-Otero&lt;/a&gt; and Dr &lt;a href=&#34;https://sites.google.com/site/patrycjastrycharczuk/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrycja Strycharczuk&lt;/a&gt;), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, &lt;a href=&#34;https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ultrasound tongue imaging&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Electroglottograph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;electroglottography&lt;/a&gt;.
 My thesis is available &lt;a href=&#34;https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am currently conducting research within the DFG project &lt;a href=&#34;https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html&#34;&gt;&lt;em&gt;Nasal coarticulation and sound-change: a real-time MRI study&lt;/em&gt;&lt;/a&gt;, and the ERC project &lt;a href=&#34;https://www.en.phonetik.uni-muenchen.de/research/current_projects/erc_human_interaction.html&#34;&gt;&lt;em&gt;Human interaction and the evolution of spoken accent&lt;/em&gt;&lt;/a&gt; at the &lt;a href=&#34;https://www.phonetik.uni-muenchen.de/&#34;&gt;Institut für Phonetik und Sprachverarbeitung&lt;/a&gt;.
 These projects employ real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;languages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Languages&lt;/h2&gt;
+&lt;p&gt;Among the languages I work(ed) with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mawayana (Arawak) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/mapi1252&#34;&gt;mapi1252&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;Santa Isabel languages (Oceanic) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/sant1458&#34;&gt;sant1458&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;Lombard (Indo-European) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/lomb1257&#34;&gt;lomb1257&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;Icelandic (Indo-European) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/icel1247&#34;&gt;icel1247&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;Old Irish (Indo-European) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/oldi1246&#34;&gt;oldi1246&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;English (Mancunian English, Indo-European).&lt;/li&gt;
+&lt;li&gt;Italian (Indo-European) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/ital1282&#34;&gt;ital182&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;Polish (Indo-European) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/poli1260&#34;&gt;poli1260&lt;/a&gt;].&lt;/li&gt;
+&lt;li&gt;German (Indo-European) [&lt;a href=&#34;http://glottolog.org/resource/languoid/id/stan1295&#34;&gt;stan1295&lt;/a&gt;].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;frameworks&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Frameworks&lt;/h2&gt;
 &lt;p&gt;My position regarding phonology (including phonetics) can be summarised as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Phonology is a &lt;strong&gt;dynamic system&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Thelen and Smith 2006; Vihman 2014)&lt;/span&gt;.&lt;/li&gt;
@@ -814,7 +834,7 @@ These projects employ real-time MRI data to investigate, among other things, how
 &lt;li&gt;It is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I also consider these statements to be extendable more generally to Human Language as a holistic system.&lt;/p&gt;
+&lt;p&gt;I also consider these statements to be extendible more generally to Human Language as a holistic system.&lt;/p&gt;
 &lt;p&gt;As far as research methods are concerned, I am an advocate of &lt;strong&gt;Open Science&lt;/strong&gt;, a term which encompasses “concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge” &lt;span class=&#34;citation&#34;&gt;(Crüwell et al. 2019)&lt;/span&gt; put to the service of “making the content and process of producing evidence and claims transparent and accessible to others” &lt;span class=&#34;citation&#34;&gt;(Munafò et al. 2017)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
@@ -860,6 +880,7 @@ These projects employ real-time MRI data to investigate, among other things, how
 &lt;/div&gt;
 &lt;div id=&#34;ref-wedel2011&#34;&gt;
 &lt;p&gt;———. 2011. “Self-Organization in Phonology.” In &lt;em&gt;The Blackwell Companion to Phonology&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

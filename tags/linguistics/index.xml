@@ -29,13 +29,14 @@ Normally, values are extracted every 10% or 5% intervals within the vowel.&lt;/p
 In a long format dataset, the percent intervals are layed out in rows, rather then columns.&lt;/p&gt;
 &lt;p&gt;We start by reading in the formant data, which were kindly provided by &lt;a href=&#34;http://tiny.cc/sjn&#34;&gt;Stephen Nichols&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories &amp;lt;- read_csv(&amp;quot;./static/data/nichols-2018/tulemupepelako.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Parsed with column specification:
+&lt;pre&gt;&lt;code&gt;## 
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   .default = col_double(),
 ##   Vowel = col_character(),
 ##   Word = col_character()
-## )&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## See spec(...) for full column specifications.&lt;/code&gt;&lt;/pre&gt;
+## )
+## ℹ Use `spec()` for the full column specifications.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trajectories&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 61
 ##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
@@ -146,9 +147,9 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references hanging-indent&#34;&gt;
-&lt;div id=&#34;ref-wickham2014&#34;&gt;
-&lt;p&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-wickham2014&#34; class=&#34;csl-entry&#34;&gt;
+Wickham, Hadley. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

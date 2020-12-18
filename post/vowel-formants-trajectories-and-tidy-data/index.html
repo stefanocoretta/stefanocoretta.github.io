@@ -616,13 +616,14 @@ Normally, values are extracted every 10% or 5% intervals within the vowel.</p>
 In a long format dataset, the percent intervals are layed out in rows, rather then columns.</p>
 <p>We start by reading in the formant data, which were kindly provided by <a href="http://tiny.cc/sjn">Stephen Nichols</a>.</p>
 <pre class="r"><code>trajectories &lt;- read_csv(&quot;./static/data/nichols-2018/tulemupepelako.csv&quot;)</code></pre>
-<pre><code>## Parsed with column specification:
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   .default = col_double(),
 ##   Vowel = col_character(),
 ##   Word = col_character()
-## )</code></pre>
-<pre><code>## See spec(...) for full column specifications.</code></pre>
+## )
+## ℹ Use `spec()` for the full column specifications.</code></pre>
 <pre class="r"><code>trajectories</code></pre>
 <pre><code>## # A tibble: 7 x 61
 ##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
@@ -733,9 +734,9 @@ trajectories_spr</code></pre>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<div id="refs" class="references hanging-indent">
-<div id="ref-wickham2014">
-<p>Wickham, Hadley. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-wickham2014" class="csl-entry">
+Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23.
 </div>
 </div>
 </div>

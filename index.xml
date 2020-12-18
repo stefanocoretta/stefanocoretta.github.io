@@ -625,6 +625,15 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;/span&gt;
 &lt;br&gt;
 &lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;forthcoming&lt;/td&gt;
+    &lt;td&gt;
+    Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit. Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German. &lt;em&gt;Language&lt;/em&gt;.
+    &lt;br&gt;
+    &lt;a href=https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum target=&#34;_blank&#34;&gt;&lt;span class=&#34;osi-compendium&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+  &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;2020&lt;/td&gt;
     &lt;td&gt;
@@ -795,6 +804,8 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
       <guid>https://stefanocoretta.github.io/research/</guid>
       <description>
 &lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://stefanocoretta.github.io/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://stefanocoretta.github.io/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;My research focusses on &lt;em&gt;speech production&lt;/em&gt;.
@@ -832,54 +843,58 @@ These projects employ real-time MRI data to investigate, among other things, how
 &lt;ul&gt;
 &lt;li&gt;It is &lt;em&gt;rich&lt;/em&gt; in details &lt;span class=&#34;citation&#34;&gt;(Johnson 1997; Pierrehumbert 2001; Bybee 2002)&lt;/span&gt;.&lt;/li&gt;
 &lt;li&gt;It is &lt;em&gt;self-organising&lt;/em&gt; and &lt;em&gt;emergent&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Wedel 2007, 2011)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;It uses both &lt;em&gt;stored exemplars and stored abstractions&lt;/em&gt; at multiple levels &lt;span class=&#34;citation&#34;&gt;(Ambridge 2020)&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I also consider these statements to be extendible more generally to Human Language as a holistic system.&lt;/p&gt;
 &lt;p&gt;As far as research methods are concerned, I am an advocate of &lt;strong&gt;Open Science&lt;/strong&gt;, a term which encompasses “concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge” &lt;span class=&#34;citation&#34;&gt;(Crüwell et al. 2019)&lt;/span&gt; put to the service of “making the content and process of producing evidence and claims transparent and accessible to others” &lt;span class=&#34;citation&#34;&gt;(Munafò et al. 2017)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3 unnumbered&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references hanging-indent&#34;&gt;
-&lt;div id=&#34;ref-boer2015&#34;&gt;
-&lt;p&gt;Boer, Bart de. 2015. “Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 53: 79–87.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-ambridge2020&#34; class=&#34;csl-entry&#34;&gt;
+Ambridge, Ben. 2020. &lt;span&gt;“Abstractions Made of Exemplars or &lt;span&gt;‘You’re All Right, and i’ve Changed My Mind’&lt;/span&gt;: Response to Commentators.”&lt;/span&gt; &lt;em&gt;First Language&lt;/em&gt; 40 (5-6): 640–59. &lt;a href=&#34;https://doi.org/10.1177/0142723720949723&#34;&gt;https://doi.org/10.1177/0142723720949723&lt;/a&gt;.
 &lt;/div&gt;
-&lt;div id=&#34;ref-bybee2002&#34;&gt;
-&lt;p&gt;Bybee, Joan. 2002. “Phonological Evidence for Exemplar Storage of Multiword Sequences.” &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.&lt;/p&gt;
+&lt;div id=&#34;ref-boer2015&#34; class=&#34;csl-entry&#34;&gt;
+Boer, Bart de. 2015. &lt;span&gt;“Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 53: 79–87.
 &lt;/div&gt;
-&lt;div id=&#34;ref-cruwell2019&#34;&gt;
-&lt;p&gt;Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew C Makel, Hannah Moshontz, Jesse Niebaum, Amy Orben, Sam Parsons, and Michael Schulte-Mecklenbeck. 2019. “7 Easy Steps to Open Science: An Annotated Reading List.” &lt;em&gt;Zeitschrift Für Psychologie&lt;/em&gt; 227 (4): 237–48.&lt;/p&gt;
+&lt;div id=&#34;ref-bybee2002&#34; class=&#34;csl-entry&#34;&gt;
+Bybee, Joan. 2002. &lt;span&gt;“Phonological Evidence for Exemplar Storage of Multiword Sequences.”&lt;/span&gt; &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.
 &lt;/div&gt;
-&lt;div id=&#34;ref-foulkes2006&#34;&gt;
-&lt;p&gt;Foulkes, Paul, and Gerard Docherty. 2006. “The Social Life of Phonetics and Phonology.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 34 (4): 409–38.&lt;/p&gt;
+&lt;div id=&#34;ref-cruwell2019&#34; class=&#34;csl-entry&#34;&gt;
+Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew C Makel, Hannah Moshontz, Jesse Niebaum, Amy Orben, Sam Parsons, and Michael Schulte-Mecklenbeck. 2019. &lt;span&gt;“7 Easy Steps to Open Science: An Annotated Reading List.”&lt;/span&gt; &lt;em&gt;Zeitschrift f&lt;span&gt;ü&lt;/span&gt;r Psychologie&lt;/em&gt; 227 (4): 237–48.
 &lt;/div&gt;
-&lt;div id=&#34;ref-johnson1997&#34;&gt;
-&lt;p&gt;Johnson, Keith. 1997. “Speech Perception Without Speaker Normalization: An Exemplar Model.” In &lt;em&gt;Talker Variability in Speech Processing&lt;/em&gt;, edited by Keith Johnson and John W. Mullenix, 145–65. San Diego, CA: Academic Press.&lt;/p&gt;
+&lt;div id=&#34;ref-foulkes2006&#34; class=&#34;csl-entry&#34;&gt;
+Foulkes, Paul, and Gerard Docherty. 2006. &lt;span&gt;“The Social Life of Phonetics and Phonology.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 34 (4): 409–38.
 &lt;/div&gt;
-&lt;div id=&#34;ref-munafo2017&#34;&gt;
-&lt;p&gt;Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. “A Manifesto for Reproducible Science.” &lt;em&gt;Nature Human Behaviour&lt;/em&gt; 1 (1): 0021.&lt;/p&gt;
+&lt;div id=&#34;ref-johnson1997&#34; class=&#34;csl-entry&#34;&gt;
+Johnson, Keith. 1997. &lt;span&gt;“Speech Perception Without Speaker Normalization: &lt;span&gt;A&lt;/span&gt;n Exemplar Model.”&lt;/span&gt; In &lt;em&gt;Talker Variability in Speech Processing&lt;/em&gt;, edited by Keith Johnson and John W. Mullenix, 145–65. San Diego, CA: Academic Press.
 &lt;/div&gt;
-&lt;div id=&#34;ref-ohala1990&#34;&gt;
-&lt;p&gt;Ohala, John J. 1990. “There Is No Interface Between Phonology and Phonetics: A Personal View.” &lt;em&gt;Journal of Phonetics&lt;/em&gt; 18 (2): 153–72.&lt;/p&gt;
+&lt;div id=&#34;ref-munafo2017&#34; class=&#34;csl-entry&#34;&gt;
+Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. &lt;span&gt;“A Manifesto for Reproducible Science.”&lt;/span&gt; &lt;em&gt;Nature Human Behaviour&lt;/em&gt; 1 (1): 0021.
 &lt;/div&gt;
-&lt;div id=&#34;ref-ohala2005&#34;&gt;
-&lt;p&gt;———. 2005. “The Marriage of Phonetics and Phonology.” &lt;em&gt;Acoustical Science and Technology&lt;/em&gt; 26 (5): 418–22.&lt;/p&gt;
+&lt;div id=&#34;ref-ohala1990&#34; class=&#34;csl-entry&#34;&gt;
+Ohala, John J. 1990. &lt;span&gt;“There Is No Interface Between Phonology and Phonetics: A Personal View.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 18 (2): 153–72.
 &lt;/div&gt;
-&lt;div id=&#34;ref-pierrehumbert2001&#34;&gt;
-&lt;p&gt;Pierrehumbert, Janet B. 2001. “Exemplar Dynamics: Word Frequency, Lenition and Contrast.” In &lt;em&gt;Frequency and the Emergence of Linguistic Structure&lt;/em&gt;, edited by Joan L. Bybee and Paul J. Hopper, 137–57. Amsterdam Philadelphia: John Benjamins Publishing Company.&lt;/p&gt;
+&lt;div id=&#34;ref-ohala2005&#34; class=&#34;csl-entry&#34;&gt;
+———. 2005. &lt;span&gt;“The Marriage of Phonetics and Phonology.”&lt;/span&gt; &lt;em&gt;Acoustical Science and Technology&lt;/em&gt; 26 (5): 418–22.
 &lt;/div&gt;
-&lt;div id=&#34;ref-thelen2006&#34;&gt;
-&lt;p&gt;Thelen, Esther, and Linda B. Smith. 2006. “Dynamic Systems Theories.” In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.&lt;/p&gt;
+&lt;div id=&#34;ref-pierrehumbert2001&#34; class=&#34;csl-entry&#34;&gt;
+Pierrehumbert, Janet B. 2001. &lt;span&gt;“Exemplar Dynamics: Word Frequency, Lenition and Contrast.”&lt;/span&gt; In &lt;em&gt;Frequency and the Emergence of Linguistic Structure&lt;/em&gt;, edited by Joan L. Bybee and Paul J. Hopper, 137–57. Amsterdam Philadelphia: John Benjamins Publishing Company.
 &lt;/div&gt;
-&lt;div id=&#34;ref-thompson2016&#34;&gt;
-&lt;p&gt;Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. “Culture Shapes the Evolution of Cognition.” &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–5.&lt;/p&gt;
+&lt;div id=&#34;ref-thelen2006&#34; class=&#34;csl-entry&#34;&gt;
+Thelen, Esther, and Linda B. Smith. 2006. &lt;span&gt;“Dynamic Systems Theories.”&lt;/span&gt; In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.
 &lt;/div&gt;
-&lt;div id=&#34;ref-vihman2014&#34;&gt;
-&lt;p&gt;Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: The First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.&lt;/p&gt;
+&lt;div id=&#34;ref-thompson2016&#34; class=&#34;csl-entry&#34;&gt;
+Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. &lt;span&gt;“Culture Shapes the Evolution of Cognition.”&lt;/span&gt; &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–35.
 &lt;/div&gt;
-&lt;div id=&#34;ref-wedel2007&#34;&gt;
-&lt;p&gt;Wedel, Andrew B. 2007. “Feedback and Regularity in the Lexicon.” &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85.&lt;/p&gt;
+&lt;div id=&#34;ref-vihman2014&#34; class=&#34;csl-entry&#34;&gt;
+Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: &lt;span&gt;T&lt;/span&gt;he First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.
 &lt;/div&gt;
-&lt;div id=&#34;ref-wedel2011&#34;&gt;
-&lt;p&gt;———. 2011. “Self-Organization in Phonology.” In &lt;em&gt;The Blackwell Companion to Phonology&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
+&lt;div id=&#34;ref-wedel2007&#34; class=&#34;csl-entry&#34;&gt;
+Wedel, Andrew B. 2007. &lt;span&gt;“Feedback and Regularity in the Lexicon.”&lt;/span&gt; &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85.
+&lt;/div&gt;
+&lt;div id=&#34;ref-wedel2011&#34; class=&#34;csl-entry&#34;&gt;
+———. 2011. &lt;span&gt;“Self-Organization in Phonology.”&lt;/span&gt; In &lt;em&gt;&lt;span class=&#34;nocase&#34;&gt;The Blackwell Companion to Phonology&lt;/span&gt;&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

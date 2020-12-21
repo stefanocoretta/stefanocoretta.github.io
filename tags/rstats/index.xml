@@ -71,7 +71,7 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-vasishth2018&#34; class=&#34;csl-entry&#34;&gt;
-Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. &lt;span&gt;“Bayesian Data Analysis in the Phonetic Sciences: &lt;span&gt;A&lt;/span&gt; Tutorial Introduction.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.
+&lt;p&gt;Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. &lt;span&gt;“Bayesian Data Analysis in the Phonetic Sciences: &lt;span&gt;A&lt;/span&gt; Tutorial Introduction.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -342,7 +342,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-wickham2014&#34; class=&#34;csl-entry&#34;&gt;
-Wickham, Hadley. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.
+&lt;p&gt;Wickham, Hadley. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

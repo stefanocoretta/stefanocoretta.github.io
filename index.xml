@@ -5,12 +5,141 @@
     <link>https://stefanocoretta.github.io/</link>
       <atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Stefano Coretta</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Stefano Coretta</title>
       <link>https://stefanocoretta.github.io/</link>
     </image>
+    
+    <item>
+      <title>How to use custom typefaces in ggplot2 [macOS only]</title>
+      <link>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</guid>
+      <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I keep hitting my head against this particular (and seemingly simple) task: &lt;strong&gt;using custom typefaces in ggplot2 plots&lt;/strong&gt; and &lt;strong&gt;being able to knit to PDF&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The main reason for why I would want to do that is that I often find myself in need of including &lt;a href=&#34;https://www.internationalphoneticassociation.org/content/ipa-chart&#34;&gt;IPA&lt;/a&gt; symbols in plots (more often than not, it’s vowels) and that I want those plots to be included in a knitted PDF.&lt;/p&gt;
+&lt;p&gt;For some reason, when I think I got it, I have to search again because the solution I previously found no longer works.&lt;/p&gt;
+&lt;p&gt;So now I took the time to play around with different options and packages, and I found the minimal configuration one needs to use custom typefaces in ggplot2 plots and get a PDF document with those plots embedded in it (it is working as of December 2020, not sure what the year will bring).&lt;/p&gt;
+&lt;p&gt;In the following sections I will show what this configuration looks like.
+Note that this post covers only R running on macOS and that things will be different perhaps on Linux and for sure on Windows (maybe I’ll cover those OSs in an update later on).&lt;/p&gt;
+&lt;p&gt;You can check out my full session info below, but just be aware that I am using R 4.0.3 in macOS Big Sur 11.1, with the latest version of the tidyverse packages at the time of writing.&lt;/p&gt;
+&lt;div id=&#34;enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Enable custom typefaces in ggplot2 plots when knitting to PDF&lt;/h2&gt;
+&lt;p&gt;I was surprised to find out that to include custom typefaces in ggplot2 plots and knit the &lt;code&gt;.Rmd&lt;/code&gt; to a PDF document, you just need the following options in your YAML preamble (no need for extra packages!!!).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+---&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In particular, the &lt;code&gt;dev&lt;/code&gt; option sets &lt;code&gt;cairo_pdf()&lt;/code&gt; (shipped with ggplot2) as the default device for rendering the plots within the knitted PDF document.&lt;/p&gt;
+&lt;p&gt;As Miranda Priestly would say, &lt;em&gt;that’s all…&lt;/em&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Within your document you can then specify the typeface you want to use in the plots.
+The most straightforward way is to set a ggplot2 theme and specify the &lt;code&gt;base_family&lt;/code&gt; argument.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse) # or library(ggplot2)
+theme_set(theme_light(base_family = &amp;quot;Fira Sans&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I chose the &lt;a href=&#34;https://fonts.google.com/specimen/Fira+Sans&#34;&gt;Fira Sans&lt;/a&gt; fonts here because they include the Unicode range of the IPA.&lt;/p&gt;
+&lt;p&gt;Both when running a chunk with a ggplot2 plot interactively in the &lt;code&gt;.Rmd&lt;/code&gt; file and when knitting the &lt;code&gt;.Rmd&lt;/code&gt; to a PDF, the plot typeface will be Fira Sans.
+And we are done.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-saving-ggplot2-plots-to-a-file&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Extra: Saving ggplot2 plots to a file&lt;/h2&gt;
+&lt;p&gt;Now, what if you want to save the plots with your custom typeface to a file that you can include in another document?&lt;/p&gt;
+&lt;p&gt;You have two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can save the plot as a standalone PDF file (with embedded fonts).&lt;/li&gt;
+&lt;li&gt;Or you can save the plot as a &lt;code&gt;.png&lt;/code&gt; image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Achieving that is quite simple with &lt;code&gt;ggsave()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# let&amp;#39;s prepare a plot which will use our custom fonts
+p &amp;lt;- ggplot(mpg, aes(class)) +
+  geom_bar()
+
+# save to pdf
+ggsave(p, &amp;quot;./plot.pdf&amp;quot;, device = cairo_pdf, width = 7, height = 5)
+
+# save to png
+ggsave(p, &amp;quot;./plot.png&amp;quot;, width = 7, height = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The magic is done by &lt;code&gt;ggsave(..., device = cairo_pdf)&lt;/code&gt; (that’s the same &lt;code&gt;cairo_pdf&lt;/code&gt; device we set in the YAML preamble).
+Note that it’s &lt;code&gt;cairo_pdf&lt;/code&gt; and not &lt;code&gt;cairo_pdf()&lt;/code&gt; (for reasons beyond my comprehension, it does not work if you add the parentheses).&lt;/p&gt;
+&lt;p&gt;Here you find a &lt;a href=&#34;https://gist.github.com/stefanocoretta/c9e3c0d8a72739c7ebb3a30d11e4c134&#34;&gt;gist&lt;/a&gt; with an example &lt;code&gt;.Rmd&lt;/code&gt; file that you can download on your machine and knit as a test.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;supported-fonts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Supported fonts&lt;/h2&gt;
+&lt;p&gt;As far as I can tell, any &lt;code&gt;.ttf&lt;/code&gt; (TrueType font) installed on your system with Font Book can be set as the typeface to be used in the ggplot2 plots.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;session-info&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session info&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::session_info()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 4.0.3 (2020-10-10)
+##  os       macOS Big Sur 10.16         
+##  system   x86_64, darwin17.0          
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_GB.UTF-8                 
+##  ctype    en_GB.UTF-8                 
+##  tz       Europe/Berlin               
+##  date     2020-12-21                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────
+##  package     * version date       lib source        
+##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 4.0.2)
+##  blogdown      0.21    2020-10-11 [1] CRAN (R 4.0.2)
+##  bookdown      0.21    2020-10-13 [1] CRAN (R 4.0.2)
+##  callr         3.5.1   2020-10-13 [1] CRAN (R 4.0.2)
+##  cli           2.2.0   2020-11-20 [1] CRAN (R 4.0.2)
+##  crayon        1.3.4   2017-09-16 [1] CRAN (R 4.0.2)
+##  desc          1.2.0   2018-05-01 [1] CRAN (R 4.0.2)
+##  devtools      2.3.2   2020-09-18 [1] CRAN (R 4.0.2)
+##  digest        0.6.27  2020-10-24 [1] CRAN (R 4.0.2)
+##  ellipsis      0.3.1   2020-05-15 [1] CRAN (R 4.0.2)
+##  evaluate      0.14    2019-05-28 [1] CRAN (R 4.0.1)
+##  fansi         0.4.1   2020-01-08 [1] CRAN (R 4.0.2)
+##  fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
+##  glue          1.4.2   2020-08-27 [1] CRAN (R 4.0.2)
+##  htmltools     0.5.0   2020-06-16 [1] CRAN (R 4.0.2)
+##  knitr         1.30    2020-09-22 [1] CRAN (R 4.0.2)
+##  lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.2)
+##  magrittr      2.0.1   2020-11-17 [1] CRAN (R 4.0.2)
+##  memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.2)
+##  pkgbuild      1.2.0   2020-12-15 [1] CRAN (R 4.0.2)
+##  pkgload       1.1.0   2020-05-29 [1] CRAN (R 4.0.2)
+##  prettyunits   1.1.1   2020-01-24 [1] CRAN (R 4.0.2)
+##  processx      3.4.5   2020-11-30 [1] CRAN (R 4.0.2)
+##  ps            1.5.0   2020-12-05 [1] CRAN (R 4.0.2)
+##  purrr         0.3.4   2020-04-17 [1] CRAN (R 4.0.2)
+##  R6            2.5.0   2020-10-28 [1] CRAN (R 4.0.2)
+##  remotes       2.2.0   2020-07-21 [1] CRAN (R 4.0.2)
+##  rlang         0.4.9   2020-11-26 [1] CRAN (R 4.0.2)
+##  rmarkdown     2.6     2020-12-14 [1] CRAN (R 4.0.2)
+##  rprojroot     2.0.2   2020-11-15 [1] CRAN (R 4.0.2)
+##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.0.2)
+##  stringi       1.5.3   2020-09-09 [1] CRAN (R 4.0.2)
+##  stringr       1.4.0   2019-02-10 [1] CRAN (R 4.0.2)
+##  testthat      3.0.1   2020-12-17 [1] CRAN (R 4.0.2)
+##  usethis       2.0.0   2020-12-10 [1] CRAN (R 4.0.2)
+##  withr         2.3.0   2020-09-22 [1] CRAN (R 4.0.2)
+##  xfun          0.19    2020-10-30 [1] CRAN (R 4.0.2)
+##  yaml          2.2.1   2020-02-01 [1] CRAN (R 4.0.2)
+## 
+## [1] /Users/stefano/rlib
+## [2] /Library/Frameworks/R.framework/Versions/4.0/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif&#34; class=&#34;uri&#34;&gt;https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
@@ -71,7 +200,7 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-vasishth2018&#34; class=&#34;csl-entry&#34;&gt;
-Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. &lt;span&gt;“Bayesian Data Analysis in the Phonetic Sciences: &lt;span&gt;A&lt;/span&gt; Tutorial Introduction.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.
+&lt;p&gt;Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. &lt;span&gt;“Bayesian Data Analysis in the Phonetic Sciences: &lt;span&gt;A&lt;/span&gt; Tutorial Introduction.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -330,10 +459,10 @@ There is indeed a dozen languages with this system in South America alone (data 
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-cooper2009&#34; class=&#34;csl-entry&#34;&gt;
-Cooper, Adam I. 2009. &lt;span&gt;“Similarity Avoidance in the &lt;span&gt;Proto-Indo-European&lt;/span&gt; Root.”&lt;/span&gt; &lt;em&gt;University of Pennsylvania Working Papers in Linguistics&lt;/em&gt; 15 (1): 8.
+&lt;p&gt;Cooper, Adam I. 2009. &lt;span&gt;“Similarity Avoidance in the &lt;span&gt;Proto-Indo-European&lt;/span&gt; Root.”&lt;/span&gt; &lt;em&gt;University of Pennsylvania Working Papers in Linguistics&lt;/em&gt; 15 (1): 8.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-gamkrelidze1994&#34; class=&#34;csl-entry&#34;&gt;
-Gamkrelidze, Thomas Valerianis, and Vyacheslav Vsevolodovich Ivanov. 1994. &lt;em&gt;Indo-European and the Indo-Europeans: A Reconstruction and Historical Analysis of a Proto-Language and a Proto-Culture.&lt;/em&gt; Translated by J. Nichols. Berlin–New York: Mouton de Gruyter.
+&lt;p&gt;Gamkrelidze, Thomas Valerianis, and Vyacheslav Vsevolodovich Ivanov. 1994. &lt;em&gt;Indo-European and the Indo-Europeans: A Reconstruction and Historical Analysis of a Proto-Language and a Proto-Culture.&lt;/em&gt; Translated by J. Nichols. Berlin–New York: Mouton de Gruyter.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -604,7 +733,7 @@ trajectories_spr&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-wickham2014&#34; class=&#34;csl-entry&#34;&gt;
-Wickham, Hadley. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.
+&lt;p&gt;Wickham, Hadley. 2014. &lt;span&gt;“Tidy Data.”&lt;/span&gt; &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 59 (10): 1–23.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -851,49 +980,49 @@ These projects employ real-time MRI data to investigate, among other things, how
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-ambridge2020&#34; class=&#34;csl-entry&#34;&gt;
-Ambridge, Ben. 2020. &lt;span&gt;“Abstractions Made of Exemplars or &lt;span&gt;‘You’re All Right, and i’ve Changed My Mind’&lt;/span&gt;: Response to Commentators.”&lt;/span&gt; &lt;em&gt;First Language&lt;/em&gt; 40 (5-6): 640–59. &lt;a href=&#34;https://doi.org/10.1177/0142723720949723&#34;&gt;https://doi.org/10.1177/0142723720949723&lt;/a&gt;.
+&lt;p&gt;Ambridge, Ben. 2020. &lt;span&gt;“Abstractions Made of Exemplars or &lt;span&gt;‘You’re All Right, and i’ve Changed My Mind’&lt;/span&gt;: Response to Commentators.”&lt;/span&gt; &lt;em&gt;First Language&lt;/em&gt; 40 (5-6): 640–59. &lt;a href=&#34;https://doi.org/10.1177/0142723720949723&#34;&gt;https://doi.org/10.1177/0142723720949723&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-boer2015&#34; class=&#34;csl-entry&#34;&gt;
-Boer, Bart de. 2015. &lt;span&gt;“Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 53: 79–87.
+&lt;p&gt;Boer, Bart de. 2015. &lt;span&gt;“Biology, Culture, Evolution and the Cognitive Nature of Sound Systems.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 53: 79–87.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-bybee2002&#34; class=&#34;csl-entry&#34;&gt;
-Bybee, Joan. 2002. &lt;span&gt;“Phonological Evidence for Exemplar Storage of Multiword Sequences.”&lt;/span&gt; &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.
+&lt;p&gt;Bybee, Joan. 2002. &lt;span&gt;“Phonological Evidence for Exemplar Storage of Multiword Sequences.”&lt;/span&gt; &lt;em&gt;Studies in Second Language Acquisition&lt;/em&gt; 24 (02): 215–21.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-cruwell2019&#34; class=&#34;csl-entry&#34;&gt;
-Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew C Makel, Hannah Moshontz, Jesse Niebaum, Amy Orben, Sam Parsons, and Michael Schulte-Mecklenbeck. 2019. &lt;span&gt;“7 Easy Steps to Open Science: An Annotated Reading List.”&lt;/span&gt; &lt;em&gt;Zeitschrift f&lt;span&gt;ü&lt;/span&gt;r Psychologie&lt;/em&gt; 227 (4): 237–48.
+&lt;p&gt;Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew C Makel, Hannah Moshontz, Jesse Niebaum, Amy Orben, Sam Parsons, and Michael Schulte-Mecklenbeck. 2019. &lt;span&gt;“7 Easy Steps to Open Science: An Annotated Reading List.”&lt;/span&gt; &lt;em&gt;Zeitschrift f&lt;span&gt;ü&lt;/span&gt;r Psychologie&lt;/em&gt; 227 (4): 237–48.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-foulkes2006&#34; class=&#34;csl-entry&#34;&gt;
-Foulkes, Paul, and Gerard Docherty. 2006. &lt;span&gt;“The Social Life of Phonetics and Phonology.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 34 (4): 409–38.
+&lt;p&gt;Foulkes, Paul, and Gerard Docherty. 2006. &lt;span&gt;“The Social Life of Phonetics and Phonology.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 34 (4): 409–38.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-johnson1997&#34; class=&#34;csl-entry&#34;&gt;
-Johnson, Keith. 1997. &lt;span&gt;“Speech Perception Without Speaker Normalization: &lt;span&gt;A&lt;/span&gt;n Exemplar Model.”&lt;/span&gt; In &lt;em&gt;Talker Variability in Speech Processing&lt;/em&gt;, edited by Keith Johnson and John W. Mullenix, 145–65. San Diego, CA: Academic Press.
+&lt;p&gt;Johnson, Keith. 1997. &lt;span&gt;“Speech Perception Without Speaker Normalization: &lt;span&gt;A&lt;/span&gt;n Exemplar Model.”&lt;/span&gt; In &lt;em&gt;Talker Variability in Speech Processing&lt;/em&gt;, edited by Keith Johnson and John W. Mullenix, 145–65. San Diego, CA: Academic Press.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-munafo2017&#34; class=&#34;csl-entry&#34;&gt;
-Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. &lt;span&gt;“A Manifesto for Reproducible Science.”&lt;/span&gt; &lt;em&gt;Nature Human Behaviour&lt;/em&gt; 1 (1): 0021.
+&lt;p&gt;Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. &lt;span&gt;“A Manifesto for Reproducible Science.”&lt;/span&gt; &lt;em&gt;Nature Human Behaviour&lt;/em&gt; 1 (1): 0021.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-ohala1990&#34; class=&#34;csl-entry&#34;&gt;
-Ohala, John J. 1990. &lt;span&gt;“There Is No Interface Between Phonology and Phonetics: A Personal View.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 18 (2): 153–72.
+&lt;p&gt;Ohala, John J. 1990. &lt;span&gt;“There Is No Interface Between Phonology and Phonetics: A Personal View.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 18 (2): 153–72.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-ohala2005&#34; class=&#34;csl-entry&#34;&gt;
-———. 2005. &lt;span&gt;“The Marriage of Phonetics and Phonology.”&lt;/span&gt; &lt;em&gt;Acoustical Science and Technology&lt;/em&gt; 26 (5): 418–22.
+&lt;p&gt;———. 2005. &lt;span&gt;“The Marriage of Phonetics and Phonology.”&lt;/span&gt; &lt;em&gt;Acoustical Science and Technology&lt;/em&gt; 26 (5): 418–22.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-pierrehumbert2001&#34; class=&#34;csl-entry&#34;&gt;
-Pierrehumbert, Janet B. 2001. &lt;span&gt;“Exemplar Dynamics: Word Frequency, Lenition and Contrast.”&lt;/span&gt; In &lt;em&gt;Frequency and the Emergence of Linguistic Structure&lt;/em&gt;, edited by Joan L. Bybee and Paul J. Hopper, 137–57. Amsterdam Philadelphia: John Benjamins Publishing Company.
+&lt;p&gt;Pierrehumbert, Janet B. 2001. &lt;span&gt;“Exemplar Dynamics: Word Frequency, Lenition and Contrast.”&lt;/span&gt; In &lt;em&gt;Frequency and the Emergence of Linguistic Structure&lt;/em&gt;, edited by Joan L. Bybee and Paul J. Hopper, 137–57. Amsterdam Philadelphia: John Benjamins Publishing Company.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-thelen2006&#34; class=&#34;csl-entry&#34;&gt;
-Thelen, Esther, and Linda B. Smith. 2006. &lt;span&gt;“Dynamic Systems Theories.”&lt;/span&gt; In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.
+&lt;p&gt;Thelen, Esther, and Linda B. Smith. 2006. &lt;span&gt;“Dynamic Systems Theories.”&lt;/span&gt; In &lt;em&gt;Handbook of Child Psychology&lt;/em&gt;, edited by Richard M. Lerner, 258–312. Wiley &amp;amp; Soons.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-thompson2016&#34; class=&#34;csl-entry&#34;&gt;
-Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. &lt;span&gt;“Culture Shapes the Evolution of Cognition.”&lt;/span&gt; &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–35.
+&lt;p&gt;Thompson, Bill, Simon Kirby, and Kenny Smith. 2016. &lt;span&gt;“Culture Shapes the Evolution of Cognition.”&lt;/span&gt; &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 113 (16): 4530–35.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-vihman2014&#34; class=&#34;csl-entry&#34;&gt;
-Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: &lt;span&gt;T&lt;/span&gt;he First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.
+&lt;p&gt;Vihman, Marilyn May. 2014. &lt;em&gt;Phonological Development: &lt;span&gt;T&lt;/span&gt;he First Two Years&lt;/em&gt;. Oxford: Wiley-Blackwell.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-wedel2007&#34; class=&#34;csl-entry&#34;&gt;
-Wedel, Andrew B. 2007. &lt;span&gt;“Feedback and Regularity in the Lexicon.”&lt;/span&gt; &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85.
+&lt;p&gt;Wedel, Andrew B. 2007. &lt;span&gt;“Feedback and Regularity in the Lexicon.”&lt;/span&gt; &lt;em&gt;Phonology&lt;/em&gt; 24 (01): 147–85.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-wedel2011&#34; class=&#34;csl-entry&#34;&gt;
-———. 2011. &lt;span&gt;“Self-Organization in Phonology.”&lt;/span&gt; In &lt;em&gt;&lt;span class=&#34;nocase&#34;&gt;The Blackwell Companion to Phonology&lt;/span&gt;&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.
+&lt;p&gt;———. 2011. &lt;span&gt;“Self-Organization in Phonology.”&lt;/span&gt; In &lt;em&gt;&lt;span class=&#34;nocase&#34;&gt;The Blackwell Companion to Phonology&lt;/span&gt;&lt;/em&gt;, edited by Ewen C. J. Hume E. van Oostendorp Marc and Keren Rice, 1:130–47. Blackwell, Oxford.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -924,10 +1053,10 @@ Wedel, Andrew B. 2007. &lt;span&gt;“Feedback and Regularity in the Lexicon.”
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-cysouw2013&#34; class=&#34;csl-entry&#34;&gt;
-Cysouw, Michael, and Jeff Good. 2013. &lt;span&gt;“Languoid, Doculect, and Glossonym: &lt;span&gt;F&lt;/span&gt;ormalizing the Notion &lt;span&gt;‘Language’&lt;/span&gt;.”&lt;/span&gt; &lt;em&gt;Language Documentation &amp;amp; Conservation&lt;/em&gt; 7: 331–59.
+&lt;p&gt;Cysouw, Michael, and Jeff Good. 2013. &lt;span&gt;“Languoid, Doculect, and Glossonym: &lt;span&gt;F&lt;/span&gt;ormalizing the Notion &lt;span&gt;‘Language’&lt;/span&gt;.”&lt;/span&gt; &lt;em&gt;Language Documentation &amp;amp; Conservation&lt;/em&gt; 7: 331–59.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-loporcaro2009&#34; class=&#34;csl-entry&#34;&gt;
-Loporcaro, Michele. 2009. &lt;em&gt;Profilo Linguistico Dei Dialetti Italiani&lt;/em&gt;. Bari: Laterza.
+&lt;p&gt;Loporcaro, Michele. 2009. &lt;em&gt;Profilo Linguistico Dei Dialetti Italiani&lt;/em&gt;. Bari: Laterza.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

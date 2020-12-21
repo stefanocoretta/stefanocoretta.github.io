@@ -5,12 +5,141 @@
     <link>https://stefanocoretta.github.io/categories/methods/</link>
       <atom:link href="https://stefanocoretta.github.io/categories/methods/index.xml" rel="self" type="application/rss+xml" />
     <description>Methods</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-uk</language><copyright>© 2017-2020 Stefano Coretta</copyright><lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Methods</title>
       <link>https://stefanocoretta.github.io/categories/methods/</link>
     </image>
+    
+    <item>
+      <title>How to use custom typefaces in ggplot2 [macOS only]</title>
+      <link>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</guid>
+      <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I keep hitting my head against this particular (and seemingly simple) task: &lt;strong&gt;using custom typefaces in ggplot2 plots&lt;/strong&gt; and &lt;strong&gt;being able to knit to PDF&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The main reason for why I would want to do that is that I often find myself in need of including &lt;a href=&#34;https://www.internationalphoneticassociation.org/content/ipa-chart&#34;&gt;IPA&lt;/a&gt; symbols in plots (more often than not, it’s vowels) and that I want those plots to be included in a knitted PDF.&lt;/p&gt;
+&lt;p&gt;For some reason, when I think I got it, I have to search again because the solution I previously found no longer works.&lt;/p&gt;
+&lt;p&gt;So now I took the time to play around with different options and packages, and I found the minimal configuration one needs to use custom typefaces in ggplot2 plots and get a PDF document with those plots embedded in it (it is working as of December 2020, not sure what the year will bring).&lt;/p&gt;
+&lt;p&gt;In the following sections I will show what this configuration looks like.
+Note that this post covers only R running on macOS and that things will be different perhaps on Linux and for sure on Windows (maybe I’ll cover those OSs in an update later on).&lt;/p&gt;
+&lt;p&gt;You can check out my full session info below, but just be aware that I am using R 4.0.3 in macOS Big Sur 11.1, with the latest version of the tidyverse packages at the time of writing.&lt;/p&gt;
+&lt;div id=&#34;enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Enable custom typefaces in ggplot2 plots when knitting to PDF&lt;/h2&gt;
+&lt;p&gt;I was surprised to find out that to include custom typefaces in ggplot2 plots and knit the &lt;code&gt;.Rmd&lt;/code&gt; to a PDF document, you just need the following options in your YAML preamble (no need for extra packages!!!).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+---&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In particular, the &lt;code&gt;dev&lt;/code&gt; option sets &lt;code&gt;cairo_pdf()&lt;/code&gt; (shipped with ggplot2) as the default device for rendering the plots within the knitted PDF document.&lt;/p&gt;
+&lt;p&gt;As Miranda Priestly would say, &lt;em&gt;that’s all…&lt;/em&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Within your document you can then specify the typeface you want to use in the plots.
+The most straightforward way is to set a ggplot2 theme and specify the &lt;code&gt;base_family&lt;/code&gt; argument.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse) # or library(ggplot2)
+theme_set(theme_light(base_family = &amp;quot;Fira Sans&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I chose the &lt;a href=&#34;https://fonts.google.com/specimen/Fira+Sans&#34;&gt;Fira Sans&lt;/a&gt; fonts here because they include the Unicode range of the IPA.&lt;/p&gt;
+&lt;p&gt;Both when running a chunk with a ggplot2 plot interactively in the &lt;code&gt;.Rmd&lt;/code&gt; file and when knitting the &lt;code&gt;.Rmd&lt;/code&gt; to a PDF, the plot typeface will be Fira Sans.
+And we are done.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-saving-ggplot2-plots-to-a-file&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Extra: Saving ggplot2 plots to a file&lt;/h2&gt;
+&lt;p&gt;Now, what if you want to save the plots with your custom typeface to a file that you can include in another document?&lt;/p&gt;
+&lt;p&gt;You have two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can save the plot as a standalone PDF file (with embedded fonts).&lt;/li&gt;
+&lt;li&gt;Or you can save the plot as a &lt;code&gt;.png&lt;/code&gt; image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Achieving that is quite simple with &lt;code&gt;ggsave()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# let&amp;#39;s prepare a plot which will use our custom fonts
+p &amp;lt;- ggplot(mpg, aes(class)) +
+  geom_bar()
+
+# save to pdf
+ggsave(p, &amp;quot;./plot.pdf&amp;quot;, device = cairo_pdf, width = 7, height = 5)
+
+# save to png
+ggsave(p, &amp;quot;./plot.png&amp;quot;, width = 7, height = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The magic is done by &lt;code&gt;ggsave(..., device = cairo_pdf)&lt;/code&gt; (that’s the same &lt;code&gt;cairo_pdf&lt;/code&gt; device we set in the YAML preamble).
+Note that it’s &lt;code&gt;cairo_pdf&lt;/code&gt; and not &lt;code&gt;cairo_pdf()&lt;/code&gt; (for reasons beyond my comprehension, it does not work if you add the parentheses).&lt;/p&gt;
+&lt;p&gt;Here you find a &lt;a href=&#34;https://gist.github.com/stefanocoretta/c9e3c0d8a72739c7ebb3a30d11e4c134&#34;&gt;gist&lt;/a&gt; with an example &lt;code&gt;.Rmd&lt;/code&gt; file that you can download on your machine and knit as a test.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;supported-fonts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Supported fonts&lt;/h2&gt;
+&lt;p&gt;As far as I can tell, any &lt;code&gt;.ttf&lt;/code&gt; (TrueType font) installed on your system with Font Book can be set as the typeface to be used in the ggplot2 plots.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;session-info&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session info&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::session_info()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 4.0.3 (2020-10-10)
+##  os       macOS Big Sur 10.16         
+##  system   x86_64, darwin17.0          
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_GB.UTF-8                 
+##  ctype    en_GB.UTF-8                 
+##  tz       Europe/Berlin               
+##  date     2020-12-21                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────
+##  package     * version date       lib source        
+##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 4.0.2)
+##  blogdown      0.21    2020-10-11 [1] CRAN (R 4.0.2)
+##  bookdown      0.21    2020-10-13 [1] CRAN (R 4.0.2)
+##  callr         3.5.1   2020-10-13 [1] CRAN (R 4.0.2)
+##  cli           2.2.0   2020-11-20 [1] CRAN (R 4.0.2)
+##  crayon        1.3.4   2017-09-16 [1] CRAN (R 4.0.2)
+##  desc          1.2.0   2018-05-01 [1] CRAN (R 4.0.2)
+##  devtools      2.3.2   2020-09-18 [1] CRAN (R 4.0.2)
+##  digest        0.6.27  2020-10-24 [1] CRAN (R 4.0.2)
+##  ellipsis      0.3.1   2020-05-15 [1] CRAN (R 4.0.2)
+##  evaluate      0.14    2019-05-28 [1] CRAN (R 4.0.1)
+##  fansi         0.4.1   2020-01-08 [1] CRAN (R 4.0.2)
+##  fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
+##  glue          1.4.2   2020-08-27 [1] CRAN (R 4.0.2)
+##  htmltools     0.5.0   2020-06-16 [1] CRAN (R 4.0.2)
+##  knitr         1.30    2020-09-22 [1] CRAN (R 4.0.2)
+##  lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.2)
+##  magrittr      2.0.1   2020-11-17 [1] CRAN (R 4.0.2)
+##  memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.2)
+##  pkgbuild      1.2.0   2020-12-15 [1] CRAN (R 4.0.2)
+##  pkgload       1.1.0   2020-05-29 [1] CRAN (R 4.0.2)
+##  prettyunits   1.1.1   2020-01-24 [1] CRAN (R 4.0.2)
+##  processx      3.4.5   2020-11-30 [1] CRAN (R 4.0.2)
+##  ps            1.5.0   2020-12-05 [1] CRAN (R 4.0.2)
+##  purrr         0.3.4   2020-04-17 [1] CRAN (R 4.0.2)
+##  R6            2.5.0   2020-10-28 [1] CRAN (R 4.0.2)
+##  remotes       2.2.0   2020-07-21 [1] CRAN (R 4.0.2)
+##  rlang         0.4.9   2020-11-26 [1] CRAN (R 4.0.2)
+##  rmarkdown     2.6     2020-12-14 [1] CRAN (R 4.0.2)
+##  rprojroot     2.0.2   2020-11-15 [1] CRAN (R 4.0.2)
+##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.0.2)
+##  stringi       1.5.3   2020-09-09 [1] CRAN (R 4.0.2)
+##  stringr       1.4.0   2019-02-10 [1] CRAN (R 4.0.2)
+##  testthat      3.0.1   2020-12-17 [1] CRAN (R 4.0.2)
+##  usethis       2.0.0   2020-12-10 [1] CRAN (R 4.0.2)
+##  withr         2.3.0   2020-09-22 [1] CRAN (R 4.0.2)
+##  xfun          0.19    2020-10-30 [1] CRAN (R 4.0.2)
+##  yaml          2.2.1   2020-02-01 [1] CRAN (R 4.0.2)
+## 
+## [1] /Users/stefano/rlib
+## [2] /Library/Frameworks/R.framework/Versions/4.0/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif&#34; class=&#34;uri&#34;&gt;https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Plotting prior distributions with ggplot2</title>
@@ -71,7 +200,7 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-vasishth2018&#34; class=&#34;csl-entry&#34;&gt;
-Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. &lt;span&gt;“Bayesian Data Analysis in the Phonetic Sciences: &lt;span&gt;A&lt;/span&gt; Tutorial Introduction.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.
+&lt;p&gt;Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. &lt;span&gt;“Bayesian Data Analysis in the Phonetic Sciences: &lt;span&gt;A&lt;/span&gt; Tutorial Introduction.”&lt;/span&gt; &lt;em&gt;Journal of Phonetics&lt;/em&gt; 71: 147–61.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

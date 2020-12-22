@@ -28,10 +28,12 @@
   
     
   
-  <meta name="description" content="Postdoc researcher">
+  <meta name="description" content="After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the .">
 
   
-  <link rel="alternate" hreflang="en-uk" href="https://stefanocoretta.github.io/post/">
+  <link rel="alternate" hreflang="en-uk" href="https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/">
 
   
 
@@ -210,14 +212,12 @@
 
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Stefano Coretta">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu6c0f85fa304906c3ce69ac11f897625b_10541_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu6c0f85fa304906c3ce69ac11f897625b_10541_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://stefanocoretta.github.io/post/">
+  <link rel="canonical" href="https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/">
 
   
   
@@ -234,18 +234,67 @@
   <meta property="twitter:creator" content="@StefanoCoretta">
   
   <meta property="og:site_name" content="Stefano Coretta">
-  <meta property="og:url" content="https://stefanocoretta.github.io/post/">
-  <meta property="og:title" content="Blog | Stefano Coretta">
-  <meta property="og:description" content="Postdoc researcher"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:url" content="https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/">
+  <meta property="og:title" content="How to globally set colour scales in ggplot2 | Stefano Coretta">
+  <meta property="og:description" content="After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the ."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-uk">
   
-    <meta property="og:updated_time" content="2020-12-22T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2020-12-22T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-12-22T21:21:58&#43;01:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/"
+  },
+  "headline": "How to globally set colour scales in ggplot2",
+  
+  "datePublished": "2020-12-22T00:00:00Z",
+  "dateModified": "2020-12-22T21:21:58+01:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Stefano Coretta"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Stefano Coretta",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "img/https://stefanocoretta.github.io/"
+    }
+  },
+  "description": "After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.\nThe perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.\nSet ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the ."
+}
+</script>
+
+  
 
   
 
@@ -253,10 +302,13 @@
   
 
 
+  
 
 
 
-  <title>Blog | Stefano Coretta</title>
+
+
+  <title>How to globally set colour scales in ggplot2 | Stefano Coretta</title>
 
 </head>
 
@@ -465,78 +517,33 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
   
+  
+<div class="article-container pt-3">
+  <h1>How to globally set colour scales in ggplot2</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1>Blog</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-
-  
-
-  
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/2020-12-22-set-global-ggplot2/" >How to globally set colour scales in ggplot2</a>
-    </h3>
-
-    
-    <div class="article-style">
-      After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 <div class="article-metadata">
@@ -578,828 +585,326 @@
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </div>
 
-    
-  
-    
-      
 
 
+  <div class="article-container">
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/custom-fonts-ggplot2/" >How to use custom typefaces in ggplot2 [macOS only]</a>
-    </h3>
-
-    
     <div class="article-style">
-      I keep hitting my head against this particular (and seemingly simple) task: using custom typefaces in ggplot2 plots and being able to …
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>After the post on using custom typefaces in ggplot2 (<a href="../custom-fonts-ggplot2">here</a>), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an <code>.Rmd</code> file.</p>
+<p>The perk of setting scales globally is that you can set the colours once at the beginning of the <code>.Rmd</code> file and all the plots in the file will adhere to the specified scales without the need to repeat code.</p>
+<div id="set-ggplot2-options" class="section level2">
+<h2>Set ggplot2 options</h2>
+<p>The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with <code>options()</code> at the beginning of the <code>.Rmd</code> file.
+I generally do so in the <code>setup</code> chunk, where I also load the tidyverse/ggplot2 with <code>library(tidyverse)</code>.</p>
+<p>The relevant options are:</p>
+<ul>
+<li><code>ggplot2.discrete.colour</code>: sets the colour scale for discrete aesthetics.</li>
+<li><code>ggplot2.discrete.fill</code>: sets the fill scale for discrete aesthetics.</li>
+<li><code>ggplot2.continuous.colour</code>: sets the colour scale for continuous aesthetics.</li>
+<li><code>ggplot2.continous.fill</code>: sets the fill scale for continuous aesthetics.</li>
+</ul>
+<p>All these options take a character vector of colour names/codes or a function that returns such a vector (for the full documentation see <a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html?q=discrete%20colour%20scales">here</a> and <a href="https://ggplot2.tidyverse.org/reference/scale_colour_continuous.html">here</a>).</p>
+<p>For example:</p>
+<pre class="r"><code># names
+options(ggplot2.discrete.fill = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;purple&quot;, &quot;yellow&quot;))
+
+# hex codes
+options(ggplot2.discrete.fill = c(&quot;#264653&quot;, &quot;#2a9d8f&quot;, &quot;#a8dadc&quot;, &quot;#457b9d&quot;, &quot;#e76f51&quot;))
+
+# function
+options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, &quot;Set3&quot;))</code></pre>
+<p>Note that the colours specified with <code>ggplot2.discrete.*</code> will be used only if there are as many colours in the vector/function output as the number of data levels, or more.
+When the number of level exceeds the number of colours, ggplot2 falls back to <code>scale_colour_hue()/scale_fill_hue()</code> to construct the scale.</p>
+</div>
+<div id="colours-in-action" class="section level2">
+<h2>Colours in action</h2>
+<pre class="r"><code>library(tidyverse) # or library(ggplot2)</code></pre>
+<pre class="r"><code>options(ggplot2.discrete.fill = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;purple&quot;, &quot;yellow&quot;))
+
+mpg %&gt;%
+  filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
+  ggplot(aes(class, fill = class)) +
+  geom_bar()</code></pre>
+<p><img src="/post/2020-12-22-set-global-ggplot2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>options(ggplot2.discrete.fill = c(&quot;#264653&quot;, &quot;#2a9d8f&quot;, &quot;#a8dadc&quot;, &quot;#457b9d&quot;, &quot;#e76f51&quot;))
+
+mpg %&gt;%
+  filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
+  ggplot(aes(class, fill = class)) +
+  geom_bar()</code></pre>
+<p><img src="/post/2020-12-22-set-global-ggplot2_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, &quot;Set3&quot;))
+
+mpg %&gt;%
+  filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
+  ggplot(aes(class, fill = class)) +
+  geom_bar()</code></pre>
+<p><img src="/post/2020-12-22-set-global-ggplot2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+
     </div>
+
     
 
-    <div class="stream-meta article-metadata">
 
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/data-viz/">data viz</a>
+  
+  <a class="badge badge-light" href="/tags/ggplot2/">ggplot2</a>
+  
+  <a class="badge badge-light" href="/tags/colours/">colours</a>
+  
+  <a class="badge badge-light" href="/tags/rmd/">rmd</a>
+  
+  <a class="badge badge-light" href="/tags/rmarkdown/">rmarkdown</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
       
-
+      
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/&amp;text=How%20to%20globally%20set%20colour%20scales%20in%20ggplot2" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
-          Last updated on
       
-    
-    21 December 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/methods/">Methods</a></span>
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/plot-prior-distributions-with-ggplot2/" >Plotting prior distributions with ggplot2</a>
-    </h3>
-
-    
-    <div class="article-style">
-      The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/&amp;t=How%20to%20globally%20set%20colour%20scales%20in%20ggplot2" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
       
-    
-    17 June 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/methods/">Methods</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/an-estimate-of-number-of-speakers-per-study-in-phonetics/" >An estimate of number of speakers per study in phonetics</a>
-    </h3>
-
-    
-    <div class="article-style">
-      A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=How%20to%20globally%20set%20colour%20scales%20in%20ggplot2&amp;body=https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
       
-    
-    03 May 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a>, <a href="/categories/methods/">Methods</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/literate-programming-with-praat/" >Literate programming with Praat</a>
-    </h3>
-
-    
-    <div class="article-style">
-      This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/&amp;title=How%20to%20globally%20set%20colour%20scales%20in%20ggplot2" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
       
-    
-    21 March 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a>, <a href="/categories/methods/">Methods</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/on-the-phonotactic-restrictions-of-proto-indoeuropean-roots/" >On the phonotactic restrictions of Proto-Indoeuropean roots</a>
-    </h3>
-
-    
-    <div class="article-style">
-      Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=How%20to%20globally%20set%20colour%20scales%20in%20ggplot2%20https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
       
-    
-    06 January 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/plotting-tongue-contours-with-ggplot2/" >Plotting tongue contours with ggplot2</a>
-    </h3>
-
-    
-    <div class="article-style">
-      When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
       
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://stefanocoretta.github.io/post/2020-12-22-set-global-ggplot2/&amp;title=How%20to%20globally%20set%20colour%20scales%20in%20ggplot2" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
     
-    23 August 2018
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    6 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a></span>
-  
-
+  </ul>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
       
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu0d3cbd453e947d9fd592eede6725a714_129419_250x250_fill_q90_lanczos_center.jpeg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://stefanocoretta.github.io/">Stefano Coretta</a></h5>
+      <h6 class="card-subtitle">Postdoc researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/StefanoCoretta" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://osf.io/e84dv/" target="_blank" rel="noopener">
+        <i class="ai ai-osf"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/stefanocoretta" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Stefano_Coretta" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
+  </div>
 
-    
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/custom-fonts-ggplot2/">How to use custom typefaces in ggplot2 [macOS only]</a></li>
+      
+      <li><a href="/post/plot-prior-distributions-with-ggplot2/">Plotting prior distributions with ggplot2</a></li>
+      
+      <li><a href="/post/plotting-tongue-contours-with-ggplot2/">Plotting tongue contours with ggplot2</a></li>
+      
+      <li><a href="/post/vowel-formants-trajectories-and-tidy-data/">Vowel formants trajectories and tidy data</a></li>
+      
+    </ul>
+  </div>
+  
+
+
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/vowel-formants-trajectories-and-tidy-data/" >Vowel formants trajectories and tidy data</a>
-    </h3>
-
-    
-    <div class="article-style">
-      With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    02 March 2018
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    6 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a></span>
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/2015-08-04-wikipedia-and-the-dialects-of-italy/" >Wikipedia and the “Dialects of Italy”</a>
-    </h3>
-
-    
-    <div class="article-style">
-      The Italian Wikipedia has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    04 August 2015
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a></span>
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/2014-06-30-short-review-phonological-databases/" >Short review of phonological databases</a>
-    </h3>
-
-    
-    <div class="article-style">
-      A review of available phonological databases (2014).
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    30 June 2014
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/linguistics/">Linguistics</a></span>
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-
-  
-
-
-</div>
+</article>
 
       
 

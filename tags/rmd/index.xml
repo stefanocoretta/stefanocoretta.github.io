@@ -32,7 +32,7 @@ I generally do so in the &lt;code&gt;setup&lt;/code&gt; chunk, where I also load
 &lt;li&gt;&lt;code&gt;ggplot2.discrete.colour&lt;/code&gt;: sets the colour scale for discrete aesthetics.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ggplot2.discrete.fill&lt;/code&gt;: sets the fill scale for discrete aesthetics.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ggplot2.continuous.colour&lt;/code&gt;: sets the colour scale for continuous aesthetics.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ggplot2.continous.fill&lt;/code&gt;: sets the fill scale for continuous aesthetics.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ggplot2.continuous.fill&lt;/code&gt;: sets the fill scale for continuous aesthetics.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;All these options take a character vector of colour names/codes or a function that returns such a vector (for the full documentation see &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html?q=discrete%20colour%20scales&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/scale_colour_continuous.html&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
@@ -46,6 +46,7 @@ options(ggplot2.discrete.fill = c(&amp;quot;#264653&amp;quot;, &amp;quot;#2a9d8f
 options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, &amp;quot;Set3&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Note that the colours specified with &lt;code&gt;ggplot2.discrete.*&lt;/code&gt; will be used only if there are as many colours in the vector/function output as the number of data levels, or more.
 When the number of level exceeds the number of colours, ggplot2 falls back to &lt;code&gt;scale_colour_hue()/scale_fill_hue()&lt;/code&gt; to construct the scale.&lt;/p&gt;
+&lt;p&gt;It is possible to define multiple palettes each with a different number of colours as a list of colour names/codes vectors, and ggplot2 will pick the palette with the minimum number of colours that exceeds the number of data levels. See the third example &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;colours-in-action&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Colours in action&lt;/h2&gt;

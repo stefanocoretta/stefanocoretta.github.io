@@ -621,7 +621,7 @@ I generally do so in the <code>setup</code> chunk, where I also load the tidyver
 <li><code>ggplot2.discrete.colour</code>: sets the colour scale for discrete aesthetics.</li>
 <li><code>ggplot2.discrete.fill</code>: sets the fill scale for discrete aesthetics.</li>
 <li><code>ggplot2.continuous.colour</code>: sets the colour scale for continuous aesthetics.</li>
-<li><code>ggplot2.continous.fill</code>: sets the fill scale for continuous aesthetics.</li>
+<li><code>ggplot2.continuous.fill</code>: sets the fill scale for continuous aesthetics.</li>
 </ul>
 <p>All these options take a character vector of colour names/codes or a function that returns such a vector (for the full documentation see <a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html?q=discrete%20colour%20scales">here</a> and <a href="https://ggplot2.tidyverse.org/reference/scale_colour_continuous.html">here</a>).</p>
 <p>For example:</p>
@@ -635,6 +635,7 @@ options(ggplot2.discrete.fill = c(&quot;#264653&quot;, &quot;#2a9d8f&quot;, &quo
 options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, &quot;Set3&quot;))</code></pre>
 <p>Note that the colours specified with <code>ggplot2.discrete.*</code> will be used only if there are as many colours in the vector/function output as the number of data levels, or more.
 When the number of level exceeds the number of colours, ggplot2 falls back to <code>scale_colour_hue()/scale_fill_hue()</code> to construct the scale.</p>
+<p>It is possible to define multiple palettes each with a different number of colours as a list of colour names/codes vectors, and ggplot2 will pick the palette with the minimum number of colours that exceeds the number of data levels. See the third example <a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html">here</a>.</p>
 </div>
 <div id="colours-in-action" class="section level2">
 <h2>Colours in action</h2>

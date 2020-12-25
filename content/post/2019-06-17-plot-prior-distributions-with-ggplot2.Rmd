@@ -1,0 +1,82 @@
+---
+title: Plotting prior distributions with ggplot2
+author: Stefano Coretta
+date: '2019-06-17'
+slug: plot-prior-distributions-with-ggplot2
+categories:
+  - Methods
+tags:
+  - data viz
+  - rstats
+  - tidy data
+  - statistics
+image:
+  caption: ''
+  focal_point: ''
+bibliography: /Users/stefano/repos/texmf/bibtex/bib/linguistics.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+The choice of priors is a fundamental step of the Bayesian inference process. @vasishth2018 recommend plotting the chosen priors to see if they are reasonable.
+
+In this post I will show how to easily plot prior distributions in [ggplot2](https://ggplot2.tidyverse.org) (which is part of the [tidyverse](https://www.tidyverse.org)).
+
+Let's load the tidyverse first.
+
+```{r tidy}
+library(tidyverse)
+theme_set(theme_minimal()) # I just like this theme :)
+```
+
+## Plotting your priors
+
+Let's start with a simple normal prior with $\mu$ = 0 and *sd* = 1.
+
+The plot is initialised with an empty call to `ggplot()`.
+As aesthetics, you only need to specify the range of *x* values in `aes()`.
+Here, we use `c(-4, 4)`, meaning that the *x*-axis of this plot will have these limits.
+For a normal distribution, it is useful to set the limits as the mean ± 4 times the standard deviation (this ensures all the distribution is shown).
+
+The function `ggplot2::stat_function()` allows us to specify a distribution family with the `fun` argument.
+This arguments takes the density function (the R functions of the form *dxxx*) of the chosen distribution family, so for the normal (Gaussian) distribution we use `dnorm()`.
+The argument `n` specifies the number of points along which to calculate the distribution (here `101`), while `args` takes a list with the parameters of the distribution (here the mean `0` and standard deviation `1`).
+
+```{r normal}
+ggplot(data = tibble(x = -4:4), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(1)) +
+  labs(title = "Normal (Gaussian) distribution")
+```
+
+A beta prior will be bounded between 0 and 1, so we can specify that in `aes()`.
+The beta distribution has two arguments, `shape1` and `shape2` (here `2` and `5`).
+
+```{r beta}
+ggplot(data = tibble(x = 0:1), aes(x)) +
+  stat_function(fun = dbeta, n = 101, args = list(2, 5)) +
+  labs(title = "Beta distribution")
+```
+
+Another common distribution is the Cauchy.
+
+```{r cauchy}
+ggplot(data = tibble(x = -10:10), aes(x)) +
+  stat_function(fun = dcauchy, n = 201, args = list(-2, 1)) +
+  labs(title = "Cauchy distribution")
+```
+
+The Poisson distribution can be plotted by changing the type of `geom` and using an `n` that creates only integers.
+
+```{r poisson}
+# the range 0:20 includes 21 integers, so n = 21
+ggplot(data = tibble(x = 0:20), aes(x)) +
+  stat_function(fun = dpois, n = 21, args = list(4), geom = "point") +
+  labs(title = "Poisson distribution")
+```
+
+Of course any family with a corresponding *dxxx* function can be plotted (see `?Distributions` and package-provided families).
+
+## References

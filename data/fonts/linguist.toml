@@ -1,0 +1,11 @@
+# Font style metadata
+name = "Linguist"
+
+# Optional Google font URL
+google_fonts = "Voces:400,700|Source+Code+Pro"
+
+# Font families
+heading_font = "Voces"
+body_font = "Lato"
+nav_font = "Lato"
+mono_font = "Source Code Pro"

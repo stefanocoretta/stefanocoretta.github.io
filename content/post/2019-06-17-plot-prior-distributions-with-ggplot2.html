@@ -1,0 +1,75 @@
+---
+title: Plotting prior distributions with ggplot2
+author: Stefano Coretta
+date: '2019-06-17'
+slug: plot-prior-distributions-with-ggplot2
+categories:
+  - Methods
+tags:
+  - data viz
+  - rstats
+  - tidy data
+  - statistics
+image:
+  caption: ''
+  focal_point: ''
+bibliography: /Users/stefano/repos/texmf/bibtex/bib/linguistics.bib
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>The choice of priors is a fundamental step of the Bayesian inference process. <span class="citation">Vasishth et al. (2018)</span> recommend plotting the chosen priors to see if they are reasonable.</p>
+<p>In this post I will show how to easily plot prior distributions in <a href="https://ggplot2.tidyverse.org">ggplot2</a> (which is part of the <a href="https://www.tidyverse.org">tidyverse</a>).</p>
+<p>Let’s load the tidyverse first.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>theme_set(theme_minimal()) # I just like this theme :)</code></pre>
+<div id="plotting-your-priors" class="section level2">
+<h2>Plotting your priors</h2>
+<p>Let’s start with a simple normal prior with <span class="math inline">\(\mu\)</span> = 0 and <em>sd</em> = 1.</p>
+<p>The plot is initialised with an empty call to <code>ggplot()</code>.
+As aesthetics, you only need to specify the range of <em>x</em> values in <code>aes()</code>.
+Here, we use <code>c(-4, 4)</code>, meaning that the <em>x</em>-axis of this plot will have these limits.
+For a normal distribution, it is useful to set the limits as the mean ± 4 times the standard deviation (this ensures all the distribution is shown).</p>
+<p>The function <code>ggplot2::stat_function()</code> allows us to specify a distribution family with the <code>fun</code> argument.
+This arguments takes the density function (the R functions of the form <em>dxxx</em>) of the chosen distribution family, so for the normal (Gaussian) distribution we use <code>dnorm()</code>.
+The argument <code>n</code> specifies the number of points along which to calculate the distribution (here <code>101</code>), while <code>args</code> takes a list with the parameters of the distribution (here the mean <code>0</code> and standard deviation <code>1</code>).</p>
+<pre class="r"><code>ggplot(data = tibble(x = -4:4), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(1)) +
+  labs(title = &quot;Normal (Gaussian) distribution&quot;)</code></pre>
+<p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/normal-1.png" width="672" /></p>
+<p>A beta prior will be bounded between 0 and 1, so we can specify that in <code>aes()</code>.
+The beta distribution has two arguments, <code>shape1</code> and <code>shape2</code> (here <code>2</code> and <code>5</code>).</p>
+<pre class="r"><code>ggplot(data = tibble(x = 0:1), aes(x)) +
+  stat_function(fun = dbeta, n = 101, args = list(2, 5)) +
+  labs(title = &quot;Beta distribution&quot;)</code></pre>
+<p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/beta-1.png" width="672" /></p>
+<p>Another common distribution is the Cauchy.</p>
+<pre class="r"><code>ggplot(data = tibble(x = -10:10), aes(x)) +
+  stat_function(fun = dcauchy, n = 201, args = list(-2, 1)) +
+  labs(title = &quot;Cauchy distribution&quot;)</code></pre>
+<p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/cauchy-1.png" width="672" /></p>
+<p>The Poisson distribution can be plotted by changing the type of <code>geom</code> and using an <code>n</code> that creates only integers.</p>
+<pre class="r"><code># the range 0:20 includes 21 integers, so n = 21
+ggplot(data = tibble(x = 0:20), aes(x)) +
+  stat_function(fun = dpois, n = 21, args = list(4), geom = &quot;point&quot;) +
+  labs(title = &quot;Poisson distribution&quot;)</code></pre>
+<p><img src="/post/2019-06-17-plot-prior-distributions-with-ggplot2_files/figure-html/poisson-1.png" width="672" /></p>
+<p>Of course any family with a corresponding <em>dxxx</em> function can be plotted (see <code>?Distributions</code> and package-provided families).</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-vasishth2018" class="csl-entry">
+<p>Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. <span>“Bayesian Data Analysis in the Phonetic Sciences: <span>A</span> Tutorial Introduction.”</span> <em>Journal of Phonetics</em> 71: 147–61.</p>
+</div>
+</div>
+</div>

@@ -1,0 +1,100 @@
+---
+title: How to use custom typefaces in ggplot2 [macOS only]
+author: Stefano Coretta
+date: '2020-12-21'
+slug: custom-fonts-ggplot2
+categories:
+  - Methods
+tags:
+  - data viz
+  - ggplot2
+  - ipa
+  - typefaces
+  - fonts
+---
+
+I keep hitting my head against this particular (and seemingly simple) task: **using custom typefaces in ggplot2 plots** and **being able to knit to PDF**.
+
+The main reason for why I would want to do that is that I often find myself in need of including [IPA](https://www.internationalphoneticassociation.org/content/ipa-chart) symbols in plots (more often than not, it's vowels) and that I want those plots to be included in a knitted PDF.
+
+For some reason, when I think I got it, I have to search again because the solution I previously found no longer works.
+
+So now I took the time to play around with different options and packages, and I found the minimal configuration one needs to use custom typefaces in ggplot2 plots and get a PDF document with those plots embedded in it (it is working as of December 2020, not sure what the year will bring).
+
+In the following sections I will show what this configuration looks like.
+Note that this post covers only R running on macOS and that things will be different perhaps on Linux and for sure on Windows (maybe I'll cover those OSs in an update later on).
+
+You can check out my full session info below, but just be aware that I am using R 4.0.3 in macOS Big Sur 11.1, with the latest version of the tidyverse packages at the time of writing.
+
+## Enable custom typefaces in ggplot2 plots when knitting to PDF
+
+I was surprised to find out that to include custom typefaces in ggplot2 plots and knit the `.Rmd` to a PDF document, you just need the following options in your YAML preamble (no need for extra packages!!!).
+
+```{r dev, eval=FALSE, echo=TRUE}
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+---
+```
+
+In particular, the `dev` option sets `cairo_pdf()` (shipped with ggplot2) as the default device for rendering the plots within the knitted PDF document.
+
+As Miranda Priestly would say, *that's all...*^[<https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif>]
+
+Within your document you can then specify the typeface you want to use in the plots.
+The most straightforward way is to set a ggplot2 theme and specify the `base_family` argument.
+
+```{r base-family, eval=FALSE}
+library(tidyverse) # or library(ggplot2)
+theme_set(theme_light(base_family = "Fira Sans"))
+```
+
+I chose the [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) fonts here because they include the Unicode range of the IPA.
+
+Both when running a chunk with a ggplot2 plot interactively in the `.Rmd` file and when knitting the `.Rmd` to a PDF, the plot typeface will be Fira Sans.
+And we are done.
+
+## Extra: Saving ggplot2 plots to a file
+
+Now, what if you want to save the plots with your custom typeface to a file that you can include in another document?
+
+You have two options:
+
+- You can save the plot as a standalone PDF file (with embedded fonts).
+- Or you can save the plot as a `.png` image.
+
+Achieving that is quite simple with `ggsave()`:
+
+```{r ggsave, eval=FALSE}
+# let's prepare a plot which will use our custom fonts
+p <- ggplot(mpg, aes(class)) +
+  geom_bar()
+
+# save to pdf
+ggsave(p, "./plot.pdf", device = cairo_pdf, width = 7, height = 5)
+
+# save to png
+ggsave(p, "./plot.png", width = 7, height = 5)
+```
+
+The magic is done by `ggsave(..., device = cairo_pdf)` (that's the same `cairo_pdf` device we set in the YAML preamble).
+Note that it's `cairo_pdf` and not `cairo_pdf()` (for reasons beyond my comprehension, it does not work if you add the parentheses).
+
+Here you find a [gist](https://gist.github.com/stefanocoretta/c9e3c0d8a72739c7ebb3a30d11e4c134) with an example `.Rmd` file that you can download on your machine and knit as a test.
+
+
+## Supported fonts
+
+As far as I can tell, any `.ttf` (TrueType font) installed on your system with Font Book can be set as the typeface to be used in the ggplot2 plots.
+
+
+## Session info
+
+```{r sesh}
+devtools::session_info()
+```
+
+
+

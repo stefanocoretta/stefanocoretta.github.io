@@ -1,0 +1,111 @@
+---
+title: Vowel formants trajectories and tidy data
+author: Stefano Coretta
+date: '2018-03-02'
+slug: formants-tidy
+categories:
+  - Linguistics
+tags:
+  - rstats
+  - tidy data
+  - phonetics
+  - phonology
+  - linguistics
+  - data processing
+  - time series
+  - formants
+  - formant trajectories
+  - ggplot2
+bibliography: /Users/stefano/repos/texmf/bibtex/bib/linguistics.bib
+cls: unified-style-sheet-for-linguistics.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+library(tidyverse)
+theme_set(theme_minimal())
+```
+
+With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.
+
+Sometimes, the output of the Praat script used for extracting formats data gives us a 'wide format' dataset.
+In this format, separate columns contain formant values for each interval within the vowel.
+Normally, values are extracted every 10% or 5% intervals within the vowel.
+
+To work with formant trajectories data in `R`, we need instead a 'long format' dataset.
+In a long format dataset, the percent intervals are layed out in rows, rather then columns.
+
+We start by reading in the formant data, which were kindly provided by [Stephen Nichols](http://tiny.cc/sjn).
+
+```{r read-data}
+trajectories <- read_csv("./static/data/nichols-2018/tulemupepelako.csv")
+trajectories
+```
+
+The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word *tulemupepelako* 'we are praying for her' (Bemba, [`bemb1257`]).
+It's a toy dataset of course, just for purpose of illustration, so not very exciting!
+
+The values for each 5% interval for each formant are in separate columns.
+For plotting and modelling, though, we need the data to be in a 'tidy' format [@wickham2014]:
+
+- each observation unit is in a separate row
+- each variable is a separate column
+
+In our case, each observation unit is a 5% interval.
+As for the variables, they are: time in the recording, word, vowel, vowel duration, F1, F2, and F3.
+
+The first step towards a long format data set is to gather all the columns that have formant values to a column indicating the formant plus interval (like 'F1_05') and the value of that formant in that interval.
+We can use `gather()` for this.
+
+In the following chunks, I will illustrate the results of each step separately by saving the output of the functions to variables.
+Later in this post, you'll find a pipe chain with all functions without intermediate outputs.
+
+```{r gather}
+trajectories_gath <- gather(trajectories, "formant", "value", F1_05:F3_95)
+trajectories_gath
+```
+
+Now we have a column `formant` with the formant plus interval label, and a column `value` with its value (in Hertz in our case).
+
+The next step is to separate the label of the formant plus interval into two separate columns: one for `formant`, and one for `interval`.
+
+```{r separate}
+trajectories_sep <- separate(trajectories_gath, formant, c("formant", "interval"), convert = TRUE)
+trajectories_sep
+```
+
+Now we can create individual columns for each formant from F1 to F3.
+We can achieve this with `spread()`.
+
+```{r spread}
+trajectories_spr <- spread(trajectories_sep, formant, value)
+trajectories_spr
+```
+
+What we have now is a long format dataset, with separate columns for each formant, and individual rows for each vowel interval.
+
+## The pipe chain
+
+All the steps above can be chained by using the pipe `%>%`.
+
+```{r tidy-trajectory}
+trajectories <- trajectories %>%
+  gather("formant", "value", F1_05:F3_95) %>%
+  separate(formant, c("formant", "interval"), convert = TRUE) %>%
+  spread(formant, value)
+```
+
+We can finally easily plot the formant trajectories.
+
+```{r trajectory-plot, cache=TRUE}
+trajectories %>%
+  ggplot(aes(x = interval)) +
+  geom_smooth(aes(y = F1), se = FALSE, colour = "red") +
+  geom_smooth(aes(y = F2), se = FALSE, colour = "green") +
+  geom_smooth(aes(y = F3), se = FALSE, colour = "blue") +
+  facet_wrap(~ Vowel) +
+  ylab("Hertz")
+```
+
+## References

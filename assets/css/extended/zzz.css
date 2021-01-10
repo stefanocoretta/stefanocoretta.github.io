@@ -1,5 +1,11 @@
 /* Custom css */
 
+/* Variables */
+
+:root {
+  --accent-col: #C11B17;
+}
+
 /* FONTS */
 
 /* Webfont: Lato-Regular */
@@ -97,7 +103,7 @@ body {
 }
 
 .post-content a {
-  color: rgb(130, 0, 14);
+  color: var(--accent-col);
   box-shadow: 0 0px 0; /*remove box-shadow from links*/
 }
 
@@ -167,12 +173,31 @@ body {
 }
 
 .post-content .avatar-info h2 {
-  color: rgb(130, 0, 14);
+  color: var(--accent-col);
 }
 
 .post-content .avatar-info h4 {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.archive-year-header {
+  line-height: 2em;
+  height: 2em;
+}
+
+.archive-y {
+  vertical-align: middle;
+  border-bottom: 0 0 0;
+}
+
+.archive-count {
+  border-radius: 30%;
+  color: white;
+  background-color: var(--secondary);
+  padding-left: 3pt;
+  padding-right: 3pt;
+  vertical-align: middle;
 }
 
 #institute {
@@ -182,5 +207,6 @@ body {
 }
 
 #my-email {
-  color: rgb(130, 0, 14);
+  color: var(--accent-col);
+  margin-bottom: 30pt;
 }

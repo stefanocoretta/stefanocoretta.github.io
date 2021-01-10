@@ -22,7 +22,7 @@ tags: []
 <tr>
     <td>forthcoming</td>
     <td>
-    Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit. Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German. <em>Language</em>.
+    Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit. <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b>. <em>Language</em>.
     <br>
     <a class="osi" href=https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum target="_blank"><span class="osi-compendium"></span></a>
     </td>
@@ -31,7 +31,7 @@ tags: []
   <tr>
     <td>2020</td>
     <td>
-    Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven. A cross cultural analysis of early prelinguistic gesture development and its relationship to language development. <em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a>.
+    Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven. <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b>. <em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a>.
     <br>
     <a class="osi" href=https://doi.org/10.1111/cdev.13406 target="_blank"><span class="osi-published"></span></a>
     </td>
@@ -40,7 +40,7 @@ tags: []
   <tr>
     <td>2020</td>
     <td>
-    Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish. <em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.
+    <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b>. <em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.
     <br>
     <a class="osi" href=https://doi.org/10.31219/osf.io/zrqyx target="_blank"><span class="osi-postprint"></span></a>
     <a class="osi" href=http://doi.org/10.1121/10.0000556 target="_blank"><span class="osi-published"></span></a>
@@ -51,7 +51,7 @@ tags: []
   <tr>
     <td>2019</td>
     <td>
-    An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish. <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.
+    <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b>. <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.
     <br>
     <a class="osi" href=http://doi.org/10.5334/gjgl.869 target="_blank"><span class="osi-published"></span></a>
     <a class="osi" href=https://osf.io/bfyhr/ target="_blank"><span class="osi-compendium"></span></a>

@@ -5,6 +5,9 @@ title = "Stefano Coretta"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [params]
 
   [params.homeInfoParams]
@@ -12,9 +15,26 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
   Description = "s"
 
 [[menu.main]]
+name = "Home"
+url = ""
+weight = -40
+
+[[menu.main]]
 name = "Research"
 url = "research/"
+weight = -30
+
+[[menu.main]]
+name = "Output"
+url = "output/"
+weight = -20
 
 [[menu.main]]
 name = "Blog"
 url = "archives/"
+weight = -10
+
+[[menu.main]]
+name = "CV"
+url = "docs/CorettaCV.pdf"
+weight = 0

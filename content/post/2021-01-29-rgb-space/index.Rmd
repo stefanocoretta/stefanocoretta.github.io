@@ -1,0 +1,38 @@
+---
+title: 'R gist: plot an interactive 3D RGB colour space'
+author: Stefano
+date: '2021-01-29'
+slug: rgb-space
+categories:
+  - Gist
+tags:
+  - data viz
+  - plotly
+  - rstats
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+```{r plotly}
+library(plotly)
+```
+
+
+```{r make-rgb}
+codes <- seq(0, 255, 25.5)
+
+rgb <- expand.grid(
+  r = codes,
+  g = codes,
+  b = codes
+) %>%
+  mutate(colour = rgb(r, g, b, maxColorValue = 255))
+```
+
+```{r plot-rgb}
+rgb %>%
+  plot_ly(x = ~r, y = ~g, z = ~b, marker = list(color = ~colour, size = 6))
+```

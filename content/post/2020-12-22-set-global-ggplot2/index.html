@@ -13,7 +13,7 @@ tags:
   - rmarkdown
 ---
 
-<script src="index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>After the post on using custom typefaces in ggplot2 (<a href="../custom-fonts-ggplot2">here</a>), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an <code>.Rmd</code> file.</p>
@@ -55,7 +55,7 @@ mpg %&gt;%
   filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
   ggplot(aes(class, fill = class)) +
   geom_bar()</code></pre>
-<p><img src="index_files/figure-html/name-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/name-1.png" width="672" /></p>
 </div>
 <div id="hex-value" class="section level2">
 <h2>Hex value</h2>
@@ -65,7 +65,7 @@ mpg %&gt;%
   filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
   ggplot(aes(class, fill = class)) +
   geom_bar()</code></pre>
-<p><img src="index_files/figure-html/hex-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/hex-1.png" width="672" /></p>
 </div>
 <div id="set3" class="section level2">
 <h2>Set3</h2>
@@ -75,7 +75,7 @@ mpg %&gt;%
   filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
   ggplot(aes(class, fill = class)) +
   geom_bar()</code></pre>
-<p><img src="index_files/figure-html/set3-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/set3-1.png" width="672" /></p>
 </div>
 <div id="interp" class="section level2">
 <h2>Palette interpolation</h2>
@@ -90,9 +90,9 @@ options(ggplot2.discrete.fill = default_palettes)
 
 # 5 levels
 ggplot(mpg, aes(class, fill = fl)) + geom_bar()</code></pre>
-<p><img src="index_files/figure-html/ramp-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/ramp-1.png" width="672" /></p>
 <pre class="r"><code># 7 levels
 ggplot(mpg, aes(class, fill = class)) + geom_bar()</code></pre>
-<p><img src="index_files/figure-html/ramp-2.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/ramp-2.png" width="672" /></p>
 </div>
 </div>

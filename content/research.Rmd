@@ -1,12 +1,14 @@
 ---
 title: Research
 slug: research
-bibliography: /Users/stefano/repos/texmf/bibtex/bib/linguistics.bib
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
 ---
 
-My research focusses on *speech production*.
-In particular, I am interested in the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling.
+My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling.
+
+More specifically, most of my research centres around *speech production*.
+
 
 ## Projects
 
@@ -15,6 +17,49 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
 
 I am currently conducting research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html), and the ERC project [*Human interaction and the evolution of spoken accent*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/erc_human_interaction.html) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
 These projects employ real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+
+## Frameworks
+
+In the following sections, I outline some of the conceptual and methodological aspects that fuel my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
+
+### Phonetology
+
+In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I refer to the set of sciences that investigate the *visual systems* (signing) and *sound systems* (speech sounds) of the world's languages with the term "phonetology" (from a combination of *phonet*ics and phon*ology*).
+
+Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term "phonetological system" can be used as an umbrella term that covers both visual and sound systems.
+
+### Phonetological systems
+
+A *phonetological system* is comprised of a set of phonetological units and their relationships. Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.
+
+In my view of phonetology, a phonetological system has the following properties:
+
+* It is a **dynamic system** [@thelen2006; @vihman2014].
+* It is a **physio-neuro-cognitive** system. It has:
+  * A **physical** component [@ohala1990; @ohala2005].
+  * A **neuro-cognitive** component.
+    * It is _rich_ in details [@johnson1997; @pierrehumbert2001; @bybee2002].
+    * It is _self-organising_ and _emergent_ [@wedel2007; @wedel2011].
+    * It uses both _stored exemplars and stored abstractions_ at multiple levels [@ambridge2020].
+* It is part of a complex **socio-cultural system** [@boer2015; @foulkes2006; @thompson2016].
+
+I also consider these statements to be extendible more generally to linguisticality [@haspelmath2020] as a holistic system.
+
+### Linguistic diasystems
+
+In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of "language" as a *linguistic system*.
+
+@cycow2013 propose to formalise the notion of language with three concepts:
+
+- Glossonym.
+- Doculect.
+- Languoid.
+
+[WORK IN PROGRESS]
+
+### Research methods and Science
+
+As far as research methods are concerned, I am an advocate of **Open Science**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
 
 ## Languages
 
@@ -25,25 +70,20 @@ Among the languages I work(ed) with:
 * Lombard (Indo-European) [[lomb1257](http://glottolog.org/resource/languoid/id/lomb1257)].
 * Icelandic (Indo-European) [[icel1247](http://glottolog.org/resource/languoid/id/icel1247)].
 * Old Irish (Indo-European) [[oldi1246](http://glottolog.org/resource/languoid/id/oldi1246)].
-* English (Mancunian English, Indo-European).
+* Albanian (Indo-European) [[alba1267](https://glottolog.org/resource/languoid/id/alba1267)].
+* English: Mancunian English (Indo-European).
 * Italian (Indo-European) [[ital182](http://glottolog.org/resource/languoid/id/ital1282)].
 * Polish (Indo-European) [[poli1260](http://glottolog.org/resource/languoid/id/poli1260)].
 * German (Indo-European) [[stan1295](http://glottolog.org/resource/languoid/id/stan1295)].
 
-## Frameworks
+In the earlier stages of my academic background, I was also exposed to (in random order and at varying degrees of depth) Sanskrit, Middle Egyptian, Classical Hebrew, Latin, Greek, Amharic, Hungarian, Proto-Indo-European, Proto-Oceanic, Middle Welsh, and Romani.
 
-My position regarding phonology (including phonetics) can be summarised as follows:
+Overall, my interests and expertise cover the following linguistic families/groups:
 
-  * Phonology is a **dynamic system** [@thelen2006; @vihman2014].
-  * Phonology is part of a complex **socio-cultural system** [@boer2015; @foulkes2006; @thompson2016].
-  * Phonology is a complex **physical system** [@ohala1990; @ohala2005].
-  * Phonology is a complex **neuro-cognitive system**:
-      * It is _rich_ in details [@johnson1997; @pierrehumbert2001; @bybee2002].
-      * It is _self-organising_ and _emergent_ [@wedel2007; @wedel2011].
-      * It uses both _stored exemplars and stored abstractions_ at multiple levels [@ambridge2020].
+- Indo-European.
+- Oceanic.
+- South American.
 
-I also consider these statements to be extendible more generally to Human Language as a holistic system.
-
-As far as research methods are concerned, I am an advocate of **Open Science**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruwell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
+I would very much welcome offers of collaboration on languages from other areas of the world, especially languages of Africa, which are alas the ones I am the least familiar with.
 
 ### References

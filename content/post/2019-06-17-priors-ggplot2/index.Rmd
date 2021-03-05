@@ -10,7 +10,7 @@ tags:
   - rstats
   - tidy data
   - statistics
-bibliography: /Users/stefano/repos/texmf/bibtex/bib/linguistics.bib
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
 ---
 

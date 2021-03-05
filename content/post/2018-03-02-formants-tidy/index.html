@@ -16,11 +16,11 @@ tags:
   - formants
   - formant trajectories
   - ggplot2
-bibliography: /Users/stefano/repos/texmf/bibtex/bib/linguistics.bib
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
 ---
 
-<script src="index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.</p>
@@ -41,15 +41,15 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 ## ℹ Use `spec()` for the full column specifications.</code></pre>
 <pre class="r"><code>trajectories</code></pre>
 <pre><code>## # A tibble: 7 x 61
-##    Time Vowel Word  Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
-##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  194. u     tule…     43.3  406.  439.  453.  456.  430.  357.  314.  288.
-## 2  194. e     tule…    103.   503.  517.  537.  564.  556.  362.  315.  295.
-## 3  194. u     tule…     14.1  290.  288.  286.  283.  281.  281.  282.  295.
-## 4  194. e     tule…     75.7  440.  441.  439.  429.  386.  269.  250.  318.
-## 5  194. e     tule…     68.2  437.  445.  479.  562.  622.  605.  523.  618.
-## 6  195. a     tule…     89.8  800.  736.  662.  543.  447.  564.  768.  358.
-## 7  195. o     tule…     98.5  482.  463.  471.  326.  316.  573. 1511. 1389.
+##    Time Vowel Word      Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
+##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  194. u     tulemupe…     43.3  406.  439.  453.  456.  430.  357.  314.  288.
+## 2  194. e     tulemupe…    103.   503.  517.  537.  564.  556.  362.  315.  295.
+## 3  194. u     tulemupe…     14.1  290.  288.  286.  283.  281.  281.  282.  295.
+## 4  194. e     tulemupe…     75.7  440.  441.  439.  429.  386.  269.  250.  318.
+## 5  194. e     tulemupe…     68.2  437.  445.  479.  562.  622.  605.  523.  618.
+## 6  195. a     tulemupe…     89.8  800.  736.  662.  543.  447.  564.  768.  358.
+## 7  195. o     tulemupe…     98.5  482.  463.  471.  326.  316.  573. 1511. 1389.
 ## # … with 49 more variables: F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;, F1_55 &lt;dbl&gt;, F1_60 &lt;dbl&gt;,
 ## #   F1_65 &lt;dbl&gt;, F1_70 &lt;dbl&gt;, F1_75 &lt;dbl&gt;, F1_80 &lt;dbl&gt;, F1_85 &lt;dbl&gt;,
 ## #   F1_90 &lt;dbl&gt;, F1_95 &lt;dbl&gt;, F2_05 &lt;dbl&gt;, F2_10 &lt;dbl&gt;, F2_15 &lt;dbl&gt;,
@@ -63,7 +63,7 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 <p>The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word <em>tulemupepelako</em> ‘we are praying for her’ (Bemba, [<code>bemb1257</code>]).
 It’s a toy dataset of course, just for purpose of illustration, so not very exciting!</p>
 <p>The values for each 5% interval for each formant are in separate columns.
-For plotting and modelling, though, we need the data to be in a ‘tidy’ format <span class="citation">(Wickham 2014)</span>:</p>
+For plotting and modelling, though, we need the data to be in a ‘tidy’ format <span class="citation">(<a href="#ref-wickham2014" role="doc-biblioref">Wickham 2014</a>)</span>:</p>
 <ul>
 <li>each observation unit is in a separate row</li>
 <li>each variable is a separate column</li>
@@ -145,13 +145,13 @@ trajectories_spr</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
 ## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
 ## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="index_files/figure-html/trajectory-plot-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/trajectory-plot-1.png" width="672" /></p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-wickham2014" class="csl-entry">
-Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23.
+Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
 </div>
 </div>
 </div>

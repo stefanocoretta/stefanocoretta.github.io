@@ -5,18 +5,19 @@ bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
 ---
 
-My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling.
+[WORK IN PROGRESS]
 
-More specifically, most of my research centres around *speech production*.
-
+My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling. More specifically, most of my research centres around *speech production*.
 
 ## Projects
 
-As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
-My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
-
 I am currently conducting research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html), and the ERC project [*Human interaction and the evolution of spoken accent*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/erc_human_interaction.html) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
 These projects employ real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+
+### Past
+
+As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
+My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
 
 ## Frameworks
 
@@ -47,15 +48,40 @@ I also consider these statements to be extendible more generally to linguistical
 
 ### Linguistic diasystems
 
-In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of "language" as a *linguistic system*.
+In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of "language" in the sense of *linguistic system*.
 
-@cycow2013 propose to formalise the notion of language with three concepts:
+@cysouw2013 propose a metamodel based on documentation, which formalises the notion of language using three concepts:
 
-- Glossonym.
-- Doculect.
-- Languoid.
+- **Glossonym** (p. 339)
 
-[WORK IN PROGRESS]
+  A *glossonym* is a name used to refer to a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to language-like entities.
+
+- **Doculect** (p 342)
+
+  A *doculect* (documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is a pairing of a glossonym and a resource. An example: [@howard1986; *mawayana*].
+
+- **Languoid** (p. 347)
+
+  A *languoid* refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family" [@cysouw2013, p. 347]. An example:
+
+  - <Coretta (2021); *mawayana*;
+    - [@schomburgk1848; *mawakwa*, *maopityan*],
+    - [@farabee1918; *mapidian*, *maopityan*, *moonpidenne*)],
+    - [@howard1986; *mawayana*],
+    - [@kaufman1994; *mapidian*, *mopidyán*],
+    - [@aikhenvald1999; *mawayana*, *mapidian*, *mawakwa*],
+    - [@carlin2006a; *mawayana*],
+    - [@coretta2013; *mawayana*],
+    - [@michels2014; *mawayana*]>
+
+I propose the term "**dialang**" as an alternative to *languoid*. This is inspired by the Italian linguistic tradition, which speaks of "linguistic diasystems", where a **diasystem** is a system of systems. The term *dialang*, as *languoid*, can refer to any node within the grouping hierarchy, from higher- to lower-level groupings. Thus, the term *dialang* can refer to a macro-family, a family, a dialect continuum, a linkage, a language, a variety (whether diatopic, diachronic, diastratic, diaphasic, or diamesic), a register, an idiolect, etc.
+
+In sum:
+
+- A **dialang** is a hierarchical set of *doculects*.
+- A **doculect** is a pairing of a *glossonym* and a *resource*.
+- A **glossonym** is a name used to refer to a linguistic entity.
+- A **resource** is any object (publication, media, etc.) containing linguistic materials.
 
 ### Research methods and Science
 

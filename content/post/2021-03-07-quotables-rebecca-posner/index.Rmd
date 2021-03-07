@@ -1,0 +1,22 @@
+---
+title: 'Quotables: Rebecca Posner'
+author: ''
+date: '2021-03-07'
+slug: []
+categories:
+  - Quotables
+tags:
+  - romance
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+cls: unified-style-sheet-for-linguistics.csl
+---
+
+*This is part of the post series '[Quotables: notable quotes from notable linguists](../../categories/quotables)'.*
+
+> How many Romance languages are there?
+>
+> An answer to this question that has been slightingly labelled *sancta simplicitas* is that there is only one: the languages are all alike enough to be deeemed dialects of the same language. Another equally disingenous answer might be 'thousands'---of distinctive local varieries---or 'millions'---of individual idiolects. The usual textbook answer is 'ten, or possibly eleven', according priority to putative chronologically early differentiation from the common stock, allegedly linked to ethnic differences among speakers.
+
+---@posner2004, p. 189.
+
+

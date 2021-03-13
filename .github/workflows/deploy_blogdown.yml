@@ -3,7 +3,7 @@ name: Blogdown site render and deploy
 on:
   push:
      branches:
-       - master
+       - main
 
 jobs:
   build-site:

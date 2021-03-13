@@ -140,6 +140,11 @@ body {
   font-size: 0.8em
 }
 
+figure > * {
+  margin: 0 auto 0.55em;
+  display:block;
+}
+
 /* Test */
 
 .cols-2 {

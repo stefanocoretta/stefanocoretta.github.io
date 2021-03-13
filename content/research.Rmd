@@ -3,33 +3,39 @@ title: Research
 slug: research
 bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
+output:
+  blogdown::html_page:
+    number_sections: true
 ---
 
-[WORK IN PROGRESS]
+
+`r blogdown::shortcode_html("figure", src="/img/streamline/research-desk.svg", height="200")`
 
 My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling. More specifically, most of my research centres around *speech production*.
 
-## Projects
+# Projects
 
-I am currently conducting research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html), and the ERC project [*Human interaction and the evolution of spoken accent*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/erc_human_interaction.html) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
+I am currently conducting research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html), and the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
 These projects employ real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
 
-### Past
+## Past
 
 As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
 My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
 
-## Meta-models
+# Meta-models
+
+`r blogdown::shortcode_html("figure", src="/img/streamline/meta-models.svg", height="200")`
 
 In the following sections, I outline some of the conceptual and methodological aspects (*meta-models*) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
 
-### Phonetology
+## Phonetology
 
 In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I refer to the set of sciences that investigate the *visual systems* (signing) and *sound systems* (speech sounds) of the world's languages with the term "phonetology" (from a combination of *phonet*ics and phon*ology*).
 
 Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term "phonetological system" can be used as an umbrella term that covers both visual and sound systems.
 
-### Phonetological systems
+## Phonetological systems
 
 A *phonetological system* is comprised of a set of phonetological units and their relationships. Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.
 
@@ -46,7 +52,7 @@ In my view of phonetology, a phonetological system has the following properties:
 
 I also consider these statements to be extendible more generally to linguisticality [@haspelmath2020] as a holistic system.
 
-### Linguistic diasystems
+## Linguistic diasystems
 
 In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of "language" in the sense of *linguistic system*.
 
@@ -92,19 +98,30 @@ In sum:
 - A **resource** is any object (publication, media, etc.) containing linguistic materials.
 - A dialang can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
 
-### Research methods
+## Research methods
 
-As far as research methods are concerned, I am an advocate of **Open Science**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
+`r blogdown::shortcode_html("figure", src="/img/streamline/research-methods.svg", height="200")`
+
+As far as research methods are concerned, I am an enthusiastic advocate of **Open Science**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
 
 <!-- TODO: slow science -->
+I am also a supporter of the **Slow Science** movement, part of the broader "slow" movement (as in "slow-food"), which can summarised with this quote from the [manifesto](http://slow-science.org): "We do need time to think. We do need time to digest. We do need time to misunderstand each other".
+
 <!-- TODO: ethics -->
 <!-- TODO: research project management -->
 
 <!-- TODO: statistics -->
 
 <!-- TODO: philosophy of science: three books -->
+Philosophy and science might seem two very unrelated fields, but in fact **philosophy of science** is an extremely important intersection of the two, with broad implications for research methods, from experiment planning, through statistical modelling, to inference.
+I'll expand on this some time in the future, but for now I can strongly recommend the following books:
 
-## Languages
+- *Philosophy of science: Very short introduction* [@okasha2016].
+- *Understanding psychology as a science: An introduction to scientific and statistical inference* [@dienes2008].
+- *The Systems View of life: A unifying vision* [@capra2018].
+
+
+# Languages
 
 Among the languages I work(ed) with:
 
@@ -129,4 +146,4 @@ Overall, my interests and expertise cover the following linguistic families/grou
 
 I would very much welcome offers of collaboration on languages from other areas of the world, especially languages of Africa, which are alas the ones I am the least familiar with.
 
-### References
+## References

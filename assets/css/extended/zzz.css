@@ -133,6 +133,17 @@ body {
     box-shadow: 0 2px 0;
 }
 
+.streami {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+}
+
+#images{
+  text-align: center;
+}
+
 /* Open Science Icons */
 
 #osi-notice {

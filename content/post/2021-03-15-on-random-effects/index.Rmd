@@ -18,7 +18,6 @@ Regrettably, there is no straightforward answer (disappointed, uh?).
 The main reason for a lack of a simple heuristic is that, in fact, there are many possible (and most times exclusive) definitions of what a random (vs fixed) effect is.
 So to be able to answer our question, we would first have to pick one particular definition.
 
-
 In the following summary---which paraphrases and takes inspiration from Gelman's [post](https://statmodeling.stat.columbia.edu/2005/01/25/why_i_dont_use/) (and related [journal article](http://www.stat.columbia.edu/~gelman/research/published/banova7.pdf))---I'd like to offer an overview of five main definitions of "random effect" and some thoughts on what mixed-effects modelling entails from a conceptual point of view.
 
 ## Five definitions of "random effect"
@@ -49,7 +48,8 @@ The following sections discuss the 5 definitions in turn.
 
 ### 1. Constant vs varying effects
 
-Fixed effects are constant across individuals, and random effects vary. For example, in the f0 study, a model with fixed slope B * E and random intercepts A_j corresponds to parallel lines for different speakers j. Kreft and De Leeuw (1998) thus distinguish between fixed and random coefficients.
+Fixed effects are constant across individuals, while random effects vary.
+For example, in the f0 study, a model with fixed slope $\beta$ and random intercepts $\alpha_j$ corresponds to parallel lines for different speakers j. Kreft and De Leeuw (1998) thus distinguish between fixed and random coefficients.
 
 ### 2. Researcher's interest
 

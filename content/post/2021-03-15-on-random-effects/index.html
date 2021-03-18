@@ -16,18 +16,18 @@ cls: unified-style-sheet-for-linguistics.csl
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>If you use <strong>mixed-effects models</strong> (aka multilevel models, hierarchical models), I am sure that at some point you asked yourself the following question at least once: <em>Should I include this variable as a fixed or as a random effect?</em></p>
+<p>If you use <strong>mixed-effects models</strong> (aka multilevel models, hierarchical models), I am sure that at some point you asked yourself the following question at least once: <em>Should I include variable X as a fixed or as a random effect?</em></p>
+<p>To answer this question we need to ask first: <strong>what is a random effect?</strong></p>
 <p>Regrettably, there is no straightforward answer (disappointed, uh?).</p>
-<p>The main reason for a lack of a simple heuristic is that, in fact, there are many possible (and most times exclusive) definitions of what a random (vs fixed) effect is.
-So to be able to answer our question, we would first have to pick one particular definition.</p>
-<p>In the following summary—which paraphrases and takes inspiration from Gelman’s <a href="https://statmodeling.stat.columbia.edu/2005/01/25/why_i_dont_use/">post</a> (and related <a href="http://www.stat.columbia.edu/~gelman/research/published/banova7.pdf">journal article</a>)—I’d like to offer an overview of five main definitions of “random effect” and some thoughts on what mixed-effects modelling entails from a conceptual point of view.</p>
+<p>The main reason is that, in fact, there are many possible (and most times mutually exclusive) definitions of what a random (vs fixed) effect is.</p>
+<p>In the following summary—which is heavily based on Gelman’s post <a href="https://statmodeling.stat.columbia.edu/2005/01/25/why_i_dont_use/"><em>Why I don’t use the term “fixed and random effects”</em></a> (and related <a href="http://www.stat.columbia.edu/~gelman/research/published/banova7.pdf">journal article</a>)—I’d like to offer an overview of five main definitions of “random effect” and some final thoughts.</p>
 <div id="five-definitions-of-random-effect" class="section level2">
 <h2>Five definitions of “random effect”</h2>
 <div id="images">
   <img class="streami" border="0" alt="calm" src="/img/streamline/calm.svg"/>
   <img class="streami" border="0" alt="panic" src="/img/streamline/panic.svg"/>
 </div>​
-<p>In his post, Gelman says that there are at least 5 possible ways of defining random effects (with others being subsumable under those 5).
+<p>In his post, Gelman says that there are at least five possible ways of defining random effects (with others being subsumable under those five).
 To illustrate these definitions and make them more relatable to phoneticians and phonologists alike, I will make use of a fictitious study of f0 (fundamental frequency) as a correlate of emotional arousal (<span class="math inline">\(\eta\)</span>).</p>
 <p>Let’s assume that we are interested in testing the (made-up) hypothesis that emotional arousal affects the speaker’s f0.
 We can test this hypothesis using the following model:</p>
@@ -40,23 +40,26 @@ We can test this hypothesis using the following model:</p>
 <li><span class="math inline">\(\beta\)</span> is the slope,</li>
 <li>and <span class="math inline">\(\eta_i\)</span> is emotional arousal status (<code>0 = non-aroused</code>, <code>1 = aroused</code>).</li>
 </ul>
-<p>This model could be written in R like so:</p>
+<p>The corresponding model in R:</p>
 <pre class="r"><code>f0 ~ emo_arousal + (1 | speaker)</code></pre>
-<p>The following sections discuss the 5 definitions in turn.</p>
+<p>This is just a model with a fixed effect and a by-speaker random intercept.
+The inclusion of speaker as a random effect is nothing exceptional, but what is a random effect?</p>
+<p>As hinted at above, there is no one answer.</p>
+<p>The following sections show how “speaker” can be interpreted as a random effect depending on which of the five definitions one picks.</p>
 <div id="constant-vs-varying-coefficients" class="section level3">
-<h3>1. Constant vs varying coefficients</h3>
+<h3>(1) Constant vs varying coefficients</h3>
 <p><span class="citation"><a href="#ref-kreft1998" role="doc-biblioref">Kreft, Kreft, and Leeuw</a> (<a href="#ref-kreft1998" role="doc-biblioref">1998</a>)</span> distinguish between fixed and random regression coefficients.
-Fixed coefficients are constant across individuals, while random coefficients vary.
-In the f0 study, the slope <span class="math inline">\(\beta\)</span> is fixed and <span class="math inline">\(\alpha_j\)</span> is random because it depends on which speaker the data is from.</p>
+Fixed coefficients are constant across individuals, while random coefficients vary.</p>
+<p>In the f0 study, the slope <span class="math inline">\(\beta\)</span> is fixed and <span class="math inline">\(\alpha_j\)</span> is random because it depends on which speaker the data is from.</p>
 </div>
 <div id="researchers-interest" class="section level3">
-<h3>2. Researcher’s interest</h3>
+<h3>(2) Researcher’s interest</h3>
 <p><span class="citation"><a href="#ref-searle2009" role="doc-biblioref">Searle, Casella, and McCulloch</a> (<a href="#ref-searle2009" role="doc-biblioref">2009</a>, Section 1.4)</span> discuss effects in terms of the researcher’s interest.
-Effects are considered fixed if the research question/hypothesis being tested covers those effects, or random if the interest lies in the underlying population rather than on the individual effects.
-In this sense, the effect of emotional arousal on f0 is the main focus of interest since we are testing the hypothesis that the former affects the latter, while the average f0 of each speaker (<span class="math inline">\(\alpha_j\)</span>) is not relevant.</p>
+Effects are considered fixed if the research question/hypothesis being tested covers those effects, or random if the interest lies in the underlying population rather than on the individual effects.</p>
+<p>In this sense, the effect of emotional arousal on f0 is the main focus of interest since we are testing the hypothesis that the former affects the latter, while the average f0 of each speaker (<span class="math inline">\(\alpha_j\)</span>) is not relevant.</p>
 </div>
 <div id="sampling" class="section level3">
-<h3>3. Sampling</h3>
+<h3>(3) Sampling</h3>
 <blockquote>
 <p>When a sample exhausts the population, the corresponding variable is fixed; when the sample is a small (i.e., negligible) part of the population the corresponding variable is random.</p>
 </blockquote>
@@ -64,35 +67,34 @@ In this sense, the effect of emotional arousal on f0 is the main focus of intere
 <p>In our example study, the observed levels of emotional arousal (non-aroused vs aroused) exhausts the “population” of emotional arousal states, while the set of speakers is just a sample from the whole population of speakers.</p>
 </div>
 <div id="random-events" class="section level3">
-<h3>4. Random events</h3>
+<h3>(4) Random events</h3>
 <blockquote>
 <p>If an effect is assumed to be a realized value of a random variable, it is called a random effect.</p>
 </blockquote>
 <p>—<span class="citation"><a href="#ref-lamotte1983" role="doc-biblioref">LaMotte</a> (<a href="#ref-lamotte1983" role="doc-biblioref">1983</a>)</span></p>
-<p>A random variable is a variable generated by a random event.
-In the f0 study, the speakers that participated in the study are the outcome of random events, while we assume that the relation between f0 and arousal is governed by a specific mathematical relationship.</p>
+<p>A random variable is a variable generated by a random event.</p>
+<p>In the f0 study, the speakers that participated in the study are the outcome of random events, while we assume that the relation between f0 and arousal is governed by a specific mathematical relationship.</p>
 </div>
 <div id="shrinkage" class="section level3">
-<h3>5. Shrinkage</h3>
+<h3>(5) Shrinkage</h3>
 <p>The last definition of fixed vs random effects is based on the method employed to estimate them.
 Fixed effects are estimated using maximum likelihood, while random effects are estimated with partial pooling.
 Partial pooling means that the estimation of the random effects influence the estimation of the fixed effects and vice versa.
 This definition is standard in the multilevel modelling literature <span class="citation">(<a href="#ref-snijders2011" role="doc-biblioref">Snijders and Bosker 2011</a>, Section 4.2)</span> and in econometrics.</p>
 <p>A consequence of partial pooling is the so-called “shrinkage.”
-Shrinkage refers to the “regression to the mean,” by which the estimated effects are attracted towards the overall mean (i.e. the intercept).
-So in the f0 study, the by-speaker random intercepts “shrink” towards the estimated fixed intercept.
+Shrinkage refers to the “regression to the mean,” by which the estimated effects are attracted towards the overall mean (i.e. the intercept).</p>
+<p>So in the f0 study, the by-speaker random intercepts “shrink” towards the estimated fixed intercept.
 In sum, fixed effects are effects without shrinkage while random effects are effects with shrinkage.</p>
 <p>Thus, under this definition, whether one chooses to model an effect with or without shrinkage has to do with the underlying process model one expects to have generated the observed data.
-If the expected process of a variable entails shrinkage, then such variable should be entered as a random effect.</p>
+If the expected process of a variable entails shrinkage, then it would make sense to enter such variable as a random effect.</p>
 </div>
 </div>
-<div id="some-thoughts" class="section level2">
-<h2>Some thoughts</h2>
-<p>I personally agree with Gelman’s position of avoiding the terms fixed/random altogether, although possibly my favourite definition is number 5, given that it is based on low-level theoretical considerations rather than on practical ones.
-In any case, it is always important to think very carefully about what to include as <code>Y ~ X</code> and what to include as <code>Y ~ (1|X)</code>.</p>
-<p>Note that definition (4) makes sense within the frequentist framework of inferential statistics, but less so in the Bayesian framework, given that in the latter everything is a random variable.
-Within Bayesian modelling, it is common to use the terms “population-level” effects and “group-level” effects to indicate, respectively, effects that represent a population-wide independent generative process vs the modulation of such a generative process within the population.</p>
-<p>Hopefully this helped clarifying what is behind the fixed/random effects dichotomy (rather than making it even more blurry by introducing multiple definitions).</p>
+<div id="some-final-thoughts" class="section level2">
+<h2>Some final thoughts</h2>
+<p>I agree with Gelman’s statement that the terms “fixed” and “random” could (and perhaps should) be avoided altogether.</p>
+<p>Within the Bayesian framework, for example, it is becoming common to use the terms “<strong>population-level</strong>” and “<strong>group-level</strong>” effects to indicate, respectively, effects that are generated by a population-wide process vs effects that are generated by the modulation of such generative process within groups that make up the population.</p>
+<p>As in definition (5) above, group-level effects are estimated with partial pooling <span class="citation">(for a nice detailed explanation of partial pooling that includes robots cuing for coffee and tadpoles, see <a href="#ref-mcelreath2015" role="doc-biblioref">McElreath 2015</a>, Ch 12)</span>.</p>
+<p>To conclude, whether you include a variable as a fixed or random effect will depend on (a) which definition of random effect you (explicitly or implicitly) choose, and (b) what underlying generative process you envision to be at play.</p>
 <div id="reference" class="section level3 unnumbered">
 <h3>Reference</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
@@ -104,6 +106,9 @@ Kreft, Ita G. G., Ita Kreft, and Jan de Leeuw. 1998. <em>Introducing Multilevel 
 </div>
 <div id="ref-lamotte1983" class="csl-entry">
 LaMotte, L. R. 1983. <span>“Fixed-, Random-, and Mixed-Effects Models.”</span> In <em>Encyclopedia of Statistical Sciences</em>, edited by N. L. Johnson S. Kotz and C. B. Read, 3:137–41. New York: Wiley.
+</div>
+<div id="ref-mcelreath2015" class="csl-entry">
+McElreath, Richard. 2015. <em>Statistical Rethinking: <span>A</span> <span>B</span>ayesian Course with Examples in <span>R</span> and <span>S</span>tan</em>. Boca Raton, FL: CRC Press.
 </div>
 <div id="ref-searle2009" class="csl-entry">
 Searle, Shayle R., George Casella, and Charles E. McCulloch. 2009. <em>Variance Components</em>. John Wiley &amp; Sons.

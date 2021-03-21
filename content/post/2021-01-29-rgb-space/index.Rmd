@@ -1,5 +1,5 @@
 ---
-title: 'R gist: plot an interactive 3D RGB colour space'
+title: 'R gist — Plot an interactive 3D RGB colour space'
 author: Stefano
 date: '2021-01-29'
 slug: rgb-space

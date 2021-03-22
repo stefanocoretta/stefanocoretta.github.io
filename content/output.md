@@ -19,10 +19,28 @@ tags: []
 <br>
 
 <table>
-<tr>
+  <tr>
+    <td>submitted</td>
+    <td>
+    <b>Northern Tosk Albanian (IPA Illustration)</b>
+    <br>
+    <u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols
+    <br>
+    <em>Journal of the International Phonetic Association</em>
+    <br>
+    <a class="osi" href=https://osf.io/mb2hg/ target="_blank"><span class="osi-preprint"></span></a>
+    <a class="osi" href=https://osf.io/vry3h/ target="_blank"><span class="osi-compendium"></span></a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>forthcoming</td>
     <td>
-    Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit. <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b>. <em>Language</em>.
+    <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b>
+    <br>
+    Chris Carignan, <u>Stefano Coretta</u>, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit
+    <br>
+    <em>Language</em>
     <br>
     <a class="osi" href=https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum target="_blank"><span class="osi-compendium"></span></a>
     </td>
@@ -31,7 +49,11 @@ tags: []
   <tr>
     <td>2020</td>
     <td>
-    Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven. <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b>. <em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a>.
+    <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b>
+    <br>
+    Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>, Ludovica Serratrice, Elena Lieven
+    <br>
+    <em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a>
     <br>
     <a class="osi" href=https://doi.org/10.1111/cdev.13406 target="_blank"><span class="osi-published"></span></a>
     </td>
@@ -40,7 +62,11 @@ tags: []
   <tr>
     <td>2020</td>
     <td>
-    <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b>. <em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.
+    <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b>
+    <br>
+    <u>Stefano Coretta</u>
+    <br>
+    <em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.
     <br>
     <a class="osi" href=https://doi.org/10.31219/osf.io/zrqyx target="_blank"><span class="osi-postprint"></span></a>
     <a class="osi" href=http://doi.org/10.1121/10.0000556 target="_blank"><span class="osi-published"></span></a>
@@ -51,7 +77,11 @@ tags: []
   <tr>
     <td>2019</td>
     <td>
-    <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b>. <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.
+    <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b>
+    <br>
+    <u>Stefano Coretta</u>
+    <br>
+    <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.
     <br>
     <a class="osi" href=http://doi.org/10.5334/gjgl.869 target="_blank"><span class="osi-published"></span></a>
     <a class="osi" href=https://osf.io/bfyhr/ target="_blank"><span class="osi-compendium"></span></a>
@@ -70,6 +100,50 @@ tags: []
     <td><a class="osi" href=https://osf.io/w92me/ target="_blank"><span class="osi-compendium"></span></a></td>
   </tr>
 </table>
+
+<h2>Data</h2>
+
+<table>
+  <tr>
+    <td>2021</td>
+    <td><em>Vowel duration and consonant voicing: A production study (Research Compendium)</em>. DOI: <a href="http://doi.org/10.17605/OSF.IO/W92ME" target="_blank">10.17605/OSF.IO/W92ME</a></td>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td><em>IPA Illustration of Northern Tosk Albanian [tosk1239] (Research Compendium)</em>. DOI: <a href="https://osf.io/vry3h/" target="_blank">10.17605/OSF.IO/VRY3H</a></td>
+  </tr>
+</table>
+
+<h2>Software</h2>
+
+<table>
+  <tr>
+    <td>R</td>
+    <td><em>tidymv</em>, Tidy Model Visualisation</td>
+    <td><a href="http://github.com/stefanocoretta/tidymv" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td><em>rticulate</em>, Ultrasound Tongue Imaging in R</td>
+    <td><a href="http://github.com/stefanocoretta/rticulate" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td><em>speakr</em>, an R wrapper for the phonetic software Praat</td>
+    <td><a href="https://github.com/stefanocoretta/speakr" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
+  </tr>
+  <tr>
+    <td>R Shiny</td>
+    <td><em>SFM exporter</em></td>
+    <td><a href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
+  </tr>
+  <tr>
+    <td>TeX</td>
+    <td><em>phonrule</em>, LaTeX macros for typesetting phonological rules</td>
+    <td><a href="https://www.ctan.org/pkg/phonrule" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
+  </tr>
+</table>
+
 
 <h2>Talks and posters</h2>
 
@@ -157,40 +231,5 @@ tags: []
     <td><em>A new case of “rhinoglottophilia:” from nasalisation to aspiration.</em> Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESHP2), 3–4 December, University of Edinburgh.</td>
     <td><a href="https://stefanocoretta.github.io/docs/pubs/2015-eshp.pdf" target="_blank"><i class="fa fa-file-pdf"></i></a></td>
     <td></td>
-  </tr>
-</table>
-
-<h2>Software and packages</h2>
-
-<table>
-  <tr>
-    <td>2017</td>
-    <td><em>tidymv</em>, Tidy Model Visualisation</td>
-    <td><a href="http://github.com/stefanocoretta/tidymv" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td><em>rticulate</em>, Ultrasound Tongue Imaging in R</td>
-    <td><a href="http://github.com/stefanocoretta/rticulate" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td><em>speakr</em>, an R wrapper for the phonetic software Praat</td>
-    <td><a href="https://github.com/stefanocoretta/speakr" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2016</td>
-    <td><em>SFM exporter</em></td>
-    <td><a href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2016</td>
-    <td><em>language-praat</em>, PRAAT scripting language support in the Atom Editor</td>
-    <td><a href="https://atom.io/packages/language-praat" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2013</td>
-    <td><em>phonrule</em>, LaTeX macros for typesetting phonological rules</td>
-    <td><a href="https://www.ctan.org/pkg/phonrule" target="_blank"><i class="fa fa-external-link-alt"></i></a></td>
   </tr>
 </table>

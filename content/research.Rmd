@@ -109,6 +109,7 @@ I am also a supporter of the **Slow Science** movement, part of the broader "slo
 
 <!-- TODO: ethics -->
 <!-- TODO: research project management -->
+<!-- TODO: methods as theory, theory = concepts + methods, theory and applications, basic science and applied science -->
 
 <!-- TODO: statistics -->
 

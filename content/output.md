@@ -6,7 +6,7 @@ categories: []
 tags: []
 ---
 
-<h2>Papers</h2>
+## Papers
 
 <span style="display: block" id="osi-notice">
   <span class="osi-preprint"></span> = <b>Preprint</b> (author manuscript <em>prior</em> to peer-review).
@@ -16,92 +16,24 @@ tags: []
   <span class="osi-compendium"></span> = <b>Research compendium</b> (data and code). <i class="fa fa-lock-open"></i> = <b>Open access</b>.
 </span>
 
-<br>
 
-<table>
-  <tr>
-    <td>submitted</td>
-    <td>
-    <b>Northern Tosk Albanian (IPA Illustration)</b>
-    <br>
-    <u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols
-    <br>
-    <em>Journal of the International Phonetic Association</em>
-    <br>
-    <a class="osi" href=https://osf.io/mb2hg/ target="_blank"><span class="osi-preprint"></span></a>
-    <a class="osi" href=https://osf.io/vry3h/ target="_blank"><span class="osi-compendium"></span></a>
-    </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>forthcoming</td>
-    <td>
-    <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b>
-    <br>
-    Chris Carignan, <u>Stefano Coretta</u>, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit
-    <br>
-    <em>Language</em>
-    <br>
-    <a class="osi" href=https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum target="_blank"><span class="osi-compendium"></span></a>
-    </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>2020</td>
-    <td>
-    <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b>
-    <br>
-    Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>, Ludovica Serratrice, Elena Lieven
-    <br>
-    <em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a>
-    <br>
-    <a class="osi" href=https://doi.org/10.1111/cdev.13406 target="_blank"><span class="osi-published"></span></a>
-    </td>
-    <td><i class="fa fa-lock-open"></i></td>
-  </tr>
-  <tr>
-    <td>2020</td>
-    <td>
-    <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b>
-    <br>
-    <u>Stefano Coretta</u>
-    <br>
-    <em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.
-    <br>
-    <a class="osi" href=https://doi.org/10.31219/osf.io/zrqyx target="_blank"><span class="osi-postprint"></span></a>
-    <a class="osi" href=http://doi.org/10.1121/10.0000556 target="_blank"><span class="osi-published"></span></a>
-    <a class="osi" href=https://osf.io/d245b/ target="_blank"><span class="osi-compendium"></span></a>
-    </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>2019</td>
-    <td>
-    <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b>
-    <br>
-    <u>Stefano Coretta</u>
-    <br>
-    <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.
-    <br>
-    <a class="osi" href=http://doi.org/10.5334/gjgl.869 target="_blank"><span class="osi-published"></span></a>
-    <a class="osi" href=https://osf.io/bfyhr/ target="_blank"><span class="osi-compendium"></span></a>
-    </td>
-    <td><i class="fa fa-lock-open"></i></td>
-  </tr>
-</table>
 
-<h2>PhD thesis</h2>
+| | | |
+---|---|---
+submitted   | <b>Northern Tosk Albanian (IPA Illustration)</b><br><u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br><em>Journal of the International Phonetic Association</em><br><a class="osi" href=https://osf.io/mb2hg/ target="_blank"><span class="osi-preprint"></span></a> <a class="osi" href=https://osf.io/vry3h/ target="_blank"><span class="osi-compendium"></span></a> | |
+forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b><br>Chris Carignan, <u>Stefano Coretta</u>, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit<br><em>Language</em><br><a class="osi" href=https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum target="_blank"><span class="osi-compendium"></span></a> |
+2020        | <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br>Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>, Ludovica Serratrice, Elena Lieven<br><em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a><br><a class="osi" href=https://doi.org/10.1111/cdev.13406 target="_blank"><span class="osi-published"></span></a> | <i class="fa fa-lock-open"></i>
+2020        | <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br><u>Stefano Coretta</u><br><em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.<br><a class="osi" href=https://doi.org/10.31219/osf.io/zrqyx target="_blank"><span class="osi-postprint"></span></a> <a class="osi" href=http://doi.org/10.1121/10.0000556 target="_blank"><span class="osi-published"></span></a> <a class="osi" href=https://osf.io/d245b/ target="_blank"><span class="osi-compendium"></span> |
+2019        | <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br><u>Stefano Coretta</u><br><em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.<br><a class="osi" href=http://doi.org/10.5334/gjgl.869 target="_blank"><span class="osi-published"></span></a> <a class="osi" href=https://osf.io/bfyhr/ target="_blank"><span class="osi-compendium"></span></a> | <i class="fa fa-lock-open"></i>
 
-<table>
-  <tr>
-    <td>2020</td>
-    <td><em>Vowel duration and consonant voicing: A production study</em>. University of Manchester, UK. DOI: <a href="http://doi.org/10.17605/OSF.IO/W92ME" target="_blank">10.17605/OSF.IO/W92ME</a></td>
-    <td><a href=https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf target="_blank"><i class="fa fa-file-pdf"></i></a></td>
-    <td><a class="osi" href=https://osf.io/w92me/ target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-</table>
 
-<h2>Data</h2>
+## PhD thesis
+
+| | | |
+---|---|---
+2020 | <em>Vowel duration and consonant voicing: A production study</em>. University of Manchester, UK. DOI: <a href="http://doi.org/10.17605/OSF.IO/W92ME" target="_blank">10.17605/OSF.IO/W92ME</a><br><a class="osi" href=https://osf.io/w92me/ target="_blank"><span class="osi-compendium"></span></a> | <a href=https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf target="_blank"><i class="fa fa-file-pdf"></i></a>
+
+## Data
 
 <table>
   <tr>
@@ -114,7 +46,7 @@ tags: []
   </tr>
 </table>
 
-<h2>Software</h2>
+## Software
 
 <table>
   <tr>
@@ -145,7 +77,7 @@ tags: []
 </table>
 
 
-<h2>Talks and posters</h2>
+## Talks and posters
 
 <table>
   <tr>

@@ -52,51 +52,42 @@ In my view of phonetology, a phonetological system has the following properties:
 
 I also consider these statements to be extendible more generally to linguisticality [@haspelmath2020] as a holistic system.
 
-## Linguistic diasystems
+## Linguistic systems
 
-In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of "language" in the sense of *linguistic system*.
+In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of *linguistic system* that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
 
-@cysouw2013 propose a metamodel based on documentation, which formalises the notion of language using three concepts:
+@cysouw2013 propose a metamodel based on linguistic documentation and description.
+From this model, I borrow two concepts:
 
 - **Glossonym** (p. 339)
 
-  A *glossonym* is a name used to refer to a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to language-like entities.
+  A *glossonym* is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
 
 - **Doculect** (p 342)
 
-  A *doculect* (documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is a pairing of a glossonym and a resource. An example: [@howard1986; *mawayana*].
+  A *doculect* (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is the pairing of a glossonym and a resource. An example: [@howard1986; *mawayana*].
 
-- **Languoid** (p. 347)
+@cysouw2013 [p. 347] also introduce the concept of "languoid" which refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family".
 
-  A *languoid* refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family" [@cysouw2013, p. 347]. An example:
+I propose instead the term **glossolect**, which---unlike "languoid"---does not necessarily entails a strictly-nested hierarchical structure. This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
 
-  - <Coretta (2021); *mawayana*;
-    - [@schomburgk1848; *mawakwa*, *maopityan*],
-    - [@farabee1918; *mapidian*, *maopityan*, *moonpidenne*)],
-    - [@howard1986; *mawayana*],
-    - [@kaufman1994; *mapidian*, *mopidyán*],
-    - [@aikhenvald1999; *mawayana*, *mapidian*, *mawakwa*],
-    - [@carlin2006a; *mawayana*],
-    - [@coretta2013; *mawayana*],
-    - [@michels2014; *mawayana*]>
+A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.
 
-I propose the term "**dialang**" as an alternative to *languoid*. This is inspired by the Italian linguistic tradition, which speaks of "linguistic diasystems", where a **diasystem** is a system of systems. The term *dialang*, as *languoid*, can refer to any node within the grouping hierarchy, from higher- to lower-level groupings. Thus, the term *dialang* can refer to a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.
+In terms of types of linguistic variation, I borrow from classical sociolinguistics (references TBA):
 
-Another useful set of terms, borrowed from the Italian sociolinguistic tradition (the set, not the terms), are the following ones, used to identify different types of linguistic variation:
-
-- **Diachronic**: variation in time.
-- **Diatopic**: variation in geographical space (less frequently used is *diachoric* for more local spatial variation).
-- **Diastratic**: variation based on social class and groups.
-- **Diaphasic**: variation based on linguistic and social context (includes *registers* and *slangs*).
-- **Diamesic**: variation based on the means of communication (e.g., visual/oral vs written, web vs print, etc.).
+- **Diachronic**: variation in *time*.
+- **Diatopic**: variation in *geographical space* (less frequently used is **diachoric** for more restricted spatial variation).
+- **Diastratic**: variation based on *social class and groups*.
+- **Diaphasic**: variation based on *linguistic and social context* (includes *registers* and *slangs*).
+- **Diamesic**: variation based on the *means of communication* (e.g., visual/oral vs written, web vs print, etc.).
 
 In sum:
 
-- A **dialang** is a hierarchical set of *doculects*.
+- A **glossolect** is a set of *doculects*.
 - A **doculect** is a pairing of a *glossonym* and a *resource*.
 - A **glossonym** is a name used to refer to a linguistic entity.
 - A **resource** is any object (publication, media, etc.) containing linguistic materials.
-- A dialang can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
+- Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
 
 ## Research methods
 

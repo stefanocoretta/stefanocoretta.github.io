@@ -118,8 +118,6 @@ I'll expand on this some time in the future, but for now I can strongly recommen
 ```{=html}
 <div id="map" style="width: 500px; height: 350px"></div>
 
-<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-
 <script>
   // Creating map options
   var mapOptions = {

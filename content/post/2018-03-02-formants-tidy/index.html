@@ -23,13 +23,12 @@ cls: unified-style-sheet-for-linguistics.csl
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>With the advent of more powerful statistical methods for accessing time series data, it is now more common to compare whole vowel formant trajectories rather then just using average formant values.</p>
-<p>Sometimes, the output of the Praat script used for extracting formats data gives us a ‘wide format’ dataset.
-In this format, separate columns contain formant values for each interval within the vowel.
-Normally, values are extracted every 10% or 5% intervals within the vowel.</p>
-<p>To work with formant trajectories data in <code>R</code>, we need instead a ‘long format’ dataset.
-In a long format dataset, the percent intervals are layed out in rows, rather then columns.</p>
-<p>We start by reading in the formant data, which were kindly provided by <a href="http://tiny.cc/sjn">Stephen Nichols</a>.</p>
+<p>With the advent of more powerful statistical methods for assessing time series data, it is now becoming more common to compare whole vowel formant trajectories rather then just using average values.</p>
+<p>In this post I will show how to tidy a formant measurements dataset and plot formants using the tidyverse <span class="citation">(<a href="#ref-wickham2017" role="doc-biblioref">Wickham 2017</a>)</span>.</p>
+<div id="from-wide-to-long" class="section level1">
+<h1>From wide to long</h1>
+<p>To illustrate the process, I will use formant data that was kindly provided by <a href="http://tiny.cc/sjn">Stephen Nichols</a>.</p>
+<p>Let’s first read in the data.</p>
 <pre class="r"><code>trajectories &lt;- read_csv(&quot;./static/data/nichols-2018/tulemupepelako.csv&quot;)</code></pre>
 <pre><code>## 
 ## ── Column specification ────────────────────────────────────────────────────────
@@ -60,58 +59,62 @@ In a long format dataset, the percent intervals are layed out in rows, rather th
 ## #   F3_25 &lt;dbl&gt;, F3_30 &lt;dbl&gt;, F3_35 &lt;dbl&gt;, F3_40 &lt;dbl&gt;, F3_45 &lt;dbl&gt;,
 ## #   F3_50 &lt;dbl&gt;, F3_55 &lt;dbl&gt;, F3_60 &lt;dbl&gt;, F3_65 &lt;dbl&gt;, F3_70 &lt;dbl&gt;,
 ## #   F3_75 &lt;dbl&gt;, F3_80 &lt;dbl&gt;, F3_85 &lt;dbl&gt;, F3_90 &lt;dbl&gt;, F3_95 &lt;dbl&gt;</code></pre>
-<p>The dataset contains formant values of F1-F3 at 5% intervals for the vowels of the word <em>tulemupepelako</em> ‘we are praying for her’ (Bemba, [<code>bemb1257</code>]).
-It’s a toy dataset of course, just for purpose of illustration, so not very exciting!</p>
-<p>The values for each 5% interval for each formant are in separate columns.
-For plotting and modelling, though, we need the data to be in a ‘tidy’ format <span class="citation">(<a href="#ref-wickham2014" role="doc-biblioref">Wickham 2014</a>)</span>:</p>
-<ul>
-<li>each observation unit is in a separate row</li>
-<li>each variable is a separate column</li>
-</ul>
-<p>In our case, each observation unit is a 5% interval.
-As for the variables, they are: time in the recording, word, vowel, vowel duration, F1, F2, and F3.</p>
-<p>The first step towards a long format data set is to gather all the columns that have formant values to a column indicating the formant plus interval (like ‘F1_05’) and the value of that formant in that interval.
-We can use <code>gather()</code> for this.</p>
-<p>In the following chunks, I will illustrate the results of each step separately by saving the output of the functions to variables.
-Later in this post, you’ll find a pipe chain with all functions without intermediate outputs.</p>
-<pre class="r"><code>trajectories_gath &lt;- gather(trajectories, &quot;formant&quot;, &quot;value&quot;, F1_05:F3_95)
-trajectories_gath</code></pre>
+<p>The dataset contains formant values of F1-F3 at 5% intervals for the vowels in the word <em>tulemupepelako</em> ‘we are praying for her’ (Bemba, [<code>bemb1257</code>]).</p>
+<p>In the first step, we will create two columns, one with the formant/interval label and one with the formant value, using <code>pivot_longer()</code>.</p>
+<pre class="r"><code>trajectories_long &lt;- pivot_longer(
+  trajectories,
+  F1_05:F3_95,
+  names_to = &quot;formant_int&quot;,
+  values_to = &quot;value&quot;)
+
+trajectories_long</code></pre>
 <pre><code>## # A tibble: 399 x 6
-##     Time Vowel Word           Duration formant value
-##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
-##  1  194. u     tulemupepelako     43.3 F1_05    406.
-##  2  194. e     tulemupepelako    103.  F1_05    503.
-##  3  194. u     tulemupepelako     14.1 F1_05    290.
-##  4  194. e     tulemupepelako     75.7 F1_05    440.
-##  5  194. e     tulemupepelako     68.2 F1_05    437.
-##  6  195. a     tulemupepelako     89.8 F1_05    800.
-##  7  195. o     tulemupepelako     98.5 F1_05    482.
-##  8  194. u     tulemupepelako     43.3 F1_10    439.
-##  9  194. e     tulemupepelako    103.  F1_10    517.
-## 10  194. u     tulemupepelako     14.1 F1_10    288.
+##     Time Vowel Word           Duration formant_int value
+##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt;
+##  1  194. u     tulemupepelako     43.3 F1_05        406.
+##  2  194. u     tulemupepelako     43.3 F1_10        439.
+##  3  194. u     tulemupepelako     43.3 F1_15        453.
+##  4  194. u     tulemupepelako     43.3 F1_20        456.
+##  5  194. u     tulemupepelako     43.3 F1_25        430.
+##  6  194. u     tulemupepelako     43.3 F1_30        357.
+##  7  194. u     tulemupepelako     43.3 F1_35        314.
+##  8  194. u     tulemupepelako     43.3 F1_40        288.
+##  9  194. u     tulemupepelako     43.3 F1_45        286.
+## 10  194. u     tulemupepelako     43.3 F1_50        327.
 ## # … with 389 more rows</code></pre>
-<p>Now we have a column <code>formant</code> with the formant plus interval label, and a column <code>value</code> with its value (in Hertz in our case).</p>
-<p>The next step is to separate the label of the formant plus interval into two separate columns: one for <code>formant</code>, and one for <code>interval</code>.</p>
-<pre class="r"><code>trajectories_sep &lt;- separate(trajectories_gath, formant, c(&quot;formant&quot;, &quot;interval&quot;), convert = TRUE)
+<p>The next step is to separate the <code>formant_int</code> column into two columns: one for <code>formant</code>, and one for <code>interval</code>.
+The argument <code>convert = TRUE</code> ensures that the <code>interval</code> column is converted into a numeric column.</p>
+<pre class="r"><code>trajectories_sep &lt;- separate(
+  trajectories_long,
+  formant_int,
+  c(&quot;formant&quot;, &quot;interval&quot;),
+  convert = TRUE
+)
+
 trajectories_sep</code></pre>
 <pre><code>## # A tibble: 399 x 7
 ##     Time Vowel Word           Duration formant interval value
 ##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;
 ##  1  194. u     tulemupepelako     43.3 F1             5  406.
-##  2  194. e     tulemupepelako    103.  F1             5  503.
-##  3  194. u     tulemupepelako     14.1 F1             5  290.
-##  4  194. e     tulemupepelako     75.7 F1             5  440.
-##  5  194. e     tulemupepelako     68.2 F1             5  437.
-##  6  195. a     tulemupepelako     89.8 F1             5  800.
-##  7  195. o     tulemupepelako     98.5 F1             5  482.
-##  8  194. u     tulemupepelako     43.3 F1            10  439.
-##  9  194. e     tulemupepelako    103.  F1            10  517.
-## 10  194. u     tulemupepelako     14.1 F1            10  288.
+##  2  194. u     tulemupepelako     43.3 F1            10  439.
+##  3  194. u     tulemupepelako     43.3 F1            15  453.
+##  4  194. u     tulemupepelako     43.3 F1            20  456.
+##  5  194. u     tulemupepelako     43.3 F1            25  430.
+##  6  194. u     tulemupepelako     43.3 F1            30  357.
+##  7  194. u     tulemupepelako     43.3 F1            35  314.
+##  8  194. u     tulemupepelako     43.3 F1            40  288.
+##  9  194. u     tulemupepelako     43.3 F1            45  286.
+## 10  194. u     tulemupepelako     43.3 F1            50  327.
 ## # … with 389 more rows</code></pre>
-<p>Now we can create individual columns for each formant from F1 to F3.
-We can achieve this with <code>spread()</code>.</p>
-<pre class="r"><code>trajectories_spr &lt;- spread(trajectories_sep, formant, value)
-trajectories_spr</code></pre>
+<p>Now we can put back the formant labels into one column each.
+We can achieve this with <code>pivot_wider()</code>, the counterpart of <code>pivo_longer()</code>.</p>
+<pre class="r"><code>trajectories_wide &lt;- pivot_wider(
+  trajectories_sep,
+  names_from = formant,
+  values_from = value
+)
+
+trajectories_wide</code></pre>
 <pre><code>## # A tibble: 133 x 8
 ##     Time Vowel Word           Duration interval    F1    F2    F3
 ##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -126,32 +129,37 @@ trajectories_spr</code></pre>
 ##  9  194. u     tulemupepelako     43.3       45  286. 1712. 2461.
 ## 10  194. u     tulemupepelako     43.3       50  327. 1747. 2470.
 ## # … with 123 more rows</code></pre>
-<p>What we have now is a long format dataset, with separate columns for each formant, and individual rows for each vowel interval.</p>
-<div id="the-pipe-chain" class="section level2">
-<h2>The pipe chain</h2>
-<p>All the steps above can be chained by using the pipe <code>%&gt;%</code>.</p>
+<p>We now have a dataset with separate columns for each formant and individual rows for each vowel interval.</p>
+<div id="the-pipe" class="section level2">
+<h2>The pipe</h2>
+<p>All the individual steps above can be chained by using the pipe <code>%&gt;%</code>.
+What the pipe does is simply “transferring” the output of the function before it as the input of the function after it.</p>
 <pre class="r"><code>trajectories &lt;- trajectories %&gt;%
-  gather(&quot;formant&quot;, &quot;value&quot;, F1_05:F3_95) %&gt;%
-  separate(formant, c(&quot;formant&quot;, &quot;interval&quot;), convert = TRUE) %&gt;%
-  spread(formant, value)</code></pre>
-<p>We can finally easily plot the formant trajectories.</p>
+  pivot_longer(F1_05:F3_95, names_to = &quot;formant_int&quot;, values_to = &quot;value&quot;) %&gt;%
+  separate(formant_int, c(&quot;formant&quot;, &quot;interval&quot;), convert = TRUE) %&gt;%
+  pivot_wider(names_from = formant, values_from = value)</code></pre>
+</div>
+</div>
+<div id="plot" class="section level1">
+<h1>Plot</h1>
+<p>We can finally plot the formant trajectories.</p>
 <pre class="r"><code>trajectories %&gt;%
   ggplot(aes(x = interval)) +
-  geom_smooth(aes(y = F1), se = FALSE, colour = &quot;red&quot;) +
-  geom_smooth(aes(y = F2), se = FALSE, colour = &quot;green&quot;) +
-  geom_smooth(aes(y = F3), se = FALSE, colour = &quot;blue&quot;) +
+  geom_smooth(aes(y = F1), method = &quot;gam&quot;, se = FALSE, colour = &quot;#A7473A&quot;) +
+  geom_smooth(aes(y = F2), method = &quot;gam&quot;, se = FALSE, colour = &quot;#4B5F6C&quot;) +
+  geom_smooth(aes(y = F3), method = &quot;gam&quot;, se = FALSE, colour = &quot;#B09B37&quot;) +
   facet_wrap(~ Vowel) +
   ylab(&quot;Hertz&quot;)</code></pre>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
-## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;
-## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;
+## `geom_smooth()` using formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;
+## `geom_smooth()` using formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/trajectory-plot-1.png" width="672" /></p>
-</div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-wickham2014" class="csl-entry">
-Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+<div id="ref-wickham2017" class="csl-entry">
+Wickham, Hadley. 2017. <span>“Tidyverse: Easily Install and Load the <span>‘Tidyverse’</span>.”</span> R package version 1.2.1.
+</div>
 </div>
 </div>
 </div>

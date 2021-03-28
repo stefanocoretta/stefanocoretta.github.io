@@ -3,8 +3,15 @@ title: Methods as theory
 author: 'Stefano Coretta'
 date: '2021-03-28'
 slug: methods-as-theory
-categories: []
-tags: []
+categories:
+  - Methods
+  - Meta-models
+tags:
+  - science
+  - theory
+  - concepts
+  - methods
+  - methods-as-theory
 bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
 output:
@@ -45,7 +52,7 @@ At first sight, one might think that methods are not part of theory, but rather 
 The following schematics illustrates this relation.
 
 ```{r meth-vs-theory}
-mermaid("graph LR; A(Methods)-->B(evidence 1); A-->C(evidence 2); A-->D(...); B-->E(THEORY); C-->E; D-->E", height = 200)
+mermaid("graph LR; A(Methods)-->B(evidence 1); A-->C(evidence 2); A-->D(...); B-->E(THEORY); C-->E; D-->E", height = 200, width = 350)
 ```
 
 Under this [methods-for-theory]{.smallcaps} view, a set of methods (from experimental design, through recruitment, data processing, to statistical modelling) is secondary to the theory.
@@ -61,7 +68,7 @@ Both components are theoretical, in the sense that they are the building blocks 
 The [methods-as-theory]{.smallcaps} view is represented in the following graph.
 
 ```{r meth-as-theory, fig.align="center"}
-mermaid("graph TB; A{THEORY}---B(CONCEPTS); A---C(METHODS); B---D(concept 1); B---E(concept 2); B---F(...); C---G(evidence 1); C---H(evidence 2); C---I(...)", height = 200)
+mermaid("graph TB; A{THEORY}---B(CONCEPTS); A---C(METHODS); B---D(concept 1); B---E(concept 2); B---F(...); C---G(evidence 1); C---H(evidence 2); C---I(...)", height = 200, width = 450)
 ```
 
 With *concept*, I mean any statement, hypothesis, law, rule, constraint, principle, observation that is part of a particular theory.

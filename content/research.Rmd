@@ -27,17 +27,17 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
 
 `r blogdown::shortcode_html("figure", src="/img/streamline/meta-models.svg", height="200")`
 
-In the following sections, I outline some of the conceptual and methodological aspects (*meta-models*) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
+In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
 
 ## Phonetology
 
-In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I refer to the set of sciences that investigate the *visual systems* (signing) and *sound systems* (speech sounds) of the world's languages with the term "phonetology" (from a combination of *phonet*ics and phon*ology*).
+In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I refer to the set of sciences that investigate the [visual systems]{.smallcaps} (signing) and [sound systems]{.smallcaps} (speech sounds) of the world's languages with the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*).
 
-Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term "phonetological system" can be used as an umbrella term that covers both visual and sound systems.
+Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
 
 ## Phonetological systems
 
-A *phonetological system* is comprised of a set of phonetological units and their relationships. Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.
+A *phonetological system* is comprised of a set of [phonetological units]{.smallcaps} and their [relationships]{.smallcaps}. Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.
 
 In my view of phonetology, a phonetological system has the following properties:
 
@@ -54,22 +54,22 @@ I also consider these statements to be extendible more generally to linguistical
 
 ## Linguistic systems
 
-In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of *linguistic system* that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
+In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
 
-@cysouw2013 propose a metamodel based on linguistic documentation and description.
+@cysouw2013 propose a meta-model based on linguistic documentation and description.
 From this model, I borrow two concepts:
 
 - **Glossonym** (p. 339)
 
-  A *glossonym* is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
+  A [glossonym]{.smallcaps} is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
 
 - **Doculect** (p 342)
 
-  A *doculect* (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is the pairing of a glossonym and a resource. An example: [@howard1986; *mawayana*].
+  A [doculect]{.smallcaps} (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is the pairing of a glossonym and a resource. An example: [@howard1986; *mawayana*].
 
 @cysouw2013 [p. 347] also introduce the concept of "languoid" which refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family".
 
-I propose instead the term **glossolect**, which---unlike "languoid"---does not necessarily entails a strictly-nested hierarchical structure. This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
+I propose instead the term [glossolect]{.smallcaps}, which---unlike languoid---does not necessarily entail a strictly-nested hierarchical structure. This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
 
 A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.
 
@@ -113,29 +113,74 @@ I'll expand on this some time in the future, but for now I can strongly recommen
 - *The Systems View of life: A unifying vision* [@capra2018].
 
 
-# Languages
+# Glossolects
 
-Among the languages I work(ed) with:
+```{=html}
+<div id="map" style="width: 500px; height: 350px"></div>
 
-* Mawayana (Arawak) [[mapi1252](http://glottolog.org/resource/languoid/id/mapi1252)].
-* Santa Isabel languages (Oceanic) [[sant1458](http://glottolog.org/resource/languoid/id/sant1458)].
-* Lombard (Indo-European) [[lomb1257](http://glottolog.org/resource/languoid/id/lomb1257)].
-* Icelandic (Indo-European) [[icel1247](http://glottolog.org/resource/languoid/id/icel1247)].
-* Old Irish (Indo-European) [[oldi1246](http://glottolog.org/resource/languoid/id/oldi1246)].
-* Albanian (Indo-European) [[alba1267](https://glottolog.org/resource/languoid/id/alba1267)].
-* English: Mancunian English (Indo-European).
-* Italian (Indo-European) [[ital182](http://glottolog.org/resource/languoid/id/ital1282)].
-* Polish (Indo-European) [[poli1260](http://glottolog.org/resource/languoid/id/poli1260)].
-* German (Indo-European) [[stan1295](http://glottolog.org/resource/languoid/id/stan1295)].
+<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<script>
+  // Creating map options
+  var mapOptions = {
+  center: [43, 12],
+  zoom: 1
+  }
+
+  var locations = [
+    ["Albanian", 41.37462429575211, 19.836399194216728],
+    ["Lombard", 45.46434080988441, 9.189109987193692],
+    ["Mancunian English", 53.48570992917277, -2.242346838953567],
+    ["Polish", 52.35425991368313, 20.97868643605009],
+    ["German", 51.13137169285076, 10.869930838568962],
+    ["Old Irish", 53.36876974328169, -7.6640674124826],
+    ["Mawayana", 2.360747504437431, -56.64959351491144],
+    ["Santa Isabel", -9.320409056569149, 160.0110242400546],
+    ["Icelandic", 65.03326785234268, -18.262524410901896],
+    ["Italian", 43.067982186245956, 12.39094108307519]
+  ];
+
+  // Creating a map object
+  var map = new L.map('map', mapOptions);
+
+  // Creating a Layer object
+  var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+  // Adding layer to the map
+  map.addLayer(layer);
+
+  for (var i = 0; i < locations.length; i++) {
+    marker = new L.marker([locations[i][1], locations[i][2]])
+    .bindPopup(locations[i][0])
+    .addTo(map);
+  }
+</script>
+```
+
+<br>
+
+The map above shows the main glossolects I work(ed) with: Arawak (*Mawayana* [[mapi1252]]); Oceanic (*Santa Isabel languages* [[sant1458]]); Indo-European (*Lombard* [[lomb1257]], *Icelandic* [[icel1247]], *Old Irish* [[oldi1246]], *Albanian* [[alba1267]], *Mancunian English* (Indo-European), *Italian* [[ital1282]], *Polish* [[poli1260]], *German* [[stan1295]]).
 
 In the earlier stages of my academic training, I was also exposed to (in random order and at varying degrees of depth): Sanskrit, Middle Egyptian, Classical Hebrew, Latin, Greek, Amharic, Hungarian, Proto-Indo-European, Proto-Oceanic, Middle Welsh, and Romani.
 
-Overall, my interests and expertise cover the following linguistic families/groups:
+Overall, my interests and expertise cover the following macro-glossolects:
 
 - Indo-European.
 - Oceanic.
 - South American.
 
-I would very much welcome offers of collaboration on languages from other areas of the world, especially languages of Africa, which are alas the ones I am the least familiar with.
+I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.
 
 ## References
+
+
+[mapi1252]: http://glottolog.org/resource/languoid/id/mapi1252
+[sant1458]: http://glottolog.org/resource/languoid/id/sant1458
+[lomb1257]: http://glottolog.org/resource/languoid/id/lomb1257
+[icel1247]: http://glottolog.org/resource/languoid/id/icel1247
+[oldi1246]: http://glottolog.org/resource/languoid/id/oldi1246
+[alba1267]: http://glottolog.org/resource/languoid/id/alba1267
+[ital1282]: http://glottolog.org/resource/languoid/id/ital1282
+[poli1260]: http://glottolog.org/resource/languoid/id/poli1260
+[stan1295]: http://glottolog.org/resource/languoid/id/stan1295
+[stan1295]: http://glottolog.org/resource/languoid/id/stan1295

@@ -4,6 +4,9 @@
   <h1>{{ .Title }}</h1>
 </header>
 
+<a href="../categories" class="button">Categories</a> <a href="../tags" class="button">Tags</a>
+
+
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}

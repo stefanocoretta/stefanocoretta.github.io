@@ -1,0 +1,148 @@
+/* Styles */
+
+body {
+    font-family: Lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    background: var(--theme);
+}
+
+.post-content h1 {
+  margin: 40px auto 32px;
+  font-size: 160%;
+}
+
+.post-content h2 {
+  margin: 32px auto 24px;
+  font-size: 120%;
+}
+
+.post-content a {
+  color: var(--accent-col);
+  box-shadow: 0 0px 0; /*remove box-shadow from links*/
+}
+
+.post-content a:hover {
+  box-shadow: 0 2px 0;
+}
+
+.post-content img.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hanging-indent {
+  padding-left: 20px ;
+  text-indent: -20px ;
+}
+
+.csl-entry {
+  padding-bottom: 15px;
+}
+
+.toc a:hover {
+    box-shadow: 0 2px 0;
+}
+
+.streami {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+}
+
+#images{
+  text-align: center;
+}
+
+/* Open Science Icons */
+
+#osi-notice {
+  display: block;
+  font-size: 0.8em
+}
+
+figure > * {
+  margin: 0 auto 0.55em;
+  display:block;
+}
+
+/* Home Panels */
+
+.cols-2 {
+  display: flex;
+  flex-wrap: wrap;
+  /*margin-right: -15px;*/
+  /*margin-left: -15px;*/
+}
+
+.col-left, .col-right {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left:15px
+}
+
+@media (min-width: 768px) {
+  .col-left{
+    flex: 0 0 41.66666667%;
+    max-width:41.66666667%
+  }
+
+  .col-right {
+    flex: 0 0 58.33333333%;
+    max-width:58.33333333%
+  }
+}
+
+/* Home info */
+
+.avatar-info {
+  text-align: center;
+}
+
+.post-content .avatar-info h2 {
+  color: var(--accent-col);
+}
+
+.post-content .avatar-info h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#institute {
+  font-weight: normal;
+  font-style: italic;
+  color: gray;
+}
+
+#my-email {
+  color: var(--accent-col);
+  margin-bottom: 30pt;
+}
+
+/* Blog archives */
+
+.archive-year-header {
+  line-height: 2em;
+  height: 2em;
+}
+
+.archive-y {
+  vertical-align: middle;
+  border-bottom: 0 0 0;
+}
+
+.archive-count {
+  border-radius: 30%;
+  color: white;
+  background-color: var(--secondary);
+  padding-left: 3pt;
+  padding-right: 3pt;
+  vertical-align: middle;
+}

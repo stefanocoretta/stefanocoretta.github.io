@@ -11,6 +11,10 @@ tags:
 math: true
 bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
+cover:
+  image: "/img/streamline/dots.svg"
+  alt: "random effects"
+  relative: false
 ---
 
 If you use **mixed-effects models** (aka multilevel models, hierarchical models), I am sure that at some point you asked yourself the following question at least once: *Should I include variable X as a fixed or as a random effect?*

@@ -11,6 +11,7 @@
       <h4>Postdoc researcher</h4>
       <h4 id="institute">Ludwig-Maximilians Universität München</h4>
       <h4 id="my-email"><a href = "mailto: s.coretta@lmu.de">s.coretta@lmu.de</a></h4>
+      <a href="https://github.com/stefanocoretta"><i class="fa fa-2x fa-github-square"></i></a> <a href="https://osf.io/profile/"><i class="ai ai-osf-square ai-2x"></i></a> <a href="https://www.researchgate.net/profile/Stefano-Coretta"><i class="ai ai-researchgate-square ai-2x"></i></a>
     </div>
   </div>
 </div>
@@ -36,9 +37,8 @@ For more details on my research interests and past/current research projects, ch
 </div>
 <div class="col-right">
 <h3>Education</h3>
-<ul class="ul-edu fa-ul">
+<ul class="ul-interests">
   <li>
-    <i class="fa-li fas fa-graduation-cap"></i>
     <div class="description">
       <p class="course">PhD in Linguistics, 2020</p>
       <p class="institution">University of Manchester, UK</p>
@@ -46,7 +46,6 @@ For more details on my research interests and past/current research projects, ch
   </li>
 
   <li>
-    <i class="fa-li fas fa-graduation-cap"></i>
     <div class="description">
       <p class="course">MA in Phonetics and Phonology, 2016</p>
       <p class="institution">University of York, UK</p>
@@ -54,7 +53,6 @@ For more details on my research interests and past/current research projects, ch
   </li>
 
   <li>
-    <i class="fa-li fas fa-graduation-cap"></i>
     <div class="description">
       <p class="course">MA in Theoretical and Applied Linguistics, 2013</p>
       <p class="institution">University of Pavia, Italy</p>
@@ -62,7 +60,6 @@ For more details on my research interests and past/current research projects, ch
   </li>
 
   <li>
-    <i class="fa-li fas fa-graduation-cap"></i>
     <div class="description">
       <p class="course">BA in Classics with Oriental Studies, 2011</p>
       <p class="institution">University of Milan, Italy</p>

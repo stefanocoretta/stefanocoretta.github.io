@@ -116,7 +116,7 @@ I'll expand on this some time in the future, but for now I can strongly recommen
 # Glossolects
 
 ```{=html}
-<div id="map" style="width: 500px; height: 350px"></div>
+<div id="map" style="width: 100%; height: 350px"></div>
 
 <script>
   // Creating map options

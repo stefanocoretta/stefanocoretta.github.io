@@ -62,16 +62,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
     ["Proto-Indo-European", 48.92258221357454, 44.39721976600874],
     ["Proto-Oceanic", -2.2738438434515924, 147.98570468853856]
   ];
-
-  // Creating a map object
-  var map = new L.map('map', mapOptions);
-
-  // Creating a Layer object
-  var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-
-  // Adding layer to the map
-  map.addLayer(layer);
-
+  
   var redMarker = L.AwesomeMarkers.icon({
     prefix: 'fa',
     icon: 'circle',
@@ -84,6 +75,15 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
     icon: 'circle',
     markerColor: 'blue'
   })
+
+  // Creating a map object
+  var map = new L.map('map', mapOptions);
+
+  // Creating a Layer object
+  var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+  // Adding layer to the map
+  map.addLayer(layer);
 
   for (var i = 0; i < glossolects_alt.length; i++) {
     marker = new L.marker([glossolects_alt[i][1], glossolects_alt[i][2]], {icon: redMarker})

@@ -34,7 +34,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
   zoom: 1
   }
 
-  var locations = [
+  var glossolects = [
     ["Albanian", 41.37462429575211, 19.836399194216728],
     ["Lombard", 45.46434080988441, 9.189109987193692],
     ["Mancunian English", 53.48570992917277, -2.242346838953567],
@@ -47,6 +47,20 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
     ["Italian", 43.067982186245956, 12.39094108307519]
   ];
 
+  var glossolects_alt = [
+    ["Sanskrit", 22.955032923623392, 79.65853709299677],
+    ["Middle Egyptian", 26.68915919998071, 30.061133063625018],
+    ["Classical Hebrew", 31.701049014734046, 34.81939740805301],
+    ["Amharic", 8.940745305905224, 39.363325470902424],
+    ["Hungarian", 46.9118992000112, 19.783931650798237],
+    ["Middle Welsh", 52.0292214335183, -4.209275249228268],
+    ["Romani", 27.231673983405738, 72.99265784266915],
+    ["Latin", 41.95495247190666, 13.264735543517023],
+    ["Ancient Greek", 39.40251458305395, 23.142186264051578],
+    ["Proto-Indo-European", 48.92258221357454, 44.39721976600874],
+    ["Proto-Oceanic", -2.2738438434515924, 147.98570468853856]
+  ];
+
   // Creating a map object
   var map = new L.map('map', mapOptions);
 
@@ -56,15 +70,33 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
   // Adding layer to the map
   map.addLayer(layer);
 
-  for (var i = 0; i < locations.length; i++) {
-    marker = new L.marker([locations[i][1], locations[i][2]])
-    .bindPopup(locations[i][0])
+  var redMarker = L.AwesomeMarkers.icon({
+    prefix: 'fa',
+    icon: 'circle',
+    markerColor: 'red'
+  })
+
+  // Create marker
+  var blueMarker = L.AwesomeMarkers.icon({
+    prefix: 'fa',
+    icon: 'circle',
+    markerColor: 'blue'
+  })
+
+  for (var i = 0; i < glossolects_alt.length; i++) {
+    marker = new L.marker([glossolects_alt[i][1], glossolects_alt[i][2]], {icon: redMarker})
+    .bindPopup(glossolects_alt[i][0])
+    .addTo(map);
+  }
+
+  for (var i = 0; i < glossolects.length; i++) {
+    marker = new L.marker([glossolects[i][1], glossolects[i][2]], {icon: blueMarker})
+    .bindPopup(glossolects[i][0])
     .addTo(map);
   }
 </script>
 <p><br></p>
-<p>The map above shows the main <a href="../meta/#linguistic-systems">glossolects</a> I work(ed) with: Arawak (<em>Mawayana</em> [<a href="http://glottolog.org/resource/languoid/id/mapi1252">mapi1252</a>]); Oceanic (<em>Santa Isabel languages</em> [<a href="http://glottolog.org/resource/languoid/id/sant1458">sant1458</a>]); Indo-European (<em>Lombard</em> [<a href="http://glottolog.org/resource/languoid/id/lomb1257">lomb1257</a>], <em>Icelandic</em> [<a href="http://glottolog.org/resource/languoid/id/icel1247">icel1247</a>], <em>Old Irish</em> [<a href="http://glottolog.org/resource/languoid/id/oldi1246">oldi1246</a>], <em>Albanian</em> [<a href="http://glottolog.org/resource/languoid/id/alba1267">alba1267</a>], <em>Mancunian English</em> (Indo-European), <em>Italian</em> [<a href="http://glottolog.org/resource/languoid/id/ital1282">ital1282</a>], <em>Polish</em> [<a href="http://glottolog.org/resource/languoid/id/poli1260">poli1260</a>], <em>German</em> [<a href="http://glottolog.org/resource/languoid/id/stan1295">stan1295</a>]).</p>
-<p>In the earlier stages of my academic training, I was also exposed to (in random order and at varying degrees of depth): Sanskrit, Middle Egyptian, Classical Hebrew, Latin, Greek, Amharic, Hungarian, Proto-Indo-European, Proto-Oceanic, Middle Welsh, and Romani.</p>
+<p>The map shows in red the main <a href="../meta/#linguistic-systems">glossolects</a> I work(ed) with, and in blue glossolects I have studied during my time at University and forgot to different degrees (approximate locations).</p>
 <p>Overall, my interests and expertise cover the following macro-glossolects:</p>
 <ul>
 <li>Indo-European.</li>

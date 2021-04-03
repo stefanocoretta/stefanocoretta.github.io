@@ -28,6 +28,11 @@ url = "research/"
 weight = -30
 
 [[menu.main]]
+name = "Meta"
+url = "meta/"
+weight = -25
+
+[[menu.main]]
 name = "Output"
 url = "output/"
 weight = -20

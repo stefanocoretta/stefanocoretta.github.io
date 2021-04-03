@@ -22,7 +22,8 @@ I am a postdoc researcher at the [Institute of Phonetics and Speech Processing](
 I received a PhD degree in linguistics from the University of Manchester (UK) in 2020.
 My area of research is *linguistics* with a focus on *phonetology*---the study of speech sounds and their relation to [*linguisticality*](https://doi.org/10.3389/fpsyg.2019.03056) (Human Language).
 
-For more details on my research interests and past/current research projects, check out the [Research]({{< ref "research" >}}) page.
+For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research]({{< ref "research" >}}) and [Meta-models]({{< ref "meta" >}}) pages.
+You can find a list of research outputs (papers, software, etc) in [Output]({{< ref "output" >}}).
 
 <div class="cols-2">
 <div class="col-left">

@@ -101,7 +101,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
 
 <br>
 
-The map shows in red the main [glossolects](../meta/#linguistic-systems) I work(ed) with, and in blue glossolects I have studied during my time at University and forgot to different degrees (approximate locations).
+The map shows in red the main [glossolects](../meta/#linguistic-systems) I work(ed) with, and in blue glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
 
 Overall, my interests and expertise cover the following macro-glossolects:
 

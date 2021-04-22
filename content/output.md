@@ -93,6 +93,10 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
     <td>Thea Cameron-Faulkner, Circle Steele, Nividita Malik, Stefano Coretta, Ludovica Serretrice, and Elena Lieven. <em>A cross-cultural analysis of early prelinguistic gesture development and its relationship to language development.</em> Talk presented at the 5th International Language and Communicative Development Conference, 12 June, Manchester (UK).</td>
   </tr>
   <tr>
+    <td>2019</td>
+    <td>Stefano Coretta. <em>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish.</em> Talk presented at LAGB 2019.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon.pdf" target="_blank"><i class="fa fa-file-text"></i></a></td>
+  </tr>
+  <tr>
     <td>2018</td>
     <td><em>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography.</em> Invited talk at Aarhus University, 18 September, Denmark.</td>
   </tr>
@@ -102,11 +106,11 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
   </tr>
   <tr>
     <td>2018</td>
-    <td><em>Quantifying vocal fold activity: two new methods for analysing electroglottographic data.</em> Talk presented at New Developments in Speech Sensing and Imaging, 23 June, University of Lisbon, Portugal. DOI: <a href="http://doi.org/10.13140/RG.2.2.17341.56801" target="_blank">10.13140/RG.2.2.17341.56801</a><br><a href=https://www.researchgate.net/publication/325973208_Quantifying_vocal_fold_activity_Two_new_methods_for_analysing_electroglottographic_data" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://osf.io/zvcgb/" target="_blank"><span class="osi-compendium"></span></a></td>
+    <td><em>Quantifying vocal fold activity: two new methods for analysing electroglottographic data.</em> Talk presented at New Developments in Speech Sensing and Imaging, 23 June, University of Lisbon, Portugal.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon-satellite.pdf" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://osf.io/zvcgb/" target="_blank"><span class="osi-compendium"></span></a></td>
   </tr>
   <tr>
     <td>2018</td>
-    <td><em>Longer vowel duration correlates with tongue root advancement in Italian and Polish: An ultrasound study.</em> Talk presented at LabPhon16, 22 June, University of Lisbon, Portugal.<br><a href=https://www.researchgate.net/publication/325973221_Longer_vowel_duration_correlates_with_tongue_root_advancement_in_Italian_and_Polish_An_ultrasound_study" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-labphon" target="_blank"><span class="osi-compendium"></span></a></td>
+    <td><em>Longer vowel duration correlates with tongue root advancement in Italian and Polish: An ultrasound study.</em> Talk presented at LabPhon16, 22 June, University of Lisbon, Portugal.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon.pdf" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-labphon" target="_blank"><span class="osi-compendium"></span></a></td>
   </tr>
   <tr>
     <td>2018</td>
@@ -114,7 +118,7 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
   </tr>
   <tr>
     <td>2018</td>
-    <td><em>Tongue root advancement and vowel duration: A gradient effect?.</em> Talk presented at the 2018 BAAP Colloquium, 13 Apr, University of Kent, UK.<br><a href="https://www.researchgate.net/publication/324517901_Tongue_root_advancement_and_vowel_duration_A_gradient_effect" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-baap" target="_blank"><span class="osi-compendium"></span></a></td>
+    <td><em>Tongue root advancement and vowel duration: A gradient effect?.</em> Talk presented at the 2018 BAAP Colloquium, 13 Apr, University of Kent, UK.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-baap.pdf" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-baap" target="_blank"><span class="osi-compendium"></span></a></td>
   </tr>
   <tr>
     <td>2017</td>
@@ -130,7 +134,7 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
   </tr>
   <tr>
     <td>2017</td>
-    <td><em>Reproducibility and phonetic research: a computational workflow.</em> Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28–29 April, University of Manchester.<br><a href="http://nbviewer.jupyter.org/github/stefanocoretta/reproducible-phonetics/blob/master/slides.pdf" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://github.com/stefanocoretta/reproducible-phonetics" target="_blank"><span class="osi-compendium"></span></a></td>
+    <td><em>Implementing reproducibility in phonetic research: a computational workflow.</em> Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28–29 April, University of Manchester.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-mfil.pdf" target="_blank"><i class="fa fa-file-text"></i></a> <a class="osi" href="https://github.com/stefanocoretta/reproducible-phonetics" target="_blank"><span class="osi-compendium"></span></a></td>
   </tr>
   <tr>
     <td>2015</td>

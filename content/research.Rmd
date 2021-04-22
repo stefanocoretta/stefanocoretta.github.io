@@ -43,7 +43,9 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
     ["Mawayana", 2.360747504437431, -56.64959351491144],
     ["Santa Isabel", -9.320409056569149, 160.0110242400546],
     ["Icelandic", 65.03326785234268, -18.262524410901896],
-    ["Italian", 43.067982186245956, 12.39094108307519]
+    ["Italian", 43.067982186245956, 12.39094108307519],
+    ["Proto-Indo-European", 48.92258221357454, 44.39721976600874],
+    ["Proto-Oceanic", -2.2738438434515924, 147.98570468853856]
   ];
 
   var glossolects_alt = [
@@ -55,9 +57,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
     ["Middle Welsh", 52.0292214335183, -4.209275249228268],
     ["Romani", 27.231673983405738, 72.99265784266915],
     ["Latin", 41.95495247190666, 13.264735543517023],
-    ["Ancient Greek", 39.40251458305395, 23.142186264051578],
-    ["Proto-Indo-European", 48.92258221357454, 44.39721976600874],
-    ["Proto-Oceanic", -2.2738438434515924, 147.98570468853856]
+    ["Ancient Greek", 39.40251458305395, 23.142186264051578]
   ];
 
   var redMarker = L.AwesomeMarkers.icon({
@@ -98,7 +98,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
 
 <br>
 
-The map shows in red the main [glossolects](../meta/#linguistic-systems) I work(ed) with, and in blue glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
+The map shows in blue the main [glossolects](../meta/#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
 
 Overall, my interests and expertise cover the following macro-glossolects:
 

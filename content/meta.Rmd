@@ -8,8 +8,6 @@ output:
     number_sections: true
 ---
 
-`r blogdown::shortcode_html("figure", src="/img/streamline/meta-models.svg", height="200")`
-
 In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
 
 # Phonetology
@@ -73,8 +71,6 @@ In sum:
 - Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
 
 # Research methods
-
-`r blogdown::shortcode_html("figure", src="/img/streamline/research-methods.svg", height="200")`
 
 As far as research methods are concerned, I am an enthusiastic advocate of **Open Science**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
 

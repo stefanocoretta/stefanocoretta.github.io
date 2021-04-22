@@ -8,9 +8,6 @@ output:
     number_sections: true
 ---
 
-
-`r blogdown::shortcode_html("figure", src="/img/streamline/research-desk.svg", height="200")`
-
 My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds from a variety of intersecting perspectives, including acoustics, articulation, descriptive linguistics, historical linguistics (sound change), comparative linguistic (typology), and computational modelling. More specifically, most of my research centres around *speech production*.
 
 # Projects
@@ -62,7 +59,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
     ["Proto-Indo-European", 48.92258221357454, 44.39721976600874],
     ["Proto-Oceanic", -2.2738438434515924, 147.98570468853856]
   ];
-  
+
   var redMarker = L.AwesomeMarkers.icon({
     prefix: 'fa',
     icon: 'circle',

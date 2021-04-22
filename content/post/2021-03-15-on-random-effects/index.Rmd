@@ -29,13 +29,6 @@ In the following summary---which is heavily based on Gelman's post [*Why I don't
 
 ## Five definitions of "random effect"
 
-```{=html}
-<div id="images">
-  <img class="streami" border="0" alt="calm" src="/img/streamline/calm.svg"/>
-  <img class="streami" border="0" alt="panic" src="/img/streamline/panic.svg"/>
-</div>​
-```
-
 In his post, Gelman says that there are at least five possible ways of defining random effects (with others being subsumable under those five).
 To illustrate these definitions and make them more relatable to phoneticians and phonologists alike, I will make use of a fictitious study of f0 (fundamental frequency) as a correlate of emotional arousal ($\eta$).
 

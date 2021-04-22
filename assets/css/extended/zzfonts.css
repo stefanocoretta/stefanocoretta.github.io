@@ -70,16 +70,21 @@
 
 .osi-compendium:before {
   content: "\e900";
+  color: #0086ce;
 }
 .osi-postprint:before {
   content: "\e901";
+  color: #008300;
 }
 .osi-preprint:before {
   content: "\e902";
+  color: #7F7F7F;
 }
 .osi-prereg:before {
   content: "\e903";
+  color: #6f0f13;
 }
 .osi-published:before {
   content: "\e904";
+  color: #EF7B0B;
 }

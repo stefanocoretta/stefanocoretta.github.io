@@ -94,7 +94,7 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
   </tr>
   <tr>
     <td>2019</td>
-    <td>Stefano Coretta. <em>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish.</em> Talk presented at LAGB 2019.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon.pdf" target="_blank"><i class="fa fa-file-text"></i></a></td>
+    <td>Stefano Coretta. <em>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish.</em> Talk presented at LAGB 2019.<br><a href="https://stefanocoretta.github.io/docs/pubs/2019-LAGB.pdf" target="_blank"><i class="fa fa-file-text"></i></a></td>
   </tr>
   <tr>
     <td>2018</td>

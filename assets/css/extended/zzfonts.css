@@ -42,11 +42,10 @@
 
 @font-face {
   font-family: 'Open-Science-icons';
-  src:  url('../../fonts/Open-Science-icons.eot?g5uas7');
-  src:  url('../../fonts/Open-Science-icons.eot?g5uas7#iefix') format('embedded-opentype'),
-    url('../../fonts/Open-Science-icons.ttf?g5uas7') format('truetype'),
-    url('../../fonts/Open-Science-icons.woff?g5uas7') format('woff'),
-    url('../../fonts/Open-Science-icons.svg?g5uas7#Open-Science-icons') format('svg');
+  src:  url('../../fonts/OpenScienceIcons-Regular.otf');
+  src:  url('../../fonts/OpenScienceIcons-Regular.ttf') format('truetype'),
+    url('../../fonts/OpenScienceIcons-Regular.woff') format('woff'),
+    url('../../fonts/OpenScienceIcons-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -68,23 +67,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.osi-compendium:before {
+.osi-manuscript:before {
   content: "\e900";
-  color: #0086ce;
-}
-.osi-postprint:before {
-  content: "\e901";
-  color: #008300;
-}
-.osi-preprint:before {
-  content: "\e902";
   color: #7F7F7F;
 }
-.osi-prereg:before {
-  content: "\e903";
-  color: #6f0f13;
+.osi-submitted:before {
+  content: "\e901";
+  color: #7F7F7F;
+}
+.osi-accepted:before {
+  content: "\e902";
+  color: #008300;
 }
 .osi-published:before {
-  content: "\e904";
+  content: "\e903";
   color: #EF7B0B;
+}
+.osi-preprint:before {
+  content: "\e904";
+  color: #7F7F7F;
+}
+.osi-postprint:before {
+  content: "\e905";
+  color: #008300;
+}
+.osi-published-alt:before {
+  content: "\e906";
+  color: #EF7B0B;
+}
+.osi-compendium:before {
+  content: "\e907";
+  color: #0086ce;
+}
+.osi-prereg:before {
+  content: "\e908";
+  color: #6f0f13;
 }

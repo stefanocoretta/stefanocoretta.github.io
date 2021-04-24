@@ -9,9 +9,10 @@ tags: []
 ## Papers
 
 <span style="display: block" id="osi-notice">
-  <span class="osi-preprint"></span> = <b>Preprint</b> (author manuscript <em>prior</em> to peer-review).
-  <span class="osi-postprint"></span> = <b>Postprint</b> (accepted author manuscript <em>after</em> peer-review, same content as published version).
-  <span class="osi-published"></span> = <b>Published</b> version (accepted manuscript with publisher's formatting, same content as postprint).
+  <span class="osi-manuscript"></span> = <b>Manuscript</b> (author manuscript, not submitted, in preparation).
+  <span class="osi-submitted"></span> = <b>Submitted</b> (aka <em>Preprint</em>; submitted author manuscript <em>prior</em> to peer-review).
+  <span class="osi-accepted"></span> = <b>Accepted</b> (aka <em>Postprint</em>; accepted author manuscript <em>after</em> peer-review, same content as published version).
+  <span class="osi-published"></span> = <b>Published</b> (aka <em>Offprint</em>; accepted manuscript with publisher's formatting, same content as postprint).
   <span class="osi-prereg"></span> = <b>Preregistration</b>.
   <span class="osi-compendium"></span> = <b>Research compendium</b> (data and code). <i class="fa fa fa-unlock-alt"></i> = <b>Open access</b>.
 </span>
@@ -20,10 +21,12 @@ tags: []
 
 | | |
 ---|---
-submitted   | <b>Northern Tosk Albanian (IPA Illustration)</b><br><u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br><em>Journal of the International Phonetic Association</em><br>{{< osi class="osi-preprint" href="https://osf.io/mb2hg/" >}} {{< osi class="osi-compendium" href="https://osf.io/vry3h/" >}}
+in prep.   | <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br><u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger
+submitted   | <b>Northern Tosk Albanian (IPA Illustration)</b><br><u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br><em>Journal of the International Phonetic Association</em><br>{{< osi class="osi-submitted" href="https://osf.io/mb2hg/" >}} {{< osi class="osi-compendium" href="https://osf.io/vry3h/" >}}
+submitted   | <b>Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish</b><br>Patrycja Strycharczuk, Małgorzata Ćavar, <u>Stefano Coretta</u><br><em>Journal of the Acoustical Society of America</em><br>{{< osi class="osi-compendium" href="https://stefanocoretta.github.io/polish-reduction/" >}}
 forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b><br>Chris Carignan, <u>Stefano Coretta</u>, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit<br><em>Language</em><br>{{< osi class="osi-compendium" href="https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum" >}}
 2020        | <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br>Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>, Ludovica Serratrice, Elena Lieven<br><em>Child Development</em>. DOI: <a href="http://doi.org/10.1111/cdev.13406" target="_blank">10.1111/cdev.13406</a><br><i class="fa fa-unlock-alt"></i> {{< osi class="osi-published" href="https://doi.org/10.1111/cdev.13406" >}}
-2020        | <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br><u>Stefano Coretta</u><br><em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.<br>{{< osi class="osi-postprint" href="https://doi.org/10.31219/osf.io/zrqyx" >}} {{< osi class="osi-published" href="http://doi.org/10.1121/10.0000556" >}} {{< osi class="osi-compendium" href="https://osf.io/d245b/" >}}
+2020        | <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br><u>Stefano Coretta</u><br><em>Journal of the Acoustical Society of America</em> 147. 245-259. DOI: <a href="http://doi.org/10.1121/10.0000556" target="_blank">10.1121/10.0000556</a>.<br>{{< osi class="osi-accepted" href="https://doi.org/10.31219/osf.io/zrqyx" >}} {{< osi class="osi-published" href="http://doi.org/10.1121/10.0000556" >}} {{< osi class="osi-compendium" href="https://osf.io/d245b/" >}}
 2019        | <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br><u>Stefano Coretta</u><br><em>Glossa: a journal of general linguistics</em> 4(1) 125. 1-25. DOI: <a href="http://doi.org/10.5334/gjgl.869" target="_blank">10.5334/gjgl.869</a>.<br><i class="fa fa-unlock-alt"></i> {{< osi class="osi-published" href="http://doi.org/10.5334/gjgl.869" >}} {{< osi class="osi-compendium" href="https://osf.io/quy7k/" >}}
 
 

@@ -1,0 +1,63 @@
+---
+title: On phonologisation
+author: Stefano Coretta
+date: '2021-04-24'
+slug: []
+categories:
+  - Linguistics
+tags:
+  - phonology
+  - concepts
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+cls: unified-style-sheet-for-linguistics.csl
+---
+
+<!-- NOTE: Add that it is a diachronic process -->
+
+After the [post](../2021-03-15-on-random-effects/) on the definition of random effects, I thought about writing another one on the definition of [phonologisation]{.smallcaps}.
+
+As part of my [PhD thesis](https://stefanocoretta.github.io/phd-dissertation/s-ve.html#s:ve-phonologise) on the effect of consonant voicing on vowel duration, I briefly reviewed the five definitions of phonologisation I could find in the literature.
+This post includes text from my thesis and expands on a few points.
+
+The main take-away of the sections to follow is that what one means with phonologisation is (unsurprisingly) dependent on the set of assumptions that are part of the framework within which the term is used.
+Secondly, these definitions are mutually exclusive, to an extent such that one's argument based on one definition might be inappropriate under another definition.
+It is thus important to always contextualise the use of the term when employed, even when the meaning might be self-evident from the context.
+
+## Five definitions of phonologisation
+
+I could identify five different definitions of phonologisation.
+These differ substantially, as mentioned above, and are in the most part incompatible with one another.
+The five definitions are found within the following general phonological frameworks:
+
+- Structuralism (i.e. classical/traditional phonology).
+- Lexical Phonology.
+- Stratal Optimality Theory.
+- Life-Cycle of Phonological Processes (an extention of Stratal OT).
+- Exemplar-based models.
+
+I will discuss each of these in turn.
+
+## Structuralism
+
+The **classical** or **structuralist** definition states that phonologisation occurs when a contextual allophone becomes contrastive, or in other words it becomes a phoneme [@kiparsky2015], generally after the disappearance or replacement of the conditioning context.
+
+A classical example of phonologisation concerns the development of a contrast between velar and palatal consonants from velar consonants in Sanskrit [@hock1991, pp. 149].
+At some point in the history of Sanskrit, the velar stops /k/ and /g/ (which derived from PIE velars and labialised velars) where palatalised when followed by /i/ and /e/, creating an allophonic distinction between velars proper and palatal consonants.
+
+The subsequent change of /e/ (and /o/) to /a/ removed the context conditioning palatalisation (the front vowel /e/), thus creating minimal pairs opposing /ka, ga/ and /tʃa, dʒa/.
+At this stage, the palatal allophones were phonologised.
+
+| sound change   | phonemic  | phonetic  |
+|----------------|-----------|-----------|
+|                | /ka, ke/  | [ka, ke]  |
+| palatalisation | /ka, ke/  | [ka, tʃe] |
+| /e/ > /a/      | /ka, tʃa/ | [ka, tʃa] |
+
+The IE roots for 'what' and 'and' illustrate the phonologisation of the palatal consonants.
+
+- PIE \**kʷod* > Skt. /kad/ *kád* 'what' (cf. Lat. *quod*).
+- PIE \*-*kʷe* > Skt. /ke/ [tʃe] > /tʃa/ -*ca* 'and' (cf. Lat. *-que*).
+
+This conceptualisation of phonologisation amounts to saying that phonetic features that were previously computed procedurally (during phonological/phonetic derivation) from an underlying lexical representation are now instead already part of the lexical representation (which is, in structural terms, a string of phonemes).
+
+### References

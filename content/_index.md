@@ -9,7 +9,7 @@
     <div class="avatar-info">
       <h2>Stefano Coretta</h2>
       <h4>Postdoc researcher</h4>
-      <h4 id="institute">Ludwig-Maximilians Universität München</h4>
+      <h4 id="institute">Ludwig-Maximilians-Universität München</h4>
       <h4 id="my-email"><a href = "mailto: s.coretta@lmu.de">s.coretta@lmu.de</a></h4>
       <a href="https://twitter.com/StefanoCoretta"><i class="fa fa-2x fa-twitter"></i></a> <a href="https://github.com/stefanocoretta"><i class="fa fa-2x fa-github"></i></a> <a href="https://osf.io/profile/"><i class="ai ai-osf ai-2x"></i></a>
     </div>

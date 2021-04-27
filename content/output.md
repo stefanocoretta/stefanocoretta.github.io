@@ -8,14 +8,7 @@ tags: []
 
 ## Papers
 
-<span style="display: block" id="osi-notice">
-  <b>Icons legend</b> — <span class="osi-manuscript"></span> = <b>Manuscript</b> (author manuscript, not submitted, in preparation).
-  <span class="osi-submitted"></span> = <b>Submitted</b> manuscript (aka <em>Preprint</em>; submitted author manuscript <em>prior</em> to peer-review).
-  <span class="osi-accepted"></span> = <b>Accepted</b> manuscript (aka <em>Postprint</em>; accepted author manuscript <em>after</em> peer-review, same content as published version).
-  <span class="osi-published"></span> = <b>Published</b> manuscript (aka <em>Offprint</em>; accepted manuscript with publisher's formatting, same content as postprint).
-  <span class="osi-prereg"></span> = <b>Preregistration</b>.
-  <span class="osi-compendium"></span> = <b>Research compendium</b> (data and materials).
-</span>
+{{< osi-notice >}}
 
 <br>
 
@@ -23,20 +16,19 @@ Click on the icons below each publication to download the manuscript or to navig
 
 | | |
 ---|---
-in prep.   | <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br><i class="fas fa-users"></i> <u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger
+in prep.    | <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br><i class="fas fa-users"></i> <u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger
 submitted   | <b>Northern Tosk Albanian (IPA Illustration)</b><br><i class="fas fa-users"></i> <u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br><i class="fas fa-book-open"></i> <em>Journal of the International Phonetic Association</em><br>{{< osi class="osi-submitted" href="https://osf.io/mb2hg/" >}} {{< osi class="osi-compendium" href="https://osf.io/vry3h/" >}}
 submitted   | <b>Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish</b><br><i class="fas fa-users"></i> Patrycja Strycharczuk, Małgorzata Ćavar, <u>Stefano Coretta</u><br><i class="fas fa-book-open"></i> <em>Journal of the Acoustical Society of America</em><br>{{< osi class="osi-compendium" href="https://stefanocoretta.github.io/polish-reduction/" >}}
 forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b><br><i class="fas fa-users"></i> Chris Carignan, <u>Stefano Coretta</u>, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit<br><i class="fas fa-book-open"></i> <em>Language</em><br>{{< osi class="osi-compendium" href="https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum" >}}
-2020        | <div class="tooltip"><i class="fa fa fa-unlock-alt"></i><span class="tooltiptext">Open access</span></div> <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br><i class="fas fa-users"></i> Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>, Ludovica Serratrice, Elena Lieven<br><i class="fas fa-book-open"></i> <em>Child Development</em> 92(1). 273--290<br>[![](https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg)](http://doi.org/10.1111/cdev.13406)<br>{{< osi class="osi-published" href="https://doi.org/10.1111/cdev.13406" >}}
+2020        | {{< open-access >}} <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br><i class="fas fa-users"></i> Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>, Ludovica Serratrice, Elena Lieven<br><i class="fas fa-book-open"></i> <em>Child Development</em> 92(1). 273--290<br>[![](https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg)](http://doi.org/10.1111/cdev.13406)<br>{{< osi class="osi-published" href="https://doi.org/10.1111/cdev.13406" >}}
 2020        | <b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br><i class="fas fa-user"></i> <u>Stefano Coretta</u><br><i class="fas fa-book-open"></i> <em>Journal of the Acoustical Society of America</em> 147. 245--259<br>[![](https://img.shields.io/badge/doi-10.1121/10.0000556-850000.svg)](http://doi.org/10.1121/10.0000556)<br>{{< osi class="osi-accepted" href="https://doi.org/10.31219/osf.io/zrqyx" >}} {{< osi class="osi-published" href="http://doi.org/10.1121/10.0000556" >}} {{< osi class="osi-compendium" href="https://osf.io/d245b/" >}}
-2019        | <div class="tooltip"><i class="fa fa fa-unlock-alt"></i><span class="tooltiptext">Open access</span></div> <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br><i class="fas fa-user"></i> <u>Stefano Coretta</u><br><i class="fas fa-book-open"></i> <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1--25<br>[![](https://img.shields.io/badge/doi-10.5334/gjgl.869-850000.svg)](http://doi.org/10.5334/gjgl.869)<br>{{< osi class="osi-published" href="http://doi.org/10.5334/gjgl.869" >}} {{< osi class="osi-compendium" href="https://osf.io/quy7k/" >}}
-
+2019        | {{< open-access >}} <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br><i class="fas fa-user"></i> <u>Stefano Coretta</u><br><i class="fas fa-book-open"></i> <em>Glossa: a journal of general linguistics</em> 4(1) 125. 1--25<br>[![](https://img.shields.io/badge/doi-10.5334/gjgl.869-850000.svg)](http://doi.org/10.5334/gjgl.869)<br>{{< osi class="osi-published" href="http://doi.org/10.5334/gjgl.869" >}} {{< osi class="osi-compendium" href="https://osf.io/quy7k/" >}}
 
 ## PhD thesis
 
 | | |
 ---|---
-2020 | <b>Vowel duration and consonant voicing: A production study</b><br><i class="fas fa-university"></i>University of Manchester, UK.<br>[![](https://img.shields.io/badge/doi-10.17605/OSF.IO/W92ME-850000.svg)](http://doi.org/10.17605/OSF.IO/W92ME)<br><a href=https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf target="_blank"><i class="fas fa-cloud-download-alt"></i></a> <a class="osi" href=https://osf.io/w92me/ target="_blank"><span class="osi-compendium"></span></a>
+2020 | <b>Vowel duration and consonant voicing: A production study</b><br><i class="fas fa-university"></i>University of Manchester, UK.<br>[![](https://img.shields.io/badge/doi-10.17605/OSF.IO/W92ME-850000.svg)](http://doi.org/10.17605/OSF.IO/W92ME)<br><a class="fas fa-globe" href="https://stefanocoretta.github.io/phd-thesis/"></a> <a class="fas fa-cloud-download-alt" href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank"></a> {{< osi class="osi-compendium" href="https://osf.io/w92me/" >}}
 
 ## Data
 
@@ -50,11 +42,11 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
 
 | | | |
 ---|---|:---:
-2021 | <b>tidymv: Tidy Model Visualisation for Generalised Additive Models</b><br><u>Stefano Coretta</u><br><em>R package v3.2.1<em><br>[![](https://img.shields.io/badge/doi-10.5281/zenodo.1343882-850000.svg)](https://doi.org/10.5281/zenodo.1343882) | <a href="https://stefanocoretta.github.io/tidymv/" target="_blank"><i class="fa fa-external-link-square-alt fa-lg"></i></a> <a href="https://github.com/stefanocoretta/tidymv" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
-2021 | <b>rticulate: Ultrasound Tongue Imaging in R</b><br><u>Stefano Coretta</u><br><em>R package v1.7.2<em><br>[![](https://img.shields.io/badge/doi-10.5281/zenodo.1469038-850000.svg)](https://doi.org/10.5281/zenodo.1469038) | <a href="https://stefanocoretta.github.io/rticulate/" target="_blank"><i class="fa fa-external-link-square-alt fa-lg"></i></a> <a href="https://github.com/stefanocoretta/rticulate" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
-2021 | <b>speakr:  A Wrapper for the Phonetic Software Praat</b><br><u>Stefano Coretta</u><br><em>R package v3.1.1<em><br>[![](https://img.shields.io/badge/doi-10.5281/zenodo.4014768-850000.svg)](https://doi.org/10.5281/zenodo.4014768) | <a href="https://stefanocoretta.github.io/speakr/" target="_blank"><i class="fa fa-external-link-square-alt fa-lg"></i></a> <a href="https://github.com/stefanocoretta/speakr" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
-2017 | <b>SFM exporter (Toolbox/FLEx SIL)</b><br><u>Stefano Coretta</u><br><em>Shiny App v2.2.0<em> | <a href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"><i class="fa fa-external-link-square-alt fa-lg"></i></a> <a href="https://github.com/stefanocoretta/sfm-exporter" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
-2017 | <b>phonrule: TeX package for typesetting phonological rules in SPE style</b><br><u>Stefano Coretta</u><br><em>LaTeX package v1.4.0<em> | <a href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"><i class="fa fa-external-link-square-alt fa-lg"></i></a> <a href="https://github.com/stefanocoretta/phonrule" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
+2021 | <b>tidymv: Tidy Model Visualisation for Generalised Additive Models</b><br><u>Stefano Coretta</u><br><em>R package v3.2.1<em><br>[![](https://img.shields.io/badge/doi-10.5281/zenodo.1343882-850000.svg)](https://doi.org/10.5281/zenodo.1343882) | <a class="fa fa-external-link-square-alt fa-lg" href="https://stefanocoretta.github.io/tidymv/" target="_blank"></a> <a class="fa fa-github-alt fa-lg" href="https://github.com/stefanocoretta/tidymv" target="_blank"><i ></i></a>
+2021 | <b>rticulate: Ultrasound Tongue Imaging in R</b><br><u>Stefano Coretta</u><br><em>R package v1.7.2<em><br>[![](https://img.shields.io/badge/doi-10.5281/zenodo.1469038-850000.svg)](https://doi.org/10.5281/zenodo.1469038) | <a class="fa fa-external-link-square-alt fa-lg" href="https://stefanocoretta.github.io/rticulate/" target="_blank"></a> <a class="fa fa-github-alt fa-lg" href="https://github.com/stefanocoretta/rticulate" target="_blank"></a>
+2021 | <b>speakr:  A Wrapper for the Phonetic Software Praat</b><br><u>Stefano Coretta</u><br><em>R package v3.1.1<em><br>[![](https://img.shields.io/badge/doi-10.5281/zenodo.4014768-850000.svg)](https://doi.org/10.5281/zenodo.4014768) | <a class="fa fa-external-link-square-alt fa-lg" href="https://stefanocoretta.github.io/speakr/" target="_blank"></a> <a class="fa fa-github-alt fa-lg" href="https://github.com/stefanocoretta/speakr" target="_blank"></a>
+2017 | <b>SFM exporter (Toolbox/FLEx SIL)</b><br><u>Stefano Coretta</u><br><em>Shiny App v2.2.0<em> | <a href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"><i class="fa fa-external-link-square-alt fa-lg"></i></a> <a class="fa fa-github-alt fa-lg" href="https://github.com/stefanocoretta/sfm-exporter" target="_blank"></a>
+2017 | <b>phonrule: TeX package for typesetting phonological rules in SPE style</b><br><u>Stefano Coretta</u><br><em>LaTeX package v1.4.0<em> | <a class="fa fa-external-link-square-alt fa-lg" href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"></a> <a class="fa fa-github-alt fa-lg" href="https://github.com/stefanocoretta/phonrule" target="_blank"></a>
 
 
 ## Talks and posters
@@ -121,3 +113,4 @@ forthcoming | <b>Planting the seed for sound change: Evidence from real-time MRI
     <td><em>A new case of “rhinoglottophilia:” from nasalisation to aspiration.</em> Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESHP2), 3–4 December, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/docs/pubs/2015-eshp.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a></td>
   </tr>
 </table>
+

@@ -1,1 +1,1 @@
-<a class="osi" {{ with .Get "href" }}href="{{.}}"{{ end }} target="_blank"><span {{ with .Get "class" }}class="{{.}}"{{ end }}></span></a>
+<a {{ with .Get "class" }}class="osi {{.}}"{{ end }} {{ with .Get "href" }}href="{{.}}"{{ end }} target="_blank"></a>

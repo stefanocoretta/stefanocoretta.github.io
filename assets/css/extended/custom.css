@@ -1,0 +1,316 @@
+/* Custom css */
+
+/*
+- VARIABLES
+- FONTS
+- STYLES
+*/
+
+
+/* VARIABLES */
+
+:root {
+  --accent-col: #850000;
+}
+
+.dark {
+  --accent-col: #C11B17;
+}
+
+/* FONTS */
+
+/* Webfont: Lato-Regular */
+@font-face {
+    font-family: 'Lato';
+    src: url('../../fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Lato-Regular.woff') format('woff'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Italic */
+@font-face {
+    font-family: 'Lato';
+    src: url('../../fonts/Lato-Italic.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Lato-Italic.woff') format('woff'); /* Modern Browsers */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Heavy */
+@font-face {
+    font-family: 'Lato';
+    src: url('../../fonts/Lato-Heavy.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Lato-Heavy.woff') format('woff'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-HeavyItalic */
+@font-face {
+    font-family: 'Lato';
+    src: url('../../fonts/Lato-HeavyItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('../../fonts/Lato-HeavyItalic.woff') format('woff'); /* Modern Browsers */
+    font-style: italic;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Open-Science-icons';
+  src:  url('../../fonts/OpenScienceIcons-Regular.otf');
+  src:  url('../../fonts/OpenScienceIcons-Regular.ttf') format('truetype'),
+    url('../../fonts/OpenScienceIcons-Regular.woff') format('woff'),
+    url('../../fonts/OpenScienceIcons-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="osi-"], [class*=" osi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Open-Science-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.2em;
+  font-size: 1.2rem;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.osi-manuscript:before {
+  content: "\e900";
+  color: #7F7F7F;
+}
+.osi-submitted:before {
+  content: "\e901";
+  color: #7F7F7F;
+}
+.osi-accepted:before {
+  content: "\e902";
+  color: #008300;
+}
+.osi-published:before {
+  content: "\e903";
+  color: #EF7B0B;
+}
+.osi-preprint:before {
+  content: "\e904";
+  color: #7F7F7F;
+}
+.osi-postprint:before {
+  content: "\e905";
+  color: #008300;
+}
+.osi-published-alt:before {
+  content: "\e906";
+  color: #EF7B0B;
+}
+.osi-compendium:before {
+  content: "\e907";
+  color: #0086ce;
+}
+.osi-prereg:before {
+  content: "\e908";
+  color: #6f0f13;
+}
+
+/* STYLES */
+
+body {
+    font-family: Lato,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    background: var(--theme);
+}
+
+.post-content h1 {
+  margin: 40px auto 32px;
+  font-size: 160%;
+}
+
+.post-content h2 {
+  margin: 32px auto 24px;
+  font-size: 120%;
+}
+
+.post-content a {
+  color: var(--accent-col);
+  box-shadow: 0 0px 0; /*remove box-shadow from links*/
+}
+
+.post-content a:hover {
+  box-shadow: 0 2px 0;
+}
+
+.post-content img.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hanging-indent {
+  padding-left: 20px ;
+  text-indent: -20px ;
+}
+
+.csl-entry {
+  padding-bottom: 15px;
+}
+
+.toc a:hover {
+    box-shadow: 0 2px 0;
+}
+
+.streami {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+}
+
+.smallcaps {
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.DiagrammeR, .grViz pre {
+  text-align: center;
+}
+
+#images {
+  text-align: center;
+}
+
+/* Open Science Icons */
+
+#osi-notice {
+  display: block;
+  font-size: 0.8em;
+}
+
+figure > * {
+  margin: 0 auto 0.55em;
+  display: block;
+}
+
+/* Home Panels */
+
+.cols-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-left, .col-right {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left:15px
+}
+
+@media (min-width: 768px) {
+  .col-left{
+    flex: 0 0 41.66666667%;
+    max-width:41.66666667%
+  }
+
+  .col-right {
+    flex: 0 0 58.33333333%;
+    max-width:58.33333333%
+  }
+}
+
+/* Home info */
+
+.avatar-info {
+  text-align: center;
+  margin-bottom: 30pt;
+}
+
+.post-content .avatar-info h2 {
+  color: var(--accent-col);
+}
+
+.post-content .avatar-info h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#institute {
+  font-weight: normal;
+  font-style: italic;
+  color: gray;
+}
+
+#my-email {
+  color: var(--accent-col);
+  margin-bottom: 10pt;
+}
+
+/* Blog archives */
+
+.archive-year-header {
+  line-height: 2em;
+  height: 2em;
+}
+
+.archive-y {
+  vertical-align: middle;
+  border-bottom: 0 0 0;
+}
+
+.archive-count {
+  border-radius: 30%;
+  color: white;
+  background-color: var(--secondary);
+  padding-left: 3pt;
+  padding-right: 3pt;
+  vertical-align: middle;
+}
+
+/* Tooltip container */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+

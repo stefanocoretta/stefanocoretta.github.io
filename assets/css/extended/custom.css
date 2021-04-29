@@ -144,6 +144,11 @@ body {
   font-size: 120%;
 }
 
+.post-content h3 {
+  margin: 32px auto 24px;
+  font-size: 110%;
+}
+
 .post-content a {
   color: var(--accent-col);
   box-shadow: 0 0px 0; /*remove box-shadow from links*/

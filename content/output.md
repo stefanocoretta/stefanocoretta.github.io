@@ -63,17 +63,28 @@ Click on the icons below each publication to download the manuscript or to navig
 
 ## PhD thesis
 
-| | |
----|---
-2020 | <b>Vowel duration and consonant voicing: A production study</b><br><i class="fas fa-university"></i>University of Manchester, UK.<br>[![](https://img.shields.io/badge/doi-10.17605/OSF.IO/W92ME-850000.svg)](http://doi.org/10.17605/OSF.IO/W92ME)<br><a class="fas fa-globe" href="https://stefanocoretta.github.io/phd-thesis/"></a> <a class="fas fa-cloud-download-alt" href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank"></a> {{< osi class="osi-compendium" href="https://osf.io/w92me/" >}}
+{{< tab-2 >}}
+{{< pub year="2020"
+  title="Vowel duration and consonant voicing: A production study"
+  institution="University of Manchester, UK"
+  doi="10.17605/OSF.IO/W92ME"
+  url="https://stefanocoretta.github.io/phd-thesis/"
+  download="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf"
+  compendium="https://osf.io/w92me/" >}}
+{{< /tab-2 >}}
 
 ## Data
 
-| | |
----|---
-2021 | <b>Vowel duration and consonant voicing: A production study</b><br><i class="fas fa-user"></i> <u>Stefano Coretta</u><br>[![](https://img.shields.io/badge/doi-10.17605/OSF.IO/W92ME-850000.svg)](http://doi.org/10.17605/OSF.IO/W92ME)
-2020 | <b>IPA Illustration of Northern Tosk Albanian</b><br><i class="fas fa-users"></i> <u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br>[![](https://img.shields.io/badge/doi-10.17605/OSF.IO/VRY3H-850000.svg)](http://doi.org/10.17605/OSF.IO/VRY3H)
-
+{{< tab-2 >}}
+{{< pub year="2021"
+  title="IPA Illustration of Northern Tosk Albanian"
+  author="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
+  doi="10.17605/OSF.IO/VRY3H" >}}
+{{< pub year="2020"
+  title="Vowel duration and consonant voicing: A production study"
+  author="<u>Stefano Coretta</u>"
+  doi="10.17605/OSF.IO/W92ME" >}}
+{{< /tab-2 >}}
 
 ## Software
 

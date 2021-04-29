@@ -5,6 +5,7 @@
  {{ end }}{{ with .Get "title" }}<b>{{.}}</b>{{ end }}
     {{ with .Get "author" }}<br><i class="fas fa-user"></i> {{. | markdownify}}{{ end }}
     {{ with .Get "authors" }}<br><i class="fas fa-users"></i> {{. | markdownify}}{{ end }}
+    {{ with .Get "institution" }}<br><i class="fas fa-university"></i> {{. | markdownify}}{{ end }}
     {{ with .Get "journal" }}<br><i class="fas fa-book-open"></i> <em>{{. | markdownify}}</em>{{ end }} {{ with .Get "info" }}{{. | markdownify}}{{ end }}<br>
     {{ with .Get "doi" }}<a href="{{.}}"><img class="doi" src="https://img.shields.io/badge/doi-{{.}}-850000.svg"></a>{{ end }}
     {{ with .Get "manuscript" }}<a class="osi osi-manuscript" href="{{.}}" target="_blank"></a> {{ end }}
@@ -12,6 +13,8 @@
     {{ with .Get "accepted" }}<a class="osi osi-accepted" href="{{.}}" target="_blank"></a> {{ end }}
     {{ with .Get "published" }}<a class="osi osi-published" href="{{.}}" target="_blank"></a> {{ end }}
     {{ with .Get "registration" }}<a class="osi osi-prereg" href="{{.}}" target="_blank"></a> {{ end }}
+    {{ with .Get "url" }}<a class="fas fa-globe" href="{{.}}" target="_blank"></a> {{ end }}
+    {{ with .Get "download" }}<a class="fas fa-cloud-download-alt" href="{{.}}" target="_blank"></a> {{ end }}
     {{ with .Get "compendium" }}<a class="osi osi-compendium" href="{{.}}" target="_blank"></a> {{ end }}
   </td>
 </tr>

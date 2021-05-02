@@ -13,6 +13,10 @@ cls: unified-style-sheet-for-linguistics.csl
 output:
   blogdown::html_page:
     number_sections: true
+cover:
+  image: "/img/twitter-card-phonologisation.png"
+  alt: "Schematics of a typical case of phonologisation of palatalised velars"
+  relative: false
 ---
    
 <!-- NOTE: Add that it is a diachronic process -->

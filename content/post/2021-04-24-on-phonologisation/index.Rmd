@@ -46,7 +46,7 @@ I will discuss each of these in turn.
 
 # Structuralism
 
-The **classical** or **structuralist** definition states that phonologisation occurs when a contextual allophone becomes contrastive, or in other words it becomes a phoneme [@kiparsky2015], generally after the disappearance or replacement of the conditioning context.
+The **classical** or **structuralist** definition states that **_phonologisation_ occurs when a contextual allophone becomes contrastive**, or in other words it becomes a phoneme [@kiparsky2015], generally after the disappearance or replacement of the conditioning context.
 
 A classical example of phonologisation concerns the development of a contrast between velar and palatal consonants from velar consonants in Sanskrit [@hock1991, pp. 149].
 At some point in the history of Sanskrit, the velar stops /k/ and /g/ (which derived from PIE velars and labialised velars) where palatalised when followed by /i/ and /e/, creating an allophonic distinction between velars proper and palatal consonants.
@@ -65,16 +65,16 @@ The IE roots for 'what' and 'and' illustrate the phonologisation of the palatal 
 - PIE \**kʷod* > Skt. /kad/ *kád* 'what' (cf. Lat. *quod*).
 - PIE \*-*kʷe* > Skt. /ke/ [tʃe] > /tʃa/ -*ca* 'and' (cf. Lat. *-que*).
 
-This conceptualisation of phonologisation amounts to saying that phonetic features that were previously computed procedurally (during phonological/phonetic derivation) from an underlying lexical representation are now instead already part of the lexical representation (which is, in structural terms, a string of phonemes).
+This conceptualisation of phonologisation amounts to saying that phonetic features that were previously computed procedurally (during phonological/phonetic derivation) from an underlying lexical representation are now instead already part of the lexical representation (which is, in structural terms, a string of phonemes/features/elements).
 
 # Lexical Phonology
 
 Phonologisation assumes a different meaning within the framework of **Lexical Phonology** [@kiparsky1988].
-Lexical Phonology argues that there exist two types of phonological processes: processes that apply at the lexical level (stem and prosodic word), and processes that are post-lexical and apply across the board.^[Note that in generative phonology, of which Lexical Phonology is a strand, speakers are assumed to store abstract, underlying phonemic forms, or representation, in memory. These underlying forms, to be produced, go through a series of neuro-cognitive processes, or derivation, that generate a surface representation which is then sent to the motor system which executes the motor plan corresponding to that surface representation. The details widely vary depending on the model or framework.]
-According to the view of Lexical Phonology, a process is _phonologised_ when it goes from being post-lexical to being lexical.
+Lexical Phonology argues that there exist two types of phonological processes: processes that apply at the lexical level (stem and prosodic word), and processes that are post-lexical and apply across the board.^[Note that in generative phonology, of which Lexical Phonology is a strand, speakers are assumed to store abstract, underlying phonemic forms, or representations, in memory. These underlying forms, to be produced, go through a series of neuro-cognitive processes, or derivation, that generate a surface representation which is then sent to the motor system which executes the motor plan corresponding to that surface representation. The details widely vary depending on the model or framework.]
+According to the view of Lexical Phonology, **a process is _phonologised_ when it goes from being post-lexical to being lexical**.
 
 To carry on with the Sanskrit example, palatalisation was initially post-lexical, in other words it was applied across the board during the phonological derivation process after all lexical processes have been applied to the stem and then word.
-At some point in the history of Sanskrit, the process of velar palatalisation then started being applied also at the lexical level (with the original "copy" of the process possibly still being applied post-lexically).
+At some point in the history of Sanskrit, the process of velar palatalisation started being applied also at the lexical level (with the original "copy" of the process possibly still being applied post-lexically).
 Velar palatalisation has been phonologised, creating so called "quasi-phonemes" [i.e. categorical, distinctive units, not yet able to create lexical contrast, @janda1999].
 
 # Stratal Optimality Theory
@@ -87,12 +87,12 @@ OT constraints, in Stratal OT, are independently ordered in each level, so that 
 Stratal OT also stipulates that phonological constraints apply iteratively (cyclically) from the narrower domain, namely the stem, through the word domain, to the phrasal domain.
 Under cyclicity, the output of one domain is passed over as input to the next, and so on.
 
-For @kiparsky2000, *phonologisation* occurs when the constraint ordering of the phrasal domain (the post-lexical level of Lexical Phonology) is copied over to the word and stem domains (the lexical level of Lexical Phonology).
+For @kiparsky2000, ***phonologisation* occurs when the constraint ordering of the phrasal domain (the post-lexical level of Lexical Phonology) is copied over to the word and stem domains (the lexical level of Lexical Phonology)**.
 
 # Life-Cycle of Phonological Processes
 
 An extension of Stratal OT, the **Life-Cycle of Phonological Processes** [@bermudezotero2007; @bermudezotero2015], offers yet another definition of phonologisation and a more fine-grained terminological set.
-@bermudezotero2015 reserves the term *phonologisation* for when a physico-physiological (mechanic) phenomenon comes under the control of the speaker/hearer and becomes part of their grammar (more specifically, part of the phonetic module of the grammar).
+@bermudezotero2015 reserves the term ***phonologisation* for when a physico-physiological (mechanic) phenomenon comes under the control of the speaker/hearer** and becomes part of their grammar (more specifically, part of the phonetic module of the grammar).
 
 The process, once it has entered the grammar, can further ascend through increasingly deeper grammatical modules.
 A (gradient) phonologised process is said to be [stabilised]{.smallcaps} (and thus categorical) once it is generated by a categorical phonological process, which applies at the phrase level.
@@ -103,20 +103,20 @@ In the final step in the ascent of a sound pattern through the grammar, a phonol
 
 # Eemplar Theory
 
-A further definition of phonologisation stems from **exemplar models of speech perception and production** [@johnson1997; @pierrehumbert2001; @soskuthy2018; @ambridge2018; @todd2019].
+A further definition of phonologisation comes from **exemplar models of speech perception and production** [@johnson1997; @pierrehumbert2001; @soskuthy2018; @ambridge2018; @todd2019].
 
 A core tenet of these models is that speech tokens are stored in memory as so-called [exemplars]{.smallcaps} after having being experienced.
 Depending on the specifics of the particular model, exemplars are stored at varying degrees of granularity and richness of detail.
 
 Each exemplar consists of a (more or less) faithful representation of the experienced token that generated it, and it thus contains information from multiple levels and factors (phonetic, lexical, syntactic, sociolinguistic, contextual, and so on).
 Lexical and other linguistic units are represented as sets of exemplars, or [exemplar clouds]{.smallcaps}.
-The representational space of exemplar clouds is multi-dimensional and can be operationalised as a multivariate distribution.
+The representational space of exemplar clouds is multi-dimensional and can be operationalised as a multivariate distribution (i.e. a joint distribution of multiple variables).
 
 In modular approaches to grammar as briefly expounded above, sound alternations can be encoded (in terms of derivational rules and/or constraints) either at the phonological level or at the phonetic level of representation.
 
 On the other hand, as @soskuthy2013, pp. 183 illustrates, in exemplar-based models all sound alternations are directly encoded by exemplars within the exemplar cloud, at one single level of representation.
 As soon as an exemplar with new phonetic characteristics is experienced _and_ stored, the representation of that lexical item already contains information about the sound alternation.
-In this sense, every type of variation is _phonologised_ (i.e. represented) from the outset as soon as it is experienced by the speaker/hearer and stored in memory.
+In this sense, **every type of variation is _phonologised_ (i.e. represented) from the outset as soon as it is experienced by the speaker/hearer and stored in memory**.
 
 ## References
 

@@ -13,7 +13,7 @@ output:
     number_sections: true
 ---
 
-This is my researcher's positionality statement (see [this paper](https://doi.org/10.34293/) for context).
+This is my researcher's positionality statement (see [this paper](https://doi.org/10.34293/education.v8i4.3232) for context).
 
 It is a work in progress, in two senses:
 
@@ -34,7 +34,7 @@ In time, I will add references to the statements, when relevant.
 1. Science is not the only way to gain knowledge.
 1. There is no agreement as to what [language]{.smallcaps}, [human language]{.smallcaps}, [linguistic capacity]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
 1. There is no agreement as to whether [language]{.smallcaps}, [human language]{.smallcaps}, [linguistic capacity]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
-1. There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and wich are [learned]{.smallcaps}.
+1. There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
 1. There is no agreement as to what [innate]{.smallcaps} actually means.
 1. There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
     1. If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.

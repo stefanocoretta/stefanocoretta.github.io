@@ -18,13 +18,13 @@ This is my researcher's positionality statement (see [this paper](https://doi.or
 It is a work in progress, in two senses:
 
 - In one sense, it is not exhaustive and I will be adding statements as they occur to me.
-- In the other sense, it is an ever-changing document, since I do and will change my mind about any of the statements.
+- In the other sense, it is an ever-changing document, since I will frequently change my mind about any of the statements herein.
 
 # The statements
 
 In random-ish order, divided by category (for now, epistemological and ontological).
 
-For each statement, prepend "In my opinion".
+For each statement, prefix "In my opinion".
 In some cases *opinion* refers to my expert opinion, in others to my intuitions (for the helpfulness of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)).
 In time, I will add references to the statements, when relevant.
 
@@ -36,7 +36,7 @@ In time, I will add references to the statements, when relevant.
 1. There is no agreement as to whether [language]{.smallcaps}, [human language]{.smallcaps}, [linguistic capacity]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
 1. There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and wich are [learned]{.smallcaps}.
 1. There is no agreement as to what [innate]{.smallcaps} actually means.
-1. There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps}/[domain-general]{.smallcaps}, or if it is a bit of both.
+1. There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
     1. If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
 1. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively).
 
@@ -46,7 +46,7 @@ In time, I will add references to the statements, when relevant.
 1. Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
 1. [linguisticality]{.smallcaps} is the human ability to communicate through a language, and a [language]{.smallcaps} is a specific communicative system used by a specific group of humans.
 1. If one defines [linguisticality]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have linguisticality is a tautology.
-1. All living beings are capable of communicating.
+1. All living beings are capable of communicating (even plants and fungi).
 
 
 

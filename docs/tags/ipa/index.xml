@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ipa on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/tags/ipa/</link>
+    <description>Recent content in ipa on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/ipa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use custom typefaces in ggplot2 [macOS only]</title>
+      <link>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</guid>
+      <description>I keep hitting my head against this particular (and seemingly simple) task: using custom typefaces in ggplot2 plots and being able to knit to PDF.
+The main reason for why I would want to do that is that I often find myself in need of including IPA symbols in plots (more often than not, it’s vowels) and that I want those plots to be included in a knitted PDF.</description>
+    </item>
+    
+  </channel>
+</rss>

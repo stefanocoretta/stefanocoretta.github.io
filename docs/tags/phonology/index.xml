@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>phonology on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/tags/phonology/</link>
+    <description>Recent content in phonology on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/phonology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On phonologisation</title>
+      <link>https://stefanocoretta.github.io/post/2021-04-24-on-phonologisation/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-04-24-on-phonologisation/</guid>
+      <description>After the post on the definition of random effects, I thought about writing another one on the definition of phonologisation.
+As part of my PhD thesis on the effect of consonant voicing on vowel duration, I briefly reviewed the five definitions of phonologisation I could find in the literature. This post includes text from my thesis and expands on a few points.
+The main take-away of the sections to follow is that what one means with phonologisation is (unsurprisingly) dependent on the set of assumptions that are part of the framework within which the term is used.</description>
+    </item>
+    
+    <item>
+      <title>On the phonotactic restrictions of Proto-Indoeuropean roots</title>
+      <link>https://stefanocoretta.github.io/post/phono-restrictions-pie/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/phono-restrictions-pie/</guid>
+      <description>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.</description>
+    </item>
+    
+    <item>
+      <title>Plotting tongue contours with ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/tongue-ggplot2/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/tongue-ggplot2/</guid>
+      <description>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</description>
+    </item>
+    
+    <item>
+      <title>Vowel formants trajectories and tidy data</title>
+      <link>https://stefanocoretta.github.io/post/formants-tidy/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/formants-tidy/</guid>
+      <description>With the advent of more powerful statistical methods for assessing time series data, it is now becoming more common to compare whole vowel formant trajectories rather then just using average values.
+In this post I will show how to tidy a formant measurements dataset and plot formants using the tidyverse (Wickham 2017).
+From wide to long To illustrate the process, I will use formant data that was kindly provided by Stephen Nichols.</description>
+    </item>
+    
+    <item>
+      <title>Short review of phonological databases</title>
+      <link>https://stefanocoretta.github.io/post/2021-01-09-short-review/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-01-09-short-review/</guid>
+      <description>A review of available phonological databases (2014).</description>
+    </item>
+    
+  </channel>
+</rss>

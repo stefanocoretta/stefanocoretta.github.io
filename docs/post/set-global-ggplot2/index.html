@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How to globally set colour scales in ggplot2 | Stefano Coretta</title>
+
+<meta name="keywords" content="data viz, ggplot2, colours, rmd, rmarkdown" />
+<meta name="description" content="After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the .">
+<meta name="author" content="Stefano Coretta">
+<link rel="canonical" href="https://stefanocoretta.github.io/post/set-global-ggplot2/" />
+<link href="/assets/css/stylesheet.min.9cb227586e5e4aa89b06edb025156224a16b13785e437e65950b7afd35802214.css" integrity="sha256-nLInWG5eSqibBu2wJRViJKFrE3heQ35llQt6/TWAIhQ=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://stefanocoretta.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://stefanocoretta.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://stefanocoretta.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://stefanocoretta.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://stefanocoretta.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+
+
+<script src="https://kit.fontawesome.com/0019a3da9c.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/leaflet/leaflet.css"/>
+<script src="/leaflet/leaflet.js"></script>
+<link rel="stylesheet" href="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css">
+<script src="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.js"></script>
+<meta property="og:title" content="How to globally set colour scales in ggplot2" />
+<meta property="og:description" content="After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stefanocoretta.github.io/post/set-global-ggplot2/" />
+<meta property="article:published_time" content="2020-12-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to globally set colour scales in ggplot2"/>
+<meta name="twitter:description" content="After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the ."/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to globally set colour scales in ggplot2",
+  "name": "How to globally set colour scales in ggplot2",
+  "description": "After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.\nThe perk of setting scales …",
+  "keywords": [
+    "data viz", "ggplot2", "colours", "rmd", "rmarkdown"
+  ],
+  "articleBody": "  After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.\nThe perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.\nSet ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the .Rmd file. I generally do so in the setup chunk, where I also load the tidyverse/ggplot2 with library(tidyverse).\nThe relevant options are:\n ggplot2.discrete.colour: sets the colour scale for discrete aesthetics. ggplot2.discrete.fill: sets the fill scale for discrete aesthetics. ggplot2.continuous.colour: sets the colour scale for continuous aesthetics. ggplot2.continuous.fill: sets the fill scale for continuous aesthetics.  All these options take a character vector of colour names/codes or a function that returns such a vector (for the full documentation see here and here).\nFor example:\n# names options(ggplot2.discrete.fill = c(\"red\", \"blue\", \"green\", \"purple\", \"yellow\")) # hex codes options(ggplot2.discrete.fill = c(\"#264653\", \"#2a9d8f\", \"#a8dadc\", \"#457b9d\", \"#e76f51\")) # function options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, \"Set3\")) Note that the colours specified with ggplot2.discrete.* will be used only if there are as many colours in the vector/function output as the number of data levels, or more. When the number of level exceeds the number of colours, ggplot2 falls back to scale_colour_hue()/scale_fill_hue() to construct the scale.\nIt is possible to define multiple palettes each with a different number of colours as a list of colour names/codes vectors, and ggplot2 will pick the palette with the minimum number of colours that exceeds the number of data levels. See ?? and the third example here.\n Colours in action library(tidyverse) # or library(ggplot2) Colour name options(ggplot2.discrete.fill = c(\"red\", \"blue\", \"green\", \"purple\", \"yellow\")) mpg %% filter(!(class %in% c(\"subcompact\", \"suv\"))) %% ggplot(aes(class, fill = class)) + geom_bar()  Hex value options(ggplot2.discrete.fill = c(\"#264653\", \"#2a9d8f\", \"#a8dadc\", \"#457b9d\", \"#e76f51\")) mpg %% filter(!(class %in% c(\"subcompact\", \"suv\"))) %% ggplot(aes(class, fill = class)) + geom_bar()  Set3 options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, \"Set3\")) mpg %% filter(!(class %in% c(\"subcompact\", \"suv\"))) %% ggplot(aes(class, fill = class)) + geom_bar()  Palette interpolation default_palettes  # 7 levels ggplot(mpg, aes(class, fill = class)) + geom_bar()   ",
+  "wordCount" : "413",
+  "inLanguage": "en",
+  "datePublished": "2020-12-22T00:00:00Z",
+  "dateModified": "2020-12-22T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Stefano Coretta"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://stefanocoretta.github.io/post/set-global-ggplot2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Stefano Coretta",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://stefanocoretta.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://stefanocoretta.github.io" accesskey="h" title="Stefano Coretta (Alt + H)">Stefano Coretta</a>
+            <span class="logo-switches">
+                <span class="theme-toggle" title="(Alt + T)">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://stefanocoretta.github.io" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/research/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/meta/" title="Meta">
+                    <span>Meta</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/output/" title="Output">
+                    <span>Output</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/archives/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/docs/CorettaCV.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      How to globally set colour scales in ggplot2
+    </h1>
+    <div class="post-description">
+      
+    </div>
+    <div class="post-meta">
+
+December 22, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+
+<script src="https://stefanocoretta.github.io/post/set-global-ggplot2/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>After the post on using custom typefaces in ggplot2 (<a href="../custom-fonts-ggplot2">here</a>), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an <code>.Rmd</code> file.</p>
+<p>The perk of setting scales globally is that you can set the colours once at the beginning of the <code>.Rmd</code> file and all the plots in the file will adhere to the specified scales without the need to repeat code.</p>
+<div id="set-ggplot2-options" class="section level1">
+<h1>Set ggplot2 options</h1>
+<p>The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with <code>options()</code> at the beginning of the <code>.Rmd</code> file.
+I generally do so in the <code>setup</code> chunk, where I also load the tidyverse/ggplot2 with <code>library(tidyverse)</code>.</p>
+<p>The relevant options are:</p>
+<ul>
+<li><code>ggplot2.discrete.colour</code>: sets the colour scale for discrete aesthetics.</li>
+<li><code>ggplot2.discrete.fill</code>: sets the fill scale for discrete aesthetics.</li>
+<li><code>ggplot2.continuous.colour</code>: sets the colour scale for continuous aesthetics.</li>
+<li><code>ggplot2.continuous.fill</code>: sets the fill scale for continuous aesthetics.</li>
+</ul>
+<p>All these options take a character vector of colour names/codes or a function that returns such a vector (for the full documentation see <a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html?q=discrete%20colour%20scales">here</a> and <a href="https://ggplot2.tidyverse.org/reference/scale_colour_continuous.html">here</a>).</p>
+<p>For example:</p>
+<pre class="r"><code># names
+options(ggplot2.discrete.fill = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;purple&quot;, &quot;yellow&quot;))
+
+# hex codes
+options(ggplot2.discrete.fill = c(&quot;#264653&quot;, &quot;#2a9d8f&quot;, &quot;#a8dadc&quot;, &quot;#457b9d&quot;, &quot;#e76f51&quot;))
+
+# function
+options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, &quot;Set3&quot;))</code></pre>
+<p>Note that the colours specified with <code>ggplot2.discrete.*</code> will be used only if there are as many colours in the vector/function output as the number of data levels, or more.
+When the number of level exceeds the number of colours, ggplot2 falls back to <code>scale_colour_hue()/scale_fill_hue()</code> to construct the scale.</p>
+<p>It is possible to define multiple palettes each with a different number of colours as a list of colour names/codes vectors, and ggplot2 will pick the palette with the minimum number of colours that exceeds the number of data levels.
+See <a href="#interp"><strong>??</strong></a> and the third example <a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html">here</a>.</p>
+</div>
+<div id="colours-in-action" class="section level1">
+<h1>Colours in action</h1>
+<pre class="r"><code>library(tidyverse) # or library(ggplot2)</code></pre>
+<div id="colour-name" class="section level2">
+<h2>Colour name</h2>
+<pre class="r"><code>options(ggplot2.discrete.fill = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;purple&quot;, &quot;yellow&quot;))
+
+mpg %&gt;%
+  filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
+  ggplot(aes(class, fill = class)) +
+  geom_bar()</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/set-global-ggplot2/index_files/figure-html/name-1.png" width="672" /></p>
+</div>
+<div id="hex-value" class="section level2">
+<h2>Hex value</h2>
+<pre class="r"><code>options(ggplot2.discrete.fill = c(&quot;#264653&quot;, &quot;#2a9d8f&quot;, &quot;#a8dadc&quot;, &quot;#457b9d&quot;, &quot;#e76f51&quot;))
+
+mpg %&gt;%
+  filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
+  ggplot(aes(class, fill = class)) +
+  geom_bar()</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/set-global-ggplot2/index_files/figure-html/hex-1.png" width="672" /></p>
+</div>
+<div id="set3" class="section level2">
+<h2>Set3</h2>
+<pre class="r"><code>options(ggplot2.discrete.fill = RColorBrewer::brewer.pal(12, &quot;Set3&quot;))
+
+mpg %&gt;%
+  filter(!(class %in% c(&quot;subcompact&quot;, &quot;suv&quot;))) %&gt;%
+  ggplot(aes(class, fill = class)) +
+  geom_bar()</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/set-global-ggplot2/index_files/figure-html/set3-1.png" width="672" /></p>
+</div>
+<div id="interp" class="section level2">
+<h2>Palette interpolation</h2>
+<pre class="r"><code>default_palettes &lt;- list(
+  # palette with 5 colours
+  wesanderson::wes_palette(&quot;Darjeeling1&quot;),
+  # same palette interpolated to 8 colours
+  grDevices::colorRampPalette(wesanderson::wes_palette(&quot;Darjeeling1&quot;), alpha = TRUE)(8)
+)
+
+options(ggplot2.discrete.fill = default_palettes)
+
+# 5 levels
+ggplot(mpg, aes(class, fill = fl)) + geom_bar()</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/set-global-ggplot2/index_files/figure-html/ramp-1.png" width="672" /></p>
+<pre class="r"><code># 7 levels
+ggplot(mpg, aes(class, fill = class)) + geom_bar()</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/set-global-ggplot2/index_files/figure-html/ramp-2.png" width="672" /></p>
+</div>
+</div>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://stefanocoretta.github.io/tags/data-viz/">data viz</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/ggplot2/">ggplot2</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/colours/">colours</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/rmd/">rmd</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/rmarkdown/">rmarkdown</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://stefanocoretta.github.io">Stefano Coretta</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.replaceState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Methods on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/categories/methods/</link>
+    <description>Recent content in Methods on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/categories/methods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Methods as theory</title>
+      <link>https://stefanocoretta.github.io/post/methods-as-theory/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/methods-as-theory/</guid>
+      <description>At least in linguistics, there is a general tendency to contrast theory with methods. This dichotomy is also reflected in the classification of academic papers as theoretical or methodological.
+In this brief post I will argue that the theory/methods divide is epistemologically incoherent, and I will instead propose a taxonomy in which methods are subsumed under theory and are part of it.</description>
+    </item>
+    
+    <item>
+      <title>On random effects</title>
+      <link>https://stefanocoretta.github.io/post/2021-03-15-on-random-effects/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-03-15-on-random-effects/</guid>
+      <description>If you use mixed-effects models (aka multilevel models, hierarchical models), I am sure that at some point you asked yourself the following question at least once: Should I include variable X as a fixed or as a random effect?
+To answer this question we need to ask first: what is a random effect?
+Regrettably, there is no straightforward answer (disappointed, uh?).
+The main reason is that, in fact, there are many possible (and most times mutually exclusive) definitions of what a random (vs fixed) effect is.</description>
+    </item>
+    
+    <item>
+      <title>How to globally set colour scales in ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/set-global-ggplot2/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/set-global-ggplot2/</guid>
+      <description>After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the .</description>
+    </item>
+    
+    <item>
+      <title>How to use custom typefaces in ggplot2 [macOS only]</title>
+      <link>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/custom-fonts-ggplot2/</guid>
+      <description>I keep hitting my head against this particular (and seemingly simple) task: using custom typefaces in ggplot2 plots and being able to knit to PDF.
+The main reason for why I would want to do that is that I often find myself in need of including IPA symbols in plots (more often than not, it’s vowels) and that I want those plots to be included in a knitted PDF.</description>
+    </item>
+    
+    <item>
+      <title>Plotting prior distributions with ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/priors-ggplot2/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/priors-ggplot2/</guid>
+      <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
+In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
+Let’s load the tidyverse first.
+library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.3 ✓ purrr 0.</description>
+    </item>
+    
+    <item>
+      <title>An estimate of number of speakers per study in phonetics</title>
+      <link>https://stefanocoretta.github.io/post/speakers-per-study/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/speakers-per-study/</guid>
+      <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
+Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
+    </item>
+    
+  </channel>
+</rss>

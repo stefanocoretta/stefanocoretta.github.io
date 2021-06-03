@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/categories/</link>
+    <description>Recent content in Categories on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linguistics</title>
+      <link>https://stefanocoretta.github.io/categories/linguistics/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/categories/linguistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meta-models</title>
+      <link>https://stefanocoretta.github.io/categories/meta-models/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/categories/meta-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methods</title>
+      <link>https://stefanocoretta.github.io/categories/methods/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/categories/methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quotables</title>
+      <link>https://stefanocoretta.github.io/categories/quotables/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/categories/quotables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gist</title>
+      <link>https://stefanocoretta.github.io/categories/gist/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/categories/gist/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

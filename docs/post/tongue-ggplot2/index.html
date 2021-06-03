@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Plotting tongue contours with ggplot2 | Stefano Coretta</title>
+
+<meta name="keywords" content="rstats, phonetics, phonology, data viz, uti, ultrasound, tongue contours" />
+<meta name="description" content="When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.">
+<meta name="author" content="Stefano Coretta">
+<link rel="canonical" href="https://stefanocoretta.github.io/post/tongue-ggplot2/" />
+<link href="/assets/css/stylesheet.min.9cb227586e5e4aa89b06edb025156224a16b13785e437e65950b7afd35802214.css" integrity="sha256-nLInWG5eSqibBu2wJRViJKFrE3heQ35llQt6/TWAIhQ=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://stefanocoretta.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://stefanocoretta.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://stefanocoretta.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://stefanocoretta.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://stefanocoretta.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+
+
+<script src="https://kit.fontawesome.com/0019a3da9c.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/leaflet/leaflet.css"/>
+<script src="/leaflet/leaflet.js"></script>
+<link rel="stylesheet" href="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css">
+<script src="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.js"></script>
+<meta property="og:title" content="Plotting tongue contours with ggplot2" />
+<meta property="og:description" content="When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stefanocoretta.github.io/post/tongue-ggplot2/" />
+<meta property="article:published_time" content="2018-08-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Plotting tongue contours with ggplot2"/>
+<meta name="twitter:description" content="When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases."/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Plotting tongue contours with ggplot2",
+  "name": "Plotting tongue contours with ggplot2",
+  "description": "When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern …",
+  "keywords": [
+    "rstats", "phonetics", "phonology", "data viz", "uti", "ultrasound", "tongue contours"
+  ],
+  "articleBody": "  When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = \"loess\"). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.\nTo show the shortcomings of using geom_smooth() and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):\nselect(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2) ## # A tibble: 1,239 x 7 ## rec_date fan_line X Y word vowel c2 ##        ## 1 29/11/2016 15:10:52 6 37.4 9.25 pada a d ## 2 29/11/2016 15:21:30 6 38.6 13.1 pada a d ## 3 29/11/2016 15:10:52 7 34.4 10.3 pada a d ## 4 29/11/2016 15:11:03 7 34.3 9.81 pata a t ## 5 29/11/2016 15:11:14 7 34.6 11.0 podo o d ## 6 29/11/2016 15:13:39 7 34.3 9.65 pada a d ## 7 29/11/2016 15:16:05 7 34.8 11.5 pada a d ## 8 29/11/2016 15:17:07 7 34.5 10.5 putu u t ## 9 29/11/2016 15:19:45 7 34.3 9.64 putu u t ## 10 29/11/2016 15:21:30 7 35.4 13.8 pada a d ## # … with 1,229 more rows rec_date is the date and time of recording. Each observed tongue contour has a unique rec_date (this will come in handy later). fan_line is the number of the line in the fan coordinate system used by Articulate Assistant Advanced (which I used to record the data). X and Y are the horizontal and vertical position of each point on the contour. The unit is millimeters. word, vowel and c2 are self-explanatory.\nLet’s start by plotting the smoothed contours by vowel and consonant.\ntongue_data %% ggplot(aes(X, Y)) + geom_smooth(aes(colour = vowel), method = \"loess\") + coord_fixed() + facet_grid(c2 ~ vowel) + theme(legend.position = \"none\") ## `geom_smooth()` using formula 'y ~ x' We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.\nTo see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.\ntongue_data %% ggplot(aes(X, Y)) + geom_point(alpha = 0.1) + geom_smooth(aes(colour = vowel), method = \"loess\") + coord_fixed() + facet_grid(c2 ~ vowel) + theme(legend.position = \"none\") ## `geom_smooth()` using formula 'y ~ x' While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.\nThis happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.\nAn alternative (if you don’t like points) is to use geom_path() to plot the individual tongue contours as lines. geom_path() connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).\nTo do so, we can use rec_date (which identifies the individual contours) and fan_line which indicates the orders of points (for each contour, there a maximum 42 points/fan lines; NAs have been excluded).\ntongue_data % arrange(rec_date, fan_line) tongue_data ## # A tibble: 1,239 x 30 ## speaker seconds rec_date prompt label TT_displacement… TT_velocity ##        ## 1 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 2 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 3 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 4 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 5 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 6 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 7 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 8 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 9 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## 10 it01 1.11 29/11/2016 1… Dico pada l… max_… 77.4 -7.18 ## # … with 1,229 more rows, and 23 more variables: TT_velocity_abs , ## # TD_displacement_sm , TD_velocity , TD_velocity_abs , ## # TR_displacement_sm , TR_velocity , TR_velocity_abs , ## # fan_line , X , Y , word , language , sex , ## # item , ipa , c1 , c1_phonation , vowel , ## # anteropost , height , c2 , c2_phonation , ## # c2_place  We can now use geom_path(). The argument group = rec_date ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).\ntongue_data %% ggplot(aes(X, Y)) + geom_path(aes(group = rec_date, colour = vowel), alpha = 0.5) + coord_fixed() + facet_grid(c2 ~ vowel) + theme(legend.position = \"none\") The tongue root in /u/ is now properly rendered.\nBut what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?\nAn option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by fan_line and then summarise() it. Plotting can then be done with geom_path() and geom_polygon(). All together, the code looks like this.\nxy_mean % group_by(fan_line, vowel, c2) %% summarise( X_mean = mean(X, na.rm = TRUE), Y_mean = mean(Y, na.rm = TRUE) ) ## `summarise()` regrouping output by 'fan_line', 'vowel' (override with `.groups` argument) xy_ci % group_by(fan_line, vowel, c2) %% summarise( X_CI_low = t.test(X)$conf.int[1], X_CI_up = t.test(X)$conf.int[2], Y_CI_low = t.test(Y)$conf.int[1], Y_CI_up = t.test(Y)$conf.int[2] ) ## `summarise()` regrouping output by 'fan_line', 'vowel' (override with `.groups` argument) ci_upper % dplyr::select(-X_CI_low, -Y_CI_low) %% dplyr::rename( CI_X = X_CI_up, CI_Y = Y_CI_up ) ci_lower % dplyr::select(-X_CI_up, -Y_CI_up) %% dplyr::arrange(dplyr::desc(fan_line)) %% dplyr::rename( CI_X = X_CI_low, CI_Y = Y_CI_low ) ci  ",
+  "wordCount" : "1133",
+  "inLanguage": "en",
+  "datePublished": "2018-08-23T00:00:00Z",
+  "dateModified": "2018-08-23T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Stefano Coretta"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://stefanocoretta.github.io/post/tongue-ggplot2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Stefano Coretta",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://stefanocoretta.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://stefanocoretta.github.io" accesskey="h" title="Stefano Coretta (Alt + H)">Stefano Coretta</a>
+            <span class="logo-switches">
+                <span class="theme-toggle" title="(Alt + T)">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://stefanocoretta.github.io" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/research/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/meta/" title="Meta">
+                    <span>Meta</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/output/" title="Output">
+                    <span>Output</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/archives/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/docs/CorettaCV.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Plotting tongue contours with ggplot2
+    </h1>
+    <div class="post-description">
+      
+    </div>
+    <div class="post-meta">
+
+August 23, 2018&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+
+<script src="https://stefanocoretta.github.io/post/tongue-ggplot2/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>When plotting tongue contours data obtained from ultrasound tongue imaging in <code>R</code> using <code>ggplot2</code>, a common option to smooth over the individual contours and show the general pattern is to use <code>geom_smooth(methood = "loess")</code>. However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases.</p>
+<p>To show the shortcomings of using <code>geom_smooth()</code> and present a viable alternative, we’ll be using ultrasound tongue imaging data from one speaker (me). This dataset includes tongue contours from within the closure of the conosonants /t, d/ preceeded by /a, o, u/. The dataset looks like this (some columns dropped):</p>
+<pre class="r"><code>select(tongue_data, rec_date, fan_line, X, Y, word, vowel, c2)</code></pre>
+<pre><code>## # A tibble: 1,239 x 7
+##    rec_date            fan_line     X     Y word  vowel c2   
+##    &lt;chr&gt;                  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+##  1 29/11/2016 15:10:52        6  37.4  9.25 pada  a     d    
+##  2 29/11/2016 15:21:30        6  38.6 13.1  pada  a     d    
+##  3 29/11/2016 15:10:52        7  34.4 10.3  pada  a     d    
+##  4 29/11/2016 15:11:03        7  34.3  9.81 pata  a     t    
+##  5 29/11/2016 15:11:14        7  34.6 11.0  podo  o     d    
+##  6 29/11/2016 15:13:39        7  34.3  9.65 pada  a     d    
+##  7 29/11/2016 15:16:05        7  34.8 11.5  pada  a     d    
+##  8 29/11/2016 15:17:07        7  34.5 10.5  putu  u     t    
+##  9 29/11/2016 15:19:45        7  34.3  9.64 putu  u     t    
+## 10 29/11/2016 15:21:30        7  35.4 13.8  pada  a     d    
+## # … with 1,229 more rows</code></pre>
+<p><code>rec_date</code> is the date and time of recording. Each observed tongue contour has a unique <code>rec_date</code> (this will come in handy later). <code>fan_line</code> is the number of the line in the fan coordinate system used by Articulate Assistant Advanced (which I used to record the data). <code>X</code> and <code>Y</code> are the horizontal and vertical position of each point on the contour. The unit is millimeters. <code>word</code>, <code>vowel</code> and <code>c2</code> are self-explanatory.</p>
+<p>Let’s start by plotting the smoothed contours by vowel and consonant.</p>
+<pre class="r"><code>tongue_data %&gt;%
+  ggplot(aes(X, Y)) +
+  geom_smooth(aes(colour = vowel), method = &quot;loess&quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/tongue-ggplot2/index_files/figure-html/smooth-1.png" width="672" /></p>
+<p>We can immediately notice that with /u/ there is something odd going on. That does not look like a tongue surface (maybe that of a chameleon! Definitely not one of a ‘hooman’.) The smooths for /a/ and /o/ seem quite standard.</p>
+<p>To see what is going on, let’s plot now also the individual points as recorded in the data, whith a superimoposed smooth, for comparison.</p>
+<pre class="r"><code>tongue_data %&gt;%
+  ggplot(aes(X, Y)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(aes(colour = vowel), method = &quot;loess&quot;) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/tongue-ggplot2/index_files/figure-html/points-1.png" width="672" /></p>
+<p>While the smooths with /a/ and /o/ more or less have a good fit when compared to the points, with /u/ the smooths are really off.</p>
+<p>This happpens because the tongue root (in this particular case) developpes vertically rather than slanted. The smooth isagnostic about the fact that points lying on the same X value but with different Y values belong to different portion of the tongue contour. The result is that smoothing happens across tongue parts.</p>
+<p>An alternative (if you don’t like points) is to use <code>geom_path()</code> to plot the individual tongue contours as lines. <code>geom_path()</code> connects points with a line, following the order in which they appear in the dataset. So, before using this geometry, we need to arrange the dataframe such that the points are in the right order (now they are in the wrong order).</p>
+<p>To do so, we can use <code>rec_date</code> (which identifies the individual contours) and <code>fan_line</code> which indicates the orders of points (for each contour, there a maximum 42 points/fan lines; NAs have been excluded).</p>
+<pre class="r"><code>tongue_data &lt;- tongue_data %&gt;%
+  arrange(rec_date, fan_line)
+
+tongue_data</code></pre>
+<pre><code>## # A tibble: 1,239 x 30
+##    speaker seconds rec_date      prompt       label TT_displacement… TT_velocity
+##    &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;            &lt;dbl&gt;       &lt;dbl&gt;
+##  1 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  2 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  3 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  4 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  5 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  6 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  7 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  8 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+##  9 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+## 10 it01       1.11 29/11/2016 1… Dico pada l… max_…             77.4       -7.18
+## # … with 1,229 more rows, and 23 more variables: TT_velocity_abs &lt;dbl&gt;,
+## #   TD_displacement_sm &lt;dbl&gt;, TD_velocity &lt;dbl&gt;, TD_velocity_abs &lt;dbl&gt;,
+## #   TR_displacement_sm &lt;dbl&gt;, TR_velocity &lt;dbl&gt;, TR_velocity_abs &lt;dbl&gt;,
+## #   fan_line &lt;int&gt;, X &lt;dbl&gt;, Y &lt;dbl&gt;, word &lt;chr&gt;, language &lt;chr&gt;, sex &lt;chr&gt;,
+## #   item &lt;int&gt;, ipa &lt;chr&gt;, c1 &lt;chr&gt;, c1_phonation &lt;chr&gt;, vowel &lt;chr&gt;,
+## #   anteropost &lt;chr&gt;, height &lt;chr&gt;, c2 &lt;chr&gt;, c2_phonation &lt;chr&gt;,
+## #   c2_place &lt;chr&gt;</code></pre>
+<p>We can now use <code>geom_path()</code>. The argument <code>group = rec_date</code> ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).</p>
+<pre class="r"><code>tongue_data %&gt;%
+  ggplot(aes(X, Y)) +
+  geom_path(aes(group = rec_date, colour = vowel), alpha = 0.5) +
+  coord_fixed() +
+  facet_grid(c2 ~ vowel) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/tongue-ggplot2/index_files/figure-html/path-1.png" width="672" /></p>
+<p>The tongue root in /u/ is now properly rendered.</p>
+<p>But what fif you want to plot a single contour (possibly with confidence intervals) for each of the 6 panels in the previous figure, rather than all the contours?</p>
+<p>An option is to plot an average contour (litterally, the aveages of X and Y). We can easily do that by grouping the data by <code>fan_line</code> and then <code>summarise()</code> it. Plotting can then be done with <code>geom_path()</code> and <code>geom_polygon()</code>. All together, the code looks like this.</p>
+<pre class="r"><code>xy_mean &lt;- tongue_data %&gt;%
+  group_by(fan_line, vowel, c2) %&gt;%
+  summarise(
+    X_mean = mean(X, na.rm = TRUE),
+    Y_mean = mean(Y, na.rm = TRUE)
+  )</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;fan_line&#39;, &#39;vowel&#39; (override with `.groups` argument)</code></pre>
+<pre class="r"><code>xy_ci &lt;- tongue_data %&gt;%
+  group_by(fan_line, vowel, c2) %&gt;%
+  summarise(
+    X_CI_low = t.test(X)$conf.int[1],
+    X_CI_up = t.test(X)$conf.int[2],
+    Y_CI_low = t.test(Y)$conf.int[1],
+    Y_CI_up = t.test(Y)$conf.int[2]
+  )</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;fan_line&#39;, &#39;vowel&#39; (override with `.groups` argument)</code></pre>
+<pre class="r"><code>ci_upper &lt;- xy_ci %&gt;%
+  dplyr::select(-X_CI_low, -Y_CI_low) %&gt;%
+  dplyr::rename(
+    CI_X = X_CI_up,
+    CI_Y = Y_CI_up
+  )
+
+ci_lower &lt;- xy_ci %&gt;%
+  dplyr::select(-X_CI_up, -Y_CI_up) %&gt;%
+  dplyr::arrange(dplyr::desc(fan_line)) %&gt;%
+  dplyr::rename(
+    CI_X = X_CI_low,
+    CI_Y = Y_CI_low
+  )
+
+ci &lt;- rbind(ci_upper, ci_lower)
+
+ggplot(xy_mean, aes(X_mean, Y_mean)) +
+  geom_polygon(data = ci, aes(x = CI_X, y = CI_Y), alpha = 0.2) +
+  geom_path(aes(X_mean, Y_mean, colour = vowel)) +
+  facet_grid(c2 ~ vowel) +
+  coord_fixed() +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="https://stefanocoretta.github.io/post/tongue-ggplot2/index_files/figure-html/mean-path-1.png" width="672" /></p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://stefanocoretta.github.io/tags/rstats/">rstats</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/phonetics/">phonetics</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/phonology/">phonology</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/data-viz/">data viz</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/uti/">uti</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/ultrasound/">ultrasound</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/tongue-contours/">tongue contours</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://stefanocoretta.github.io">Stefano Coretta</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.replaceState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computational linguistics on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/tags/computational-linguistics/</link>
+    <description>Recent content in computational linguistics on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 30 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/computational-linguistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Short review of phonological databases</title>
+      <link>https://stefanocoretta.github.io/post/2021-01-09-short-review/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-01-09-short-review/</guid>
+      <description>A review of available phonological databases (2014).</description>
+    </item>
+    
+  </channel>
+</rss>

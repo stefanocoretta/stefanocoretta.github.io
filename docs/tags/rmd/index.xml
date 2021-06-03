@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rmd on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/tags/rmd/</link>
+    <description>Recent content in rmd on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/rmd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to globally set colour scales in ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/set-global-ggplot2/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/set-global-ggplot2/</guid>
+      <description>After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an .Rmd file.
+The perk of setting scales globally is that you can set the colours once at the beginning of the .Rmd file and all the plots in the file will adhere to the specified scales without the need to repeat code.
+Set ggplot2 options The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with options() at the beginning of the .</description>
+    </item>
+    
+  </channel>
+</rss>

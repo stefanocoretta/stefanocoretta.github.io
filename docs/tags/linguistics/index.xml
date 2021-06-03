@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linguistics on Stefano Coretta</title>
+    <link>https://stefanocoretta.github.io/tags/linguistics/</link>
+    <description>Recent content in linguistics on Stefano Coretta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 02 Mar 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/linguistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vowel formants trajectories and tidy data</title>
+      <link>https://stefanocoretta.github.io/post/formants-tidy/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/formants-tidy/</guid>
+      <description>With the advent of more powerful statistical methods for assessing time series data, it is now becoming more common to compare whole vowel formant trajectories rather then just using average values.
+In this post I will show how to tidy a formant measurements dataset and plot formants using the tidyverse (Wickham 2017).
+From wide to long To illustrate the process, I will use formant data that was kindly provided by Stephen Nichols.</description>
+    </item>
+    
+    <item>
+      <title>Short review of phonological databases</title>
+      <link>https://stefanocoretta.github.io/post/2021-01-09-short-review/</link>
+      <pubDate>Mon, 30 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-01-09-short-review/</guid>
+      <description>A review of available phonological databases (2014).</description>
+    </item>
+    
+  </channel>
+</rss>

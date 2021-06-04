@@ -14,12 +14,9 @@ function loadSearch() {
                 if (data) {
                     // fuse.js options; check fuse.js website for details
                     var options = {
-                        isCaseSensitive: false,
-                        shouldSort: true,
-                        location: 0,
                         distance: 100,
                         threshold: 0.4,
-                        minMatchCharLength: 0,
+                        ignoreLocation: true,
                         keys: [
                             'title',
                             'permalink',
@@ -45,14 +42,20 @@ function itemGen(name, link) {
 }
 
 function activeToggle() {
-    document.activeElement.parentElement.classList.toggle("active")
+    document.activeElement.parentElement.classList.toggle("focus")
+}
+
+function reset() {
+    resultsAvailable = false;
+    resList.innerHTML = sInput.value = ''; // clear inputbox and searchResults
+    sInput.focus(); // shift focus to input box
 }
 
 // execute search as each character is typed
-document.getElementById("searchInput").onkeyup = function (e) {
+sInput.onkeyup = function (e) {
     // run a search query (for "term") every time a letter is typed
     // in the search box
-    const results = fuse.search(this.value); // the actual query being run using fuse.js
+    const results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
 
     if (results.length !== 0) {
         // build our html if result exists
@@ -62,15 +65,20 @@ document.getElementById("searchInput").onkeyup = function (e) {
             resultSet = resultSet + itemGen(results[item].item.title, results[item].item.permalink)
         }
 
-        document.getElementById("searchResults").innerHTML = resultSet;
+        resList.innerHTML = resultSet;
         resultsAvailable = true;
         first = resList.firstChild;
         last = resList.lastChild;
     } else {
         resultsAvailable = false;
-        document.getElementById("searchResults").innerHTML = '';
+        resList.innerHTML = '';
     }
 }
+
+sInput.addEventListener('search', function (e) {
+    // clicked on x
+    if (!this.value) reset()
+})
 
 // kb bindings
 document.onkeydown = function (e) {
@@ -78,20 +86,27 @@ document.onkeydown = function (e) {
     let ae = document.activeElement;
     let inbox = document.getElementById("searchbox").contains(ae)
 
+    if (ae === sInput) {
+        var elements = document.getElementsByClassName('focus');
+        while (elements.length > 0) {
+            elements[0].classList.remove('focus');
+        }
+    }
+
     if (key === "ArrowDown" && resultsAvailable && inbox) {
         e.preventDefault();
         if (ae == sInput) {
             // if the currently focused element is the search input, focus the <a> of first <li>
-            activeToggle(); // rm active class
+            activeToggle(); // rm focus class
             resList.firstChild.lastChild.focus();
-            activeToggle(); // add active class
+            activeToggle(); // add focus class
         } else if (ae.parentElement == last) {
             // if the currently focused element's parent is last, do nothing
         } else {
             // otherwise select the next search result
-            activeToggle(); // rm active class
+            activeToggle(); // rm focus class
             ae.parentElement.nextSibling.lastChild.focus();
-            activeToggle(); // add active class
+            activeToggle(); // add focus class
         }
     } else if (key === "ArrowUp" && resultsAvailable && inbox) {
         e.preventDefault();
@@ -99,19 +114,17 @@ document.onkeydown = function (e) {
             // if the currently focused element is input box, do nothing
         } else if (ae.parentElement == first) {
             // if the currently focused element is first item, go to input box
-            activeToggle(); // rm active class
+            activeToggle(); // rm focus class
             sInput.focus();
         } else {
             // otherwise select the previous search result
-            activeToggle(); // rm active class
+            activeToggle(); // rm focus class
             ae.parentElement.previousSibling.lastChild.focus();
-            activeToggle(); // add active class
+            activeToggle(); // add focus class
         }
     } else if (key === "ArrowRight" && resultsAvailable && inbox) {
         ae.click(); // click on active link
     } else if (key === "Escape") {
-        resultsAvailable = false;
-        document.getElementById("searchResults").innerHTML = sInput.value = ''; // clear inputbox and searchResults
-        sInput.focus(); // shift focus to input box
+        reset()
     }
 }

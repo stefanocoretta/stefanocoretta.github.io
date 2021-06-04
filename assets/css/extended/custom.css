@@ -241,6 +241,10 @@ figure > * {
   }
 }
 
+.accent-red {
+  color: var(--accent-col);
+}
+
 /* Home info */
 
 .avatar-info {

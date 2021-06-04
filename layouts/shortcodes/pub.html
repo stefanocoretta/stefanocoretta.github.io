@@ -2,6 +2,7 @@
   <td>{{ with .Get "year" }}{{.}}{{ end }}</td>
   <td>
     {{ if eq .Params.open true}}<div class="tooltip"><i class="fa fa fa-unlock-alt"></i><span class="tooltiptext">Open access</span></div>
+ {{ end }}{{ if eq .Params.rr true}}<div class="tooltip"><i class="far fa-registered"></i><span class="tooltiptext">Registered Report</span></div>
  {{ end }}{{ with .Get "title" }}<b>{{.}}</b>{{ end }}
     {{ with .Get "author" }}<br><i class="fas fa-user"></i> {{. | markdownify}}{{ end }}
     {{ with .Get "authors" }}<br><i class="fas fa-users"></i> {{. | markdownify}}{{ end }}

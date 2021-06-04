@@ -12,10 +12,13 @@ tags: []
 
 <br>
 
-Click on the icons below each publication to download the manuscript or to navigate to the research compendium.
+<i class="fa fa fa-info-circle fa-lg accent-red"></i> --- Click on the <u>icon links</u> below each publication to download manuscripts and to navigate to the research compendia if available. 
+
+<i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <u>open access</u>, while the "registered" icon <i class="far fa-registered"></i> that it is a <u>Registered Report</u>.
 
 {{< tab-2 >}}
-{{< pub year="in prep."
+{{< pub year="submitted"
+  rr=true
   title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
   authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger" >}}
 {{< pub year="submitted"

@@ -6,7 +6,16 @@
     <description>Recent content in Methods on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/categories/methods/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/categories/methods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R gist — Plotting the area under the curve with ggplot</title>
+      <link>https://stefanocoretta.github.io/post/plotting-the-area-under-the-curve/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/plotting-the-area-under-the-curve/</guid>
+      <description>knitr::opts_chunk$set(echo = TRUE) library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ── ## ✓ ggplot2 3.3.5 ✓ purrr 0.3.4 ## ✓ tibble 3.1.2 ✓ dplyr 1.0.7 ## ✓ tidyr 1.1.3 ✓ stringr 1.4.0 ## ✓ readr 1.4.0 ✓ forcats 0.5.1 ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ── ## x dplyr::filter() masks stats::filter() ## x dplyr::lag() masks stats::lag() library(ggthemr) ggthemr(&amp;quot;earth&amp;quot;) x &amp;lt;- 1:11 y &amp;lt;- (1.5:11.5)^2 low &amp;lt;- (0:10)^2 upp &amp;lt;- (3:13)^2 ggplot() + aes(x, y) + geom_line() + geom_ribbon(aes(ymin = low, ymax = upp), alpha = 0.</description>
+    </item>
+    
     <item>
       <title>Methods as theory</title>
       <link>https://stefanocoretta.github.io/post/methods-as-theory/</link>
@@ -59,7 +68,7 @@ The main reason for why I would want to do that is that I often find myself in n
       <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
-library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.3 ✓ purrr 0.</description>
+library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ── ## ✓ ggplot2 3.3.5 ✓ purrr 0.</description>
     </item>
     
     <item>

@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data viz</title>
+      <link>https://stefanocoretta.github.io/tags/data-viz/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/data-viz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot2</title>
+      <link>https://stefanocoretta.github.io/tags/ggplot2/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstats</title>
+      <link>https://stefanocoretta.github.io/tags/rstats/</link>
+      <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/tags/rstats/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>meta-science</title>
       <link>https://stefanocoretta.github.io/tags/meta-science/</link>
@@ -80,15 +107,6 @@
     </item>
     
     <item>
-      <title>rstats</title>
-      <link>https://stefanocoretta.github.io/tags/rstats/</link>
-      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/rstats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>statistics</title>
       <link>https://stefanocoretta.github.io/tags/statistics/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
@@ -107,15 +125,6 @@
     </item>
     
     <item>
-      <title>data viz</title>
-      <link>https://stefanocoretta.github.io/tags/data-viz/</link>
-      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/data-viz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>plotly</title>
       <link>https://stefanocoretta.github.io/tags/plotly/</link>
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
@@ -130,15 +139,6 @@
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/tags/colours/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ggplot2</title>
-      <link>https://stefanocoretta.github.io/tags/ggplot2/</link>
-      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://stefanocoretta.github.io/tags/ggplot2/</guid>
       <description></description>
     </item>
     

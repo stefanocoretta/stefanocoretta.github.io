@@ -1,5 +1,5 @@
 ---
-title: Factors, dummy coding and contrasts
+title: Factors, coding and contrasts
 author: Stefano Coretta
 date: '2021-07-20'
 slug: contrasts
@@ -9,12 +9,16 @@ tags:
   - statistics
   - rstats
 math: true
+cover:
+  image: "/img/twitter-card-contrasts.png"
+  alt: "From factors to numbers: coding schemes"
+  relative: false
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>This post is an overview of how factors (i.e. categorical variables) are coded under the hood using dummy coding and which types of dummy coding can be set in R.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>This post is an overview of how factors (i.e. categorical variables) are coded under the hood and which types of coding can be set in R.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>There’s seems to be a bit of terminological mix-up in the wild, so we first present a terminological set that will be used throughout the vignette.</p>
@@ -29,7 +33,8 @@ The possible values in a factor are called <strong>levels</strong> in R.</p>
 ## Levels: carnivore herbivore omnivore</code></pre>
 <p>We are so accustomed to using factors in regression models that sometimes we forget that regressions only work with numbers and cannot work with categorical variables.</p>
 <p>To fit a regression model with categorical variables, these are first converted to numbers.
-The process of conversion is called <strong>dummy variable coding</strong> or simply <strong>dummy coding</strong>.
+The process of conversion is called <strong>coding</strong>.</p>
+<p>One type of coding is the <strong>dummy variable coding</strong> or simply <strong>dummy coding</strong>.
 This consists of assigning <code>0</code>s or <code>1</code>s to the levels in the variable.</p>
 <p>Let’s go through a simple example of dummy coding of a categorical variable with only 2 levels: <code>metropolitan</code> and <code>rural</code>.</p>
 <p>The most simple way of coding this categorical variable as a number is to assign <code>0</code> to one level and <code>1</code> to the other level. For example:</p>
@@ -89,17 +94,17 @@ case_when(
 <ul>
 <li><strong>Factors</strong> are vectors that code categorical variables.</li>
 <li>The values in a factor are called <strong>levels</strong>.</li>
-<li>Regression models cannot work directly with factors, so these are dummy coded.</li>
-<li><strong>Dummy coding</strong> means converting a factor into one or more numeric variables of <code>0</code>s and <code>1</code>s.</li>
+<li>Regression models cannot work directly with factors, so these are coded using numbers.</li>
+<li><strong>Dummy coding</strong> is one way of coding factors as numbers using one or more numeric variables of <code>0</code>s and <code>1</code>s.</li>
 </ul>
 </div>
 </div>
-<div id="dummy-coding-and-contrasts" class="section level1">
-<h1>Dummy coding and contrasts</h1>
+<div id="coding-and-contrasts" class="section level1">
+<h1>Coding and contrasts</h1>
 <p>Now. We’ve seen that dummy coding is simply using dummy numeric variables with <code>0</code>s and <code>1</code>s.</p>
-<p>In fact, this is <strong>one way</strong> of doing dummy coding.
-Different ways of doing dummy coding in R are called <strong>contrasts</strong>.
-The type of contrasts we have seen so far are called <strong>treatment contrasts</strong>.</p>
+<p>In fact, this is <strong>one way</strong> of coding factors, or one coding scheme.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+Different coding schemes in R are called <strong>contrasts</strong>.
+Dummy coding is called <strong>treatment contrasts</strong> in R.</p>
 <div id="treatment-contrasts" class="section level2">
 <h2>Treatment contrasts</h2>
 <p>The term <strong>treatment contrasts</strong> comes from the clinical sciences where you test, for example, the efficacy of a medical intervention (a drug, surgery, etc…) by comparing a <strong>control group</strong> (which has not received the “treatment”) with a group that has received the medical intervention (the <strong>treatment group</strong>).</p>
@@ -176,7 +181,8 @@ So <code>u</code> is 29.7 ms shorter than <code>a</code>.</p>
 </div>
 <div id="sum-contrasts" class="section level2">
 <h2>Sum contrasts</h2>
-<p>Another type of contrast are the so-called <strong>sum contrasts</strong>.</p>
+<p>Another type of coding is <strong>effect coding</strong>.
+In R, the corresponding contrast type are the so-called <strong>sum contrasts</strong>.</p>
 <p>When using sum contrasts, the levels in a factor are coded using <code>1</code>s, <code>-1</code>s and <code>0</code>s.
 If you sum the values of each dummy variable you always get <code>0</code> (hence the name “sum” contrast).</p>
 <p>Let’s see what happens to the factor <code>vowel</code> when using sum contrasts (remember that factors use treatment contrasts by default).</p>
@@ -276,5 +282,6 @@ That is, the decrease of vowel duration for <code>a</code> is 5.6 ms greater tha
 <hr />
 <ol>
 <li id="fn1"><p>A previous version of this post is also featured as a vignette in the learnB4SS package, <a href="https://learnb4ss.github.io/learnB4SS/articles/contrasts.html" class="uri">https://learnb4ss.github.io/learnB4SS/articles/contrasts.html</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>You can learn about more coding schemes here: <a href="https://stats.idre.ucla.edu/spss/webbooks/reg/chapter5/regression-with-spsschapter-5-additional-coding-systems-for-categorical-variables-in-regressionanalysis/" class="uri">https://stats.idre.ucla.edu/spss/webbooks/reg/chapter5/regression-with-spsschapter-5-additional-coding-systems-for-categorical-variables-in-regressionanalysis/</a>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

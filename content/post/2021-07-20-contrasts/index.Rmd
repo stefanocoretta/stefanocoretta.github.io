@@ -1,5 +1,5 @@
 ---
-title: Factors, dummy coding and contrasts
+title: Factors, coding and contrasts
 author: Stefano Coretta
 date: '2021-07-20'
 slug: contrasts
@@ -9,6 +9,10 @@ tags:
   - statistics
   - rstats
 math: true
+cover:
+  image: "/img/twitter-card-contrasts.png"
+  alt: "From factors to numbers: coding schemes"
+  relative: false
 ---
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
@@ -18,7 +22,7 @@ library(tidyverse)
 theme_set(theme_minimal())
 ```
 
-This post is an overview of how factors (i.e. categorical variables) are coded under the hood using dummy coding and which types of dummy coding can be set in R.^[A previous version of this post is also featured as a vignette in the learnB4SS package, <https://learnb4ss.github.io/learnB4SS/articles/contrasts.html>]
+This post is an overview of how factors (i.e. categorical variables) are coded under the hood and which types of coding can be set in R.^[A previous version of this post is also featured as a vignette in the learnB4SS package, <https://learnb4ss.github.io/learnB4SS/articles/contrasts.html>]
 
 # Introduction
 
@@ -41,7 +45,9 @@ factor(c("carnivore", "carnivore", "herbivore", "omnivore", "herbivore"))
 We are so accustomed to using factors in regression models that sometimes we forget that regressions only work with numbers and cannot work with categorical variables.
 
 To fit a regression model with categorical variables, these are first converted to numbers.
-The process of conversion is called **dummy variable coding** or simply **dummy coding**.
+The process of conversion is called **coding**.
+
+One type of coding is the **dummy variable coding** or simply **dummy coding**.
 This consists of assigning `0`s or `1`s to the levels in the variable.
 
 Let's go through a simple example of dummy coding of a categorical variable with only 2 levels: `metropolitan` and `rural`.
@@ -109,16 +115,16 @@ To sum up:
 
 - **Factors** are vectors that code categorical variables.
 - The values in a factor are called **levels**.
-- Regression models cannot work directly with factors, so these are dummy coded.
-- **Dummy coding** means converting a factor into one or more numeric variables of `0`s and `1`s.
+- Regression models cannot work directly with factors, so these are coded using numbers.
+- **Dummy coding** is one way of coding factors as numbers using one or more numeric variables of `0`s and `1`s.
 
-# Dummy coding and contrasts
+# Coding and contrasts
 
 Now. We've seen that dummy coding is simply using dummy numeric variables with `0`s and `1`s.
 
-In fact, this is **one way** of doing dummy coding.
-Different ways of doing dummy coding in R are called **contrasts**.
-The type of contrasts we have seen so far are called **treatment contrasts**.
+In fact, this is **one way** of coding factors, or one coding scheme.^[You can learn about more coding schemes here: <https://stats.idre.ucla.edu/spss/webbooks/reg/chapter5/regression-with-spsschapter-5-additional-coding-systems-for-categorical-variables-in-regressionanalysis/>.]
+Different coding schemes in R are called **contrasts**.
+Dummy coding is called **treatment contrasts** in R.
 
 ## Treatment contrasts
 
@@ -186,7 +192,8 @@ This is how treatment contrasts work.
 
 ## Sum contrasts
 
-Another type of contrast are the so-called **sum contrasts**.
+Another type of coding is **effect coding**.
+In R, the corresponding contrast type are the so-called **sum contrasts**.
 
 When using sum contrasts, the levels in a factor are coded using `1`s, `-1`s and `0`s.
 If you sum the values of each dummy variable you always get `0` (hence the name "sum" contrast).

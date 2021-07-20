@@ -1,0 +1,273 @@
+---
+title: Factors, dummy coding and contrasts
+author: Stefano Coretta
+date: '2021-07-20'
+slug: contrasts
+categories:
+  - Methods
+tags:
+  - statistics
+  - rstats
+math: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+library(tidyverse)
+theme_set(theme_minimal())
+```
+
+This post is an overview of how factors (i.e. categorical variables) are coded under the hood using dummy coding and which types of dummy coding can be set in R.^[A previous version of this post is also featured as a vignette in the learnB4SS package, <https://learnb4ss.github.io/learnB4SS/articles/contrasts.html>]
+
+# Introduction
+
+There's seems to be a bit of terminological mix-up in the wild, so we first present a terminological set that will be used throughout the vignette.
+
+Categorical variables in R are generally stored using factors.
+A **factor** is a vector of values from a categorical variable.
+The possible values in a factor are called **levels** in R.
+
+For each observation in the factor, the vector specifies the level of that observation.
+
+For example, let's assume we have a data set with information on dinosaurs and one column specifies the dinosaur's diet: `carnivore`, `herbivore`, `omnivore`.
+
+In R, this column can be coded as a factor:
+
+```{r diet}
+factor(c("carnivore", "carnivore", "herbivore", "omnivore", "herbivore"))
+```
+
+We are so accustomed to using factors in regression models that sometimes we forget that regressions only work with numbers and cannot work with categorical variables.
+
+To fit a regression model with categorical variables, these are first converted to numbers.
+The process of conversion is called **dummy variable coding** or simply **dummy coding**.
+This consists of assigning `0`s or `1`s to the levels in the variable.
+
+Let's go through a simple example of dummy coding of a categorical variable with only 2 levels: `metropolitan` and `rural`.
+
+The most simple way of coding this categorical variable as a number is to assign `0` to one level and `1` to the other level. For example:
+
+```{r location}
+factor(c("rural", "rural", "metropolitan", "rural"))
+# dummy coded
+c(0, 0, 1, 0)
+```
+
+In R, dummy coding is done under the hood for you when using factors, so you don't have to worry about the conversion.
+
+When the categorical variable has 3 levels instead of 2, we need a work-around in order to code the 3-level factor with only `0`s and `1`s (we can't use higher numbers for reasons we will see later).
+
+With three levels, we can code the variable using two numeric variables (instead of just one).
+Going back to the dinosaur's diet example, we can use:
+
+- One variable that codes whether the dinosaur is a carnivore `0` or a herbivore `1`.
+- One variable that codes whether the dinosaur is a carnivore `0` or an omnivore `1`.
+
+Let call the first variable `dummy_1` and the second variable `dummy_2`. Then:
+
+- When `dummy_1` is `0` and `dummy_2` is also `0`, the dinosaur is a carnivore.
+- When `dummy_1` is `1` and `dummy_2` is `0`, the dinosaur is a herbivore.
+- When `dummy_1` is `0` and `dummy_2` is `1`, the dinosaur is an omnivore.
+
+So the following factor (repeated from above):
+
+```{r diet-repeated}
+factor(c("carnivore", "carnivore", "herbivore", "omnivore", "herbivore"))
+```
+
+can be coded as:
+
+```{r diet-dummy}
+dummy_1 <- c(0, 0, 1, 0, 1)     # carnivore (0) or herbivore (1)?
+dummy_2 <- c(0, 0, 0, 1, 0)     # carnivore (0) or omnivore (1)?
+
+library(tidyverse)
+
+tibble(
+  dummy_1, dummy_2
+)
+```
+
+If this doesn't make much sense, try and figure it out by checking the value of the two columns for each row with the following code:
+
+```{r diet-case, eval=FALSE}
+# case_when() is a very helpful function from dplyr!
+
+case_when(
+  dummy_1 == 0 & dummy_2 == 0 ~ "carnivore",
+  dummy_1 == 1 & dummy_2 == 0 ~ "herbivore",
+  dummy_1 == 0 & dummy_2 == 1 ~ "omnivore",
+)
+```
+
+What if the factor has 4 levels? Then you can code it with 3 dummy variables. And what about 5 levels? Use 4 dummy variables. The number of dummy variables needed is equal to the number of levels minus 1 ($n_{dummy} = n_{levels} - 1$).
+
+## Summing up
+
+To sum up:
+
+- **Factors** are vectors that code categorical variables.
+- The values in a factor are called **levels**.
+- Regression models cannot work directly with factors, so these are dummy coded.
+- **Dummy coding** means converting a factor into one or more numeric variables of `0`s and `1`s.
+
+# Dummy coding and contrasts
+
+Now. We've seen that dummy coding is simply using dummy numeric variables with `0`s and `1`s.
+
+In fact, this is **one way** of doing dummy coding.
+Different ways of doing dummy coding in R are called **contrasts**.
+The type of contrasts we have seen so far are called **treatment contrasts**.
+
+## Treatment contrasts
+
+The term **treatment contrasts** comes from the clinical sciences where you test, for example, the efficacy of a medical intervention (a drug, surgery, etc...) by comparing a **control group** (which has not received the "treatment") with a group that has received the medical intervention (the **treatment group**).
+
+The control group can be used as the reference group to see if the treatment group has benefited from the medical treatment (i.e. if the treatment group's health has improved after the intervention relative to the control group, then one can infer that the treatment was effective).
+
+Let's look at treatment contrasts in R.
+
+In the previous section, we've been illustrating dummy coding by assigning `0`s and `1`s using one or more dummy variables.
+In practice, you do not need to do that to run real analyses, because R does that under the hood for you.
+
+Factors in R are coded with treatment contrasts by default.
+Also by default, the first level is set as the reference level (the order is alphabetical by default).
+The reference level is the level that gets coded only with `0`s, as we have seen above for the dinosaur's diet factor (`carnivorous` had `dummy_1 = 0` and `dummy_2 = 0`).
+
+Let's see an example using a data table with measurements of vowel duration.
+
+```{r vowels}
+load("./static/data/vowels.rda")
+glimpse(vowels)
+```
+
+For example, let's take the `vowel` column.
+This column indicates which vowel the measurement was taken from, and that can be /a/, /o/, or /u/.
+
+If we convert the `vowel` column into a factor, the levels will be `a`, `o` and `u`, and `a` will be the reference level.
+
+```{r}
+vowels <- vowels %>%
+  mutate(vowel = as.factor(vowel))
+
+levels(vowels$vowel)
+```
+
+To get a sense of how a factor would be coded with treatment contrasts, we can print a dummy coding table with the `contr.treatment()` function.
+
+```{r}
+contr.treatment(levels(vowels$vowel))
+```
+
+Now, let's run a regression model with `v1_duration` as the outcome variable and `vowel` as the predictor.
+
+```{r}
+vow_lm <- lm(v1_duration ~ vowel, data = vowels)
+
+summary(vow_lm)
+```
+
+The summary returns three coefficients:
+
+- `Intercept`.
+- `vowelo`.
+- `vowelu`.
+
+Since `a` is the reference level of `vowel`, the `Intercept` corresponds to the mean duration of the vowel `a`, i.e. 128 ms.
+
+The coefficient of `o` is the **difference between the mean duration of `o` and the mean duration of the reference level `a`** (i.e. the `Intercept`).
+So `o` is 5.6 ms shorter than `a` on average (shorter because the coefficient is negative).
+
+Finally, the coefficient of `u` is the **difference between the mean duration of `u` and the mean duration of the reference level `a`**
+So `u` is 29.7 ms shorter than `a`.
+
+This is how treatment contrasts work.
+
+## Sum contrasts
+
+Another type of contrast are the so-called **sum contrasts**.
+
+When using sum contrasts, the levels in a factor are coded using `1`s, `-1`s and `0`s.
+If you sum the values of each dummy variable you always get `0` (hence the name "sum" contrast).
+
+Let's see what happens to the factor `vowel` when using sum contrasts (remember that factors use treatment contrasts by default).
+
+This is how sum coding would look like for this factor:
+
+```{r}
+contr.sum(levels(vowels$vowel))
+```
+
+Since there are 3 levels, we need two dummy variables.
+So `a` is coded as `1, 0`, `o` is coded as `0, 1`, and `u` as `-1, -1`.
+
+To set the contrasts of a factor to sum coding, we can run the following:
+
+```{r}
+contrasts(vowels$vowel) <- "contr.sum"
+# If you want to change it back to treatment contrasts you can run
+# contrasts(vowels$vowel) <- "contr.treatment"
+```
+
+With sum contrasts the reference level is in fact the grand mean.
+
+In our model of vowel duration this means that the `Intercept` coefficient will be the grand mean of vowel duration.
+
+Let's rerun the model and look at the output.
+
+```{r}
+vow_lm <- lm(v1_duration ~ vowel, data = vowels)
+
+summary(vow_lm)
+```
+
+The `Intercept` now is 116 ms, which mean that the mean of vowel duration across the three vowels is 116 ms.
+
+We can check this by taking the mean:
+
+```{r}
+mean(vowels$v1_duration)
+```
+
+Yup, pretty close (small differences are fine).
+
+So what are now the coefficients called `vowel1` and `vowel2`?
+
+These are, respectively, the difference between the mean duration of `a` and the grand mean, and the difference between the mean duration of `o` and the grand mean.
+
+So `a` is 11.8 ms longer than the grand mean, and `o` is 6.1 ms longer than the grand mean.
+
+What about `u` then?
+
+Easy.
+You just subtract the coefficients of both `a` and `o` from the grand mean: $116.8 - 11.8 - 6.1 = 98.9$.
+
+If you want to check that this is correct, the mean duration of `u` according to the model above where we used treatment contrasts was $128.616 - 29.763 = 98.853$.
+
+## Sum contrasts and interactions
+
+Sum contrasts can be very handy when the model contains interactions between factors.
+
+Let's say we want to include in our model of vowel duration a predictor that specifies the voicing of the stop following the vowel.
+We also add an interaction between vowel and voicing, so that we can model differences in the effect of voicing across vowels.
+
+```{r}
+vow_lm_2 <- lm(v1_duration ~ c2_voicing + vowel + c2_voicing:vowel, data = vowels)
+
+summary(vow_lm_2)
+```
+
+Now the `Intercept` is the mean vowel duration when the following stop is voiced (the reference level of `c2_voicing`).
+This means that the average vowel followed by a voiced stop is 123 ms long in our data.
+
+The coefficient of `c2_voicingvoiceless` tells us the mean effect of `c2_voicing` on vowel duration, averaged across all vowels.
+So, on average, a vowel is about 13 ms shorter when followed by a voiceless stop.
+
+The coefficients of `vowel1` and `vowel2` indicate the difference between the average vowel duration before a voiced stop (the `Intercept`) and `a` and `o` respectively.
+As before, to get the difference between the average vowel duration of `u` before a voiceless stop and the mean vowel duration, you just need to subtract the coefficients of `vowel1` and `vowel2` from the `Intercept`: $123.5 - 14.6 - 8.5 = 100.4$.
+
+The last two coefficients, `c2_voicingvoiceless:vowel1` and `c2_voicingvoiceless:vowel2` correspond to the difference in the effect of voicing between the average effect of voicing (`c2_voicingvoiceless`, i.e. -13 ms) and the effect of voicing in `a` and `o` respectively.
+That is, the decrease of vowel duration for `a` is 5.6 ms greater than the average effect, while the decrease of vowel duration for `o` is 4.8 ms greater than the average effect.
+
+Following the usual formula, the effect of voicing for `u` is $-13.309 - (-5.6) - (-4.8) = -2.9$.

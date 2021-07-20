@@ -1,0 +1,280 @@
+---
+title: Factors, dummy coding and contrasts
+author: Stefano Coretta
+date: '2021-07-20'
+slug: contrasts
+categories:
+  - Methods
+tags:
+  - statistics
+  - rstats
+math: true
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>This post is an overview of how factors (i.e. categorical variables) are coded under the hood using dummy coding and which types of dummy coding can be set in R.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>There’s seems to be a bit of terminological mix-up in the wild, so we first present a terminological set that will be used throughout the vignette.</p>
+<p>Categorical variables in R are generally stored using factors.
+A <strong>factor</strong> is a vector of values from a categorical variable.
+The possible values in a factor are called <strong>levels</strong> in R.</p>
+<p>For each observation in the factor, the vector specifies the level of that observation.</p>
+<p>For example, let’s assume we have a data set with information on dinosaurs and one column specifies the dinosaur’s diet: <code>carnivore</code>, <code>herbivore</code>, <code>omnivore</code>.</p>
+<p>In R, this column can be coded as a factor:</p>
+<pre class="r"><code>factor(c(&quot;carnivore&quot;, &quot;carnivore&quot;, &quot;herbivore&quot;, &quot;omnivore&quot;, &quot;herbivore&quot;))</code></pre>
+<pre><code>## [1] carnivore carnivore herbivore omnivore  herbivore
+## Levels: carnivore herbivore omnivore</code></pre>
+<p>We are so accustomed to using factors in regression models that sometimes we forget that regressions only work with numbers and cannot work with categorical variables.</p>
+<p>To fit a regression model with categorical variables, these are first converted to numbers.
+The process of conversion is called <strong>dummy variable coding</strong> or simply <strong>dummy coding</strong>.
+This consists of assigning <code>0</code>s or <code>1</code>s to the levels in the variable.</p>
+<p>Let’s go through a simple example of dummy coding of a categorical variable with only 2 levels: <code>metropolitan</code> and <code>rural</code>.</p>
+<p>The most simple way of coding this categorical variable as a number is to assign <code>0</code> to one level and <code>1</code> to the other level. For example:</p>
+<pre class="r"><code>factor(c(&quot;rural&quot;, &quot;rural&quot;, &quot;metropolitan&quot;, &quot;rural&quot;))</code></pre>
+<pre><code>## [1] rural        rural        metropolitan rural       
+## Levels: metropolitan rural</code></pre>
+<pre class="r"><code># dummy coded
+c(0, 0, 1, 0)</code></pre>
+<pre><code>## [1] 0 0 1 0</code></pre>
+<p>In R, dummy coding is done under the hood for you when using factors, so you don’t have to worry about the conversion.</p>
+<p>When the categorical variable has 3 levels instead of 2, we need a work-around in order to code the 3-level factor with only <code>0</code>s and <code>1</code>s (we can’t use higher numbers for reasons we will see later).</p>
+<p>With three levels, we can code the variable using two numeric variables (instead of just one).
+Going back to the dinosaur’s diet example, we can use:</p>
+<ul>
+<li>One variable that codes whether the dinosaur is a carnivore <code>0</code> or a herbivore <code>1</code>.</li>
+<li>One variable that codes whether the dinosaur is a carnivore <code>0</code> or an omnivore <code>1</code>.</li>
+</ul>
+<p>Let call the first variable <code>dummy_1</code> and the second variable <code>dummy_2</code>. Then:</p>
+<ul>
+<li>When <code>dummy_1</code> is <code>0</code> and <code>dummy_2</code> is also <code>0</code>, the dinosaur is a carnivore.</li>
+<li>When <code>dummy_1</code> is <code>1</code> and <code>dummy_2</code> is <code>0</code>, the dinosaur is a herbivore.</li>
+<li>When <code>dummy_1</code> is <code>0</code> and <code>dummy_2</code> is <code>1</code>, the dinosaur is an omnivore.</li>
+</ul>
+<p>So the following factor (repeated from above):</p>
+<pre class="r"><code>factor(c(&quot;carnivore&quot;, &quot;carnivore&quot;, &quot;herbivore&quot;, &quot;omnivore&quot;, &quot;herbivore&quot;))</code></pre>
+<pre><code>## [1] carnivore carnivore herbivore omnivore  herbivore
+## Levels: carnivore herbivore omnivore</code></pre>
+<p>can be coded as:</p>
+<pre class="r"><code>dummy_1 &lt;- c(0, 0, 1, 0, 1)     # carnivore (0) or herbivore (1)?
+dummy_2 &lt;- c(0, 0, 0, 1, 0)     # carnivore (0) or omnivore (1)?
+
+library(tidyverse)
+
+tibble(
+  dummy_1, dummy_2
+)</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   dummy_1 dummy_2
+##     &lt;dbl&gt;   &lt;dbl&gt;
+## 1       0       0
+## 2       0       0
+## 3       1       0
+## 4       0       1
+## 5       1       0</code></pre>
+<p>If this doesn’t make much sense, try and figure it out by checking the value of the two columns for each row with the following code:</p>
+<pre class="r"><code># case_when() is a very helpful function from dplyr!
+
+case_when(
+  dummy_1 == 0 &amp; dummy_2 == 0 ~ &quot;carnivore&quot;,
+  dummy_1 == 1 &amp; dummy_2 == 0 ~ &quot;herbivore&quot;,
+  dummy_1 == 0 &amp; dummy_2 == 1 ~ &quot;omnivore&quot;,
+)</code></pre>
+<p>What if the factor has 4 levels? Then you can code it with 3 dummy variables. And what about 5 levels? Use 4 dummy variables. The number of dummy variables needed is equal to the number of levels minus 1 (<span class="math inline">\(n_{dummy} = n_{levels} - 1\)</span>).</p>
+<div id="summing-up" class="section level2">
+<h2>Summing up</h2>
+<p>To sum up:</p>
+<ul>
+<li><strong>Factors</strong> are vectors that code categorical variables.</li>
+<li>The values in a factor are called <strong>levels</strong>.</li>
+<li>Regression models cannot work directly with factors, so these are dummy coded.</li>
+<li><strong>Dummy coding</strong> means converting a factor into one or more numeric variables of <code>0</code>s and <code>1</code>s.</li>
+</ul>
+</div>
+</div>
+<div id="dummy-coding-and-contrasts" class="section level1">
+<h1>Dummy coding and contrasts</h1>
+<p>Now. We’ve seen that dummy coding is simply using dummy numeric variables with <code>0</code>s and <code>1</code>s.</p>
+<p>In fact, this is <strong>one way</strong> of doing dummy coding.
+Different ways of doing dummy coding in R are called <strong>contrasts</strong>.
+The type of contrasts we have seen so far are called <strong>treatment contrasts</strong>.</p>
+<div id="treatment-contrasts" class="section level2">
+<h2>Treatment contrasts</h2>
+<p>The term <strong>treatment contrasts</strong> comes from the clinical sciences where you test, for example, the efficacy of a medical intervention (a drug, surgery, etc…) by comparing a <strong>control group</strong> (which has not received the “treatment”) with a group that has received the medical intervention (the <strong>treatment group</strong>).</p>
+<p>The control group can be used as the reference group to see if the treatment group has benefited from the medical treatment (i.e. if the treatment group’s health has improved after the intervention relative to the control group, then one can infer that the treatment was effective).</p>
+<p>Let’s look at treatment contrasts in R.</p>
+<p>In the previous section, we’ve been illustrating dummy coding by assigning <code>0</code>s and <code>1</code>s using one or more dummy variables.
+In practice, you do not need to do that to run real analyses, because R does that under the hood for you.</p>
+<p>Factors in R are coded with treatment contrasts by default.
+Also by default, the first level is set as the reference level (the order is alphabetical by default).
+The reference level is the level that gets coded only with <code>0</code>s, as we have seen above for the dinosaur’s diet factor (<code>carnivorous</code> had <code>dummy_1 = 0</code> and <code>dummy_2 = 0</code>).</p>
+<p>Let’s see an example using a data table with measurements of vowel duration.</p>
+<pre class="r"><code>load(&quot;./static/data/vowels.rda&quot;)
+glimpse(vowels)</code></pre>
+<pre><code>## Rows: 886
+## Columns: 9
+## $ item          &lt;dbl&gt; 20, 2, 11, 1, 15, 10, 13, 3, 14, 19, 4, 6, 16, 17, 5, 23…
+## $ speaker       &lt;chr&gt; &quot;it01&quot;, &quot;it01&quot;, &quot;it01&quot;, &quot;it01&quot;, &quot;it01&quot;, &quot;it01&quot;, &quot;it01&quot;, …
+## $ word          &lt;chr&gt; &quot;pugu&quot;, &quot;pada&quot;, &quot;poco&quot;, &quot;pata&quot;, &quot;boco&quot;, &quot;podo&quot;, &quot;boto&quot;, …
+## $ v1_duration   &lt;dbl&gt; 95.23720, 138.96844, 126.93226, 127.49888, 132.33310, 12…
+## $ c2_voicing    &lt;chr&gt; &quot;voiced&quot;, &quot;voiced&quot;, &quot;voiceless&quot;, &quot;voiceless&quot;, &quot;voiceless…
+## $ vowel         &lt;chr&gt; &quot;u&quot;, &quot;a&quot;, &quot;o&quot;, &quot;a&quot;, &quot;o&quot;, &quot;o&quot;, &quot;o&quot;, &quot;a&quot;, &quot;o&quot;, &quot;u&quot;, &quot;a&quot;, &quot;…
+## $ c2_place      &lt;chr&gt; &quot;velar&quot;, &quot;coronal&quot;, &quot;velar&quot;, &quot;coronal&quot;, &quot;velar&quot;, &quot;corona…
+## $ speech_rate   &lt;dbl&gt; 4.893206, 5.015636, 4.819541, 5.031662, 5.063435, 5.0632…
+## $ speech_rate_c &lt;dbl&gt; -0.55937531, -0.43694485, -0.63303978, -0.42091937, -0.3…</code></pre>
+<p>For example, let’s take the <code>vowel</code> column.
+This column indicates which vowel the measurement was taken from, and that can be /a/, /o/, or /u/.</p>
+<p>If we convert the <code>vowel</code> column into a factor, the levels will be <code>a</code>, <code>o</code> and <code>u</code>, and <code>a</code> will be the reference level.</p>
+<pre class="r"><code>vowels &lt;- vowels %&gt;%
+  mutate(vowel = as.factor(vowel))
+
+levels(vowels$vowel)</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;o&quot; &quot;u&quot;</code></pre>
+<p>To get a sense of how a factor would be coded with treatment contrasts, we can print a dummy coding table with the <code>contr.treatment()</code> function.</p>
+<pre class="r"><code>contr.treatment(levels(vowels$vowel))</code></pre>
+<pre><code>##   o u
+## a 0 0
+## o 1 0
+## u 0 1</code></pre>
+<p>Now, let’s run a regression model with <code>v1_duration</code> as the outcome variable and <code>vowel</code> as the predictor.</p>
+<pre class="r"><code>vow_lm &lt;- lm(v1_duration ~ vowel, data = vowels)
+
+summary(vow_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = v1_duration ~ vowel, data = vowels)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -66.874 -22.567  -2.293  17.025 106.755 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  128.616      1.806  71.227   &lt;2e-16 ***
+## vowelo        -5.641      2.549  -2.213   0.0272 *  
+## vowelu       -29.763      2.603 -11.432   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 31.38 on 883 degrees of freedom
+## Multiple R-squared:  0.1419, Adjusted R-squared:  0.1399 
+## F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The summary returns three coefficients:</p>
+<ul>
+<li><code>Intercept</code>.</li>
+<li><code>vowelo</code>.</li>
+<li><code>vowelu</code>.</li>
+</ul>
+<p>Since <code>a</code> is the reference level of <code>vowel</code>, the <code>Intercept</code> corresponds to the mean duration of the vowel <code>a</code>, i.e. 128 ms.</p>
+<p>The coefficient of <code>o</code> is the <strong>difference between the mean duration of <code>o</code> and the mean duration of the reference level <code>a</code></strong> (i.e. the <code>Intercept</code>).
+So <code>o</code> is 5.6 ms shorter than <code>a</code> on average (shorter because the coefficient is negative).</p>
+<p>Finally, the coefficient of <code>u</code> is the <strong>difference between the mean duration of <code>u</code> and the mean duration of the reference level <code>a</code></strong>
+So <code>u</code> is 29.7 ms shorter than <code>a</code>.</p>
+<p>This is how treatment contrasts work.</p>
+</div>
+<div id="sum-contrasts" class="section level2">
+<h2>Sum contrasts</h2>
+<p>Another type of contrast are the so-called <strong>sum contrasts</strong>.</p>
+<p>When using sum contrasts, the levels in a factor are coded using <code>1</code>s, <code>-1</code>s and <code>0</code>s.
+If you sum the values of each dummy variable you always get <code>0</code> (hence the name “sum” contrast).</p>
+<p>Let’s see what happens to the factor <code>vowel</code> when using sum contrasts (remember that factors use treatment contrasts by default).</p>
+<p>This is how sum coding would look like for this factor:</p>
+<pre class="r"><code>contr.sum(levels(vowels$vowel))</code></pre>
+<pre><code>##   [,1] [,2]
+## a    1    0
+## o    0    1
+## u   -1   -1</code></pre>
+<p>Since there are 3 levels, we need two dummy variables.
+So <code>a</code> is coded as <code>1, 0</code>, <code>o</code> is coded as <code>0, 1</code>, and <code>u</code> as <code>-1, -1</code>.</p>
+<p>To set the contrasts of a factor to sum coding, we can run the following:</p>
+<pre class="r"><code>contrasts(vowels$vowel) &lt;- &quot;contr.sum&quot;
+# If you want to change it back to treatment contrasts you can run
+# contrasts(vowels$vowel) &lt;- &quot;contr.treatment&quot;</code></pre>
+<p>With sum contrasts the reference level is in fact the grand mean.</p>
+<p>In our model of vowel duration this means that the <code>Intercept</code> coefficient will be the grand mean of vowel duration.</p>
+<p>Let’s rerun the model and look at the output.</p>
+<pre class="r"><code>vow_lm &lt;- lm(v1_duration ~ vowel, data = vowels)
+
+summary(vow_lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = v1_duration ~ vowel, data = vowels)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -66.874 -22.567  -2.293  17.025 106.755 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  116.815      1.055 110.728  &lt; 2e-16 ***
+## vowel1        11.801      1.483   7.957 5.40e-15 ***
+## vowel2         6.160      1.481   4.160 3.49e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 31.38 on 883 degrees of freedom
+## Multiple R-squared:  0.1419, Adjusted R-squared:  0.1399 
+## F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The <code>Intercept</code> now is 116 ms, which mean that the mean of vowel duration across the three vowels is 116 ms.</p>
+<p>We can check this by taking the mean:</p>
+<pre class="r"><code>mean(vowels$v1_duration)</code></pre>
+<pre><code>## [1] 117.2747</code></pre>
+<p>Yup, pretty close (small differences are fine).</p>
+<p>So what are now the coefficients called <code>vowel1</code> and <code>vowel2</code>?</p>
+<p>These are, respectively, the difference between the mean duration of <code>a</code> and the grand mean, and the difference between the mean duration of <code>o</code> and the grand mean.</p>
+<p>So <code>a</code> is 11.8 ms longer than the grand mean, and <code>o</code> is 6.1 ms longer than the grand mean.</p>
+<p>What about <code>u</code> then?</p>
+<p>Easy.
+You just subtract the coefficients of both <code>a</code> and <code>o</code> from the grand mean: <span class="math inline">\(116.8 - 11.8 - 6.1 = 98.9\)</span>.</p>
+<p>If you want to check that this is correct, the mean duration of <code>u</code> according to the model above where we used treatment contrasts was <span class="math inline">\(128.616 - 29.763 = 98.853\)</span>.</p>
+</div>
+<div id="sum-contrasts-and-interactions" class="section level2">
+<h2>Sum contrasts and interactions</h2>
+<p>Sum contrasts can be very handy when the model contains interactions between factors.</p>
+<p>Let’s say we want to include in our model of vowel duration a predictor that specifies the voicing of the stop following the vowel.
+We also add an interaction between vowel and voicing, so that we can model differences in the effect of voicing across vowels.</p>
+<pre class="r"><code>vow_lm_2 &lt;- lm(v1_duration ~ c2_voicing + vowel + c2_voicing:vowel, data = vowels)
+
+summary(vow_lm_2)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = v1_duration ~ c2_voicing + vowel + c2_voicing:vowel, 
+##     data = vowels)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -64.905 -23.262  -2.033  18.134 115.813 
+## 
+## Coefficients:
+##                            Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                 123.469      1.449  85.232  &lt; 2e-16 ***
+## c2_voicingvoiceless         -13.309      2.049  -6.496 1.37e-10 ***
+## vowel1                       14.606      2.037   7.171 1.57e-12 ***
+## vowel2                        8.564      2.033   4.212 2.79e-05 ***
+## c2_voicingvoiceless:vowel1   -5.609      2.880  -1.947   0.0518 .  
+## c2_voicingvoiceless:vowel2   -4.808      2.876  -1.672   0.0949 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 30.47 on 880 degrees of freedom
+## Multiple R-squared:  0.1937, Adjusted R-squared:  0.1891 
+## F-statistic: 42.29 on 5 and 880 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Now the <code>Intercept</code> is the mean vowel duration when the following stop is voiced (the reference level of <code>c2_voicing</code>).
+This means that the average vowel followed by a voiced stop is 123 ms long in our data.</p>
+<p>The coefficient of <code>c2_voicingvoiceless</code> tells us the mean effect of <code>c2_voicing</code> on vowel duration, averaged across all vowels.
+So, on average, a vowel is about 13 ms shorter when followed by a voiceless stop.</p>
+<p>The coefficients of <code>vowel1</code> and <code>vowel2</code> indicate the difference between the average vowel duration before a voiced stop (the <code>Intercept</code>) and <code>a</code> and <code>o</code> respectively.
+As before, to get the difference between the average vowel duration of <code>u</code> before a voiceless stop and the mean vowel duration, you just need to subtract the coefficients of <code>vowel1</code> and <code>vowel2</code> from the <code>Intercept</code>: <span class="math inline">\(123.5 - 14.6 - 8.5 = 100.4\)</span>.</p>
+<p>The last two coefficients, <code>c2_voicingvoiceless:vowel1</code> and <code>c2_voicingvoiceless:vowel2</code> correspond to the difference in the effect of voicing between the average effect of voicing (<code>c2_voicingvoiceless</code>, i.e. -13 ms) and the effect of voicing in <code>a</code> and <code>o</code> respectively.
+That is, the decrease of vowel duration for <code>a</code> is 5.6 ms greater than the average effect, while the decrease of vowel duration for <code>o</code> is 4.8 ms greater than the average effect.</p>
+<p>Following the usual formula, the effect of voicing for <code>u</code> is <span class="math inline">\(-13.309 - (-5.6) - (-4.8) = -2.9\)</span>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>A previous version of this post is also featured as a vignette in the learnB4SS package, <a href="https://learnb4ss.github.io/learnB4SS/articles/contrasts.html" class="uri">https://learnb4ss.github.io/learnB4SS/articles/contrasts.html</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

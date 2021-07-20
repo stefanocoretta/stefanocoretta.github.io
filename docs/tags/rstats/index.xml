@@ -6,7 +6,18 @@
     <description>Recent content in rstats on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Factors, dummy coding and contrasts</title>
+      <link>https://stefanocoretta.github.io/post/contrasts/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/contrasts/</guid>
+      <description>This post is an overview of how factors (i.e. categorical variables) are coded under the hood using dummy coding and which types of dummy coding can be set in R.1
+Introduction There’s seems to be a bit of terminological mix-up in the wild, so we first present a terminological set that will be used throughout the vignette.
+Categorical variables in R are generally stored using factors. A factor is a vector of values from a categorical variable.</description>
+    </item>
+    
     <item>
       <title>R gist — Plotting the area under the curve with ggplot</title>
       <link>https://stefanocoretta.github.io/post/plotting-the-area-under-the-curve/</link>

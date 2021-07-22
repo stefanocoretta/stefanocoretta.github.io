@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Literate programming with Praat | Stefano Coretta</title>
+
+<meta name="keywords" content="data processing, phonetics, documentation, praat, literate programming, tutorial" />
+<meta name="description" content="This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
+What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.">
+<meta name="author" content="Stefano Coretta">
+<link rel="canonical" href="https://stefanocoretta.github.io/post/literate-programming-with-praat/" />
+<link href="/assets/css/stylesheet.min.a31c75ee58abbdfa57a7c3ce443a8651fe82bb20fcdb7c710d6200a7094b5ce4.css" integrity="sha256-oxx17lirvfpXp8PORDqGUf6CuyD823xxDWIApwlLXOQ=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://stefanocoretta.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://stefanocoretta.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://stefanocoretta.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://stefanocoretta.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://stefanocoretta.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.85.0" />
+
+
+
+
+<script src="https://kit.fontawesome.com/0019a3da9c.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/leaflet/leaflet.css"/>
+<script src="/leaflet/leaflet.js"></script>
+<link rel="stylesheet" href="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css">
+<script src="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.js"></script>
+<meta property="og:title" content="Literate programming with Praat" />
+<meta property="og:description" content="This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
+What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://stefanocoretta.github.io/post/literate-programming-with-praat/" />
+<meta property="og:image" content="https://stefanocoretta.github.io/img/twitter-card-praat-lit.png" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-03-21T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2019-03-21T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://stefanocoretta.github.io/img/twitter-card-praat-lit.png" />
+<meta name="twitter:title" content="Literate programming with Praat"/>
+<meta name="twitter:description" content="This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).
+What is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://stefanocoretta.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Literate programming with Praat",
+      "item": "https://stefanocoretta.github.io/post/literate-programming-with-praat/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Literate programming with Praat",
+  "name": "Literate programming with Praat",
+  "description": "This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).\nWhat is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document.",
+  "keywords": [
+    "data processing", "phonetics", "documentation", "praat", "literate programming", "tutorial"
+  ],
+  "articleBody": "  \nThis post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of pandoc and the Literate Markdown Tangler (lmt, you will need to install Go first to install lmt).\nWhat is literate programming? In literate programming, one writes both code and plain text which explains what the code does in a single document. Natural language and programming language are interleaved in the document in a way that is reader-oriented, rather than software oriented. So, for example, the code can be included in an order that is different from the order it should have had the document been a script.\nThis programming paradigm allows developers to focus on documenting their code in a more natural way. This has the double advantage of aiding a new user in understanding what the code does and helping the author of the code to develop the code following a logic that can be different from the logic of the code’s programming language.\nIn general, from a literate source file (a file containing both natural language and programming code) it is possible to obtain a documentation file (by the process called weaving) and a script file (by the process called tangling) which is interpretable by the target programming language.\nMarkdown, a simple but effective mark-up language, allows mixing natural language (with rich formatting) and code in a single document. Pandoc is a software utility which can convert documents from and to a variety of formats. The conversion relevant to us is from Markdown to PDF. Converting Markdown to PDF corresponds to the weaving process mentioned above, i.e. creating a richly formatted documentation of the code. Pandoc has syntax highlighting capabilities, and Praat syntax is supported, so that your documentation will also be easier to interpret. The Literate Markdown Tangler, by Dave MacFarlane, is a software written in Go that instead can be used to tangle (extract) the code from the source file into a scripting file.\nPandoc and lmt can be used together to develop a literate programming workflow with Praat scripting. This means that you can develop a Praat script by laying out the pieces of the script in the source file and explain what the various parts of the script do in using natural language. lmt further allows the user to create “blocks” of code that can be referenced in other blocks and reused. If you wanna generate a PDF version of the documentation, you can convert the source file to a PDF with Pandoc.\nThe figure at the top of this post shows an example of a literate Praat source file.\nThe following sections will point you to the software and files that need to be installed/copied and will show how to use literate programming with Praat scripting.\n Necessary software You need to install the latest version of Pandoc, which can be found here. After installing, be sure you can run this command from your command line GUI: pandoc --version. If a version is returned, Pandoc is working on your system. Install Go from here and set it up, then download and install lmt from here. Download and unzip the content of this zip to a convenient directory (usually, in .pandoc/ in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.   Literate Praat To generate the Praat script and its documentation, you have to:\nWrite your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by lmt. Use lmt to tangle the code from the source file into a standalone Praat script. Use pandoc with a custom syntax highlighter to generate the documentation of the script.  The source file The source file will contain text, Markdown markup, and code enclosed between back-ticks. The following is an example of how such file would look like.\nLiterate Praat basic example\n  Tangle the code To tangle the code into a standalone Praat script, run the following line from your command line GUI, where my-script.praat.md is your Praat source file:\nlmt my-script.praat.md The scripts defined in the source file will be output in the same directory as the source file (to learn more on how this works, check the lmt README on GitHub).\n Weave the documentation To weave the documentation, run the following by replacing the syntax definition path with the path to the pandoc-praat/ folder on your computer:\npandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=/pandoc-praat/praat.xml This line of code tells Pandoc to convert from Markdown to PDF and where to find the files for highlighting Praat code.\nA .pdf file named doc.pdf containing the documentation of the script will be created when the line is run.\n  ",
+  "wordCount" : "793",
+  "inLanguage": "en",
+  "image":"https://stefanocoretta.github.io/img/twitter-card-praat-lit.png","datePublished": "2019-03-21T00:00:00Z",
+  "dateModified": "2019-03-21T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Stefano Coretta"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://stefanocoretta.github.io/post/literate-programming-with-praat/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Stefano Coretta",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://stefanocoretta.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+    </style>
+
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://stefanocoretta.github.io" accesskey="h" title="Stefano Coretta (Alt + H)">Stefano Coretta</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                
+                
+            </span>
+        </div>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://stefanocoretta.github.io" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/research/" title="Research">
+                    <span>Research</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/meta/" title="Meta">
+                    <span>Meta</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/output/" title="Output">
+                    <span>Output</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/archives/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://stefanocoretta.github.io/docs/CorettaCV.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+
+    <h1 class="post-title">
+      Literate programming with Praat
+    </h1>
+    <div class="post-meta">
+
+March 21, 2019&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta
+
+
+</div>
+  </header> 
+<div id="images"><img class="streami" border="0" src="https://stefanocoretta.github.io/img/twitter-card-praat-lit.png" alt="Literate Praat scripting">
+        
+</div>
+
+  <div class="post-content">
+
+<script src="https://stefanocoretta.github.io/post/literate-programming-with-praat/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p><br>
+<br></p>
+<p>This post quickly illustrates how to apply a literate programming workflow to Praat scripting.
+To be able to reproduce the steps described here you need the latest version of <a href="https://pandoc.org">pandoc</a> and the <a href="https://github.com/driusan/lmt">Literate Markdown Tangler</a> (<code>lmt</code>, you will need to install <a href="https://golang.org">Go</a> first to install <code>lmt</code>).</p>
+<div id="what-is-literate-programming" class="section level2">
+<h2>What is literate programming?</h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a>, one writes both code and plain text which explains what the code does in a single document.
+Natural language and programming language are interleaved in the document in a way that is reader-oriented, rather than software oriented.
+So, for example, the code can be included in an order that is different from the order it should have had the document been a script.</p>
+<p>This programming paradigm allows developers to focus on documenting their code in a more natural way.
+This has the double advantage of aiding a new user in understanding what the code does and helping the author of the code to develop the code following a logic that can be different from the logic of the code’s programming language.</p>
+<p>In general, from a literate source file (a file containing both natural language and programming code) it is possible to obtain a documentation file (by the process called <em>weaving</em>) and a script file (by the process called <em>tangling</em>) which is interpretable by the target programming language.</p>
+<p><a href="https://www.markdownguide.org">Markdown</a>, a simple but effective mark-up language, allows mixing natural language (with rich formatting) and code in a single document.
+<a href="https://pandoc.org">Pandoc</a> is a software utility which can convert documents from and to a variety of formats.
+The conversion relevant to us is from Markdown to PDF.
+Converting Markdown to PDF corresponds to the weaving process mentioned above, i.e. creating a richly formatted documentation of the code.
+Pandoc has syntax highlighting capabilities, and Praat syntax is supported, so that your documentation will also be easier to interpret.
+The <code>Literate Markdown Tangler</code>, by Dave MacFarlane, is a software written in <a href="https://golang.org">Go</a> that instead can be used to tangle (extract) the code from the source file into a scripting file.</p>
+<p>Pandoc and <code>lmt</code> can be used together to develop a literate programming workflow with Praat scripting.
+This means that you can develop a Praat script by laying out the pieces of the script in the source file and explain what the various parts of the script do in using natural language.
+<code>lmt</code> further allows the user to create “blocks” of code that can be referenced in other blocks and reused.
+If you wanna generate a PDF version of the documentation, you can convert the source file to a PDF with Pandoc.</p>
+<p>The figure at the top of this post shows an example of a literate Praat source file.</p>
+<p>The following sections will point you to the software and files that need to be installed/copied and will show how to use literate programming with Praat scripting.</p>
+</div>
+<div id="necessary-software" class="section level2">
+<h2>Necessary software</h2>
+<ol style="list-style-type: decimal">
+<li>You need to install the latest version of Pandoc, which can be found <a href="https://pandoc.org/installing.html">here</a>. After installing, be sure you can run this command from your command line GUI: <code>pandoc --version</code>. If a version is returned, Pandoc is working on your system.</li>
+<li>Install Go from <a href="https://golang.org">here</a> and set it up, then download and install <code>lmt</code> from <a href="https://github.com/driusan/lmt">here</a>.</li>
+<li>Download and unzip the content of <a href="/files/pandoc-praat.zip">this zip</a> to a convenient directory (usually, in <code>.pandoc/</code> in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.</li>
+</ol>
+</div>
+<div id="literate-praat" class="section level2">
+<h2>Literate Praat</h2>
+<p>To generate the Praat script and its documentation, you have to:</p>
+<ol style="list-style-type: decimal">
+<li>Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by <code>lmt</code>.</li>
+<li>Use <code>lmt</code> to tangle the code from the source file into a standalone Praat script.</li>
+<li>Use pandoc with a custom syntax highlighter to generate the documentation of the script.</li>
+</ol>
+<div id="the-source-file" class="section level3">
+<h3>The source file</h3>
+<p>The source file will contain text, Markdown markup, and code enclosed between back-ticks.
+The following is an example of how such file would look like.</p>
+<div class="figure">
+<img src="images/basic.png" alt="" />
+<p class="caption">Literate Praat basic example</p>
+</div>
+</div>
+<div id="tangle-the-code" class="section level3">
+<h3>Tangle the code</h3>
+<p>To tangle the code into a standalone Praat script, run the following line from your command line GUI, where <code>my-script.praat.md</code> is your Praat source file:</p>
+<pre><code>lmt my-script.praat.md</code></pre>
+<p>The scripts defined in the source file will be output in the same directory as the source file (to learn more on how this works, check the <code>lmt</code> README on GitHub).</p>
+</div>
+<div id="weave-the-documentation" class="section level3">
+<h3>Weave the documentation</h3>
+<p>To weave the documentation, run the following by replacing the syntax definition path with the path to the <code>pandoc-praat/</code> folder on your computer:</p>
+<pre><code>pandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=&lt;your-path-here&gt;/pandoc-praat/praat.xml</code></pre>
+<p>This line of code tells Pandoc to convert from Markdown to PDF and where to find the files for highlighting Praat code.</p>
+<p>A <code>.pdf</code> file named <code>doc.pdf</code> containing the documentation of the script will be created when the line is run.</p>
+</div>
+</div>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://stefanocoretta.github.io/tags/data-processing/">data processing</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/phonetics/">phonetics</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/documentation/">documentation</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/praat/">praat</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/literate-programming/">literate programming</a></li>
+      <li><a href="https://stefanocoretta.github.io/tags/tutorial/">tutorial</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2021 <a href="https://stefanocoretta.github.io">Stefano Coretta</a></span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

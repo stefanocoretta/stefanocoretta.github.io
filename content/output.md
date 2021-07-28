@@ -12,9 +12,9 @@ tags: []
 
 <br>
 
-<i class="fa fa fa-info-circle fa-lg accent-red"></i> --- Click on the <u>icon links</u> below each publication to download manuscripts and to navigate to the research compendia if available. 
+<i class="fa fa fa-info-circle fa-lg accent-red"></i> --- Click on the <b>icon links</b> below each publication to download manuscripts and to navigate to the research compendia if available. 
 
-<i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <u>open access</u>, while the "registered" icon <i class="far fa-registered"></i> that it is a <u>Registered Report</u>.
+<i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
 {{< pub year="submitted"
@@ -31,6 +31,8 @@ tags: []
   title="Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish"
   authors="Patrycja Strycharczuk, Małgorzata Ćavar, <u>Stefano Coretta</u>"
   journal="Journal of the Acoustical Society of America"
+  info="150(1), 592--607"
+  doi="10.1121/10.0005585"
   compendium="https://stefanocoretta.github.io/polish-reduction/" >}}
 {{< pub year="2021"
   open=true
@@ -102,6 +104,16 @@ tags: []
 2017 | <b>phonrule: TeX package for typesetting phonological rules in SPE style</b><br><u>Stefano Coretta</u><br><em>LaTeX package v1.4.0<em> | <a class="fa fa-external-link-square-alt fa-lg" href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"></a> <a class="fa fa-github-alt fa-lg" href="https://github.com/stefanocoretta/phonrule" target="_blank"></a>
 
 
+## Invited talks
+
+| | | |
+---|---|:---:
+2021 | <b>The more we learn the less we know: (Un)resolved questions on the voicing effect.</b><br>University of Potsdam, 28 July, Germany. | <a href="https://stefanocoretta.github.io/2021-potsdam/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
+2021 | <b>Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change.</b><br>University of Lancaster, 25 May, UK. | <a href="https://stefanocoretta.github.io/2021-lancaster" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
+2018 | <b>Vowel duration differences before voiceless and voiced stops as compensatory temporal adjustment.</b><br>Indiana University Bloomington, 16 October, USA. | 
+2018 | <b>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography.</b> <br>Aarhus University, 18 September, Denmark. |
+
+
 ## Talks and posters
 
 <table>
@@ -120,10 +132,6 @@ tags: []
   <tr>
     <td>2019</td>
     <td>Stefano Coretta. <em>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish.</em> Talk presented at LAGB 2019.<br><a href="https://stefanocoretta.github.io/docs/pubs/2019-LAGB.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td><em>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography.</em> Invited talk at Aarhus University, 18 September, Denmark.</td>
   </tr>
   <tr>
     <td>2018</td>

@@ -106,72 +106,30 @@ tags: []
 
 ## Invited talks
 
-| | | |
----|---|:---:
-2021 | <b>The more we learn the less we know: (Un)resolved questions on the voicing effect.</b><br>University of Potsdam, 28 July, Germany. | <a href="https://stefanocoretta.github.io/2021-potsdam/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
-2021 | <b>Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change.</b><br>University of Lancaster, 25 May, UK. | <a href="https://stefanocoretta.github.io/2021-lancaster" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
-2018 | <b>Vowel duration differences before voiceless and voiced stops as compensatory temporal adjustment.</b><br>Indiana University Bloomington, 16 October, USA. | 
-2018 | <b>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography.</b> <br>Aarhus University, 18 September, Denmark. |
+| | | 
+---|---
+2021 | <b>The more we learn the less we know: (Un)resolved questions on the voicing effect.</b><br>University of Potsdam, 28 July, Germany. <br> <a href="https://stefanocoretta.github.io/2021-potsdam/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
+2021 | <b>Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change.</b><br>University of Lancaster, 25 May, UK. <br> <a href="https://stefanocoretta.github.io/2021-lancaster" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
+2018 | <b>Vowel duration differences before voiceless and voiced stops as compensatory temporal adjustment.</b><br>Indiana University Bloomington, 16 October, USA.  
+2018 | <b>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography.</b> <br>Aarhus University, 18 September, Denmark. 
 
 
 ## Talks and posters
 
-<table>
-  <tr>
-    <td>2020</td>
-    <td>Patrycja Strycharczuk, Małgorzata Ćavar, and Stefano Coretta. <em>Two mechanisms for vowel reduction in Polish.</em> Talk presented at LabPhon17, 8 July, Vancouver (Canada, virtual).</td>
-  </tr>
-  <tr>
-    <td>2020</td>
-    <td><em>Meta-analytical estimates of the effect of voicing on vowel duration in English are biased.</em> Poster presented at LabPhon17, 8 July, Vancouver (Canada, virtual).<br><a class="osi" href=https://github.com/stefanocoretta/2020-labphon target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2019</td>
-    <td>Thea Cameron-Faulkner, Circle Steele, Nividita Malik, Stefano Coretta, Ludovica Serretrice, and Elena Lieven. <em>A cross-cultural analysis of early prelinguistic gesture development and its relationship to language development.</em> Talk presented at the 5th International Language and Communicative Development Conference, 12 June, Manchester (UK).</td>
-  </tr>
-  <tr>
-    <td>2019</td>
-    <td>Stefano Coretta. <em>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish.</em> Talk presented at LAGB 2019.<br><a href="https://stefanocoretta.github.io/docs/pubs/2019-LAGB.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a></td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td>Coretta, Stefano and Massimiliano Canzi. <em>The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling.</em> Talk presented at LAGB 2018, 11-14 September, University of Sheffield, UK. DOI: <a href="http://doi.org/10.5281/zenodo.1415402" target="_blank">10.5281/zenodo.1415402</a><br><a href=https://github.com/stefanocoretta/2018-lagb/raw/master/presentation.pdf target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href=https://github.com/stefanocoretta/2018-lagb target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td><em>Quantifying vocal fold activity: two new methods for analysing electroglottographic data.</em> Talk presented at New Developments in Speech Sensing and Imaging, 23 June, University of Lisbon, Portugal.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon-satellite.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://osf.io/zvcgb/" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td><em>Longer vowel duration correlates with tongue root advancement in Italian and Polish: An ultrasound study.</em> Talk presented at LabPhon16, 22 June, University of Lisbon, Portugal.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-labphon" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td><em>Processing EGG data: New methods for a multidimensional time-series assessment of vocal fold activity.</em> Talk presented at mFiL 2018, 26 Apr, The University of Manchester, UK.</td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td><em>Tongue root advancement and vowel duration: A gradient effect?.</em> Talk presented at the 2018 BAAP Colloquium, 13 Apr, University of Kent, UK.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-baap.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-baap" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td><em>Vowel duration and tongue root advancement in Italian and Polish.</em> Talk presented at Ultrafest VIII, 4 Oct, University of Potsdam, Germany.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-ultrafest.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2017-ultrafest" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td><em>A streamlined workflow for "doing phonetics by computer" (using Praat and R).</em> Talk presented at the Postgraduate Academic Research in Linguistics at York (PARLAY), 15 Sep, University of York, UK.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-parlay.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/speakr-demo" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td><em>Towards an articulatory based typology of laryngeal effects on vowel duration.</em> Poster presented at the 25th Manchester Phonology Meeting (25mfm), 25–27 May, University of Manchester.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-mfm.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/ma-thesis-york" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td><em>Implementing reproducibility in phonetic research: a computational workflow.</em> Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28–29 April, University of Manchester.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-mfil.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/reproducible-phonetics" target="_blank"><span class="osi-compendium"></span></a></td>
-  </tr>
-  <tr>
-    <td>2015</td>
-    <td><em>A new case of “rhinoglottophilia:” from nasalisation to aspiration.</em> Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESHP2), 3–4 December, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/docs/pubs/2015-eshp.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a></td>
-  </tr>
-</table>
+| | |
+---|---
+2020 | Patrycja Strycharczuk, Małgorzata Ćavar, and Stefano Coretta. <em>Two mechanisms for vowel reduction in Polish.</em> Talk presented at LabPhon17, 8 July, Vancouver (Canada, virtual).
+2020 | <em>Meta-analytical estimates of the effect of voicing on vowel duration in English are biased.</em> Poster presented at LabPhon17, 8 July, Vancouver (Canada, virtual).<br><a class="osi" href=https://github.com/stefanocoretta/2020-labphon target="_blank"><span class="osi-compendium"></span></a>
+2019 | Thea Cameron-Faulkner, Circle Steele, Nividita Malik, Stefano Coretta, Ludovica Serretrice, and Elena Lieven. <em>A cross-cultural analysis of early prelinguistic gesture development and its relationship to language development.</em> Talk presented at the 5th International Language and Communicative Development Conference, 12 June, Manchester (UK).
+2019 | Stefano Coretta. <em>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish.</em> Talk presented at LAGB 2019.<br><a href="https://stefanocoretta.github.io/docs/pubs/2019-LAGB.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
+2018 | Coretta, Stefano and Massimiliano Canzi. <em>The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling.</em> Talk presented at LAGB 2018, 11-14 September, University of Sheffield, UK. DOI: <a href="http://doi.org/10.5281/zenodo.1415402" target="_blank">10.5281/zenodo.1415402</a><br><a href=https://github.com/stefanocoretta/2018-lagb/raw/master/presentation.pdf target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href=https://github.com/stefanocoretta/2018-lagb target="_blank"><span class="osi-compendium"></span></a>
+2018 | <em>Quantifying vocal fold activity: two new methods for analysing electroglottographic data.</em> Talk presented at New Developments in Speech Sensing and Imaging, 23 June, University of Lisbon, Portugal.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon-satellite.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://osf.io/zvcgb/" target="_blank"><span class="osi-compendium"></span></a>
+2018 | <em>Longer vowel duration correlates with tongue root advancement in Italian and Polish: An ultrasound study.</em> Talk presented at LabPhon16, 22 June, University of Lisbon, Portugal.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-labphon.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-labphon" target="_blank"><span class="osi-compendium"></span></a>
+2018 | <em>Processing EGG data: New methods for a multidimensional time-series assessment of vocal fold activity.</em> Talk presented at mFiL 2018, 26 Apr, The University of Manchester, UK.
+2018 | <em>Tongue root advancement and vowel duration: A gradient effect?.</em> Talk presented at the 2018 BAAP Colloquium, 13 Apr, University of Kent, UK.<br><a href="https://stefanocoretta.github.io/docs/pubs/2018-baap.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2018-baap" target="_blank"><span class="osi-compendium"></span></a>
+2017 | <em>Vowel duration and tongue root advancement in Italian and Polish.</em> Talk presented at Ultrafest VIII, 4 Oct, University of Potsdam, Germany.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-ultrafest.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2017-ultrafest" target="_blank"><span class="osi-compendium"></span></a>
+2017 | <em>A streamlined workflow for "doing phonetics by computer" (using Praat and R).</em> Talk presented at the Postgraduate Academic Research in Linguistics at York (PARLAY), 15 Sep, University of York, UK.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-parlay.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/speakr-demo" target="_blank"><span class="osi-compendium"></span></a>
+2017 | <em>Towards an articulatory based typology of laryngeal effects on vowel duration.</em> Poster presented at the 25th Manchester Phonology Meeting (25mfm), 25–27 May, University of Manchester.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-mfm.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/ma-thesis-york" target="_blank"><span class="osi-compendium"></span></a>
+2017 | <em>Implementing reproducibility in phonetic research: a computational workflow.</em> Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28–29 April, University of Manchester.<br><a href="https://stefanocoretta.github.io/docs/pubs/2017-mfil.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a> <a class="osi" href="https://github.com/stefanocoretta/reproducible-phonetics" target="_blank"><span class="osi-compendium"></span></a>
+2015 | <em>A new case of “rhinoglottophilia:” from nasalisation to aspiration.</em> Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESHP2), 3–4 December, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/docs/pubs/2015-eshp.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 

@@ -27,7 +27,7 @@ tags: []
   journal="Journal of the International Phonetic Association"
   submitted="https://osf.io/mb2hg/"
   compendium="https://osf.io/vry3h/" >}}
-{{< pub year="accepted"
+{{< pub year="2021"
   title="Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish"
   authors="Patrycja Strycharczuk, Małgorzata Ćavar, <u>Stefano Coretta</u>"
   journal="Journal of the Acoustical Society of America"

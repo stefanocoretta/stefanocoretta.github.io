@@ -19,3 +19,4 @@
 "content/post/2021-07-04-plotting-the-area-under-the-curve/index.Rmd" "e3d3bd6a67477e02a0e848fcb3a2a590"
 "content/post/2021-07-20-contrasts/index.Rmd" "0f4b17e4c0c38751957656330ae35764"
 "content/research.Rmd" "caa25670c1b0bc7d184ced397730f828"
+"content/workshops.Rmd" "143116f15de09b855a8b466b144e9806"

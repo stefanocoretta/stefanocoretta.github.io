@@ -38,6 +38,11 @@ url = "output/"
 weight = -20
 
 [[menu.main]]
+name = "Workshops"
+url = "workshops/"
+weight = -15
+
+[[menu.main]]
 name = "Blog"
 url = "archives/"
 weight = -10

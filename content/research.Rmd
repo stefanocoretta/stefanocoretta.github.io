@@ -2,7 +2,7 @@
 title: Research
 slug: research
 bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
-cls: unified-style-sheet-for-linguistics.csl
+csl: unified-style-sheet-for-linguistics.csl
 output:
   blogdown::html_page:
     number_sections: true

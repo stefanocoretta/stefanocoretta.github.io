@@ -8,30 +8,45 @@ categories:
 tags:
   - positionality
   - meta-science
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+csl: unified-style-sheet-for-linguistics.csl
 output:
   blogdown::html_page:
     number_sections: true
 ---
 
-This is my researcher's positionality statement (see [this paper](https://doi.org/10.34293/education.v8i4.3232) for context).
+# Overview
 
-It is a work in progress, in two senses:
+This is my researcher's [positionality statement]{.smallcaps} [for context, see @darwin2020; @jafar2018].
 
-- In one sense, it is not exhaustive and I will be adding statements as they occur to me.
-- In the other sense, it is an ever-changing document, since I will frequently change my mind about any of the statements herein.
+> The term [positionality]{.smallcaps} both describes an individual's [world view]{.smallcaps} and the [position]{.smallcaps} they adopt about a research task and its social and political context. The individual's world view or 'where the researcher is coming from' concerns [ontological assumptions]{.smallcaps} (an individual's beliefs about the nature of social reality and what is knowable about the world), [epistemological assumptions]{.smallcaps} (an individual's beliefs about the nature of knowledge) and assumptions about [human nature and agency]{.smallcaps} (individual's assumptions about the way we interact with our environment and relate to it).
+>
+> It is important for new researchers to note here that their positionality not only shapes their work but influences their interpretation, understanding, and, ultimately, their belief in the truthfulness and validity of other's research that they read or are exposed to.
 
-# The statements
+— @darwin2020, p. 1-3.
 
-In random-ish order, divided by category (for now, epistemological and ontological).
+This is a work in progress, in two senses:
 
-For each statement, prefix "In my opinion".
-In some cases *opinion* refers to my expert opinion, in others to my intuitions (for the helpfulness of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)).
-In time, I will add references to the statements, when relevant.
+- In one sense, it is not exhaustive and I will be adding content as it occurs to me.
+- In the other sense, it is an ever-changing document, since I will frequently change my mind about any part(s) of content herein.
+
+The following sections provide a thought-out description of my ontological and epistemological belief systems.
+The reader should interpret all of the statements made here as "my personal opinion".
+In some cases *opinion* refers to my [expert opinion]{.smallcaps}, in others to my [intuitions]{.smallcap}.^[For the use of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net).]
+With time, I will add references where/if relevant.
+
+## Ontological
+
+1. [linguisticality]{.smallcaps} is the human ability to communicate through a language, and a [language]{.smallcaps} is a specific communicative system used by a specific group of humans [@haspelmath2020].
+1. If one defines [linguisticality]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have linguisticality is a tautology.
+1. All living beings are capable of communicating [even plants and fungi, @mancuso2015].
 
 ## Epistemological
 
 1. There is no agreement as to what [science]{.smallcaps} actually is.
 1. Science is not the only way to gain knowledge.
+1. Science has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
+1. Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].
 1. There is no agreement as to what [language]{.smallcaps}, [human language]{.smallcaps}, [linguistic capacity]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
 1. There is no agreement as to whether [language]{.smallcaps}, [human language]{.smallcaps}, [linguistic capacity]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
 1. There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
@@ -40,16 +55,7 @@ In time, I will add references to the statements, when relevant.
     1. If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
 1. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively).
 
-## Ontological
-
-1. Science has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
-1. Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
-1. [linguisticality]{.smallcaps} is the human ability to communicate through a language, and a [language]{.smallcaps} is a specific communicative system used by a specific group of humans.
-1. If one defines [linguisticality]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have linguisticality is a tautology.
-1. All living beings are capable of communicating (even plants and fungi).
-
-
-
+### References
 
 
 

@@ -1,0 +1,55 @@
+---
+title: 'Regression models: a cheat-sheet'
+author: Stefano Coretta
+date: '2021-08-21'
+slug: [regression-models]
+categories: []
+tags: []
+---
+
+# One model to rule them all
+
+TBA
+
+# Step 1: Choose the family of distributions
+
+The first step towards building a regression model is to choose the **family of distributions** the outcome variable (is believed to) belong to.
+
+To start, is your outcome variable continuous or discrete?
+
+## Continuous outcome variable
+
+* The variable can take on *any positive and negative real number, including 0*: **Gaussian** (aka normal) distribution.
+
+    * There are very few truly Gaussian variables, although in some cases one can speak of "approximate" or "assumed" normality.
+
+    * This family is fitted by default in `lm()` and `brms::brm()`.
+
+* The variable can take on *any positive number only*: **Log-normal** distribution.
+
+    * Duration of segments, words, pauses, etc, are known to be log-normally distributed.
+
+    * Measurements taken in Hz (like f0, formants, centre of gravity, ...) could be considered to be log-normal.
+
+    * There other families that could potentially be used depending on the nature of the variable: exponential-gaussian (reaction times), gamma, ...
+
+* The variable can take on *any number between 0 and 1, but not 0 nor 1*: **Beta** distribution.
+
+    * Proportions fall into this category (for example proportion of voicing within closure), although 0 and 1 are not allowed in the beta distribution.
+
+* The variable can take on *any number between 0 and 1, including 0 or 0 and 1*: **Zero-inflated** or **Zero/one-inflated beta** (ZOIB) distribution.
+
+    * If the proportion data includes many 0s and 1s, then this is the ideal distribution to use. ZOIB distributions are somewhat more difficult to fit than a simple beta distribution, so a common practice is to tranform the data so that it doesn't include 0s nor 1s (this can be achieved using different techniques, some better than others).
+
+## Discrete outcome variable
+
+* The variable is *dichotomous*, i.e. it can take one of two levels: **Bernoulli** distribution.
+
+    * Categorical outcome variables like yes/no, correct/incorrect, voiced/voiceless, follow this distribution.
+
+    * This family is fitted by default when you run `glm(family = binomial)`, aka "logistic regression".
+
+* The variable is *counts*: **Poisson** distribution.
+
+    * Counts of words, segments, gestures, f0 peaks, ...
+

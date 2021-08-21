@@ -6,7 +6,19 @@
     <description>Recent content on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regression models: a cheat-sheet</title>
+      <link>https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/</guid>
+      <description>One model to rule them all TBA
+ Step 1: Choose the family of distributions The first step towards building a regression model is to choose the family of distributions the outcome variable (is believed to) belong to.
+To start, is your outcome variable continuous or discrete?
+Continuous outcome variable  The variable can take on any positive and negative real number, including 0: Gaussian (aka normal) distribution.</description>
+    </item>
+    
     <item>
       <title>Factors, coding and contrasts</title>
       <link>https://stefanocoretta.github.io/post/contrasts/</link>

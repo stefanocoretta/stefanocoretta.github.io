@@ -37,4 +37,11 @@ This workshop introduces participants to Generalised Additive (Mixed) Models, or
 
 Check out the [workshop materials](https://github.com/stefanocoretta/gamm-workshop).
 
+# Introduction to (Xe)LaTeX
+
+XeLaTex is is a mark-up language for text editing and typesetting (and more).
+It's a dialect of the LaTeX format that introduces full Unicode support and handling of TTF and OTF fonts.
+
+Check out the [workshop materials](https://github.com/stefanocoretta/xelatex-workshop).
+
 ### References

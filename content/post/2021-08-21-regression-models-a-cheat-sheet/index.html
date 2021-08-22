@@ -3,8 +3,9 @@ title: 'Regression models: a cheat-sheet'
 author: Stefano Coretta
 date: '2021-08-21'
 slug: [regression-models]
-categories: []
-tags: []
+categories: ["methods"]
+tags: ["regression", "brms", "lmer", "gamm"]
+math: true
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
@@ -12,7 +13,32 @@ tags: []
 
 <div id="one-model-to-rule-them-all" class="section level1">
 <h1>One model to rule them all</h1>
-<p>TBA</p>
+<p><strong>Regression models</strong>, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable <span class="math inline">\(Y\)</span> based on a function <span class="math inline">\(f(X)\)</span>.</p>
+<p>The “simplest” regression model is the formula of a line:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><span class="math display">\[
+y = \alpha + \beta x
+\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> is the <strong>intercept</strong> of the line and <span class="math inline">\(\beta\)</span> the <strong>slope</strong>.</p>
+<p>The principles behind this formula can be extended to represent virtually any other model, independent of the nature of the outcome variable(s) (<span class="math inline">\(y\)</span>), the predictor(s), the types of relationship between outcome and predictor, and so on.</p>
+<p><strong>This means that if you master the principles of regression models, then you can virtually fit any kind of data using regressions.</strong>
+You can bid farewell to ANOVAs, <span class="math inline">\(t\)</span>-tests, <span class="math inline">\(\chi^2\)</span>-tests, and what not.
+In fact, these can all be thought of as specific cases of regressions.
+It just so happens that they got themselves a specific name.
+But the underlying mechanics is the same.</p>
+<p>Same goes with “linear models”, “logistic regression”, “generalised linear models”, “mixed-effects regression” and so on.
+These are all regression models, so they all follow the same principles.
+And again, the fact that they got specific name is a historical “accident”.</p>
+<p>Understanding that these named models are in fact all regression models gives you super powers you can use on data (Sauron will be so jealous):</p>
+<blockquote>
+<p>One model to rule them all, one model to fit them,<br />
+One model to shrink them all, and in probability bind them;<br />
+In the Land of Inference where the distributions lie.</p>
+</blockquote>
+<p>Ehm… perhaps this is not gonna win a poetry context, but…</p>
+<p>The message is that with a single tool, i.e. regression models, you can go a long way!</p>
+<p>Each of the following sections asks you about the nature of your data and/or experimental design.
+By answering each, you will find out which “pieces” you need to add to your model structure.</p>
+<p>(This is a work in progress, so still rough around the edges).</p>
 </div>
 <div id="step-0-number-of-outcome-variables" class="section level1">
 <h1>Step 0: Number of outcome variables</h1>
@@ -102,4 +128,10 @@ For example: <code>(question | participant) + (question | word)</code> (where <c
 <p>The same steps we went through before can be applied to multiple outcome variables.
 In some cases, you will want to use the same model structure for all the outcome variables, while in others you might want to use a different model structure for each.</p>
 <p>To learn more about multivariate models, I really recommend Paul Bürkner’s vignette <a href="https://cran.r-project.org/web/packages/brms/vignettes/brms_multivariate.html">Estimating Multivariate Models with brms</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Technically, the “simplest” regression model is <span class="math inline">\(y = f(x)\)</span>, but oh well…<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>

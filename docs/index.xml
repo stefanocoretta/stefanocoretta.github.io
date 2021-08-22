@@ -13,10 +13,10 @@
       <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/</guid>
-      <description>One model to rule them all TBA
- Step 0: Number of outcome variables We will get back to this step at the end of this post, since it makes things a bit more complex.
- Step 1: Choose a distribution for your outcome variable The first step towards building a regression model is to choose the family of distributions you believe the outcome variable belongs to.
-You can start by answering this question: is your outcome variable continuous or discrete?</description>
+      <description>One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
+The “simplest” regression model is the formula of a line:1
+\[ y = \alpha + \beta x \]
+where \(\alpha\) is the intercept of the line and \(\beta\) the slope.</description>
     </item>
     
     <item>

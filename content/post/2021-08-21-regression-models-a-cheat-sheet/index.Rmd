@@ -11,6 +11,10 @@ tags: []
 
 TBA
 
+# Step 0: Number of outcome variables
+
+We will get back to this step at the end of this post, since it makes things a bit more complex.
+
 # Step 1: Choose a distribution for your outcome variable
 
 The first step towards building a regression model is to choose the **family of distributions** you believe the outcome variable belongs to.
@@ -89,8 +93,19 @@ These terms are for all intents and purposes equivalent (it just happens that di
 
 # Step 3: Are there non-linear effects?
 
-# Step 0: Number of outcome variables
+A typical use-case of non-linear terms is when you are dealing with time-series data or spatial data (i.e. geographic coordinates).
 
-If you want to model just one outcome variable, you are already covered if you went through Steps 1-3.
+Generalised Additive Models allow you to fit non-linear effects using so called "smooth" (or "smoother") terms.
 
-If instead your data has two or more outcome variables, then you want to fit a **multivariate model** (i.e. a model with *multiple outcome *variables*).
+You can fit a regression model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using `gam()` or `bam()`), among others.
+
+# Step 0-bis: Number of outcome variables
+
+If you want to model just one outcome variable, you are already covered if you went through steps 1-3.
+
+If instead your design has two or more outcome variables (for example F1 and F2, or duration of the stressed and unstressed vowel of a word) then you want to fit a **multivariate model** (i.e. a model with *multiple outcome *variables*).
+
+The same steps we went through before can be applied to multiple outcome variables.
+In some cases, you will want to use the same model structure for all the outcome variables, while in others you might want to use a different model structure for each.
+
+To learn more about multivariate models, I really recommend Paul Bürkner's vignette [Estimating Multivariate Models with brms](https://cran.r-project.org/web/packages/brms/vignettes/brms_multivariate.html).

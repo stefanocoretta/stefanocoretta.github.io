@@ -1,21 +1,29 @@
 ---
-title: VOT and place of articulation
+title: R Gist — VOT and place of articulation
 author: Stefano Coretta
 date: '2021-04-22'
 slug: []
 categories:
   - Linguistics
+  - Gist
 tags:
   - phonetics
   - phonology
+  - voice onset time
+  - VOT
+  - place of articulation
+  - 3D
+  - scatter plot
 ---
 
-```{r setup}
+```{r setup, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 knitr::opts_knit$set(root.dir = here::here())
 library(tidyverse)
 library(plotly)
 ```
+
+## Read data
 
 ```{r vot}
 vot <- read_csv("./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv") %>%
@@ -26,6 +34,8 @@ vot <- read_csv("./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv
   mutate(vot_category = recode(vot.category, long.lag = "long lag", short.lag = "short lag"))
 ```
 
+## Mean VOT
+
 ```{r plot}
 vot %>%
   plot_ly(
@@ -35,7 +45,7 @@ vot %>%
   )
 ```
 
-
+## Mean VOT (z-scores)
 
 ```{r plot-z}
 vot %>%

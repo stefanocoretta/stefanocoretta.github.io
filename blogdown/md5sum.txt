@@ -14,6 +14,7 @@
 "content/post/2021-03-07-quotables-rebecca-posner/index.Rmd" "a7674817c5c60f58b25d06ddcee8e62f"
 "content/post/2021-03-15-on-random-effects/index.Rmd" "d54278aa9f5fb3189679795386389b29"
 "content/post/2021-03-28-methods-as-theory/index.Rmd" "8287aa7fb4263cc29642ba7d5ea53724"
+"content/post/2021-04-22-vot-and-place-of-articulation/index.Rmd" "6802527631af3030616019bb4c946aaa"
 "content/post/2021-04-24-on-phonologisation/index.Rmd" "678d6f51ac0ab79600b501dc239e28cb"
 "content/post/2021-04-29-positionality/index.Rmd" "4f6cf0204126de4c7a29dd7693644d5c"
 "content/post/2021-07-04-plotting-the-area-under-the-curve/index.Rmd" "e3d3bd6a67477e02a0e848fcb3a2a590"

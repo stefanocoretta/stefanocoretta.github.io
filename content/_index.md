@@ -20,10 +20,10 @@ Welcome to the homepage of Stefano Coretta [ˈsteˑfano koˈrɛtta].
 
 I am a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany).
 I received a PhD degree in linguistics from the University of Manchester (UK) in 2020.
-My area of research is *linguistics* with a focus on *phonetology*---the study of speech sounds and their relation to [*linguisticality*](https://doi.org/10.3389/fpsyg.2019.03056) (Human Language).
+My area of research is *linguistics* with a focus on <span style="font-variant: small-caps;">[phonetology]({{< ref "meta#phonetology" >}})</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056)), <span style="font-variant: small-caps;">[research methods and statistics]({{< ref "meta#research-methods" >}})</span>.
 
 For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research]({{< ref "research" >}}) and [Meta-models]({{< ref "meta" >}}) pages.
-You can find a list of research outputs (papers, software, etc) in [Output]({{< ref "output" >}}).
+You can find a list of research outputs (papers, software, etc) in [Output]({{< ref "output" >}}) and the list of [Worshops]({{< ref "workshops ">}}) I can offer.
 
 <div class="cols-2">
 <div class="col-left">

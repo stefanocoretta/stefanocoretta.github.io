@@ -8,9 +8,9 @@
   <div class="col-right">
     <div class="avatar-info">
       <h2>Stefano Coretta</h2>
-      <h4>Postdoc researcher</h4>
-      <h4 id="institute">Ludwig-Maximilians-Universität München</h4>
-      <h4 id="my-email"><a href = "mailto: s.coretta@lmu.de">s.coretta@lmu.de</a></h4>
+      <h4>Senior Teaching Coordinator (Statistics)</h4>
+      <h4 id="institute">University of Edinburgh</h4>
+      <h4 id="my-email"><a href = "mailto: s.coretta@ed.ac.uk">s.coretta@ed.ac.uk</a></h4>
       <a href="https://twitter.com/StefanoCoretta"><i class="fa fa-2x fa-twitter"></i></a> <a href="https://github.com/stefanocoretta"><i class="fa fa-2x fa-github"></i></a> <a href="https://osf.io/profile/"><i class="ai ai-osf ai-2x"></i></a>
     </div>
   </div>
@@ -18,9 +18,11 @@
 
 Welcome to the homepage of Stefano Coretta [ˈsteˑfano koˈrɛtta].
 
-I am a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany).
+I am the Senior Teaching Coordinator for Statistics in the Linguistics and English Language department of the University of Edinburgh (UK).
+
 I received a PhD degree in linguistics from the University of Manchester (UK) in 2020.
 My area of research is *linguistics* with a focus on <span style="font-variant: small-caps;">[phonetology]({{< ref "meta#phonetology" >}})</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056)), <span style="font-variant: small-caps;">[research methods and statistics]({{< ref "meta#research-methods" >}})</span>.
+I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
 
 For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research]({{< ref "research" >}}) and [Meta-models]({{< ref "meta" >}}) pages.
 You can find a list of research outputs (papers, software, etc) in [Output]({{< ref "output" >}}) and the list of [Worshops]({{< ref "workshops ">}}) I can offer.

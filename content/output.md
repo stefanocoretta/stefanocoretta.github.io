@@ -18,15 +18,15 @@ tags: []
 
 {{< tab-2 >}}
 {{< pub year="submitted"
-  rr=true
-  title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
-  authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger" >}}
-{{< pub year="submitted"
   title="Northern Tosk Albanian (IPA Illustration)"
   authors="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
   journal="Journal of the International Phonetic Association"
   submitted="https://osf.io/mb2hg/"
   compendium="https://osf.io/vry3h/" >}}
+{{< pub year="In-Principle Acceptance"
+  rr=true
+  title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
+  authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger" >}}
 {{< pub year="2021"
   title="Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish"
   authors="Patrycja Strycharczuk, Małgorzata Ćavar, <u>Stefano Coretta</u>"

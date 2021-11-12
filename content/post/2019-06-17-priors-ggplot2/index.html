@@ -17,15 +17,15 @@ cls: unified-style-sheet-for-linguistics.csl
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>The choice of priors is a fundamental step of the Bayesian inference process. <span class="citation"><a href="#ref-vasishth2018" role="doc-biblioref">Vasishth et al.</a> (<a href="#ref-vasishth2018" role="doc-biblioref">2018</a>)</span> recommend plotting the chosen priors to see if they are reasonable.</p>
+<p>The choice of priors is a fundamental step of the Bayesian inference process. <span class="citation">Vasishth et al. (<a href="#ref-vasishth2018" role="doc-biblioref">2018</a>)</span> recommend plotting the chosen priors to see if they are reasonable.</p>
 <p>In this post I will show how to easily plot prior distributions in <a href="https://ggplot2.tidyverse.org">ggplot2</a> (which is part of the <a href="https://www.tidyverse.org">tidyverse</a>).</p>
 <p>Let’s load the tidyverse first.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-## ✓ tibble  3.1.2     ✓ dplyr   1.0.7
-## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
-## ✓ readr   1.4.0     ✓ forcats 0.5.1</code></pre>
+## ✓ tibble  3.1.6     ✓ dplyr   1.0.7
+## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
+## ✓ readr   2.1.0     ✓ forcats 0.5.1</code></pre>
 <pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
@@ -67,7 +67,7 @@ ggplot(data = tibble(x = 0:20), aes(x)) +
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-vasishth2018" class="csl-entry">
-Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. <span>“Bayesian Data Analysis in the Phonetic Sciences: A Tutorial Introduction.”</span> <em>Journal of Phonetics</em> 71: 147–61. <a href="https://doi.org/10.1016/j.wocn.2018.07.008">https://doi.org/10.1016/j.wocn.2018.07.008</a>.
+Vasishth, Shravan, M. Beckman, B. Nicenboim, Fangfang Li, and Eun Jong Kong. 2018. <span>“<span>B</span>ayesian Data Analysis in the Phonetic Sciences: A Tutorial Introduction.”</span> <em>Journal of Phonetics</em> 71: 147–61. <a href="https://doi.org/10.1016/j.wocn.2018.07.008">https://doi.org/10.1016/j.wocn.2018.07.008</a>.
 </div>
 </div>
 </div>

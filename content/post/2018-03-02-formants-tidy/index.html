@@ -30,16 +30,16 @@ cls: unified-style-sheet-for-linguistics.csl
 <p>To illustrate the process, I will use formant data that was kindly provided by <a href="http://tiny.cc/sjn">Stephen Nichols</a>.</p>
 <p>Let’s first read in the data.</p>
 <pre class="r"><code>trajectories &lt;- read_csv(&quot;./static/data/nichols-2018/tulemupepelako.csv&quot;)</code></pre>
+<pre><code>## Rows: 7 Columns: 61</code></pre>
+<pre><code>## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr  (2): Vowel, Word
+## dbl (59): Time, Duration, F1_05, F1_10, F1_15, F1_20, F1_25, F1_30, F1_35, F...</code></pre>
 <pre><code>## 
-## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   .default = col_double(),
-##   Vowel = col_character(),
-##   Word = col_character()
-## )
-## ℹ Use `spec()` for the full column specifications.</code></pre>
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>trajectories</code></pre>
-<pre><code>## # A tibble: 7 x 61
+<pre><code>## # A tibble: 7 × 61
 ##    Time Vowel Word      Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
 ##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1  194. u     tulemupe…     43.3  406.  439.  453.  456.  430.  357.  314.  288.
@@ -55,10 +55,7 @@ cls: unified-style-sheet-for-linguistics.csl
 ## #   F2_20 &lt;dbl&gt;, F2_25 &lt;dbl&gt;, F2_30 &lt;dbl&gt;, F2_35 &lt;dbl&gt;, F2_40 &lt;dbl&gt;,
 ## #   F2_45 &lt;dbl&gt;, F2_50 &lt;dbl&gt;, F2_55 &lt;dbl&gt;, F2_60 &lt;dbl&gt;, F2_65 &lt;dbl&gt;,
 ## #   F2_70 &lt;dbl&gt;, F2_75 &lt;dbl&gt;, F2_80 &lt;dbl&gt;, F2_85 &lt;dbl&gt;, F2_90 &lt;dbl&gt;,
-## #   F2_95 &lt;dbl&gt;, F3_05 &lt;dbl&gt;, F3_10 &lt;dbl&gt;, F3_15 &lt;dbl&gt;, F3_20 &lt;dbl&gt;,
-## #   F3_25 &lt;dbl&gt;, F3_30 &lt;dbl&gt;, F3_35 &lt;dbl&gt;, F3_40 &lt;dbl&gt;, F3_45 &lt;dbl&gt;,
-## #   F3_50 &lt;dbl&gt;, F3_55 &lt;dbl&gt;, F3_60 &lt;dbl&gt;, F3_65 &lt;dbl&gt;, F3_70 &lt;dbl&gt;,
-## #   F3_75 &lt;dbl&gt;, F3_80 &lt;dbl&gt;, F3_85 &lt;dbl&gt;, F3_90 &lt;dbl&gt;, F3_95 &lt;dbl&gt;</code></pre>
+## #   F2_95 &lt;dbl&gt;, F3_05 &lt;dbl&gt;, F3_10 &lt;dbl&gt;, F3_15 &lt;dbl&gt;, F3_20 &lt;dbl&gt;, …</code></pre>
 <p>The dataset contains formant values of F1-F3 at 5% intervals for the vowels in the word <em>tulemupepelako</em> ‘we are praying for her’ (Bemba, [<code>bemb1257</code>]).</p>
 <p>In the first step, we will create two columns, one with the formant/interval label and one with the formant value, using <code>pivot_longer()</code>.</p>
 <pre class="r"><code>trajectories_long &lt;- pivot_longer(
@@ -68,7 +65,7 @@ cls: unified-style-sheet-for-linguistics.csl
   values_to = &quot;value&quot;)
 
 trajectories_long</code></pre>
-<pre><code>## # A tibble: 399 x 6
+<pre><code>## # A tibble: 399 × 6
 ##     Time Vowel Word           Duration formant_int value
 ##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt;
 ##  1  194. u     tulemupepelako     43.3 F1_05        406.
@@ -92,7 +89,7 @@ The argument <code>convert = TRUE</code> ensures that the <code>interval</code> 
 )
 
 trajectories_sep</code></pre>
-<pre><code>## # A tibble: 399 x 7
+<pre><code>## # A tibble: 399 × 7
 ##     Time Vowel Word           Duration formant interval value
 ##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;
 ##  1  194. u     tulemupepelako     43.3 F1             5  406.
@@ -115,7 +112,7 @@ We can achieve this with <code>pivot_wider()</code>, the counterpart of <code>pi
 )
 
 trajectories_wide</code></pre>
-<pre><code>## # A tibble: 133 x 8
+<pre><code>## # A tibble: 133 × 8
 ##     Time Vowel Word           Duration interval    F1    F2    F3
 ##    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ##  1  194. u     tulemupepelako     43.3        5  406. 1205. 2626.
@@ -158,7 +155,7 @@ What the pipe does is simply “transferring” the output of the function befor
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-wickham2017" class="csl-entry">
-Wickham, Hadley. 2017. <span>“Tidyverse: Easily Install and Load the <span>‘Tidyverse’</span>.”</span> R package version 1.2.1.
+Wickham, Hadley. 2017. <span>“<span class="nocase">t</span>idyverse: Easily Install and Load the Tidyverse.”</span> R package version 1.2.1.
 </div>
 </div>
 </div>

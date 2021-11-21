@@ -849,10 +849,10 @@
     },
     "servr": {
       "Package": "servr",
-      "Version": "0.23",
+      "Version": "0.24",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "75a40cd4f8503fe175be6b213009767f"
+      "Hash": "e2c3e268d654becf0d78a1ec13a05b46"
     },
     "sessioninfo": {
       "Package": "sessioninfo",

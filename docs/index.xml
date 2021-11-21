@@ -8,13 +8,13 @@
     <language>en-gb</language>
     <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Regression models: a cheat-sheet</title>
+      <title>Linear models: a cheat-sheet</title>
       <link>https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/</link>
       <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/</guid>
-      <description>One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
-The “simplest” regression model is the formula of a line:1
+      <description>One model to rule them all Linear models, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
+The “simplest” linear model is the formula of a line:1
 \[ y = \alpha + \beta x \]
 where \(\alpha\) is the intercept of the line and \(\beta\) the slope.</description>
     </item>

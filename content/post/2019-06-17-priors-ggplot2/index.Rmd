@@ -5,6 +5,7 @@ date: '2019-06-17'
 slug: priors-ggplot2
 categories:
   - Methods
+  - Linear models
 tags:
   - data viz
   - rstats

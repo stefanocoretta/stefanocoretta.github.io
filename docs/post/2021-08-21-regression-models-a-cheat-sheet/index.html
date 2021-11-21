@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Regression models: a cheat-sheet | Stefano Coretta</title>
+<title>Linear models: a cheat-sheet | Stefano Coretta</title>
 
-<meta name="keywords" content="regression, brms, lmer, gamm" />
-<meta name="description" content="One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
-The “simplest” regression model is the formula of a line:1
+<meta name="keywords" content="linear, regression, brms, lmer, gamm" />
+<meta name="description" content="One model to rule them all Linear models, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
+The “simplest” linear model is the formula of a line:1
 \[ y = \alpha &#43; \beta x \]
 where \(\alpha\) is the intercept of the line and \(\beta\) the slope.">
 <meta name="author" content="Stefano Coretta">
@@ -24,7 +24,7 @@ where \(\alpha\) is the intercept of the line and \(\beta\) the slope.">
 <link rel="mask-icon" href="https://stefanocoretta.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.2" />
+<meta name="generator" content="Hugo 0.89.4" />
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -46,9 +46,9 @@ where \(\alpha\) is the intercept of the line and \(\beta\) the slope.">
 <script src="/leaflet/leaflet.js"></script>
 <link rel="stylesheet" href="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css">
 <script src="/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.js"></script>
-<meta property="og:title" content="Regression models: a cheat-sheet" />
-<meta property="og:description" content="One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
-The “simplest” regression model is the formula of a line:1
+<meta property="og:title" content="Linear models: a cheat-sheet" />
+<meta property="og:description" content="One model to rule them all Linear models, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
+The “simplest” linear model is the formula of a line:1
 \[ y = \alpha &#43; \beta x \]
 where \(\alpha\) is the intercept of the line and \(\beta\) the slope." />
 <meta property="og:type" content="article" />
@@ -57,9 +57,9 @@ where \(\alpha\) is the intercept of the line and \(\beta\) the slope." />
 <meta property="article:modified_time" content="2021-08-21T00:00:00&#43;00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Regression models: a cheat-sheet"/>
-<meta name="twitter:description" content="One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
-The “simplest” regression model is the formula of a line:1
+<meta name="twitter:title" content="Linear models: a cheat-sheet"/>
+<meta name="twitter:description" content="One model to rule them all Linear models, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable \(Y\) based on a function \(f(X)\).
+The “simplest” linear model is the formula of a line:1
 \[ y = \alpha &#43; \beta x \]
 where \(\alpha\) is the intercept of the line and \(\beta\) the slope."/>
 
@@ -78,7 +78,7 @@ where \(\alpha\) is the intercept of the line and \(\beta\) the slope."/>
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "Regression models: a cheat-sheet",
+      "name": "Linear models: a cheat-sheet",
       "item": "https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/"
     }
   ]
@@ -88,14 +88,14 @@ where \(\alpha\) is the intercept of the line and \(\beta\) the slope."/>
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Regression models: a cheat-sheet",
-  "name": "Regression models: a cheat-sheet",
-  "description": "One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \\(Y\\) based on a function \\(f(X)\\).\nThe “simplest” regression model is the formula of a line:1\n\\[ y = \\alpha + \\beta x \\]\nwhere \\(\\alpha\\) is the intercept of the line and \\(\\beta\\) the slope.",
+  "headline": "Linear models: a cheat-sheet",
+  "name": "Linear models: a cheat-sheet",
+  "description": "One model to rule them all Linear models, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable \\(Y\\) based on a function \\(f(X)\\).\nThe “simplest” linear model is the formula of a line:1\n\\[ y = \\alpha + \\beta x \\]\nwhere \\(\\alpha\\) is the intercept of the line and \\(\\beta\\) the slope.",
   "keywords": [
-    "regression", "brms", "lmer", "gamm"
+    "linear", "regression", "brms", "lmer", "gamm"
   ],
-  "articleBody": "  One model to rule them all Regression models, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable \\(Y\\) based on a function \\(f(X)\\).\nThe “simplest” regression model is the formula of a line:1\n\\[ y = \\alpha + \\beta x \\]\nwhere \\(\\alpha\\) is the intercept of the line and \\(\\beta\\) the slope.\nThe principles behind this formula can be extended to represent virtually any other model, independent of the nature of the outcome variable(s) (\\(y\\)), the predictor(s), the types of relationship between outcome and predictor, and so on.\nThis means that if you master the principles of regression models, then you can virtually fit any kind of data using regressions. You can bid farewell to ANOVAs, \\(t\\)-tests, \\(\\chi^2\\)-tests, and what not. In fact, these can all be thought of as specific cases of regressions. It just so happens that they got themselves a specific name. But the underlying mechanics is the same.\nSame goes with “linear models”, “logistic regression”, “generalised linear models”, “mixed-effects regression” and so on. These are all regression models, so they all follow the same principles. And again, the fact that they got specific name is a historical “accident”.\nUnderstanding that these named models are in fact all regression models gives you super powers you can use on data (Sauron will be so jealous):\n One model to rule them all, one model to fit them,\nOne model to shrink them all, and in probability bind them;\nIn the Land of Inference where the distributions lie.\n Ehm… perhaps this is not gonna win a poetry context, but…\nThe message is that with a single tool, i.e. regression models, you can go a long way!\nEach of the following sections asks you about the nature of your data and/or experimental design. By answering each, you will find out which “pieces” you need to add to your model structure.\n(This is a work in progress, so still rough around the edges).\n Step 0: Number of outcome variables We will get back to this step at the end of this post, since it makes things a bit more complex.\n Step 1: Choose a distribution for your outcome variable The first step towards building a regression model is to choose the family of distributions you believe the outcome variable belongs to.\nYou can start by answering this question: is your outcome variable continuous or discrete?\nContinuous outcome variable  The variable can take on any positive and negative real number, including 0: Gaussian (aka normal) distribution.\n There are very few truly Gaussian variables, although in some cases one can speak of “approximate” or “assumed” normality.\n This family is fitted by default in lm() and brms::brm().\n  The variable can take on any positive number only: Log-normal distribution.\n Duration of segments, words, pauses, etc, are known to be log-normally distributed.\n Measurements taken in Hz (like f0, formants, centre of gravity, …) could be considered to be log-normal.\n There other families that could potentially be used depending on the nature of the variable: exponential-Gaussian (reaction times), gamma, …\n  The variable can take on any number between 0 and 1, but not 0 nor 1: Beta distribution.\n Proportions fall into this category (for example proportion of voicing within closure), although 0 and 1 are not allowed in the beta distribution.  The variable can take on any number between 0 and 1, including 0 or 0 and 1: Zero-inflated or Zero/one-inflated beta (ZOIB) distribution.\n If the proportion data includes many 0s and 1s, then this is the ideal distribution to use. ZOIB distributions are somewhat more difficult to fit than a simple beta distribution, so a common practice is to transform the data so that it doesn’t include 0s nor 1s (this can be achieved using different techniques, some better than others).    Discrete outcome variable  The variable is dichotomous, i.e. it can take one of two levels: Bernoulli distribution.\n Categorical outcome variables like yes/no, correct/incorrect, voiced/voiceless, follow this distribution.\n This family is fitted by default when you run glm(family = binomial), aka “logistic regression”.\n  The variable is counts: Poisson distribution.\n Counts of words, segments, gestures, f0 peaks, …     Step 2: Are there hierarchical groupings and/or repeated measures? The second step is to ensure that, if the data is structured hierarchically or repeated measures were taken, this is taken into account in the model. Here is where so-called “random effects” or “group-level terms” come in.\nAs an example, let’s assume you asked a number of participants to read a list of words and each word was repeated 5 times by each participant. You then took f0 measurements from the stressed vowel of each word, of each repetition.\nNow, the data has a structure to it:\n First, observations are grouped by participant (some observations belong to one participant and others to another and so on). Second, observations are grouped by word (some observations belong to one word and others to another and so on). Third, within the observations of each word, some belong to the same participant (or, from a different perspective, within the observations of each participant, some belong to the same word).  The presence of “groupings” within the data (whether they come from natural groupings like participant or word, or from repeated measures) breaks one of the assumptions of regression models: that each observation must be independent.\nIf you don’t include any random effect/group-level terms, your model will expect that each observation is independent and hence it will underestimate variance and return unreliable results.\nIn the toy-example of f0 measurements, you will want to include group-level terms for participant and word. These will take care to let the model know of the structure of the data mentioned above.\nIf you have other predictors in the model, you should also add them as (random) slopes in the random effects/group-level terms. For example: (question | participant) + (question | word) (where question = statement vs question).\nA quick terminological note: models that include random effects/group-level terms are called:\n Random-effects models. Mixed-effects models. Hierarchical models. Nested models. Multilevel models.  These terms are for all intents and purposes equivalent (it just happens that different traditions uses different terms).\n Step 3: Are there non-linear effects? A typical use-case of non-linear terms is when you are dealing with time-series data or spatial data (i.e. geographic coordinates).\nGeneralised Additive Models allow you to fit non-linear effects using so called “smooth” (or “smoother”) terms.\nYou can fit a regression model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using gam() or bam()), among others.\n Step 0-bis: Number of outcome variables If you want to model just one outcome variable, you are already covered if you went through steps 1-3.\nIf instead your design has two or more outcome variables (for example F1 and F2, or duration of the stressed and unstressed vowel of a word) then you want to fit a multivariate model (i.e. a model with multiple outcome variables*).\nThe same steps we went through before can be applied to multiple outcome variables. In some cases, you will want to use the same model structure for all the outcome variables, while in others you might want to use a different model structure for each.\nTo learn more about multivariate models, I really recommend Paul Bürkner’s vignette Estimating Multivariate Models with brms.\n  Technically, the “simplest” regression model is \\(y = f(x)\\), but oh well…↩︎\n   ",
-  "wordCount" : "1242",
+  "articleBody": "  One model to rule them all Linear models, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable \\(Y\\) based on a function \\(f(X)\\).\nThe “simplest” linear model is the formula of a line:1\n\\[ y = \\alpha + \\beta x \\]\nwhere \\(\\alpha\\) is the intercept of the line and \\(\\beta\\) the slope.\nThe principles behind this formula can be extended to represent virtually any other model, independent of the nature of the outcome variable(s) (\\(y\\)), the predictor(s), the types of relationship between outcome and predictor, and so on.\nThis means that if you master the principles of linear models, then you can virtually fit any kind of data using linear models You can bid farewell to ANOVAs, \\(t\\)-tests, \\(\\chi^2\\)-tests, and what not. In fact, these can all be thought of as specific cases of linear models. It just so happens that they got themselves a specific name. But the underlying mechanics is the same.\nSame goes with “regressions”, “logistic regression”, “generalised linear models”, “mixed-effects regression” and so on. These are all linear models, so they all follow the same principles. And again, the fact that they got specific name is a historical “accident”.\nUnderstanding that these named models are in fact all linear models gives you super powers you can use on data (Sauron would be so jealous):\n One model to rule them all, one model to fit them,\nOne model to shrink them all, and in probability bind them;\nIn the Land of Inference where the distributions lie.\n Ehm… perhaps this is not gonna win a poetry context, but…\nThe message is that with a single tool, i.e. linear models, you can go a long way!\nEach of the following sections asks you about the nature of your data and/or experimental design. By answering each, you will find out which “pieces” you need to add to your model structure.\n(This is a work in progress, so still rough around the edges).\n Step 0: Number of outcome variables We will get back to this step at the end of this post, since it makes things a bit more complex.\n Step 1: Choose a distribution for your outcome variable The first step towards building a linear model is to choose the family of distributions you believe the outcome variable belongs to.\nYou can start by answering this question: is your outcome variable continuous or discrete?\nContinuous outcome variable  The variable can take on any positive and negative real number, including 0: Gaussian (aka normal) distribution.\n There are very few truly Gaussian variables, although in some cases one can speak of “approximate” or “assumed” normality.\n This family is fitted by default in lm(), lme4::lmer() and brms::brm().\n  The variable can take on any positive number only: Log-normal distribution.\n Duration of segments, words, pauses, etc, are known to be log-normally distributed.\n Measurements taken in Hz (like f0, formants, centre of gravity, …) could be considered to be log-normal.\n There other families that could potentially be used depending on the nature of the variable: exponential-Gaussian (reaction times), gamma, …\n  The variable can take on any number between 0 and 1, but not 0 nor 1: Beta distribution.\n Proportions fall into this category (for example proportion of voicing within closure), although 0 and 1 are not allowed in the beta distribution.  The variable can take on any number between 0 and 1, including 0 or 0 and 1: Zero-inflated or Zero/one-inflated beta (ZOIB) distribution.\n If the proportion data includes many 0s and 1s, then this is the ideal distribution to use. ZOIB distributions are somewhat more difficult to fit than a simple beta distribution, so a common practice is to transform the data so that it doesn’t include 0s nor 1s (this can be achieved using different techniques, some better than others).    Discrete outcome variable  The variable is dichotomous, i.e. it can take one of two levels: Bernoulli distribution.\n Categorical outcome variables like yes/no, correct/incorrect, voiced/voiceless, follow this distribution.\n This family is fitted by default when you run glm(family = binomial), aka “logistic regression” or “binomial regression”.\n  The variable is counts: Poisson distribution.\n Counts of words, segments, gestures, f0 peaks, …     Step 2: Are there hierarchical groupings and/or repeated measures? The second step is to ensure that, if the data is structured hierarchically or repeated measures were taken, this is taken into account in the model. Here is where so-called “random effects” or “group-level effects/terms” come in.\nAs an example, let’s assume you asked a number of participants to read a list of words and each word was repeated 5 times by each participant. You then took f0 measurements from the stressed vowel of each word, of each repetition.\nNow, the data has a structure to it:\n First, observations are grouped by participant (some observations belong to one participant and others to another and so on). Second, observations are grouped by word (some observations belong to one word and others to another and so on). Third, within the observations of each word, some belong to the same participant (or, from a different perspective, within the observations of each participant, some belong to the same word).  The presence of “groupings” within the data (whether they come from natural groupings like participant or word, or from repeated measures) breaks one of the assumptions of linear models: that each observation must be independent.\nIf you don’t include any random effect/group-level terms, your model will expect that each observation is independent and hence it will underestimate variance and return unreliable results.\nIn the toy-example of f0 measurements, you will want to include group-level terms for participant and word. These will take care to let the model know of the structure of the data mentioned above.\nIf you have other predictors in the model, you should also add them as (random) slopes in the random effects/group-level terms. For example: (question | participant) + (question | word) (where question = statement vs question).\nA quick terminological note: models that include random effects/group-level terms are called:\n Random-effects models. Mixed-effects models. Hierarchical models. Nested models. Multilevel models.  These terms are for all intents and purposes equivalent (it just happens that different traditions uses different terms).\n Step 3: Are there non-linear effects? A typical use-case of non-linear terms is when you are dealing with time-series data or spatial data (i.e. geographic coordinates).\nGeneralised Additive Models allow you to fit non-linear effects using so called “smooth” (or “smoother”) terms.\nYou can fit a linear model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using gam() or bam()), among others.\n Step 0-bis: Number of outcome variables If you want to model just one outcome variable, you are already covered if you went through steps 1-3.\nIf instead your design has two or more outcome variables (for example F1 and F2, or duration of the stressed and unstressed vowel of a word) then you want to fit a multivariate model (i.e. a model with multiple outcome variables*).\nThe same steps we went through before can be applied to multiple outcome variables. In some cases, you will want to use the same model structure for all the outcome variables, while in others you might want to use a different model structure for each.\nTo learn more about multivariate models, I really recommend Paul Bürkner’s vignette Estimating Multivariate Models with brms.\n  Technically, the “simplest” linear model is \\(y = f(x)\\), but oh well…↩︎\n   ",
+  "wordCount" : "1247",
   "inLanguage": "en",
   "datePublished": "2021-08-21T00:00:00Z",
   "dateModified": "2021-08-21T00:00:00Z",
@@ -246,7 +246,7 @@ where \(\alpha\) is the intercept of the line and \(\beta\) the slope."/>
   <header class="post-header">
 
     <h1 class="post-title">
-      Regression models: a cheat-sheet
+      Linear models: a cheat-sheet
     </h1>
     <div class="post-meta">
 
@@ -263,29 +263,29 @@ August 21, 2021&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta
 
 <div id="one-model-to-rule-them-all" class="section level1">
 <h1>One model to rule them all</h1>
-<p><strong>Regression models</strong>, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable <span class="math inline">\(Y\)</span> based on a function <span class="math inline">\(f(X)\)</span>.</p>
-<p>The “simplest” regression model is the formula of a line:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><strong>Linear models</strong>, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable <span class="math inline">\(Y\)</span> based on a function <span class="math inline">\(f(X)\)</span>.</p>
+<p>The “simplest” linear model is the formula of a line:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p><span class="math display">\[
 y = \alpha + \beta x
 \]</span></p>
 <p>where <span class="math inline">\(\alpha\)</span> is the <strong>intercept</strong> of the line and <span class="math inline">\(\beta\)</span> the <strong>slope</strong>.</p>
 <p>The principles behind this formula can be extended to represent virtually any other model, independent of the nature of the outcome variable(s) (<span class="math inline">\(y\)</span>), the predictor(s), the types of relationship between outcome and predictor, and so on.</p>
-<p><strong>This means that if you master the principles of regression models, then you can virtually fit any kind of data using regressions.</strong>
+<p><strong>This means that if you master the principles of linear models, then you can virtually fit any kind of data using linear models</strong>
 You can bid farewell to ANOVAs, <span class="math inline">\(t\)</span>-tests, <span class="math inline">\(\chi^2\)</span>-tests, and what not.
-In fact, these can all be thought of as specific cases of regressions.
+In fact, these can all be thought of as specific cases of linear models.
 It just so happens that they got themselves a specific name.
 But the underlying mechanics is the same.</p>
-<p>Same goes with “linear models”, “logistic regression”, “generalised linear models”, “mixed-effects regression” and so on.
-These are all regression models, so they all follow the same principles.
+<p>Same goes with “regressions”, “logistic regression”, “generalised linear models”, “mixed-effects regression” and so on.
+These are all linear models, so they all follow the same principles.
 And again, the fact that they got specific name is a historical “accident”.</p>
-<p>Understanding that these named models are in fact all regression models gives you super powers you can use on data (Sauron will be so jealous):</p>
+<p>Understanding that these named models are in fact all linear models gives you super powers you can use on data (Sauron would be so jealous):</p>
 <blockquote>
 <p>One model to rule them all, one model to fit them,<br />
 One model to shrink them all, and in probability bind them;<br />
 In the Land of Inference where the distributions lie.</p>
 </blockquote>
 <p>Ehm… perhaps this is not gonna win a poetry context, but…</p>
-<p>The message is that with a single tool, i.e. regression models, you can go a long way!</p>
+<p>The message is that with a single tool, i.e. linear models, you can go a long way!</p>
 <p>Each of the following sections asks you about the nature of your data and/or experimental design.
 By answering each, you will find out which “pieces” you need to add to your model structure.</p>
 <p>(This is a work in progress, so still rough around the edges).</p>
@@ -296,7 +296,7 @@ By answering each, you will find out which “pieces” you need to add to your 
 </div>
 <div id="step-1-choose-a-distribution-for-your-outcome-variable" class="section level1">
 <h1>Step 1: Choose a distribution for your outcome variable</h1>
-<p>The first step towards building a regression model is to choose the <strong>family of distributions</strong> you believe the outcome variable belongs to.</p>
+<p>The first step towards building a linear model is to choose the <strong>family of distributions</strong> you believe the outcome variable belongs to.</p>
 <p>You can start by answering this question: is your outcome variable continuous or discrete?</p>
 <div id="continuous-outcome-variable" class="section level2">
 <h2>Continuous outcome variable</h2>
@@ -304,7 +304,7 @@ By answering each, you will find out which “pieces” you need to add to your 
 <li><p>The variable can take on <em>any positive and negative real number, including 0</em>: <strong>Gaussian</strong> (aka normal) distribution.</p>
 <ul>
 <li><p>There are very few truly Gaussian variables, although in some cases one can speak of “approximate” or “assumed” normality.</p></li>
-<li><p>This family is fitted by default in <code>lm()</code> and <code>brms::brm()</code>.</p></li>
+<li><p>This family is fitted by default in <code>lm()</code>, <code>lme4::lmer()</code> and <code>brms::brm()</code>.</p></li>
 </ul></li>
 <li><p>The variable can take on <em>any positive number only</em>: <strong>Log-normal</strong> distribution.</p>
 <ul>
@@ -328,7 +328,7 @@ By answering each, you will find out which “pieces” you need to add to your 
 <li><p>The variable is <em>dichotomous</em>, i.e. it can take one of two levels: <strong>Bernoulli</strong> distribution.</p>
 <ul>
 <li><p>Categorical outcome variables like yes/no, correct/incorrect, voiced/voiceless, follow this distribution.</p></li>
-<li><p>This family is fitted by default when you run <code>glm(family = binomial)</code>, aka “logistic regression”.</p></li>
+<li><p>This family is fitted by default when you run <code>glm(family = binomial)</code>, aka “logistic regression” or “binomial regression”.</p></li>
 </ul></li>
 <li><p>The variable is <em>counts</em>: <strong>Poisson</strong> distribution.</p>
 <ul>
@@ -340,7 +340,7 @@ By answering each, you will find out which “pieces” you need to add to your 
 <div id="step-2-are-there-hierarchical-groupings-andor-repeated-measures" class="section level1">
 <h1>Step 2: Are there hierarchical groupings and/or repeated measures?</h1>
 <p>The second step is to ensure that, if the data is structured hierarchically or repeated measures were taken, this is taken into account in the model.
-Here is where so-called “random effects” or “group-level terms” come in.</p>
+Here is where so-called “random effects” or “group-level effects/terms” come in.</p>
 <p>As an example, let’s assume you asked a number of participants to read a list of words and each word was repeated 5 times by each participant.
 You then took f0 measurements from the stressed vowel of each word, of each repetition.</p>
 <p>Now, the data has a structure to it:</p>
@@ -349,7 +349,7 @@ You then took f0 measurements from the stressed vowel of each word, of each repe
 <li>Second, observations are grouped by word (some observations belong to one word and others to another and so on).</li>
 <li>Third, within the observations of each word, some belong to the same participant (or, from a different perspective, within the observations of each participant, some belong to the same word).</li>
 </ul>
-<p>The presence of “groupings” within the data (whether they come from natural groupings like participant or word, or from repeated measures) breaks one of the assumptions of regression models: that each observation must be independent.</p>
+<p>The presence of “groupings” within the data (whether they come from natural groupings like participant or word, or from repeated measures) breaks one of the assumptions of linear models: that each observation must be independent.</p>
 <p>If you don’t include any random effect/group-level terms, your model will expect that each observation is independent and hence it will underestimate variance and return unreliable results.</p>
 <p>In the toy-example of f0 measurements, you will want to include group-level terms for <em>participant</em> and <em>word</em>.
 These will take care to let the model know of the structure of the data mentioned above.</p>
@@ -369,7 +369,7 @@ For example: <code>(question | participant) + (question | word)</code> (where <c
 <h1>Step 3: Are there non-linear effects?</h1>
 <p>A typical use-case of non-linear terms is when you are dealing with time-series data or spatial data (i.e. geographic coordinates).</p>
 <p>Generalised Additive Models allow you to fit non-linear effects using so called “smooth” (or “smoother”) terms.</p>
-<p>You can fit a regression model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using <code>gam()</code> or <code>bam()</code>), among others.</p>
+<p>You can fit a linear model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using <code>gam()</code> or <code>bam()</code>), among others.</p>
 </div>
 <div id="step-0-bis-number-of-outcome-variables" class="section level1">
 <h1>Step 0-bis: Number of outcome variables</h1>
@@ -382,13 +382,14 @@ In some cases, you will want to use the same model structure for all the outcome
 <div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
-<li id="fn1"><p>Technically, the “simplest” regression model is <span class="math inline">\(y = f(x)\)</span>, but oh well…<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Technically, the “simplest” linear model is <span class="math inline">\(y = f(x)\)</span>, but oh well…<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
 </div>
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://stefanocoretta.github.io/tags/linear/">linear</a></li>
       <li><a href="https://stefanocoretta.github.io/tags/regression/">regression</a></li>
       <li><a href="https://stefanocoretta.github.io/tags/brms/">brms</a></li>
       <li><a href="https://stefanocoretta.github.io/tags/lmer/">lmer</a></li>

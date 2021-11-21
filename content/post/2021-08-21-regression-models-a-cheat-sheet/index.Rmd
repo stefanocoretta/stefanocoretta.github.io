@@ -1,18 +1,18 @@
 ---
-title: 'Regression models: a cheat-sheet'
+title: 'Linear models: a cheat-sheet'
 author: Stefano Coretta
 date: '2021-08-21'
 slug: [regression-models]
-categories: ["methods"]
-tags: ["regression", "brms", "lmer", "gamm"]
+categories: ["methods", "Linear models"]
+tags: ["linear", "regression", "brms", "lmer", "gamm"]
 math: true
 ---
 
 # One model to rule them all
 
-**Regression models**, aka linear regression models or linear models, are a group of statistical models based on the simple idea that we can predict an outcome variable $Y$ based on a function $f(X)$.
+**Linear models**, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable $Y$ based on a function $f(X)$.
 
-The "simplest" regression model is the formula of a line:^[Technically, the "simplest" regression model is $y = f(x)$, but oh well...]
+The "simplest" linear model is the formula of a line:^[Technically, the "simplest" linear model is $y = f(x)$, but oh well...]
 
 $$
 y = \alpha + \beta x
@@ -22,17 +22,17 @@ where $\alpha$ is the **intercept** of the line and $\beta$ the **slope**.
 
 The principles behind this formula can be extended to represent virtually any other model, independent of the nature of the outcome variable(s) ($y$), the predictor(s), the types of relationship between outcome and predictor, and so on.
 
-**This means that if you master the principles of regression models, then you can virtually fit any kind of data using regressions.**
+**This means that if you master the principles of linear models, then you can virtually fit any kind of data using linear models**
 You can bid farewell to ANOVAs, $t$-tests, $\chi^2$-tests, and what not.
-In fact, these can all be thought of as specific cases of regressions.
+In fact, these can all be thought of as specific cases of linear models.
 It just so happens that they got themselves a specific name.
 But the underlying mechanics is the same.
 
-Same goes with "linear models", "logistic regression", "generalised linear models", "mixed-effects regression" and so on.
-These are all regression models, so they all follow the same principles.
+Same goes with "regressions", "logistic regression", "generalised linear models", "mixed-effects regression" and so on.
+These are all linear models, so they all follow the same principles.
 And again, the fact that they got specific name is a historical "accident".
 
-Understanding that these named models are in fact all regression models gives you super powers you can use on data (Sauron will be so jealous):
+Understanding that these named models are in fact all linear models gives you super powers you can use on data (Sauron would be so jealous):
 
 > One model to rule them all, one model to fit them,\
 > One model to shrink them all, and in probability bind them;\
@@ -40,7 +40,7 @@ Understanding that these named models are in fact all regression models gives yo
 
 Ehm... perhaps this is not gonna win a poetry context, but...
 
-The message is that with a single tool, i.e. regression models, you can go a long way!
+The message is that with a single tool, i.e. linear models, you can go a long way!
 
 Each of the following sections asks you about the nature of your data and/or experimental design.
 By answering each, you will find out which "pieces" you need to add to your model structure.
@@ -53,7 +53,7 @@ We will get back to this step at the end of this post, since it makes things a b
 
 # Step 1: Choose a distribution for your outcome variable
 
-The first step towards building a regression model is to choose the **family of distributions** you believe the outcome variable belongs to.
+The first step towards building a linear model is to choose the **family of distributions** you believe the outcome variable belongs to.
 
 You can start by answering this question: is your outcome variable continuous or discrete?
 
@@ -63,7 +63,7 @@ You can start by answering this question: is your outcome variable continuous or
 
     * There are very few truly Gaussian variables, although in some cases one can speak of "approximate" or "assumed" normality.
 
-    * This family is fitted by default in `lm()` and `brms::brm()`.
+    * This family is fitted by default in `lm()`, `lme4::lmer()` and `brms::brm()`.
 
 * The variable can take on *any positive number only*: **Log-normal** distribution.
 
@@ -87,7 +87,7 @@ You can start by answering this question: is your outcome variable continuous or
 
     * Categorical outcome variables like yes/no, correct/incorrect, voiced/voiceless, follow this distribution.
 
-    * This family is fitted by default when you run `glm(family = binomial)`, aka "logistic regression".
+    * This family is fitted by default when you run `glm(family = binomial)`, aka "logistic regression" or "binomial regression".
 
 * The variable is *counts*: **Poisson** distribution.
 
@@ -96,7 +96,7 @@ You can start by answering this question: is your outcome variable continuous or
 # Step 2: Are there hierarchical groupings and/or repeated measures?
 
 The second step is to ensure that, if the data is structured hierarchically or repeated measures were taken, this is taken into account in the model.
-Here is where so-called "random effects" or "group-level terms" come in.
+Here is where so-called "random effects" or "group-level effects/terms" come in.
 
 As an example, let's assume you asked a number of participants to read a list of words and each word was repeated 5 times by each participant.
 You then took f0 measurements from the stressed vowel of each word, of each repetition.
@@ -107,7 +107,7 @@ Now, the data has a structure to it:
 - Second, observations are grouped by word (some observations belong to one word and others to another and so on).
 - Third, within the observations of each word, some belong to the same participant (or, from a different perspective, within the observations of each participant, some belong to the same word).
 
-The presence of "groupings" within the data (whether they come from natural groupings like participant or word, or from repeated measures) breaks one of the assumptions of regression models: that each observation must be independent.
+The presence of "groupings" within the data (whether they come from natural groupings like participant or word, or from repeated measures) breaks one of the assumptions of linear models: that each observation must be independent.
 
 If you don't include any random effect/group-level terms, your model will expect that each observation is independent and hence it will underestimate variance and return unreliable results.
 
@@ -133,7 +133,7 @@ A typical use-case of non-linear terms is when you are dealing with time-series 
 
 Generalised Additive Models allow you to fit non-linear effects using so called "smooth" (or "smoother") terms.
 
-You can fit a regression model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using `gam()` or `bam()`), among others.
+You can fit a linear model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using `gam()` or `bam()`), among others.
 
 # Step 0-bis: Number of outcome variables
 

@@ -1,0 +1,47 @@
+---
+title: 'R gist — Dot matrix charts with ggplot2'
+author: Stefano Coretta
+date: '2021-11-21'
+slug: [dot-matrix-charts]
+categories: ["Gist"]
+tags: ["data-viz", "rstats", "ggplot2"]
+---
+
+# Set up
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = here::here())
+library(tidyverse)
+```
+
+# Create data
+
+```{r dot-data}
+dots <- tibble(
+  group = as.character(unlist(mapply(rep, c("a", "b", "c"), c(26, 11, 7)))),
+  x = rep(1:10, length.out = length(group)),
+  y = rep(1:(ceiling(length(group) / 10)), each = 10)[1:length(group)]
+)
+```
+
+# Plot dot matrix chart
+
+```{r dot-matrix}
+dots %>%
+  ggplot(aes(x, -y, colour = group)) +
+  geom_point(size = 10) +
+  scale_color_brewer(type = "qual") +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    legend.position = "bottom"
+  )
+```
+
+# To do
+
+- Order groups by descending count.
+- Reduce spacing.

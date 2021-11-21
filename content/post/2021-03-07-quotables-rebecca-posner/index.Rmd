@@ -1,6 +1,6 @@
 ---
 title: 'Quotables — Rebecca Posner'
-author: ''
+author: 'Stefano Coretta'
 date: '2021-03-07'
 slug: []
 categories:
@@ -9,6 +9,8 @@ tags:
   - romance
 bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
+summary: |
+  How many Romance languages are there? An answer to this question that has been slightingly labelled *sancta simplicitas* is that there is only one.
 ---
 
 *This is part of the post series '[Quotables: notable quotes from notable linguists](../../categories/quotables)'.*

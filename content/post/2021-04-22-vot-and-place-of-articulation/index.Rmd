@@ -1,5 +1,5 @@
 ---
-title: R Gist — VOT and place of articulation
+title: R gist — VOT and place of articulation
 author: Stefano Coretta
 date: '2021-04-22'
 slug: []

@@ -6,7 +6,16 @@
     <description>Recent content in ggplot2 on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 04 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R gist — Dot matrix charts with ggplot2</title>
+      <link>https://stefanocoretta.github.io/post/2021-11-21-dot-matrix-charts/</link>
+      <pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2021-11-21-dot-matrix-charts/</guid>
+      <description>Set up knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ── ## ✓ ggplot2 3.3.5 ✓ purrr 0.3.4 ## ✓ tibble 3.1.6 ✓ dplyr 1.0.7 ## ✓ tidyr 1.1.4 ✓ stringr 1.4.0 ## ✓ readr 2.1.0 ✓ forcats 0.5.1 ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ── ## x dplyr::filter() masks stats::filter() ## x dplyr::lag() masks stats::lag()  Create data dots &amp;lt;- tibble( group = as.</description>
+    </item>
+    
     <item>
       <title>R gist — Plotting the area under the curve with ggplot</title>
       <link>https://stefanocoretta.github.io/post/plotting-the-area-under-the-curve/</link>

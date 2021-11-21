@@ -1,6 +1,6 @@
 ---
 title: 'R gist — Plot an interactive 3D RGB colour space'
-author: Stefano
+author: Stefano Coretta
 date: '2021-01-29'
 slug: rgb-space
 categories:

@@ -18,6 +18,14 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_knit$set(root.dir = here::here())
 library(tidyverse)
 theme_set(theme_minimal())
+
+fix_labs <- function(labels) {
+      fixedLabels <- c()
+      for (l in 1:length(labels)) {
+        fixedLabels <- c(fixedLabels, str_replace(labels[l], " ", "\n"))
+      }
+      return(fixedLabels)
+    }
 ```
 
 ```{r load-data, include=FALSE}
@@ -126,16 +134,8 @@ Difficult to say anything about higher endangerment levels given the low number 
 speakers %>%
   ggplot(aes(status, no_speakers, colour = status)) +
   geom_jitter(alpha = 0.8, position = position_jitter(width = 0.3, seed = 123)) +
-  stat_summary(fun.y = median, geom = "point", shape = 18, size = 4, color = "black") +
-  scale_x_discrete(
-    labels = function(labels) {
-      fixedLabels <- c()
-      for (l in 1:length(labels)) {
-        fixedLabels <- c(fixedLabels, str_replace(labels[l], " ", "\n"))
-      }
-      return(fixedLabels)
-    }
-  ) +
+  stat_summary(fun = median, geom = "point", shape = 18, size = 5, color = "black") +
+  scale_x_discrete(labels = fix_labs) +
   scale_color_brewer(palette = "Paired") +
   theme(panel.grid.major.x = element_blank(), legend.position = "none") +
   labs(

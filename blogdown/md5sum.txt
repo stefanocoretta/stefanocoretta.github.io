@@ -22,4 +22,4 @@
 "content/post/2021-08-21-regression-models-a-cheat-sheet/index.Rmd" "a0e3433603b3289ebeebd4ea609b0a04"
 "content/post/2021-11-21-dot-matrix-charts/index.Rmd" "4b66be5d55365764ca30cdb9e08e8056"
 "content/research.Rmd" "1288573be8c0b9df929008710417b250"
-"content/workshops.Rmd" "126cf40a31e26a7c06d62583828f8d03"
+"content/workshops.Rmd" "fbce299fb5bfbb125974f0bf80dadd74"

@@ -29,7 +29,7 @@ This workshop introduces absolute beginners to computational principles and tool
 
 No previous knowledge of quantitative analysis, statistics, nor programming required, just curiosity and a sense of adventure.
 
-[[In preparation](https://github.com/intro-rstats)]
+You can learn more about the workshop by visiting the [website](https://intro-rstats.github.io).
 
 # An introduction to GAM(M)s
 

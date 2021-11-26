@@ -19,7 +19,7 @@
 "content/post/2021-04-29-positionality/index.Rmd" "4f6cf0204126de4c7a29dd7693644d5c"
 "content/post/2021-07-04-plotting-the-area-under-the-curve/index.Rmd" "e3d3bd6a67477e02a0e848fcb3a2a590"
 "content/post/2021-07-20-contrasts/index.Rmd" "f966932b3d14766473834dea9ae53498"
-"content/post/2021-08-21-regression-models-a-cheat-sheet/index.Rmd" "a0e3433603b3289ebeebd4ea609b0a04"
+"content/post/2021-08-21-regression-models-a-cheat-sheet/index.Rmd" "805a4abb6c03827a62e7c820fef7a234"
 "content/post/2021-11-21-dot-matrix-charts/index.Rmd" "4b66be5d55365764ca30cdb9e08e8056"
 "content/research.Rmd" "1288573be8c0b9df929008710417b250"
 "content/workshops.Rmd" "fbce299fb5bfbb125974f0bf80dadd74"

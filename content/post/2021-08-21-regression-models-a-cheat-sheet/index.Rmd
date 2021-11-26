@@ -93,6 +93,12 @@ You can start by answering this question: is your outcome variable continuous or
 
     * Counts of words, segments, gestures, f0 peaks, ...
 
+* The variable is a *scale*: **ordinal** linear model.
+
+    * Likert scales and ratings, language attitude questionnaires.
+
+    * Ordinal linear models, a.k.a. ordinal logistic regression, can be fitted with the [ordinal](https://cran.r-project.org/web/packages/ordinal/index.html) and the [brms](https://paul-buerkner.github.io/brms/) package.
+
 # Step 2: Are there hierarchical groupings and/or repeated measures?
 
 The second step is to ensure that, if the data is structured hierarchically or repeated measures were taken, this is taken into account in the model.

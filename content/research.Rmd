@@ -20,10 +20,12 @@ For an overview of the research meta-models that inform my research, see the [Me
 
 # Current projects
 
-## Human interaction and the evolution of spoken accent
+## Many Speech Analyses
 
-I am currently working within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
-This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+The _Many Speech Analyses_ project (with Timo Roettger and Joseph V. Casillas) tries to quantify the analytic flexibility in the speech sciences and explores how it affects our scientific conclusions.
+To that end, we will ask speech researchers to analyze the same data set in order to answer the same research question.
+
+More information can be found at <https://many-speech-analyses.github.io>.
 
 ## The sounds of Albanian
 
@@ -38,14 +40,12 @@ You can read the submitted manuscript (aka preprint) here: <https://osf.io/mb2hg
 
 In this project with Jessica Iubini-Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
 
-## Many Speech Analyses
-
-The _Many Speech Analyses_ project (with Timo Roettger and Joseph V. Casillas) tries to quantify the analytic flexibility in the speech sciences and explores how it affects our scientific conclusions.
-To that end, we will ask speech researchers to analyze the same data set in order to answer the same research question.
-
-More information can be found at <https://many-speech-analyses.github.io>.
-
 # Past projects
+
+## Human interaction and the evolution of spoken accent
+
+I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
+This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
 
 ## Nasal coarticulation and sound-change: a real-time MRI study
 

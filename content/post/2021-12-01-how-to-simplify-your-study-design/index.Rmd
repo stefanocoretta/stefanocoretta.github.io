@@ -2,6 +2,7 @@
 title: "How to simplify your study design"
 date: 2021-12-01T17:38:53Z
 draft: true
+math: true
 ---
 
 *Content Warning: there are A LOT of gifs in this post*
@@ -22,7 +23,7 @@ And then THE HORROR.
 
 <div style="width:100%;height:0;padding-bottom:66%;position:relative;"><iframe src="https://giphy.com/embed/OTrcaFr7P5RIs" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
 
-You don't know how to deal with all of the conditions, your statistical models exude too many 3 or 4-way interactions, although in most cases they just don't converge... So you drop some interactions, but you feel you are doing something cheecky. Then you decide to conflate a few groups: that will at least reduce the number of values for some conditions.
+You don't know how to deal with all of the conditions, your statistical models exude too many 3 or 4-way interactions, although in most cases they just don't converge... So you drop some interactions, but you feel you are doing something cheeky. Then you decide to conflate a few groups: that will at least reduce the number of values for some conditions.
 
 But you just feel lost...
 
@@ -36,7 +37,7 @@ Sorry to disappoint you! (But read on...)
 
 Not all is lost!
 
-Bescause now you are planning a new study. Starting afresh. After all... tomorrow is another day!
+Because now you are planning a new study. Starting afresh. After all... tomorrow is another day!
 
 <div style="width:100%;height:0;padding-bottom:64%;position:relative;"><iframe src="https://giphy.com/embed/FT35D5ADZL9IY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
 
@@ -46,7 +47,94 @@ Here's a few tips on how to make your study design simpler and save your... face
 
 ## Think ahead about the statistical analysis
 
+We say this all the time, but we rarely actually do it: make choosing the statistical analysis part of the study design process.
+
+Very often, we spend a lot of time on what research questions/hypotheses we want to empirically test, which conditions we need, which population, and so on.
+But not so often we then think of the actual statistical analysis of the data we will collect based on the planned study design.
+
+Thinking ahead about what type of analysis you will perform will help you figure out if perhaps the overall design is too ambitious and will give you the time to make changes to the design so that the data analysis will be easier.
+
+For example, let's assume we want to test people's ability to recognise pitch differences across three different conditions.
+A set of recordings is played first with no background noise, then with white noise, and finally with a recording of people chatting in the background. We decide to have 30 trials in the no-noise condition (since this is just the baseline and we don't need that many trials) and 50 trials in the other two conditions.
+After data collection you will compare the mean baseline of each subject with what happens in the other two conditions.
+
+You start the study and collect data.
+
+Now it's time to compare how the second and third condition differ from the baseline. You realise that you can't simply compare the mean baseline, because you also want to account for the fact that listeners get attuned to the noise or task while performing it, so that later trials might show less of an effect.
+You could look at the change in performance of pitch change recognition across time within each condition, so that you can check if white noise and people chatter are different from the baseline condition with no noise.
+
+But you have one problem...the number of trials are less in the baseline condition then in the other two conditions.
+It's too late now!
+
+What the story teaches us is that, if we had carefully thought of the kind of analysis we wanted to do (i.e. compare the performance *across time*) we would have realised that to do so the number of trials needs to be the same.
+
+This is why we always recommend thinking the specifics of the analysis before hand: why statistical model will you use? which predictors will be in the model? which data transformation will you apply? ...
+
 ## Minimise the factorial design
+
+Another simple tip is to minimise the "factorial design" of the study.
+
+By *factorial design* I mean the tabulated structure of conditions/groups/contexts that are controlled in the study.
+
+A simple factorial design is the following:
+
+|       | city | village |
+|-------|------|---------|
+| young |      |         |
+| old   |      |         |
+
+This is a classic 2-by-2 design ($2 \times 2$), with Age (young or old) and Place (city or village).
+
+You plan to have 40 participants in total, which means these are the tabulated counts:
+
+|       | city | village |
+|-------|------|---------|
+| young |   10 |      10 |
+| old   |   10 |      10 |
+
+But you also want to know if level of education interacts with Age and/or Place. So you decide to go with this design:
+
+| Diploma | city | village |
+|---------|------|---------|
+| young   |      |         |
+| old     |      |         |
+
+| Degree | city | village |
+|--------|------|---------|
+| young  |      |         |
+| old    |      |         |
+
+So now we went from a $2 \times 2$ to a $2 \times 2 \times 2$ design. Before we had 4 contextual combinations (young from the city, old from the city, young from the village, old from the village), but now we have 8 combinations.
+
+The new design now would require us to be able to check three 2-way interactions and a 3-way interaction.
+Checking interactions requires sufficient data, and the more interactions you have and the higher the order of the interaction, the more data you need.
+
+So assuming you had 40 participants in total, well distributed across the factorial design, that means that you are trying to estimate effects based on only 5 participants per combination.
+
+| Diploma | city | village |
+|---------|------|---------|
+| young   |    5 |       5 |
+| old     |    5 |       5 |
+
+| Degree | city | village |
+|--------|------|---------|
+| young  |    5 |       5 |
+| old    |    5 |       5 |
+
+In fact, a $2 \times 2 \times 2$ design would already be an improvement on the average factorial design we normally employ in linguistics.
+
+Let's think phonetics: 5 vowel qualities, 3 consonant places of articulation, 3 phonation types, 2 conditions of lexical stress, 3 prosodic conditions.
+
+Which means you have to estimate 270 "cells" from the factorial table. A monster!!!
+
+<div style="width:100%;height:0;padding-bottom:74%;position:relative;"><iframe src="https://giphy.com/embed/YEL7FJP6ed008" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+It is immediately clear that this would not be feasible, at least with the limited time and resources we researchers have.
+
+So, the moral of the story is: simplify your factorial design as much as possible, by focussing on those contexts that are critical to the research question.
+
+In other words, don't add contexts in just because "they are expected to make a difference", if these are not the critical ones.
+Of course, any type of context can potentially make a difference, but if we had to control for all the imaginable contexts within a single study, we would be collecting data for centuries.
 
 ## If you care about interactions, only include the critical ones in the model
 

@@ -4,7 +4,7 @@ author: Stefano Coretta
 date: '2021-08-21'
 slug: [regression-models]
 categories: ["methods", "Linear models"]
-tags: ["linear", "regression", "brms", "lmer", "gamm"]
+tags: ["linear models", "regression", "brms", "lmer", "gamm"]
 math: true
 ---
 

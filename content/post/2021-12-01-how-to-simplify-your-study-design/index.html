@@ -3,6 +3,8 @@ title: "How to simplify your study design"
 date: 2021-12-01T17:38:53Z
 draft: true
 math: true
+categories: "linear models"
+tags: ["linear models", "rstats"]
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
@@ -219,9 +221,24 @@ Of course, any type of context can potentially make a difference, but if we had 
 </div>
 <div id="if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" class="section level2">
 <h2>If you care about interactions, only include the critical ones in the model</h2>
+<p>You have a <span class="math inline">\(3 \times 4 \times 2 \times 3\)</span> design.
+This means that, if you include all the logical interactions, you end up with trying to estimate N different interactions.</p>
+<p>Unless you have an impractical amount of data at hand, you will very likely have troubles fitting the model.</p>
+<p>What you can do, in these cases, is to add the main effects plus only those interactions that are relevant for your research question/hypothesis.</p>
+<p>In other words, if you are investigating whether there is a specific interaction between two of the four predictors, then you could just include that interaction.</p>
+<p>Note that if you go this route, <em>you have to decide with interactions to include before collecting data</em>, based on expectations.</p>
+<p>If you are interested in all logical interactions because you have really no expectations, then perhaps you should stick to exploratory and descriptive analyses.</p>
 </div>
 <div id="make-sure-your-factorial-design-is-not-rank-deficient" class="section level2">
 <h2>Make sure your factorial design is not “rank deficient”</h2>
+<p>Sometimes we work with data that naturally lacks some of the combinations of conditions we are interested in.</p>
+<p>For example, you might be working with a vocalic system in which one or two vowel qualities lack a long counterpart, while all the other qualities have both a short and a long counterpart.</p>
+<p>You might be tempted then to have two separate predictors: vowel quality and length.
+This means that for some of the quality/length combinations there won’t be any data.</p>
+<p>The situation when a factorial design has some “cells” that are not represented in the data is described as <em>rank deficiency</em>.
+Or to put it differently, the data is <em>rank deficient</em>.</p>
+<p>This is not a problem <em>per se</em>, since linear models can cope with rank deficient data, and you usually just get a warning from R.</p>
+<p>But with more complex models, and especially if you are also including random effects, having rank deficient data <em>can</em> at times result in singular fit/non-convergence.</p>
 </div>
 </div>
 <div id="what-to-do-if-you-really-cant-make-it-simpler" class="section level1">

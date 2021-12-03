@@ -3,6 +3,8 @@ title: "How to simplify your study design"
 date: 2021-12-01T17:38:53Z
 draft: true
 math: true
+categories: "linear models"
+tags: ["linear models", "rstats"]
 ---
 
 *Content Warning: there are A LOT of gifs in this post*
@@ -138,7 +140,37 @@ Of course, any type of context can potentially make a difference, but if we had 
 
 ## If you care about interactions, only include the critical ones in the model
 
+You have a $3 \times 4 \times 2 \times 3$ design.
+This means that, if you include all the logical interactions, you end up with trying to estimate N different interactions.
+
+Unless you have an impractical amount of data at hand, you will very likely have troubles fitting the model.
+
+What you can do, in these cases, is to add the main effects plus only those interactions that are relevant for your research question/hypothesis.
+
+In other words, if you are investigating whether there is a specific interaction between two of the four predictors, then you could just include that interaction.
+
+Note that if you go this route, *you have to decide with interactions to include before collecting data*, based on expectations.
+
+If you are interested in all logical interactions because you have really no expectations, then perhaps you should stick to exploratory and descriptive analyses.
+
 ## Make sure your factorial design is not "rank deficient"
+
+Sometimes we work with data that naturally lacks some of the combinations of conditions we are interested in.
+
+For example, you might be working with a vocalic system in which one or two vowel qualities lack a long counterpart, while all the other qualities have both a short and a long counterpart.
+
+You might be tempted then to have two separate predictors: vowel quality and length.
+This means that for some of the quality/length combinations there won't be any data.
+
+The situation when a factorial design has some "cells" that are not represented in the data is described as *rank deficiency*.
+Or to put it differently, the data is *rank deficient*.
+
+This is not a problem *per se*, since linear models can cope with rank deficient data, and you usually just get a warning from R.
+
+But with more complex models, and especially if you are also including random effects, having rank deficient data *can* at times result in singular fit/non-convergence.
+
+
+
 
 # What to do if you really can't make it simpler
 

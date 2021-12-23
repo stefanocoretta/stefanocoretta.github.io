@@ -21,7 +21,7 @@ Welcome to the homepage of Stefano Coretta [ˈsteˑfano koˈrɛtta].
 I am the Senior Teaching Coordinator for Statistics in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK).
 As part of my duties, I coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
 
-I offer [Workshops]({{< ref "workshops ">}}) on statistics and research methods and I am available as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.
+I am available as instructor for a range of [Workshops]({{< ref "workshops ">}}) on statistics and research methods and as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.
 
 My past and current research covers different areas of *linguistics*, with a focus on <span style="font-variant: small-caps;">[phonetology]({{< ref "meta#phonetology" >}})</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056))---and <span style="font-variant: small-caps;">[research methods]({{< ref "meta#research-methods" >}})</span> including statistics and Open Science practices.
 For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research]({{< ref "research" >}}) and [Meta-models]({{< ref "meta" >}}) pages.

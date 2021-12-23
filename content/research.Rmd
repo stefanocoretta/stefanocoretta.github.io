@@ -14,7 +14,7 @@ My research interests span a range of topics within linguistics, although the ma
 * Computational modelling.
 
 The other strand of my research expertise is related to **research methods and statistics**.
-In particular, I am an enthusiastic advocate of **Open Science** and **Bayesian inference**, which shape and inspire my research.
+In particular, I am an enthusiastic advocate of **Open Science** and **Bayesian inference**.
 
 For an overview of the research meta-models that inform my research, see the [Meta](/meta/) page.
 

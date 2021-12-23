@@ -18,14 +18,17 @@
 
 Welcome to the homepage of Stefano Coretta [ˈsteˑfano koˈrɛtta].
 
-I am the Senior Teaching Coordinator for Statistics in the Linguistics and English Language department of the University of Edinburgh (UK).
+I am the Senior Teaching Coordinator for Statistics in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK).
+As part of my duties, I coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
 
-I received a PhD degree in linguistics from the University of Manchester (UK) in 2020.
-My area of research is *linguistics* with a focus on <span style="font-variant: small-caps;">[phonetology]({{< ref "meta#phonetology" >}})</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056)), <span style="font-variant: small-caps;">[research methods and statistics]({{< ref "meta#research-methods" >}})</span>.
-I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
+I offer [Workshops]({{< ref "workshops ">}}) on statistics and research methods and I am available as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.
 
+My past and current research covers different areas of *linguistics*, with a focus on <span style="font-variant: small-caps;">[phonetology]({{< ref "meta#phonetology" >}})</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056))---and <span style="font-variant: small-caps;">[research methods]({{< ref "meta#research-methods" >}})</span> including statistics and Open Science practices.
 For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research]({{< ref "research" >}}) and [Meta-models]({{< ref "meta" >}}) pages.
-You can find a list of research outputs (papers, software, etc) in [Output]({{< ref "output" >}}) and the list of [Worshops]({{< ref "workshops ">}}) I can offer.
+You can find a list of research outputs (papers, software, etc) in [Output]({{< ref "output" >}}).
+
+I received my PhD degree in linguistics from the University of Manchester (UK) in 2020.
+I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
 
 <div class="cols-2">
 <div class="col-left">

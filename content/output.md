@@ -91,6 +91,10 @@ tags: []
   title="Vowel duration and consonant voicing: A production study"
   author="<u>Stefano Coretta</u>"
   doi="10.17605/OSF.IO/W92ME" >}}
+{{< pub year="2020"
+  title="A Cross-Cultural Analysis of Early Prelinguistic Gesture Development and Its Relationship to Language Development"
+  author="Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, <u>Stefano Coretta</u>>, Ludovica Serratrice, Elena Lieven"
+  url="https://github.com/stefanocoretta/infant-gestures" >}}
 {{< /tab-2 >}}
 
 ## Software
@@ -118,6 +122,8 @@ tags: []
 
 | | |
 ---|---
+2021 | Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta, <em>On the acoustics and articulation of the affricates of Northern Tosk Albanian.</em> Talk presented at the 2021 Annual Meeting of the LAGB, Belfast (online, UK).
+2021 | Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta. <em>Towards a description of the rhotic sounds of Northern Tosk Albanian.</em> Talk presented at the 7th edition of R-atics, Lausanne (online, Switzerland).
 2020 | Patrycja Strycharczuk, Małgorzata Ćavar, and Stefano Coretta. <em>Two mechanisms for vowel reduction in Polish.</em> Talk presented at LabPhon17, 8 July, Vancouver (Canada, online).
 2020 | <em>Meta-analytical estimates of the effect of voicing on vowel duration in English are biased.</em> Poster presented at LabPhon17, 8 July, Vancouver (Canada, online).<br><a class="osi" href=https://github.com/stefanocoretta/2020-labphon target="_blank"><span class="osi-compendium"></span></a>
 2020 | <em>Control of larynx height in vowel production revisited: A real-time MRI study</em> Talk presented at the 12th International Seminar on Speech Production, 17 December (online).<br><a href="https://youtu.be/0Zl14Ct_BOI" target="_blank"><i class="fa fa-video"></i></a> <a href="https://issp2020.yale.edu/S08/hoole_08_03_033_poster.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>

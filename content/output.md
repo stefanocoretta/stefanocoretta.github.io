@@ -17,7 +17,7 @@ tags: []
 <i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
-{{< pub year="submitted"
+{{< pub year="in press"
   title="Northern Tosk Albanian (IPA Illustration)"
   authors="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
   journal="Journal of the International Phonetic Association"
@@ -112,6 +112,7 @@ tags: []
 
 | | | 
 ---|---
+2022 | <b>Today's coarticulation is tomorrow's sound change: Insights from dynamic articulatory data.</b><br>Understanding Sound Change, 27 January, Donostia-San Sebastián, Spain. <br> <a href="https://stefanocoretta.github.io/2022-ocp/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2021 | <b>The more we learn the less we know: (Un)resolved questions on the voicing effect.</b><br>University of Potsdam, 28 July, Germany. <br> <a href="https://stefanocoretta.github.io/2021-potsdam/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2021 | <b>Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change.</b><br>University of Lancaster, 25 May, UK. <br> <a href="https://stefanocoretta.github.io/2021-lancaster" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2018 | <b>Vowel duration differences before voiceless and voiced stops as compensatory temporal adjustment.</b><br>Indiana University Bloomington, 16 October, USA.  

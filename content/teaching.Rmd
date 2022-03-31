@@ -1,0 +1,57 @@
+---
+title: Teaching
+slug: teaching
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+csl: unified-style-sheet-for-linguistics.csl
+output: blogdown::html_page
+---
+
+# Courses
+
+## 2021-2022
+
+- **Research Methods in Developmental Linguistics** [[LASC11127](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11127.htm)].
+
+- Individual classes taught in **Introduction to Language Research** [[LASC11091](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11091.htm)], **Phonetics and Laboratory Phonology** [[LASC11137](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11137.htm)], **Speech Production and Perception** [[LASC11138](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11138.htm)].
+
+# Workshops
+
+Here you can find information on workshops I offer.
+Adaptations of pre-existing workshops (e.g. shorter/longer version, focus on a specific topic/field) are possible and proposals for new workshops are welcome.
+Get in contact with me for queries.
+
+## learnB4SS: Learn Bayesian Analysis for Speech Sciences <a href='https://github.com/learnB4SS/learnB4SS'><img src='../img/b4ss-logo.png' align="right" height="132" /></a>
+
+Together with [Timo Roettger](https://www.simplpoints.com) and [Joseph V. Casillas](https://www.jvcasillas.com), we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST).
+After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R [@rct2020] and the package brms [@buerkner2018].
+
+We explain how to set up a Bayesian regression model (including setting appropriate priors), how to interpret the results, how to diagnose model convergence, and how to visualize and report the results.
+In hands-on exercises, the participants immediately apply their knowledge to a speech data set in R.
+
+Check out the [workshop website](https://learnb4ss.github.io) for more info.
+
+## intRo: Data visualisation with R <a href='https://intro-rstats.github.io/intRo'><img src='../img/intro-logo.png' align="right" height="132" /></a>
+
+The past two decades have seen a dramatic increase in availability of data, which has expanded the range of phenomena that can be investigated.
+The Humanities and Social Sciences can now benefit from such an abundance of data and integrate qualitative and quantitative methods.
+
+This workshop introduces absolute beginners to computational principles and tools of data visualisation, processing, and exploration with the statistical software R.
+
+No previous knowledge of quantitative analysis, statistics, nor programming required, just curiosity and a sense of adventure.
+
+You can learn more about the workshop by visiting the [website](https://intro-rstats.github.io).
+
+## An introduction to GAM(M)s
+
+This workshop introduces participants to Generalised Additive (Mixed) Models, or GA(M)Ms, which can be used to model non-linear data (e.g. f0 contours, formant trajectories, tongue contours) and spatial data [@wood2017].
+
+Check out the [workshop materials](https://github.com/stefanocoretta/gamm-workshop).
+
+## Introduction to (Xe)LaTeX
+
+XeLaTex is is a mark-up language for text editing and typesetting (and more).
+It's a dialect of the LaTeX format that introduces full Unicode support and handling of TTF and OTF fonts.
+
+Check out the [workshop materials](https://github.com/stefanocoretta/xelatex-workshop).
+
+### References

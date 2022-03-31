@@ -28,6 +28,11 @@ url = "research/"
 weight = -30
 
 [[menu.main]]
+name = "Teaching"
+url = "teaching/"
+weight = -29
+
+[[menu.main]]
 name = "Meta"
 url = "meta/"
 weight = -25
@@ -36,11 +41,6 @@ weight = -25
 name = "Output"
 url = "output/"
 weight = -20
-
-[[menu.main]]
-name = "Workshops"
-url = "workshops/"
-weight = -15
 
 [[menu.main]]
 name = "Blog"

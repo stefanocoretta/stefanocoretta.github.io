@@ -14,7 +14,7 @@ My research interests span a range of topics within linguistics, although the ma
 * Computational modelling.
 
 The other strand of my research expertise is related to **research methods and statistics**.
-In particular, I am an enthusiastic advocate of **Open Science** and **Bayesian inference**.
+In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
 
 For an overview of the research meta-models that inform my research, see the [Meta](/meta/) page.
 
@@ -32,7 +32,7 @@ More information can be found at <https://many-speech-analyses.github.io>.
 In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we are investingating the sound system of Albanian with the aim of collecting and analysing production and perception data.
 
 The first objective of the project is to produce IPA illustrations for (at least) Tosk and Gheg Albanian.
-The IPA Illustration for Northern Tosk is currently under review in JIPA.
+The IPA Illustration for Northern Tosk has been accepted for publication in JIPA.
 
 You can read the submitted manuscript (aka preprint) here: <https://osf.io/mb2hg/>.
 

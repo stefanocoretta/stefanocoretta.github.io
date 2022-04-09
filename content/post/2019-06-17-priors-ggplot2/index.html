@@ -15,21 +15,20 @@ bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
 cls: unified-style-sheet-for-linguistics.csl
 ---
 
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>The choice of priors is a fundamental step of the Bayesian inference process. <span class="citation">Vasishth et al. (<a href="#ref-vasishth2018" role="doc-biblioref">2018</a>)</span> recommend plotting the chosen priors to see if they are reasonable.</p>
 <p>In this post I will show how to easily plot prior distributions in <a href="https://ggplot2.tidyverse.org">ggplot2</a> (which is part of the <a href="https://www.tidyverse.org">tidyverse</a>).</p>
 <p>Let’s load the tidyverse first.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-## ✓ tibble  3.1.6     ✓ dplyr   1.0.7
-## ✓ tidyr   1.1.4     ✓ stringr 1.4.0
-## ✓ readr   2.1.0     ✓ forcats 0.5.1</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.3.5     ✔ purrr   0.3.4
+## ✔ tibble  3.1.6     ✔ dplyr   1.0.8
+## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
+## ✔ readr   2.1.2     ✔ forcats 0.5.1</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>theme_set(theme_minimal()) # I just like this theme :)</code></pre>
 <div id="plotting-your-priors" class="section level2">
 <h2>Plotting your priors</h2>

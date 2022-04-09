@@ -18,7 +18,7 @@
 
 
 We have all been there.
-We have run a study with a thoroughly thought-out research design. We got participants from the selected target population. Each participant has gone through the tasks of the study, to gather data from several crossing conditions and now the time has come for you to run (the analysis) FOR. YOUR.</description>
+We have run a study with a thoroughly thought-out research design. We got participants from the selected target population. Each participant has gone through the tasks of the study, to gather data from several crossing conditions and now the time has come for you to run (the analysis) FOR. YOUR. LIFE.</description>
     </item>
     
     <item>
@@ -65,7 +65,7 @@ The main reason is that, in fact, there are many possible (and most times mutual
       <description>The choice of priors is a fundamental step of the Bayesian inference process. Vasishth et al. (2018) recommend plotting the chosen priors to see if they are reasonable.
 In this post I will show how to easily plot prior distributions in ggplot2 (which is part of the tidyverse).
 Let’s load the tidyverse first.
-library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ── ## ✓ ggplot2 3.3.5 ✓ purrr 0.</description>
+library(tidyverse) ## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ── ## ✔ ggplot2 3.3.5 ✔ purrr 0.3.4 ## ✔ tibble 3.</description>
     </item>
     
   </channel>

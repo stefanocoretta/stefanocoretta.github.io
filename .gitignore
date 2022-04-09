@@ -6,3 +6,5 @@
 public/
 _site/
 *.sublime-*
+Thumbs.db
+.hugo_build.lock

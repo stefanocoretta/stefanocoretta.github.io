@@ -123,6 +123,7 @@ tags: []
 
 | | |
 ---|---
+2022 | <em>How significance testing might be limiting phonetic research and what to replace it with</em>. Talk presented at the 2022 BAAP Colloquium, 8 April, York (UK, online).
 2021 | Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta, <em>On the acoustics and articulation of the affricates of Northern Tosk Albanian.</em> Talk presented at the 2021 Annual Meeting of the LAGB, Belfast (online, UK).
 2021 | Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta. <em>Towards a description of the rhotic sounds of Northern Tosk Albanian.</em> Talk presented at the 7th edition of R-atics, Lausanne (online, Switzerland).
 2020 | Patrycja Strycharczuk, Małgorzata Ćavar, and Stefano Coretta. <em>Two mechanisms for vowel reduction in Polish.</em> Talk presented at LabPhon17, 8 July, Vancouver (Canada, online).

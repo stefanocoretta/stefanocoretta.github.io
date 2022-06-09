@@ -27,20 +27,19 @@ To that end, we will ask speech researchers to analyze the same data set in orde
 
 More information can be found at <https://many-speech-analyses.github.io>.
 
-## The sounds of Albanian
-
-In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we are investingating the sound system of Albanian with the aim of collecting and analysing production and perception data.
-
-The first objective of the project is to produce IPA illustrations for (at least) Tosk and Gheg Albanian.
-The IPA Illustration for Northern Tosk has been accepted for publication in JIPA.
-
-You can read the submitted manuscript (aka preprint) here: <https://osf.io/mb2hg/>.
-
 ## Gallo-Italian vitality
 
 In this project with Jessica Iubini-Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
 
 # Past projects
+
+## The sounds of Albanian
+
+In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we have investigate the sound system of Albanian.
+
+The first objective of the project was to produce an IPA illustration for Tosk Albanian which has been accepted for publication in JIPA.
+
+You can read the accepted manuscript here: <https://osf.io/mb2hg/>.
 
 ## Human interaction and the evolution of spoken accent
 

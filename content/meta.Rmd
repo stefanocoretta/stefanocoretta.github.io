@@ -10,6 +10,27 @@ output:
 
 In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
 
+# Research methods
+
+As far as research methods are concerned, I am an enthusiastic advocate of **Open Research**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].^[*Open Research* is a more inclusive term than the more common *Open Science* term.]
+
+<!-- TODO: slow science -->
+I am also a supporter of the **Slow Science** movement, part of the broader "slow" movement (as in "slow-food"), which can be summarised with this quote from the [manifesto](http://slow-science.org): "We do need time to think. We do need time to digest. We do need time to misunderstand each other".
+
+<!-- TODO: ethics -->
+<!-- TODO: research project management -->
+<!-- TODO: methods as theory, theory = concepts + methods, theory and applications, basic science and applied science -->
+
+<!-- TODO: statistics -->
+
+<!-- TODO: philosophy of science: three books -->
+Philosophy and science might seem two very unrelated fields, but in fact **philosophy of science** is an extremely important intersection of the two, with broad implications for research methods, from experiment planning, through statistical modelling, to inference.
+I'll expand on this some time in the future, but for now I can strongly recommend the following books:
+
+- *Philosophy of science: Very short introduction* [@okasha2016].
+- *Understanding psychology as a science: An introduction to scientific and statistical inference* [@dienes2008].
+- *The Systems View of life: A unifying vision* [@capra2018].
+
 # Phonetology
 
 In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I refer to the set of sciences that investigate the [visual systems]{.smallcaps} (signing) and [sound systems]{.smallcaps} (speech sounds) of the world's languages with the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*).
@@ -70,25 +91,6 @@ In sum:
 - A **resource** is any object (publication, media, etc.) containing linguistic materials.
 - Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
 
-# Research methods
 
-As far as research methods are concerned, I am an enthusiastic advocate of **Open Science**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
-
-<!-- TODO: slow science -->
-I am also a supporter of the **Slow Science** movement, part of the broader "slow" movement (as in "slow-food"), which can summarised with this quote from the [manifesto](http://slow-science.org): "We do need time to think. We do need time to digest. We do need time to misunderstand each other".
-
-<!-- TODO: ethics -->
-<!-- TODO: research project management -->
-<!-- TODO: methods as theory, theory = concepts + methods, theory and applications, basic science and applied science -->
-
-<!-- TODO: statistics -->
-
-<!-- TODO: philosophy of science: three books -->
-Philosophy and science might seem two very unrelated fields, but in fact **philosophy of science** is an extremely important intersection of the two, with broad implications for research methods, from experiment planning, through statistical modelling, to inference.
-I'll expand on this some time in the future, but for now I can strongly recommend the following books:
-
-- *Philosophy of science: Very short introduction* [@okasha2016].
-- *Understanding psychology as a science: An introduction to scientific and statistical inference* [@dienes2008].
-- *The Systems View of life: A unifying vision* [@capra2018].
 
 ## References

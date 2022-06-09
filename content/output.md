@@ -123,6 +123,7 @@ tags: []
 
 | | |
 ---|---
+2022 | <em>Data Version Control for Researchers</em>. Workshop given at the Edinburgh Open Research Conference, 27 May, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/dvc-res/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a><a class="osi" href=https://github.com/stefanocoretta/dvc-res target="_blank"><span class="osi-compendium"></span></a>
 2022 | <em>Research management in "many analysts" projects: Lessons from the</em> Many Speech Analyses <em>project</em>. Poster presented at the Edinburgh Open Research Conference, 27 May, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/docs/pubs/2022-eorc-poster.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2022 | <em>How significance testing might be limiting phonetic research and what to replace it with</em>. Talk presented at the 2022 BAAP Colloquium, 8 April, York (UK, online).
 2021 | Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta, <em>On the acoustics and articulation of the affricates of Northern Tosk Albanian.</em> Talk presented at the 2021 Annual Meeting of the LAGB, Belfast (online, UK).

@@ -1,8 +1,8 @@
 ---
 title: Teaching
 slug: teaching
-bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
-csl: unified-style-sheet-for-linguistics.csl
+bibliography: "/Users/ste/texmf/bibtex/bib/linguistics.bib"
+csl: "unified-style-sheet-for-linguistics.csl"
 output: blogdown::html_page
 ---
 
@@ -46,6 +46,20 @@ You can learn more about the workshop by visiting the [website](https://intro-rs
 This workshop introduces participants to Generalised Additive (Mixed) Models, or GA(M)Ms, which can be used to model non-linear data (e.g. f0 contours, formant trajectories, tongue contours) and spatial data [@wood2017].
 
 Check out the [workshop materials](https://github.com/stefanocoretta/gamm-workshop).
+
+## Data Version Control for Researchers
+
+A fundamental aspect of Open Research is ensuring the reproducibility of data processing and analyses.
+Part of this endeavour is concerned with data versioning and backup.
+Many researchers have now become familiar with versioning systems like git, popularised by the GitHub online platform.
+
+This workshop will introduce participants to the Data Version Control software ([DVC](https:// dvc.org)), specifically designed to work efficiently with non-textual data types.
+DVC works in unison with git, so that git users can simply add it to their existing workflow and integrate code and data versioning.
+
+After a brief conceptual introduction to version control, git and DVC, participants are guided through a hands-on tutorial which teaches them the basics of git and DVC versioning using a toy project.
+Only basic familiarity with file management and command line is required (<https://tutorial.djangogirls.org/en/intro_to_command_line/>).
+
+Find here the [workshop materials](https://github.com/stefanocoretta/dvc-res).
 
 ## Introduction to (Xe)LaTeX
 

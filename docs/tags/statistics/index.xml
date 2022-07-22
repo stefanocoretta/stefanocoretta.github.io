@@ -49,7 +49,7 @@ library(tidyverse) ## ── Attaching packages ──────────�
       
       <guid>https://stefanocoretta.github.io/post/speakers-per-study/</guid>
       <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
-Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
+Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019 Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
     </item>
     
     <item>

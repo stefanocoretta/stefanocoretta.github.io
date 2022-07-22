@@ -13,7 +13,7 @@
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/</guid>
-      <description>knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &amp;lt;- read_csv(&amp;quot;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&amp;quot;) %&amp;gt;% group_by(vot.category) %&amp;gt;% mutate(vot.mu_z = scale(vot.mu)) %&amp;gt;% ungroup() %&amp;gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&amp;gt;% mutate(vot_category = recode(vot.category, long.lag = &amp;quot;long lag&amp;quot;, short.lag = &amp;quot;short lag&amp;quot;))  Mean VOT vot %&amp;gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0.</description>
+      <description>knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &amp;lt;- read_csv(&amp;quot;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&amp;quot;) %&amp;gt;% group_by(vot.category) %&amp;gt;% mutate(vot.mu_z = scale(vot.mu)) %&amp;gt;% ungroup() %&amp;gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&amp;gt;% mutate(vot_category = recode(vot.category, long.lag = &amp;quot;long lag&amp;quot;, short.lag = &amp;quot;short lag&amp;quot;)) Mean VOT vot %&amp;gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       
       <guid>https://stefanocoretta.github.io/post/speakers-per-study/</guid>
       <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
-Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
+Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019 Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
     </item>
     
     <item>

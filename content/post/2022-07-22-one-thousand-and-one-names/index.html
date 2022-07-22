@@ -1,0 +1,74 @@
+---
+title: One Thousand and One names
+author: Stefano Coretta
+date: '2022-07-22'
+slug: []
+categories: []
+tags: []
+---
+
+
+
+<p>The following table lists common “portmanteau” names for linear models.
+Note that different traditions/disciplines might use one particular name more often than the others.</p>
+<p>My usual recommendation is to move away from using specific names like “logistic regression” or “mixed-effects models” and instead just specify what kind of components your linear model has (see the Description column in the table).</p>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formula</th>
+<th>Description</th>
+<th>Names</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>lm(y ~ x)</td>
+<td>Linear model with one predictor x using a Gaussian distribution for the outcome variable y</td>
+<td>simple linear regression simple linear model</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>lm(y ~ x + z + …)</td>
+<td>Linear model with two predictors or more using a Gaussian distribution for the outcome variable y</td>
+<td>multiple linear regression multiple linear model</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>glm(y ~ x + …, family = “binomial”)</td>
+<td>Linear model with one or more predictors using a Bernoulli distribution for the outcome variable y</td>
+<td>logistic regression binomial regression general(ised) linear model</td>
+<td>When specifying the binomial family in glm(), the Bernoulli family is selected automatically under the hood</td>
+</tr>
+<tr class="even">
+<td>lmer(y ~ x + … + (1 | z))</td>
+<td>Linear model with one or more predictors, including one or more random intercepts, using a Gaussian distribution for the outcome variable y.</td>
+<td>Mixed-effects models Nested models Hierarchical models Multilevel models Cross-effects models (plus combinations of those and “linear” or “regression”)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>lmer(y ~ x + … + (w | z))</td>
+<td>Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Gaussian distribution for the outcome variable y.</td>
+<td>Same as above. Sometimes “random-slope models”</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>glmer(y ~ x + … + (w | z), family = “binomial”)</td>
+<td>Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Bernoulli distribution for the outcome variable y.</td>
+<td>Same as above, but includes “logistic”, “binomial” or “general(ised)” in the name</td>
+<td>When specifying the binomial family in glmer(), the Bernoulli family is selected automatically under the hood</td>
+</tr>
+<tr class="odd">
+<td>glm(…, family = “poisson”)</td>
+<td>Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Poisson distribution for the outcome variable y.</td>
+<td>Same as above but includes “Poisson” in the name</td>
+<td></td>
+</tr>
+</tbody>
+</table>

@@ -47,7 +47,7 @@ Categorical variables in R are generally stored using factors. A factor is a vec
       <guid>https://stefanocoretta.github.io/post/methods-as-theory/</guid>
       <description>At least in linguistics, there is a general tendency to contrast theory with methods. This dichotomy is also reflected in the classification of academic papers as theoretical or methodological.
 In this brief post I will argue that the theory/methods divide is epistemologically incoherent, and I will instead propose a taxonomy in which methods are subsumed under theory and are part of it.
-1 What is theory?</description>
+1 What is theory? The term theory is used with different senses in different domains.</description>
     </item>
     
     <item>
@@ -102,7 +102,7 @@ library(tidyverse) ## ── Attaching packages ──────────�
       
       <guid>https://stefanocoretta.github.io/post/speakers-per-study/</guid>
       <description>A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
-Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019   Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
+Does anyone have an estimate of the average number of participants/tokens per context of recently published phonetic studies (let&#39;s say from the last 10 years)? #OpenScience #phonetics #replication — Stefano Coretta (@StefanoCoretta) April 12, 2019 Thankfully, Timo Roettger has pointed me to a dataset he and Matthew Gordon created for a study on the acoustic correlates of word stress, and he suggested to look at how the median number of speakers changed (or not) through the years.</description>
     </item>
     
     <item>

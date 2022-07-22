@@ -23,6 +23,7 @@
 "content/post/2021-11-21-dot-matrix-charts/index.Rmd" "4b66be5d55365764ca30cdb9e08e8056"
 "content/post/2021-12-01-how-to-simplify-your-study-design/index.Rmd" "56c48b854daeb356d1e2e97d28f278c9"
 "content/post/2022-04-05-bayesian-ci-width-power-analysis/index.Rmd" "7a9203356f07eb4f795ea80d49f341fb"
+"content/post/2022-07-22-one-thousand-and-one-names/index.Rmd" "ef650042a3d8014dc17c04cca46617f3"
 "content/research.Rmd" "2b27b385b5e7323a771e8801336e6348"
 "content/teaching.Rmd" "eaa86d5ff202858815935b1851fa9372"
 "content/workshops.Rmd" "fbce299fb5bfbb125974f0bf80dadd74"

@@ -6,7 +6,18 @@
     <description>Recent content in Linear models on Stefano Coretta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 01 Dec 2021 17:38:53 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/categories/linear-models/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://stefanocoretta.github.io/categories/linear-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One Thousand and One names</title>
+      <link>https://stefanocoretta.github.io/post/2022-07-22-one-thousand-and-one-names/</link>
+      <pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://stefanocoretta.github.io/post/2022-07-22-one-thousand-and-one-names/</guid>
+      <description>The following table lists common “portmanteau” names for linear models. Note that different traditions/disciplines might use one particular name more often than the others.
+My usual recommendation is to move away from using specific names like “logistic regression” or “mixed-effects models” and instead just specify what kind of components your linear model has (see the Description column in the table).
+Formula Description Names lm(y ~ x) Linear model with one predictor x using a Gaussian distribution for the outcome variable y simple linear regression, simple linear model lm(y ~ x + z + .</description>
+    </item>
+    
     <item>
       <title>How to simplify your study design</title>
       <link>https://stefanocoretta.github.io/post/2021-12-01-how-to-simplify-your-study-design/</link>

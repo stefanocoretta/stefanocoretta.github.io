@@ -24,10 +24,10 @@ Formula Description Names lm(y ~ x) Linear model with one predictor x using a Ga
       <pubDate>Wed, 01 Dec 2021 17:38:53 +0000</pubDate>
       
       <guid>https://stefanocoretta.github.io/post/2021-12-01-how-to-simplify-your-study-design/</guid>
-      <description>Content Warning: there are A LOT of gifs in this post
-We have all been there.
+      <description>We have all been there.
 We have run a study with a thoroughly thought-out research design. We got participants from the selected target population. Each participant has gone through the tasks of the study, to gather data from several crossing conditions and now the time has come for you to run (the analysis) FOR. YOUR. LIFE.
-And then THE HORROR.</description>
+And then THE HORROR.
+You don’t know how to deal with all of the conditions, your statistical models are overwhelmed by too many 3 or 4-way interactions, although in most cases they just don’t converge… So you drop some interactions, but you feel you are doing something cheeky.</description>
     </item>
     
     <item>

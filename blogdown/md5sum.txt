@@ -21,7 +21,7 @@
 "content/post/2021-07-20-contrasts/index.Rmd" "f966932b3d14766473834dea9ae53498"
 "content/post/2021-08-21-regression-models-a-cheat-sheet/index.Rmd" "4509d9ccd737d08c89cbb8cbeab67965"
 "content/post/2021-11-21-dot-matrix-charts/index.Rmd" "4b66be5d55365764ca30cdb9e08e8056"
-"content/post/2021-12-01-how-to-simplify-your-study-design/index.Rmd" "56c48b854daeb356d1e2e97d28f278c9"
+"content/post/2021-12-01-how-to-simplify-your-study-design/index.Rmd" "f13e2c007be86b84612bfd971c3b6d2b"
 "content/post/2022-04-05-bayesian-ci-width-power-analysis/index.Rmd" "7a9203356f07eb4f795ea80d49f341fb"
 "content/post/2022-07-22-one-thousand-and-one-names/index.Rmd" "8271315aa460dfd14f88824f072b37d0"
 "content/research.Rmd" "2b27b385b5e7323a771e8801336e6348"

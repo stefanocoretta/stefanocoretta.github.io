@@ -6,14 +6,6 @@ categories: "linear models"
 tags: ["linear models", "rstats"]
 ---
 
-*Content Warning: there are A LOT of gifs in this post*
-
-<br>
-
-<br>
-
-<br>
-
 We have all been there.
 
 We have run a study with a thoroughly thought-out research design.

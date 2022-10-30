@@ -17,10 +17,16 @@ tags: []
 <i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
+{{< pub year="submitted"
+  title="The decline of local anchoring: A quantitative investigation"
+  authors="Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, <u>Stefano Coretta</u>" 
+  journal="English Language & Linguistics"
+  compendium="https://github.com/stefanocoretta/2020-penta" >}}
 {{< pub year="In-Principle Acceptance"
   rr=true
   title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
   authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger"
+  journal="Advances in Methods and Practices in Psychological Science"
   submitted="https://github.com/many-speech-analyses/many_analyses/blob/main/RR_manuscript/Draft_RR.pdf" 
   compendium="https://osf.io/3bmcp/" >}}
 {{< pub year="2022"

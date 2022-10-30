@@ -8,6 +8,12 @@ output: blogdown::html_page
 
 # Courses
 
+## 2022-2023
+
+- **Statistics and Quantitative Methods** (Semester 1) [[LASC11171](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11171.htm)]. [Course website](https://stefanocoretta.github.io/sqmf/)
+- **Statistics and Quantitative Methods** (Semester 2) [[LASC11172](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11172.htm)].
+- **Making a language: Conlanging and Linguistic Typology** (Guided Research in Linguistics and English Language). [Course website](https://stefanocoretta.github.io/grs-conlang/)
+
 ## 2021-2022
 
 - **Research Methods in Developmental Linguistics** [[LASC11127](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11127.htm)].
@@ -19,6 +25,12 @@ output: blogdown::html_page
 Here you can find information on workshops I offer.
 Adaptations of pre-existing workshops (e.g. shorter/longer version, focus on a specific topic/field) are possible and proposals for new workshops are welcome.
 Get in contact with me for queries.
+
+## learnBayes: Bayesian linear models for Linguistics
+
+An introduction to Bayesian linear models in R for linguists.
+
+See the [worksop website](https://stefanocoretta.github.io/learnBayes/).
 
 ## learnB4SS: Learn Bayesian Analysis for Speech Sciences <a href='https://github.com/learnB4SS/learnB4SS'><img src='../img/b4ss-logo.png' align="right" height="132" /></a>
 

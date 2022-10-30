@@ -17,16 +17,20 @@ tags: []
 <i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
-{{< pub year="in press"
-  title="Northern Tosk Albanian (IPA Illustration)"
-  authors="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
-  journal="Journal of the International Phonetic Association"
-  submitted="https://osf.io/mb2hg/"
-  compendium="https://osf.io/vry3h/" >}}
 {{< pub year="In-Principle Acceptance"
   rr=true
   title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
-  authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger" >}}
+  authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger"
+  submitted="https://github.com/many-speech-analyses/many_analyses/blob/main/RR_manuscript/Draft_RR.pdf" 
+  compendium="https://osf.io/3bmcp/" >}}
+{{< pub year="2022"
+  title="Northern Tosk Albanian (IPA Illustration)"
+  authors="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
+  journal="Journal of the International Phonetic Association"
+  doi="10.1017/S0025100322000044"
+  accepted="https://osf.io/mb2hg/"
+  published="https://doi.org/10.1017/S0025100322000044"
+  compendium="https://osf.io/vry3h/" >}}
 {{< pub year="2021"
   title="Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish"
   authors="Patrycja Strycharczuk, Małgorzata Ćavar, <u>Stefano Coretta</u>"

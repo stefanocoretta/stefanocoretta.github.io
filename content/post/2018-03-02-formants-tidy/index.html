@@ -30,7 +30,7 @@ cls: unified-style-sheet-for-linguistics.csl
 <p>Let’s first read in the data.</p>
 <pre class="r"><code>trajectories &lt;- read_csv(&quot;./static/data/nichols-2018/tulemupepelako.csv&quot;)</code></pre>
 <pre><code>## Rows: 7 Columns: 61
-## ── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr  (2): Vowel, Word
 ## dbl (59): Time, Duration, F1_05, F1_10, F1_15, F1_20, F1_25, F1_30, F1_35, F...
@@ -39,15 +39,15 @@ cls: unified-style-sheet-for-linguistics.csl
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>trajectories</code></pre>
 <pre><code>## # A tibble: 7 × 61
-##    Time Vowel Word      Duration F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
+##    Time Vowel Word       Durat…¹ F1_05 F1_10 F1_15 F1_20 F1_25 F1_30 F1_35 F1_40
 ##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  194. u     tulemupe…     43.3  406.  439.  453.  456.  430.  357.  314.  288.
-## 2  194. e     tulemupe…    103.   503.  517.  537.  564.  556.  362.  315.  295.
-## 3  194. u     tulemupe…     14.1  290.  288.  286.  283.  281.  281.  282.  295.
-## 4  194. e     tulemupe…     75.7  440.  441.  439.  429.  386.  269.  250.  318.
-## 5  194. e     tulemupe…     68.2  437.  445.  479.  562.  622.  605.  523.  618.
-## 6  195. a     tulemupe…     89.8  800.  736.  662.  543.  447.  564.  768.  358.
-## 7  195. o     tulemupe…     98.5  482.  463.  471.  326.  316.  573. 1511. 1389.
+## 1  194. u     tulemupep…    43.3  406.  439.  453.  456.  430.  357.  314.  288.
+## 2  194. e     tulemupep…   103.   503.  517.  537.  564.  556.  362.  315.  295.
+## 3  194. u     tulemupep…    14.1  290.  288.  286.  283.  281.  281.  282.  295.
+## 4  194. e     tulemupep…    75.7  440.  441.  439.  429.  386.  269.  250.  318.
+## 5  194. e     tulemupep…    68.2  437.  445.  479.  562.  622.  605.  523.  618.
+## 6  195. a     tulemupep…    89.8  800.  736.  662.  543.  447.  564.  768.  358.
+## 7  195. o     tulemupep…    98.5  482.  463.  471.  326.  316.  573. 1511. 1389.
 ## # … with 49 more variables: F1_45 &lt;dbl&gt;, F1_50 &lt;dbl&gt;, F1_55 &lt;dbl&gt;, F1_60 &lt;dbl&gt;,
 ## #   F1_65 &lt;dbl&gt;, F1_70 &lt;dbl&gt;, F1_75 &lt;dbl&gt;, F1_80 &lt;dbl&gt;, F1_85 &lt;dbl&gt;,
 ## #   F1_90 &lt;dbl&gt;, F1_95 &lt;dbl&gt;, F2_05 &lt;dbl&gt;, F2_10 &lt;dbl&gt;, F2_15 &lt;dbl&gt;,

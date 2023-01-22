@@ -64,25 +64,25 @@ tags:
 
 tongue_data</code></pre>
 <pre><code>## # A tibble: 1,239 × 30
-##    speaker seconds rec_date            prompt label TT_displacement… TT_velocity
-##    &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;       &lt;dbl&gt;
-##  1 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  2 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  3 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  4 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  5 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  6 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  7 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  8 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-##  9 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-## 10 it01       1.11 29/11/2016 15:10:52 Dico … max_…             77.4       -7.18
-## # … with 1,229 more rows, and 23 more variables: TT_velocity_abs &lt;dbl&gt;,
-## #   TD_displacement_sm &lt;dbl&gt;, TD_velocity &lt;dbl&gt;, TD_velocity_abs &lt;dbl&gt;,
+##    speaker seconds rec_date prompt label TT_di…¹ TT_ve…² TT_ve…³ TD_di…⁴ TD_ve…⁵
+##    &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  2 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  3 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  4 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  5 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  6 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  7 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  8 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+##  9 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+## 10 it01       1.11 29/11/2… Dico … max_…    77.4   -7.18    4.56    67.6   -20.0
+## # … with 1,229 more rows, 20 more variables: TD_velocity_abs &lt;dbl&gt;,
 ## #   TR_displacement_sm &lt;dbl&gt;, TR_velocity &lt;dbl&gt;, TR_velocity_abs &lt;dbl&gt;,
 ## #   fan_line &lt;int&gt;, X &lt;dbl&gt;, Y &lt;dbl&gt;, word &lt;chr&gt;, language &lt;chr&gt;, sex &lt;chr&gt;,
 ## #   item &lt;int&gt;, ipa &lt;chr&gt;, c1 &lt;chr&gt;, c1_phonation &lt;chr&gt;, vowel &lt;chr&gt;,
 ## #   anteropost &lt;chr&gt;, height &lt;chr&gt;, c2 &lt;chr&gt;, c2_phonation &lt;chr&gt;,
-## #   c2_place &lt;chr&gt;</code></pre>
+## #   c2_place &lt;chr&gt;, and abbreviated variable names ¹​TT_displacement_sm,
+## #   ²​TT_velocity, ³​TT_velocity_abs, ⁴​TD_displacement_sm, ⁵​TD_velocity</code></pre>
 <p>We can now use <code>geom_path()</code>. The argument <code>group = rec_date</code> ensures that individual lines are plotted (without it, the last point of one contour is connected with the first of the contour following in the dataset).</p>
 <pre class="r"><code>tongue_data %&gt;%
   ggplot(aes(X, Y)) +

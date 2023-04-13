@@ -6,14 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Blog | Stefano Coretta</title>
-
-<meta name="keywords" content="" />
+<meta name="keywords" content="">
 <meta name="description" content="archives">
 <meta name="author" content="">
-<link rel="canonical" href="https://stefanocoretta.github.io/archives/" />
-<link href="/assets/css/stylesheet.min.a31c75ee58abbdfa57a7c3ce443a8651fe82bb20fcdb7c710d6200a7094b5ce4.css" integrity="sha256-oxx17lirvfpXp8PORDqGUf6CuyD823xxDWIApwlLXOQ=" rel="preload stylesheet"
-    as="style">
-
+<link rel="canonical" href="https://stefanocoretta.github.io/archives/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ddc80b3686ab954a6920116ca45574568d665c792d1cf79710d90edc519ea800.css" integrity="sha256-3cgLNoarlUppIBFspFV0Vo1mXHktHPeXENkO3FGeqAA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://stefanocoretta.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://stefanocoretta.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://stefanocoretta.github.io/favicon-32x32.png">
@@ -21,8 +18,43 @@
 <link rel="mask-icon" href="https://stefanocoretta.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.110.0">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
 
 
 
@@ -93,11 +125,6 @@
   }
 }
 </script>
-
-
-
-
-
 </head>
 
 <body class="list" id="top">
@@ -111,55 +138,19 @@
     }
 
 </script>
-<noscript>
-    <style type="text/css">
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: #1d1e20;
-                --entry: #2e2e33;
-                --primary: rgba(255, 255, 255, 0.84);
-                --secondary: rgba(255, 255, 255, 0.56);
-                --tertiary: rgba(255, 255, 255, 0.16);
-                --content: rgba(255, 255, 255, 0.74);
-                --hljs-bg: #2e2e33;
-                --code-bg: #37383e;
-                --border: #333;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-    </style>
-
-</noscript>
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://stefanocoretta.github.io" accesskey="h" title="Stefano Coretta (Alt + H)">Stefano Coretta</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -173,11 +164,9 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                
-                
-            </span>
+            </div>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://stefanocoretta.github.io" title="Home">
                     <span>Home</span>
@@ -212,11 +201,11 @@
                 <a href="https://stefanocoretta.github.io/docs/CorettaCV.pdf" title="CV">
                     <span>CV</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
 </header>
-
-    <main class="main">
+<main class="main">
 
 <header class="page-header">
   <h1>Blog</h1>
@@ -233,10 +222,7 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title">One Thousand and One names
         </h3>
-        <div class="archive-meta">
-
-July 22, 2022&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2022-07-22 00:00:00 +0000 UTC'>July 22, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to One Thousand and One names" href="https://stefanocoretta.github.io/post/2022-07-22-one-thousand-and-one-names/"></a>
       </div>
     </div>
@@ -247,10 +233,7 @@ July 22, 2022&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Bayesian CrI-width power analysis
         </h3>
-        <div class="archive-meta">
-
-April 5, 2022&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2022-04-05 00:00:00 +0000 UTC'>April 5, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Bayesian CrI-width power analysis" href="https://stefanocoretta.github.io/post/2022-04-05-bayesian-ci-width-power-analysis/"></a>
       </div>
     </div>
@@ -266,8 +249,7 @@ April 5, 2022&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">How to simplify your study design
         </h3>
-        <div class="archive-meta">December 1, 2021&nbsp;·&nbsp;12 min
-</div>
+        <div class="archive-meta"><span title='2021-12-01 17:38:53 +0000 UTC'>December 1, 2021</span>&nbsp;·&nbsp;12 min</div>
         <a class="entry-link" aria-label="post link to How to simplify your study design" href="https://stefanocoretta.github.io/post/2021-12-01-how-to-simplify-your-study-design/"></a>
       </div>
     </div>
@@ -278,10 +260,7 @@ April 5, 2022&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">R gist — Dot matrix charts with ggplot2
         </h3>
-        <div class="archive-meta">
-
-November 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-11-21 00:00:00 +0000 UTC'>November 21, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to R gist — Dot matrix charts with ggplot2" href="https://stefanocoretta.github.io/post/2021-11-21-dot-matrix-charts/"></a>
       </div>
     </div>
@@ -292,10 +271,7 @@ November 21, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Linear models: a cheat-sheet
         </h3>
-        <div class="archive-meta">
-
-August 21, 2021&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-08-21 00:00:00 +0000 UTC'>August 21, 2021</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Linear models: a cheat-sheet" href="https://stefanocoretta.github.io/post/2021-08-21-regression-models-a-cheat-sheet/"></a>
       </div>
     </div>
@@ -306,19 +282,13 @@ August 21, 2021&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Factors, coding and contrasts
         </h3>
-        <div class="archive-meta">
-
-July 20, 2021&nbsp;·&nbsp;12 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-07-20 00:00:00 +0000 UTC'>July 20, 2021</span>&nbsp;·&nbsp;12 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Factors, coding and contrasts" href="https://stefanocoretta.github.io/post/contrasts/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title">R gist — Plotting the area under the curve with ggplot
         </h3>
-        <div class="archive-meta">
-
-July 4, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-07-04 00:00:00 +0000 UTC'>July 4, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to R gist — Plotting the area under the curve with ggplot" href="https://stefanocoretta.github.io/post/plotting-the-area-under-the-curve/"></a>
       </div>
     </div>
@@ -329,28 +299,19 @@ July 4, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">My researcher&rsquo;s positionality statement
         </h3>
-        <div class="archive-meta">
-
-April 29, 2021&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-04-29 00:00:00 +0000 UTC'>April 29, 2021</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to My researcher&#39;s positionality statement" href="https://stefanocoretta.github.io/post/positionality/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title">On phonologisation
         </h3>
-        <div class="archive-meta">
-
-April 24, 2021&nbsp;·&nbsp;8 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-04-24 00:00:00 +0000 UTC'>April 24, 2021</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to On phonologisation" href="https://stefanocoretta.github.io/post/2021-04-24-on-phonologisation/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title">R gist — VOT and place of articulation
         </h3>
-        <div class="archive-meta">
-
-April 22, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-04-22 00:00:00 +0000 UTC'>April 22, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to R gist — VOT and place of articulation" href="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/"></a>
       </div>
     </div>
@@ -361,28 +322,19 @@ April 22, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Methods as theory
         </h3>
-        <div class="archive-meta">
-
-March 28, 2021&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-03-28 00:00:00 +0000 UTC'>March 28, 2021</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Methods as theory" href="https://stefanocoretta.github.io/post/methods-as-theory/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title">On random effects
         </h3>
-        <div class="archive-meta">
-
-March 15, 2021&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-03-15 00:00:00 +0000 UTC'>March 15, 2021</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to On random effects" href="https://stefanocoretta.github.io/post/2021-03-15-on-random-effects/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title">Quotables — Rebecca Posner
         </h3>
-        <div class="archive-meta">
-
-March 7, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-03-07 00:00:00 +0000 UTC'>March 7, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Quotables — Rebecca Posner" href="https://stefanocoretta.github.io/post/2021-03-07-quotables-rebecca-posner/"></a>
       </div>
     </div>
@@ -393,10 +345,7 @@ March 7, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">R gist — Plot an interactive 3D RGB colour space
         </h3>
-        <div class="archive-meta">
-
-January 29, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2021-01-29 00:00:00 +0000 UTC'>January 29, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to R gist — Plot an interactive 3D RGB colour space" href="https://stefanocoretta.github.io/post/rgb-space/"></a>
       </div>
     </div>
@@ -412,19 +361,13 @@ January 29, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">How to globally set colour scales in ggplot2
         </h3>
-        <div class="archive-meta">
-
-December 22, 2020&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2020-12-22 00:00:00 +0000 UTC'>December 22, 2020</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to How to globally set colour scales in ggplot2" href="https://stefanocoretta.github.io/post/set-global-ggplot2/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title">How to use custom typefaces in ggplot2 [macOS only]
         </h3>
-        <div class="archive-meta">
-
-December 21, 2020&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2020-12-21 00:00:00 +0000 UTC'>December 21, 2020</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to How to use custom typefaces in ggplot2 [macOS only]" href="https://stefanocoretta.github.io/post/custom-fonts-ggplot2/"></a>
       </div>
     </div>
@@ -440,10 +383,7 @@ December 21, 2020&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Plotting prior distributions with ggplot2
         </h3>
-        <div class="archive-meta">
-
-June 17, 2019&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2019-06-17 00:00:00 +0000 UTC'>June 17, 2019</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Plotting prior distributions with ggplot2" href="https://stefanocoretta.github.io/post/priors-ggplot2/"></a>
       </div>
     </div>
@@ -454,10 +394,7 @@ June 17, 2019&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">An estimate of number of speakers per study in phonetics
         </h3>
-        <div class="archive-meta">
-
-May 3, 2019&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2019-05-03 00:00:00 +0000 UTC'>May 3, 2019</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to An estimate of number of speakers per study in phonetics" href="https://stefanocoretta.github.io/post/speakers-per-study/"></a>
       </div>
     </div>
@@ -468,10 +405,7 @@ May 3, 2019&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Literate programming with Praat
         </h3>
-        <div class="archive-meta">
-
-March 21, 2019&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2019-03-21 00:00:00 +0000 UTC'>March 21, 2019</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Literate programming with Praat" href="https://stefanocoretta.github.io/post/literate-programming-with-praat/"></a>
       </div>
     </div>
@@ -482,10 +416,7 @@ March 21, 2019&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">On the phonotactic restrictions of Proto-Indoeuropean roots
         </h3>
-        <div class="archive-meta">
-
-January 6, 2019&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2019-01-06 00:00:00 +0000 UTC'>January 6, 2019</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to On the phonotactic restrictions of Proto-Indoeuropean roots" href="https://stefanocoretta.github.io/post/phono-restrictions-pie/"></a>
       </div>
     </div>
@@ -501,10 +432,7 @@ January 6, 2019&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Plotting tongue contours with ggplot2
         </h3>
-        <div class="archive-meta">
-
-August 23, 2018&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2018-08-23 00:00:00 +0000 UTC'>August 23, 2018</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Plotting tongue contours with ggplot2" href="https://stefanocoretta.github.io/post/tongue-ggplot2/"></a>
       </div>
     </div>
@@ -515,10 +443,7 @@ August 23, 2018&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Vowel formants trajectories and tidy data
         </h3>
-        <div class="archive-meta">
-
-March 2, 2018&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2018-03-02 00:00:00 +0000 UTC'>March 2, 2018</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Vowel formants trajectories and tidy data" href="https://stefanocoretta.github.io/post/formants-tidy/"></a>
       </div>
     </div>
@@ -534,10 +459,7 @@ March 2, 2018&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Wikipedia and the &ldquo;Dialects of Italy&rdquo;
         </h3>
-        <div class="archive-meta">
-
-August 4, 2015&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2015-08-04 00:00:00 +0000 UTC'>August 4, 2015</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Wikipedia and the &#34;Dialects of Italy&#34;" href="https://stefanocoretta.github.io/post/dialects-italy/"></a>
       </div>
     </div>
@@ -553,41 +475,35 @@ August 4, 2015&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Stefano Coretta
       <div class="archive-entry">
         <h3 class="archive-entry-title">Short review of phonological databases
         </h3>
-        <div class="archive-meta">
-
-June 30, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta
-</div>
+        <div class="archive-meta"><span title='2014-06-30 00:00:00 +0000 UTC'>June 30, 2014</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta</div>
         <a class="entry-link" aria-label="post link to Short review of phonological databases" href="https://stefanocoretta.github.io/post/2021-01-09-short-review/"></a>
       </div>
     </div>
   </div>
 </div>
-    </main><footer class="footer">
+    </main>
+    
+<footer class="footer">
     <span>&copy; 2023 <a href="https://stefanocoretta.github.io">Stefano Coretta</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
-
-
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
-    }
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -635,7 +551,6 @@ June 30, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta
     })
 
 </script>
-
 </body>
 
 </html>

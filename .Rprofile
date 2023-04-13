@@ -8,4 +8,4 @@ my_build <- function() {
   blogdown::build_site(build_rmd = blogdown::filter_md5sum)
 }
 
-options(blogdown.hugo.version = "0.110.0")
+options(blogdown.hugo.version = "0.111.3")

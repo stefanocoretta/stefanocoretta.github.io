@@ -6,14 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>R gist — VOT and place of articulation | Stefano Coretta</title>
-
-<meta name="keywords" content="phonetics, phonology, voice onset time, VOT, place of articulation, 3D, scatter plot" />
+<meta name="keywords" content="phonetics, phonology, voice onset time, VOT, place of articulation, 3D, scatter plot">
 <meta name="description" content="knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &lt;- read_csv(&quot;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&quot;) %&gt;% group_by(vot.category) %&gt;% mutate(vot.mu_z = scale(vot.mu)) %&gt;% ungroup() %&gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;% mutate(vot_category = recode(vot.category, long.lag = &quot;long lag&quot;, short.lag = &quot;short lag&quot;)) Mean VOT vot %&gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0.">
 <meta name="author" content="Stefano Coretta">
-<link rel="canonical" href="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/" />
-<link href="/assets/css/stylesheet.min.a31c75ee58abbdfa57a7c3ce443a8651fe82bb20fcdb7c710d6200a7094b5ce4.css" integrity="sha256-oxx17lirvfpXp8PORDqGUf6CuyD823xxDWIApwlLXOQ=" rel="preload stylesheet"
-    as="style">
-
+<link rel="canonical" href="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.ddc80b3686ab954a6920116ca45574568d665c792d1cf79710d90edc519ea800.css" integrity="sha256-3cgLNoarlUppIBFspFV0Vo1mXHktHPeXENkO3FGeqAA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://stefanocoretta.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://stefanocoretta.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://stefanocoretta.github.io/favicon-32x32.png">
@@ -21,8 +20,43 @@
 <link rel="mask-icon" href="https://stefanocoretta.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.110.0">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
 
 
 
@@ -42,8 +76,8 @@
 <meta property="og:description" content="knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &lt;- read_csv(&quot;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&quot;) %&gt;% group_by(vot.category) %&gt;% mutate(vot.mu_z = scale(vot.mu)) %&gt;% ungroup() %&gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;% mutate(vot_category = recode(vot.category, long.lag = &quot;long lag&quot;, short.lag = &quot;short lag&quot;)) Mean VOT vot %&gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-04-22T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-22T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-04-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-22T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="R gist — VOT and place of articulation"/>
@@ -103,11 +137,6 @@
   }
 }
 </script>
-
-
-
-
-
 </head>
 
 <body class="" id="top">
@@ -121,55 +150,19 @@
     }
 
 </script>
-<noscript>
-    <style type="text/css">
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: #1d1e20;
-                --entry: #2e2e33;
-                --primary: rgba(255, 255, 255, 0.84);
-                --secondary: rgba(255, 255, 255, 0.56);
-                --tertiary: rgba(255, 255, 255, 0.16);
-                --content: rgba(255, 255, 255, 0.74);
-                --hljs-bg: #2e2e33;
-                --code-bg: #37383e;
-                --border: #333;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-    </style>
-
-</noscript>
 <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://stefanocoretta.github.io" accesskey="h" title="Stefano Coretta (Alt + H)">Stefano Coretta</a>
-            <span class="logo-switches">
+            <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -183,11 +176,9 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                
-                
-            </span>
+            </div>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://stefanocoretta.github.io" title="Home">
                     <span>Home</span>
@@ -222,28 +213,24 @@
                 <a href="https://stefanocoretta.github.io/docs/CorettaCV.pdf" title="CV">
                     <span>CV</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
 </header>
-
-    <main class="main">
+<main class="main">
 
 <article class="post-single">
   <header class="post-header">
-
+    
     <h1 class="post-title">
       R gist — VOT and place of articulation
     </h1>
-    <div class="post-meta">
-
-April 22, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
-
+    <div class="post-meta"><span title='2021-04-22 00:00:00 +0000 UTC'>April 22, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta
 
 </div>
   </header> 
 
   <div class="post-content">
-
 <script src="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/index_files/htmlwidgets/htmlwidgets.js"></script>
 <script src="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/index_files/plotly-binding/plotly.js"></script>
 <script src="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/index_files/typedarray/typedarray.min.js"></script>
@@ -290,7 +277,9 @@ library(plotly)</code></pre>
 <script type="application/json" data-for="htmlwidget-2">{"x":{"visdat":{"451b54d5cbdd":["function () ","plotlyVisDat"]},"cur_data":"451b54d5cbdd","attrs":{"451b54d5cbdd":{"x":{},"y":{},"z":{},"text":{},"marker":{"size":5,"opacity":0.7},"hovertemplate":"<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20]}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"vot.mu_z_labial"},"yaxis":{"title":"vot.mu_z_coronal"},"zaxis":{"title":"vot.mu_z_dorsal"}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-0.181044931672506,null,0.331513459520509,-0.0883198107079215,-1.76318105026018,-0.475742143890077,-0.0419572502256294,-1.13070471221812,0.841382536471512,-0.95622694293643,-1.16678256892599,0.275092368959554,null,-0.524674714934812,-1.20102126228293,-0.956044760973078,0.746206277973336,-0.181044931672506,-1.31551941646068,-0.768304031114869,1.60460473371642,-1.36792648001918,-0.922845899389179,-0.0883198107079215,-1.42319038316383,-1.94282222999961,-0.181044931672506,0.848203911034379,0.0421745335668939,-1.01974365079717,-0.00146728073775795,-1.41741978998327,null,null,-0.27377005263709,null,null,0.454811842000889,-1.66464686710585,-0.41584287527529,0.282580673150415,0.476182922497316,-1.5429054067893,-1.64841997093705,null,-0.598307976013135,0.189855552185831,-0.320132613119382,0.00352248021273481,-0.406676059352991],"y":[1.16810557836219,-1.48239490393861,0.128976211352978,0.699843717491044,-1.43668553128161,-0.446808251294716,-0.227407492154798,-0.141636755262557,0.850524411002912,-0.704941865122406,-0.777164582944903,0.652679667329022,0.0971304312212469,-0.394076507343385,-1.15465870180064,-0.305032177577444,0.375305794114999,-0.551945415530842,-1.67829221532575,-0.737395657460011,1.3876005392512,-1.23996581308806,-0.366495173601674,0.0971304312212469,-0.56385417721224,-1.47224224110434,0.468030915079584,0.440213378790208,-0.0735610368145521,-1.27983761510283,0.343315627382218,-1.07373336910471,-0.372310139411481,0.367746370273271,-0.0883198107079215,-0.467565555453071,0.720963653854075,-0.372310139411481,-0.551945415530842,-0.111113724228627,0.00440531025666268,0.852323526237016,-1.37203941852385,-1.63358395158272,-0.459375611139098,-0.181044931672506,0.560756036044168,-0.0883198107079215,0.785660634565836,0.0754945696628471],"z":[2.11853806824918,-1.08189373399157,0.534050707688039,0.560756036044168,-0.374486776204671,-0.169042882379245,0.978019080384797,-0.313564583717727,2.10492019491857,2.20338155393178,0.0782536767789414,1.90117713281887,2.1370830924421,0.258914530613749,-0.134682371190214,null,1.39528212472543,1.20983188279626,-0.666156106492191,0.305761953391561,0.620852385474124,1.39713662714472,0.653481157008752,3.24978454401711,-1.15154611137366,-1.43978844876674,3.06433430208794,1.5343698061723,0.389381244711232,1.00630024227899,2.82502621906518,-0.919684502611564,0.389512738205175,1.12956924788993,0.83893139893792,-0.712359874799573,0.857097618515251,1.32546655927707,0.83893139893792,0.498344577864698,1.20983188279626,1.17059634478599,-0.910810082046797,-1.4026984003809,0.237148162681844,0.746206277973336,2.41525845533585,1.85890772954835,0.0934901343312749,0.906929820978612],"text":["Arabic","Hebrew (Modern)","Turkish","Pnar","Madurese","Tamil","Telugu","Afrikaans","Assamese","English","English","French","French","French","French","French","Greek (Modern)","Hindi","Italian","Nepali","Pahari","Persian","Polish","Portuguese (Brazilian)","Portuguese (European)","Russian","Serbian","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Swedish","Japanese","Moro","Shekgalagari","Kabardian","Zapotec (Yalalag)","Quichua","Galo","Karen (Sgaw)","Khonoma Angami","Kurtop","Stau","Tikuna","Munduruku","Hungarian"],"marker":{"color":"rgba(102,194,165,1)","size":5,"opacity":0.7,"line":{"color":"rgba(102,194,165,1)"}},"hovertemplate":["<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}"],"type":"scatter3d","mode":"markers","name":"lead","textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"line":{"color":"rgba(102,194,165,1)"},"frame":null},{"x":[-1.65052800378594,-1.01568692675497,-0.666131921638931,-1.88023277334851,-0.141994758732016,1.89385926914996,0.41127910613708,-1.94282222999961,-0.679651254609972,-0.30776926365744,0.092039043135816,-1.01557102035376,-0.633506554594334,0.319670721536249,-1.63795188009195,1.77869032083184,-0.27377005263709,-0.366495173601674,0.273645674329786,-1.79800723895122,-0.565437210935698,-0.830120778424595,0.302579566925147,-0.644670536495427,0.591918492878762,-0.876483338906887,-0.0883198107079215,-0.551945415530842,0.302579566925147,-0.198179195956245,-0.737395657460011,-0.565788965472852,-1.56161895492298,-1.18680762742335,0.98960972050537,-0.46432017621931,-0.524127879241467,-1.63599123696407,0.048506307272007,-0.644670536495427,1.06932772070223,-0.793126586094968,-0.830120778424595,-0.655272922526239,-0.830120778424595,-0.800448739715928,-0.333966070172806,-0.728123145363552,-1.13663614934031,1.84785938964277,-0.922845899389179,0.0817362956480467,-1.38739875542175,-0.0883173220381866,-0.152252159619926,-0.58810821270703,-0.502908347002907,-1.10829614131835,-0.0675809883648182,-0.181044931672506,-0.536503318340336,0.433045474068984,0.328943233632707,-0.557508922788718,0.0247084116664569,1.19374345886228,0.478642790034415,-0.221123889050896,0.0537814371703037,0.958703804679296,-0.0883198107079215,0.939125204023101,-0.27377005263709,0.15791010394834,0.220918467708967,-1.2141350829237],"y":[-1.02706667165643,-0.297762677686676,0.113503100401997,-2.2117250807969,0.328503422756043,1.85933751854712,1.06427014409421,-1.47919662517668,0.10132602678676,0.109493780683188,0.46932275395549,-0.551945415530842,0.0194844833627997,1.39713662714472,-1.38560712120141,1.95084698177424,0.189855552185831,0.468030915079584,0.505116815092678,-1.13413301702814,-0.2254639729402,0.189855552185831,0.389381244711232,0.189855552185831,0.418315137306593,-0.227407492154798,0.653481157008752,-0.0883198107079215,0.15791010394834,-0.111113724228627,0.0971304312212469,-0.0143743111979416,-0.778606822333155,-0.889261377794211,-0.107792086110484,-0.110110214134599,-0.106864834900838,-1.66492512955943,-0.181854420007317,-0.308541972998809,1.03677709153245,-0.430353787229891,-0.366495173601674,-0.448492427173146,-0.366495173601674,-0.270988299008152,-0.42076774795889,-0.310860101022923,-0.982856759901401,0.596293233558268,-0.818530138304022,-0.3588149912937,-0.925627653018117,-0.253240509831747,0.199710009838969,-0.199589955865422,-0.154646460092436,-0.830120778424595,-0.350543771479576,-0.366495173601674,-0.753507512805547,-0.111113724228627,0.189855552185831,0.00811431509524597,0.472007272667093,0.944911982542173,0.746309305885518,-0.158916019970869,-0.194953699817193,1.01181357197656,0.653481157008752,1.12719550589295,-0.0883198107079215,0.0132406409715324,0.305761953391561,-1.23438880774046],"z":[-0.776825994999295,0.560756036044168,0.484323409188564,-0.943709051606211,0.33208910207937,2.53497405012026,null,null,0.307671194781215,0.857476423130837,1.26742291145866,0.83893139893792,null,null,-0.783114056846292,2.42758108543715,1.02438164086709,0.931656519902505,null,-0.677039290458143,0.396614717860072,0.746206277973336,0.620852385474124,1.11710676183167,0.968059096618462,0.421668354597292,1.30255700376084,0.746206277973336,0.765521848450932,0.237148162681844,0.653481157008752,0.433045474068984,0.468030915079584,0.625895493945658,0.695207461442815,0.675735186040252,2.61925372145794,null,0.927054960651488,1.11432500820274,1.60506767599794,-0.198179195956245,0.560756036044168,-0.154646460092436,0.622572783353894,1.29096636364027,-0.305032177577444,-0.162499907479589,-0.404633195790359,1.52136387066421,0.699843717491044,0.696853853403666,0.541283760641605,0.228798140806976,0.181643924455488,0.251517757627279,0.280680898545653,0.282580673150415,0.41127910613708,0.560756036044168,-0.970511707270759,-0.00228188456910481,1.44164468520772,1.17088733199113,1.19639199744087,1.11658641194132,2.23372327406963,0.344533711188422,2.61809465744588,1.61113093393515,2.78615893919419,1.37313359295352,1.58073236665459,-0.0735610368145521,3.05181641075772,-1.06165346894615],"text":["Arabic","Hebrew (Modern)","Azerbaijani","Turkish","Pnar","Madurese","Burushaski","Aleut (Eastern)","Aleut (Western)","Armenian (Eastern)","Assamese","Bengali","Bengali","Danish","Dutch","English","English","English","English","English","English","English","French","Gaelic (Scots)","German","German","Hindi","Icelandic","Icelandic","Kurmanji","Marathi","Nepali","Norwegian","Norwegian","Pahari","Panjabi","Persian","Sindhi","Swedish","Swedish","Welsh","Japanese","Georgian","Korean","Mam (Southern)","Mopan Maya","Yukateko Maya","Apache (Western)","Hupa","Navajo","Tlingit","Udi","Shekgalagari","Swati","Tswana","Xhosa","Zulu","Kabardian","Mazatec (Jalapa)","Quechua (Bolivian)","Montana Salish","Burmese","Cantonese","Fukienese","Hakka","Hokkien","Karen (Sgaw)","Khonoma Angami","Kurtop","Mandarin","Mandarin","Wu (Shanghainese)","Tai Khamti","Thai","Waimaha","Kwakw'ala"],"marker":{"color":"rgba(252,141,98,1)","size":5,"opacity":0.7,"line":{"color":"rgba(252,141,98,1)"}},"hovertemplate":["<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}"],"type":"scatter3d","mode":"markers","name":"long lag","textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"line":{"color":"rgba(252,141,98,1)"},"frame":null},{"x":[-2.06355692772046,-0.598307976013135,-0.329281491721224,-0.189296607195998,-1.01557102035376,-0.728123145363552,-0.464168586851932,-1.03411604454668,-1.29746469359834,-0.533400391337926,-0.75929429132462,-1.57192174614127,-1.80959459253624,-0.366495173601674,-0.391833855363529,-0.459220294566258,0.15791010394834,-0.644670536495427,-0.57122398945477,-0.347950149408757,-0.866624355145031,-0.32333286464401,-0.938235705640996,-0.830120778424595,-0.366495173601674,-1.59122674359813,-1.4751394479613,0.100042318757617,-0.233005384647292,-1.11293239736658,-0.0465935062738587,-0.0807945099633925,-0.423551797251171,0.282580673150415,-2.33998980045564,0.237148162681844,-0.830120778424595,-1.85242315878098,-0.783758217942303,null,-0.737395657460011,null,-0.922845899389179,null,-0.830120778424595,null,null,-0.633506554594334,-0.366495173601674,-0.181044931672506,-0.132880092160532,-0.635398024398968,-0.377366909065848,1.28933438851011,-0.219989482477631,0.0717237663993705,-1.70173691549169,1.06427014409421,-1.01557102035376,-0.122432235553218,-0.749759006921952,-1.37356306427909,1.08379466699991,null,null,null,-0.551945415530842,-0.42076774795889,0.514393475561876,0.587646321123897,2.06552306896182,-0.551945415530842,-0.181044931672506,-0.459220294566258,-0.710106673912505,-2.02655410223622,-0.922845899389179,-0.938235705640996,-1.47919662517668,0.41127910613708,-1.10829614131835,0.541877313728507,-1.52555918565898,-1.20102126228293,-0.391833855363529,-0.80230324213522,-0.26667070038197,-0.604953276348933,0.484414102388279,-1.73419070782929,0.287936354522956,-0.644670536495427,0.143443157650659,0.672475521319933,-1.01557102035376,-2.46060717593188,-0.908415781574287,0.304026261554915,0.765635576068485,-1.06270629017743,0.788707926076303,-1.62292056267179,-1.36111925730814,2.15258854068944,-1.01557102035376,-0.372310139411481,-0.27377005263709,0.0412508512947041,-1.43283406469439,0.146274745332477,-1.3864715042121,-1.86746237772697,null,null,-0.551945415530842,-0.83243890644871,-0.970511707270759,-1.10829614131835,-0.520418874402884,-0.553863653897553,-0.436039014325112,-0.044739003854567,-1.3864715042121,0.0339953953174012,-1.72646361441558],"y":[-1.0971301915439,-0.380403941746362,-0.00857002500364501,-0.131428822005275,-0.551945415530842,-0.644670536495427,-0.467061976111468,-0.987753484064388,-0.964724928751686,-0.440675270373341,-1.00523237838519,-1.10829614131835,-0.99944559986612,0.0971304312212469,-0.21823049979136,0.00440531025666268,0.331513459520509,-0.0326847381291709,-0.0880279831122329,0.0971304312212469,-0.354461717707319,0.251438911762846,-0.644389738560286,-0.482401574807404,1.76618260858376,-0.546441082866716,-1.67103675934845,0.837856579939335,-0.204709106335816,-0.839393290521053,-0.337750386102653,-0.14343638743235,-0.516494188320403,0.468030915079584,null,-1.4606285360067,-0.366495173601674,-2.15715230982765,0.0507678707389548,-0.41584287527529,-0.551945415530842,0.628942785456124,-0.459220294566258,2.71851410691895,-1.3864715042121,2.28318674828086,-0.27377005263709,-0.589973818730525,-0.27377005263709,-0.27377005263709,-0.167706280851579,-0.774485705845845,-0.151682546822028,1.01638413464402,-0.15786365143136,0.454811842000889,-1.61828430662356,1.4995975027323,-0.922845899389179,0.419695435070748,-0.942627258528287,-0.720572026321952,1.66247251890714,-0.198179195956245,-0.922845899389179,-0.68176058488126,0.560756036044168,-0.883710029484674,-0.11984635183588,0.167910606890876,2.54438316346372,0.00440531025666268,0.282580673150415,0.189855552185831,-0.623304996126421,-1.87418952671289,-0.922845899389179,-0.0240482525010093,-0.50558285504855,0.324213634409462,-0.644670536495427,0.520110945796602,-1.06193358083606,-0.830120778424595,-0.652238888721782,-0.0419572502256294,-0.361717173684622,-0.516864411432578,0.31333045044351,-1.65259260138046,0.142827234976923,-0.551945415530842,0.765521848450932,-0.219945563888149,-0.876483338906887,-2.92354945745766,-0.917448824266028,0.335949989718463,0.904069676115397,-0.786076345966418,1.7007187424231,-1.5199956784011,-1.19330268025504,1.45606476686849,-0.0883198107079215,-0.546441082866716,-0.551945415530842,0.128316323022322,-1.15465870180064,0.449794974623212,-1.01557102035376,-1.86746237772697,1.23840108754945,0.0971304312212469,-0.27377005263709,-0.538036647386155,-0.854776136889313,-0.922845899389179,-0.106864834900838,-0.568330600195234,-0.607580488109593,-0.315496357071153,-0.644670536495427,-0.31426649159307,-1.3864715042121],"z":[0.21538179474994,0.0971304312212469,1.22810491330101,0.215777889139063,0.375305794114999,0.514393475561876,0.0508547013455023,0.440213378790208,-0.750614123546011,0.811113862648545,-0.663812445759927,0.746206277973336,-0.941577814675397,1.58073236665459,-0.305032177577444,1.11710676183167,0.476182922497316,1.08001671344584,0.334406848780045,1.20983188279626,0.281986880621567,0.644505842670832,-0.252595115786006,0.815750118696774,1.39528212472543,-0.80763749804957,-0.36215250104326,1.45993527073961,0.108726591883608,-0.0187759699844834,1.74300132834262,-0.180905778343343,0.31115381365032,1.95163285051293,-0.872936601845283,-0.764104762185761,0.746206277973336,-0.154646460092436,1.39528212472543,0.541877313728507,0.931656519902505,0.716008257183742,1.34891956424313,3.76329976765037,2.22980821340668,2.63144863519133,0.746206277973336,-0.154646460092436,1.67345748761918,1.02438164086709,0.598469870351458,1.00583661667417,-0.235590835348576,1.69549481411944,0.344706504196687,0.450458568414508,-0.691033096977719,1.63019571032373,0.514393475561876,0.640261296780715,0.544992765480188,0.179104514863434,1.45993527073961,0.541877313728507,0.189855552185831,1.55124577818786,2.27617077388898,-1.57812345177335,2.1876182833678,1.00861837030311,2.41378495587229,1.20983188279626,1.95163285051293,0.653481157008752,-0.391833855363529,-0.731455210287904,0.375305794114999,0.367746370273271,0.931656519902505,0.846606464775169,1.20983188279626,1.21663471961754,0.0507678707389548,0.468030915079584,0.0421745335668939,0.282580673150415,0.347866420895463,0.561837829122091,0.514451690134307,-0.630761768350739,1.03162059219636,1.01665454745338,null,1.39076566307278,0.328943233632707,-1.96873100181073,0.500738878337208,1.32184826832824,1.2732272762405,0.129584223558851,0.516192999568859,-0.138391376028797,-1.47106804917051,null,null,0.541877313728507,0.468030915079584,1.30370019134516,0.282580673150415,0.838004147728274,1.20983188279626,-1.60705734436871,0.60717641752422,0.0971304312212469,1.48800724569001,1.39296399670131,null,-0.0883198107079215,1.90712479244993,-0.409194190920745,1.56311459367132,2.87239330169125,-0.27377005263709,1.05556359692145,0.264035648957498],"text":["Amharic","Dahalo","Musey","Ojibwe","Azerbaijani","Banawa","Pnar","Remo","Belep","Madurese","Malay","Tsou","Yapese","Burushaski","Wari'","Hawaiian Creole","Tamil","Telugu","Defaka","Afrikaans","Armenian (Eastern)","Assamese","Bengali","Bengali","Catalan","Croatian","Danish","Dutch","English","English","English","English","English","French","French","French","French","French","French","French","Gaelic (Scots)","German","German","German","Greek (Modern)","Hindi","Icelandic","Icelandic","Italian","Italian","Marathi","Nepali","Norwegian","Norwegian","Pahari","Panjabi","Pashto","Polish","Portuguese (Brazilian)","Portuguese (European)","Russian","Serbian","Sindhi","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Spanish","Swedish","Welsh","Georgian","Moro","Itzaj Maya","Tzutujil","Chickasaw","Apache (Western)","Hupa","Navajo","Tlingit","Bowiri","Igbo","Shekgalagari","Swati","Tswana","Xhosa","Zulu","Mazatec (Jalapa)","Trique","Zapotec (Yalalag)","Warlpiri","Yan-Nhangu","Quechua (Bolivian)","Quechua (Cuzco)","Quichua","Bunun","Burmese","Cantonese","Fukienese","Galo","Hakha Lai","Hakka","Hokkien","Karen (Sgaw)","Khonoma Angami","Mandarin","Mandarin","Wu (Shanghainese)","Tai Khamti","Thai","Kayardild","Tikuna","Waimaha","Arara","Munduruku","Finnish","Hungarian","Paiute (Northern)","Shoshoni","Ute","Kwakw'ala"],"marker":{"color":"rgba(141,160,203,1)","size":5,"opacity":0.7,"line":{"color":"rgba(141,160,203,1)"}},"hovertemplate":["<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}","<b>%{text}<\/b> <br>Labial: %{x:.1r} <br>Coronal: %{y:.1r} <br>Dorsal: %{z:.1r}"],"type":"scatter3d","mode":"markers","name":"short lag","textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"line":{"color":"rgba(141,160,203,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 
-</div>
+
+  </div>
+
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://stefanocoretta.github.io/tags/phonetics/">phonetics</a></li>
@@ -303,34 +292,29 @@ library(plotly)</code></pre>
     </ul>
   </footer>
 </article>
-    </main><footer class="footer">
+    </main>
+    
+<footer class="footer">
     <span>&copy; 2023 <a href="https://stefanocoretta.github.io">Stefano Coretta</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
-
-
-<script defer src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
-    onload="hljs.initHighlightingOnLoad();"></script>
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
-    }
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -378,7 +362,6 @@ library(plotly)</code></pre>
     })
 
 </script>
-
 </body>
 
 </html>

@@ -17,19 +17,24 @@ tags: []
 <i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
-{{< pub year="submitted"
-  title="The decline of local anchoring: A quantitative investigation"
-  authors="Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, <u>Stefano Coretta</u>" 
-  journal="English Language & Linguistics"
-  compendium="https://github.com/stefanocoretta/2020-penta" >}}
-{{< pub year="In-Principle Acceptance"
+{{< pub year="in press"
   rr=true
   title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
   authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger"
   journal="Advances in Methods and Practices in Psychological Science"
-  submitted="https://github.com/many-speech-analyses/many_analyses/blob/main/RR_manuscript/Draft_RR.pdf" 
+  accepted="https://psyarxiv.com/q8t2k/"
   compendium="https://osf.io/3bmcp/" >}}
+{{< pub year="2023"
+  open=true
+  title="The decline of local anchoring: A quantitative investigation"
+  authors="Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, <u>Stefano Coretta</u>"
+  journal="English Language & Linguistics"
+  info="1--28"
+  doi="10.1017/S1360674323000047"
+  published="https://doi.org/10.1017/S1360674323000047"
+  compendium="https://github.com/stefanocoretta/2020-penta" >}}
 {{< pub year="2022"
+  open=true
   title="Northern Tosk Albanian (IPA Illustration)"
   authors="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
   journal="Journal of the International Phonetic Association"
@@ -45,11 +50,11 @@ tags: []
   doi="10.1121/10.0005585"
   compendium="https://stefanocoretta.github.io/polish-reduction/" >}}
 {{< pub year="2021"
-  open=true
   title="Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German"
   authors="Chris Carignan, <u>Stefano Coretta</u>, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit"
   journal="Language"
-  info="97(2), 333–364. https://muse.jhu.edu/article/794876"
+  info="97(2), 333–364"
+  doi="10.1353/lan.2021.0020"
   compendium="https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum" >}}
 {{< pub year="2020"
   open=true

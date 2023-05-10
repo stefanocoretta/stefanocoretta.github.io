@@ -20,18 +20,18 @@ For an overview of the research meta-models that inform my research, see the [Me
 
 # Current projects
 
+## Gallo-Italian vitality
+
+In this project with Jessica Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
+
+# Past projects
+
 ## Many Speech Analyses
 
 The _Many Speech Analyses_ project (with Timo Roettger and Joseph V. Casillas) tries to quantify the analytic flexibility in the speech sciences and explores how it affects our scientific conclusions.
 To that end, we will ask speech researchers to analyze the same data set in order to answer the same research question.
 
 More information can be found at <https://many-speech-analyses.github.io> and in the compendium <https://osf.io/3bmcp/>.
-
-## Gallo-Italian vitality
-
-In this project with Jessica Iubini-Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
-
-# Past projects
 
 ## The sounds of Albanian
 

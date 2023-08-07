@@ -17,11 +17,14 @@ tags: []
 <i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
-{{< pub year="in press"
+{{< pub year="2023"
   rr=true
+  open=true
   title="Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
-  authors="<u>Stefano Coretta</u>, Joseph V. Casillas, Timo Roettger"
+  authors="<u>Stefano Coretta</u>, Joseph V. Casillas, ..., Timo Roettger"
   journal="Advances in Methods and Practices in Psychological Science"
+  info="6(3)"
+  doi="10.1177/25152459231162567"
   accepted="https://psyarxiv.com/q8t2k/"
   compendium="https://osf.io/3bmcp/" >}}
 {{< pub year="2023"
@@ -29,7 +32,7 @@ tags: []
   title="The decline of local anchoring: A quantitative investigation"
   authors="Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, <u>Stefano Coretta</u>"
   journal="English Language & Linguistics"
-  info="1--28"
+  info="27(2). 345--372"
   doi="10.1017/S1360674323000047"
   published="https://doi.org/10.1017/S1360674323000047"
   compendium="https://github.com/stefanocoretta/2020-penta" >}}
@@ -38,6 +41,7 @@ tags: []
   title="Northern Tosk Albanian (IPA Illustration)"
   authors="<u>Stefano Coretta</u>, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
   journal="Journal of the International Phonetic Association"
+  info="1--23"
   doi="10.1017/S0025100322000044"
   accepted="https://osf.io/mb2hg/"
   published="https://doi.org/10.1017/S0025100322000044"
@@ -128,6 +132,7 @@ tags: []
 
 | | | 
 ---|---
+2023 | <b>Rethinking the IPA vowel quadrilateral.</b><br>Department of Linguistics and Scandinavian Studies seminar, 26 May, University of Oslo, Norway. <br> <a href="https://stefanocoretta.github.io/2023-ipavows/#1" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2022 | <b>Today's coarticulation is tomorrow's sound change: Insights from dynamic articulatory data.</b><br>Understanding Sound Change, 27 January, Donostia-San Sebastián, Spain. <br> <a href="https://stefanocoretta.github.io/2022-ocp/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2021 | <b>The more we learn the less we know: (Un)resolved questions on the voicing effect.</b><br>University of Potsdam, 28 July, Germany. <br> <a href="https://stefanocoretta.github.io/2021-potsdam/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2021 | <b>Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change.</b><br>University of Lancaster, 25 May, UK. <br> <a href="https://stefanocoretta.github.io/2021-lancaster" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>

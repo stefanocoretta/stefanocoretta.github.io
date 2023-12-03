@@ -177,7 +177,7 @@
   <section class="entry-content">
     <p>knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &lt;- read_csv(&#34;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&#34;) %&gt;% group_by(vot.category) %&gt;% mutate(vot.mu_z = scale(vot.mu)) %&gt;% ungroup() %&gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;% mutate(vot_category = recode(vot.category, long.lag = &#34;long lag&#34;, short.lag = &#34;short lag&#34;)) Mean VOT vot %&gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0....</p>
   </section>
-  <footer class="entry-footer"><span title='2021-04-22 00:00:00 +0000 UTC'>April 22, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2021-04-22 00:00:00 &#43;0000 UTC&#39;&gt;April 22, 2021&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to R gist — VOT and place of articulation" href="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/"></a>
 </article>
 

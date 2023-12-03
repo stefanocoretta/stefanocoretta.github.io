@@ -17,6 +17,16 @@ tags: []
 <i class="fa fa fa-info-circle fa-lg accent-red"></i> --- The open lock icon <i class="fa fa fa-unlock-alt"></i> indicates that the manuscript is <b>open access</b>, while the "registered" icon <i class="far fa-registered"></i> that it is a <b>Registered Report</b>.
 
 {{< tab-2 >}}
+{{< pub year="submitted"
+  title="Measuring spaces and observing attitudes: a comparative analysis on the language practices of Emilian and Esperanto speakers"
+  authors="Jessica Hampton, <u>Stefano Coretta</u>"
+  journal="Languages"
+  submitted="https://doi.org/10.31219/osf.io/jqgku"
+  compendium="https://github.com/stefanocoretta/emilian-esperanto" >}}
+{{< pub year="submitted"
+  title="V2-Relatives in Old English"
+  authors="Bettelou Los, <u>Stefano Coretta</u>"
+  compendium="https://github.com/stefanocoretta/aelfric-relatives" >}}
 {{< pub year="2023"
   rr=true
   open=true
@@ -144,6 +154,7 @@ tags: []
 
 | | |
 ---|---
+2023 | <em>Speech physiology or more? Vowel duration and tongue height in Northwestern Italian</em>. Poster presented at the 6th Edinburgh Symposium in Historical Phonology, 5 Dec, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/docs/pubs/2023-eshp.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a><a class="osi" href="https://github.com/stefanocoretta/vow-height" target="_blank"><span class="osi-compendium"></span></a>
 2022 | <em>Data Version Control for Researchers</em>. Workshop given at the Edinburgh Open Research Conference, 27 May, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/dvc-res/" target="_blank"><i class="fa fa-cloud-download-alt"></i></a><a class="osi" href=https://github.com/stefanocoretta/dvc-res target="_blank"><span class="osi-compendium"></span></a>
 2022 | <em>Research management in "many analysts" projects: Lessons from the</em> Many Speech Analyses <em>project</em>. Poster presented at the Edinburgh Open Research Conference, 27 May, University of Edinburgh.<br><a href="https://stefanocoretta.github.io/docs/pubs/2022-eorc-poster.pdf" target="_blank"><i class="fa fa-cloud-download-alt"></i></a>
 2022 | <em>How significance testing might be limiting phonetic research and what to replace it with</em>. Talk presented at the 2022 BAAP Colloquium, 8 April, York (UK, online).

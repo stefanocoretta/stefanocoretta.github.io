@@ -181,7 +181,7 @@
 As part of my PhD thesis on the effect of consonant voicing on vowel duration, I briefly reviewed the five definitions of phonologisation I could find in the literature. This post includes text from my thesis and expands on a few points.
 The main take-away of the sections to follow is that what one means with phonologisation is (unsurprisingly) dependent on the set of assumptions that are part of the framework within which the term is used....</p>
   </section>
-  <footer class="entry-footer"><span title='2021-04-24 00:00:00 +0000 UTC'>April 24, 2021</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2021-04-24 00:00:00 &#43;0000 UTC&#39;&gt;April 24, 2021&lt;/span&gt;&amp;nbsp;·&amp;nbsp;8 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to On phonologisation" href="https://stefanocoretta.github.io/post/2021-04-24-on-phonologisation/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -194,7 +194,7 @@ The main take-away of the sections to follow is that what one means with phonolo
   <section class="entry-content">
     <p>knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &lt;- read_csv(&#34;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&#34;) %&gt;% group_by(vot.category) %&gt;% mutate(vot.mu_z = scale(vot.mu)) %&gt;% ungroup() %&gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;% mutate(vot_category = recode(vot.category, long.lag = &#34;long lag&#34;, short.lag = &#34;short lag&#34;)) Mean VOT vot %&gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0....</p>
   </section>
-  <footer class="entry-footer"><span title='2021-04-22 00:00:00 +0000 UTC'>April 22, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2021-04-22 00:00:00 &#43;0000 UTC&#39;&gt;April 22, 2021&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to R gist — VOT and place of articulation" href="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -207,7 +207,7 @@ The main take-away of the sections to follow is that what one means with phonolo
   <section class="entry-content">
     <p>Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root. I will focus here on stops and laryngeal features. Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument....</p>
   </section>
-  <footer class="entry-footer"><span title='2019-01-06 00:00:00 +0000 UTC'>January 6, 2019</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2019-01-06 00:00:00 &#43;0000 UTC&#39;&gt;January 6, 2019&lt;/span&gt;&amp;nbsp;·&amp;nbsp;4 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to On the phonotactic restrictions of Proto-Indoeuropean roots" href="https://stefanocoretta.github.io/post/phono-restrictions-pie/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -220,7 +220,7 @@ The main take-away of the sections to follow is that what one means with phonolo
   <section class="entry-content">
     <p>When plotting tongue contours data obtained from ultrasound tongue imaging in R using ggplot2, a common option to smooth over the individual contours and show the general pattern is to use geom_smooth(methood = &#34;loess&#34;). However, as I will show in this post, in certain cases this method leads to very disorted contours. Such distortion is more or less always present, although at a lower degree in less extreme cases....</p>
   </section>
-  <footer class="entry-footer"><span title='2018-08-23 00:00:00 +0000 UTC'>August 23, 2018</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2018-08-23 00:00:00 &#43;0000 UTC&#39;&gt;August 23, 2018&lt;/span&gt;&amp;nbsp;·&amp;nbsp;6 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to Plotting tongue contours with ggplot2" href="https://stefanocoretta.github.io/post/tongue-ggplot2/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -235,7 +235,7 @@ The main take-away of the sections to follow is that what one means with phonolo
 In this post I will show how to tidy a formant measurements dataset and plot formants using the tidyverse (Wickham 2017).
 From wide to long To illustrate the process, I will use formant data that was kindly provided by Stephen Nichols....</p>
   </section>
-  <footer class="entry-footer"><span title='2018-03-02 00:00:00 +0000 UTC'>March 2, 2018</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2018-03-02 00:00:00 &#43;0000 UTC&#39;&gt;March 2, 2018&lt;/span&gt;&amp;nbsp;·&amp;nbsp;5 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to Vowel formants trajectories and tidy data" href="https://stefanocoretta.github.io/post/formants-tidy/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -248,7 +248,7 @@ From wide to long To illustrate the process, I will use formant data that was ki
   <section class="entry-content">
     <p>A review of available phonological databases (2014)....</p>
   </section>
-  <footer class="entry-footer"><span title='2014-06-30 00:00:00 +0000 UTC'>June 30, 2014</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2014-06-30 00:00:00 &#43;0000 UTC&#39;&gt;June 30, 2014&lt;/span&gt;&amp;nbsp;·&amp;nbsp;2 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to Short review of phonological databases" href="https://stefanocoretta.github.io/post/2021-01-09-short-review/"></a>
 </article>
 

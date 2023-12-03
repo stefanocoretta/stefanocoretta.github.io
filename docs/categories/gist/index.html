@@ -177,7 +177,7 @@
   <section class="entry-content">
     <p>Set up knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ── ## ✔ ggplot2 3.4.0 ✔ purrr 1.0.1 ## ✔ tibble 3.1.8 ✔ dplyr 1.0.10 ## ✔ tidyr 1.2.1 ✔ stringr 1.5.0 ## ✔ readr 2.1.3 ✔ forcats 0.5.2 ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ── ## ✖ dplyr::filter() masks stats::filter() ## ✖ dplyr::lag() masks stats::lag() Create data dots &lt;- tibble( group = as....</p>
   </section>
-  <footer class="entry-footer"><span title='2021-11-21 00:00:00 +0000 UTC'>November 21, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2021-11-21 00:00:00 &#43;0000 UTC&#39;&gt;November 21, 2021&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to R gist — Dot matrix charts with ggplot2" href="https://stefanocoretta.github.io/post/2021-11-21-dot-matrix-charts/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -190,7 +190,7 @@
   <section class="entry-content">
     <p>knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE) knitr::opts_knit$set(root.dir = here::here()) library(tidyverse) library(plotly) Read data vot &lt;- read_csv(&#34;./static/data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv&#34;) %&gt;% group_by(vot.category) %&gt;% mutate(vot.mu_z = scale(vot.mu)) %&gt;% ungroup() %&gt;% pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;% mutate(vot_category = recode(vot.category, long.lag = &#34;long lag&#34;, short.lag = &#34;short lag&#34;)) Mean VOT vot %&gt;% plot_ly( x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language, marker = list(size = 5, opacity = 0....</p>
   </section>
-  <footer class="entry-footer"><span title='2021-04-22 00:00:00 +0000 UTC'>April 22, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2021-04-22 00:00:00 &#43;0000 UTC&#39;&gt;April 22, 2021&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to R gist — VOT and place of articulation" href="https://stefanocoretta.github.io/post/2021-04-22-vot-and-place-of-articulation/"></a>
 </article>
 <article class="post-entry tag-entry"> 
@@ -203,7 +203,7 @@
   <section class="entry-content">
     <p> library(plotly) codes &lt;- seq(0, 255, 25.5) rgb &lt;- expand.grid( r = codes, g = codes, b = codes ) %&gt;% mutate(colour = rgb(r, g, b, maxColorValue = 255)) rgb %&gt;% plot_ly(x = ~r, y = ~g, z = ~b, marker = list(color = ~colour, size = 6)) ...</p>
   </section>
-  <footer class="entry-footer"><span title='2021-01-29 00:00:00 +0000 UTC'>January 29, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Stefano Coretta</footer>
+  <footer class="entry-footer">&lt;span title=&#39;2021-01-29 00:00:00 &#43;0000 UTC&#39;&gt;January 29, 2021&lt;/span&gt;&amp;nbsp;·&amp;nbsp;1 min&amp;nbsp;·&amp;nbsp;Stefano Coretta</footer>
   <a class="entry-link" aria-label="post link to R gist — Plot an interactive 3D RGB colour space" href="https://stefanocoretta.github.io/post/rgb-space/"></a>
 </article>
 

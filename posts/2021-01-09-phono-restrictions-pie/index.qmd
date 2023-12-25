@@ -1,0 +1,83 @@
+---
+title: On the phonotactic restrictions of Proto-Indoeuropean roots
+author: Stefano Coretta
+date: '2019-01-06'
+
+categories:
+  - Linguistics
+tags:
+  - proto-indoeuropean
+  - diachrony
+  - typology
+  - phonetics
+  - phonology
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+cls: unified-style-sheet-for-linguistics.csl
+---
+
+Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants.
+In this post, I will share some thoughts on the phonotactic restrictions which seem to dictate which consonants can cooccur in a root.
+I will focus here on stops and laryngeal features.
+Although I have some formal training in Indoeuropean linguistics, what follows is more of an academic game, so I invite the reader not to expect a fully developed argument.
+
+The traditional reconstruction of Proto-Indoeuropean (PIE) stops includes the following laryngeal oppositions:
+
+- Voiceless unaspirated stops (T),
+- Voiced unaspirated stops (D), and
+- Voiced aspirated (murmured) stops (Dʰ).
+
+The possible logical combinations of these laryngeal contrasts in a CVC- root, reviewed in @cooper2009, are the following (the base ablaut vowel /e/ is used for illustrative purposes):
+
+|    | T      | D     | Dʰ     |
+|----|--------|-------|--------|
+| T  | TeT    | TeD   | **TeDʰ |
+| D  | DeT    | **DeD | DeDʰ   |
+| Dʰ | **DʰeT | DʰeD  | DʰeDʰ  |
+
+The double asterisks signal those combinations which are not attested in the reconstructed PIE lexicon, namely \*\*TeDʰ, \*\*DED, and \*\*DʰeT.
+Typologically, these restrictions, in combination with the reconstructed laryngeal oppositions, are somewhat baffling.
+There are no known languages which unequivocably contrasts voiceless stops with voiced stops and voiced aspirated stops.
+
+@gamkrelidze1994 and others have used this typological incongruence (with other aspects of the reconstructed PIE phonology) to argue that the reconstructed voiced (D) stops were in fact a type of ejective or glottalised consonants (which gave the name 'Glottalic theory').
+I'll argue here that a reinterpretation of the restrictions seen above within Glottalic theory offers a sensible and more typologically grounded account of such restrictions.
+
+According to Glottalic theory, voiced stops (D) are glottalised consonants (T'), voiced aspirated stops (Dʰ) are voiced stops with aspirated allophones (D), and the voiceless stops are voiceless stops with aspirated allophones (T).
+The re-thought laryngeal contrasts thus are:
+
+- Voiceless stops (T),
+- Voiced stops (D),
+- Glottalised (ejective) stops (T').
+
+Let's now rewrite the restriction table above:
+
+|    | T     | T'      | D     |
+|----|-------|---------|-------|
+| T  | TeT   | TeT'    | **TeD |
+| T' | T'eT  | **T'eT' | T'eD  |
+| D  | **DeT | DeT'    | DeD   |
+
+The restriction **T'eT' seems now more plausible, since it involves a typologically less common type of stop.
+(I remember from my time at the University of Pavia Prof. Gianguido Manzelli telling us there are American languages which have exactly this phonotactic restriction. Unfortunately I fail to remember which these are.)
+But what about \*\*TeD and \*\*DeT?
+
+If we observe the attested combinations, a pattern emerges:
+
+| T    | D    |
+|------|------|
+| TeT  | DeD  |
+| T'eT | T'eD |
+| TeT' | DeT' |
+
+There seems to be an opposition between 'T-roots' and 'D-roots', where T' stops are kind of neutral stops (they can appear in both type of roots).
+My thought on this is that, speculatively, the T~D contrast derives from an earlier suprasegmental contrast that was assigned to the root, rather than to the individual stops.
+This could have been something like stress, tone, pitch, or else (also, think about word-level nasality in South American languages, in which a word is either all nasal or oral).
+
+If indeed roots could be specified as having the T feature (whatever that was) or the D feature, then it is possible that the glottalised (ejective) stops T' were immune to changes acted by the root-level T~D distinction.
+Ejective stops in particular are strongly articulated consonants, and this might explain their resilience to being affected by suprasegmental properties of the root.
+
+Thus, the reconstructed original laryngeal system might have contrasted voiceless stops and ejective stops.
+There is indeed a dozen languages with this system in South America alone (data from the [SAPhon](http://linguistics.berkeley.edu/~saphon/en/) database v1.1.4), for example Alacalufe (Alacalufan), Chulupí (Mataco), and Selk'nam (Chon).
+
+All this is of course internal reconstruction, so highly speculative, and as mentioned above, it is not meant to be more than brainstorming. I hope that the potential readers had fun reading this anyway and I am happy to hear about their thoughts.
+
+### References

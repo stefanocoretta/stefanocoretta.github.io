@@ -1,0 +1,16 @@
+{
+  "hash": "046b29746a8afbfe61344ab96fcb749d",
+  "result": {
+    "markdown": "---\ntitle: R gist — Plotting the area under the curve with ggplot\nauthor: Stefano Coretta\ndate: '2021-07-04'\n\ncategories:\n  - Methods\ntags:\n  - data viz\n  - ggplot2\n  - rstats\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(tidyverse)\nlibrary(ggthemr)\nggthemr(\"earth\")\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nx <- 1:11\ny <- (1.5:11.5)^2\nlow <- (0:10)^2\nupp <- (3:13)^2\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot() +\n  aes(x, y) +\n  geom_line() +\n  geom_ribbon(aes(ymin = low, ymax = upp), alpha = 0.5)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/ribbon-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nx2 <- c(1:8, NA, NA, NA)\nggplot() +\n  aes(x, y) +\n  geom_line() +\n  geom_ribbon(aes(x = x2, ymin = low, ymax = upp), alpha = 0.5)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nx <- seq(-4, 4, by = 0.05)\ny <- dnorm(x)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\np <- ggplot() +\n  aes(x, y) +\n  geom_line()\np\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/density-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\np +\n  geom_ribbon(\n    aes(x = ifelse(x <= -1 , x, NA), ymin = 0, ymax = y),\n    fill = \"#E84646\",\n    alpha = 0.4\n  )\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/density-area-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

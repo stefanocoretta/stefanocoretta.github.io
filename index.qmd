@@ -1,0 +1,31 @@
+---
+title: "Stefano Coretta"
+subtitle: "[ˈsteˑfano koˈrɛtta]"
+image: img/avatar.png
+about:
+  template: trestles
+  image-width: 10em
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/stefanocoretta
+    - icon: "{{< iconify academicons osf-square >}}"
+      text: OSF
+      href: https://osf.io/e84dv/
+    - icon: "{{< iconify academicons orcid >}}"
+      text: ORCID
+      href: https://orcid.org/0000-0001-9627-5532
+---
+
+I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, Tenured**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK).
+As part of my duties, I coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
+
+I am available as instructor for a range of [Workshops](teaching.qmd#workshops) on statistics and research methods and as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.
+
+My past and current research covers different areas of *linguistics*, with a focus on <span style="font-variant: small-caps;">[phonetology](meta.qmd#phonetology)</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056))---and <span style="font-variant: small-caps;">[research methods](meta.qmd#research-methods)</span> including statistics and Open Science practices.
+For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages.
+You can find a list of research outputs (papers, software, etc) in [Output](output.qmd).
+
+I received my PhD degree in linguistics from the University of Manchester (UK) in 2020.
+I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.

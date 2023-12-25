@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stefano Coretta">
+<meta name="dcterms.date" content="2021-07-20">
+
+<title>Stefano Coretta - Factors, coding and contrasts</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Stefano Coretta</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../meta.html" rel="" target="">
+ <span class="menu-text">Meta</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#summing-up" id="toc-summing-up" class="nav-link" data-scroll-target="#summing-up">Summing up</a></li>
+  </ul></li>
+  <li><a href="#coding-and-contrasts" id="toc-coding-and-contrasts" class="nav-link" data-scroll-target="#coding-and-contrasts">Coding and contrasts</a>
+  <ul class="collapse">
+  <li><a href="#treatment-contrasts" id="toc-treatment-contrasts" class="nav-link" data-scroll-target="#treatment-contrasts">Treatment contrasts</a></li>
+  <li><a href="#sum-contrasts" id="toc-sum-contrasts" class="nav-link" data-scroll-target="#sum-contrasts">Sum contrasts</a></li>
+  <li><a href="#sum-contrasts-and-interactions" id="toc-sum-contrasts-and-interactions" class="nav-link" data-scroll-target="#sum-contrasts-and-interactions">Sum contrasts and interactions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Factors, coding and contrasts</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Methods</div>
+    <div class="quarto-category">Linear models</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stefano Coretta </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 20, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>This post is an overview of how factors (i.e.&nbsp;categorical variables) are coded under the hood and which types of coding can be set in R.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>There’s seems to be a bit of terminological mix-up in the wild, so we first present a terminological set that will be used throughout the vignette.</p>
+<p>Categorical variables in R are generally stored using factors. A <strong>factor</strong> is a vector of values from a categorical variable. The possible values in a factor are called <strong>levels</strong> in R.</p>
+<p>For each observation in the factor, the vector specifies the level of that observation.</p>
+<p>For example, let’s assume we have a data set with information on dinosaurs and one column specifies the dinosaur’s diet: <code>carnivore</code>, <code>herbivore</code>, <code>omnivore</code>.</p>
+<p>In R, this column can be coded as a factor:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"carnivore"</span>, <span class="st">"carnivore"</span>, <span class="st">"herbivore"</span>, <span class="st">"omnivore"</span>, <span class="st">"herbivore"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] carnivore carnivore herbivore omnivore  herbivore
+Levels: carnivore herbivore omnivore</code></pre>
+</div>
+</div>
+<p>We are so accustomed to using factors in regression models that sometimes we forget that regressions only work with numbers and cannot work with categorical variables.</p>
+<p>To fit a regression model with categorical variables, these are first converted to numbers. The process of conversion is called <strong>coding</strong>.</p>
+<p>One type of coding is the <strong>dummy variable coding</strong> or simply <strong>dummy coding</strong>. This consists of assigning <code>0</code>s or <code>1</code>s to the levels in the variable.</p>
+<p>Let’s go through a simple example of dummy coding of a categorical variable with only 2 levels: <code>metropolitan</code> and <code>rural</code>.</p>
+<p>The most simple way of coding this categorical variable as a number is to assign <code>0</code> to one level and <code>1</code> to the other level. For example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"rural"</span>, <span class="st">"rural"</span>, <span class="st">"metropolitan"</span>, <span class="st">"rural"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] rural        rural        metropolitan rural       
+Levels: metropolitan rural</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dummy coded</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0 0 1 0</code></pre>
+</div>
+</div>
+<p>In R, dummy coding is done under the hood for you when using factors, so you don’t have to worry about the conversion.</p>
+<p>When the categorical variable has 3 levels instead of 2, we need a work-around in order to code the 3-level factor with only <code>0</code>s and <code>1</code>s (we can’t use higher numbers for reasons we will see later).</p>
+<p>With three levels, we can code the variable using two numeric variables (instead of just one). Going back to the dinosaur’s diet example, we can use:</p>
+<ul>
+<li>One variable that codes whether the dinosaur is a carnivore <code>0</code> or a herbivore <code>1</code>.</li>
+<li>One variable that codes whether the dinosaur is a carnivore <code>0</code> or an omnivore <code>1</code>.</li>
+</ul>
+<p>Let call the first variable <code>dummy_1</code> and the second variable <code>dummy_2</code>. Then:</p>
+<ul>
+<li>When <code>dummy_1</code> is <code>0</code> and <code>dummy_2</code> is also <code>0</code>, the dinosaur is a carnivore.</li>
+<li>When <code>dummy_1</code> is <code>1</code> and <code>dummy_2</code> is <code>0</code>, the dinosaur is a herbivore.</li>
+<li>When <code>dummy_1</code> is <code>0</code> and <code>dummy_2</code> is <code>1</code>, the dinosaur is an omnivore.</li>
+</ul>
+<p>So the following factor (repeated from above):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"carnivore"</span>, <span class="st">"carnivore"</span>, <span class="st">"herbivore"</span>, <span class="st">"omnivore"</span>, <span class="st">"herbivore"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] carnivore carnivore herbivore omnivore  herbivore
+Levels: carnivore herbivore omnivore</code></pre>
+</div>
+</div>
+<p>can be coded as:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dummy_1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)     <span class="co"># carnivore (0) or herbivore (1)?</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dummy_2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)     <span class="co"># carnivore (0) or omnivore (1)?</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  dummy_1, dummy_2</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  dummy_1 dummy_2
+    &lt;dbl&gt;   &lt;dbl&gt;
+1       0       0
+2       0       0
+3       1       0
+4       0       1
+5       1       0</code></pre>
+</div>
+</div>
+<p>If this doesn’t make much sense, try and figure it out by checking the value of the two columns for each row with the following code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># case_when() is a very helpful function from dplyr!</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">case_when</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"carnivore"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"herbivore"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"omnivore"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>What if the factor has 4 levels? Then you can code it with 3 dummy variables. And what about 5 levels? Use 4 dummy variables. The number of dummy variables needed is equal to the number of levels minus 1 (<span class="math inline">\(n_{dummy} = n_{levels} - 1\)</span>).</p>
+<section id="summing-up" class="level2">
+<h2 class="anchored" data-anchor-id="summing-up">Summing up</h2>
+<p>To sum up:</p>
+<ul>
+<li><strong>Factors</strong> are vectors that code categorical variables.</li>
+<li>The values in a factor are called <strong>levels</strong>.</li>
+<li>Regression models cannot work directly with factors, so these are coded using numbers.</li>
+<li><strong>Dummy coding</strong> is one way of coding factors as numbers using one or more numeric variables of <code>0</code>s and <code>1</code>s.</li>
+</ul>
+</section>
+</section>
+<section id="coding-and-contrasts" class="level1">
+<h1>Coding and contrasts</h1>
+<p>Now. We’ve seen that dummy coding is simply using dummy numeric variables with <code>0</code>s and <code>1</code>s.</p>
+<p>In fact, this is <strong>one way</strong> of coding factors, or one coding scheme.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Different coding schemes in R are called <strong>contrasts</strong>. Dummy coding is called <strong>treatment contrasts</strong> in R.</p>
+<section id="treatment-contrasts" class="level2">
+<h2 class="anchored" data-anchor-id="treatment-contrasts">Treatment contrasts</h2>
+<p>The term <strong>treatment contrasts</strong> comes from the clinical sciences where you test, for example, the efficacy of a medical intervention (a drug, surgery, etc…) by comparing a <strong>control group</strong> (which has not received the “treatment”) with a group that has received the medical intervention (the <strong>treatment group</strong>).</p>
+<p>The control group can be used as the reference group to see if the treatment group has benefited from the medical treatment (i.e.&nbsp;if the treatment group’s health has improved after the intervention relative to the control group, then one can infer that the treatment was effective).</p>
+<p>Let’s look at treatment contrasts in R.</p>
+<p>In the previous section, we’ve been illustrating dummy coding by assigning <code>0</code>s and <code>1</code>s using one or more dummy variables. In practice, you do not need to do that to run real analyses, because R does that under the hood for you.</p>
+<p>Factors in R are coded with treatment contrasts by default. Also by default, the first level is set as the reference level (the order is alphabetical by default). The reference level is the level that gets coded only with <code>0</code>s, as we have seen above for the dinosaur’s diet factor (<code>carnivorous</code> had <code>dummy_1 = 0</code> and <code>dummy_2 = 0</code>).</p>
+<p>Let’s see an example using a data table with measurements of vowel duration.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./data/vowels.rda"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(vowels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 886
+Columns: 9
+$ item          &lt;dbl&gt; 20, 2, 11, 1, 15, 10, 13, 3, 14, 19, 4, 6, 16, 17, 5, 23…
+$ speaker       &lt;chr&gt; "it01", "it01", "it01", "it01", "it01", "it01", "it01", …
+$ word          &lt;chr&gt; "pugu", "pada", "poco", "pata", "boco", "podo", "boto", …
+$ v1_duration   &lt;dbl&gt; 95.23720, 138.96844, 126.93226, 127.49888, 132.33310, 12…
+$ c2_voicing    &lt;chr&gt; "voiced", "voiced", "voiceless", "voiceless", "voiceless…
+$ vowel         &lt;chr&gt; "u", "a", "o", "a", "o", "o", "o", "a", "o", "u", "a", "…
+$ c2_place      &lt;chr&gt; "velar", "coronal", "velar", "coronal", "velar", "corona…
+$ speech_rate   &lt;dbl&gt; 4.893206, 5.015636, 4.819541, 5.031662, 5.063435, 5.0632…
+$ speech_rate_c &lt;dbl&gt; -0.55937531, -0.43694485, -0.63303978, -0.42091937, -0.3…</code></pre>
+</div>
+</div>
+<p>For example, let’s take the <code>vowel</code> column. This column indicates which vowel the measurement was taken from, and that can be /a/, /o/, or /u/.</p>
+<p>If we convert the <code>vowel</code> column into a factor, the levels will be <code>a</code>, <code>o</code> and <code>u</code>, and <code>a</code> will be the reference level.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>vowels <span class="ot">&lt;-</span> vowels <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vowel =</span> <span class="fu">as.factor</span>(vowel))</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(vowels<span class="sc">$</span>vowel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "o" "u"</code></pre>
+</div>
+</div>
+<p>To get a sense of how a factor would be coded with treatment contrasts, we can print a dummy coding table with the <code>contr.treatment()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contr.treatment</span>(<span class="fu">levels</span>(vowels<span class="sc">$</span>vowel))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  o u
+a 0 0
+o 1 0
+u 0 1</code></pre>
+</div>
+</div>
+<p>Now, let’s run a regression model with <code>v1_duration</code> as the outcome variable and <code>vowel</code> as the predictor.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>vow_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> vowel, <span class="at">data =</span> vowels)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = v1_duration ~ vowel, data = vowels)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-66.874 -22.567  -2.293  17.025 106.755 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  128.616      1.806  71.227   &lt;2e-16 ***
+vowelo        -5.641      2.549  -2.213   0.0272 *  
+vowelu       -29.763      2.603 -11.432   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 31.38 on 883 degrees of freedom
+Multiple R-squared:  0.1419,    Adjusted R-squared:  0.1399 
+F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>The summary returns three coefficients:</p>
+<ul>
+<li><code>Intercept</code>.</li>
+<li><code>vowelo</code>.</li>
+<li><code>vowelu</code>.</li>
+</ul>
+<p>Since <code>a</code> is the reference level of <code>vowel</code>, the <code>Intercept</code> corresponds to the mean duration of the vowel <code>a</code>, i.e.&nbsp;128 ms.</p>
+<p>The coefficient of <code>o</code> is the <strong>difference between the mean duration of <code>o</code> and the mean duration of the reference level <code>a</code></strong> (i.e.&nbsp;the <code>Intercept</code>). So <code>o</code> is 5.6 ms shorter than <code>a</code> on average (shorter because the coefficient is negative).</p>
+<p>Finally, the coefficient of <code>u</code> is the <strong>difference between the mean duration of <code>u</code> and the mean duration of the reference level <code>a</code></strong> So <code>u</code> is 29.7 ms shorter than <code>a</code>.</p>
+<p>This is how treatment contrasts work.</p>
+</section>
+<section id="sum-contrasts" class="level2">
+<h2 class="anchored" data-anchor-id="sum-contrasts">Sum contrasts</h2>
+<p>Another type of coding is <strong>effect coding</strong>. In R, the corresponding contrast type are the so-called <strong>sum contrasts</strong>.</p>
+<p>When using sum contrasts, the levels in a factor are coded using <code>1</code>s, <code>-1</code>s and <code>0</code>s. If you sum the values of each dummy variable you always get <code>0</code> (hence the name “sum” contrast).</p>
+<p>Let’s see what happens to the factor <code>vowel</code> when using sum contrasts (remember that factors use treatment contrasts by default).</p>
+<p>This is how sum coding would look like for this factor:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contr.sum</span>(<span class="fu">levels</span>(vowels<span class="sc">$</span>vowel))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [,1] [,2]
+a    1    0
+o    0    1
+u   -1   -1</code></pre>
+</div>
+</div>
+<p>Since there are 3 levels, we need two dummy variables. So <code>a</code> is coded as <code>1, 0</code>, <code>o</code> is coded as <code>0, 1</code>, and <code>u</code> as <code>-1, -1</code>.</p>
+<p>To set the contrasts of a factor to sum coding, we can run the following:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(vowels<span class="sc">$</span>vowel) <span class="ot">&lt;-</span> <span class="st">"contr.sum"</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to change it back to treatment contrasts you can run</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># contrasts(vowels$vowel) &lt;- "contr.treatment"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With sum contrasts the reference level is in fact the grand mean.</p>
+<p>In our model of vowel duration this means that the <code>Intercept</code> coefficient will be the grand mean of vowel duration.</p>
+<p>Let’s rerun the model and look at the output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>vow_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> vowel, <span class="at">data =</span> vowels)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = v1_duration ~ vowel, data = vowels)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-66.874 -22.567  -2.293  17.025 106.755 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  116.815      1.055 110.728  &lt; 2e-16 ***
+vowel1        11.801      1.483   7.957 5.40e-15 ***
+vowel2         6.160      1.481   4.160 3.49e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 31.38 on 883 degrees of freedom
+Multiple R-squared:  0.1419,    Adjusted R-squared:  0.1399 
+F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>The <code>Intercept</code> now is 116 ms, which mean that the mean of vowel duration across the three vowels is 116 ms.</p>
+<p>We can check this by taking the mean:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(vowels<span class="sc">$</span>v1_duration)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 117.2747</code></pre>
+</div>
+</div>
+<p>Yup, pretty close (small differences are fine).</p>
+<p>So what are now the coefficients called <code>vowel1</code> and <code>vowel2</code>?</p>
+<p>These are, respectively, the difference between the mean duration of <code>a</code> and the grand mean, and the difference between the mean duration of <code>o</code> and the grand mean.</p>
+<p>So <code>a</code> is 11.8 ms longer than the grand mean, and <code>o</code> is 6.1 ms longer than the grand mean.</p>
+<p>What about <code>u</code> then?</p>
+<p>Easy. You just subtract the coefficients of both <code>a</code> and <code>o</code> from the grand mean: <span class="math inline">\(116.8 - 11.8 - 6.1 = 98.9\)</span>.</p>
+<p>If you want to check that this is correct, the mean duration of <code>u</code> according to the model above where we used treatment contrasts was <span class="math inline">\(128.616 - 29.763 = 98.853\)</span>.</p>
+</section>
+<section id="sum-contrasts-and-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="sum-contrasts-and-interactions">Sum contrasts and interactions</h2>
+<p>Sum contrasts can be very handy when the model contains interactions between factors.</p>
+<p>Let’s say we want to include in our model of vowel duration a predictor that specifies the voicing of the stop following the vowel. We also add an interaction between vowel and voicing, so that we can model differences in the effect of voicing across vowels.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>vow_lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> c2_voicing <span class="sc">+</span> vowel <span class="sc">+</span> c2_voicing<span class="sc">:</span>vowel, <span class="at">data =</span> vowels)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = v1_duration ~ c2_voicing + vowel + c2_voicing:vowel, 
+    data = vowels)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-64.905 -23.262  -2.033  18.134 115.813 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                 123.469      1.449  85.232  &lt; 2e-16 ***
+c2_voicingvoiceless         -13.309      2.049  -6.496 1.37e-10 ***
+vowel1                       14.606      2.037   7.171 1.57e-12 ***
+vowel2                        8.564      2.033   4.212 2.79e-05 ***
+c2_voicingvoiceless:vowel1   -5.609      2.880  -1.947   0.0518 .  
+c2_voicingvoiceless:vowel2   -4.808      2.876  -1.672   0.0949 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 30.47 on 880 degrees of freedom
+Multiple R-squared:  0.1937,    Adjusted R-squared:  0.1891 
+F-statistic: 42.29 on 5 and 880 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>Now the <code>Intercept</code> is the mean vowel duration when the following stop is voiced (the reference level of <code>c2_voicing</code>). This means that the average vowel followed by a voiced stop is 123 ms long in our data.</p>
+<p>The coefficient of <code>c2_voicingvoiceless</code> tells us the mean effect of <code>c2_voicing</code> on vowel duration, averaged across all vowels. So, on average, a vowel is about 13 ms shorter when followed by a voiceless stop.</p>
+<p>The coefficients of <code>vowel1</code> and <code>vowel2</code> indicate the difference between the average vowel duration before a voiced stop (the <code>Intercept</code>) and <code>a</code> and <code>o</code> respectively. As before, to get the difference between the average vowel duration of <code>u</code> before a voiceless stop and the mean vowel duration, you just need to subtract the coefficients of <code>vowel1</code> and <code>vowel2</code> from the <code>Intercept</code>: <span class="math inline">\(123.5 - 14.6 - 8.5 = 100.4\)</span>.</p>
+<p>The last two coefficients, <code>c2_voicingvoiceless:vowel1</code> and <code>c2_voicingvoiceless:vowel2</code> correspond to the difference in the effect of voicing between the average effect of voicing (<code>c2_voicingvoiceless</code>, i.e.&nbsp;-13 ms) and the effect of voicing in <code>a</code> and <code>o</code> respectively. That is, the decrease of vowel duration for <code>a</code> is 5.6 ms greater than the average effect, while the decrease of vowel duration for <code>o</code> is 4.8 ms greater than the average effect.</p>
+<p>Following the usual formula, the effect of voicing for <code>u</code> is <span class="math inline">\(-13.309 - (-5.6) - (-4.8) = -2.9\)</span>.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A previous version of this post is also featured as a vignette in the learnB4SS package, <a href="https://learnb4ss.github.io/learnB4SS/articles/contrasts.html" class="uri">https://learnb4ss.github.io/learnB4SS/articles/contrasts.html</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You can learn about more coding schemes here: <a href="https://stats.idre.ucla.edu/spss/webbooks/reg/chapter5/regression-with-spsschapter-5-additional-coding-systems-for-categorical-variables-in-regressionanalysis/" class="uri">https://stats.idre.ucla.edu/spss/webbooks/reg/chapter5/regression-with-spsschapter-5-additional-coding-systems-for-categorical-variables-in-regressionanalysis/</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

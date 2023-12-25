@@ -1,0 +1,276 @@
+---
+title: "How to simplify your study design"
+date: 2021-12-01T17:38:53Z
+
+categories: "linear models"
+tags: ["linear models", "rstats"]
+---
+
+We have all been there.
+
+We have run a study with a thoroughly thought-out research design.
+We got participants from the selected target population.
+Each participant has gone through the tasks of the study, to gather data from several crossing conditions and now the time has come for you to run (the analysis) FOR. YOUR. LIFE.
+
+<div style="width:100%;height:0;padding-bottom:53%;position:relative;"><iframe src="https://giphy.com/embed/PeBK3PTF7sWYEzkxBX" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+And then THE HORROR.
+
+<div style="width:100%;height:0;padding-bottom:66%;position:relative;"><iframe src="https://giphy.com/embed/OTrcaFr7P5RIs" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+You don't know how to deal with all of the conditions, your statistical models are overwhelmed by too many 3 or 4-way interactions, although in most cases they just don't converge... So you drop some interactions, but you feel you are doing something cheeky. Then you decide to conflate a few groups: that will at least reduce the number of values for some conditions.
+
+But you just feel lost...
+
+<div style="width:100%;height:0;padding-bottom:53%;position:relative;"><iframe src="https://giphy.com/embed/3o7abpDZQD1f5Hp2uI" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+Unfortunately I do not have a simple solution to that.
+
+Sorry to disappoint you! (But read on...)
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/2LbsnnLhaHUnC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+Not all is lost!
+
+Because now you are planning a new study. Starting afresh. After all... tomorrow is another day!
+
+<div style="width:100%;height:0;padding-bottom:64%;position:relative;"><iframe src="https://giphy.com/embed/FT35D5ADZL9IY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+Here's a few tips on how to make your study design simpler and save your... face.
+
+# Tips for a simpler design
+
+## Think ahead about the statistical analysis
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/8UHgS8Badt2KA2TTr0" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+We say this all the time, but we rarely actually do it: choosing the statistical analysis should be part of the study design process.
+
+Very often, we spend a lot of time on what research questions/hypotheses we want to empirically test, which conditions we need, which population, and so on.
+But not so often we then think of the actual statistical analysis of the data we will collect based on the planned study design.
+
+Thinking ahead about what type of analysis you will perform will help you figure out if perhaps the overall design is too ambitious and will give you the time to make changes to the design so that the data analysis will be easier.
+
+For example, let's assume we want to test people's ability to recognise pitch differences across three different conditions.
+A set of recordings is played first with no background noise, then with white noise, and finally with a recording of people chatting in the background. We decide to have 30 trials in the no-noise condition (since this is just the baseline and we don't need that many trials) and 50 trials in the other two conditions.
+After data collection you will compare the mean baseline of each subject with what happens in the other two conditions.
+
+You start the study and collect data.
+
+Now it's time to compare how the second and third condition differ from the baseline. You realise that you can't simply compare the mean baseline, because you also want to account for the fact that listeners get attuned to the noise or task while performing it, so that later trials might show less of an effect.
+You could look at the change in performance of pitch change recognition across time within each condition, so that you can check if white noise and people chatter are different from the baseline condition with no noise.
+
+But you have one problem...the number of trials are less in the baseline condition then in the other two conditions.
+It's too late now!
+
+What the story teaches us is that, if we had carefully thought of the kind of analysis we wanted to do (i.e. compare the performance *across time*) we would have realised that to do so the number of trials needs to be the same.
+
+This is why we always recommend thinking the specifics of the analysis before hand: why statistical model will you use? which predictors will be in the model? which data transformation will you apply? ...
+
+## Minimise the factorial design
+
+<div style="width:100%;height:0;padding-bottom:76%;position:relative;"><iframe src="https://giphy.com/embed/IHnROpQICe4kE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+Another simple tip is to minimise the "factorial design" of the study.
+
+By *factorial design* I mean the tabulated structure of conditions/groups/contexts that are controlled in the study.
+
+A simple factorial design is the following:
+
+|       | city | village |
+|-------|------|---------|
+| young |      |         |
+| old   |      |         |
+
+This is a classic 2-by-2 design ($2 \times 2$), with Age (young or old) and Place (city or village).
+
+You plan to have 40 participants in total, which means these are the tabulated counts:
+
+|       | city | village |
+|-------|------|---------|
+| young |   10 |      10 |
+| old   |   10 |      10 |
+
+But you also want to know if level of education interacts with Age and/or Place. So you decide to go with this design:
+
+| Diploma | city | village |
+|---------|------|---------|
+| young   |      |         |
+| old     |      |         |
+
+| Degree | city | village |
+|--------|------|---------|
+| young  |      |         |
+| old    |      |         |
+
+So now we went from a $2 \times 2$ to a $2 \times 2 \times 2$ design. Before we had 4 contextual combinations (young from the city, old from the city, young from the village, old from the village), but now we have 8 combinations.
+
+The new design now would require us to be able to check three 2-way interactions and a 3-way interaction.
+Checking interactions requires sufficient data, and the more interactions you have and the higher the order of the interaction, the more data you need.
+
+So assuming you had 40 participants in total, well distributed across the factorial design, that means that you are trying to estimate effects based on only 5 participants per combination.
+
+| Diploma | city | village |
+|---------|------|---------|
+| young   |    5 |       5 |
+| old     |    5 |       5 |
+
+| Degree | city | village |
+|--------|------|---------|
+| young  |    5 |       5 |
+| old    |    5 |       5 |
+
+In fact, a $2 \times 2 \times 2$ design would already be an improvement on the average factorial design we normally employ in linguistics.
+
+Let's think phonetics: 5 vowel qualities, 3 consonant places of articulation, 3 phonation types, 2 conditions of lexical stress, 3 prosodic conditions.
+
+Which means you have to estimate 270 "cells" from the factorial table. A monster!!!
+
+<div style="width:100%;height:0;padding-bottom:74%;position:relative;"><iframe src="https://giphy.com/embed/YEL7FJP6ed008" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><br>
+
+<br>
+
+It is immediately clear that this would not be feasible, at least with the limited time and resources we researchers have.
+
+So, the moral of the story is: simplify your factorial design as much as possible, by focussing on those contexts that are critical to the research question.
+
+In other words, don't add contexts in just because "they are expected to make a difference", if these are not the critical ones.
+Of course, any type of context can potentially make a difference, but if we had to control for all the imaginable contexts within a single study, we would be collecting data for centuries.
+
+## If you care about interactions, only include the critical ones in the model
+
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/lTBEtbCOEpndFyx4Gm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+You have a $3 \times 4 \times 2 \times 3$ design.
+This means that, if you include all the logical interactions, you end up with trying to estimate N different interactions.
+
+Unless you have an impractical amount of data at hand, you will very likely have troubles fitting the model.
+
+What you can do, in these cases, is to add the main effects plus only those interactions that are relevant for your research question/hypothesis.
+
+In other words, if you are investigating whether there is a specific interaction between two of the four predictors, then you could just include that interaction.
+
+Note that if you go this route, *you have to decide with interactions to include before collecting data*, based on expectations.
+
+If you are interested in all logical interactions because you have really no expectations, then perhaps you should stick to exploratory and descriptive analyses.
+
+## Make sure your factorial design is not "rank deficient"
+
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/1Ago22qG6wJ2Ca28g9" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+Sometimes we work with data that naturally lacks some of the combinations of conditions we are interested in.
+
+For example, you might be working with a vocalic system in which one or two vowel qualities lack a long counterpart, while all the other qualities have both a short and a long counterpart.
+
+You might be tempted then to have two separate predictors: vowel quality and length.
+This means that for some of the quality/length combinations there won't be any data.
+
+The situation when a factorial design has some "cells" that are not represented in the data is described as *rank deficiency*.
+Or to put it differently, the data is *rank deficient*.
+
+This is not a problem *per se*, since linear models can cope with rank deficient data, and you usually just get a warning from R.
+
+But with more complex models, and especially if you are also including random effects, having rank deficient data *can* at times result in singular fit/non-convergence.
+
+
+
+
+# What to do if you really can't make it simpler
+
+## Collect enough data
+
+<div style="width:100%;height:0;padding-bottom:71%;position:relative;"><iframe src="https://giphy.com/embed/xT9C25UNTwfZuk85WP" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+No way you can make the design simpler?
+
+Then one solution is to collect enough data for that design. Depending on whether you will be using frequentist or Bayesian statistics, you have different options.
+
+To know in advance how much data is enough when doing frequentist statistics, you will have to run a *prospective power analysis*.
+The main idea of a power analysis is that you pick the smallest meaningful effect size you want to be able to detect (i.e. *p* < 0.05) and you can get an estimate of statistical power at varying sample sizes.
+Note that to be able to run a prospective power analysis you need to have a fair amount of information on the target population variance.
+Check out the [simr](https://github.com/pitakakariki/simr) package for power analyses in R.
+
+One option if you will be using Bayesian statistics, is to define a Region Of Practical Equivalence (ROPE), which is a range of values around 0 that you would consider not to be meaningful (in other words, values below the smallest meaningful effect size).
+Then you can collect data until the Credible Interval width of the effect estimate of interest is equal or smaller of that of the ROPE.
+See a full description of this method in the following paper: <https://doi.org/10.1016/j.jml.2018.07.004>.
+
+
+## Use dimensionality-reduction techniques
+
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/QaN5BogCfpp6hQ4GA9" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+Do you have *a lot* of predictors and you are trying to figure out which one is correlated with the outcome variable?
+You have tried many different models, and most of those don't converge or you find it overwhelming to try and decipher those models that did converge?
+
+Then you can use one of several techniques for dimensionality reduction.
+
+Two very common techniques are Principal Component Analysis and Discriminant Analysis for continuous outcome variables and Correspondence Analysis for discrete outcome variables.
+
+You can find tutorials on <http://www.sthda.com/english/> and in the related book, [Practical Guide To Principal Component Methods in R](https://www.datanovia.com/en/product/practical-guide-to-principal-component-methods-in-r/).
+
+## Go Bayesian
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/ulDHzfKbOd4Yg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<br>
+
+If you are still reading, probably you are hoping for an easier and more straightforward solution.
+This is the last resort.
+
+*Go Bayesian*.^[Wondering about the donkey gif? Read this: <http://doingbayesiandataanalysis.blogspot.com/2011/07/horses-donkies-and-mules.html>.]
+
+Bayesian statistics is a framework of statistical inference, in which uncertainty plays a central role.
+
+One of the assets of Bayesian statistics is that you can get an estimate, not only of the effect of interest, but also of the uncertainty around that estimate in more intuitive terms than what you would get under a frequentist framework.
+
+Note that Bayesian statistics is not a different kind of test or set of models.
+You can run the same models you are familiar with (logistic regression, mixed-effects models, etc), but with a more robust estimation method.
+
+One [practical advantage of Bayesian statistics](https://learnb4ss.github.io/learnB4SS/articles/why-bayes.html) is that model convergence is rarely an issue.
+Even with very little data, the model will provide you with estimated effects.
+
+The catch is that *the less the data, the more the uncertainty*.
+
+So you will still get an estimate of the effect of interest even with little data, but that estimate will span a quite wide range of values.
+
+If that will do for you and you don't have the resources to collect more data or enough prior information to carry out prospective analyses, then you can be reassured that a Bayesian model will allow you to learn something from the data, even when you don't have much of it.
+
+If you worry about the uncertainty part of the deal, you should read this paper: <https://doi.org/10.1515/ling-2019-0051>.
+
+If you wish to embark in the journey of learning Bayesian statistics, I recommend [Statistical (Re)thinking: A Bayesian Course with Examples in R and Stan](https://xcelab.net/rm/statistical-rethinking/).
+
+# What to do if nothing works
+
+I am not gonna sugar coat this...
+
+If you have read through all of the options above and you aren't yet satisfied, I am afraid there is no solution to the problem (unless you want to engage in [questionable research practices](https://doi.org/10.1177/0956797611430953) and [questionable measurement practices](https://doi.org/10.1177/2515245920952393), and I am sure you don't want to).
+
+The following papers brilliantly investigate the causes and implications of such dead end:
+
+- [Why Hypothesis Testers Should Spend Less Time Testing Hypotheses](https://doi.org/10.1177/1745691620966795).
+
+- [The generalizability crisis](https://doi.org/10.1017/S0140525X20001685).
+
+- [Why most psychological research findings are not even wrong](https://doi.org/10.31234/osf.io/8w2sd).
+
+Based on these papers, you might want to consider the following options:
+
+- **Do descriptive and exploratory work**. There are so many areas within linguistics and languages about which we know very little. The majority of published studies are top-down investigations of knowledge-based considerations.^[I am referring to what is most commonly called *theoretical work*, but for several reasons I won't go into here I think this label is epistemologically unhelpful.] You could just pick one under-resourced language and produce a detailed documentation and description of one aspect of it. If you are into phonetics, you could pick one less-studied variety of a language and, for example, collect large amounts of production data on vowels. This is a valuable task, which requires a lot of work and incredible understanding of many different aspects of research, phonetics, and linguistics more generally. In other words, this would constitute an outstanding contribution.
+
+- **Do qualitative analyses**. Qualitative analyses require a detailed investigation of the data and the interactions between different aspects of it, to a level that having too much data would in fact reduce the goodness of such investigation. If you have limited resources but you still want to contribute, then a qualitative analysis is a way to do so within your resources constraints. Note that qualitative analyses can be applied to quantitative data too.
+
+- **Find something else to do**. This last suggestion will apply to very very few of you, but it is worth mentioning. If you don't like the prospects outlined in the previous paragraphs, then one very last solution is to just find something else to do. If you are not satisfied with the limitations of research as it's currently implemented in academia, you might realise that your true calling is a different one and decide to pursue your dreams by taking a new direction.^[I have recently being appointed Senior Teaching Coordinator for Statistics in the Linguistics and English Language department of the University of Edinburgh. I just *love* this job, in every aspect, and it has opened a creative outlet that I would have sorely missed had I kept on with a research-based career. So here you go: I am one example of someone who was given the opportunity to give back to academia while redirecting my focus to teaching rather than research.]
+
+

@@ -1,0 +1,84 @@
+---
+title: Research
+---
+
+My research interests span a range of topics within linguistics, although the main focus is on the **study of speech sounds**, and in particular **speech production**, from a variety of intersecting perspectives, including:
+
+* Acoustics and articulation.
+* Descriptive, historical, and comparative linguistic (typology).
+* Language endangerment.
+* Computational modelling.
+
+The other strand of my research expertise is related to **research methods and statistics**.
+In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
+
+For an overview of the research meta-models that inform my research, see the [Meta](meta.qmd) page.
+
+# Current projects
+
+## Gallo-Italian vitality
+
+In this project with Jessica Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
+
+# Past projects
+
+## Many Speech Analyses
+
+The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) tries to quantify the analytic flexibility in the speech sciences and explores how it affects our scientific conclusions.
+To that end, we will ask speech researchers to analyze the same data set in order to answer the same research question.
+
+More information can be found at <https://many-speech-analyses.github.io> and in the compendium <https://osf.io/3bmcp/>.
+
+## The sounds of Albanian
+
+In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we have investigate the sound system of Albanian.
+
+The first objective of the project was to produce an IPA illustration for Tosk Albanian which has been accepted for publication in JIPA.
+
+You can read the accepted manuscript here: <https://osf.io/mb2hg/>.
+
+## Human interaction and the evolution of spoken accent
+
+I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
+This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+
+## Nasal coarticulation and sound-change: a real-time MRI study
+
+I conducted research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html) (PI Prof. Jonathan Harrington).
+
+## Vowel duration and consonant voicing: a production study
+
+As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
+My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
+
+
+# Glossolects
+
+```{r}
+library(leaflet)
+library(readr)
+
+glossolocs <- read_csv("data/glossolocs.csv")
+
+leaflet(data = glossolocs) %>%
+  addTiles() %>%
+  addAwesomeMarkers(popup = ~glosso, icon = ~awesomeIcons(
+    icon = "circle",
+    library = "fa",
+    markerColor = colour
+  ))
+```
+
+
+<br>
+
+The map shows in blue the main [glossolects](meta.qmd#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
+
+Overall, my interests and expertise cover the following macro-glossolects:
+
+- Indo-European.
+- Oceanic.
+- South American.
+
+I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.
+

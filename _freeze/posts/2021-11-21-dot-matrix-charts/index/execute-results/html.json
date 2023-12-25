@@ -1,0 +1,16 @@
+{
+  "hash": "d4f5ad797b52dbdbc0b91f2421fec241",
+  "result": {
+    "markdown": "---\ntitle: 'R gist — Dot matrix charts with ggplot2'\nauthor: Stefano Coretta\ndate: '2021-11-21'\n\ncategories: [\"Gist\"]\ntags: [\"data-viz\", \"rstats\", \"ggplot2\"]\n---\n\n\n# Set up\n\n\n::: {.cell}\n\n:::\n\n\n# Create data\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndots <- tibble(\n  group = as.character(unlist(mapply(rep, c(\"a\", \"b\", \"c\"), c(26, 11, 7)))),\n  x = rep(1:10, length.out = length(group)),\n  y = rep(1:(ceiling(length(group) / 10)), each = 10)[1:length(group)]\n)\n```\n:::\n\n\n# Plot dot matrix chart\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndots %>%\n  ggplot(aes(x, -y, colour = group)) +\n  geom_point(size = 10) +\n  scale_color_brewer(type = \"qual\") +\n  theme_minimal() +\n  theme(\n    panel.grid = element_blank(),\n    axis.title = element_blank(),\n    axis.text = element_blank(),\n    legend.position = \"bottom\"\n  )\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/dot-matrix-1.png){width=672}\n:::\n:::\n\n\n# To do\n\n- Order groups by descending count.\n- Reduce spacing.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,115 @@
+---
+title: Vowel formants trajectories and tidy data
+author: Stefano Coretta
+date: '2018-03-02'
+
+categories:
+  - Linguistics
+tags:
+  - rstats
+  - tidy data
+  - phonetics
+  - phonology
+  - linguistics
+  - data processing
+  - time series
+  - formants
+  - formant trajectories
+  - ggplot2
+bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+cls: unified-style-sheet-for-linguistics.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+library(tidyverse)
+theme_set(theme_minimal())
+```
+
+With the advent of more powerful statistical methods for assessing time series data, it is now becoming more common to compare whole vowel formant trajectories rather then just using average values.
+
+In this post I will show how to tidy a formant measurements dataset and plot formants using the tidyverse [@wickham2017].
+
+# From wide to long
+
+To illustrate the process, I will use formant data that was kindly provided by [Stephen Nichols](http://tiny.cc/sjn).
+
+Let's first read in the data.
+
+```{r read-data}
+trajectories <- read_csv("./data/nichols-2018/tulemupepelako.csv")
+
+trajectories
+```
+
+The dataset contains formant values of F1-F3 at 5% intervals for the vowels in the word *tulemupepelako* 'we are praying for her' (Bemba, [`bemb1257`]).
+
+In the first step, we will create two columns, one with the formant/interval label and one with the formant value, using `pivot_longer()`.
+
+```{r longer}
+trajectories_long <- pivot_longer(
+  trajectories,
+  F1_05:F3_95,
+  names_to = "formant_int",
+  values_to = "value")
+
+trajectories_long
+```
+
+The next step is to separate the `formant_int` column into two columns: one for `formant`, and one for `interval`.
+The argument `convert = TRUE` ensures that the `interval` column is converted into a numeric column.
+
+```{r separate}
+trajectories_sep <- separate(
+  trajectories_long,
+  formant_int,
+  c("formant", "interval"),
+  convert = TRUE
+)
+
+trajectories_sep
+```
+
+Now we can put back the formant labels into one column each.
+We can achieve this with `pivot_wider()`, the counterpart of `pivo_longer()`.
+
+```{r wider}
+trajectories_wide <- pivot_wider(
+  trajectories_sep,
+  names_from = formant,
+  values_from = value
+)
+
+trajectories_wide
+```
+
+We now have a dataset with separate columns for each formant and individual rows for each vowel interval.
+
+## The pipe
+
+All the individual steps above can be chained by using the pipe `%>%`.
+What the pipe does is simply "transferring" the output of the function before it as the input of the function after it.
+
+```{r tidy-trajectory}
+trajectories <- trajectories %>%
+  pivot_longer(F1_05:F3_95, names_to = "formant_int", values_to = "value") %>%
+  separate(formant_int, c("formant", "interval"), convert = TRUE) %>%
+  pivot_wider(names_from = formant, values_from = value)
+```
+
+# Plot
+
+We can finally plot the formant trajectories.
+
+```{r trajectory-plot, cache=TRUE}
+trajectories %>%
+  ggplot(aes(x = interval)) +
+  geom_smooth(aes(y = F1), method = "gam", se = FALSE, colour = "#A7473A") +
+  geom_smooth(aes(y = F2), method = "gam", se = FALSE, colour = "#4B5F6C") +
+  geom_smooth(aes(y = F3), method = "gam", se = FALSE, colour = "#B09B37") +
+  facet_wrap(~ Vowel) +
+  ylab("Hertz")
+```
+
+## References

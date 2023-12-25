@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stefano Coretta">
+<meta name="dcterms.date" content="2021-03-28">
+
+<title>Stefano Coretta - Methods as theory</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="../../site_libs/d3-3.3.8/d3.min.js"></script>
+<script src="../../site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="../../site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet">
+<script src="../../site_libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+<link href="../../site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="../../site_libs/chromatography-0.1/chromatography.js"></script>
+<script src="../../site_libs/DiagrammeR-binding-1.0.10/DiagrammeR.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Stefano Coretta</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../meta.html" rel="" target="">
+ <span class="menu-text">Meta</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-theory" id="toc-what-is-theory" class="nav-link active" data-scroll-target="#what-is-theory"><span class="header-section-number">1</span> What is <em>theory</em>?</a></li>
+  <li><a href="#are-methods-not-theory" id="toc-are-methods-not-theory" class="nav-link" data-scroll-target="#are-methods-not-theory"><span class="header-section-number">2</span> Are methods not theory?</a></li>
+  <li><a href="#methods-as-theory" id="toc-methods-as-theory" class="nav-link" data-scroll-target="#methods-as-theory"><span class="header-section-number">3</span> Methods as theory</a></li>
+  <li><a href="#conceptual-and-methodological-theory" id="toc-conceptual-and-methodological-theory" class="nav-link" data-scroll-target="#conceptual-and-methodological-theory"><span class="header-section-number">4</span> Conceptual and methodological theory</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Methods as theory</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Methods</div>
+    <div class="quarto-category">Meta-models</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Stefano Coretta </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 28, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>At least in linguistics, there is a general tendency to contrast theory with methods. This dichotomy is also reflected in the classification of academic papers as theoretical or methodological.</p>
+<p>In this brief post I will argue that the theory/methods divide is epistemologically incoherent, and I will instead propose a taxonomy in which methods are subsumed under theory and are part of it.</p>
+<section id="what-is-theory" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> What is <em>theory</em>?</h1>
+<p>The term <em>theory</em> is used with different senses in different domains. Here I will cover only three <span class="citation" data-cites="nrc2008">(see <a href="#ref-nrc2008" role="doc-biblioref">National Research Council 2008</a>, Ch. 2)</span>.</p>
+<p>In the popular usage, it is often just a synonym of <em>hypothesis</em>, <em>idea</em>, or <em>hunch</em>. For example, one might say:</p>
+<blockquote class="blockquote">
+<p><em>The socialist party could win the next elections, but it’s only a theory.</em></p>
+</blockquote>
+<p>Note that the use of <em>only</em> stresses the fact that the socialist party’s victory is not a determined outcome, but rather “only” a hypothesis.</p>
+<p>In mathematics, a theory is a set of axioms (statements taken to be true) and theorems (statements mathematically proven to be true, usually derived from axioms and/or other theorems).</p>
+<p>Finally, <strong>a scientific theory can be defined as a generally-recognised set of well-corroborated hypotheses that form an integrated model of one or more natural phenomena</strong> <span class="citation" data-cites="nrc2008">(<a href="#ref-nrc2008" role="doc-biblioref">National Research Council 2008: 32–36</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>In the remainder of the post I will use <em>theory</em> in this last sense <span class="citation" data-cites="winther2021">(for an in-depth overview of the structure of scientific theories see <a href="#ref-winther2021" role="doc-biblioref">Winther 2021</a>)</span>.</p>
+</section>
+<section id="are-methods-not-theory" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Are methods not theory?</h1>
+<p>At first sight, one might think that methods are not part of theory, but rather that they are just the means with which one builds a theory by gathering evidence. The following schematics illustrates this relation.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-d269b11dc4988200e934" style="width:100%;height:371px;" class="DiagrammeR html-widget "></div>
+<script type="application/json" data-for="htmlwidget-d269b11dc4988200e934">{"x":{"diagram":"graph LR; A(Methods)-->B(evidence 1); A-->C(evidence 2); A-->D(...); B-->E(THEORY); C-->E; D-->E"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Under this <span class="smallcaps">methods-for-theory</span> view, a set of methods (from experimental design, through recruitment, data processing, to statistical modelling) is secondary to the theory. Methods are seen as accessory to theory building, but not part of the resulting theory.</p>
+<p>Rather, I argue that methods are an integral part of theory, and dissociating them from theory can lead (a) to a defective formulation of the latter, and (b) to the detrimental disincentivisation of resources dedicated to the refinement and popularisation of methodological advances.</p>
+</section>
+<section id="methods-as-theory" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Methods as theory</h1>
+<p>A different conceptualisation of theory sees it as the interaction between <span class="smallcaps">concepts</span> and <span class="smallcaps">methods</span>. Both components are theoretical, in the sense that they are the building blocks necessary to build a theory in the first place.</p>
+<p>The <span class="smallcaps">methods-as-theory</span> view is represented in the following graph.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="htmlwidget-8695e5e422f52df534a3" style="width:100%;height:288px;" class="DiagrammeR html-widget "></div>
+<script type="application/json" data-for="htmlwidget-8695e5e422f52df534a3">{"x":{"diagram":"graph TB; A{THEORY}---B(CONCEPTS); A---C(METHODS); B---D(concept 1); B---E(concept 2); B---F(...); C---G(evidence 1); C---H(evidence 2); C---I(...)"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>With <em>concept</em>, I mean any statement, hypothesis, law, rule, constraint, principle, observation that is part of a particular theory.</p>
+<p>For example, Heisenberg’s uncertainty principle is a fundamental concept of quantum mechanics.</p>
+<p>The use of a quantum computer that manipulates photons to answer a research question is, unambiguously, a method of quantum mechanics. How the experiment is brought about by researchers and how the results are used for inference, together with many other factors related to conscious decisions and less conscious biases, all influence the resulting scientific contribution.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> This “subjective” aspect of science has been brilliantly labelled the <span class="smallcaps">garden of forking paths</span> and the <span class="smallcaps">researcher’s degrees of freedom</span> <span class="citation" data-cites="gelman2014a">(<a href="#ref-gelman2014a" role="doc-biblioref">Gelman &amp; Loken 2014</a>)</span>.</p>
+<p>In other words, the research methods end up being encapsulated in the theory by way of the numerous decisions that take place during the investigation and that shape the conceptual conclusions communicated at the end of it.</p>
+</section>
+<section id="conceptual-and-methodological-theory" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Conceptual and methodological theory</h1>
+<p>In sum, in the methods-as-theory view, theory is not opposed to methods, but rather a theory comprises both concepts and methods.</p>
+<p>Moreover, concepts and methods are not meant as categorically distinct entities. On the contrary, they are just two perspectives from which one can look at the constituents of theory, but in practice it is pointless to try and clearly segregate one from the other.</p>
+<p>To conclude, as I see it, a theory encompasses both concepts and methods. Concepts and methods are reciprocally entangled, and dismissing the latter for the former would be equivalent to scientific hand-waving.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<section id="references" class="level4" data-number="4.0.0.1">
+
+
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">4.0.0.1 References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bird2018" class="csl-entry" role="listitem">
+Bird, Alexander. 2018. Thomas kuhn. In Edward N. Zalta (ed.), <em>The <span>S</span>tanford <span>E</span>ncyclopedia of <span>P</span>hilosophy</em>. <span>W</span>inter 2018. <a href="https://plato.stanford.edu/archives/win2018/entries/thomas-kuhn/" class="uri">https://plato.stanford.edu/archives/win2018/entries/thomas-kuhn/</a>; Metaphysics Research Lab, Stanford University.
+</div>
+<div id="ref-gelman2014a" class="csl-entry" role="listitem">
+Gelman, Andrew &amp; Eric Loken. 2014. The statistical crisis in science: Data-dependent analysis. <span>A</span> <span>“garden of forking paths”</span>–explains why many statistically significant comparisons don’t hold up. <em>American scientist</em> 102(6). 460–466.
+</div>
+<div id="ref-kuhn1962" class="csl-entry" role="listitem">
+Kuhn, Thomas Samuel. 1962. <em>The structure of scientific revolutions</em>. The University of Chicago Press.
+</div>
+<div id="ref-nrc2008" class="csl-entry" role="listitem">
+National Research Council. 2008. <em>The role of theory in advancing 21st-century biology: Catalyzing transformative research</em>. National Academies Press.
+</div>
+<div id="ref-winther2021" class="csl-entry" role="listitem">
+Winther, Rasmus Grønfeldt. 2021. <span class="nocase">The Structure of Scientific Theories</span>. In Edward N. Zalta (ed.), <em>The <span>Stanford</span> encyclopedia of philosophy</em>. Spring 2021. <a href="https://plato.stanford.edu/archives/spr2021/entries/structure-scientific-theories/" class="uri">https://plato.stanford.edu/archives/spr2021/entries/structure-scientific-theories/</a>; Metaphysics Research Lab, Stanford University.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The tacit role of the “community” in the process of accepting theories is brilliantly explored and systematised in the classic work by <span class="citation" data-cites="kuhn1962">Kuhn (<a href="#ref-kuhn1962" role="doc-biblioref">1962</a>)</span>. See <span class="citation" data-cites="bird2018">Bird (<a href="#ref-bird2018" role="doc-biblioref">2018</a>)</span> for an overview of Kuhn’s ideas.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I use <em>science</em> here in the most inclusive sense, as opposed to pseudo-science.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In future posts I would like to expand on the idea that methods become embedded within theory by focussing on statistical modelling, and on the helpful but often neglected concepts of basic (pure) and applied science and how these can further illuminate the epistemology of theory I sketched here.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

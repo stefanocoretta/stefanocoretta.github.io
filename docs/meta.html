@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Stefano Coretta - Research meta-models</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Stefano Coretta</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./meta.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Meta</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#research-methods" id="toc-research-methods" class="nav-link active" data-scroll-target="#research-methods"><span class="header-section-number">1</span> Research methods</a></li>
+  <li><a href="#phonetology" id="toc-phonetology" class="nav-link" data-scroll-target="#phonetology"><span class="header-section-number">2</span> Phonetology</a></li>
+  <li><a href="#phonetological-systems" id="toc-phonetological-systems" class="nav-link" data-scroll-target="#phonetological-systems"><span class="header-section-number">3</span> Phonetological systems</a></li>
+  <li><a href="#linguistic-systems" id="toc-linguistic-systems" class="nav-link" data-scroll-target="#linguistic-systems"><span class="header-section-number">4</span> Linguistic systems</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.1</span> References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Research meta-models</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>In the following sections, I outline some of the conceptual and methodological aspects (<span class="smallcaps">meta-models</span>) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.</p>
+<section id="research-methods" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Research methods</h1>
+<p>As far as research methods are concerned, I am an enthusiastic advocate of <strong>Open Research</strong>, a term which encompasses “concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge” <span class="citation" data-cites="cruewell2019">(<a href="#ref-cruewell2019" role="doc-biblioref">Crüwell et al. 2019</a>)</span> put to the service of “making the content and process of producing evidence and claims transparent and accessible to others” <span class="citation" data-cites="munafo2017">(<a href="#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<!-- TODO: slow science -->
+<p>I am also a supporter of the <strong>Slow Science</strong> movement, part of the broader “slow” movement (as in “slow-food”), which can be summarised with this quote from the <a href="http://slow-science.org">manifesto</a>: “We do need time to think. We do need time to digest. We do need time to misunderstand each other”.</p>
+<!-- TODO: ethics -->
+<!-- TODO: research project management -->
+<!-- TODO: methods as theory, theory = concepts + methods, theory and applications, basic science and applied science -->
+<!-- TODO: statistics -->
+<!-- TODO: philosophy of science: three books -->
+<p>Philosophy and science might seem two very unrelated fields, but in fact <strong>philosophy of science</strong> is an extremely important intersection of the two, with broad implications for research methods, from experiment planning, through statistical modelling, to inference. I’ll expand on this some time in the future, but for now I can strongly recommend the following books:</p>
+<ul>
+<li><em>Philosophy of science: Very short introduction</em> <span class="citation" data-cites="okasha2016">(<a href="#ref-okasha2016" role="doc-biblioref">Okasha 2016</a>)</span>.</li>
+<li><em>Understanding psychology as a science: An introduction to scientific and statistical inference</em> <span class="citation" data-cites="dienes2008">(<a href="#ref-dienes2008" role="doc-biblioref">Dienes 2008</a>)</span>.</li>
+<li><em>The Systems View of life: A unifying vision</em> <span class="citation" data-cites="capra2018">(<a href="#ref-capra2018" role="doc-biblioref">Capra &amp; Luisi 2018</a>)</span>.</li>
+</ul>
+</section>
+<section id="phonetology" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Phonetology</h1>
+<p>In a wish to transcend the phonetics/phonology divide <span class="citation" data-cites="soskuthy2013 ohala1990 ohala2005">(<a href="#ref-soskuthy2013" role="doc-biblioref">Sóskuthy 2013</a>; <a href="#ref-ohala1990" role="doc-biblioref">Ohala 1990</a>; <a href="#ref-ohala2005" role="doc-biblioref">Ohala 2005</a>)</span>, I refer to the set of sciences that investigate the <span class="smallcaps">visual systems</span> (signing) and <span class="smallcaps">sound systems</span> (speech sounds) of the world’s languages with the term <span class="smallcaps">phonetology</span> (from a combination of <em>phonet</em>ics and phon<em>ology</em>).</p>
+<p>Although this newly-coined term contains the Greek root <em>phon-</em> ‘sound’, its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be “discovered”, are included. The term <span class="smallcaps">phonetological system</span> can be used as an umbrella term that covers both visual and sound systems.</p>
+</section>
+<section id="phonetological-systems" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Phonetological systems</h1>
+<p>A <em>phonetological system</em> is comprised of a set of <span class="smallcaps">phonetological units</span> and their <span class="smallcaps">relationships</span>. Alas, I could not come up yet with a proper definition of “phonetological unit” that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.</p>
+<p>In my view of phonetology, a phonetological system has the following properties:</p>
+<ul>
+<li>It is a <strong>dynamic system</strong> <span class="citation" data-cites="thelen2006 vihman2014">(<a href="#ref-thelen2006" role="doc-biblioref">Thelen &amp; Smith 2006</a>; <a href="#ref-vihman2014" role="doc-biblioref">Vihman 2014</a>)</span>.</li>
+<li>It is a <strong>physio-neuro-cognitive</strong> system. It has:
+<ul>
+<li>A <strong>physical</strong> component <span class="citation" data-cites="ohala1990 ohala2005">(<a href="#ref-ohala1990" role="doc-biblioref">Ohala 1990</a>; <a href="#ref-ohala2005" role="doc-biblioref">Ohala 2005</a>)</span>.</li>
+<li>A <strong>neuro-cognitive</strong> component.
+<ul>
+<li>It is <em>rich</em> in details <span class="citation" data-cites="johnson1997 pierrehumbert2001 bybee2002">(<a href="#ref-johnson1997" role="doc-biblioref">Johnson 1997</a>; <a href="#ref-pierrehumbert2001" role="doc-biblioref">Pierrehumbert 2001</a>; <a href="#ref-bybee2002" role="doc-biblioref">Bybee 2002</a>)</span>.</li>
+<li>It is <em>self-organising</em> and <em>emergent</em> <span class="citation" data-cites="wedel2007 wedel2011">(<a href="#ref-wedel2007" role="doc-biblioref">Wedel 2007</a>; <a href="#ref-wedel2011" role="doc-biblioref">Wedel 2011</a>)</span>.</li>
+<li>It uses both <em>stored exemplars and stored abstractions</em> at multiple levels <span class="citation" data-cites="ambridge2020">(<a href="#ref-ambridge2020" role="doc-biblioref">Ambridge 2020</a>)</span>.</li>
+</ul></li>
+</ul></li>
+<li>It is part of a complex <strong>socio-cultural system</strong> <span class="citation" data-cites="boer2015 foulkes2006 thompson2016">(<a href="#ref-boer2015" role="doc-biblioref">Boer 2015</a>; <a href="#ref-foulkes2006" role="doc-biblioref">Foulkes &amp; Docherty 2006</a>; <a href="#ref-thompson2016" role="doc-biblioref">Thompson, Kirby &amp; Smith 2016</a>)</span>.</li>
+</ul>
+<p>I also consider these statements to be extendible more generally to linguisticality <span class="citation" data-cites="haspelmath2020">(<a href="#ref-haspelmath2020" role="doc-biblioref">Haspelmath 2020</a>)</span> as a holistic system.</p>
+</section>
+<section id="linguistic-systems" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Linguistic systems</h1>
+<p>In light of the brilliant ideas expounded in <span class="citation" data-cites="cysouw2013">Cysouw &amp; Good (<a href="#ref-cysouw2013" role="doc-biblioref">2013</a>)</span> and <span class="citation" data-cites="rooy2021">Rooy (<a href="#ref-rooy2021" role="doc-biblioref">2021</a>)</span>, I believe linguistics would benefit from a formalised notion of <span class="smallcaps">linguistic system</span> that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.</p>
+<p><span class="citation" data-cites="cysouw2013">Cysouw &amp; Good (<a href="#ref-cysouw2013" role="doc-biblioref">2013</a>)</span> propose a meta-model based on linguistic documentation and description. From this model, I borrow two concepts:</p>
+<ul>
+<li><p><strong>Glossonym</strong> (p.&nbsp;339)</p>
+<p>A <span class="smallcaps">glossonym</span> is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym <em>Altaic</em>, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.</p></li>
+<li><p><strong>Doculect</strong> (p 342)</p>
+<p>A <span class="smallcaps">doculect</span> (i.e.&nbsp;documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is the pairing of a glossonym and a resource. An example: [<span class="citation" data-cites="howard1986">Howard (<a href="#ref-howard1986" role="doc-biblioref">1986</a>)</span>; <em>mawayana</em>].</p></li>
+</ul>
+<p><span class="citation" data-cites="cysouw2013">Cysouw &amp; Good (<a href="#ref-cysouw2013" role="doc-biblioref">2013: 347</a>)</span> also introduce the concept of “languoid” which refers to “any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family”.</p>
+<p>I propose instead the term <span class="smallcaps">glossolect</span>, which—unlike languoid—does not necessarily entail a strictly-nested hierarchical structure. This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.</p>
+<p>A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.</p>
+<p>In terms of types of linguistic variation, I borrow from classical sociolinguistics (references TBA):</p>
+<ul>
+<li><strong>Diachronic</strong>: variation in <em>time</em>.</li>
+<li><strong>Diatopic</strong>: variation in <em>geographical space</em> (less frequently used is <strong>diachoric</strong> for more restricted spatial variation).</li>
+<li><strong>Diastratic</strong>: variation based on <em>social class and groups</em>.</li>
+<li><strong>Diaphasic</strong>: variation based on <em>linguistic and social context</em> (includes <em>registers</em> and <em>slangs</em>).</li>
+<li><strong>Diamesic</strong>: variation based on the <em>means of communication</em> (e.g., visual/oral vs written, web vs print, etc.).</li>
+</ul>
+<p>In sum:</p>
+<ul>
+<li>A <strong>glossolect</strong> is a set of <em>doculects</em>.</li>
+<li>A <strong>doculect</strong> is a pairing of a <em>glossonym</em> and a <em>resource</em>.</li>
+<li>A <strong>glossonym</strong> is a name used to refer to a linguistic entity.</li>
+<li>A <strong>resource</strong> is any object (publication, media, etc.) containing linguistic materials.</li>
+<li>Glossolects can be situated within a specific <strong>diachronic, diatopic, diastratic, diaphasic, diamesic</strong> context.</li>
+</ul>
+<section id="references" class="level2" data-number="4.1">
+
+
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">4.1 References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ambridge2020" class="csl-entry" role="listitem">
+Ambridge, Ben. 2020. Abstractions made of exemplars or <span>“<span>Y</span>ou’re all right, and i’ve changed my mind”</span>: <span>R</span>esponse to commentators. <em>First Language</em> 40(5-6). 640–659.
+</div>
+<div id="ref-boer2015" class="csl-entry" role="listitem">
+Boer, Bart de. 2015. Biology, culture, evolution and the cognitive nature of sound systems. <em>Journal of Phonetics</em> 53. 79–87. <a href="https://doi.org/10.1016/j.wocn.2015.07.001">https://doi.org/10.1016/j.wocn.2015.07.001</a>.
+</div>
+<div id="ref-bybee2002" class="csl-entry" role="listitem">
+Bybee, Joan. 2002. Phonological evidence for exemplar storage of multiword sequences. <em>Studies in Second Language Acquisition</em> 24(2). 215–221. <a href="https://doi.org/10.1017/S0272263102002061">https://doi.org/10.1017/S0272263102002061</a>.
+</div>
+<div id="ref-capra2018" class="csl-entry" role="listitem">
+Capra, Fritjof &amp; Pier Luigi Luisi. 2018. <em>The <span>S</span>ystems <span>V</span>iew of life: <span>A</span> unifying vision</em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-cruewell2019" class="csl-entry" role="listitem">
+Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew C. Makel, Hannah Moshontz, Jesse Niebaum, Amy Orben, Sam Parsons &amp; Michael Schulte-Mecklenbeck. 2019. Seven easy steps to open science: An annotated reading list. <em>Zeitschrift für Psychologie</em> 227(4). 237–248. <a href="https://doi.org/10.1027/2151-2604/a000387">https://doi.org/10.1027/2151-2604/a000387</a>.
+</div>
+<div id="ref-cysouw2013" class="csl-entry" role="listitem">
+Cysouw, Michael &amp; Jeff Good. 2013. Languoid, doculect, and glossonym: Formalizing the notion <span>“language.”</span> <em>Language Documentation &amp; Conservation</em> 7. 331–359. <a href="http://hdl.handle.net/10125/4606">http://hdl.handle.net/10125/4606</a>.
+</div>
+<div id="ref-dienes2008" class="csl-entry" role="listitem">
+Dienes, Zoltan. 2008. <em>Understanding psychology as a science: An introduction to scientific and statistical inference</em>. Macmillan International Higher Education.
+</div>
+<div id="ref-foulkes2006" class="csl-entry" role="listitem">
+Foulkes, Paul &amp; Gerard Docherty. 2006. The social life of phonetics and phonology. <em>Journal of Phonetics</em>. Elsevier 34(4). 409–438. <a href="https://doi.org/10.1016/j.wocn.2005.08.002">https://doi.org/10.1016/j.wocn.2005.08.002</a>.
+</div>
+<div id="ref-haspelmath2020" class="csl-entry" role="listitem">
+Haspelmath, Martin. 2020. Human linguisticality and the building blocks of languages. <em>Frontiers in Psychology</em> 10. 3056. <a href="https://doi.org/10.3389/fpsyg.2019.03056">https://doi.org/10.3389/fpsyg.2019.03056</a>.
+</div>
+<div id="ref-howard1986" class="csl-entry" role="listitem">
+Howard, C. V. 1986. <em><span>M</span>awayana: Formulário dos vocabulários padrões</em>. Rio de Janeiro: Museu Nacional. Ms.
+</div>
+<div id="ref-johnson1997" class="csl-entry" role="listitem">
+Johnson, Keith. 1997. Speech perception without speaker normalization: An exemplar model. In Keith Johnson &amp; John W. Mullenix (eds.), <em>Talker variability in speech processing</em>, 145–165. San Diego, CA: Academic Press.
+</div>
+<div id="ref-munafo2017" class="csl-entry" role="listitem">
+Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware &amp; John P. A. Ioannidis. 2017. A manifesto for reproducible science. <em>Nature Human Behaviour</em>. Nature Publishing Group 1(1). 21.
+</div>
+<div id="ref-ohala1990" class="csl-entry" role="listitem">
+Ohala, John J. 1990. There is no interface between phonology and phonetics: A personal view. <em>Journal of Phonetics</em> 18(2). 153–172. <a href="https://doi.org/10.1016/S0095-4470(19)30399-7">https://doi.org/10.1016/S0095-4470(19)30399-7</a>.
+</div>
+<div id="ref-ohala2005" class="csl-entry" role="listitem">
+Ohala, John J. 2005. The marriage of phonetics and phonology. <em>Acoustical science and technology</em> 26(5). 418–422. <a href="https://doi.org/10.1250/ast.26.418">https://doi.org/10.1250/ast.26.418</a>.
+</div>
+<div id="ref-okasha2016" class="csl-entry" role="listitem">
+Okasha, Samir. 2016. <em>Philosophy of science: Very short introduction</em>. Oxford: Oxford University Press.
+</div>
+<div id="ref-pierrehumbert2001" class="csl-entry" role="listitem">
+Pierrehumbert, Janet B. 2001. Exemplar dynamics: Word frequency, lenition and contrast. In Joan L. Bybee &amp; Paul J. Hopper (eds.), <em>Frequency and the emergence of linguistic structure</em>, 137–157. Amsterdam Philadelphia: John Benjamins Publishing Company. <a href="https://doi.org/10.1075/tsl.45.08pie">https://doi.org/10.1075/tsl.45.08pie</a>.
+</div>
+<div id="ref-rooy2021" class="csl-entry" role="listitem">
+Rooy, Raf van. 2021. <em>Language or dialect? <span>T</span>he history of a conceptual pair</em>. Oxford: Oxford University Press.
+</div>
+<div id="ref-soskuthy2013" class="csl-entry" role="listitem">
+Sóskuthy, Márton. 2013. <em>Phonetic biases and systemic effects in the actuation of sound change</em>. Edinburgh: University of Edinburgh PhD thesis.
+</div>
+<div id="ref-thelen2006" class="csl-entry" role="listitem">
+Thelen, Esther &amp; Linda B. Smith. 2006. Dynamic systems theories. In Richard M. Lerner (ed.), <em>Handbook of child psychology</em>, 258–312. Wiley &amp; Soons. <a href="https://doi.org/10.1002/9780470147658.chpsy0106">https://doi.org/10.1002/9780470147658.chpsy0106</a>.
+</div>
+<div id="ref-thompson2016" class="csl-entry" role="listitem">
+Thompson, Bill, Simon Kirby &amp; Kenny Smith. 2016. Culture shapes the evolution of cognition. <em>Proceedings of the National Academy of Sciences</em> 113(16). 4530–4535. <a href="https://doi.org/10.1073/pnas.1523631113">https://doi.org/10.1073/pnas.1523631113</a>.
+</div>
+<div id="ref-vihman2014" class="csl-entry" role="listitem">
+Vihman, Marilyn May. 2014. <em>Phonological development: The first two years</em>. Oxford: Wiley-Blackwell.
+</div>
+<div id="ref-wedel2007" class="csl-entry" role="listitem">
+Wedel, Andrew B. 2007. Feedback and regularity in the lexicon. <em>Phonology</em> 24(1). 147–185. <a href="https://doi.org/10.1017/S0952675707001145">https://doi.org/10.1017/S0952675707001145</a>.
+</div>
+<div id="ref-wedel2011" class="csl-entry" role="listitem">
+Wedel, Andrew B. 2011. Self-organization in phonology. In Ewen C. J. Hume E. van Oostendorp Marc &amp; Keren Rice (eds.), <em>The blackwell companion to phonology</em>, vol. 1, 130–147. Blackwell, Oxford. <a href="https://doi.org/10.1002/9781444335262.wbctp0006">https://doi.org/10.1002/9781444335262.wbctp0006</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><em>Open Research</em> is a more inclusive term than the more common <em>Open Science</em> term.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,63 @@
+---
+title: R gist — Plotting the area under the curve with ggplot
+author: Stefano Coretta
+date: '2021-07-04'
+
+categories:
+  - Methods
+tags:
+  - data viz
+  - ggplot2
+  - rstats
+---
+
+```{r setup, echo=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggthemr)
+ggthemr("earth")
+```
+
+```{r prep-data}
+x <- 1:11
+y <- (1.5:11.5)^2
+low <- (0:10)^2
+upp <- (3:13)^2
+```
+
+```{r ribbon}
+ggplot() +
+  aes(x, y) +
+  geom_line() +
+  geom_ribbon(aes(ymin = low, ymax = upp), alpha = 0.5)
+```
+
+```{r }
+x2 <- c(1:8, NA, NA, NA)
+ggplot() +
+  aes(x, y) +
+  geom_line() +
+  geom_ribbon(aes(x = x2, ymin = low, ymax = upp), alpha = 0.5)
+```
+
+```{r gaussian}
+x <- seq(-4, 4, by = 0.05)
+y <- dnorm(x)
+```
+
+```{r density}
+p <- ggplot() +
+  aes(x, y) +
+  geom_line()
+p
+```
+
+```{r density-area}
+p +
+  geom_ribbon(
+    aes(x = ifelse(x <= -1 , x, NA), ymin = 0, ymax = y),
+    fill = "#E84646",
+    alpha = 0.4
+  )
+```
+

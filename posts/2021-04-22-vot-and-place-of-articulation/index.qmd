@@ -1,0 +1,57 @@
+---
+title: R gist — VOT and place of articulation
+author: Stefano Coretta
+date: '2021-04-22'
+
+categories:
+  - Linguistics
+  - Gist
+tags:
+  - phonetics
+  - phonology
+  - voice onset time
+  - VOT
+  - place of articulation
+  - 3D
+  - scatter plot
+---
+
+```{r setup, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = here::here())
+library(tidyverse)
+library(plotly)
+```
+
+## Read data
+
+```{r vot}
+vot <- read_csv("./data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv") %>%
+  group_by(vot.category) %>%
+  mutate(vot.mu_z = scale(vot.mu)) %>%
+  ungroup() %>%
+  pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %>%
+  mutate(vot_category = recode(vot.category, long.lag = "long lag", short.lag = "short lag"))
+```
+
+## Mean VOT
+
+```{r plot}
+vot %>%
+  plot_ly(
+    x = ~vot.mu_labial, y = ~vot.mu_coronal, z = ~vot.mu_dorsal, color = ~vot_category, text = ~language,
+    marker = list(size = 5, opacity = 0.7),
+    hovertemplate = paste("<b>%{text}</b>", "<br>Labial: %{x:.1r}", "<br>Coronal: %{y:.1r}", "<br>Dorsal: %{z:.1r}")
+  )
+```
+
+## Mean VOT (z-scores)
+
+```{r plot-z}
+vot %>%
+  plot_ly(
+    x = ~vot.mu_z_labial, y = ~vot.mu_z_coronal, z = ~vot.mu_z_dorsal, color = ~vot_category, text = ~language,
+    marker = list(size = 5, opacity = 0.7),
+    hovertemplate = paste("<b>%{text}</b>", "<br>Labial: %{x:.1r}", "<br>Coronal: %{y:.1r}", "<br>Dorsal: %{z:.1r}")
+  )
+```

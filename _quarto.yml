@@ -27,7 +27,7 @@ website:
 
 format:
   html:
-    theme: [cosmo, custom.scss]
+    theme: [flatly, custom.scss]
     css: styles.css
     toc: true
 

@@ -3,6 +3,8 @@ title: "Stefano Coretta"
 subtitle: |
   [ˈsteˑfano koˈrɛtta]
 
+  **University of Edinburgh**
+
   <s.coretta@ed.ac.uk>
 image: img/avatar.png
 about:
@@ -18,6 +20,8 @@ about:
       href: https://orcid.org/0000-0001-9627-5532
 ---
 
+::: {style="font-size: 0.85rem"}
+
 I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, Tenured**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK).
 As part of my duties, I coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
 
@@ -29,3 +33,33 @@ You can find a list of research outputs (papers, software, etc) in [Output](outp
 
 I received my PhD degree in linguistics from the University of Manchester (UK) in 2020.
 I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
+
+:::
+
+::: {style="font-size: 0.7rem"}
+::: {.grid}
+
+::: {.g-col-6}
+#### Interests
+
+- Phonetology (i.e. Phonetics and Phonology)
+- Research Methods and Statistics
+- Language description
+- Typology and Diachronic linguistics
+- Graphemics
+:::
+
+::: {.g-col-6}
+#### Education
+- PhD in Linguistics, 2020
+  University of Manchester, UK
+- MA in Phonetics and Phonology, 2016
+  University of York, UK
+- MA in Theoretical and Applied Linguistics, 2013
+  University of Pavia, Italy
+- BA in Classics with Oriental Studies, 2011
+  University of Milan, Italy
+:::
+
+:::
+:::

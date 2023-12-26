@@ -1,0 +1,33 @@
+---
+- title: "tidygam: Tidy Prediction and Plotting of Generalised Additive Models"
+  year: 2023
+  author: "Stefano Coretta"
+  version: "R package v0.2.0"
+  url: "https://stefanocoretta.github.io/tidygam/"
+  github: "https://github.com/stefanocoretta/tidygam"
+- title: "rticulate: Ultrasound Tongue Imaging in R"
+  year: 2022
+  author: "Stefano Coretta"
+  version: "R package v1.7.3"
+  url: "https://stefanocoretta.github.io/rticulate/"
+  github: "https://github.com/stefanocoretta/rticulate"
+  doi: "10.5281/zenodo.1469038"
+- title: "speakr: A Wrapper for the Phonetic Software Praat"
+  year: 2022
+  author: "Stefano Coretta"
+  version: "R package v3.2.1"
+  url: "https://stefanocoretta.github.io/speakr/"
+  github: "https://github.com/stefanocoretta/speakr"
+  doi: "10.5281/zenodo.4014768"
+- title: "SFM exporter (Toolbox/FLEx SIL)"
+  year: 2017
+  author: "Stefano Coretta"
+  version: "Shiny App v2.2.0"
+  url: "https://stefanocoretta.shinyapps.io/sfm-exporter/"
+  github: "https://github.com/stefanocoretta/sfm-exporter"
+- title: "phonrule: TeX package for typesetting phonological rules in SPE style"
+  year: 2017
+  author: "Stefano Coretta"
+  version: "LaTeX package v1.4.0"
+  url: "https://ctan.org/pkg/phonrule?lang=en"
+  github: "https://github.com/stefanocoretta/phonrule"

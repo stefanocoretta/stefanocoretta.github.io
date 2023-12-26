@@ -1,12 +1,40 @@
 ---
+title: "Research output"
 listing:
   - id: papers
     contents:
       - papers.yml
+    template: ../html/ejs/pubs.ejs
+  - id: data
+    contents:
+      - data.yml
+    template: ../html/ejs/pubs.ejs
+  - id: software
+    contents:
+      - software.yml
+    template: ../html/ejs/pubs.ejs
+  - id: invited
+    contents:
+      - invited.yml
     template: ../html/ejs/pubs.ejs
 ---
 
 ## Papers
 
 ::: {#papers}
+:::
+
+## Data
+
+::: {#data}
+:::
+
+## Software
+
+::: {#software}
+:::
+
+## Invited talks
+
+::: {#invited}
 :::

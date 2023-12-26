@@ -3,7 +3,7 @@
   <tbody>
   <% for (const item of items) { %>
     <tr>
-      <td><%= item.year %></td>
+      <td style="vertical-align: middle;"><%= item.year %></td>
       <td>
       <% if (item.open) { %>
         {{< iconify academicons open-access-square >}}
@@ -12,12 +12,20 @@
         {{< osi rr >}}
       <% } %>
       <b><%- item.title %></b><br>
+      <% if (item.author) { %>
         {{< iconify fa6-solid user size="footnotesize" >}} <%- item.author %><br>
+      <% } %>
       <% if (item.institution) { %>
         {{< iconify fa6-solid university size="footnotesize" >}} <%- item.institution %><br>
       <% } %>
       <% if (item.journal) { %>
         {{< iconify fa6-solid book-open size="footnotesize" >}} <em><%- item.journal %></em> <%- item.info %><br>
+      <% } %>
+      <% if (item.version) { %>
+        <em><%- item.version %></em><br>
+      <% } %>
+      <% if (item.location) { %>
+        <%- item.location %><br>
       <% } %>
       <% if (item.doi) { %>
         <a class="osi" href="https://www.doi.org/<%- item.doi %>"><img class="doi" src="https://img.shields.io/badge/doi-<%- item.doi %>-850000.svg"></a><br>
@@ -38,10 +46,13 @@
         <a class="osi" href="<%- item.registration %>" target="_blank">{{< osi prereg >}}</a>
       <% } %>
       <% if (item.url) { %>
-        <a class="osi" href="<%- item.url %>" target="_blank">{{< iconify fa6-solid globe >}}</a>
+        <a class="osi" href="<%- item.url %>" target="_blank">{{< iconify fa6-solid up-right-from-square >}}</a>
       <% } %>
       <% if (item.download) { %>
         <a class="osi" href="<%- item.download %>" target="_blank">{{< iconify fa6-solid cloud-arrow-down >}}</a>
+      <% } %>
+      <% if (item.github) { %>
+        <a class="osi" href="<%- item.github %>" target="_blank">{{< iconify fa6-brands square-github >}}</a>
       <% } %>
       <% if (item.compendium) { %>
         <a class="osi" href="<%- item.compendium %>" target="_blank">{{< osi compendium >}}</a>

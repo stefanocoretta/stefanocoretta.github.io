@@ -8,13 +8,10 @@ about:
   image-shape: round
   links:
     - icon: github
-      text: Github
       href: https://github.com/stefanocoretta
-    - icon: "{{< iconify academicons osf-square >}}"
-      text: OSF
+    - text: "{{< iconify academicons osf-square >}}"
       href: https://osf.io/e84dv/
-    - icon: "{{< iconify academicons orcid >}}"
-      text: ORCID
+    - text: "{{< iconify academicons orcid >}}"
       href: https://orcid.org/0000-0001-9627-5532
 ---
 

@@ -16,6 +16,8 @@ website:
         text: Teaching
       - href: meta.qmd
         text: Meta
+      - href: output/index.qmd
+        text: Output
       - href: blog.qmd
         text: Blog
 

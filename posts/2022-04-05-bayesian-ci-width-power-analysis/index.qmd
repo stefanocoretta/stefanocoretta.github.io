@@ -2,8 +2,7 @@
 title: Bayesian CrI-width power analysis
 author: Stefano Coretta
 date: '2022-04-05'
-categories: []
-tags: []
+categories: ["Linear models", "Bayesian", "brms"]
 ---
 
 

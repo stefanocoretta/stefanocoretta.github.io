@@ -22,7 +22,7 @@ I am available as instructor for a range of [Workshops](teaching.qmd#workshops) 
 
 My past and current research covers different areas of *linguistics*, with a focus on <span style="font-variant: small-caps;">[phonetology](meta.qmd#phonetology)</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056))---and <span style="font-variant: small-caps;">[research methods](meta.qmd#research-methods)</span> including statistics and Open Science practices.
 For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages.
-You can find a list of research outputs (papers, software, etc) in [Output](output.qmd).
+You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).
 
 I received my PhD degree in linguistics from the University of Manchester (UK) in 2020.
 I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.

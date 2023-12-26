@@ -27,5 +27,9 @@
       "/posts/2015-08-04-dialects-italy/index.html",
       "/posts/2021-01-09-short-review/index.html"
     ]
+  },
+  {
+    "listing": "/output/index.html",
+    "items": []
   }
 ]

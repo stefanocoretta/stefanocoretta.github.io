@@ -1,0 +1,12 @@
+---
+listing:
+  - id: papers
+    contents:
+      - papers.yml
+    template: ../html/ejs/pubs.ejs
+---
+
+## Papers
+
+::: {#papers}
+:::

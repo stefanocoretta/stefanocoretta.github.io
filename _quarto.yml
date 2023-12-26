@@ -4,6 +4,8 @@ project:
   output-dir: docs
   resources:
     - img
+    - files
+    - data
 
 website:
   title: "Stefano Coretta"
@@ -20,10 +22,12 @@ website:
         text: Output
       - href: blog.qmd
         text: Blog
+      - href: files/CorettaCV.pdf
+        text: CV
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     css: styles.css
     toc: true
 

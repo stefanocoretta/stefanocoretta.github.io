@@ -1,6 +1,9 @@
 ---
 title: "Stefano Coretta"
-subtitle: "[ˈsteˑfano koˈrɛtta]"
+subtitle: |
+  [ˈsteˑfano koˈrɛtta]
+
+  <s.coretta@ed.ac.uk>
 image: img/avatar.png
 about:
   template: trestles

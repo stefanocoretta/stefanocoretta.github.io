@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stefano Coretta – index</title>
+<title>Stefano Coretta - Research output</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -91,6 +91,90 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-data .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-doi','listing-year','listing-url',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-doi","listing-year","listing-url"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-data'] = new List('listing-data', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-software .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-year','listing-author','listing-version','listing-url','listing-github','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-year","listing-author","listing-version","listing-url","listing-github","listing-doi"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-software'] = new List('listing-software', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-invited .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-year','listing-location','listing-download',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-year","listing-location","listing-download"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-invited'] = new List('listing-invited', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -140,6 +224,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../files/CorettaCV.pdf" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -157,13 +245,31 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#papers" id="toc-papers" class="nav-link active" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  <li><a href="#invited-talks" id="toc-invited-talks" class="nav-link" data-scroll-target="#invited-talks">Invited talks</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Research output</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
 
 <section id="papers" class="level2">
 <h2 class="anchored" data-anchor-id="papers">Papers</h2>
@@ -173,7 +279,23 @@ ul.task-list li input[type="checkbox"] {
 
 <tbody>
 <tr>
+<td style="vertical-align: middle;">
+submitted
+</td>
 <td>
+<b>Intrinsic vowel duration in Northwestern Italian: Bio-mechanical or more?</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>The Journal of the Acoustical Society of America</em> <br> <a class="osi" href="10.31219/osf.io/83afz" target="_blank"><i class="osi osi-submitted"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+submitted
+</td>
+<td>
+<b>A tutorial on Generalised Additive Mixed Effects Models for bilingualism research</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas<br> <a class="osi" href="10.31219/osf.io/8grj5" target="_blank"><i class="osi osi-submitted"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
 submitted
 </td>
 <td>
@@ -181,7 +303,7 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 submitted
 </td>
 <td>
@@ -189,7 +311,7 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2023
 </td>
 <td>
@@ -197,7 +319,7 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2023
 </td>
 <td>
@@ -205,14 +327,14 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 </td>
 <td>
 <iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Northern Tosk Albanian (IPA Illustration)</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the International Phonetic Association</em> 1–23<br> <a class="osi" href="https://www.doi.org/10.1017/S0025100322000044"><img class="doi" src="https://img.shields.io/badge/doi-10.1017/S0025100322000044-850000.svg"></a><br> <a class="osi" href="https://osf.io/mb2hg/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1017/S0025100322000044" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/vry3h/" target="_blank"><i class="osi osi-compendium"></i></a>
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2021
 </td>
 <td>
@@ -220,7 +342,7 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2021
 </td>
 <td>
@@ -228,7 +350,7 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2020
 </td>
 <td>
@@ -236,7 +358,7 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2020
 </td>
 <td>
@@ -244,11 +366,192 @@ submitted
 </td>
 </tr>
 <tr>
-<td>
+<td style="vertical-align: middle;">
 2020
 </td>
 <td>
 <iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Glossa: a journal of general linguistics</em> 4(1) 125, 1–25<br> <a class="osi" href="https://www.doi.org/10.5334/gjgl.869"><img class="doi" src="https://img.shields.io/badge/doi-10.5334/gjgl.869-850000.svg"></a><br> <a class="osi" href="http://doi.org/10.5334/gjgl.869" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/quy7k/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<div id="listing-data" class="quarto-listing quarto-listing-container-custom">
+
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<b>Many Speech Analyses</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas, Timo B. Roettger<br> <a class="osi" href="https://www.doi.org/10.17605/OSF.IO/3BMCP"><img class="doi" src="https://img.shields.io/badge/doi-10.17605/OSF.IO/3BMCP-850000.svg"></a><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>IPA Illustration of Northern Tosk Albanian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br> <a class="osi" href="https://www.doi.org/10.17605/OSF.IO/VRY3H"><img class="doi" src="https://img.shields.io/badge/doi-10.17605/OSF.IO/VRY3H-850000.svg"></a><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>Distance vs.&nbsp;time. Articulatory and acoustic consequences of reduced vowel duration in Polish [Research Compendium]</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Patrycja Strycharczuk, Małgorzata Ćavar, Stefano Coretta<br> <a class="osi" href="https://www.doi.org/10.17605/OSF.IO/HY7NT"><img class="doi" src="https://img.shields.io/badge/doi-10.17605/OSF.IO/HY7NT-850000.svg"></a><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<b>Vowel duration and consonant voicing: A production study</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <a class="osi" href="https://www.doi.org/10.17605/OSF.IO/W92ME"><img class="doi" src="https://img.shields.io/badge/doi-10.17605/OSF.IO/W92ME-850000.svg"></a><br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<b>A Cross-Cultural Analysis of Early Prelinguistic Gesture Development and Its Relationship to Language Development [Research Compendium]</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta&gt;, Ludovica Serratrice, Elena Lieven<br> <a class="osi" href="https://github.com/stefanocoretta/infant-gestures" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2019
+</td>
+<td>
+<b>Vowel duration and aspiration effects in Icelandic</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <a class="osi" href="https://www.doi.org/10.17605/OSF.IO/6AU2K"><img class="doi" src="https://img.shields.io/badge/doi-10.17605/OSF.IO/6AU2K-850000.svg"></a><br>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<div id="listing-software" class="quarto-listing quarto-listing-container-custom">
+
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<b>tidygam: Tidy Prediction and Plotting of Generalised Additive Models</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v0.2.0</em><br> <a class="osi" href="https://stefanocoretta.github.io/tidygam/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/tidygam" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2022
+</td>
+<td>
+<b>rticulate: Ultrasound Tongue Imaging in R</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v1.7.3</em><br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.1469038"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.1469038-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/rticulate/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/rticulate" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2022
+</td>
+<td>
+<b>speakr: A Wrapper for the Phonetic Software Praat</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v3.2.1</em><br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.4014768"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.4014768-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/speakr/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/speakr" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2017
+</td>
+<td>
+<b>SFM exporter (Toolbox/FLEx SIL)</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>Shiny App v2.2.0</em><br> <a class="osi" href="https://stefanocoretta.shinyapps.io/sfm-exporter/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/sfm-exporter" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2017
+</td>
+<td>
+<b>phonrule: TeX package for typesetting phonological rules in SPE style</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>LaTeX package v1.4.0</em><br> <a class="osi" href="https://ctan.org/pkg/phonrule?lang=en" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/phonrule" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="invited-talks" class="level2">
+<h2 class="anchored" data-anchor-id="invited-talks">Invited talks</h2>
+<div id="listing-invited" class="quarto-listing quarto-listing-container-custom">
+
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<b>Rethinking the IPA vowel quadrilateral</b><br> Department of Linguistics and Scandinavian Studies seminar, 26 May, University of Oslo, Norway.<br> <a class="osi" href="https://stefanocoretta.github.io/2023-ipavows/#1" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2022
+</td>
+<td>
+<b>Today's coarticulation is tomorrow's sound change: Insights from dynamic articulatory data</b><br> Understanding Sound Change, 27 January, Donostia-San Sebastián, Spain.<br> <a class="osi" href="https://stefanocoretta.github.io/2022-ocp/" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>The more we learn the less we know: (Un)resolved questions on the voicing effect</b><br> University of Potsdam, 28 July, Germany.<br> <a class="osi" href="https://stefanocoretta.github.io/2021-potsdam/" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change</b><br> University of Lancaster, 25 May, UK.<br> <a class="osi" href="https://stefanocoretta.github.io/2021-lancaster" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>Vowel duration differences before voiceless and voiced stops as compensatory temporal adjustment</b><br> Indiana University Bloomington, 16 October, USA.<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography</b><br> Aarhus University, 18 September, Denmark.<br>
 </td>
 </tr>
 </tbody>

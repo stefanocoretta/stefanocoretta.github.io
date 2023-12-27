@@ -175,6 +175,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-talks .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-year','listing-location','listing-download','listing-compendium','listing-abstract','listing-author','listing-video','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-year","listing-location","listing-download","listing-compendium","listing-abstract","listing-author","listing-video","listing-doi"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -248,6 +276,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   <li><a href="#invited-talks" id="toc-invited-talks" class="nav-link" data-scroll-target="#invited-talks">Invited talks</a></li>
+  <li><a href="#talks-and-posters" id="toc-talks-and-posters" class="nav-link" data-scroll-target="#talks-and-posters">Talks and posters</a></li>
   </ul>
 </nav>
     </div>
@@ -552,6 +581,189 @@ No matching items
 </td>
 <td>
 <b>Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography</b><br> Aarhus University, 18 September, Denmark.<br>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="talks-and-posters" class="level2">
+<h2 class="anchored" data-anchor-id="talks-and-posters">Talks and posters</h2>
+<div id="listing-talks" class="quarto-listing quarto-listing-container-custom">
+
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<b>Speech physiology or more? Vowel duration and tongue height in Northwestern Italian</b><br> Poster presented at the 6th Edinburgh Symposium in Historical Phonology, 5 Dec, University of Edinburgh<br> <a class="osi" href="../files/pubs/2023-eshp.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="../files/pubs/2023-eshp-abstract.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:file-lines"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/vow-height" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2022
+</td>
+<td>
+<b>Data Version Control for Researchers</b><br> Talk given at the Edinburgh Open Research Conference, 27 May, University of Edinburgh<br> <a class="osi" href="https://stefanocoretta.github.io/dvc-res/" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/dvc-res" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2022
+</td>
+<td>
+<b>Research management in "many analysts" projects: Lessons from the Many Speech Analyses project</b><br> Poster presented at the Edinburgh Open Research Conference, 27 May, University of Edinburgh<br> <a class="osi" href="../files/pubs/2022-eorc-poster.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2022
+</td>
+<td>
+<b>How significance testing might be limiting phonetic research and what to replace it with</b><br> Talk presented at the 2022 BAAP Colloquium, 8 April, York (UK, online)<br> <a class="osi" href="../files/pubs/2022-baap.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>On the acoustics and articulation of the affricates of Northern Tosk Albanian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta<br> Talk presented at the 2021 Annual Meeting of the LAGB, Belfast (online, UK)<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>Towards a description of the rhotic sounds of Northern Tosk Albanian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta<br> Talk presented at the 7th edition of R-atics, Lausanne (online, Switzerland)<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<b>Two mechanisms for vowel reduction in Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Patrycja Strycharczuk, Małgorzata Ćavar, and Stefano Coretta<br> Talk presented at LabPhon17, 8 July, Vancouver (Canada, online)<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<b>Meta-analytical estimates of the effect of voicing on vowel duration in English are biased</b><br> Poster presented at LabPhon17, 8 July, Vancouver (Canada, online)<br> <a class="osi" href="https://github.com/stefanocoretta/2020-labphon/blob/master/analysis/log-normal.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/2020-labphon" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<b>Control of larynx height in vowel production revisited: A real-time MRI study</b><br> Talk presented at the 12th International Seminar on Speech Production, 17 December (online)<br> <a class="osi" href="https://issp2020.yale.edu/S08/hoole_08_03_033_poster.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://youtu.be/0Zl14Ct_BOI" target="_blank"><iconify-icon inline="" icon="fa6-solid:video"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2019
+</td>
+<td>
+<b>A cross-cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Thea Cameron-Faulkner, Circle Steele, Nividita Malik, Stefano Coretta, Ludovica Serretrice, and Elena Lieven<br> Talk presented at the 5th International Language and Communicative Development Conference, 12 June, Manchester (UK).<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2019
+</td>
+<td>
+<b>Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish</b><br> Talk presented at LAGB 2019<br> <a class="osi" href="../files/pubs/2019-LAGB.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Coretta, Stefano and Massimiliano Canzi<br> Talk presented at LAGB 2018, 11-14 September, University of Sheffield, UK<br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.1415402"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.1415402-850000.svg"></a><br> <a class="osi" href="https://github.com/stefanocoretta/2018-lagb/raw/master/presentation.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/2018-lagb" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>Quantifying vocal fold activity: two new methods for analysing electroglottographic data</b><br> Talk presented at New Developments in Speech Sensing and Imaging, 23 June, University of Lisbon, Portugal<br> <a class="osi" href="../files/pubs/2018-labphon-satellite.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://osf.io/zvcgb/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>Longer vowel duration correlates with tongue root advancement in Italian and Polish: An ultrasound study</b><br> Talk presented at LabPhon16, 22 June, University of Lisbon, Portugal<br> <a class="osi" href="../files/pubs/2018-labphon.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/2018-labphon" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>Processing EGG data: New methods for a multidimensional time-series assessment of vocal fold activity</b><br> Talk presented at mFiL 2018, 26 Apr, The University of Manchester, UK<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2018
+</td>
+<td>
+<b>Tongue root advancement and vowel duration: A gradient effect?</b><br> Talk presented at the 2018 BAAP Colloquium, 13 Apr, University of Kent, UK<br> <a class="osi" href="../files/pubs/2018-baap.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/2018-baap" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2017
+</td>
+<td>
+<b>Vowel duration and tongue root advancement in Italian and Polish</b><br> Talk presented at Ultrafest VIII, 4 Oct, University of Potsdam, Germany<br> <a class="osi" href="../files/pubs/2017-ultrafest.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/2017-ultrafest" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2017
+</td>
+<td>
+<b>A streamlined workflow for "doing phonetics by computer" (using Praat and R)</b><br> Talk presented at the Postgraduate Academic Research in Linguistics at York (PARLAY), 15 Sep, University of York, UK<br> <a class="osi" href="../files/pubs/2017-parlay.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/speakr-demo" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2017
+</td>
+<td>
+<b>Towards an articulatory based typology of laryngeal effects on vowel duration</b><br> Poster presented at the 25th Manchester Phonology Meeting (25mfm), 25–27 May, University of Manchester<br> <a class="osi" href="../files/pubs/2017-mfm.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/ma-thesis-york" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2017
+</td>
+<td>
+<b>Implementing reproducibility in phonetic research: a computational workflow</b><br> Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28–29 April, University of Manchester<br> <a class="osi" href="../files/pubs/2017-mfil.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/reproducible-phonetics" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2015
+</td>
+<td>
+<b>A new case of “rhinoglottophilia:” from nasalisation to aspiration</b><br> Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESHP2), 3–4 December, University of Edinburgh<br> <a class="osi" href="../files/pubs/2015-eshp.pdf" target="_blank"><iconify-icon inline="" icon="fa6-solid:cloud-arrow-down"></iconify-icon></a>
 </td>
 </tr>
 </tbody>

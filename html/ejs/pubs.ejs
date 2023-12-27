@@ -54,6 +54,12 @@
       <% if (item.github) { %>
         <a class="osi" href="<%- item.github %>" target="_blank">{{< iconify fa6-brands square-github >}}</a>
       <% } %>
+      <% if (item.video) { %>
+        <a class="osi" href="<%- item.video %>" target="_blank">{{< iconify fa6-solid video >}}</a>
+      <% } %>
+      <% if (item.abstract) { %>
+        <a class="osi" href="<%- item.abstract %>" target="_blank">{{< iconify fa6-solid file-lines >}}</a>
+      <% } %>
       <% if (item.compendium) { %>
         <a class="osi" href="<%- item.compendium %>" target="_blank">{{< osi compendium >}}</a>
       <% } %>

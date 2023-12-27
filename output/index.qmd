@@ -17,6 +17,10 @@ listing:
     contents:
       - invited.yml
     template: ../html/ejs/pubs.ejs
+  - id: talks
+    contents:
+      - talks.yml
+    template: ../html/ejs/pubs.ejs
 ---
 
 ## Papers
@@ -37,4 +41,9 @@ listing:
 ## Invited talks
 
 ::: {#invited}
+:::
+
+## Talks and posters
+
+::: {#talks}
 :::

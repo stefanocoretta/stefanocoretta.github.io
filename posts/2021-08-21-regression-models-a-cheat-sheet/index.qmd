@@ -3,7 +3,7 @@ title: 'Linear models: a cheat-sheet'
 author: Stefano Coretta
 date: '2021-08-21'
 
-categories: ["methods", "Linear models"]
+categories: ["Methods", "Linear models"]
 tags: ["linear models", "regression", "brms", "lmer", "gamm"]
 
 ---

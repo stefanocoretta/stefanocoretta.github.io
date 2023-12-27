@@ -6,6 +6,7 @@ project:
     - img
     - files
     - data
+    - .nokejyll
 
 website:
   title: "Stefano Coretta"

@@ -312,21 +312,21 @@
     "href": "teaching.html",
     "title": "Courses",
     "section": "",
-    "text": "Statistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website\n\n\n\n\n\nResearch Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
+    "text": "Quantitative Methods for Linguistics and English Language (Semester 1). Course website\nData Analysis for Linguistics and English Language (Semester 1). Course website\n\n\n\n\n\nStatistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website\n\n\n\n\n\nResearch Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
   },
   {
     "objectID": "teaching.html#section",
     "href": "teaching.html#section",
     "title": "Courses",
     "section": "",
-    "text": "Statistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website"
+    "text": "Quantitative Methods for Linguistics and English Language (Semester 1). Course website\nData Analysis for Linguistics and English Language (Semester 1). Course website"
   },
   {
     "objectID": "teaching.html#section-1",
     "href": "teaching.html#section-1",
     "title": "Courses",
     "section": "",
-    "text": "Research Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
+    "text": "Statistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website"
   },
   {
     "objectID": "teaching.html#learnbayes-bayesian-linear-models-for-linguistics",
@@ -663,5 +663,12 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "teaching.html#section-2",
+    "href": "teaching.html#section-2",
+    "title": "Courses",
+    "section": "",
+    "text": "Research Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
   }
 ]

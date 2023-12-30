@@ -1,5 +1,10 @@
 # Courses
 
+## 2023-2024
+
+- **Quantitative Methods for Linguistics and English Language** (Semester 1). [Course website](https://uoelel.github.io/qml/)
+- **Data Analysis for Linguistics and English Language** (Semester 1). [Course website](https://uoelel.github.io/qml/)
+
 ## 2022-2023
 
 -   **Statistics and Quantitative Methods** (Semester 1) \[[LASC11171](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11171.htm)\]. [Course website](https://stefanocoretta.github.io/sqmf/)

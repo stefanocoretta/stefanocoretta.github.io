@@ -1,5 +1,7 @@
 # Courses
 
+Check the  [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learning resourses on research methods in linguistics.
+
 ## 2023-2024
 
 - **Quantitative Methods for Linguistics and English Language** (Semester 1). [Course website](https://uoelel.github.io/qml/)

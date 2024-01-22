@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="452px" height="1073px" viewBox="0 0 452 1073" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>timeline</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="352" height="973" rx="30"></rect>
+        <filter x="-21.3%" y="-7.7%" width="142.6%" height="115.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-49.000000, 9.000000)">
+            <g id="timeline" transform="translate(99.000000, 41.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke="#979797" stroke-width="1" stroke-linejoin="square" fill="#FAF5EF" fill-rule="evenodd" x="0.5" y="0.5" width="351" height="972" rx="30"></rect>
+                </g>
+                <line x1="106.5" y1="31.5" x2="106" y2="941" stroke="#000000" stroke-width="21" stroke-linecap="round"></line>
+                <g id="year-ticks" transform="translate(90.500000, 69.000000)" stroke="#000000" stroke-linecap="square" stroke-width="2">
+                    <line x1="9.70507458e-17" y1="850.5" x2="25" y2="850.5" id="Line-2-Copy-17"></line>
+                    <line x1="9.70507458e-17" y1="800.5" x2="25" y2="800.5" id="Line-2-Copy-16"></line>
+                    <line x1="9.70507458e-17" y1="750.5" x2="25" y2="750.5" id="Line-2-Copy-15"></line>
+                    <line x1="9.70507458e-17" y1="700.5" x2="25" y2="700.5" id="Line-2-Copy-14"></line>
+                    <line x1="9.70507458e-17" y1="650.5" x2="25" y2="650.5" id="Line-2-Copy-13"></line>
+                    <line x1="9.70507458e-17" y1="600.5" x2="25" y2="600.5" id="Line-2-Copy-12"></line>
+                    <line x1="9.70507458e-17" y1="550.5" x2="25" y2="550.5" id="Line-2-Copy-11"></line>
+                    <line x1="9.70507458e-17" y1="500.5" x2="25" y2="500.5" id="Line-2-Copy-10"></line>
+                    <line x1="9.70507458e-17" y1="450.5" x2="25" y2="450.5" id="Line-2-Copy-9"></line>
+                    <line x1="9.70507458e-17" y1="400.5" x2="25" y2="400.5" id="Line-2-Copy-8"></line>
+                    <line x1="9.70507458e-17" y1="350.5" x2="25" y2="350.5" id="Line-2-Copy-7"></line>
+                    <line x1="9.70507458e-17" y1="300.5" x2="25" y2="300.5" id="Line-2-Copy-6"></line>
+                    <line x1="9.70507458e-17" y1="250.5" x2="25" y2="250.5" id="Line-2-Copy-5"></line>
+                    <line x1="9.70507458e-17" y1="200.5" x2="25" y2="200.5" id="Line-2-Copy-4"></line>
+                    <line x1="9.70507458e-17" y1="150.5" x2="25" y2="150.5" id="Line-2-Copy-3"></line>
+                    <line x1="9.70507458e-17" y1="100.5" x2="25" y2="100.5" id="Line-2-Copy-2"></line>
+                    <line x1="9.70507458e-17" y1="50.5" x2="25" y2="50.5" id="Line-2-Copy"></line>
+                    <line x1="9.70507458e-17" y1="0.5" x2="25" y2="0.5" id="Line-2"></line>
+                </g>
+                <g id="years" transform="translate(36.000000, 58.000000)" fill="#000000" font-size="16">
+                    <text id="2007" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="866">2007</tspan>
+                    </text>
+                    <text id="2008" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="816">2008</tspan>
+                    </text>
+                    <text id="2009" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="766">2009</tspan>
+                    </text>
+                    <text id="2010" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="716">2010</tspan>
+                    </text>
+                    <text id="2011" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="666">2011</tspan>
+                    </text>
+                    <text id="2012" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="616">2012</tspan>
+                    </text>
+                    <text id="2013" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="566">2013</tspan>
+                    </text>
+                    <text id="2014" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="516">2014</tspan>
+                    </text>
+                    <text id="2015" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="466">2015</tspan>
+                    </text>
+                    <text id="2016" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="416">2016</tspan>
+                    </text>
+                    <text id="2017" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="366">2017</tspan>
+                    </text>
+                    <text id="2018" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="316">2018</tspan>
+                    </text>
+                    <text id="2019" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="266">2019</tspan>
+                    </text>
+                    <text id="2020" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="216">2020</tspan>
+                    </text>
+                    <text id="2021" font-family="Lato-Bold, Lato" font-weight="bold">
+                        <tspan x="0.88" y="166">2021</tspan>
+                    </text>
+                    <text id="2022" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="116">2022</tspan>
+                    </text>
+                    <text id="2023" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="66">2023</tspan>
+                    </text>
+                    <text id="2024" opacity="0.25" font-family="Lato-Regular, Lato" font-weight="normal">
+                        <tspan x="0.88" y="16">2024</tspan>
+                    </text>
+                </g>
+                <g id="time-segments" transform="translate(105.000000, 31.000000)" stroke-linecap="round" stroke-width="6">
+                    <line x1="1" y1="864" x2="1" y2="670" id="Line-3" stroke="#E02020"></line>
+                    <line x1="1" y1="656" x2="1" y2="563" id="Line-4" stroke="#FA6400"></line>
+                    <line x1="1" y1="538" x2="1" y2="514" id="Line-5" stroke="#F7B500"></line>
+                    <line x1="1" y1="488" x2="1" y2="470" id="Line-6" stroke="#6DD400"></line>
+                    <line x1="1" y1="455" x2="1" y2="419" id="Line-7" stroke="#44D7B6"></line>
+                    <line x1="1" y1="405" x2="1" y2="271" id="Line-8" stroke="#32C5FF"></line>
+                    <line x1="1" y1="253" x2="1" y2="173" id="Line-9" stroke="#0091FF"></line>
+                    <line x1="1" y1="150" x2="1" y2="-3.95863897e-15" id="Line-10" stroke="#6236FF"></line>
+                </g>
+                <g id="description" transform="translate(141.000000, 93.000000)" fill="#000000" font-family="Lato-Regular, Lato" font-size="12" font-weight="normal">
+                    <text id="BA-in-Classics-(with">
+                        <tspan x="0" y="703">BA in Classics (with Linguistics</tspan>
+                        <tspan x="0" y="718">and Oriental Studies)</tspan>
+                        <tspan x="0" y="733" font-family="Lato-Italic, Lato" font-style="italic">Milan, Italy</tspan>
+                    </text>
+                    <text id="ResMA-in-Theoretical">
+                        <tspan x="0" y="546">ResMA in Theoretical</tspan>
+                        <tspan x="0" y="561">Linguistics</tspan>
+                        <tspan x="0" y="576" font-family="Lato-Italic, Lato" font-style="italic">Pavia, Italy</tspan>
+                    </text>
+                    <text id="Postgraduate-Researc">
+                        <tspan x="0" y="466">Postgraduate Research</tspan>
+                        <tspan x="0" y="481" font-family="Lato-Italic, Lato" font-style="italic">Newcastle, Australia</tspan>
+                    </text>
+                    <text id="Junior-Linguist-for">
+                        <tspan x="0" y="412">Junior Linguist</tspan>
+                        <tspan x="0" y="427">for Adecco at Google Milan</tspan>
+                    </text>
+                    <text id="MA-in-Phonetics-and">
+                        <tspan x="0" y="367">MA in Phonetics and Phonology</tspan>
+                        <tspan x="0" y="382" font-family="Lato-Italic, Lato" font-style="italic">York, UK</tspan>
+                    </text>
+                    <text id="PhD-in-Linguistics-M">
+                        <tspan x="0" y="280">PhD in Linguistics</tspan>
+                        <tspan x="0" y="295" font-family="Lato-Italic, Lato" font-style="italic">Manchester, UK</tspan>
+                    </text>
+                    <text id="Postdoc-Munich,-Germ">
+                        <tspan x="0" y="154">Postdoc</tspan>
+                        <tspan x="0" y="169" font-family="Lato-Italic, Lato" font-style="italic">Munich, Germany</tspan>
+                    </text>
+                    <text id="Teaching-Fellow-Edin">
+                        <tspan x="0" y="12">Teaching Fellow</tspan>
+                        <tspan x="0" y="27" font-family="Lato-Italic, Lato" font-style="italic">Edinburgh, UK</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -21,45 +21,32 @@ about:
 ---
 
 ::: {style="font-size: 0.85rem"}
+I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, Tenured**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
 
-I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, Tenured**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK).
-As part of my duties, I coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
+I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses. Get in contact with me for info.
 
-I am available as instructor for a range of [Workshops](teaching.qmd#workshops) on statistics and research methods and as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.
+My past and current research covers different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](meta.qmd#phonetology)---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056))---and [[research methods]{.smallcaps}](meta.qmd#research-methods) including statistics and Open Science practices. For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages. You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).
 
-My past and current research covers different areas of *linguistics*, with a focus on <span style="font-variant: small-caps;">[phonetology](meta.qmd#phonetology)</span>---the study of speech sounds and their relation to *linguisticality* (Human Language, see [Haspelmath 2020](https://doi.org/10.3389/fpsyg.2019.03056))---and <span style="font-variant: small-caps;">[research methods](meta.qmd#research-methods)</span> including statistics and Open Science practices.
-For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages.
-You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).
+I received my PhD degree in linguistics from the University of Manchester (UK) in 2020. I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
 
-I received my PhD degree in linguistics from the University of Manchester (UK) in 2020.
-I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
+::: grid
 
+::: g-col-6
+![](img/timeline.svg){fig-align="center" width="300"}
 :::
 
-::: {style="font-size: 0.7rem"}
-::: {.grid}
-
-::: {.g-col-6}
+::: g-col-6
 #### Interests
 
-- Phonetology (i.e. Phonetics and Phonology)
-- Research Methods and Statistics
-- Language description
-- Typology and Diachronic linguistics
-- Graphemics
-:::
+-   [Phonetology](meta.qmd#phonetology) (i.e. Phonetics and Phonology)
+-   Research Methods and Statistics
+-   Language description
+-   Typology and Diachronic linguistics
+-   Graphemics
 
-::: {.g-col-6}
-#### Education
-- PhD in Linguistics, 2020
-  University of Manchester, UK
-- MA in Phonetics and Phonology, 2016
-  University of York, UK
-- MA in Theoretical and Applied Linguistics, 2013
-  University of Pavia, Italy
-- BA in Classics with Oriental Studies, 2011
-  University of Milan, Italy
-:::
+#### PhD supervision
 
+I am available for PhD supervision on topics from the list above. Please note that I do **NOT** supervise projects in applied or developmental linguistics.
+:::
 :::
 :::

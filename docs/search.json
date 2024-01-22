@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Stefano Coretta",
     "section": "",
-    "text": "I am the Senior Teaching Coordinator for Statistics (Teaching Fellow, Tenured) in the Linguistics and English Language department of the University of Edinburgh (UK). As part of my duties, I coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.\nI am available as instructor for a range of Workshops on statistics and research methods and as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.\nMy past and current research covers different areas of linguistics, with a focus on phonetology—the study of speech sounds and their relation to linguisticality (Human Language, see Haspelmath 2020)—and research methods including statistics and Open Science practices. For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the Research and Meta-models pages. You can find a list of research outputs (papers, software, etc) in Output.\nI received my PhD degree in linguistics from the University of Manchester (UK) in 2020. I was a postdoc researcher at the Institute of Phonetics and Speech Processing at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.\n\n\n\n\nInterests\n\nPhonetology (i.e. Phonetics and Phonology)\nResearch Methods and Statistics\nLanguage description\nTypology and Diachronic linguistics\nGraphemics\n\n\n\nEducation\n\nPhD in Linguistics, 2020 University of Manchester, UK\nMA in Phonetics and Phonology, 2016 University of York, UK\nMA in Theoretical and Applied Linguistics, 2013 University of Pavia, Italy\nBA in Classics with Oriental Studies, 2011 University of Milan, Italy"
+    "text": "I am the Senior Teaching Coordinator for Statistics (Teaching Fellow, Tenured) in the Linguistics and English Language department of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.\nI am available as instructor for a range of Workshops on statistics and research methods and as collaborator on projects or papers requiring the planning and execution of statistical analyses. Get in contact with me for info.\nMy past and current research covers different areas of linguistics, with a focus on phonetology—the study of speech sounds and their relation to linguisticality (Human Language, see Haspelmath 2020)—and research methods including statistics and Open Science practices. For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the Research and Meta-models pages. You can find a list of research outputs (papers, software, etc) in Output.\nI received my PhD degree in linguistics from the University of Manchester (UK) in 2020. I was a postdoc researcher at the Institute of Phonetics and Speech Processing at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.\n\n\n\n\n\n\n\n\n\n\nInterests\n\nPhonetology (i.e. Phonetics and Phonology)\nResearch Methods and Statistics\nLanguage description\nTypology and Diachronic linguistics\nGraphemics\n\n\n\nPhD supervision\nI am available for PhD supervision on topics from the list above. Please note that I do NOT supervise projects in applied or developmental linguistics."
   },
   {
     "objectID": "meta.html",
@@ -327,6 +327,13 @@
     "title": "Courses",
     "section": "",
     "text": "Statistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website"
+  },
+  {
+    "objectID": "teaching.html#section-2",
+    "href": "teaching.html#section-2",
+    "title": "Courses",
+    "section": "",
+    "text": "Research Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
   },
   {
     "objectID": "teaching.html#learnbayes-bayesian-linear-models-for-linguistics",
@@ -663,12 +670,5 @@
     "title": "About",
     "section": "",
     "text": "About this site"
-  },
-  {
-    "objectID": "teaching.html#section-2",
-    "href": "teaching.html#section-2",
-    "title": "Courses",
-    "section": "",
-    "text": "Research Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
   }
 ]

@@ -1,26 +1,35 @@
 ---
-title: "Stefano Coretta"
-subtitle: |
-  [ˈsteˑfano koˈrɛtta]
-
-  **University of Edinburgh**
-
-  <s.coretta@ed.ac.uk>
-image: img/avatar.png
-about:
-  template: trestles
-  image-width: 10em
-  image-shape: round
-  links:
-    - icon: github
-      href: https://github.com/stefanocoretta
-    - text: "{{< iconify academicons osf-square >}}"
-      href: https://osf.io/e84dv/
-    - text: "{{< iconify academicons orcid >}}"
-      href: https://orcid.org/0000-0001-9627-5532
+format: 
+  html:
+    page-layout: full
 ---
 
-::: {style="font-size: 0.85rem"}
+::: grid
+::: g-col-4
+![](img/avatar.png)
+:::
+
+::: g-col-8
+# Stefano Coretta 
+
+| [ˈsteˑfano koˈrɛtta]
+| **University of Edinburgh**
+| <s.coretta@ed.ac.uk>
+
+::: {style="font-size: 1.8rem"}
+[{{< iconify fa6-brands square-github >}}](https://github.com/stefanocoretta)
+[{{< iconify academicons osf-square >}}](https://osf.io/e84dv/)
+[{{< iconify academicons orcid >}}](https://orcid.org/0000-0001-9627-5532)
+[{{< iconify academicons clarivate >}}](https://www.webofscience.com/wos/author/record/AFQ-0204-2022)
+[{{< iconify academicons stackoverflow >}}](https://stackoverflow.com/users/2804314/stefano?tab=profile)
+[{{< iconify fa6-brands square-twitter >}}](https://twitter.com/StefanoCoretta)
+:::
+
+:::
+:::
+
+<br>
+
 I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, Tenured**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
 
 I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses. Get in contact with me for info.
@@ -30,11 +39,6 @@ My past and current research covers different areas of *linguistics*, with a foc
 I received my PhD degree in linguistics from the University of Manchester (UK) in 2020. I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.
 
 ::: grid
-
-::: g-col-6
-![](img/timeline.svg){fig-align="center" width="300"}
-:::
-
 ::: g-col-6
 #### Interests
 
@@ -43,10 +47,13 @@ I received my PhD degree in linguistics from the University of Manchester (UK) i
 -   Language description
 -   Typology and Diachronic linguistics
 -   Graphemics
+:::
 
+::: g-col-6
 #### PhD supervision
 
-I am available for PhD supervision on topics from the list above. Please note that I do **NOT** supervise projects in applied or developmental linguistics.
+I am available for PhD supervision on topics from my interests list. Please note that I do **NOT** supervise projects in applied or developmental linguistics.
 :::
 :::
-:::
+
+![](img/timeline.png){fig-align="center" width="500"}

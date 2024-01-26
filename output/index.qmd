@@ -28,7 +28,7 @@ listing:
 ::: {#papers}
 :::
 
-## Data
+## Research compendia
 
 ::: {#data}
 :::

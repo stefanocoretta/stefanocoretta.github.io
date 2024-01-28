@@ -1,9 +1,13 @@
 ---
-title: "Research output"
+title: "Scholarly output"
 listing:
   - id: papers
     contents:
       - papers.yml
+    template: ../html/ejs/pubs.ejs
+  - id: books
+    contents:
+      - books.yml
     template: ../html/ejs/pubs.ejs
   - id: data
     contents:
@@ -28,6 +32,11 @@ listing:
 ::: {#papers}
 :::
 
+## Book
+
+::: {#books}
+:::
+
 ## Research compendia
 
 ::: {#data}
@@ -47,3 +56,4 @@ listing:
 
 ::: {#talks}
 :::
+

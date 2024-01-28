@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stefano Coretta – blog</title>
+<title>Stefano Coretta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -94,6 +101,33 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -101,9 +135,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Stefano Coretta</span>
     </a>
@@ -115,37 +149,37 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html" rel="" target="">
- <span class="menu-text">Research</span></a>
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html" rel="" target="">
- <span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./meta.html" rel="" target="">
- <span class="menu-text">Meta</span></a>
+    <a class="nav-link" href="./meta.html"> 
+<span class="menu-text">Meta</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./output/index.html" rel="" target="">
- <span class="menu-text">Output</span></a>
+    <a class="nav-link" href="./output/index.html"> 
+<span class="menu-text">Output</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./files/CorettaCV.pdf" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="./files/CorettaCV.pdf"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -165,21 +199,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Methods,Linear models" data-listing-date-sort="1658444400000" data-listing-file-modified-sort="1703975230247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="Methods,Linear models" data-listing-date-sort="1658444400000" data-listing-file-modified-sort="1703975230247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="373">
 <div class="thumbnail">
-<p><a href="./posts/2022-07-22-one-thousand-and-one-names/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external"></a></p><a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html">
 <h3 class="no-anchor listing-title">
-One Thousand and One names
+<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external">One Thousand and One names</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
@@ -188,14 +223,12 @@ Methods
 Linear models
 </div>
 </div>
-<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html">
 <div class="listing-description">
-The following table lists common “portmanteau” names for linear models. Note that different traditions/disciplines might use one particular name more often than the others.
+<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external">The following table lists common “portmanteau” names for linear models. Note that different traditions/disciplines might use one particular name more often than the others.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html">
+<a href="./posts/2022-07-22-one-thousand-and-one-names/index.html" class="no-external">
 <div class="listing-date">
 Jul 22, 2022
 </div>
@@ -205,19 +238,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Linear models,Bayesian,brms" data-listing-date-sort="1649113200000" data-listing-file-modified-sort="1703975230247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="1" data-categories="Linear models,Bayesian,brms" data-listing-date-sort="1649113200000" data-listing-file-modified-sort="1703975230247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="845">
 <div class="thumbnail">
-<p><a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html"> <p class="card-img-top"><img src="posts/2022-04-05-bayesian-ci-width-power-analysis/index_files/figure-html/rr, eval-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external"></a></p><a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2022-04-05-bayesian-ci-width-power-analysis/index_files/figure-html/rr, eval-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html">
 <h3 class="no-anchor listing-title">
-Bayesian CrI-width power analysis
+<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external">Bayesian CrI-width power analysis</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linear models'); return false;">
 Linear models
@@ -229,14 +262,12 @@ Bayesian
 brms
 </div>
 </div>
-<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html">
 <div class="listing-description">
-This post shows how to do a quick and dirty Bayesian power analysis.
+<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external">This post shows how to do a quick and dirty Bayesian power analysis.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html">
+<a href="./posts/2022-04-05-bayesian-ci-width-power-analysis/index.html" class="no-external">
 <div class="listing-date">
 Apr 5, 2022
 </div>
@@ -246,64 +277,62 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Linear models" data-listing-date-sort="1638380333000" data-listing-file-modified-sort="1703975230247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14">
+<div class="quarto-post image-right" data-index="2" data-categories="Linear models" data-listing-date-sort="1638380333000" data-listing-file-modified-sort="1703975230247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2668">
 <div class="thumbnail">
-<p><a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external"></a></p><a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html">
 <h3 class="no-anchor listing-title">
-How to simplify your study design
+<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external">How to simplify your study design</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linear models'); return false;">
 Linear models
 </div>
 </div>
-<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html">
 <div class="listing-description">
-We have all been there.
+<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external">We have all been there.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html">
+<a href="./posts/2021-12-01-how-to-simplify-your-study-design/index.html" class="no-external">
 <div class="listing-date">
 Dec 1, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Gist" data-listing-date-sort="1637452800000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="Gist" data-listing-date-sort="1637452800000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <div class="thumbnail">
-<p><a href="./posts/2021-11-21-dot-matrix-charts/index.html"> <p class="card-img-top"><img src="posts/2021-11-21-dot-matrix-charts/index_files/figure-html/dot-matrix-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external"></a></p><a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2021-11-21-dot-matrix-charts/index_files/figure-html/dot-matrix-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-11-21-dot-matrix-charts/index.html">
 <h3 class="no-anchor listing-title">
-R gist — Dot matrix charts with ggplot2
+<a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external">R gist — Dot matrix charts with ggplot2</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Gist'); return false;">
 Gist
 </div>
 </div>
-<a href="./posts/2021-11-21-dot-matrix-charts/index.html">
 <div class="listing-description">
+<a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external">
 
-</div>
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./posts/2021-11-21-dot-matrix-charts/index.html">
+<a href="./posts/2021-11-21-dot-matrix-charts/index.html" class="no-external">
 <div class="listing-date">
 Nov 21, 2021
 </div>
@@ -313,19 +342,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Methods,Linear models" data-listing-date-sort="1629500400000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="4" data-categories="Methods,Linear models" data-listing-date-sort="1629500400000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1276">
 <div class="thumbnail">
-<p><a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external"></a></p><a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html">
 <h3 class="no-anchor listing-title">
-Linear models: a cheat-sheet
+<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external">Linear models: a cheat-sheet</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
@@ -334,14 +363,12 @@ Methods
 Linear models
 </div>
 </div>
-<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html">
 <div class="listing-description">
-<strong>Linear models</strong>, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable <span class="math inline">\(Y\)</span> based on a…<span class="math inline"></span>
+<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external"><strong>Linear models</strong>, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable <span class="math inline">\(Y\)</span> bas…<span class="math inline"></span></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html">
+<a href="./posts/2021-08-21-regression-models-a-cheat-sheet/index.html" class="no-external">
 <div class="listing-date">
 Aug 21, 2021
 </div>
@@ -351,19 +378,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Methods,Linear models" data-listing-date-sort="1626735600000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="5" data-categories="Methods,Linear models" data-listing-date-sort="1626735600000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1720">
 <div class="thumbnail">
-<p><a href="./posts/2021-07-20-contrasts/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-07-20-contrasts/index.html" class="no-external"></a></p><a href="./posts/2021-07-20-contrasts/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-07-20-contrasts/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-07-20-contrasts/index.html">
 <h3 class="no-anchor listing-title">
-Factors, coding and contrasts
+<a href="./posts/2021-07-20-contrasts/index.html" class="no-external">Factors, coding and contrasts</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-07-20-contrasts/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
@@ -372,14 +399,12 @@ Methods
 Linear models
 </div>
 </div>
-<a href="./posts/2021-07-20-contrasts/index.html">
 <div class="listing-description">
-This post is an overview of how factors (i.e.&nbsp;categorical variables) are coded under the hood and which types of coding can be set in R.<sup>1</sup>
+<a href="./posts/2021-07-20-contrasts/index.html" class="no-external">This post is an overview of how factors (i.e.&nbsp;categorical variables) are coded under the hood and which types of coding can be set in R.<sup>1</sup></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-07-20-contrasts/index.html">
+<a href="./posts/2021-07-20-contrasts/index.html" class="no-external">
 <div class="listing-date">
 Jul 20, 2021
 </div>
@@ -389,32 +414,35 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Methods" data-listing-date-sort="1625353200000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-categories="Methods" data-listing-date-sort="1625353200000" data-listing-file-modified-sort="1703975230246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
 <div class="thumbnail">
-<p><a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html"> <p class="card-img-top"><img src="posts/2021-07-04-plotting-the-area-under-the-curve/index_files/figure-html/ribbon-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external"></a></p><a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2021-07-04-plotting-the-area-under-the-curve/index_files/figure-html/ribbon-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html">
 <h3 class="no-anchor listing-title">
-R gist — Plotting the area under the curve with ggplot
+<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external">R gist — Plotting the area under the curve with ggplot</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
 </div>
 </div>
-<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html">
 <div class="listing-description">
-
-</div>
+<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><span class="fu">library</span>(ggthemr)</span>
+<span id="cb1-4"><span class="fu">ggthemr</span>(<span class="st">"earth"</span>)</span></code></pre></div>
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html">
+<a href="./posts/2021-07-04-plotting-the-area-under-the-curve/index.html" class="no-external">
 <div class="listing-date">
 Jul 4, 2021
 </div>
@@ -424,32 +452,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Meta-models" data-listing-date-sort="1619650800000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="7" data-categories="Meta-models" data-listing-date-sort="1619650800000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="518">
 <div class="thumbnail">
-<p><a href="./posts/2021-04-29-positionality/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-04-29-positionality/index.html" class="no-external"></a></p><a href="./posts/2021-04-29-positionality/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-04-29-positionality/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-04-29-positionality/index.html">
 <h3 class="no-anchor listing-title">
-My researcher’s positionality statement
+<a href="./posts/2021-04-29-positionality/index.html" class="no-external">My researcher’s positionality statement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-04-29-positionality/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Meta-models'); return false;">
 Meta-models
 </div>
 </div>
-<a href="./posts/2021-04-29-positionality/index.html">
 <div class="listing-description">
-This is my researcher’s <span class="smallcaps">positionality statement</span> <span class="citation" data-cites="darwin2020 jafar2018">(for context, see Darwin Holmes 2020; Jafar 2018)</span>.
+<a href="./posts/2021-04-29-positionality/index.html" class="no-external">This is my researcher’s <span class="smallcaps">positionality statement</span> <span class="citation" data-cites="darwin2020 jafar2018">(for context, see Darwin Holmes 2020; Jafar 2018)</span>.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-04-29-positionality/index.html">
+<a href="./posts/2021-04-29-positionality/index.html" class="no-external">
 <div class="listing-date">
 Apr 29, 2021
 </div>
@@ -459,32 +485,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Linguistics" data-listing-date-sort="1619218800000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="8" data-categories="Linguistics" data-listing-date-sort="1619218800000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1269">
 <div class="thumbnail">
-<p><a href="./posts/2021-04-24-on-phonologisation/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external"></a></p><a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-04-24-on-phonologisation/index.html">
 <h3 class="no-anchor listing-title">
-On phonologisation
+<a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external">On phonologisation</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
 </div>
 </div>
-<a href="./posts/2021-04-24-on-phonologisation/index.html">
 <div class="listing-description">
-After the post on the definition of random effects, I thought about writing another one on the definition of <span class="smallcaps">phonologisation</span>.
+<a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external">After the post on the definition of random effects, I thought about writing another one on the definition of <span class="smallcaps">phonologisation</span>.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-04-24-on-phonologisation/index.html">
+<a href="./posts/2021-04-24-on-phonologisation/index.html" class="no-external">
 <div class="listing-date">
 Apr 24, 2021
 </div>
@@ -494,19 +518,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Linguistics,Gist" data-listing-date-sort="1619046000000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="Linguistics,Gist" data-listing-date-sort="1619046000000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
 <div class="thumbnail">
-<p><a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external"></a></p><a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html">
 <h3 class="no-anchor listing-title">
-R gist — VOT and place of articulation
+<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external">R gist — VOT and place of articulation</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
@@ -515,14 +539,19 @@ Linguistics
 Gist
 </div>
 </div>
-<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html">
 <div class="listing-description">
+<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external">
 
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">vot <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"./data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-2">  <span class="fu">group_by</span>(vot.category) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3">  <span class="fu">mutate</span>(<span class="at">vot.mu_z =</span> <span class="fu">scale</span>(vot.mu)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-4">  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-5">  <span class="fu">pivot…</span><span class="at"></span><span class="at"></span><span class="fu"></span><span class="sc"></span></span><span id="cb1-6"><span class="fu"></span><span class="at"></span><span class="fu"></span><span class="at"></span><span class="st"></span><span class="at"></span><span class="st"></span></span></code></pre></div></div></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html">
+<a href="./posts/2021-04-22-vot-and-place-of-articulation/index.html" class="no-external">
 <div class="listing-date">
 Apr 22, 2021
 </div>
@@ -532,19 +561,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Methods,Meta-models" data-listing-date-sort="1616889600000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="10" data-categories="Methods,Meta-models" data-listing-date-sort="1616889600000" data-listing-file-modified-sort="1703975230245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="757">
 <div class="thumbnail">
-<p><a href="./posts/2021-03-28-methods-as-theory/index.html"> <p class="card-img-top"><img src="img/streamline/98-desktop-work-desk-write.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external"></a></p><a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external">
+<p class="card-img-top"><img src="img/streamline/98-desktop-work-desk-write.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-03-28-methods-as-theory/index.html">
 <h3 class="no-anchor listing-title">
-Methods as theory
+<a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external">Methods as theory</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
@@ -553,14 +582,12 @@ Methods
 Meta-models
 </div>
 </div>
-<a href="./posts/2021-03-28-methods-as-theory/index.html">
 <div class="listing-description">
-At least in…
+<a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external">At least in linguistics, there is a general tendency to contrast theory with methods. This dichotomy is also reflected in the classification of academic papers as…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-03-28-methods-as-theory/index.html">
+<a href="./posts/2021-03-28-methods-as-theory/index.html" class="no-external">
 <div class="listing-date">
 Mar 28, 2021
 </div>
@@ -570,19 +597,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Methods,Linear models,Rstats" data-listing-date-sort="1615766400000" data-listing-file-modified-sort="1703975230244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="11" data-categories="Methods,Linear models,Rstats" data-listing-date-sort="1615766400000" data-listing-file-modified-sort="1703975230244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="900">
 <div class="thumbnail">
-<p><a href="./posts/2021-03-15-on-random-effects/index.html"> <p class="card-img-top"><img src="img/streamline/62-graph-dot.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external"></a></p><a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external">
+<p class="card-img-top"><img src="img/streamline/62-graph-dot.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-03-15-on-random-effects/index.html">
 <h3 class="no-anchor listing-title">
-On random effects
+<a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external">On random effects</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
@@ -594,14 +621,12 @@ Linear models
 Rstats
 </div>
 </div>
-<a href="./posts/2021-03-15-on-random-effects/index.html">
 <div class="listing-description">
-If you use <strong>mixed-effects models</strong> (aka multilevel models, hierarchical models), I am sure that at some point you asked yourself the following question at least once: <em>Should I include variable X as a fixed or as a…</em>
+<a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external">If you use <strong>mixed-effects models</strong> (aka multilevel models, hierarchical models), I am sure that at some point you asked yourself the following question at least once: <em>Should I…</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-03-15-on-random-effects/index.html">
+<a href="./posts/2021-03-15-on-random-effects/index.html" class="no-external">
 <div class="listing-date">
 Mar 15, 2021
 </div>
@@ -611,33 +636,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Quotables" data-listing-date-sort="1615075200000" data-listing-file-modified-sort="1703975230244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="Quotables" data-listing-date-sort="1615075200000" data-listing-file-modified-sort="1703975230244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="93">
 <div class="thumbnail">
-<p><a href="./posts/2021-03-07-quotables-rebecca-posner/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external"></a></p><a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html">
 <h3 class="no-anchor listing-title">
-Quotables — Rebecca Posner
+<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external">Quotables — Rebecca Posner</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quotables'); return false;">
 Quotables
 </div>
 </div>
-<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html">
 <div class="listing-description">
-
-<em>This is part of the post series ‘Quotables: notable quotes from notable linguists’.</em>
+<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external"><em>This is part of the post series ‘Quotables: notable quotes from notable linguists’.</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html">
+<a href="./posts/2021-03-07-quotables-rebecca-posner/index.html" class="no-external">
 <div class="listing-date">
 Mar 7, 2021
 </div>
@@ -647,32 +669,32 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Gist" data-listing-date-sort="1611878400000" data-listing-file-modified-sort="1703975230244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="Gist" data-listing-date-sort="1611878400000" data-listing-file-modified-sort="1703975230244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
 <div class="thumbnail">
-<p><a href="./posts/2021-01-29-rgb-space/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-01-29-rgb-space/index.html" class="no-external"></a></p><a href="./posts/2021-01-29-rgb-space/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-01-29-rgb-space/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-01-29-rgb-space/index.html">
 <h3 class="no-anchor listing-title">
-R gist — Plot an interactive 3D RGB colour space
+<a href="./posts/2021-01-29-rgb-space/index.html" class="no-external">R gist — Plot an interactive 3D RGB colour space</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-01-29-rgb-space/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Gist'); return false;">
 Gist
 </div>
 </div>
-<a href="./posts/2021-01-29-rgb-space/index.html">
 <div class="listing-description">
-
-</div>
+<a href="./posts/2021-01-29-rgb-space/index.html" class="no-external">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu">library</span>(plotly)</span></code></pre></div>
 </a>
 </div>
+</div>
 <div class="metadata">
-<a href="./posts/2021-01-29-rgb-space/index.html">
+<a href="./posts/2021-01-29-rgb-space/index.html" class="no-external">
 <div class="listing-date">
 Jan 29, 2021
 </div>
@@ -682,32 +704,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Methods" data-listing-date-sort="1608595200000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="14" data-categories="Methods" data-listing-date-sort="1608595200000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
 <div class="thumbnail">
-<p><a href="./posts/2020-12-22-set-global-ggplot2/index.html"> <p class="card-img-top"><img src="posts/2020-12-22-set-global-ggplot2/index_files/figure-html/name-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external"></a></p><a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2020-12-22-set-global-ggplot2/index_files/figure-html/name-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2020-12-22-set-global-ggplot2/index.html">
 <h3 class="no-anchor listing-title">
-How to globally set colour scales in ggplot2
+<a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external">How to globally set colour scales in ggplot2</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
 </div>
 </div>
-<a href="./posts/2020-12-22-set-global-ggplot2/index.html">
 <div class="listing-description">
-After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an <code>.Rmd</code> file.
+<a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external">After the post on using custom typefaces in ggplot2 (here), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an <code>.Rmd</code> file.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2020-12-22-set-global-ggplot2/index.html">
+<a href="./posts/2020-12-22-set-global-ggplot2/index.html" class="no-external">
 <div class="listing-date">
 Dec 22, 2020
 </div>
@@ -717,32 +737,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="Methods" data-listing-date-sort="1608508800000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="15" data-categories="Methods" data-listing-date-sort="1608508800000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
 <div class="thumbnail">
-<p><a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external"></a></p><a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html">
 <h3 class="no-anchor listing-title">
-How to use custom typefaces in ggplot2 [macOS only]
+<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external">How to use custom typefaces in ggplot2 [macOS only]</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
 </div>
 </div>
-<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html">
 <div class="listing-description">
-I keep hitting my head against this particular (and seemingly simple) task: <strong>using custom typefaces in ggplot2 plots</strong> and <strong>being able to knit to PDF</strong>.
+<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external">I keep hitting my head against this particular (and seemingly simple) task: <strong>using custom typefaces in ggplot2 plots</strong> and <strong>being able to knit to PDF</strong>.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html">
+<a href="./posts/2020-12-21-custom-fonts-ggplot2/index.html" class="no-external">
 <div class="listing-date">
 Dec 21, 2020
 </div>
@@ -752,19 +770,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="Methods,Linear models" data-listing-date-sort="1560726000000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="16" data-categories="Methods,Linear models" data-listing-date-sort="1560726000000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="389">
 <div class="thumbnail">
-<p><a href="./posts/2019-06-17-priors-ggplot2/index.html"> <p class="card-img-top"><img src="posts/2019-06-17-priors-ggplot2/index_files/figure-html/normal-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external"></a></p><a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2019-06-17-priors-ggplot2/index_files/figure-html/normal-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2019-06-17-priors-ggplot2/index.html">
 <h3 class="no-anchor listing-title">
-Plotting prior distributions with ggplot2
+<a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external">Plotting prior distributions with ggplot2</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Methods'); return false;">
 Methods
@@ -773,14 +791,12 @@ Methods
 Linear models
 </div>
 </div>
-<a href="./posts/2019-06-17-priors-ggplot2/index.html">
 <div class="listing-description">
-The choice of priors is a fundamental step of the Bayesian inference process. <span class="citation" data-cites="vasishth2018">Vasishth et al. (2018)</span> recommend plotting the chosen priors to see if they are reasonable.
+<a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external">The choice of priors is a fundamental step of the Bayesian inference process. <span class="citation" data-cites="vasishth2018">Vasishth et al. (2018)</span> recommend plotting the chosen priors to see if they are reasonable.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2019-06-17-priors-ggplot2/index.html">
+<a href="./posts/2019-06-17-priors-ggplot2/index.html" class="no-external">
 <div class="listing-date">
 Jun 17, 2019
 </div>
@@ -790,19 +806,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="Linguistics,Methods" data-listing-date-sort="1556838000000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="17" data-categories="Linguistics,Methods" data-listing-date-sort="1556838000000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="987">
 <div class="thumbnail">
-<p><a href="./posts/2019-05-03-speakers-per-study/index.html"> <p class="card-img-top"><img src="posts/2019-05-03-speakers-per-study/index_files/figure-html/hist-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external"></a></p><a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2019-05-03-speakers-per-study/index_files/figure-html/hist-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2019-05-03-speakers-per-study/index.html">
 <h3 class="no-anchor listing-title">
-An estimate of number of speakers per study in phonetics
+<a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external">An estimate of number of speakers per study in phonetics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
@@ -811,14 +827,12 @@ Linguistics
 Methods
 </div>
 </div>
-<a href="./posts/2019-05-03-speakers-per-study/index.html">
 <div class="listing-description">
-A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.
+<a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external">A few weeks ago, I’ve asked on Twitter what people thought was the average number of participants used in phonetic studies. Here’s the tweet.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2019-05-03-speakers-per-study/index.html">
+<a href="./posts/2019-05-03-speakers-per-study/index.html" class="no-external">
 <div class="listing-date">
 May 3, 2019
 </div>
@@ -828,19 +842,19 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="Linguistics,Methods" data-listing-date-sort="1553126400000" data-listing-file-modified-sort="1703975230242" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="18" data-categories="Linguistics,Methods" data-listing-date-sort="1553126400000" data-listing-file-modified-sort="1703975230242" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="759">
 <div class="thumbnail">
-<p><a href="./posts/2018-12-26-literate-programming-with-praat/index.html"> <p class="card-img-top"><img src="posts/2018-12-26-literate-programming-with-praat/images/basic.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external"></a></p><a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2018-12-26-literate-programming-with-praat/images/basic.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2018-12-26-literate-programming-with-praat/index.html">
 <h3 class="no-anchor listing-title">
-Literate programming with Praat
+<a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external">Literate programming with Praat</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
@@ -849,14 +863,12 @@ Linguistics
 Methods
 </div>
 </div>
-<a href="./posts/2018-12-26-literate-programming-with-praat/index.html">
 <div class="listing-description">
-<br> <br>
+<a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external"><br> <br></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2018-12-26-literate-programming-with-praat/index.html">
+<a href="./posts/2018-12-26-literate-programming-with-praat/index.html" class="no-external">
 <div class="listing-date">
 Mar 21, 2019
 </div>
@@ -866,32 +878,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="Linguistics" data-listing-date-sort="1546732800000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="19" data-categories="Linguistics" data-listing-date-sort="1546732800000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
 <div class="thumbnail">
-<p><a href="./posts/2021-01-09-phono-restrictions-pie/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external"></a></p><a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-01-09-phono-restrictions-pie/index.html">
 <h3 class="no-anchor listing-title">
-On the phonotactic restrictions of Proto-Indoeuropean roots
+<a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external">On the phonotactic restrictions of Proto-Indoeuropean roots</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
 </div>
 </div>
-<a href="./posts/2021-01-09-phono-restrictions-pie/index.html">
 <div class="listing-description">
-Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some…
+<a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external">Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants. In this post, I will share some…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-01-09-phono-restrictions-pie/index.html">
+<a href="./posts/2021-01-09-phono-restrictions-pie/index.html" class="no-external">
 <div class="listing-date">
 Jan 6, 2019
 </div>
@@ -901,32 +911,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="Linguistics" data-listing-date-sort="1534978800000" data-listing-file-modified-sort="1703975230235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="20" data-categories="Linguistics" data-listing-date-sort="1534978800000" data-listing-file-modified-sort="1703975230235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="831">
 <div class="thumbnail">
-<p><a href="./posts/2018-08-23-tongue-ggplot2/index.html"> <p class="card-img-top"><img src="posts/2018-08-23-tongue-ggplot2/index_files/figure-html/smooth-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external"></a></p><a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2018-08-23-tongue-ggplot2/index_files/figure-html/smooth-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2018-08-23-tongue-ggplot2/index.html">
 <h3 class="no-anchor listing-title">
-Plotting tongue contours with ggplot2
+<a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external">Plotting tongue contours with ggplot2</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
 </div>
 </div>
-<a href="./posts/2018-08-23-tongue-ggplot2/index.html">
 <div class="listing-description">
-When plotting tongue contours data obtained from ultrasound tongue imaging in <code>R</code> using <code>ggplot2</code>, a common…<code></code>
+<a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external">When plotting tongue contours data obtained from ultrasound tongue imaging in <code>R</code> using <code>ggplot2</code>, a common option to smooth over the individual contours and show the general…<code></code></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2018-08-23-tongue-ggplot2/index.html">
+<a href="./posts/2018-08-23-tongue-ggplot2/index.html" class="no-external">
 <div class="listing-date">
 Aug 23, 2018
 </div>
@@ -936,32 +944,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="Linguistics" data-listing-date-sort="1519948800000" data-listing-file-modified-sort="1703975230233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="21" data-categories="Linguistics" data-listing-date-sort="1519948800000" data-listing-file-modified-sort="1703975230233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="362">
 <div class="thumbnail">
-<p><a href="./posts/2018-03-02-formants-tidy/index.html"> <p class="card-img-top"><img src="posts/2018-03-02-formants-tidy/index_files/figure-html/trajectory-plot-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external"></a></p><a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2018-03-02-formants-tidy/index_files/figure-html/trajectory-plot-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2018-03-02-formants-tidy/index.html">
 <h3 class="no-anchor listing-title">
-Vowel formants trajectories and tidy data
+<a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external">Vowel formants trajectories and tidy data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
 </div>
 </div>
-<a href="./posts/2018-03-02-formants-tidy/index.html">
 <div class="listing-description">
-With the advent of…
+<a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external">With the advent of more powerful statistical methods for assessing time series data, it is now becoming more common to compare whole vowel formant trajectories rather then…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2018-03-02-formants-tidy/index.html">
+<a href="./posts/2018-03-02-formants-tidy/index.html" class="no-external">
 <div class="listing-date">
 Mar 2, 2018
 </div>
@@ -971,32 +977,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="Linguistics" data-listing-date-sort="1438642800000" data-listing-file-modified-sort="1703975841188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="22" data-categories="Linguistics" data-listing-date-sort="1438642800000" data-listing-file-modified-sort="1703975841188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="583">
 <div class="thumbnail">
-<p><a href="./posts/2015-08-04-dialects-italy/index.html"> <p class="card-img-top"><img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Dialetti_parlati_in_Italia.png" alt="Map showing the dialects of Italy."  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external"></a></p><a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2015-08-04-dialects-italy/index.html">
 <h3 class="no-anchor listing-title">
-Wikipedia and the “Dialects of Italy”
+<a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external">Wikipedia and the “Dialects of Italy”</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
 </div>
 </div>
-<a href="./posts/2015-08-04-dialects-italy/index.html">
 <div class="listing-description">
- The <strong>Italian Wikipedia</strong> has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia Statistics). That’s more or less one user per article. The Italian encyclopaedia counts an…
+<a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external"> The <strong>Italian Wikipedia</strong> has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: Italian Wikipedia Statistics). That’s more or less one user per…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2015-08-04-dialects-italy/index.html">
+<a href="./posts/2015-08-04-dialects-italy/index.html" class="no-external">
 <div class="listing-date">
 Aug 4, 2015
 </div>
@@ -1006,32 +1010,30 @@ Stefano Coretta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="Linguistics" data-listing-date-sort="1404082800000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="23" data-categories="Linguistics" data-listing-date-sort="1404082800000" data-listing-file-modified-sort="1703975230243" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="538">
 <div class="thumbnail">
-<p><a href="./posts/2021-01-09-short-review/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2021-01-09-short-review/index.html" class="no-external"></a></p><a href="./posts/2021-01-09-short-review/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2021-01-09-short-review/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-01-09-short-review/index.html">
 <h3 class="no-anchor listing-title">
-Short review of phonological databases
+<a href="./posts/2021-01-09-short-review/index.html" class="no-external">Short review of phonological databases</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-01-09-short-review/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linguistics'); return false;">
 Linguistics
 </div>
 </div>
-<a href="./posts/2021-01-09-short-review/index.html">
 <div class="listing-description">
-List of available phonological databases (updated 2019-03-22):
+<a href="./posts/2021-01-09-short-review/index.html" class="no-external">List of available phonological databases (updated 2019-03-22):</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-01-09-short-review/index.html">
+<a href="./posts/2021-01-09-short-review/index.html" class="no-external">
 <div class="listing-date">
 Jun 30, 2014
 </div>
@@ -1125,10 +1127,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1138,8 +1139,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1152,6 +1162,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1195,6 +1324,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1220,6 +1350,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1280,6 +1436,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

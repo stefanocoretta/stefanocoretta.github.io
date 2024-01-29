@@ -312,119 +312,14 @@
     "href": "teaching.html",
     "title": "Courses",
     "section": "",
-    "text": "Check the Data Analysis @ UoE LEL website for learning resourses on research methods in linguistics.\n\n\n\nQuantitative Methods for Linguistics and English Language (Semester 1). Course website\nData Analysis for Linguistics and English Language (Semester 1). Course website\n\n\n\n\n\nStatistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website\n\n\n\n\n\nResearch Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
-  },
-  {
-    "objectID": "teaching.html#section",
-    "href": "teaching.html#section",
-    "title": "Courses",
-    "section": "",
-    "text": "Quantitative Methods for Linguistics and English Language (Semester 1). Course website\nData Analysis for Linguistics and English Language (Semester 1). Course website"
-  },
-  {
-    "objectID": "teaching.html#section-1",
-    "href": "teaching.html#section-1",
-    "title": "Courses",
-    "section": "",
-    "text": "Statistics and Quantitative Methods (Semester 1) [LASC11171]. Course website\nStatistics and Quantitative Methods (Semester 2) [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website"
-  },
-  {
-    "objectID": "teaching.html#section-2",
-    "href": "teaching.html#section-2",
-    "title": "Courses",
-    "section": "",
-    "text": "Research Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138]."
-  },
-  {
-    "objectID": "teaching.html#learnbayes-bayesian-linear-models-for-linguistics",
-    "href": "teaching.html#learnbayes-bayesian-linear-models-for-linguistics",
-    "title": "Courses",
-    "section": "learnBayes: Bayesian linear models for Linguistics",
-    "text": "learnBayes: Bayesian linear models for Linguistics\nAn introduction to Bayesian linear models in R for linguists.\nSee the worksop website."
-  },
-  {
-    "objectID": "teaching.html#learnb4ss-learn-bayesian-analysis-for-speech-sciences",
-    "href": "teaching.html#learnb4ss-learn-bayesian-analysis-for-speech-sciences",
-    "title": "Courses",
-    "section": "learnB4SS: Learn Bayesian Analysis for Speech Sciences",
-    "text": "learnB4SS: Learn Bayesian Analysis for Speech Sciences\n Together with Timo Roettger and Joseph V. Casillas, we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST). After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R (R Core Team 2020) and the package brms (Bürkner 2018).\nWe explain how to set up a Bayesian regression model (including setting appropriate priors), how to interpret the results, how to diagnose model convergence, and how to visualize and report the results. In hands-on exercises, the participants immediately apply their knowledge to a speech data set in R.\nCheck out the workshop website for more info."
-  },
-  {
-    "objectID": "teaching.html#intro-data-visualisation-with-r",
-    "href": "teaching.html#intro-data-visualisation-with-r",
-    "title": "Courses",
-    "section": "intro: Data visualisation with R",
-    "text": "intro: Data visualisation with R\n The past two decades have seen a dramatic increase in availability of data, which has expanded the range of phenomena that can be investigated. The Humanities and Social Sciences can now benefit from such an abundance of data and integrate qualitative and quantitative methods.\nThis workshop introduces absolute beginners to computational principles and tools of data visualisation, processing, and exploration with the statistical software R.\nNo previous knowledge of quantitative analysis, statistics, nor programming required, just curiosity and a sense of adventure.\nYou can learn more about the workshop by visiting the website."
-  },
-  {
-    "objectID": "teaching.html#an-introduction-to-gamms",
-    "href": "teaching.html#an-introduction-to-gamms",
-    "title": "Courses",
-    "section": "An introduction to GAM(M)s",
-    "text": "An introduction to GAM(M)s\nThis workshop introduces participants to Generalised Additive (Mixed) Models, or GA(M)Ms, which can be used to model non-linear data (e.g. f0 contours, formant trajectories, tongue contours) and spatial data (Wood 2017).\nCheck out the workshop materials."
-  },
-  {
-    "objectID": "teaching.html#data-version-control-for-researchers",
-    "href": "teaching.html#data-version-control-for-researchers",
-    "title": "Courses",
-    "section": "Data Version Control for Researchers",
-    "text": "Data Version Control for Researchers\nA fundamental aspect of Open Research is ensuring the reproducibility of data processing and analyses. Part of this endeavour is concerned with data versioning and backup. Many researchers have now become familiar with versioning systems like git, popularised by the GitHub online platform.\nThis workshop will introduce participants to the Data Version Control software (DVC), specifically designed to work efficiently with non-textual data types. DVC works in unison with git, so that git users can simply add it to their existing workflow and integrate code and data versioning.\nAfter a brief conceptual introduction to version control, git and DVC, participants are guided through a hands-on tutorial which teaches them the basics of git and DVC versioning using a toy project. Only basic familiarity with file management and command line is required (https://tutorial.djangogirls.org/en/intro_to_command_line/).\nFind here the workshop materials."
-  },
-  {
-    "objectID": "teaching.html#introduction-to-xelatex",
-    "href": "teaching.html#introduction-to-xelatex",
-    "title": "Courses",
-    "section": "Introduction to (Xe)LaTeX",
-    "text": "Introduction to (Xe)LaTeX\nXeLaTex is is a mark-up language for text editing and typesetting (and more). It’s a dialect of the LaTeX format that introduces full Unicode support and handling of TTF and OTF fonts.\nCheck out the workshop materials."
+    "text": "Courses\nCheck the Data Analysis @ UoE LEL website for learning resources on research methods in linguistics.\n\n\n\n\n\n\nCurrent\n\n\n\n\nQuantitative Methods for Linguistics and English Language (postgraduate). Course website\nData Analysis for Linguistics and English Language (undergraduate). Course website\n\n\n\n\n\n\n\n\n\nPrevious\n\n\n\n\nStatistics and Quantitative Methods [LASC11171]. Course website\nStatistics and Quantitative Methods [LASC11172]. Course website\nMaking a language: Conlanging and Linguistic Typology (Guided Research in Linguistics and English Language). Course website\nResearch Methods in Developmental Linguistics [LASC11127].\nIndividual classes taught in Introduction to Language Research [LASC11091], Phonetics and Laboratory Phonology [LASC11137], Speech Production and Perception [LASC11138].\n\n\n\n\n\nWorkshops\nHere you can find information on workshops I offer. Adaptations of pre-existing workshops (e.g. shorter/longer version, focus on a specific topic/field) are possible and proposals for new workshops are welcome. Get in contact with me for queries.\n\n\n\n\n\n\nlearnBayes: Bayesian linear models for Linguistics\n\n\n\nAn introduction to Bayesian linear models in R for linguists.\nSee the worksop website.\n\n\n\n\n\n\n\n\nbasicBayes: Learn Bayesian Linear Models for Beginners\n\n\n\nThis workshop introduces Bayesian linear models in R to participants without previous knowledge of linear models (but knowledge of R).\nSee the worksop website.\n\n\n\n\n\n\n\n\nlearnGAM: Learn Generalised Additive (Mixed) Models\n\n\n\nThis workshop introduces participants to Generalised Additive (Mixed) Models, or GA(M)Ms, which can be used to model non-linear data (e.g. f0 contours, formant trajectories, tongue contours) and spatial data (Wood 2017).\nSee the worksop website.\n\n\n\n\n\n\n\n\nintro: Data visualisation with R\n\n\n\n The past two decades have seen a dramatic increase in availability of data, which has expanded the range of phenomena that can be investigated. The Humanities and Social Sciences can now benefit from such an abundance of data and integrate qualitative and quantitative methods.\nThis workshop introduces absolute beginners to computational principles and tools of data visualisation, processing, and exploration with the statistical software R.\nNo previous knowledge of quantitative analysis, statistics, nor programming required, just curiosity and a sense of adventure.\nYou can learn more about the workshop by visiting the website.\n\n\n\n\n\n\n\n\nlearnB4SS: Learn Bayesian Analysis for Speech Sciences\n\n\n\n Together with Timo Roettger and Joseph V. Casillas, we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST). After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R (R Core Team 2020) and the package brms (Bürkner 2018).\nWe explain how to set up a Bayesian regression model (including setting appropriate priors), how to interpret the results, how to diagnose model convergence, and how to visualize and report the results. In hands-on exercises, the participants immediately apply their knowledge to a speech data set in R.\nCheck out the workshop website for more info.\n\n\n\n\n\n\n\n\nData Version Control for Researchers\n\n\n\nA fundamental aspect of Open Research is ensuring the reproducibility of data processing and analyses. Part of this endeavour is concerned with data versioning and backup. Many researchers have now become familiar with versioning systems like git, popularised by the GitHub online platform.\nThis workshop will introduce participants to the Data Version Control software (DVC), specifically designed to work efficiently with non-textual data types. DVC works in unison with git, so that git users can simply add it to their existing workflow and integrate code and data versioning.\nAfter a brief conceptual introduction to version control, git and DVC, participants are guided through a hands-on tutorial which teaches them the basics of git and DVC versioning using a toy project. Only basic familiarity with file management and command line is required (https://tutorial.djangogirls.org/en/intro_to_command_line/).\nFind here the workshop materials.\n\n\n\n\n\n\n\n\nIntroduction to (Xe)LaTeX\n\n\n\nXeLaTex is is a mark-up language for text editing and typesetting (and more). It’s a dialect of the LaTeX format that introduces full Unicode support and handling of TTF and OTF fonts.\nCheck out the workshop materials.\n\n\n\n\n\n\n\n\n\n\nReferences\n\nBürkner, Paul-Christian. 2018. Advanced Bayesian multilevel modeling with the R package brms. The R Journal 10(1). 395–411. https://doi.org/10.32614/RJ-2018-017.\n\n\nR Core Team. 2020. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria.\n\n\nWood, Simon. 2017. Generalized additive models: An introduction with R. 2nd edn. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370279."
   },
   {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds, and in particular speech production, from a variety of intersecting perspectives, including:\nThe other strand of my research expertise is related to research methods and statistics. In particular, I am an enthusiastic advocate of Open Research (aka Open Science) and Bayesian inference.\nFor an overview of the research meta-models that inform my research, see the Meta page."
-  },
-  {
-    "objectID": "research.html#gallo-italian-vitality",
-    "href": "research.html#gallo-italian-vitality",
-    "title": "Research",
-    "section": "Gallo-Italian vitality",
-    "text": "Gallo-Italian vitality\nIn this project with Jessica Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy."
-  },
-  {
-    "objectID": "research.html#many-speech-analyses",
-    "href": "research.html#many-speech-analyses",
-    "title": "Research",
-    "section": "Many Speech Analyses",
-    "text": "Many Speech Analyses\nThe Many Speech Analyses project (with Timo Roettger and Joseph V. Casillas) tries to quantify the analytic flexibility in the speech sciences and explores how it affects our scientific conclusions. To that end, we will ask speech researchers to analyze the same data set in order to answer the same research question.\nMore information can be found at https://many-speech-analyses.github.io and in the compendium https://osf.io/3bmcp/."
-  },
-  {
-    "objectID": "research.html#the-sounds-of-albanian",
-    "href": "research.html#the-sounds-of-albanian",
-    "title": "Research",
-    "section": "The sounds of Albanian",
-    "text": "The sounds of Albanian\nIn collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and Stephen Nichols, we have investigate the sound system of Albanian.\nThe first objective of the project was to produce an IPA illustration for Tosk Albanian which has been accepted for publication in JIPA.\nYou can read the accepted manuscript here: https://osf.io/mb2hg/."
-  },
-  {
-    "objectID": "research.html#human-interaction-and-the-evolution-of-spoken-accent",
-    "href": "research.html#human-interaction-and-the-evolution-of-spoken-accent",
-    "title": "Research",
-    "section": "Human interaction and the evolution of spoken accent",
-    "text": "Human interaction and the evolution of spoken accent\nI worked within the ERC project Human interaction and the evolution of spoken accent (PI Prof. Jonathan Harrington) at the Institut für Phonetik und Sprachverarbeitung. This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change."
-  },
-  {
-    "objectID": "research.html#nasal-coarticulation-and-sound-change-a-real-time-mri-study",
-    "href": "research.html#nasal-coarticulation-and-sound-change-a-real-time-mri-study",
-    "title": "Research",
-    "section": "Nasal coarticulation and sound-change: a real-time MRI study",
-    "text": "Nasal coarticulation and sound-change: a real-time MRI study\nI conducted research within the DFG project Nasal coarticulation and sound-change: a real-time MRI study (PI Prof. Jonathan Harrington)."
-  },
-  {
-    "objectID": "research.html#vowel-duration-and-consonant-voicing-a-production-study",
-    "href": "research.html#vowel-duration-and-consonant-voicing-a-production-study",
-    "title": "Research",
-    "section": "Vowel duration and consonant voicing: a production study",
-    "text": "Vowel duration and consonant voicing: a production study\nAs part of my PhD research at the University of Manchester, supervised by Dr Ricardo Bermúdez-Otero and Dr Patrycja Strycharczuk), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, ultrasound tongue imaging and electroglottography. My thesis is available here."
+    "text": "My research interests span a range of topics within linguistics, although the main focus is on the study of speech sounds, and in particular speech production, from a variety of intersecting perspectives, including:\n\nAcoustics and articulation.\nDescriptive, historical, and comparative linguistic (typology).\nLanguage endangerment.\nComputational modelling.\n\nThe other strand of my research expertise is related to research methods and statistics. In particular, I am an enthusiastic advocate of Open Research (aka Open Science) and Bayesian inference.\nFor an overview of the research meta-models that inform my research, see the Meta page.\n\nCurrent projects\n\n\n\n\n\n\nGallo-Italian vitality\n\n\n\nIn this project with Jessica Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.\n\n\n\n\nPast projects\n\n\n\n\n\n\nMany Speech Analyses\n\n\n\n\n\nThe Many Speech Analyses project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.\nThe paper with the study results has been published in AMPPS (DOI 10.1177/25152459231162567, Research Compendium https://osf.io/3bmcp/).\n\n\n\n\n\n\n\n\n\nThe sounds of Albanian\n\n\n\n\n\nIn collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and Stephen Nichols, we have investigate the sound system of Albanian.\nThe first objective of the project was to produce an IPA illustration for Tosk Albanian which has been published in JIPA (DOI 10.1017/S0025100322000044, Research Compendium https://osf.io/vry3h/).\n\n\n\n\n\n\n\n\n\nHuman interaction and the evolution of spoken accent\n\n\n\n\n\nI worked within the ERC project Human interaction and the evolution of spoken accent (PI Prof. Jonathan Harrington) at the Institut für Phonetik und Sprachverarbeitung. This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.\n\n\n\n\n\n\n\n\n\nNasal coarticulation and sound-change: a real-time MRI study\n\n\n\n\n\nI conducted research within the DFG project Nasal coarticulation and sound-change: a real-time MRI study (PI Prof. Jonathan Harrington).\n\n\n\n\n\n\n\n\n\nVowel duration and consonant voicing: a production study\n\n\n\n\n\nAs part of my PhD research at the University of Manchester, supervised by Dr Ricardo Bermúdez-Otero and Dr Patrycja Strycharczuk), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, ultrasound tongue imaging and electroglottography. My thesis is available here.\n\n\n\n\n\nGlossolects\n\n\n\n\n\n\n\nThe map shows in blue the main glossolects I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).\nOverall, my interests and expertise cover the following macro-glossolects:\n\nIndo-European.\nOceanic.\nSouth American.\n\nI would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with."
   },
   {
     "objectID": "posts/2021-01-09-phono-restrictions-pie/index.html",

@@ -42,3 +42,5 @@ execute:
 knitr:
   opts_chunk: 
     message: false
+
+callout-icon: false

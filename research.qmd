@@ -16,41 +16,50 @@ For an overview of the research meta-models that inform my research, see the [Me
 
 # Current projects
 
+::: callout-note
 ## Gallo-Italian vitality
 
 In this project with Jessica Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
+:::
 
 # Past projects
 
+::: {.callout-note collapse="true"}
 ## Many Speech Analyses
 
-The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) tries to quantify the analytic flexibility in the speech sciences and explores how it affects our scientific conclusions.
-To that end, we will ask speech researchers to analyze the same data set in order to answer the same research question.
+The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions.
+To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
 
-More information can be found at <https://many-speech-analyses.github.io> and in the compendium <https://osf.io/3bmcp/>.
+The paper with the study results has been published in AMPPS (DOI [10.1177/25152459231162567](https://doi.org/10.1177/25152459231162567), Research Compendium <https://osf.io/3bmcp/>).
+:::
 
+::: {.callout-note collapse="true"}
 ## The sounds of Albanian
 
 In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we have investigate the sound system of Albanian.
 
-The first objective of the project was to produce an IPA illustration for Tosk Albanian which has been accepted for publication in JIPA.
+The first objective of the project was to produce an IPA illustration for Tosk Albanian which has been published in JIPA (DOI [10.1017/S0025100322000044](https://doi.org/10.1017/S0025100322000044), Research Compendium <https://osf.io/vry3h/>).
+:::
 
-You can read the accepted manuscript here: <https://osf.io/mb2hg/>.
-
+::: {.callout-note collapse="true"}
 ## Human interaction and the evolution of spoken accent
 
 I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
 This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+:::
 
+::: {.callout-note collapse="true"}
 ## Nasal coarticulation and sound-change: a real-time MRI study
 
 I conducted research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html) (PI Prof. Jonathan Harrington).
+:::
 
+::: {.callout-note collapse="true"}
 ## Vowel duration and consonant voicing: a production study
 
 As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
 My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
-
+:::
 
 # Glossolects
 

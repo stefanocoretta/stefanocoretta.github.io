@@ -1,43 +1,61 @@
 # Courses
 
-Check the  [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learning resourses on research methods in linguistics.
+Check the  [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learning resources on research methods in linguistics.
 
-## 2023-2024
+::: callout-note
+## Current
 
-- **Quantitative Methods for Linguistics and English Language** (Semester 1). [Course website](https://uoelel.github.io/qml/)
-- **Data Analysis for Linguistics and English Language** (Semester 1). [Course website](https://uoelel.github.io/qml/)
+- **Quantitative Methods for Linguistics and English Language** (postgraduate). [Course website](https://uoelel.github.io/qml/)
 
-## 2022-2023
+- **Data Analysis for Linguistics and English Language** (undergraduate). [Course website](https://uoelel.github.io/qml/)
 
--   **Statistics and Quantitative Methods** (Semester 1) \[[LASC11171](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11171.htm)\]. [Course website](https://stefanocoretta.github.io/sqmf/)
--   **Statistics and Quantitative Methods** (Semester 2) \[[LASC11172](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11172.htm)\]. [Course website](https://stefanocoretta.github.io/sqmb/)
+:::
+
+
+::: callout-note
+## Previous
+
+-   **Statistics and Quantitative Methods** \[[LASC11171](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11171.htm)\]. [Course website](https://stefanocoretta.github.io/sqmf/)
+
+-   **Statistics and Quantitative Methods** \[[LASC11172](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11172.htm)\]. [Course website](https://stefanocoretta.github.io/sqmb/)
+
 -   **Making a language: Conlanging and Linguistic Typology** (Guided Research in Linguistics and English Language). [Course website](https://stefanocoretta.github.io/grs-conlang/)
-
-## 2021-2022
 
 -   **Research Methods in Developmental Linguistics** \[[LASC11127](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11127.htm)\].
 
 -   Individual classes taught in **Introduction to Language Research** \[[LASC11091](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11091.htm)\], **Phonetics and Laboratory Phonology** \[[LASC11137](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11137.htm)\], **Speech Production and Perception** \[[LASC11138](http://www.drps.ed.ac.uk/21_22_Archive_at_01-09-2021/dpt/cxlasc11138.htm)\].
+:::
 
 # Workshops
 
 Here you can find information on workshops I offer. Adaptations of pre-existing workshops (e.g. shorter/longer version, focus on a specific topic/field) are possible and proposals for new workshops are welcome. Get in contact with me for queries.
 
-## learnBayes: Bayesian linear models for Linguistics
+::: callout-note
+## `learnBayes`: Bayesian linear models for Linguistics
 
 An introduction to Bayesian linear models in R for linguists.
 
 See the [worksop website](https://stefanocoretta.github.io/learnBayes/).
+:::
 
-## learnB4SS: Learn Bayesian Analysis for Speech Sciences
+::: callout-note
+## `basicBayes`: Learn Bayesian Linear Models for Beginners
 
-[![](img/b4ss-logo.png){style="float: right; margin-left: 20px !important;" width="100"}](https://github.com/learnB4SS/learnB4SS) Together with [Timo Roettger](https://www.simplpoints.com) and [Joseph V. Casillas](https://www.jvcasillas.com), we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST). After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R [@rct2020] and the package brms [@buerkner2018].
+This workshop introduces Bayesian linear models in R to participants without previous knowledge of linear models (but knowledge of R).
 
-We explain how to set up a Bayesian regression model (including setting appropriate priors), how to interpret the results, how to diagnose model convergence, and how to visualize and report the results. In hands-on exercises, the participants immediately apply their knowledge to a speech data set in R.
+See the [worksop website](https://stefanocoretta.github.io/basicBayes/).
+:::
 
-Check out the [workshop website](https://learnb4ss.github.io) for more info.
+::: callout-note
+## `learnGAM`: Learn Generalised Additive (Mixed) Models
 
-## intro: Data visualisation with R
+This workshop introduces participants to Generalised Additive (Mixed) Models, or GA(M)Ms, which can be used to model non-linear data (e.g. f0 contours, formant trajectories, tongue contours) and spatial data [@wood2017].
+
+See the [worksop website](https://stefanocoretta.github.io/learnGAM/).
+:::
+
+::: callout-note
+## `intro`: Data visualisation with R
 
 [![](img/intro-logo.png){style="float: right; margin-left: 20px !important;" width="100"}](https://intro-rstats.github.io/intRo) The past two decades have seen a dramatic increase in availability of data, which has expanded the range of phenomena that can be investigated. The Humanities and Social Sciences can now benefit from such an abundance of data and integrate qualitative and quantitative methods.
 
@@ -46,13 +64,19 @@ This workshop introduces absolute beginners to computational principles and tool
 No previous knowledge of quantitative analysis, statistics, nor programming required, just curiosity and a sense of adventure.
 
 You can learn more about the workshop by visiting the [website](https://intro-rstats.github.io).
+:::
 
-## An introduction to GAM(M)s
+::: callout-note
+## `learnB4SS`: Learn Bayesian Analysis for Speech Sciences
 
-This workshop introduces participants to Generalised Additive (Mixed) Models, or GA(M)Ms, which can be used to model non-linear data (e.g. f0 contours, formant trajectories, tongue contours) and spatial data [@wood2017].
+[![](img/b4ss-logo.png){style="float: right; margin-left: 20px !important;" width="100"}](https://github.com/learnB4SS/learnB4SS) Together with [Timo Roettger](https://www.simplpoints.com) and [Joseph V. Casillas](https://www.jvcasillas.com), we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST). After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R [@rct2020] and the package brms [@buerkner2018].
 
-Check out the [workshop materials](https://github.com/stefanocoretta/gamm-workshop).
+We explain how to set up a Bayesian regression model (including setting appropriate priors), how to interpret the results, how to diagnose model convergence, and how to visualize and report the results. In hands-on exercises, the participants immediately apply their knowledge to a speech data set in R.
 
+Check out the [workshop website](https://learnb4ss.github.io) for more info.
+:::
+
+::: callout-note
 ## Data Version Control for Researchers
 
 A fundamental aspect of Open Research is ensuring the reproducibility of data processing and analyses. Part of this endeavour is concerned with data versioning and backup. Many researchers have now become familiar with versioning systems like git, popularised by the GitHub online platform.
@@ -62,11 +86,14 @@ This workshop will introduce participants to the Data Version Control software (
 After a brief conceptual introduction to version control, git and DVC, participants are guided through a hands-on tutorial which teaches them the basics of git and DVC versioning using a toy project. Only basic familiarity with file management and command line is required (<https://tutorial.djangogirls.org/en/intro_to_command_line/>).
 
 Find here the [workshop materials](https://github.com/stefanocoretta/dvc-res).
+:::
 
+::: callout-note
 ## Introduction to (Xe)LaTeX
 
 XeLaTex is is a mark-up language for text editing and typesetting (and more). It's a dialect of the LaTeX format that introduces full Unicode support and handling of TTF and OTF fonts.
 
 Check out the [workshop materials](https://github.com/stefanocoretta/xelatex-workshop).
+:::
 
 ### References

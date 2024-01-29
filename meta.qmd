@@ -90,4 +90,4 @@ In sum:
 -   A **resource** is any object (publication, media, etc.) containing linguistic materials.
 -   Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
 
-## References
+## References {.unnumbered}

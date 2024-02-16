@@ -10,6 +10,7 @@ project:
 
 website:
   title: "Stefano Coretta"
+  favicon: img/favicon.png
   navbar:
     left:
       - href: index.qmd

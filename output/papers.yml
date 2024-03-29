@@ -7,7 +7,9 @@
 - title: "A tutorial on Generalised Additive Mixed Effects Models for bilingualism research"
   author: "Stefano Coretta, Joseph V. Casillas"
   year: submitted
+  journal: "Linguistic Approaches to Bilingualism"
   submitted: "10.31219/osf.io/8grj5"
+  compendium: "https://github.com/stefanocoretta/gamm_biling"
 - title: "Measuring spaces and observing attitudes: a comparative analysis on the language practices of Emilian and Esperanto speakers"
   author: "Jessica Hampton, Stefano Coretta"
   year: submitted

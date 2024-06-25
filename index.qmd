@@ -24,7 +24,7 @@ format:
 
 <br>
 
-I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, Tenured**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
+I am the Senior Teaching Coordinator for Statistics (**Teaching Fellow, permanent**) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
 
 I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses. Get in contact with me for info.
 

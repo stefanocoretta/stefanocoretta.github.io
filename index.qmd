@@ -13,6 +13,7 @@ format:
 # Stefano Coretta
 
 | \[ˈsteˑfano koˈrɛtta\]
+| Lecturer (Assistant Professor)
 | **University of Edinburgh**
 | [s.coretta\@ed.ac.uk](mailto:s.coretta@ed.ac.uk){.email}
 

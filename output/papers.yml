@@ -10,16 +10,16 @@
   journal: "Linguistic Approaches to Bilingualism"
   submitted: "10.31219/osf.io/8grj5"
   compendium: "https://github.com/stefanocoretta/gamm_biling"
-- title: "Measuring spaces and observing attitudes: a comparative analysis on the language practices of Emilian and Esperanto speakers"
-  author: "Jessica Hampton, Stefano Coretta"
-  year: submitted
-  journal: Languages
-  submitted: "https://doi.org/10.31219/osf.io/jqgku"
-  compendium: "https://github.com/stefanocoretta/emilian-esperanto"
 - title: "V2-Relatives in Old English"
   author: "Bettelou Los, Stefano Coretta"
   year: submitted
   compendium: "https://github.com/stefanocoretta/aelfric-relatives"
+- title: "Measuring spaces and observing attitudes: a comparative analysis on the language practices of Emilian and Esperanto speakers"
+  author: "Jessica Hampton, Stefano Coretta"
+  year: accepted
+  journal: "Journal of Multilingual and Multicultural Development"
+  accepted: "https://doi.org/10.31219/osf.io/jqgku"
+  compendium: "https://github.com/stefanocoretta/emilian-esperanto"
 - title: "Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
   open: true
   rr: true

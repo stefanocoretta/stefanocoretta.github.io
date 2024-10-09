@@ -1,19 +1,17 @@
 ---
 - title: "Intrinsic vowel duration in Northwestern Italian: Bio-mechanical or more?"
   author: "Stefano Coretta"
-  year: submitted
-  journal: "Journal of the Association for Laboratory Phonology"
-  submitted: "10.31219/osf.io/83afz"
-- title: "A tutorial on Generalised Additive Mixed Effects Models for bilingualism research"
-  author: "Stefano Coretta, Joseph V. Casillas"
-  year: submitted
-  journal: "Linguistic Approaches to Bilingualism"
-  submitted: "10.31219/osf.io/8grj5"
-  compendium: "https://github.com/stefanocoretta/gamm_biling"
+  submitted: "https://doi.org/10.31219/osf.io/83afz"
 - title: "V2-Relatives in Old English"
   author: "Bettelou Los, Stefano Coretta"
   year: submitted
   compendium: "https://github.com/stefanocoretta/aelfric-relatives"
+- title: "A tutorial on Generalised Additive Mixed Effects Models for bilingualism research"
+  author: "Stefano Coretta, Joseph V. Casillas"
+  year: accepted
+  journal: "Linguistic Approaches to Bilingualism"
+  submitted: "https://doi.org/10.31219/osf.io/8grj5"
+  compendium: "https://github.com/stefanocoretta/gamm_biling"
 - title: "Measuring spaces and observing attitudes: a comparative analysis on the language practices of Emilian and Esperanto speakers"
   author: "Jessica Hampton, Stefano Coretta"
   year: accepted

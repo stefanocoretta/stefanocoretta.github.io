@@ -13,9 +13,11 @@
   submitted: "https://doi.org/10.31219/osf.io/8grj5"
   compendium: "https://github.com/stefanocoretta/gamm_biling"
 - title: "Measuring spaces and observing attitudes: a comparative analysis on the language practices of Emilian and Esperanto speakers"
+  open: true
   author: "Jessica Hampton, Stefano Coretta"
-  year: accepted
+  year: 2024
   journal: "Journal of Multilingual and Multicultural Development"
+  doi: "10.1080/01434632.2024.2413933"
   accepted: "https://doi.org/10.31219/osf.io/jqgku"
   compendium: "https://github.com/stefanocoretta/emilian-esperanto"
 - title: "Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"

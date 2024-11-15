@@ -11,8 +11,8 @@
   year: 2024
   author: Stefano Coretta and Georges Sakr
   location: "Poster presented at Ultrafest 2024"
-  download: "..files/pubs/2024-ultrafest.pdf"
-  abstract: "..files/pubs/2024-ultrafest-abs.pdf"
+  download: "../files/pubs/2024-ultrafest.pdf"
+  abstract: "../files/pubs/2024-ultrafest-abs.pdf"
 - title: "Is vowel duration the product of gestural timing alone? Data from Northwestern Italian"
   year: 2024
   location: "Talk given at the British Association of Academic Phoneticians (BAAP) 2024"

@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.4.0",
+    "Version": "4.4.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -102,14 +102,14 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.13",
+      "Version": "1.0.13-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "methods",
         "utils"
       ],
-      "Hash": "f27411eb6d9c3dada5edd444b8416675"
+      "Hash": "6b868847b365672d6c1677b1608da9ed"
     },
     "askpass": {
       "Package": "askpass",
@@ -1808,7 +1808,7 @@
         "rappdirs",
         "rlang"
       ],
-      "Hash": "776956fae040f2953473ef87d54af944"
+      "Hash": "035f2a240f7d770f65cc9df203015b18"
     },
     "scales": {
       "Package": "scales",

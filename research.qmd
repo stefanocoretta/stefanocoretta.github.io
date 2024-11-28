@@ -17,9 +17,21 @@ For an overview of the research meta-models that inform my research, see the [Me
 # Current projects
 
 ::: callout-note
+## Intrinsic vowel duration and gestural distance
+
+Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.
+:::
+
+::: callout-note
+## Hemispheric differences in specificity effects of priming
+
+Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.
+:::
+
+::: callout-note
 ## Gallo-Italian vitality
 
-In this project with Jessica Hampton and Simone De Cia, we are planning a survey study of the vitality of Gallo-Italian in the north of Italy.
+In this project with Jessica Hampton and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Italian in the north of Italy.
 :::
 
 # Past projects

@@ -5,6 +5,8 @@ number-sections: true
 
 In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
 
+Also, check [My positionality statement](posts/2021-04-29-positionality/).
+
 # Research methods
 
 As far as research methods are concerned, I am an enthusiastic advocate of **Open Research**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].[^1]
@@ -52,7 +54,7 @@ In my view of phonetology, a phonetological system has the following properties:
         -   It uses both *stored exemplars and stored abstractions* at multiple levels [@ambridge2020].
 -   It is part of a complex **socio-cultural system** [@boer2015; @foulkes2006; @thompson2016].
 
-I also consider these statements to be extendible more generally to linguisticality [@haspelmath2020] as a holistic system.
+I also consider these statements to be extendible more generally to Human Language as a holistic system.
 
 # Linguistic systems
 

@@ -5,15 +5,15 @@ Check the  [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learn
 ::: callout-note
 ## Current
 
-- **Quantitative Methods for Linguistics and English Language** (postgraduate). [Course website](https://uoelel.github.io/qml/)
-
-- **Data Analysis for Linguistics and English Language** (undergraduate). [Course website](https://uoelel.github.io/qml/)
+- **Quantitative Methods for Linguistics and English Language** (UG and PG). [Course website](https://uoelel.github.io/qml/)
 
 :::
 
 
 ::: callout-note
 ## Previous
+
+- **Data Analysis for Linguistics and English Language** (undergraduate). [Course website](https://uoelel.github.io/qml/)
 
 -   **Statistics and Quantitative Methods** \[[LASC11171](http://www.drps.ed.ac.uk/22-23/dpt/cxlasc11171.htm)\]. [Course website](https://stefanocoretta.github.io/sqmf/)
 

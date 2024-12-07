@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -56,10 +56,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-41effea207130406f8648ecf69b4266b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -186,6 +186,7 @@ div.csl-indent {
 
 
 <p>In the following sections, I outline some of the conceptual and methodological aspects (<span class="smallcaps">meta-models</span>) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.</p>
+<p>Also, check <a href="posts/2021-04-29-positionality/">My positionality statement</a>.</p>
 <section id="research-methods" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Research methods</h1>
 <p>As far as research methods are concerned, I am an enthusiastic advocate of <strong>Open Research</strong>, a term which encompasses “concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge” <span class="citation" data-cites="cruewell2019">(<a href="#ref-cruewell2019" role="doc-biblioref">Crüwell et al. 2019</a>)</span> put to the service of “making the content and process of producing evidence and claims transparent and accessible to others” <span class="citation" data-cites="munafo2017">(<a href="#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
@@ -226,7 +227,7 @@ div.csl-indent {
 </ul></li>
 <li>It is part of a complex <strong>socio-cultural system</strong> <span class="citation" data-cites="boer2015 foulkes2006 thompson2016">(<a href="#ref-boer2015" role="doc-biblioref">Boer 2015</a>; <a href="#ref-foulkes2006" role="doc-biblioref">Foulkes &amp; Docherty 2006</a>; <a href="#ref-thompson2016" role="doc-biblioref">Thompson, Kirby &amp; Smith 2016</a>)</span>.</li>
 </ul>
-<p>I also consider these statements to be extendible more generally to linguisticality <span class="citation" data-cites="haspelmath2020">(<a href="#ref-haspelmath2020" role="doc-biblioref">Haspelmath 2020</a>)</span> as a holistic system.</p>
+<p>I also consider these statements to be extendible more generally to Human Language as a holistic system.</p>
 </section>
 <section id="linguistic-systems" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Linguistic systems</h1>
@@ -290,9 +291,6 @@ Dienes, Zoltan. 2008. <em>Understanding psychology as a science: An introduction
 </div>
 <div id="ref-foulkes2006" class="csl-entry" role="listitem">
 Foulkes, Paul &amp; Gerard Docherty. 2006. The social life of phonetics and phonology. <em>Journal of Phonetics</em>. Elsevier 34(4). 409–438. <a href="https://doi.org/10.1016/j.wocn.2005.08.002">https://doi.org/10.1016/j.wocn.2005.08.002</a>.
-</div>
-<div id="ref-haspelmath2020" class="csl-entry" role="listitem">
-Haspelmath, Martin. 2020. Human linguisticality and the building blocks of languages. <em>Frontiers in Psychology</em> 10. 3056. <a href="https://doi.org/10.3389/fpsyg.2019.03056">https://doi.org/10.3389/fpsyg.2019.03056</a>.
 </div>
 <div id="ref-howard1986" class="csl-entry" role="listitem">
 Howard, C. V. 1986. <em><span>M</span>awayana: Formulário dos vocabulários padrões</em>. Rio de Janeiro: Museu Nacional. Ms.
@@ -424,8 +422,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -536,7 +532,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

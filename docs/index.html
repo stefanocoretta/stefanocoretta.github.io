@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-41effea207130406f8648ecf69b4266b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -160,7 +160,7 @@ Lecturer (Assistant Professor)<br>
 <p><br></p>
 <p>I am a Lecturer (Assitant Professor) in the <a href="https://www.ed.ac.uk/ppls/linguistics-and-english-language">Linguistics and English Language department</a> of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.</p>
 <p>I am available as <strong>instructor for a range of <a href="./teaching.html#workshops">Workshops</a></strong> on statistics and research methods and as <strong>collaborator on projects or papers</strong> requiring the planning and execution of statistical analyses. Get in contact with me for info.</p>
-<p>My past and current research covers different areas of <em>linguistics</em>, with a focus on <a href="./meta.html#phonetology"><span class="smallcaps">phonetology</span></a>—the study of speech sounds and their relation to <em>linguisticality</em> (Human Language, see <a href="https://doi.org/10.3389/fpsyg.2019.03056">Haspelmath 2020</a>)—and <a href="./meta.html#research-methods"><span class="smallcaps">research methods</span></a> including statistics and Open Science practices. For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the <a href="./research.html">Research</a> and <a href="./meta.html">Meta-models</a> pages. You can find a list of research outputs (papers, software, etc) in <a href="./output/index.html">Output</a>.</p>
+<p>My past and current research covers different areas of <em>linguistics</em>, with a focus on <a href="./meta.html#phonetology"><span class="smallcaps">phonetology</span></a>—the study of speech sounds and their relation to Human Language—and <a href="./meta.html#research-methods"><span class="smallcaps">research methods</span></a> including statistics and Open Science practices. For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the <a href="./research.html">Research</a> and <a href="./meta.html">Meta-models</a> pages. You can find a list of research outputs (papers, software, etc) in <a href="./output/index.html">Output</a>.</p>
 <p>I received my PhD degree in linguistics from the University of Manchester (UK) in 2020. I was a postdoc researcher at the <a href="https://www.phonetik.uni-muenchen.de/">Institute of Phonetics and Speech Processing</a> at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021.</p>
 <div class="grid">
 <section id="interests" class="level4 g-col-6">
@@ -269,8 +269,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -381,7 +379,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

@@ -18,7 +18,7 @@ format:
 | [s.coretta\@ed.ac.uk](mailto:s.coretta@ed.ac.uk){.email}
 
 ::: {style="font-size: 1.8rem"}
-[{{< iconify fa6-brands square-github >}}](https://github.com/stefanocoretta) [{{< iconify academicons osf-square >}}](https://osf.io/e84dv/) [{{< iconify academicons orcid >}}](https://orcid.org/0000-0001-9627-5532) [{{< iconify academicons clarivate >}}](https://www.webofscience.com/wos/author/record/AFQ-0204-2022) [{{< iconify academicons stackoverflow >}}](https://stackoverflow.com/users/2804314/stefano?tab=profile) [{{< iconify fa6-brands square-twitter >}}](https://twitter.com/StefanoCoretta)
+[{{< iconify fa6-brands square-github >}}](https://github.com/stefanocoretta) [{{< iconify academicons osf-square >}}](https://osf.io/e84dv/) [{{< iconify academicons orcid >}}](https://orcid.org/0000-0001-9627-5532) [{{< iconify academicons clarivate >}}](https://www.webofscience.com/wos/author/record/AFQ-0204-2022) [{{< iconify academicons stackoverflow >}}](https://stackoverflow.com/users/2804314/stefano?tab=profile) [{{< iconify fa6-brands square-bluesky >}}](https://bsky.app/profile/scoretta.bsky.social)
 :::
 :::
 :::

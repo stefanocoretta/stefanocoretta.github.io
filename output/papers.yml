@@ -1,4 +1,10 @@
 ---
+- title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
+  year: submitted
+  author: "Stefano Coretta, Paul-Christian Bürkner"
+  doi: "10.31219/osf.io/f9rqg_v1"
+  submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
+  compendium: "https://github.com/stefanocoretta/beta-phon"
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   year: submitted
   author: "Stefano Coretta"

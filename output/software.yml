@@ -1,4 +1,11 @@
 ---
+- title: "rticulate: Ultrasound Tongue Imaging in R"
+  year: 2025
+  author: "Stefano Coretta"
+  version: "R package v2.0.1"
+  url: "https://stefanocoretta.github.io/rticulate/"
+  github: "https://github.com/stefanocoretta/rticulate"
+  doi: "10.5281/zenodo.1469038"
 - title: "tidygam: Tidy Prediction and Plotting of Generalised Additive Models"
   year: 2024
   author: "Stefano Coretta"
@@ -13,13 +20,6 @@
   url: "https://stefanocoretta.github.io/speakr/"
   github: "https://github.com/stefanocoretta/speakr"
   doi: "10.5281/zenodo.4014768"
-- title: "rticulate: Ultrasound Tongue Imaging in R"
-  year: 2022
-  author: "Stefano Coretta"
-  version: "R package v1.7.3"
-  url: "https://stefanocoretta.github.io/rticulate/"
-  github: "https://github.com/stefanocoretta/rticulate"
-  doi: "10.5281/zenodo.1469038"
 - title: "SFM exporter (Toolbox/FLEx SIL)"
   year: 2017
   author: "Stefano Coretta"

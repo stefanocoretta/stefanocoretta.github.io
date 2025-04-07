@@ -1,6 +1,6 @@
 # Courses
 
-Check the  [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learning resources on research methods in linguistics.
+Check the [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learning resources on research methods in linguistics.
 
 ::: callout-note
 ## Current
@@ -29,6 +29,8 @@ Check the  [Data Analysis @ UoE LEL](https://uoelel.github.io) website for learn
 # Workshops
 
 Here you can find information on workshops I offer. Adaptations of pre-existing workshops (e.g. shorter/longer version, focus on a specific topic/field) are possible and proposals for new workshops are welcome. Get in contact with me for queries.
+
+If you are looking for workshops run internally (in the LEL department of UoE), please check the [STeW](https://uoelel.github.io/stew.html) page on the [Data Analysis @ UoE LEL](https://uoelel.github.io).
 
 ::: callout-note
 ## `learnBayes`: Bayesian linear models for Linguistics

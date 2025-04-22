@@ -14,6 +14,7 @@ tags:
   - place of articulation
   - 3D
   - scatter plot
+bibliography: references.bib
 ---
 
 ```{r setup, message=FALSE}
@@ -22,6 +23,8 @@ knitr::opts_knit$set(root.dir = here::here())
 library(tidyverse)
 library(plotly)
 ```
+
+In this post, I plot data from @chodroff2019 in a 3D chart.
 
 ## Read data
 

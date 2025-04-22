@@ -263,14 +263,14 @@
     "href": "posts/2021-04-22-vot-and-place-of-articulation/index.html",
     "title": "R gist — VOT and place of articulation",
     "section": "",
-    "text": "vot &lt;- read_csv(\"./data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv\") %&gt;%\n  group_by(vot.category) %&gt;%\n  mutate(vot.mu_z = scale(vot.mu)) %&gt;%\n  ungroup() %&gt;%\n  pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;%\n  mutate(vot_category = recode(vot.category, long.lag = \"long lag\", short.lag = \"short lag\"))"
+    "text": "In this post, I plot data from Chodroff, Golden & Wilson (2019) in a 3D chart."
   },
   {
     "objectID": "posts/2021-04-22-vot-and-place-of-articulation/index.html#read-data",
     "href": "posts/2021-04-22-vot-and-place-of-articulation/index.html#read-data",
     "title": "R gist — VOT and place of articulation",
-    "section": "",
-    "text": "vot &lt;- read_csv(\"./data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv\") %&gt;%\n  group_by(vot.category) %&gt;%\n  mutate(vot.mu_z = scale(vot.mu)) %&gt;%\n  ungroup() %&gt;%\n  pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;%\n  mutate(vot_category = recode(vot.category, long.lag = \"long lag\", short.lag = \"short lag\"))"
+    "section": "Read data",
+    "text": "Read data\n\nvot &lt;- read_csv(\"./data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv\") %&gt;%\n  group_by(vot.category) %&gt;%\n  mutate(vot.mu_z = scale(vot.mu)) %&gt;%\n  ungroup() %&gt;%\n  pivot_wider(names_from = poa.broad, values_from = c(vot.mu, vot.mu_z)) %&gt;%\n  mutate(vot_category = recode(vot.category, long.lag = \"long lag\", short.lag = \"short lag\"))"
   },
   {
     "objectID": "posts/2021-04-22-vot-and-place-of-articulation/index.html#mean-vot",

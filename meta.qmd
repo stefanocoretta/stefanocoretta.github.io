@@ -5,7 +5,10 @@ number-sections: true
 
 In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
 
-Also, check [My positionality statement](posts/2021-04-29-positionality/).
+This is a work in progress, in two senses:
+
+-   In one sense, it is not exhaustive and I will be adding content as it occurs to me.
+-   In the other sense, it is an ever-changing document, since I will frequently change my mind about any part(s) of content herein.
 
 # Research methods
 
@@ -39,7 +42,7 @@ In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990
 
 Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
 
-# Phonetological systems
+## Phonetological systems
 
 A *phonetological system* is comprised of a set of [phonetological units]{.smallcaps} and their [relationships]{.smallcaps}. Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.
 
@@ -56,7 +59,7 @@ In my view of phonetology, a phonetological system has the following properties:
 
 I also consider these statements to be extendible more generally to Human Language as a holistic system.
 
-# Linguistic systems
+# Linguistic systems {#sec-lingsys}
 
 In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
 
@@ -91,5 +94,31 @@ In sum:
 -   A **glossonym** is a name used to refer to a linguistic entity.
 -   A **resource** is any object (publication, media, etc.) containing linguistic materials.
 -   Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
+
+# Linguistics
+
+The following sections provide a thought-out description of my ontological and epistemological beliefs in relation to "linguistics" and its object(s) of study. The reader should interpret all of the statements made here as "my personal opinion". In some cases *opinion* refers to my [expert opinion]{.smallcaps}, in others to my [intuitions]{.smallcaps} (for the use of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)). With time, I will add more references where/if relevant.
+
+## Ontological
+
+1.  [Human Language]{.smallcaps} is the human ability to communicate through a language, and a [language]{.smallcaps} is a specific communicative system used by a specific group of humans.
+2.  [linguisticality]{.smallcaps} is the prerequisite for Human Language [@haspelmath2020].
+3.  If one defines [Human Language]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have Human Language is a tautology.
+4.  All living beings are capable of communicating [even plants and fungi, @mancuso2015].
+
+## Epistemological
+
+1.  Linguistics is usually defined as a "science that studies Human Language", however there is no agreement as to what [science]{.smallcaps} actually is.
+2.  Science is not the only way to obtain knowledge. There are many epistemological practices or "ways of knowing". Like all ways of knowing, science is human activity.
+3.  I prefer to use the term [research]{.smallcaps} instead of science for all purposes.
+4.  Research has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
+5.  Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].
+6.  There is no agreement as to what [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
+7.  There is no agreement as to whether [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
+8.  There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
+9.  There is no agreement as to what [innate]{.smallcaps} actually means.
+10. There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
+    1.  If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
+11. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively). See @sec-lingsys.
 
 ## References {.unnumbered}

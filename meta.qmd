@@ -12,7 +12,7 @@ This is a work in progress, in two senses:
 
 # Research methods
 
-As far as research methods are concerned, I am an enthusiastic advocate of **Open Research**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruewell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].[^1]
+As far as research methods are concerned, I am an enthusiastic advocate of **Open Research**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruwell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].[^1]
 
 [^1]: *Open Research* is a more inclusive term than the more common *Open Science* term.
 
@@ -38,7 +38,9 @@ Philosophy and science might seem two very unrelated fields, but in fact **philo
 
 # Phonetology
 
-In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I refer to the set of sciences that investigate the [visual systems]{.smallcaps} (signing) and [sound systems]{.smallcaps} (speech sounds) of the world's languages with the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*).
+In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I suggest the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*) to refer to the study of what are traditionally investigated by phonology, phonetics and speech science.
+
+The postulation of three levels of analysis (phonological, phonetic and motor-perceptual) is compatible with neuro-biological specialisations of the brain cortex [@basilakos2018; @fedorenko2020; @ayyash2021; @fedorenko2024; @fedorenko2024a; @regev2024]. The tripartite nature of phonetological systems is reflected in the grammar architecture expounded in @bermudezotero2015 and @turk2020.
 
 Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
 
@@ -55,13 +57,13 @@ In my view of phonetology, a phonetological system has the following properties:
         -   It is *rich* in details [@johnson1997; @pierrehumbert2001; @bybee2002].
         -   It is *self-organising* and *emergent* [@wedel2007; @wedel2011].
         -   It uses both *stored exemplars and stored abstractions* at multiple levels [@ambridge2020].
--   It is part of a complex **socio-cultural system** [@boer2015; @foulkes2006; @thompson2016].
+-   It is part of a complex **socio-cultural system** [@deboer2015; @foulkes2006; @thompson2016].
 
 I also consider these statements to be extendible more generally to Human Language as a holistic system.
 
 # Linguistic systems {#sec-lingsys}
 
-In light of the brilliant ideas expounded in @cysouw2013 and @rooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
+In light of the brilliant ideas expounded in @cysouw2013 and @vanrooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
 
 @cysouw2013 propose a meta-model based on linguistic documentation and description. From this model, I borrow two concepts:
 

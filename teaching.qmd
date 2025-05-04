@@ -71,7 +71,7 @@ You can learn more about the workshop by visiting the [website](https://intro-rs
 ::: callout-note
 ## `learnB4SS`: Learn Bayesian Analysis for Speech Sciences
 
-[![](img/b4ss-logo.png){style="float: right; margin-left: 20px !important;" width="100"}](https://github.com/learnB4SS/learnB4SS) Together with [Timo Roettger](https://www.simplpoints.com) and [Joseph V. Casillas](https://www.jvcasillas.com), we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST). After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R [@rct2020] and the package brms [@buerkner2018].
+[![](img/b4ss-logo.png){style="float: right; margin-left: 20px !important;" width="100"}](https://github.com/learnB4SS/learnB4SS) Together with [Timo Roettger](https://www.simplpoints.com) and [Joseph V. Casillas](https://www.jvcasillas.com), we introduce the logic of Bayesian inference and compare it to Null Hypothesis Significance Testing (NHST). After providing a brief conceptual introduction, the course walks through a Bayesian statistical analysis using R [@rcoreteam2020] and the package brms [@burkner2018].
 
 We explain how to set up a Bayesian regression model (including setting appropriate priors), how to interpret the results, how to diagnose model convergence, and how to visualize and report the results. In hands-on exercises, the participants immediately apply their knowledge to a speech data set in R.
 

@@ -25,7 +25,7 @@ In this brief post I will argue that the theory/methods divide is epistemologica
 
 # What is *theory*?
 
-The term *theory* is used with different senses in different domains. Here I will cover only three [see @nrc2008, Ch. 2].
+The term *theory* is used with different senses in different domains. Here I will cover only three [see @nationalresearchcouncil2008, Ch. 2].
 
 In the popular usage, it is often just a synonym of *hypothesis*, *idea*, or *hunch*. For example, one might say:
 
@@ -35,7 +35,7 @@ Note that the use of *only* stresses the fact that the socialist party's victory
 
 In mathematics, a theory is a set of axioms (statements taken to be true) and theorems (statements mathematically proven to be true, usually derived from axioms and/or other theorems).
 
-Finally, **a scientific theory can be defined as a generally-recognised set of well-corroborated hypotheses that form an integrated model of one or more natural phenomena** [@nrc2008, pp. 32--36].[^1]
+Finally, **a scientific theory can be defined as a generally-recognised set of well-corroborated hypotheses that form an integrated model of one or more natural phenomena** [@nationalresearchcouncil2008, pp. 32--36].[^1]
 
 [^1]: The tacit role of the "community" in the process of accepting theories is brilliantly explored and systematised in the classic work by @kuhn1962. See @bird2018 for an overview of Kuhn's ideas.
 

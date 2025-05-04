@@ -33,7 +33,7 @@ format:
     css: styles.css
     toc: true
 
-bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
+bibliography: /Users/ste/texmf/bibtex/bib/references.bib
 csl: /Users/ste/.local/share/pandoc/csl/unified-style-sheet-for-linguistics.csl
 
 execute: 

@@ -1,8 +1,13 @@
 ---
+- title: "A vitality assessment of Gallo-Romance of Northern Italy"
+  year: submitted
+  author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
+  submitted: "https://doi.org/10.31219/osf.io/fuzby_v1"
+  compendium: "https://github.com/stefanocoretta/grni-vitality"
 - title: "Multivariate analyses of tongue contours from ultrasound tongue imaging"
   year: submitted
   author: "Stefano Coretta, Georges Sakr"
-  manuscript: "https://stefanocoretta.github.io/mv_uti/"
+  submitted: "https://stefanocoretta.github.io/mv_uti/"
   compendium: "https://github.com/stefanocoretta/mv_uti"
 - title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
   year: submitted
@@ -10,6 +15,9 @@
   doi: "10.31219/osf.io/f9rqg_v1"
   submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
   compendium: "https://github.com/stefanocoretta/beta-phon"
+- title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
+  year: submitted
+  author: "Ziyuan Li, Stefano Coretta"
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   year: submitted
   author: "Stefano Coretta"

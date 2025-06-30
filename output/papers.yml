@@ -12,7 +12,7 @@
 - title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
   year: submitted
   author: "Stefano Coretta, Paul-Christian Bürkner"
-  doi: "10.31219/osf.io/f9rqg_v1"
+  # doi: "10.31219/osf.io/f9rqg_v1"
   submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
   compendium: "https://github.com/stefanocoretta/beta-phon"
 - title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"

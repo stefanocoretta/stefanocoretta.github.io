@@ -36,6 +36,7 @@
   journal: "Linguistic Approaches to Bilingualism"
   doi: "10.1075/lab.23076.cor"
   accepted: "https://doi.org/10.31219/osf.io/8grj5"
+  published: "https://doi.org/10.1075/lab.23076.cor"
   compendium: "https://github.com/stefanocoretta/gamm_biling"
 - title: "Language practices of Emilian and Esperanto communities: spaces of use, explicit language attitudes and self-reported competence"
   open: true
@@ -44,6 +45,7 @@
   journal: "Journal of Multilingual and Multicultural Development"
   doi: "10.1080/01434632.2024.2413933"
   accepted: "https://doi.org/10.31219/osf.io/jqgku"
+  published: "https://doi.org/10.1080/01434632.2024.2413933"
   compendium: "https://github.com/stefanocoretta/emilian-esperanto"
 - title: "Glossolects"
   year: 2024
@@ -60,6 +62,7 @@
   info: "6(3)"
   doi: "10.1177/25152459231162567"
   accepted: "https://psyarxiv.com/q8t2k/"
+  published: "https://doi.org/10.1177/25152459231162567"
   compendium: "https://osf.io/3bmcp/"
 - title: "The decline of local anchoring: A quantitative investigation"
   open: true

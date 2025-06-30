@@ -28,6 +28,7 @@ listing:
 ---
 
 ::: {.custom-paragraph}
+<p style="font-size: 8pt;">Click on the icons below each entry to go to the specified resource!</p>
 <p style="font-size: 8pt;">{{< osi manuscript >}} = <b>Manuscript</b> (author manuscript, not submitted, in preparation). — {{< osi submitted >}} = <b>Submitted</b> manuscript (aka <em>Preprint</em>; submitted author manuscript <em>prior</em> to peer-review). — {{< osi accepted >}} = <b>Accepted</b> manuscript (aka <em>Postprint</em>; accepted author manuscript <em>after</em> peer-review, same content as published version). — {{< osi published >}} = <b>Published</b> manuscript (aka <em>Offprint</em>; accepted manuscript with publisher's formatting, same content as postprint). — {{< osi prereg >}} = <b>Preregistration</b>. — {{< osi compendium >}} = <b>Research compendium</b> (data and materials).</p>
 :::
 

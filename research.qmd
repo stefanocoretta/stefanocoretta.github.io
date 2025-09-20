@@ -4,17 +4,40 @@ title: Research
 
 My research interests span a range of topics within linguistics, although the main focus is on the **study of speech sounds**, and in particular **speech production**, from a variety of intersecting perspectives, including:
 
-* Acoustics and articulation.
-* Descriptive, historical, and comparative linguistic (typology).
-* Language endangerment.
-* Computational modelling.
+-   Acoustics and articulation.
+-   Descriptive, historical, and comparative linguistic (typology).
+-   Language endangerment.
+-   Computational modelling.
 
-The other strand of my research expertise is related to **research methods and statistics**.
-In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
+The other strand of my research expertise is related to **research methods and statistics**. In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
 
 For an overview of the research meta-models that inform my research, see the [Meta](meta.qmd) page.
 
 # Current projects
+
+::: callout-note
+## Language and biological diversity
+
+This project with Jessica Hampton focusses on the relationship of linguistic and biological diversity. The project will be developed in three phases:
+
+-   Phase 1: Assessing the link between language endangerment and biodiversity intactness.
+
+-   Phase 2: Developing an index of linguistic diversity intactness.
+
+-   Phase 3: Assessing the link between linguistic and biological diversity intactness.
+:::
+
+::: callout-note
+## *Beyond*
+
+As part of this project with Jessica Hampton, we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
+
+-   Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).
+
+-   Paper 2: Beyond the quantitative/qualitative dichotomy.
+
+-   Paper 3: TBD
+:::
 
 ::: callout-note
 ## Intrinsic vowel duration and gestural distance
@@ -29,9 +52,9 @@ Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how audit
 :::
 
 ::: callout-note
-## Gallo-Italian vitality
+## Vitality of Gallo-Romance of Northern Italy
 
-In this project with Jessica Hampton and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Italian in the north of Italy.
+In this project with Jessica Hampton and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
 :::
 
 # Past projects
@@ -39,8 +62,7 @@ In this project with Jessica Hampton and Simone De Cia, we are conducting a surv
 ::: {.callout-note collapse="true"}
 ## Many Speech Analyses
 
-The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions.
-To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
+The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
 
 The paper with the study results has been published in AMPPS (DOI [10.1177/25152459231162567](https://doi.org/10.1177/25152459231162567), Research Compendium <https://osf.io/3bmcp/>).
 :::
@@ -56,8 +78,7 @@ The first objective of the project was to produce an IPA illustration for Tosk A
 ::: {.callout-note collapse="true"}
 ## Human interaction and the evolution of spoken accent
 
-I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
-This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/). This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
 :::
 
 ::: {.callout-note collapse="true"}
@@ -69,8 +90,7 @@ I conducted research within the DFG project [*Nasal coarticulation and sound-cha
 ::: {.callout-note collapse="true"}
 ## Vowel duration and consonant voicing: a production study
 
-As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
-My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
+As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>. My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
 :::
 
 # Glossolects
@@ -90,16 +110,14 @@ leaflet(data = glossolocs) %>%
   ))
 ```
 
-
 <br>
 
 The map shows in blue the main [glossolects](meta.qmd#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
 
 Overall, my interests and expertise cover the following macro-glossolects:
 
-- Indo-European.
-- Oceanic.
-- South American.
+-   Indo-European.
+-   Oceanic.
+-   South American.
 
 I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.
-

@@ -25,7 +25,7 @@ format:
 
 <br>
 
-I am a Lecturer (Assistant Professor) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students. I received my PhD degree in linguistics (with a thesis on ultrasound tongue imaging and electroglottography) from the University of Manchester (UK) in 2020. I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021, when I joined the University of Edinburgh.
+I am a Lecturer (= Assistant Professor) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students. I received my PhD degree in linguistics (with a thesis on ultrasound tongue imaging and electroglottography) from the University of Manchester (UK) in 2020. I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021, when I joined the University of Edinburgh.
 
 I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses. Get in contact with me for info.
 
@@ -37,7 +37,7 @@ My philosophical stance is based on a syncretic synthesis of holistic monism, an
 ::: g-col-6
 #### Interests
 
--   [Phonetology](meta.qmd#phonetology) (i.e. Phonetics and Phonology)
+-   [Phonetology](meta.qmd#phonetology) (i.e. Speech, Phonetics, Phonology)
 -   Research Methods and Statistics
 -   Language description
 -   Typology and Diachronic linguistics
@@ -47,7 +47,7 @@ My philosophical stance is based on a syncretic synthesis of holistic monism, an
 ::: g-col-6
 #### PhD supervision
 
-I am available for PhD supervision on topics from my interests list. Please note that I do **NOT** supervise projects in applied or developmental linguistics.
+I am available for PhD supervision on topics from my interests list. Please note that I do **NOT** supervise projects in applied, developmental linguistics, second language acquisition, English as a second language/TESOL.
 :::
 :::
 

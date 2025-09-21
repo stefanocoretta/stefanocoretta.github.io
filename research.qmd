@@ -1,5 +1,36 @@
 ---
 title: Research
+listing: 
+  - id: phd-thesis
+    contents:
+      - papers.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "phd-thesis"
+  - id: r-packages
+    contents:
+      - software.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "r-packages"
+  - id: many-speech
+    contents:
+      - papers.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "many-speech"
+  - id: albanian
+    contents:
+      - papers.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "albanian"
+  - id: speech-interaction
+    contents:
+      - papers.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "speech-interaction"
 ---
 
 My research interests span a range of topics within linguistics, although the main focus is on the **study of speech sounds**, and in particular **speech production**, from a variety of intersecting perspectives, including:
@@ -18,7 +49,7 @@ For an overview of the research meta-models that inform my research, see the [Me
 ::: callout-note
 ## Language and biological diversity
 
-This project with Jessica Hampton focusses on the relationship of linguistic and biological diversity. The project will be developed in three phases:
+This project with [Jessica Hampton](https://jesshampton.github.io) focusses on the relationship of linguistic and biological diversity. The project will be developed in three phases:
 
 -   Phase 1: Assessing the link between language endangerment and biodiversity intactness.
 
@@ -30,7 +61,7 @@ This project with Jessica Hampton focusses on the relationship of linguistic and
 ::: callout-note
 ## *Beyond*
 
-As part of this project with Jessica Hampton, we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
+As part of this project with [Jessica Hampton](https://jesshampton.github.io), we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
 
 -   Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).
 
@@ -54,32 +85,46 @@ Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how audit
 ::: callout-note
 ## Vitality of Gallo-Romance of Northern Italy
 
-In this project with Jessica Hampton and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
+In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
 :::
+
+:::: callout-note
+## R package development
+
+As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.
+
+::: {#r-packages}
+:::
+::::
 
 # Past projects
 
-::: {.callout-note collapse="true"}
+:::: {.callout-note collapse="true"}
 ## Many Speech Analyses
 
 The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
 
-The paper with the study results has been published in AMPPS (DOI [10.1177/25152459231162567](https://doi.org/10.1177/25152459231162567), Research Compendium <https://osf.io/3bmcp/>).
+::: {#many-speech}
 :::
+::::
 
-::: {.callout-note collapse="true"}
+:::: {.callout-note collapse="true"}
 ## The sounds of Albanian
 
 In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we have investigate the sound system of Albanian.
 
-The first objective of the project was to produce an IPA illustration for Tosk Albanian which has been published in JIPA (DOI [10.1017/S0025100322000044](https://doi.org/10.1017/S0025100322000044), Research Compendium <https://osf.io/vry3h/>).
+::: {#albanian}
 :::
+::::
 
-::: {.callout-note collapse="true"}
+:::: {.callout-note collapse="true"}
 ## Human interaction and the evolution of spoken accent
 
 I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/). This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+
+::: {#speech-interaction}
 :::
+::::
 
 ::: {.callout-note collapse="true"}
 ## Nasal coarticulation and sound-change: a real-time MRI study
@@ -87,11 +132,14 @@ I worked within the ERC project [*Human interaction and the evolution of spoken 
 I conducted research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html) (PI Prof. Jonathan Harrington).
 :::
 
-::: {.callout-note collapse="true"}
+:::: {.callout-note collapse="true"}
 ## Vowel duration and consonant voicing: a production study
 
 As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>. My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
+
+::: {#phd-thesis}
 :::
+::::
 
 # Glossolects
 

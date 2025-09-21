@@ -64,6 +64,7 @@
   accepted: "https://psyarxiv.com/q8t2k/"
   published: "https://doi.org/10.1177/25152459231162567"
   compendium: "https://osf.io/3bmcp/"
+  project: "many-speech"
 - title: "The decline of local anchoring: A quantitative investigation"
   open: true
   author: "Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, Stefano Coretta"
@@ -83,6 +84,7 @@
   accepted: "https://osf.io/mb2hg/"
   published: "https://doi.org/10.1017/S0025100322000044"
   compendium: "https://osf.io/vry3h/"
+  project: "albanian"
 - title: "Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish"
   year: 2021
   author: "Patrycja Strycharczuk, Małgorzata Ćavar, Stefano Coretta"
@@ -97,6 +99,7 @@
   info: "97(2), 333--364"
   doi: "10.1353/lan.2021.0020"
   compendium: "https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum"
+  project: "speech-interaction"
 - title: "A cross cultural analysis of early prelinguistic gesture development and its relationship to language development"
   open: true
   year: 2020
@@ -115,6 +118,7 @@
   accepted: "https://doi.org/10.31219/osf.io/zrqyx"
   published: "http://doi.org/10.1121/10.0000556"
   compendium: "https://osf.io/d245b/"
+  project: "phd-thesis"
 - title: "An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish"
   open: true
   year: 2020
@@ -124,3 +128,4 @@
   doi: "10.5334/gjgl.869"
   published: "http://doi.org/10.5334/gjgl.869"
   compendium: "https://osf.io/quy7k/"
+  project: "phd-thesis"

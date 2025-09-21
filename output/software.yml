@@ -6,6 +6,7 @@
   url: "https://stefanocoretta.github.io/phonetisr/"
   github: "https://github.com/stefanocoretta/phonetisr/"
   doi: "10.5281/zenodo.14987854"
+  project: "r-packages"
 - title: "rticulate: Ultrasound Tongue Imaging in R"
   year: 2025
   author: "Stefano Coretta"
@@ -13,6 +14,7 @@
   url: "https://stefanocoretta.github.io/rticulate/"
   github: "https://github.com/stefanocoretta/rticulate"
   doi: "10.5281/zenodo.1469038"
+  project: "r-packages"
 - title: "lmt: Literate Markdown Tangler Extension For Quarto"
   year: 2024
   author: "Stefano Coretta"
@@ -26,6 +28,7 @@
   url: "https://stefanocoretta.github.io/tidygam/"
   github: "https://github.com/stefanocoretta/tidygam"
   doi: "10.5281/zenodo.14516084"
+  project: "r-packages"
 - title: "speakr: A Wrapper for the Phonetic Software Praat"
   year: 2024
   author: "Stefano Coretta"
@@ -33,6 +36,7 @@
   url: "https://stefanocoretta.github.io/speakr/"
   github: "https://github.com/stefanocoretta/speakr"
   doi: "10.5281/zenodo.4014768"
+  project: "r-packages"
 - title: "SFM exporter (Toolbox/FLEx SIL)"
   year: 2017
   author: "Stefano Coretta"

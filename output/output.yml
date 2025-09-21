@@ -1,0 +1,513 @@
+---
+## Papers
+
+- title: "A vitality assessment of Gallo-Romance of Northern Italy"
+  type: paper
+  year: submitted
+  author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
+  journal: "Sociolinguistica"
+  submitted: "https://doi.org/10.31219/osf.io/fuzby_v1"
+  compendium: "https://github.com/stefanocoretta/grni-vitality"
+
+- title: "Multivariate analyses of tongue contours from ultrasound tongue imaging"
+  type: paper
+  year: submitted
+  author: "Stefano Coretta, Georges Sakr"
+  journal: "Language and Speech"
+  submitted: "https://stefanocoretta.github.io/mv_uti/"
+  compendium: "https://github.com/stefanocoretta/mv_uti"
+
+- title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
+  type: paper
+  year: submitted
+  author: "Stefano Coretta, Paul-Christian Bürkner"
+  journal: "Journal of Phonetics"
+  # doi: "10.31219/osf.io/f9rqg_v1"
+  submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
+  compendium: "https://github.com/stefanocoretta/beta-phon"
+
+- title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
+  type: paper
+  year: submitted
+  author: "Ziyuan Li, Stefano Coretta"
+  journal: "Aging, Neuropsychology, and Cognition"
+
+- title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
+  type: paper
+  year: submitted
+  author: "Stefano Coretta"
+  submitted: "https://doi.org/10.31219/osf.io/83afz"
+  compendium: "https://github.com/stefanocoretta/vow-height"
+
+- title: "V2-Relatives in Old English"
+  type: paper
+  author: "Bettelou Los, Stefano Coretta"
+  journal: "Discourse structure and narration. A diachronic view from Germanic"
+  info: "Ch 9, pp. 305-341. Eds Ulrike Demske and Barthe Bloom"
+  year: 2025
+  compendium: "https://github.com/stefanocoretta/aelfric-relatives"
+  project: "old-english"
+
+- title: "A tutorial on Generalised Additive Mixed Effects Models for bilingualism research"
+  type: paper
+  open: true
+  author: "Stefano Coretta, Joseph V. Casillas"
+  year: 2024
+  journal: "Linguistic Approaches to Bilingualism"
+  doi: "10.1075/lab.23076.cor"
+  accepted: "https://doi.org/10.31219/osf.io/8grj5"
+  published: "https://doi.org/10.1075/lab.23076.cor"
+  compendium: "https://github.com/stefanocoretta/gamm_biling"
+
+- title: "Language practices of Emilian and Esperanto communities: spaces of use, explicit language attitudes and self-reported competence"
+  type: paper
+  open: true
+  author: "Jessica Hampton, Stefano Coretta"
+  year: 2024
+  journal: "Journal of Multilingual and Multicultural Development"
+  doi: "10.1080/01434632.2024.2413933"
+  accepted: "https://doi.org/10.31219/osf.io/jqgku"
+  published: "https://doi.org/10.1080/01434632.2024.2413933"
+  compendium: "https://github.com/stefanocoretta/emilian-esperanto"
+  project: "emilianto"
+
+- title: "Glossolects"
+  type: paper
+  year: 2024
+  author: "Stefano Coretta, Jessica Hampton, Stephen Nichols"
+  journal: "Octopus"
+  doi: "10.57874/3k4a-5m61"
+  manuscript: "https://doi.org/10.57874/3k4a-5m61"
+
+- title: "Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
+  type: paper
+  open: true
+  rr: true
+  author: Stefano Coretta, Joseph V. Casillas, …, Timo Roettger
+  year: 2023
+  journal: "Advances in Methods and Practices in Psychological Science"
+  info: "6(3)"
+  doi: "10.1177/25152459231162567"
+  accepted: "https://psyarxiv.com/q8t2k/"
+  published: "https://doi.org/10.1177/25152459231162567"
+  compendium: "https://osf.io/3bmcp/"
+  project: "many-speech"
+
+- title: "The decline of local anchoring: A quantitative investigation"
+  type: paper
+  open: true
+  author: "Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, Stefano Coretta"
+  year: 2023
+  journal: "English Language & Linguistics"
+  info: "27(2). 345--372"
+  doi: "10.1017/S1360674323000047"
+  published: "https://doi.org/10.1017/S1360674323000047"
+  compendium: "https://github.com/stefanocoretta/2020-penta"
+  project: "old-english"
+
+- title: "Northern Tosk Albanian (IPA Illustration)"
+  type: paper
+  year: 2023
+  open: true
+  author: "Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
+  journal: "Journal of the International Phonetic Association"
+  info: "53(3). 1122--1144"
+  doi: "10.1017/S0025100322000044"
+  accepted: "https://osf.io/mb2hg/"
+  published: "https://doi.org/10.1017/S0025100322000044"
+  compendium: "https://osf.io/vry3h/"
+  project: "albanian"
+
+- title: "Distance vs. time: Acoustic and articulatory consequences of reduced vowel duration in Polish"
+  type: paper
+  year: 2021
+  author: "Patrycja Strycharczuk, Małgorzata Ćavar, Stefano Coretta"
+  journal: "Journal of the Acoustical Society of America"
+  info: "150(1), 592--607"
+  doi: "10.1121/10.0005585"
+  compendium: "https://stefanocoretta.github.io/polish-reduction/"
+  project: "polish"
+
+- title: "Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German"
+  type: paper
+  year: 2021
+  author: "Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit"
+  journal: "Language"
+  info: "97(2), 333--364"
+  doi: "10.1353/lan.2021.0020"
+  compendium: "https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum"
+  project: "speech-interaction"
+
+- title: "A cross cultural analysis of early prelinguistic gesture development and its relationship to language development"
+  type: paper
+  open: true
+  year: 2020
+  author: "Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven"
+  journal: "Child Development"
+  info: "92, 273--290"
+  doi: "10.1111/cdev.13406"
+  published: "https://doi.org/10.1111/cdev.13406"
+  compendium: "https://github.com/stefanocoretta/infant-gestures"
+  project: "infant-gestures"
+
+- title: "Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish"
+  type: paper
+  year: 2020
+  author: "Stefano Coretta"
+  journal: "Journal of the Acoustical Society of America"
+  info: "147, 245--259"
+  doi: "10.1111/cdev.13406"
+  accepted: "https://doi.org/10.31219/osf.io/zrqyx"
+  published: "http://doi.org/10.1121/10.0000556"
+  compendium: "https://osf.io/d245b/"
+  project: "phd-thesis"
+
+- title: "An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish"
+  type: paper
+  open: true
+  year: 2020
+  author: "Stefano Coretta"
+  journal: "Glossa: a journal of general linguistics"
+  info: "4(1) 125, 1--25"
+  doi: "10.5334/gjgl.869"
+  published: "http://doi.org/10.5334/gjgl.869"
+  compendium: "https://osf.io/quy7k/"
+  project: "phd-thesis"
+
+## Books
+
+- title: "Mikrovariacioni sintaksor në dialektet e shqipes: një atlas me të dhëna dixhitale [Syntactic Microvariation in Albanian Dialects: An atlas with digital data]"
+  type: book
+  author: "Enkeleida Kapia, Stefano Coretta, L. Buxheli, A. Omari"
+  year: 2023
+  location: "Academy of Albanological Sciences. Institute of Linguistics and Literature. Tiranë."
+
+## Software
+
+- title: "phonetisr: A Naive IPA Tokeniser"
+  type: software
+  year: 2025
+  author: "Stefano Coretta"
+  version: "R package v0.1.0"
+  url: "https://stefanocoretta.github.io/phonetisr/"
+  github: "https://github.com/stefanocoretta/phonetisr/"
+  doi: "10.5281/zenodo.14987854"
+  project: "r-packages"
+
+- title: "rticulate: Ultrasound Tongue Imaging in R"
+  type: software
+  year: 2025
+  author: "Stefano Coretta"
+  version: "R package v2.0.1"
+  url: "https://stefanocoretta.github.io/rticulate/"
+  github: "https://github.com/stefanocoretta/rticulate"
+  doi: "10.5281/zenodo.1469038"
+  project: "r-packages"
+
+- title: "lmt: Literate Markdown Tangler Extension For Quarto"
+  type: software
+  year: 2024
+  author: "Stefano Coretta"
+  version: "v0.2.0"
+  github: "https://github.com/stefanocoretta/lmt/"
+  doi: "10.5281/zenodo.14988563"
+
+- title: "tidygam: Tidy Prediction and Plotting of Generalised Additive Models"
+  type: software
+  year: 2024
+  author: "Stefano Coretta"
+  version: "R package v1.0.0"
+  url: "https://stefanocoretta.github.io/tidygam/"
+  github: "https://github.com/stefanocoretta/tidygam"
+  doi: "10.5281/zenodo.14516084"
+  project: "r-packages"
+
+- title: "speakr: A Wrapper for the Phonetic Software Praat"
+  type: software
+  year: 2024
+  author: "Stefano Coretta"
+  version: "R package v3.2.4"
+  url: "https://stefanocoretta.github.io/speakr/"
+  github: "https://github.com/stefanocoretta/speakr"
+  doi: "10.5281/zenodo.4014768"
+  project: "r-packages"
+
+- title: "SFM exporter (Toolbox/FLEx SIL)"
+  type: software
+  year: 2017
+  author: "Stefano Coretta"
+  version: "Shiny App v2.2.0"
+  url: "https://stefanocoretta.shinyapps.io/sfm-exporter/"
+  github: "https://github.com/stefanocoretta/sfm-exporter"
+
+- title: "phonrule: TeX package for typesetting phonological rules in SPE style"
+  type: software
+  year: 2017
+  author: "Stefano Coretta"
+  version: "LaTeX package v1.4.0"
+  url: "https://ctan.org/pkg/phonrule?lang=en"
+  github: "https://github.com/stefanocoretta/phonrule"
+
+## Data
+
+- title: "Assessing the vitality of Gallo-Romance of Northern Italy"
+  type: data
+  year: 2025
+  author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
+  url: "https://github.com/stefanocoretta/grni-vitality/tree/main"
+  doi: "10.5281/zenodo.15715939"
+
+- title: "Language practices of Emilian and Esperanto communities: spaces of use, explicit language attitudes and self-reported competence"
+  type: data
+  author: "Jessica Hampton, Stefano Coretta"
+  url: "https://github.com/stefanocoretta/emilian-esperanto"
+  year: 2023
+  doi: "10.5281/zenodo.15768992"
+
+- title: "Many Speech Analyses"
+  type: data
+  author: "Stefano Coretta, Joseph V. Casillas, Timo B. Roettger"
+  doi: "10.17605/OSF.IO/3BMCP"
+  year: 2023
+
+- title: "IPA Illustration of Northern Tosk Albanian"
+  type: data
+  author: "Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols"
+  year: 2021
+  doi: "10.17605/OSF.IO/VRY3H"
+
+- title: "Vowel reduction in Polish"
+  type: data
+  author: "Patrycja Strycharczuk, Małgorzata Ćavar, Stefano Coretta"
+  year: 2021
+  doi: "10.17605/OSF.IO/HY7NT"
+
+- title: "Vowel duration and consonant voicing: A production study"
+  type: data
+  author: "Stefano Coretta"
+  year: 2020
+  doi: "10.17605/OSF.IO/W92ME"
+
+- title: "A Cross-Cultural Analysis of Early Prelinguistic Gesture Development and Its Relationship to Language Development"
+  type: data
+  author: "Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven"
+  year: 2020
+  url: "https://github.com/stefanocoretta/infant-gestures"
+
+- title: "Vowel duration and aspiration effects in Icelandic"
+  type: data
+  author: "Stefano Coretta"
+  year: 2019
+  doi: "10.17605/OSF.IO/6AU2K"
+
+## Invited talks
+
+- title: "Rethinking the IPA vowel quadrilateral"
+  type: invited
+  year: 2023
+  location: "Department of Linguistics and Scandinavian Studies seminar, 26 May, University of Oslo, Norway."
+  download: "https://stefanocoretta.github.io/2023-ipavows/#1"
+  
+- title: "Today's coarticulation is tomorrow's sound change: Insights from dynamic articulatory data"
+  type: invited
+  year: 2022
+  location: "Understanding Sound Change, 27 January, Donostia-San Sebastián, Spain."
+  download: "https://stefanocoretta.github.io/2022-ocp/"
+  
+- title: "The more we learn the less we know: (Un)resolved questions on the voicing effect"
+  type: invited
+  year: 2021
+  location: "University of Potsdam, 28 July, Germany."
+  download: "https://stefanocoretta.github.io/2021-potsdam/"
+  
+- title: "Exploring pathways to contrastive vowel nasalisation. Or what today's articulatory patterns can tell us about yesterday's sound change"
+  type: invited
+  year: 2021
+  location: "University of Lancaster, 25 May, UK."
+  download: "../files/pubs/2021-lancaster.pdf"
+  
+- title: "Vowel duration differences before voiceless and voiced stops as compensatory temporal adjustment"
+  type: invited
+  year: 2018
+  location: "Indiana University Bloomington, 16 October, USA."
+  
+- title: "Vowel duration as a function of consonant gestural timing in Italian and Polish: Evidence from acoustics, ultrasound tongue imaging, and electroglottography"
+  type: invited
+  year: 2018
+  location: "Aarhus University, 18 September, Denmark."
+  
+## Talks
+
+- title: "Comparing language attitudes in the speech communities of Emilian and Veneto"
+  type: talk
+  year: 2024
+  author: Jessica Hampton, Stefano Coretta and Simone de Cia
+  location: "Talk presented at the Tenth Cambridge Conference on Language Endangerment, 12 July."
+
+- title: "Comparing language attitudes in the speech communities of Emilian and Veneto"
+  type: talk
+  year: 2024
+  author: Jessica Hampton, Stefano Coretta and Simone de Cia
+  location: "Talk presented at the Contested Languages in the Old World 4, 23--25 May."
+
+- title: "Analysing tongue contours with multivariate Generalised Additive Models"
+  type: talk
+  year: 2024
+  author: Stefano Coretta and Georges Sakr
+  location: "Poster presented at Ultrafest 2024"
+  download: "../files/pubs/2024-ultrafest.pdf"
+  abstract: "../files/pubs/2024-ultrafest-abs.pdf"
+
+- title: "Is vowel duration the product of gestural timing alone? Data from Northwestern Italian"
+  type: talk
+  year: 2024
+  location: "Talk given at the British Association of Academic Phoneticians (BAAP) 2024"
+  download: "https://stefanocoretta.github.io/vow-height/comm/talks/2024-baap/#/title-slide"
+  compendium: "https://github.com/stefanocoretta/vow-height"
+  abstract: "../files/pubs/2024-baap.pdf"
+
+- title: "Measuring spaces and observing attitudes: a comparative analysis on the vitality of Emilian and Esperanto"
+  type: talk
+  author: "Jessica Iubini-Hampton, Stefano Coretta"
+  year: 2024
+  location: "Talk presented at the XIX International Conference on Minority Languages, University of Wales"
+
+- title: "Speech physiology or more? Vowel duration and tongue height in Northwestern Italian"
+  type: talk
+  year: 2023
+  location: "Poster presented at the 6th Edinburgh Symposium in Historical Phonology, 5 Dec, University of Edinburgh"
+  download: "../files/pubs/2023-eshp.pdf"
+  compendium: "https://github.com/stefanocoretta/vow-height"
+  abstract: "../files/pubs/2023-eshp-abstract.pdf"
+
+- title: "Data Version Control for Researchers"
+  type: talk
+  year: 2022
+  location: "Talk given at the Edinburgh Open Research Conference, 27 May, University of Edinburgh"
+  download: "https://stefanocoretta.github.io/dvc-res/"
+  compendium: "https://github.com/stefanocoretta/dvc-res"
+
+- title: "Research management in \"many analysts\" projects: Lessons from the Many Speech Analyses project"
+  type: talk
+  year: 2022
+  location: "Poster presented at the Edinburgh Open Research Conference, 27 May, University of Edinburgh"
+  download: "../files/pubs/2022-eorc-poster.pdf"
+
+- title: "How significance testing might be limiting phonetic research and what to replace it with"
+  type: talk
+  year: 2022
+  location: "Talk presented at the 2022 BAAP Colloquium, 8 April, York (UK, online)"
+  download: "../files/pubs/2022-baap.pdf"
+
+- title: "On the acoustics and articulation of the affricates of Northern Tosk Albanian"
+  type: talk
+  year: 2021
+  author: Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta
+  location: "Talk presented at the 2021 Annual Meeting of the LAGB, Belfast (online, UK)"
+
+- title: "Towards a description of the rhotic sounds of Northern Tosk Albanian"
+  type: talk
+  year: 2021
+  author: Stephen Nichols, Enkeleida Kapia, Josiane Riverin-Coutlée, Stefano Coretta
+  location: "Talk presented at the 7th edition of R-atics, Lausanne (online, Switzerland)"
+
+- title: "Two mechanisms for vowel reduction in Polish"
+  type: talk
+  year: 2020
+  author: Patrycja Strycharczuk, Małgorzata Ćavar, and Stefano Coretta
+  location: "Talk presented at LabPhon17, 8 July, Vancouver (Canada, online)"
+
+- title: "Meta-analytical estimates of the effect of voicing on vowel duration in English are biased"
+  type: talk
+  year: 2020
+  location: "Poster presented at LabPhon17, 8 July, Vancouver (Canada, online)"
+  compendium: "https://github.com/stefanocoretta/2020-labphon"
+  download: "https://github.com/stefanocoretta/2020-labphon/blob/master/analysis/log-normal.pdf"
+
+- title: "Control of larynx height in vowel production revisited: A real-time MRI study"
+  type: talk
+  year: 2020
+  location: "Talk presented at the 12th International Seminar on Speech Production, 17 December (online)"
+  video: "https://youtu.be/0Zl14Ct_BOI"
+  download: "https://issp2020.yale.edu/S08/hoole_08_03_033_poster.pdf"
+
+- title: "A cross-cultural analysis of early prelinguistic gesture development and its relationship to language development"
+  type: talk
+  year: 2019
+  author: "Thea Cameron-Faulkner, Circle Steele, Nividita Malik, Stefano Coretta, Ludovica Serretrice, and Elena Lieven"
+  location: "Talk presented at the 5th International Language and Communicative Development Conference, 12 June, Manchester (UK)."
+
+- title: "Temporal stability and compensatory adjustments: Data on the eﬀect of voicing on vowel duration in Italian and Polish"
+  type: talk
+  year: 2019
+  location: "Talk presented at LAGB 2019"
+  download: "../files/pubs/2019-LAGB.pdf"
+
+- title: "The effect of lexical frequency on vowel phonation as a correlate of /t/-glottaling"
+  type: talk
+  year: 2018
+  author: Coretta, Stefano and Massimiliano Canzi
+  location: "Talk presented at LAGB 2018, 11-14 September, University of Sheffield, UK"
+  doi: "10.5281/zenodo.1415402"
+  download: "https://github.com/stefanocoretta/2018-lagb/raw/master/presentation.pdf"
+  compendium: "https://github.com/stefanocoretta/2018-lagb"
+
+- title: "Quantifying vocal fold activity: two new methods for analysing electroglottographic data"
+  type: talk
+  year: 2018
+  location: "Talk presented at New Developments in Speech Sensing and Imaging, 23 June, University of Lisbon, Portugal"
+  download: "../files/pubs/2018-labphon-satellite.pdf"
+  compendium: "https://osf.io/zvcgb/"
+
+- title: "Longer vowel duration correlates with tongue root advancement in Italian and Polish: An ultrasound study"
+  type: talk
+  year: 2018
+  location: "Talk presented at LabPhon16, 22 June, University of Lisbon, Portugal"
+  download: "../files/pubs/2018-labphon.pdf"
+  compendium: "https://github.com/stefanocoretta/2018-labphon"
+
+- title: "Processing EGG data: New methods for a multidimensional time-series assessment of vocal fold activity"
+  type: talk
+  year: 2018
+  location: "Talk presented at mFiL 2018, 26 Apr, The University of Manchester, UK"
+
+- title: "Tongue root advancement and vowel duration: A gradient effect?"
+  type: talk
+  year: 2018
+  location: "Talk presented at the 2018 BAAP Colloquium, 13 Apr, University of Kent, UK"
+  download: "../files/pubs/2018-baap.pdf"
+  compendium: "https://github.com/stefanocoretta/2018-baap"
+
+- title: "Vowel duration and tongue root advancement in Italian and Polish"
+  type: talk
+  year: 2017
+  location: "Talk presented at Ultrafest VIII, 4 Oct, University of Potsdam, Germany"
+  download: "../files/pubs/2017-ultrafest.pdf"
+  compendium: "https://github.com/stefanocoretta/2017-ultrafest"
+
+- title: "A streamlined workflow for \"doing phonetics by computer\" (using Praat and R)"
+  type: talk
+  year: 2017
+  location: "Talk presented at the Postgraduate Academic Research in Linguistics at York (PARLAY), 15 Sep, University of York, UK"
+  download: "../files/pubs/2017-parlay.pdf"
+  compendium: "https://github.com/stefanocoretta/speakr-demo"
+
+- title: "Towards an articulatory based typology of laryngeal effects on vowel duration"
+  type: talk
+  year: 2017
+  location: "Poster presented at the 25th Manchester Phonology Meeting (25mfm), 25--27 May, University of Manchester"
+  download: "../files/pubs/2017-mfm.pdf"
+  compendium: "https://github.com/stefanocoretta/ma-thesis-york"
+
+- title: "Implementing reproducibility in phonetic research: a computational workflow"
+  type: talk
+  year: 2017
+  location: "Paper presented at the Manchester Forum in Linguistics 2017 (mFiL 2017), 28--29 April, University of Manchester"
+  download: "../files/pubs/2017-mfil.pdf"
+  compendium: "https://github.com/stefanocoretta/reproducible-phonetics"
+
+- title: "A new case of “rhinoglottophilia:” from nasalisation to aspiration"
+  type: talk
+  year: 2015
+  location: "Paper presented at the Second Edinburgh Symposium on Historical Phonology (ESHP2), 3--4 December, University of Edinburgh"
+  download: "../files/pubs/2015-eshp.pdf"

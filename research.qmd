@@ -3,55 +3,55 @@ title: Research
 listing: 
   - id: phd-thesis
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "phd-thesis"
   - id: r-packages
     contents:
-      - software.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "r-packages"
   - id: many-speech
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "many-speech"
   - id: albanian
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "albanian"
   - id: speech-interaction
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "speech-interaction"
   - id: emilianto
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "emilianto"
   - id: old-english
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "old-english"
   - id: infant-gestures
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "infant-gestures"
   - id: polish
     contents:
-      - papers.yml
+      - output.yml
     template: html/ejs/pubs.ejs
     include:
       project: "polish"

@@ -3,28 +3,40 @@ title: "Scholarly output"
 listing:
   - id: papers
     contents:
-      - papers.yml
+      - output.yml
     template: ../html/ejs/pubs.ejs
+    include:
+      type: "paper"
   - id: books
     contents:
-      - books.yml
+      - output.yml
     template: ../html/ejs/pubs.ejs
+    include:
+      type: "book"
   - id: data
     contents:
-      - data.yml
+      - output.yml
     template: ../html/ejs/pubs.ejs
+    include:
+      type: "data"
   - id: software
     contents:
-      - software.yml
+      - output.yml
     template: ../html/ejs/pubs.ejs
+    include:
+      type: "software"
   - id: invited
     contents:
-      - invited.yml
+      - output.yml
     template: ../html/ejs/pubs.ejs
+    include:
+      type: "invited"
   - id: talks
     contents:
-      - talks.yml
+      - output.yml
     template: ../html/ejs/pubs.ejs
+    include:
+      type: "talk"
 ---
 
 ::: {.custom-paragraph}

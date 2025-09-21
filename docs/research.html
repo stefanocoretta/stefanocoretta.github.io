@@ -213,6 +213,118 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-emilianto .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-open','listing-author','listing-year','listing-journal','listing-doi','listing-accepted','listing-published','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-open","listing-author","listing-year","listing-journal","listing-doi","listing-accepted","listing-published","listing-compendium","listing-project"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-emilianto'] = new List('listing-emilianto', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-old-english .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-journal','listing-info','listing-year','listing-compendium','listing-project','listing-open','listing-doi','listing-published',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-journal","listing-info","listing-year","listing-compendium","listing-project","listing-open","listing-doi","listing-published"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-old-english'] = new List('listing-old-english', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-infant-gestures .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-open','listing-year','listing-author','listing-journal','listing-info','listing-doi','listing-published','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-open","listing-year","listing-author","listing-journal","listing-info","listing-doi","listing-published","listing-compendium","listing-project"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-infant-gestures'] = new List('listing-infant-gestures', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-polish .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-year','listing-author','listing-journal','listing-info','listing-doi','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-year","listing-author","listing-journal","listing-info","listing-doi","listing-compendium","listing-project"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-polish'] = new List('listing-polish', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
@@ -324,8 +436,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#current-projects" id="toc-current-projects" class="nav-link active" data-scroll-target="#current-projects">Current projects</a></li>
-  <li><a href="#past-projects" id="toc-past-projects" class="nav-link" data-scroll-target="#past-projects">Past projects</a></li>
+  <li><a href="#phonetology" id="toc-phonetology" class="nav-link active" data-scroll-target="#phonetology">Phonetology</a></li>
+  <li><a href="#linguistic-diversity" id="toc-linguistic-diversity" class="nav-link" data-scroll-target="#linguistic-diversity">Linguistic diversity</a></li>
+  <li><a href="#software-development" id="toc-software-development" class="nav-link" data-scroll-target="#software-development">Software development</a></li>
+  <li><a href="#statistical-collaborations" id="toc-statistical-collaborations" class="nav-link" data-scroll-target="#statistical-collaborations">Statistical collaborations</a></li>
   <li><a href="#glossolects" id="toc-glossolects" class="nav-link" data-scroll-target="#glossolects">Glossolects</a></li>
   </ul>
 </nav>
@@ -360,9 +474,191 @@ window.Quarto = {
 <li>Computational modelling.</li>
 </ul>
 <p>The other strand of my research expertise is related to <strong>research methods and statistics</strong>. In particular, I am an enthusiastic advocate of <strong>Open Research</strong> (aka Open Science) and <strong>Bayesian inference</strong>.</p>
-<p>For an overview of the research meta-models that inform my research, see the <a href="./meta.html">Meta</a> page.</p>
-<section id="current-projects" class="level1">
-<h1>Current projects</h1>
+<p>For an overview of the research meta-models that inform my research, see the <a href="./meta.html">Meta</a> page. The following sections list current and past project by research area.</p>
+<section id="phonetology" class="level1">
+<h1>Phonetology</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Intrinsic vowel duration and gestural distance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hemispheric differences in specificity effects of priming
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Project with <a href="https://jsteffman.github.io">Jeremy Steffman</a> looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.</p>
+</div>
+</div>
+<p><strong>Past projects</strong></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Many Speech Analyses
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <em>Many Speech Analyses</em> project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.</p>
+<div id="listing-many-speech" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <i class="osi osi-rr"></i> <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas, …, Timo Roettger<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Advances in Methods and Practices in Psychological Science</em> 6(3)<br> <a class="osi" href="https://www.doi.org/10.1177/25152459231162567"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/25152459231162567-850000.svg"></a><br> <a class="osi" href="https://psyarxiv.com/q8t2k/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1177/25152459231162567" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/3bmcp/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The sounds of Albanian
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and <a href="https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html">Stephen Nichols</a>, we have investigate the sound system of Albanian.</p>
+<div id="listing-albanian" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Northern Tosk Albanian (IPA Illustration)</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the International Phonetic Association</em> 53(3). 1122–1144<br> <a class="osi" href="https://www.doi.org/10.1017/S0025100322000044"><img class="doi" src="https://img.shields.io/badge/doi-10.1017/S0025100322000044-850000.svg"></a><br> <a class="osi" href="https://osf.io/mb2hg/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1017/S0025100322000044" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/vry3h/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Human interaction and the evolution of spoken accent
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I worked within the ERC project <a href="https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html"><em>Human interaction and the evolution of spoken accent</em></a> (PI Prof.&nbsp;Jonathan Harrington) at the <a href="https://www.phonetik.uni-muenchen.de/">Institut für Phonetik und Sprachverarbeitung</a>. This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.</p>
+<div id="listing-speech-interaction" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2021
+</td>
+<td>
+<b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language</em> 97(2), 333–364<br> <a class="osi" href="https://www.doi.org/10.1353/lan.2021.0020"><img class="doi" src="https://img.shields.io/badge/doi-10.1353/lan.2021.0020-850000.svg"></a><br> <a class="osi" href="https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nasal coarticulation and sound-change: a real-time MRI study
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I conducted research within the DFG project <a href="https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html"><em>Nasal coarticulation and sound-change: a real-time MRI study</em></a> (PI Prof.&nbsp;Jonathan Harrington).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Vowel duration and consonant voicing: a production study
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>. My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.</p>
+<div id="listing-phd-thesis" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the Acoustical Society of America</em> 147, 245–259<br> <a class="osi" href="https://www.doi.org/10.1111/cdev.13406"><img class="doi" src="https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/zrqyx" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="http://doi.org/10.1121/10.0000556" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/d245b/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2020
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Glossa: a journal of general linguistics</em> 4(1) 125, 1–25<br> <a class="osi" href="https://www.doi.org/10.5334/gjgl.869"><img class="doi" src="https://img.shields.io/badge/doi-10.5334/gjgl.869-850000.svg"></a><br> <a class="osi" href="http://doi.org/10.5334/gjgl.869" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/quy7k/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="linguistic-diversity" class="level1">
+<h1>Linguistic diversity</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -405,32 +701,6 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Intrinsic vowel duration and gestural distance
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Hemispheric differences in specificity effects of priming
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Project with <a href="https://jsteffman.github.io">Jeremy Steffman</a> looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Note</span>Vitality of Gallo-Romance of Northern Italy
 </div>
 </div>
@@ -438,6 +708,42 @@ window.Quarto = {
 <p>In this project with <a href="https://jesshampton.github.io">Jessica Hampton</a> and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.</p>
 </div>
 </div>
+<p><strong>Past projects</strong></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Language practices of Emilian and Esperanto communities
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This project with <a href="https://jesshampton.github.io">Jessica Hampton</a> investigated the relationship between language attitudes and competence in the communities of Emilian and Esperanto speakers. We find that the relationship is modulated by spaces of use: at lower proportions of spaces of use, language attitudes are more positively correlated with language competence, while at higher proportions of spaces of use, the relationship between attitude and competence is reduced. We propose that creating spaces for users of minoritised languages like Emilian could engender higher levels of language competence and hence language maintenance.</p>
+<div id="listing-emilianto" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2024
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Language practices of Emilian and Esperanto communities: spaces of use, explicit language attitudes and self-reported competence</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Jessica Hampton, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of Multilingual and Multicultural Development</em> <br> <a class="osi" href="https://www.doi.org/10.1080/01434632.2024.2413933"><img class="doi" src="https://img.shields.io/badge/doi-10.1080/01434632.2024.2413933-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/jqgku" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1080/01434632.2024.2413933" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/emilian-esperanto" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="software-development" class="level1">
+<h1>Software development</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -449,6 +755,11 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.</p>
+<details>
+<summary>
+List
+</summary>
+<div class="markdown">
 <div id="listing-r-packages" class="quarto-listing quarto-listing-container-custom">
 <table class="table">
 
@@ -490,88 +801,26 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </div>
+</details>
+</div>
 </div>
 </section>
-<section id="past-projects" class="level1">
-<h1>Past projects</h1>
+<section id="statistical-collaborations" class="level1">
+<h1>Statistical collaborations</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Many Speech Analyses
+<span class="screen-reader-only">Note</span>Vowel reduction in Polish
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The <em>Many Speech Analyses</em> project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.</p>
-<div id="listing-many-speech" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2023
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <i class="osi osi-rr"></i> <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas, …, Timo Roettger<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Advances in Methods and Practices in Psychological Science</em> 6(3)<br> <a class="osi" href="https://www.doi.org/10.1177/25152459231162567"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/25152459231162567-850000.svg"></a><br> <a class="osi" href="https://psyarxiv.com/q8t2k/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1177/25152459231162567" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/3bmcp/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>The sounds of Albanian
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and <a href="https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html">Stephen Nichols</a>, we have investigate the sound system of Albanian.</p>
-<div id="listing-albanian" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2023
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Northern Tosk Albanian (IPA Illustration)</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the International Phonetic Association</em> 53(3). 1122–1144<br> <a class="osi" href="https://www.doi.org/10.1017/S0025100322000044"><img class="doi" src="https://img.shields.io/badge/doi-10.1017/S0025100322000044-850000.svg"></a><br> <a class="osi" href="https://osf.io/mb2hg/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1017/S0025100322000044" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/vry3h/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Human interaction and the evolution of spoken accent
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>I worked within the ERC project <a href="https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html"><em>Human interaction and the evolution of spoken accent</em></a> (PI Prof.&nbsp;Jonathan Harrington) at the <a href="https://www.phonetik.uni-muenchen.de/">Institut für Phonetik und Sprachverarbeitung</a>. This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.</p>
-<div id="listing-speech-interaction" class="quarto-listing quarto-listing-container-custom">
+<p>Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar. Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?</p>
+<div id="listing-polish" class="quarto-listing quarto-listing-container-custom">
 <table class="table">
 
 <tbody>
@@ -580,7 +829,7 @@ window.Quarto = {
 2021
 </td>
 <td>
-<b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language</em> 97(2), 333–364<br> <a class="osi" href="https://www.doi.org/10.1353/lan.2021.0020"><img class="doi" src="https://img.shields.io/badge/doi-10.1353/lan.2021.0020-850000.svg"></a><br> <a class="osi" href="https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum" target="_blank"><i class="osi osi-compendium"></i></a>
+<b>Distance vs.&nbsp;time: Acoustic and articulatory consequences of reduced vowel duration in Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Patrycja Strycharczuk, Małgorzata Ćavar, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the Acoustical Society of America</em> 150(1), 592–607<br> <a class="osi" href="https://www.doi.org/10.1121/10.0005585"><img class="doi" src="https://img.shields.io/badge/doi-10.1121/10.0005585-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/polish-reduction/" target="_blank"><i class="osi osi-compendium"></i></a>
 </td>
 </tr>
 </tbody>
@@ -591,35 +840,59 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nasal coarticulation and sound-change: a real-time MRI study
+<span class="screen-reader-only">Note</span>Historical syntax of English
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>I conducted research within the DFG project <a href="https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html"><em>Nasal coarticulation and sound-change: a real-time MRI study</em></a> (PI Prof.&nbsp;Jonathan Harrington).</p>
+<div id="listing-old-english" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+2025
+</td>
+<td>
+<b>V2-Relatives in Old English</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Bettelou Los, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Discourse structure and narration. A diachronic view from Germanic</em> Ch 9, pp.&nbsp;305-341. Eds Ulrike Demske and Barthe Bloom<br> <a class="osi" href="https://github.com/stefanocoretta/aelfric-relatives" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>The decline of local anchoring: A quantitative investigation</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>English Language &amp; Linguistics</em> 27(2). 345–372<br> <a class="osi" href="https://www.doi.org/10.1017/S1360674323000047"><img class="doi" src="https://img.shields.io/badge/doi-10.1017/S1360674323000047-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.1017/S1360674323000047" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2020-penta" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Vowel duration and consonant voicing: a production study
+<span class="screen-reader-only">Note</span>Infant gestures and language development
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>. My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.</p>
-<div id="listing-phd-thesis" class="quarto-listing quarto-listing-container-custom">
+<p>Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead). <a href="https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/">Website</a>.</p>
+<p>I developed the statistical analysis for the package <a href="https://www.lucid.ac.uk/what-we-do/research/lucid-phase-1-completed-projects-2014-2019/variation-theme/prelinguistic-development-in-3-cultures/">Investigating prelinguistic development in three minority cultures</a>.</p>
+<div id="listing-infant-gestures" class="quarto-listing quarto-listing-container-custom">
 <table class="table">
 
 <tbody>
@@ -628,15 +901,7 @@ window.Quarto = {
 2020
 </td>
 <td>
-<b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the Acoustical Society of America</em> 147, 245–259<br> <a class="osi" href="https://www.doi.org/10.1111/cdev.13406"><img class="doi" src="https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/zrqyx" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="http://doi.org/10.1121/10.0000556" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/d245b/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2020
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Glossa: a journal of general linguistics</em> 4(1) 125, 1–25<br> <a class="osi" href="https://www.doi.org/10.5334/gjgl.869"><img class="doi" src="https://img.shields.io/badge/doi-10.5334/gjgl.869-850000.svg"></a><br> <a class="osi" href="http://doi.org/10.5334/gjgl.869" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/quy7k/" target="_blank"><i class="osi osi-compendium"></i></a>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Child Development</em> 92, 273–290<br> <a class="osi" href="https://www.doi.org/10.1111/cdev.13406"><img class="doi" src="https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.1111/cdev.13406" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/infant-gestures" target="_blank"><i class="osi osi-compendium"></i></a>
 </td>
 </tr>
 </tbody>
@@ -651,8 +916,8 @@ window.Quarto = {
 <h1>Glossolects</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-51b5858b133bc1669192" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-51b5858b133bc1669192">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[[41.3746242957521,45.4643408098844,53.4857099291728,52.3542599136831,51.1313716928508,53.3687697432817,2.36074750443743,-9.320409056569151,65.0332678523427,43.067982186246,48.9225822135745,-2.27384384345159,22.9550329236234,26.6891591999807,31.701049014734,8.940745305905221,46.9118992000112,52.0292214335183,27.2316739834057,41.9549524719067,39.402514583054],[19.8363991942167,9.189109987193691,-2.24234683895357,20.9786864360501,10.869930838569,-7.6640674124826,-56.6495935149114,160.011024240055,-18.2625244109019,12.3909410830752,44.3972197660087,147.985704688539,79.6585370929968,30.061133063625,34.819397408053,39.3633254709024,19.7839316507982,-4.20927524922827,72.9926578426692,13.264735543517,23.1421862640516],{"icon":"circle","markerColor":["blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","red","red","red","red","red","red","red"],"iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Albanian","Lombard","Mancunian English","Polish","German","Old Irish","Mawayana","Santa Isabel","Icelandic","Italian","Proto-Indo-European","Proto-Oceanic","Sanskrit","Middle Egyptian","Classical Hebrew","Amharic","Hungarian","Middle Welsh","Romani","Latin","Ancient Greek"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-9.320409056569151,65.0332678523427],"lng":[-56.6495935149114,160.011024240055]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-664b4439d409fe3cdd9c" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-664b4439d409fe3cdd9c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[[41.3746242957521,45.4643408098844,53.4857099291728,52.3542599136831,51.1313716928508,53.3687697432817,2.36074750443743,-9.320409056569151,65.0332678523427,43.067982186246,48.9225822135745,-2.27384384345159,22.9550329236234,26.6891591999807,31.701049014734,8.940745305905221,46.9118992000112,52.0292214335183,27.2316739834057,41.9549524719067,39.402514583054],[19.8363991942167,9.189109987193691,-2.24234683895357,20.9786864360501,10.869930838569,-7.6640674124826,-56.6495935149114,160.011024240055,-18.2625244109019,12.3909410830752,44.3972197660087,147.985704688539,79.6585370929968,30.061133063625,34.819397408053,39.3633254709024,19.7839316507982,-4.20927524922827,72.9926578426692,13.264735543517,23.1421862640516],{"icon":"circle","markerColor":["blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","red","red","red","red","red","red","red"],"iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Albanian","Lombard","Mancunian English","Polish","German","Old Irish","Mawayana","Santa Isabel","Icelandic","Italian","Proto-Indo-European","Proto-Oceanic","Sanskrit","Middle Egyptian","Classical Hebrew","Amharic","Hungarian","Middle Welsh","Romani","Latin","Ancient Greek"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-9.320409056569151,65.0332678523427],"lng":[-56.6495935149114,160.011024240055]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br></p>

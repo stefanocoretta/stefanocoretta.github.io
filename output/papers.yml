@@ -33,6 +33,7 @@
   info: "Ch 9, pp. 305-341. Eds Ulrike Demske and Barthe Bloom"
   year: 2025
   compendium: "https://github.com/stefanocoretta/aelfric-relatives"
+  project: "old-english"
 - title: "A tutorial on Generalised Additive Mixed Effects Models for bilingualism research"
   open: true
   author: "Stefano Coretta, Joseph V. Casillas"
@@ -51,6 +52,7 @@
   accepted: "https://doi.org/10.31219/osf.io/jqgku"
   published: "https://doi.org/10.1080/01434632.2024.2413933"
   compendium: "https://github.com/stefanocoretta/emilian-esperanto"
+  project: "emilianto"
 - title: "Glossolects"
   year: 2024
   author: "Stefano Coretta, Jessica Hampton, Stephen Nichols"
@@ -78,6 +80,7 @@
   doi: "10.1017/S1360674323000047"
   published: "https://doi.org/10.1017/S1360674323000047"
   compendium: "https://github.com/stefanocoretta/2020-penta"
+  project: "old-english"
 - title: "Northern Tosk Albanian (IPA Illustration)"
   year: 2023
   open: true
@@ -96,6 +99,7 @@
   info: "150(1), 592--607"
   doi: "10.1121/10.0005585"
   compendium: "https://stefanocoretta.github.io/polish-reduction/"
+  project: "polish"
 - title: "Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German"
   year: 2021
   author: "Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit"
@@ -113,6 +117,7 @@
   doi: "10.1111/cdev.13406"
   published: "https://doi.org/10.1111/cdev.13406"
   compendium: "https://github.com/stefanocoretta/infant-gestures"
+  project: "infant-gestures"
 - title: "Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish"
   year: 2020
   author: "Stefano Coretta"

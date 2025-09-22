@@ -126,7 +126,9 @@ As part of my PhD research at the University of Manchester, supervised by Dr <a 
 :::
 ::::
 
-# Linguistic diversity
+# "At the margins"
+
+These projects cover marginalised/minoritised languages, communities, knowledge systems and ecologies.
 
 ::: callout-note
 ## Language and biological diversity

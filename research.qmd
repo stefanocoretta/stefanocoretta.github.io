@@ -7,6 +7,12 @@ listing:
     template: html/ejs/pubs.ejs
     include:
       project: "phd-thesis"
+  - id: intrinsic-duration
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "intrinsic-duration"
   - id: r-packages
     contents:
       - output.yml
@@ -31,6 +37,12 @@ listing:
     template: html/ejs/pubs.ejs
     include:
       project: "speech-interaction"
+  - id: statistics
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "statistics"
   - id: emilianto
     contents:
       - output.yml
@@ -70,11 +82,14 @@ For an overview of the research meta-models that inform my research, see the [Me
 
 # Phonetology
 
-::: callout-note
+:::: callout-note
 ## Intrinsic vowel duration and gestural distance
 
 Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.
+
+::: {#intrinsic-duration}
 :::
+::::
 
 ::: callout-note
 ## Hemispheric differences in specificity effects of priming
@@ -171,7 +186,24 @@ This project with [Jessica Hampton](https://jesshampton.github.io) investigated 
 :::
 ::::
 
-# Software development
+# Research methods
+
+::::: callout-note
+## Statistics for linguistics
+
+This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.
+
+<details>
+
+<summary>List</summary>
+
+:::: markdown
+::: {#statistics}
+:::
+::::
+
+</details>
+:::::
 
 ::::: callout-note
 ## R package development

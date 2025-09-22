@@ -104,6 +104,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-intrinsic-duration .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-type','listing-year','listing-author','listing-submitted','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-type","listing-year","listing-author","listing-submitted","listing-compendium","listing-project"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-intrinsic-duration'] = new List('listing-intrinsic-duration', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-r-packages .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -202,6 +230,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-speech-interaction'] = new List('listing-speech-interaction', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-statistics .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-type','listing-year','listing-author','listing-journal','listing-submitted','listing-compendium','listing-project','listing-open','listing-doi','listing-accepted','listing-published','listing-rr','listing-info',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-type","listing-year","listing-author","listing-journal","listing-submitted","listing-compendium","listing-project","listing-open","listing-doi","listing-accepted","listing-published","listing-rr","listing-info"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-statistics'] = new List('listing-statistics', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -438,7 +494,7 @@ window.Quarto = {
   <ul>
   <li><a href="#phonetology" id="toc-phonetology" class="nav-link active" data-scroll-target="#phonetology">Phonetology</a></li>
   <li><a href="#at-the-margins" id="toc-at-the-margins" class="nav-link" data-scroll-target="#at-the-margins">“At the margins”</a></li>
-  <li><a href="#software-development" id="toc-software-development" class="nav-link" data-scroll-target="#software-development">Software development</a></li>
+  <li><a href="#research-methods" id="toc-research-methods" class="nav-link" data-scroll-target="#research-methods">Research methods</a></li>
   <li><a href="#statistical-collaborations" id="toc-statistical-collaborations" class="nav-link" data-scroll-target="#statistical-collaborations">Statistical collaborations</a></li>
   <li><a href="#glossolects" id="toc-glossolects" class="nav-link" data-scroll-target="#glossolects">Glossolects</a></li>
   </ul>
@@ -488,6 +544,22 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.</p>
+<div id="listing-intrinsic-duration" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+submitted
+</td>
+<td>
+<b>Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <a class="osi" href="https://doi.org/10.31219/osf.io/83afz" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/vow-height" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -743,8 +815,68 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="software-development" class="level1">
-<h1>Software development</h1>
+<section id="research-methods" class="level1">
+<h1>Research methods</h1>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Statistics for linguistics
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.</p>
+<details>
+<summary>
+List
+</summary>
+<div class="markdown">
+<div id="listing-statistics" class="quarto-listing quarto-listing-container-custom">
+<table class="table">
+
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+submitted
+</td>
+<td>
+<b>Multivariate analyses of tongue contours from ultrasound tongue imaging</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Georges Sakr<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language and Speech</em> <br> <a class="osi" href="https://stefanocoretta.github.io/mv_uti/" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/mv_uti" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+submitted
+</td>
+<td>
+<b>Bayesian beta regressions with brms in R: A tutorial for phoneticians</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Paul-Christian Bürkner<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of Phonetics</em> <br> <a class="osi" href="https://doi.org/10.31219/osf.io/f9rqg_v1" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/beta-phon" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2024
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>A tutorial on Generalised Additive Mixed Effects Models for bilingualism research</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Linguistic Approaches to Bilingualism</em> <br> <a class="osi" href="https://www.doi.org/10.1075/lab.23076.cor"><img class="doi" src="https://img.shields.io/badge/doi-10.1075/lab.23076.cor-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/8grj5" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1075/lab.23076.cor" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/gamm_biling" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">
+2023
+</td>
+<td>
+<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <i class="osi osi-rr"></i> <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas, …, Timo Roettger<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Advances in Methods and Practices in Psychological Science</em> 6(3)<br> <a class="osi" href="https://www.doi.org/10.1177/25152459231162567"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/25152459231162567-850000.svg"></a><br> <a class="osi" href="https://psyarxiv.com/q8t2k/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1177/25152459231162567" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/3bmcp/" target="_blank"><i class="osi osi-compendium"></i></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
+</details>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -809,7 +941,7 @@ List
 <section id="statistical-collaborations" class="level1">
 <h1>Statistical collaborations</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -818,7 +950,7 @@ List
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar. Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?</p>
 <div id="listing-polish" class="quarto-listing quarto-listing-container-custom">
@@ -841,7 +973,7 @@ List
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -850,7 +982,7 @@ List
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="listing-old-english" class="quarto-listing quarto-listing-container-custom">
 <table class="table">
@@ -880,7 +1012,7 @@ List
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -889,7 +1021,7 @@ List
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead). <a href="https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/">Website</a>.</p>
 <p>I developed the statistical analysis for the package <a href="https://www.lucid.ac.uk/what-we-do/research/lucid-phase-1-completed-projects-2014-2019/variation-theme/prelinguistic-development-in-3-cultures/">Investigating prelinguistic development in three minority cultures</a>.</p>
@@ -917,8 +1049,8 @@ List
 <h1>Glossolects</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-214205b9631fd5ddf5a6" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-214205b9631fd5ddf5a6">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[[41.3746242957521,45.4643408098844,53.4857099291728,52.3542599136831,51.1313716928508,53.3687697432817,2.36074750443743,-9.320409056569151,65.0332678523427,43.067982186246,48.9225822135745,-2.27384384345159,22.9550329236234,26.6891591999807,31.701049014734,8.940745305905221,46.9118992000112,52.0292214335183,27.2316739834057,41.9549524719067,39.402514583054],[19.8363991942167,9.189109987193691,-2.24234683895357,20.9786864360501,10.869930838569,-7.6640674124826,-56.6495935149114,160.011024240055,-18.2625244109019,12.3909410830752,44.3972197660087,147.985704688539,79.6585370929968,30.061133063625,34.819397408053,39.3633254709024,19.7839316507982,-4.20927524922827,72.9926578426692,13.264735543517,23.1421862640516],{"icon":"circle","markerColor":["blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","red","red","red","red","red","red","red"],"iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Albanian","Lombard","Mancunian English","Polish","German","Old Irish","Mawayana","Santa Isabel","Icelandic","Italian","Proto-Indo-European","Proto-Oceanic","Sanskrit","Middle Egyptian","Classical Hebrew","Amharic","Hungarian","Middle Welsh","Romani","Latin","Ancient Greek"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-9.320409056569151,65.0332678523427],"lng":[-56.6495935149114,160.011024240055]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-56644474392c61da5690" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-56644474392c61da5690">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[[41.3746242957521,45.4643408098844,53.4857099291728,52.3542599136831,51.1313716928508,53.3687697432817,2.36074750443743,-9.320409056569151,65.0332678523427,43.067982186246,48.9225822135745,-2.27384384345159,22.9550329236234,26.6891591999807,31.701049014734,8.940745305905221,46.9118992000112,52.0292214335183,27.2316739834057,41.9549524719067,39.402514583054],[19.8363991942167,9.189109987193691,-2.24234683895357,20.9786864360501,10.869930838569,-7.6640674124826,-56.6495935149114,160.011024240055,-18.2625244109019,12.3909410830752,44.3972197660087,147.985704688539,79.6585370929968,30.061133063625,34.819397408053,39.3633254709024,19.7839316507982,-4.20927524922827,72.9926578426692,13.264735543517,23.1421862640516],{"icon":"circle","markerColor":["blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","red","red","red","red","red","red","red"],"iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Albanian","Lombard","Mancunian English","Polish","German","Old Irish","Mawayana","Santa Isabel","Icelandic","Italian","Proto-Indo-European","Proto-Oceanic","Sanskrit","Middle Egyptian","Classical Hebrew","Amharic","Hungarian","Middle Welsh","Romani","Latin","Ancient Greek"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-9.320409056569151,65.0332678523427],"lng":[-56.6495935149114,160.011024240055]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br></p>

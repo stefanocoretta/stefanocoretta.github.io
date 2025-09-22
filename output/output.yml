@@ -16,6 +16,7 @@
   journal: "Language and Speech"
   submitted: "https://stefanocoretta.github.io/mv_uti/"
   compendium: "https://github.com/stefanocoretta/mv_uti"
+  project: "statistics"
 
 - title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
   type: paper
@@ -25,6 +26,7 @@
   # doi: "10.31219/osf.io/f9rqg_v1"
   submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
   compendium: "https://github.com/stefanocoretta/beta-phon"
+  project: "statistics"
 
 - title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
   type: paper
@@ -38,6 +40,7 @@
   author: "Stefano Coretta"
   submitted: "https://doi.org/10.31219/osf.io/83afz"
   compendium: "https://github.com/stefanocoretta/vow-height"
+  project: "intrinsic-duration"
 
 - title: "V2-Relatives in Old English"
   type: paper
@@ -58,6 +61,7 @@
   accepted: "https://doi.org/10.31219/osf.io/8grj5"
   published: "https://doi.org/10.1075/lab.23076.cor"
   compendium: "https://github.com/stefanocoretta/gamm_biling"
+  project: "statistics"
 
 - title: "Language practices of Emilian and Esperanto communities: spaces of use, explicit language attitudes and self-reported competence"
   type: paper
@@ -91,7 +95,7 @@
   accepted: "https://psyarxiv.com/q8t2k/"
   published: "https://doi.org/10.1177/25152459231162567"
   compendium: "https://osf.io/3bmcp/"
-  project: "many-speech"
+  project: ["many-speech", "statistics"]
 
 - title: "The decline of local anchoring: A quantitative investigation"
   type: paper

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d5fd94bb290365c16f5bd958d6feffd2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
 <link href="site_libs/quarto-contrib/Open-Science-icons-0.1.1/osi.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -110,9 +111,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-author','listing-submitted','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-type','listing-year','listing-journal','listing-author','listing-submitted','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-type","listing-year","listing-author","listing-submitted","listing-compendium","listing-project"],
+      searchColumns: ["listing-title","listing-type","listing-year","listing-journal","listing-author","listing-submitted","listing-compendium","listing-project"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -409,7 +410,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -435,6 +436,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Stefano Coretta</span>
     </a>
@@ -536,7 +539,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Intrinsic vowel duration and gestural distance
+<span class="screen-reader-only">Note</span>Intrinsic vowel duration and gestural distance
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -550,7 +553,7 @@ Intrinsic vowel duration and gestural distance
 submitted
 </td>
 <td>
-<b>Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <a class="osi" href="https://doi.org/10.31219/osf.io/83afz" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/vow-height" target="_blank"><i class="osi osi-compendium"></i></a>
+<b>Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language and Speech</em> <br> <a class="osi" href="https://doi.org/10.31219/osf.io/83afz" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/vow-height" target="_blank"><i class="osi osi-compendium"></i></a>
 </td>
 </tr>
 </tbody>
@@ -565,7 +568,7 @@ submitted
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hemispheric differences in specificity effects of priming
+<span class="screen-reader-only">Note</span>Hemispheric differences in specificity effects of priming
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -574,12 +577,12 @@ Hemispheric differences in specificity effects of priming
 </div>
 <p><strong>Past projects</strong></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Many Speech Analyses
+<span class="screen-reader-only">Note</span>Many Speech Analyses
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -606,12 +609,12 @@ Many Speech Analyses
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-The sounds of Albanian
+<span class="screen-reader-only">Note</span>The sounds of Albanian
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -638,12 +641,12 @@ The sounds of Albanian
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Human interaction and the evolution of spoken accent
+<span class="screen-reader-only">Note</span>Human interaction and the evolution of spoken accent
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -670,12 +673,12 @@ Human interaction and the evolution of spoken accent
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Nasal coarticulation and sound-change: a real-time MRI study
+<span class="screen-reader-only">Note</span>Nasal coarticulation and sound-change: a real-time MRI study
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -686,12 +689,12 @@ Nasal coarticulation and sound-change: a real-time MRI study
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Vowel duration and consonant voicing: a production study
+<span class="screen-reader-only">Note</span>Vowel duration and consonant voicing: a production study
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -735,7 +738,7 @@ Vowel duration and consonant voicing: a production study
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Language and biological diversity
+<span class="screen-reader-only">Note</span>Language and biological diversity
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -753,7 +756,7 @@ Language and biological diversity
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<em>Beyond</em>
+<span class="screen-reader-only">Note</span><em>Beyond</em>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -771,7 +774,7 @@ Language and biological diversity
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Vitality of Gallo-Romance of Northern Italy
+<span class="screen-reader-only">Note</span>Vitality of Gallo-Romance of Northern Italy
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -780,12 +783,12 @@ Vitality of Gallo-Romance of Northern Italy
 </div>
 <p><strong>Past projects</strong></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Language practices of Emilian and Esperanto communities
+<span class="screen-reader-only">Note</span>Language practices of Emilian and Esperanto communities
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -820,7 +823,7 @@ Language practices of Emilian and Esperanto communities
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Statistics for linguistics
+<span class="screen-reader-only">Note</span>Statistics for linguistics
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -880,7 +883,7 @@ submitted
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-R package development
+<span class="screen-reader-only">Note</span>R package development
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -938,12 +941,12 @@ List
 <section id="statistical-collaborations" class="level1">
 <h1>Statistical collaborations</h1>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Vowel reduction in Polish
+<span class="screen-reader-only">Note</span>Vowel reduction in Polish
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -970,12 +973,12 @@ Vowel reduction in Polish
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Historical syntax of English
+<span class="screen-reader-only">Note</span>Historical syntax of English
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1009,12 +1012,12 @@ Historical syntax of English
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Infant gestures and language development
+<span class="screen-reader-only">Note</span>Infant gestures and language development
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1116,13 +1119,14 @@ Infant gestures and language development
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

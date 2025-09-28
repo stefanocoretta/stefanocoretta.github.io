@@ -31,6 +31,7 @@
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   type: paper
   year: submitted
+  journal: "Language and Speech"
   author: "Stefano Coretta"
   submitted: "https://doi.org/10.31219/osf.io/83afz"
   compendium: "https://github.com/stefanocoretta/vow-height"
@@ -38,11 +39,12 @@
 
 - title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
   type: paper
-  year: accepted
+  year: 2025
   author: "Ziyuan Li, Stefano Coretta"
   journal: "Aging, Neuropsychology, and Cognition"
   accepted: "https://doi.org/10.31234/osf.io/vjxtp_v1"
   compendium: "https://github.com/Peter-Ziyuan/Meta-analysis_Bilingualism-and-Dementia"
+  doi: "10.1080/13825585.2025.2566699"
 
 - title: "V2-Relatives in Old English"
   type: paper

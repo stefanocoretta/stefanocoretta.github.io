@@ -3,9 +3,8 @@
 
 - title: "A vitality assessment of Gallo-Romance of Northern Italy"
   type: paper
-  year: submitted
+  year: in preparation
   author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
-  journal: "Sociolinguistica"
   submitted: "https://doi.org/10.31219/osf.io/fuzby_v1"
   compendium: "https://github.com/stefanocoretta/grni-vitality"
 
@@ -18,16 +17,6 @@
   compendium: "https://github.com/stefanocoretta/mv_uti"
   project: "statistics"
 
-- title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
-  type: paper
-  year: submitted
-  author: "Stefano Coretta, Paul-Christian Bürkner"
-  journal: "Journal of Phonetics"
-  # doi: "10.31219/osf.io/f9rqg_v1"
-  submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
-  compendium: "https://github.com/stefanocoretta/beta-phon"
-  project: "statistics"
-
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   type: paper
   year: submitted
@@ -36,6 +25,16 @@
   submitted: "https://doi.org/10.31219/osf.io/83afz"
   compendium: "https://github.com/stefanocoretta/vow-height"
   project: "intrinsic-duration"
+
+- title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
+  type: paper
+  year: accepted
+  author: "Stefano Coretta, Paul-Christian Bürkner"
+  journal: "Journal of Phonetics"
+  # doi: "10.31219/osf.io/f9rqg_v1"
+  submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
+  compendium: "https://github.com/stefanocoretta/beta-phon"
+  project: "statistics"
 
 - title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
   type: paper

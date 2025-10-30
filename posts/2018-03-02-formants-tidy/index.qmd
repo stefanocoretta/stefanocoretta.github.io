@@ -16,8 +16,6 @@ tags:
   - formants
   - formant trajectories
   - ggplot2
-bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
-cls: unified-style-sheet-for-linguistics.csl
 ---
 
 ```{r setup, include=FALSE}

@@ -14,8 +14,6 @@ tags:
   - language
   - romance
   - wikipedia
-bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
-cls: unified-style-sheet-for-linguistics.csl
 ---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Dialetti_parlati_in_Italia.png" alt="Map showing the dialects of Italy." width="371" height="480" align="right" hspace=10/> The **Italian Wikipedia** has reached a number of 1,215,574 articles, with 1,247,172 registered users (source: <a href="https://it.wikipedia.org/wiki/Speciale:Statistiche" target="_blank">Italian Wikipedia Statistics</a>). That&#8217;s more or less one user per article. The Italian encyclopaedia counts an average of 358,814 views per hour (source: <a href="https://stats.wikimedia.org/EN/Sitemap.htm" target="_blank">Wikipedia Statistics</a>).

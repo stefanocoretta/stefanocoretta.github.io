@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -167,20 +167,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tips-for-a-simpler-design" id="toc-tips-for-a-simpler-design" class="nav-link active" data-scroll-target="#tips-for-a-simpler-design">Tips for a simpler design</a>
+  <li><a href="#tips-for-a-simpler-design" id="toc-tips-for-a-simpler-design" class="nav-link active" data-scroll-target="#tips-for-a-simpler-design"><span class="header-section-number">1</span> Tips for a simpler design</a>
   <ul class="collapse">
-  <li><a href="#think-ahead-about-the-statistical-analysis" id="toc-think-ahead-about-the-statistical-analysis" class="nav-link" data-scroll-target="#think-ahead-about-the-statistical-analysis">Think ahead about the statistical analysis</a></li>
-  <li><a href="#minimise-the-factorial-design" id="toc-minimise-the-factorial-design" class="nav-link" data-scroll-target="#minimise-the-factorial-design">Minimise the factorial design</a></li>
-  <li><a href="#if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" id="toc-if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" class="nav-link" data-scroll-target="#if-you-care-about-interactions-only-include-the-critical-ones-in-the-model">If you care about interactions, only include the critical ones in the model</a></li>
-  <li><a href="#make-sure-your-factorial-design-is-not-rank-deficient" id="toc-make-sure-your-factorial-design-is-not-rank-deficient" class="nav-link" data-scroll-target="#make-sure-your-factorial-design-is-not-rank-deficient">Make sure your factorial design is not “rank deficient”</a></li>
+  <li><a href="#think-ahead-about-the-statistical-analysis" id="toc-think-ahead-about-the-statistical-analysis" class="nav-link" data-scroll-target="#think-ahead-about-the-statistical-analysis"><span class="header-section-number">1.1</span> Think ahead about the statistical analysis</a></li>
+  <li><a href="#minimise-the-factorial-design" id="toc-minimise-the-factorial-design" class="nav-link" data-scroll-target="#minimise-the-factorial-design"><span class="header-section-number">1.2</span> Minimise the factorial design</a></li>
+  <li><a href="#if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" id="toc-if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" class="nav-link" data-scroll-target="#if-you-care-about-interactions-only-include-the-critical-ones-in-the-model"><span class="header-section-number">1.3</span> If you care about interactions, only include the critical ones in the model</a></li>
+  <li><a href="#make-sure-your-factorial-design-is-not-rank-deficient" id="toc-make-sure-your-factorial-design-is-not-rank-deficient" class="nav-link" data-scroll-target="#make-sure-your-factorial-design-is-not-rank-deficient"><span class="header-section-number">1.4</span> Make sure your factorial design is not “rank deficient”</a></li>
   </ul></li>
-  <li><a href="#what-to-do-if-you-really-cant-make-it-simpler" id="toc-what-to-do-if-you-really-cant-make-it-simpler" class="nav-link" data-scroll-target="#what-to-do-if-you-really-cant-make-it-simpler">What to do if you really can’t make it simpler</a>
+  <li><a href="#what-to-do-if-you-really-cant-make-it-simpler" id="toc-what-to-do-if-you-really-cant-make-it-simpler" class="nav-link" data-scroll-target="#what-to-do-if-you-really-cant-make-it-simpler"><span class="header-section-number">2</span> What to do if you really can’t make it simpler</a>
   <ul class="collapse">
-  <li><a href="#collect-enough-data" id="toc-collect-enough-data" class="nav-link" data-scroll-target="#collect-enough-data">Collect enough data</a></li>
-  <li><a href="#use-dimensionality-reduction-techniques" id="toc-use-dimensionality-reduction-techniques" class="nav-link" data-scroll-target="#use-dimensionality-reduction-techniques">Use dimensionality-reduction techniques</a></li>
-  <li><a href="#go-bayesian" id="toc-go-bayesian" class="nav-link" data-scroll-target="#go-bayesian">Go Bayesian</a></li>
+  <li><a href="#collect-enough-data" id="toc-collect-enough-data" class="nav-link" data-scroll-target="#collect-enough-data"><span class="header-section-number">2.1</span> Collect enough data</a></li>
+  <li><a href="#use-dimensionality-reduction-techniques" id="toc-use-dimensionality-reduction-techniques" class="nav-link" data-scroll-target="#use-dimensionality-reduction-techniques"><span class="header-section-number">2.2</span> Use dimensionality-reduction techniques</a></li>
+  <li><a href="#go-bayesian" id="toc-go-bayesian" class="nav-link" data-scroll-target="#go-bayesian"><span class="header-section-number">2.3</span> Go Bayesian</a></li>
   </ul></li>
-  <li><a href="#what-to-do-if-nothing-works" id="toc-what-to-do-if-nothing-works" class="nav-link" data-scroll-target="#what-to-do-if-nothing-works">What to do if nothing works</a></li>
+  <li><a href="#what-to-do-if-nothing-works" id="toc-what-to-do-if-nothing-works" class="nav-link" data-scroll-target="#what-to-do-if-nothing-works"><span class="header-section-number">3</span> What to do if nothing works</a></li>
   </ul>
 </nav>
     </div>
@@ -250,10 +250,10 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>Here’s a few tips on how to make your study design simpler and save your… face.</p>
-<section id="tips-for-a-simpler-design" class="level1">
-<h1>Tips for a simpler design</h1>
-<section id="think-ahead-about-the-statistical-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="think-ahead-about-the-statistical-analysis">Think ahead about the statistical analysis</h2>
+<section id="tips-for-a-simpler-design" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Tips for a simpler design</h1>
+<section id="think-ahead-about-the-statistical-analysis" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="think-ahead-about-the-statistical-analysis"><span class="header-section-number">1.1</span> Think ahead about the statistical analysis</h2>
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
 <iframe src="https://giphy.com/embed/8UHgS8Badt2KA2TTr0" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -269,8 +269,8 @@ window.Quarto = {
 <p>What the story teaches us is that, if we had carefully thought of the kind of analysis we wanted to do (i.e.&nbsp;compare the performance <em>across time</em>) we would have realised that to do so the number of trials needs to be the same.</p>
 <p>This is why we always recommend thinking the specifics of the analysis before hand: why statistical model will you use? which predictors will be in the model? which data transformation will you apply? …</p>
 </section>
-<section id="minimise-the-factorial-design" class="level2">
-<h2 class="anchored" data-anchor-id="minimise-the-factorial-design">Minimise the factorial design</h2>
+<section id="minimise-the-factorial-design" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="minimise-the-factorial-design"><span class="header-section-number">1.2</span> Minimise the factorial design</h2>
 <div style="width:100%;height:0;padding-bottom:76%;position:relative;">
 <iframe src="https://giphy.com/embed/IHnROpQICe4kE" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -424,8 +424,8 @@ window.Quarto = {
 <p>So, the moral of the story is: simplify your factorial design as much as possible, by focussing on those contexts that are critical to the research question.</p>
 <p>In other words, don’t add contexts in just because “they are expected to make a difference”, if these are not the critical ones. Of course, any type of context can potentially make a difference, but if we had to control for all the imaginable contexts within a single study, we would be collecting data for centuries.</p>
 </section>
-<section id="if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="if-you-care-about-interactions-only-include-the-critical-ones-in-the-model">If you care about interactions, only include the critical ones in the model</h2>
+<section id="if-you-care-about-interactions-only-include-the-critical-ones-in-the-model" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="if-you-care-about-interactions-only-include-the-critical-ones-in-the-model"><span class="header-section-number">1.3</span> If you care about interactions, only include the critical ones in the model</h2>
 <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
 <iframe src="https://giphy.com/embed/lTBEtbCOEpndFyx4Gm" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -438,8 +438,8 @@ window.Quarto = {
 <p>Note that if you go this route, <em>you have to decide with interactions to include before collecting data</em>, based on expectations.</p>
 <p>If you are interested in all logical interactions because you have really no expectations, then perhaps you should stick to exploratory and descriptive analyses.</p>
 </section>
-<section id="make-sure-your-factorial-design-is-not-rank-deficient" class="level2">
-<h2 class="anchored" data-anchor-id="make-sure-your-factorial-design-is-not-rank-deficient">Make sure your factorial design is not “rank deficient”</h2>
+<section id="make-sure-your-factorial-design-is-not-rank-deficient" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="make-sure-your-factorial-design-is-not-rank-deficient"><span class="header-section-number">1.4</span> Make sure your factorial design is not “rank deficient”</h2>
 <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
 <iframe src="https://giphy.com/embed/1Ago22qG6wJ2Ca28g9" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -453,10 +453,10 @@ window.Quarto = {
 <p>But with more complex models, and especially if you are also including random effects, having rank deficient data <em>can</em> at times result in singular fit/non-convergence.</p>
 </section>
 </section>
-<section id="what-to-do-if-you-really-cant-make-it-simpler" class="level1">
-<h1>What to do if you really can’t make it simpler</h1>
-<section id="collect-enough-data" class="level2">
-<h2 class="anchored" data-anchor-id="collect-enough-data">Collect enough data</h2>
+<section id="what-to-do-if-you-really-cant-make-it-simpler" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> What to do if you really can’t make it simpler</h1>
+<section id="collect-enough-data" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="collect-enough-data"><span class="header-section-number">2.1</span> Collect enough data</h2>
 <div style="width:100%;height:0;padding-bottom:71%;position:relative;">
 <iframe src="https://giphy.com/embed/xT9C25UNTwfZuk85WP" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -467,8 +467,8 @@ window.Quarto = {
 <p>To know in advance how much data is enough when doing frequentist statistics, you will have to run a <em>prospective power analysis</em>. The main idea of a power analysis is that you pick the smallest meaningful effect size you want to be able to detect (i.e.&nbsp;<em>p</em> &lt; 0.05) and you can get an estimate of statistical power at varying sample sizes. Note that to be able to run a prospective power analysis you need to have a fair amount of information on the target population variance. Check out the <a href="https://github.com/pitakakariki/simr">simr</a> package for power analyses in R.</p>
 <p>One option if you will be using Bayesian statistics, is to define a Region Of Practical Equivalence (ROPE), which is a range of values around 0 that you would consider not to be meaningful (in other words, values below the smallest meaningful effect size). Then you can collect data until the Credible Interval width of the effect estimate of interest is equal or smaller of that of the ROPE. See a full description of this method in the following paper: <a href="https://doi.org/10.1016/j.jml.2018.07.004" class="uri">https://doi.org/10.1016/j.jml.2018.07.004</a>.</p>
 </section>
-<section id="use-dimensionality-reduction-techniques" class="level2">
-<h2 class="anchored" data-anchor-id="use-dimensionality-reduction-techniques">Use dimensionality-reduction techniques</h2>
+<section id="use-dimensionality-reduction-techniques" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="use-dimensionality-reduction-techniques"><span class="header-section-number">2.2</span> Use dimensionality-reduction techniques</h2>
 <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
 <iframe src="https://giphy.com/embed/QaN5BogCfpp6hQ4GA9" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -479,8 +479,8 @@ window.Quarto = {
 <p>Two very common techniques are Principal Component Analysis and Discriminant Analysis for continuous outcome variables and Correspondence Analysis for discrete outcome variables.</p>
 <p>You can find tutorials on <a href="http://www.sthda.com/english/" class="uri">http://www.sthda.com/english/</a> and in the related book, <a href="https://www.datanovia.com/en/product/practical-guide-to-principal-component-methods-in-r/">Practical Guide To Principal Component Methods in R</a>.</p>
 </section>
-<section id="go-bayesian" class="level2">
-<h2 class="anchored" data-anchor-id="go-bayesian">Go Bayesian</h2>
+<section id="go-bayesian" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="go-bayesian"><span class="header-section-number">2.3</span> Go Bayesian</h2>
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
 <iframe src="https://giphy.com/embed/ulDHzfKbOd4Yg" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
@@ -499,8 +499,8 @@ window.Quarto = {
 <p>If you wish to embark in the journey of learning Bayesian statistics, I recommend <a href="https://xcelab.net/rm/statistical-rethinking/">Statistical (Re)thinking: A Bayesian Course with Examples in R and Stan</a>.</p>
 </section>
 </section>
-<section id="what-to-do-if-nothing-works" class="level1">
-<h1>What to do if nothing works</h1>
+<section id="what-to-do-if-nothing-works" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> What to do if nothing works</h1>
 <p>I am not gonna sugar coat this…</p>
 <p>If you have read through all of the options above and you aren’t yet satisfied, I am afraid there is no solution to the problem (unless you want to engage in <a href="https://doi.org/10.1177/0956797611430953">questionable research practices</a> and <a href="https://doi.org/10.1177/2515245920952393">questionable measurement practices</a>, and I am sure you don’t want to).</p>
 <p>The following papers brilliantly investigate the causes and implications of such dead end:</p>
@@ -527,7 +527,16 @@ window.Quarto = {
 <li id="fn2"><p>I am referring to what is most commonly called <em>theoretical work</em>, but for several reasons I won’t go into here I think this label is epistemologically unhelpful.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>I have recently being appointed Senior Teaching Coordinator for Statistics in the Linguistics and English Language department of the University of Edinburgh. I just <em>love</em> this job, in every aspect, and it has opened a creative outlet that I would have sorely missed had I kept on with a research-based career. So here you go: I am one example of someone who was given the opportunity to give back to academia while redirecting my focus to teaching rather than research.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2021,
+  author = {},
+  title = {How to Simplify Your Study Design},
+  date = {2021-12-01},
+  url = {https://stefanocoretta.github.io/posts/2021-12-01-how-to-simplify-your-study-design/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+2021. How to simplify your study design. <a href="https://stefanocoretta.github.io/posts/2021-12-01-how-to-simplify-your-study-design/">https://stefanocoretta.github.io/posts/2021-12-01-how-to-simplify-your-study-design/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -601,7 +610,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

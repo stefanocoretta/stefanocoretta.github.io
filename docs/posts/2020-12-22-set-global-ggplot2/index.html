@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -174,13 +174,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-ggplot2-options" id="toc-set-ggplot2-options" class="nav-link active" data-scroll-target="#set-ggplot2-options">Set ggplot2 options</a></li>
-  <li><a href="#colours-in-action" id="toc-colours-in-action" class="nav-link" data-scroll-target="#colours-in-action">Colours in action</a>
+  <li><a href="#set-ggplot2-options" id="toc-set-ggplot2-options" class="nav-link active" data-scroll-target="#set-ggplot2-options"><span class="header-section-number">1</span> Set ggplot2 options</a></li>
+  <li><a href="#colours-in-action" id="toc-colours-in-action" class="nav-link" data-scroll-target="#colours-in-action"><span class="header-section-number">2</span> Colours in action</a>
   <ul class="collapse">
-  <li><a href="#colour-name" id="toc-colour-name" class="nav-link" data-scroll-target="#colour-name">Colour name</a></li>
-  <li><a href="#hex-value" id="toc-hex-value" class="nav-link" data-scroll-target="#hex-value">Hex value</a></li>
-  <li><a href="#set3" id="toc-set3" class="nav-link" data-scroll-target="#set3">Set3</a></li>
-  <li><a href="#interp" id="toc-interp" class="nav-link" data-scroll-target="#interp">Palette interpolation</a></li>
+  <li><a href="#colour-name" id="toc-colour-name" class="nav-link" data-scroll-target="#colour-name"><span class="header-section-number">2.1</span> Colour name</a></li>
+  <li><a href="#hex-value" id="toc-hex-value" class="nav-link" data-scroll-target="#hex-value"><span class="header-section-number">2.2</span> Hex value</a></li>
+  <li><a href="#set3" id="toc-set3" class="nav-link" data-scroll-target="#set3"><span class="header-section-number">2.3</span> Set3</a></li>
+  <li><a href="#interp" id="toc-interp" class="nav-link" data-scroll-target="#interp"><span class="header-section-number">2.4</span> Palette interpolation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -224,8 +224,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>After the post on using custom typefaces in ggplot2 (<a href="../custom-fonts-ggplot2">here</a>), this time I’ll briefly discuss how to set colour scales in ggplot2 globally in an <code>.Rmd</code> file.</p>
 <p>The perk of setting scales globally is that you can set the colours once at the beginning of the <code>.Rmd</code> file and all the plots in the file will adhere to the specified scales without the need to repeat code.</p>
-<section id="set-ggplot2-options" class="level1">
-<h1>Set ggplot2 options</h1>
+<section id="set-ggplot2-options" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Set ggplot2 options</h1>
 <p>The most robust way of specifying global colour scales for ggplot2 plots is to set the appropriate ggplot2 options with <code>options()</code> at the beginning of the <code>.Rmd</code> file. I generally do so in the <code>setup</code> chunk, where I also load the tidyverse/ggplot2 with <code>library(tidyverse)</code>.</p>
 <p>The relevant options are:</p>
 <ul>
@@ -249,13 +249,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note that the colours specified with <code>ggplot2.discrete.*</code> will be used only if there are as many colours in the vector/function output as the number of data levels, or more. When the number of level exceeds the number of colours, ggplot2 falls back to <code>scale_colour_hue()/scale_fill_hue()</code> to construct the scale.</p>
 <p>It is possible to define multiple palettes each with a different number of colours as a list of colour names/codes vectors, and ggplot2 will pick the palette with the minimum number of colours that exceeds the number of data levels. See @ref(interp) and the third example <a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html">here</a>.</p>
 </section>
-<section id="colours-in-action" class="level1">
-<h1>Colours in action</h1>
+<section id="colours-in-action" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Colours in action</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># or library(ggplot2)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<section id="colour-name" class="level2">
-<h2 class="anchored" data-anchor-id="colour-name">Colour name</h2>
+<section id="colour-name" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="colour-name"><span class="header-section-number">2.1</span> Colour name</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">ggplot2.discrete.fill =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"purple"</span>, <span class="st">"yellow"</span>))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -272,8 +272,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="hex-value" class="level2">
-<h2 class="anchored" data-anchor-id="hex-value">Hex value</h2>
+<section id="hex-value" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="hex-value"><span class="header-section-number">2.2</span> Hex value</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">ggplot2.discrete.fill =</span> <span class="fu">c</span>(<span class="st">"#264653"</span>, <span class="st">"#2a9d8f"</span>, <span class="st">"#a8dadc"</span>, <span class="st">"#457b9d"</span>, <span class="st">"#e76f51"</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -290,8 +290,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="set3" class="level2">
-<h2 class="anchored" data-anchor-id="set3">Set3</h2>
+<section id="set3" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="set3"><span class="header-section-number">2.3</span> Set3</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">ggplot2.discrete.fill =</span> RColorBrewer<span class="sc">::</span><span class="fu">brewer.pal</span>(<span class="dv">12</span>, <span class="st">"Set3"</span>))</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -308,8 +308,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="interp" class="level2">
-<h2 class="anchored" data-anchor-id="interp">Palette interpolation</h2>
+<section id="interp" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="interp"><span class="header-section-number">2.4</span> Palette interpolation</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>default_palettes <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># palette with 5 colours</span></span>
@@ -344,7 +344,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2020,
+  author = {Coretta, Stefano},
+  title = {How to Globally Set Colour Scales in Ggplot2},
+  date = {2020-12-22},
+  url = {https://stefanocoretta.github.io/posts/2020-12-22-set-global-ggplot2/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2020" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2020. How to globally set colour scales in ggplot2. <a href="https://stefanocoretta.github.io/posts/2020-12-22-set-global-ggplot2/">https://stefanocoretta.github.io/posts/2020-12-22-set-global-ggplot2/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -418,7 +427,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

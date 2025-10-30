@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -95,7 +95,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -194,13 +194,13 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#from-wide-to-long" id="toc-from-wide-to-long" class="nav-link active" data-scroll-target="#from-wide-to-long">From wide to long</a>
+  <li><a href="#from-wide-to-long" id="toc-from-wide-to-long" class="nav-link active" data-scroll-target="#from-wide-to-long"><span class="header-section-number">1</span> From wide to long</a>
   <ul class="collapse">
-  <li><a href="#the-pipe" id="toc-the-pipe" class="nav-link" data-scroll-target="#the-pipe">The pipe</a></li>
+  <li><a href="#the-pipe" id="toc-the-pipe" class="nav-link" data-scroll-target="#the-pipe"><span class="header-section-number">1.1</span> The pipe</a></li>
   </ul></li>
-  <li><a href="#plot" id="toc-plot" class="nav-link" data-scroll-target="#plot">Plot</a>
+  <li><a href="#plot" id="toc-plot" class="nav-link" data-scroll-target="#plot"><span class="header-section-number">2</span> Plot</a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.1</span> References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -244,8 +244,8 @@ div.csl-indent {
 
 <p>With the advent of more powerful statistical methods for assessing time series data, it is now becoming more common to compare whole vowel formant trajectories rather then just using average values.</p>
 <p>In this post I will show how to tidy a formant measurements dataset and plot formants using the tidyverse <span class="citation" data-cites="wickham2017">(<a href="#ref-wickham2017" role="doc-biblioref">Wickham 2017</a>)</span>.</p>
-<section id="from-wide-to-long" class="level1">
-<h1>From wide to long</h1>
+<section id="from-wide-to-long" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> From wide to long</h1>
 <p>To illustrate the process, I will use formant data that was kindly provided by <a href="http://tiny.cc/sjn">Stephen Nichols</a>.</p>
 <p>Let’s first read in the data.</p>
 <div class="cell">
@@ -353,8 +353,8 @@ div.csl-indent {
 </div>
 </div>
 <p>We now have a dataset with separate columns for each formant and individual rows for each vowel interval.</p>
-<section id="the-pipe" class="level2">
-<h2 class="anchored" data-anchor-id="the-pipe">The pipe</h2>
+<section id="the-pipe" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="the-pipe"><span class="header-section-number">1.1</span> The pipe</h2>
 <p>All the individual steps above can be chained by using the pipe <code>%&gt;%</code>. What the pipe does is simply “transferring” the output of the function before it as the input of the function after it.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>trajectories <span class="ot">&lt;-</span> trajectories <span class="sc">%&gt;%</span></span>
@@ -364,10 +364,10 @@ div.csl-indent {
 </div>
 </section>
 </section>
-<section id="plot" class="level1">
-<h1>Plot</h1>
+<section id="plot" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Plot</h1>
 <p>We can finally plot the formant trajectories.</p>
-<div class="cell" data-hash="index_cache/html/trajectory-plot_e1d0906cd64f7add2d841488aad0fe27">
+<div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>trajectories <span class="sc">%&gt;%</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> interval)) <span class="sc">+</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">y =</span> F1), <span class="at">method =</span> <span class="st">"gam"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">colour =</span> <span class="st">"#A7473A"</span>) <span class="sc">+</span></span>
@@ -383,7 +383,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<section id="references" class="level2">
+<section id="references" class="level2" data-number="2.1">
 
 
 
@@ -391,11 +391,20 @@ div.csl-indent {
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">2.1 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-wickham2017" class="csl-entry" role="listitem">
-Wickham, Hadley. 2017. <span class="nocase">t</span>idyverse: Easily install and load the tidyverse. R package version 1.2.1.
+Wickham, Hadley. 2017. Tidyverse: Easily install and load the tidyverse.
 </div>
-</div></section></div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2018,
+  author = {Coretta, Stefano},
+  title = {Vowel Formants Trajectories and Tidy Data},
+  date = {2018-03-02},
+  url = {https://stefanocoretta.github.io/posts/2018-03-02-formants-tidy/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2018" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2018. Vowel formants trajectories and tidy data. <a href="https://stefanocoretta.github.io/posts/2018-03-02-formants-tidy/">https://stefanocoretta.github.io/posts/2018-03-02-formants-tidy/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -469,7 +478,7 @@ Wickham, Hadley. 2017. <span class="nocase">t</span>idyverse: Easily install and
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -60,7 +60,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -188,15 +188,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#five-definitions-of-random-effect" id="toc-five-definitions-of-random-effect" class="nav-link active" data-scroll-target="#five-definitions-of-random-effect">Five definitions of “random effect”</a>
+  <li><a href="#five-definitions-of-random-effect" id="toc-five-definitions-of-random-effect" class="nav-link active" data-scroll-target="#five-definitions-of-random-effect"><span class="header-section-number">1</span> Five definitions of “random effect”</a>
   <ul class="collapse">
-  <li><a href="#constant-vs-varying-coefficients" id="toc-constant-vs-varying-coefficients" class="nav-link" data-scroll-target="#constant-vs-varying-coefficients">(1) Constant vs varying coefficients</a></li>
-  <li><a href="#researchers-interest" id="toc-researchers-interest" class="nav-link" data-scroll-target="#researchers-interest">(2) Researcher’s interest</a></li>
-  <li><a href="#sampling" id="toc-sampling" class="nav-link" data-scroll-target="#sampling">(3) Sampling</a></li>
-  <li><a href="#random-events" id="toc-random-events" class="nav-link" data-scroll-target="#random-events">(4) Random events</a></li>
-  <li><a href="#shrinkage" id="toc-shrinkage" class="nav-link" data-scroll-target="#shrinkage">(5) Shrinkage</a></li>
+  <li><a href="#constant-vs-varying-coefficients" id="toc-constant-vs-varying-coefficients" class="nav-link" data-scroll-target="#constant-vs-varying-coefficients"><span class="header-section-number">1.1</span> (1) Constant vs varying coefficients</a></li>
+  <li><a href="#researchers-interest" id="toc-researchers-interest" class="nav-link" data-scroll-target="#researchers-interest"><span class="header-section-number">1.2</span> (2) Researcher’s interest</a></li>
+  <li><a href="#sampling" id="toc-sampling" class="nav-link" data-scroll-target="#sampling"><span class="header-section-number">1.3</span> (3) Sampling</a></li>
+  <li><a href="#random-events" id="toc-random-events" class="nav-link" data-scroll-target="#random-events"><span class="header-section-number">1.4</span> (4) Random events</a></li>
+  <li><a href="#shrinkage" id="toc-shrinkage" class="nav-link" data-scroll-target="#shrinkage"><span class="header-section-number">1.5</span> (5) Shrinkage</a></li>
   </ul></li>
-  <li><a href="#some-final-thoughts" id="toc-some-final-thoughts" class="nav-link" data-scroll-target="#some-final-thoughts">Some final thoughts</a>
+  <li><a href="#some-final-thoughts" id="toc-some-final-thoughts" class="nav-link" data-scroll-target="#some-final-thoughts"><span class="header-section-number">2</span> Some final thoughts</a>
   <ul class="collapse">
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
@@ -252,8 +252,8 @@ window.Quarto = {
 <p>Regrettably, there is no straightforward answer (disappointed, uh?).</p>
 <p>The main reason is that, in fact, there are many possible (and most times mutually exclusive) definitions of what a random (vs fixed) effect is.</p>
 <p>In the following summary—which is heavily based on Gelman’s post <a href="https://statmodeling.stat.columbia.edu/2005/01/25/why_i_dont_use/"><em>Why I don’t use the term “fixed and random effects”</em></a> (and related <a href="http://www.stat.columbia.edu/~gelman/research/published/banova7.pdf">journal article</a>)—I’d like to offer an overview of five main definitions of “random effect” and some final thoughts.</p>
-<section id="five-definitions-of-random-effect" class="level2">
-<h2 class="anchored" data-anchor-id="five-definitions-of-random-effect">Five definitions of “random effect”</h2>
+<section id="five-definitions-of-random-effect" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="five-definitions-of-random-effect"><span class="header-section-number">1</span> Five definitions of “random effect”</h2>
 <p>In his post, Gelman says that there are at least five possible ways of defining random effects (with others being subsumable under those five). To illustrate these definitions and make them more relatable to phoneticians and phonologists alike, I will make use of a fictitious study of f0 (fundamental frequency) as a correlate of emotional arousal (<span class="math inline">\(\eta\)</span>).</p>
 <p>Let’s assume that we are interested in testing the (made-up) hypothesis that emotional arousal affects the speaker’s f0. We can test this hypothesis using the following model:</p>
 <p><span class="math display">\[ f0_{ij} = \alpha + \alpha_j + \beta \times \eta_i \]</span></p>
@@ -269,26 +269,26 @@ window.Quarto = {
 <p>This is just a model with a fixed effect and a by-speaker random intercept. The inclusion of speaker as a random effect is nothing exceptional, but what is a random effect?</p>
 <p>As hinted at above, there is no one answer.</p>
 <p>The following sections show how “speaker” can be interpreted as a random effect depending on which of the five definitions one picks.</p>
-<section id="constant-vs-varying-coefficients" class="level3">
-<h3 class="anchored" data-anchor-id="constant-vs-varying-coefficients">(1) Constant vs varying coefficients</h3>
+<section id="constant-vs-varying-coefficients" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="constant-vs-varying-coefficients"><span class="header-section-number">1.1</span> (1) Constant vs varying coefficients</h3>
 <p><span class="citation" data-cites="kreft1998">Kreft, Kreft &amp; de Leeuw (<a href="#ref-kreft1998" role="doc-biblioref">1998</a>)</span> distinguish between fixed and random regression coefficients. Fixed coefficients are constant across individuals, while random coefficients vary.</p>
 <p>In the f0 study, the slope <span class="math inline">\(\beta\)</span> is fixed and <span class="math inline">\(\alpha_j\)</span> is random because it depends on which speaker the data is from.</p>
 </section>
-<section id="researchers-interest" class="level3">
-<h3 class="anchored" data-anchor-id="researchers-interest">(2) Researcher’s interest</h3>
+<section id="researchers-interest" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="researchers-interest"><span class="header-section-number">1.2</span> (2) Researcher’s interest</h3>
 <p><span class="citation" data-cites="searle2009">Searle, Casella &amp; McCulloch (<a href="#ref-searle2009" role="doc-biblioref">2009: sec. 1.4</a>)</span> discuss effects in terms of the researcher’s interest. Effects are considered fixed if the research question/hypothesis being tested covers those effects, or random if the interest lies in the underlying population rather than on the individual effects.</p>
 <p>In this sense, the effect of emotional arousal on f0 is the main focus of interest since we are testing the hypothesis that the former affects the latter, while the average f0 of each speaker (<span class="math inline">\(\alpha_j\)</span>) is not relevant.</p>
 </section>
-<section id="sampling" class="level3">
-<h3 class="anchored" data-anchor-id="sampling">(3) Sampling</h3>
+<section id="sampling" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="sampling"><span class="header-section-number">1.3</span> (3) Sampling</h3>
 <blockquote class="blockquote">
 <p>When a sample exhausts the population, the corresponding variable is fixed; when the sample is a small (i.e., negligible) part of the population the corresponding variable is random.</p>
 </blockquote>
 <p>—<span class="citation" data-cites="green1960">Green &amp; Tukey (<a href="#ref-green1960" role="doc-biblioref">1960</a>)</span></p>
 <p>In our example study, the observed levels of emotional arousal (non-aroused vs aroused) exhausts the “population” of emotional arousal states, while the set of speakers is just a sample from the whole population of speakers.</p>
 </section>
-<section id="random-events" class="level3">
-<h3 class="anchored" data-anchor-id="random-events">(4) Random events</h3>
+<section id="random-events" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="random-events"><span class="header-section-number">1.4</span> (4) Random events</h3>
 <blockquote class="blockquote">
 <p>If an effect is assumed to be a realized value of a random variable, it is called a random effect.</p>
 </blockquote>
@@ -296,16 +296,16 @@ window.Quarto = {
 <p>A random variable is a variable generated by a random event.</p>
 <p>In the f0 study, the speakers that participated in the study are the outcome of random events, while we assume that the relation between f0 and arousal is governed by a specific mathematical relationship.</p>
 </section>
-<section id="shrinkage" class="level3">
-<h3 class="anchored" data-anchor-id="shrinkage">(5) Shrinkage</h3>
+<section id="shrinkage" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="shrinkage"><span class="header-section-number">1.5</span> (5) Shrinkage</h3>
 <p>The last definition of fixed vs random effects is based on the method employed to estimate them. Fixed effects are estimated using maximum likelihood, while random effects are estimated with partial pooling. Partial pooling means that the estimation of the random effects influence the estimation of the fixed effects and vice versa. This definition is standard in the multilevel modelling literature <span class="citation" data-cites="snijders2011">(<a href="#ref-snijders2011" role="doc-biblioref">Snijders &amp; Bosker 2011: sec. 4.2</a>)</span> and in econometrics.</p>
 <p>A consequence of partial pooling is the so-called “shrinkage”. Shrinkage refers to the “regression to the mean”, by which the estimated effects are attracted towards the overall mean (i.e.&nbsp;the intercept).</p>
 <p>So in the f0 study, the by-speaker random intercepts “shrink” towards the estimated fixed intercept. In sum, fixed effects are effects without shrinkage while random effects are effects with shrinkage.</p>
 <p>Thus, under this definition, whether one chooses to model an effect with or without shrinkage has to do with the underlying process model one expects to have generated the observed data. If the expected process of a variable entails shrinkage, then it would make sense to enter such variable as a random effect.</p>
 </section>
 </section>
-<section id="some-final-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="some-final-thoughts">Some final thoughts</h2>
+<section id="some-final-thoughts" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="some-final-thoughts"><span class="header-section-number">2</span> Some final thoughts</h2>
 <p>I agree with Gelman’s statement that the terms “fixed” and “random” could (and perhaps should) be avoided altogether.</p>
 <p>Within the Bayesian framework, for example, it is becoming common to use the terms “<strong>population-level</strong>” and “<strong>group-level</strong>” effects to indicate, respectively, effects that are generated by a population-wide process vs effects that are generated by the modulation of such generative process within groups that make up the population.</p>
 <p>As in definition (5) above, group-level effects are estimated with partial pooling <span class="citation" data-cites="mcelreath2015">(for a nice detailed explanation of partial pooling that includes robots cuing for coffee and tadpoles, see <a href="#ref-mcelreath2015" role="doc-biblioref">McElreath 2015</a>, Ch 12)</span>.</p>
@@ -337,7 +337,16 @@ Searle, Shayle R., George Casella &amp; Charles E. McCulloch. 2009. <em>Variance
 <div id="ref-snijders2011" class="csl-entry" role="listitem">
 Snijders, Tom A. B. &amp; Roel J. Bosker. 2011. <em>Multilevel analysis: An introduction to basic and advanced multilevel modeling</em>. Sage.
 </div>
-</div></section></div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2021,
+  author = {Coretta, Stefano},
+  title = {On Random Effects},
+  date = {2021-03-15},
+  url = {https://stefanocoretta.github.io/posts/2021-03-15-on-random-effects/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2021. On random effects. <a href="https://stefanocoretta.github.io/posts/2021-03-15-on-random-effects/">https://stefanocoretta.github.io/posts/2021-03-15-on-random-effects/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -411,7 +420,7 @@ Snijders, Tom A. B. &amp; Roel J. Bosker. 2011. <em>Multilevel analysis: An intr
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

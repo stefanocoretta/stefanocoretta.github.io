@@ -11,6 +11,7 @@ project:
 website:
   title: "Stefano Coretta"
   favicon: img/favicon.png
+  site-url: https://stefanocoretta.github.io
   navbar:
     left:
       - href: index.qmd
@@ -32,9 +33,8 @@ format:
     theme: [flatly, custom.scss]
     css: styles.css
     toc: true
-
-bibliography: /Users/ste/texmf/bibtex/bib/references.bib
-csl: /Users/ste/.local/share/pandoc/csl/unified-style-sheet-for-linguistics.csl
+    bibliography: references.bib
+    csl: unified-style-sheet-for-linguistics.csl
 
 execute: 
   echo: false

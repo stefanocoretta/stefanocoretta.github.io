@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -95,7 +95,7 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -203,9 +203,9 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#read-data" id="toc-read-data" class="nav-link active" data-scroll-target="#read-data">Read data</a></li>
-  <li><a href="#mean-vot" id="toc-mean-vot" class="nav-link" data-scroll-target="#mean-vot">Mean VOT</a></li>
-  <li><a href="#mean-vot-z-scores" id="toc-mean-vot-z-scores" class="nav-link" data-scroll-target="#mean-vot-z-scores">Mean VOT (z-scores)</a></li>
+  <li><a href="#read-data" id="toc-read-data" class="nav-link active" data-scroll-target="#read-data"><span class="header-section-number">1</span> Read data</a></li>
+  <li><a href="#mean-vot" id="toc-mean-vot" class="nav-link" data-scroll-target="#mean-vot"><span class="header-section-number">2</span> Mean VOT</a></li>
+  <li><a href="#mean-vot-z-scores" id="toc-mean-vot-z-scores" class="nav-link" data-scroll-target="#mean-vot-z-scores"><span class="header-section-number">3</span> Mean VOT (z-scores)</a></li>
   </ul>
 </nav>
     </div>
@@ -248,8 +248,8 @@ div.csl-indent {
 
 
 <p>In this post, I plot data from <span class="citation" data-cites="chodroff2019">Chodroff, Golden &amp; Wilson (<a href="#ref-chodroff2019" role="doc-biblioref">2019</a>)</span> in a 3D chart.</p>
-<section id="read-data" class="level2">
-<h2 class="anchored" data-anchor-id="read-data">Read data</h2>
+<section id="read-data" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="read-data"><span class="header-section-number">1</span> Read data</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vot <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"./data/chodroff2019/ChodroffGoldenWilson2019_vot_avg.csv"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(vot.category) <span class="sc">%&gt;%</span></span>
@@ -259,8 +259,8 @@ div.csl-indent {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vot_category =</span> <span class="fu">recode</span>(vot.category, <span class="at">long.lag =</span> <span class="st">"long lag"</span>, <span class="at">short.lag =</span> <span class="st">"short lag"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="mean-vot" class="level2">
-<h2 class="anchored" data-anchor-id="mean-vot">Mean VOT</h2>
+<section id="mean-vot" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="mean-vot"><span class="header-section-number">2</span> Mean VOT</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>vot <span class="sc">%&gt;%</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ly</span>(</span>
@@ -274,8 +274,8 @@ div.csl-indent {
 </div>
 </div>
 </section>
-<section id="mean-vot-z-scores" class="level2">
-<h2 class="anchored" data-anchor-id="mean-vot-z-scores">Mean VOT (z-scores)</h2>
+<section id="mean-vot-z-scores" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="mean-vot-z-scores"><span class="header-section-number">3</span> Mean VOT (z-scores)</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>vot <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ly</span>(</span>
@@ -297,7 +297,16 @@ div.csl-indent {
 <div id="ref-chodroff2019" class="csl-entry" role="listitem">
 Chodroff, Eleanor, Alessandra Golden &amp; Colin Wilson. 2019. Covariation of stop voice onset time across languages: Evidence for a universal constraint on phonetic realization. <em>The Journal of the Acoustical Society of America</em> 145(1). EL109EL115. <a href="https://doi.org/10.1121/1.5088035">https://doi.org/10.1121/1.5088035</a>.
 </div>
-</div></section></div></main> <!-- /main -->
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2021,
+  author = {Coretta, Stefano},
+  title = {R Gist — {VOT} and Place of Articulation},
+  date = {2021-04-22},
+  url = {https://stefanocoretta.github.io/posts/2021-04-22-vot-and-place-of-articulation/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2021. R gist — VOT and place of articulation. <a href="https://stefanocoretta.github.io/posts/2021-04-22-vot-and-place-of-articulation/">https://stefanocoretta.github.io/posts/2021-04-22-vot-and-place-of-articulation/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -371,7 +380,7 @@ Chodroff, Eleanor, Alessandra Golden &amp; Colin Wilson. 2019. Covariation of st
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

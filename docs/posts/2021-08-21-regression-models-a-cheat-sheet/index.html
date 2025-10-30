@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -168,16 +168,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#one-model-to-rule-them-all" id="toc-one-model-to-rule-them-all" class="nav-link active" data-scroll-target="#one-model-to-rule-them-all">One model to rule them all</a></li>
-  <li><a href="#step-0-number-of-outcome-variables" id="toc-step-0-number-of-outcome-variables" class="nav-link" data-scroll-target="#step-0-number-of-outcome-variables">Step 0: Number of outcome variables</a></li>
-  <li><a href="#step-1-choose-a-distribution-for-your-outcome-variable" id="toc-step-1-choose-a-distribution-for-your-outcome-variable" class="nav-link" data-scroll-target="#step-1-choose-a-distribution-for-your-outcome-variable">Step 1: Choose a distribution for your outcome variable</a>
+  <li><a href="#one-model-to-rule-them-all" id="toc-one-model-to-rule-them-all" class="nav-link active" data-scroll-target="#one-model-to-rule-them-all"><span class="header-section-number">1</span> One model to rule them all</a></li>
+  <li><a href="#step-0-number-of-outcome-variables" id="toc-step-0-number-of-outcome-variables" class="nav-link" data-scroll-target="#step-0-number-of-outcome-variables"><span class="header-section-number">2</span> Step 0: Number of outcome variables</a></li>
+  <li><a href="#step-1-choose-a-distribution-for-your-outcome-variable" id="toc-step-1-choose-a-distribution-for-your-outcome-variable" class="nav-link" data-scroll-target="#step-1-choose-a-distribution-for-your-outcome-variable"><span class="header-section-number">3</span> Step 1: Choose a distribution for your outcome variable</a>
   <ul class="collapse">
-  <li><a href="#continuous-outcome-variable" id="toc-continuous-outcome-variable" class="nav-link" data-scroll-target="#continuous-outcome-variable">Continuous outcome variable</a></li>
-  <li><a href="#discrete-outcome-variable" id="toc-discrete-outcome-variable" class="nav-link" data-scroll-target="#discrete-outcome-variable">Discrete outcome variable</a></li>
+  <li><a href="#continuous-outcome-variable" id="toc-continuous-outcome-variable" class="nav-link" data-scroll-target="#continuous-outcome-variable"><span class="header-section-number">3.1</span> Continuous outcome variable</a></li>
+  <li><a href="#discrete-outcome-variable" id="toc-discrete-outcome-variable" class="nav-link" data-scroll-target="#discrete-outcome-variable"><span class="header-section-number">3.2</span> Discrete outcome variable</a></li>
   </ul></li>
-  <li><a href="#step-2-are-there-hierarchical-groupings-andor-repeated-measures" id="toc-step-2-are-there-hierarchical-groupings-andor-repeated-measures" class="nav-link" data-scroll-target="#step-2-are-there-hierarchical-groupings-andor-repeated-measures">Step 2: Are there hierarchical groupings and/or repeated measures?</a></li>
-  <li><a href="#step-3-are-there-non-linear-effects" id="toc-step-3-are-there-non-linear-effects" class="nav-link" data-scroll-target="#step-3-are-there-non-linear-effects">Step 3: Are there non-linear effects?</a></li>
-  <li><a href="#step-0-bis-number-of-outcome-variables" id="toc-step-0-bis-number-of-outcome-variables" class="nav-link" data-scroll-target="#step-0-bis-number-of-outcome-variables">Step 0-bis: Number of outcome variables</a></li>
+  <li><a href="#step-2-are-there-hierarchical-groupings-andor-repeated-measures" id="toc-step-2-are-there-hierarchical-groupings-andor-repeated-measures" class="nav-link" data-scroll-target="#step-2-are-there-hierarchical-groupings-andor-repeated-measures"><span class="header-section-number">4</span> Step 2: Are there hierarchical groupings and/or repeated measures?</a></li>
+  <li><a href="#step-3-are-there-non-linear-effects" id="toc-step-3-are-there-non-linear-effects" class="nav-link" data-scroll-target="#step-3-are-there-non-linear-effects"><span class="header-section-number">5</span> Step 3: Are there non-linear effects?</a></li>
+  <li><a href="#step-0-bis-number-of-outcome-variables" id="toc-step-0-bis-number-of-outcome-variables" class="nav-link" data-scroll-target="#step-0-bis-number-of-outcome-variables"><span class="header-section-number">6</span> Step 0-bis: Number of outcome variables</a></li>
   </ul>
 </nav>
     </div>
@@ -219,8 +219,8 @@ window.Quarto = {
 </header>
 
 
-<section id="one-model-to-rule-them-all" class="level1">
-<h1>One model to rule them all</h1>
+<section id="one-model-to-rule-them-all" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> One model to rule them all</h1>
 <p><strong>Linear models</strong>, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable <span class="math inline">\(Y\)</span> based on a function <span class="math inline">\(f(X)\)</span>.</p>
 <p>The “simplest” linear model is the formula of a line:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><span class="math display">\[
@@ -241,16 +241,16 @@ In the Land of Inference where the distributions lie.</p>
 <p>Each of the following sections asks you about the nature of your data and/or experimental design. By answering each, you will find out which “pieces” you need to add to your model structure.</p>
 <p>(This is a work in progress, so still rough around the edges).</p>
 </section>
-<section id="step-0-number-of-outcome-variables" class="level1">
-<h1>Step 0: Number of outcome variables</h1>
+<section id="step-0-number-of-outcome-variables" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Step 0: Number of outcome variables</h1>
 <p>We will get back to this step at the end of this post, since it makes things a bit more complex.</p>
 </section>
-<section id="step-1-choose-a-distribution-for-your-outcome-variable" class="level1">
-<h1>Step 1: Choose a distribution for your outcome variable</h1>
+<section id="step-1-choose-a-distribution-for-your-outcome-variable" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Step 1: Choose a distribution for your outcome variable</h1>
 <p>The first step towards building a linear model is to choose the <strong>family of distributions</strong> you believe the outcome variable belongs to.</p>
 <p>You can start by answering this question: is your outcome variable continuous or discrete?</p>
-<section id="continuous-outcome-variable" class="level2">
-<h2 class="anchored" data-anchor-id="continuous-outcome-variable">Continuous outcome variable</h2>
+<section id="continuous-outcome-variable" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="continuous-outcome-variable"><span class="header-section-number">3.1</span> Continuous outcome variable</h2>
 <ul>
 <li><p>The variable can take on <em>any positive and negative real number, including 0</em>: <strong>Gaussian</strong> (aka normal) distribution.</p>
 <ul>
@@ -273,8 +273,8 @@ In the Land of Inference where the distributions lie.</p>
 </ul></li>
 </ul>
 </section>
-<section id="discrete-outcome-variable" class="level2">
-<h2 class="anchored" data-anchor-id="discrete-outcome-variable">Discrete outcome variable</h2>
+<section id="discrete-outcome-variable" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="discrete-outcome-variable"><span class="header-section-number">3.2</span> Discrete outcome variable</h2>
 <ul>
 <li><p>The variable is <em>dichotomous</em>, i.e.&nbsp;it can take one of two levels: <strong>Bernoulli</strong> distribution.</p>
 <ul>
@@ -293,8 +293,8 @@ In the Land of Inference where the distributions lie.</p>
 </ul>
 </section>
 </section>
-<section id="step-2-are-there-hierarchical-groupings-andor-repeated-measures" class="level1">
-<h1>Step 2: Are there hierarchical groupings and/or repeated measures?</h1>
+<section id="step-2-are-there-hierarchical-groupings-andor-repeated-measures" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Step 2: Are there hierarchical groupings and/or repeated measures?</h1>
 <p>The second step is to ensure that, if the data is structured hierarchically or repeated measures were taken, this is taken into account in the model. Here is where so-called “random effects” or “group-level effects/terms” come in.</p>
 <p>As an example, let’s assume you asked a number of participants to read a list of words and each word was repeated 5 times by each participant. You then took f0 measurements from the stressed vowel of each word, of each repetition.</p>
 <p>Now, the data has a structure to it:</p>
@@ -317,14 +317,14 @@ In the Land of Inference where the distributions lie.</p>
 </ul>
 <p>These terms are for all intents and purposes equivalent (it just happens that different traditions uses different terms).</p>
 </section>
-<section id="step-3-are-there-non-linear-effects" class="level1">
-<h1>Step 3: Are there non-linear effects?</h1>
+<section id="step-3-are-there-non-linear-effects" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Step 3: Are there non-linear effects?</h1>
 <p>A typical use-case of non-linear terms is when you are dealing with time-series data or spatial data (i.e.&nbsp;geographic coordinates).</p>
 <p>Generalised Additive Models allow you to fit non-linear effects using so called “smooth” (or “smoother”) terms.</p>
 <p>You can fit a linear model with smooth terms with brms (simply add smooth terms to the formula) or with mgcv (using <code>gam()</code> or <code>bam()</code>), among others.</p>
 </section>
-<section id="step-0-bis-number-of-outcome-variables" class="level1">
-<h1>Step 0-bis: Number of outcome variables</h1>
+<section id="step-0-bis-number-of-outcome-variables" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Step 0-bis: Number of outcome variables</h1>
 <p>If you want to model just one outcome variable, you are already covered if you went through steps 1-3.</p>
 <p>If instead your design has two or more outcome variables (for example F1 and F2, or duration of the stressed and unstressed vowel of a word) then you want to fit a <strong>multivariate model</strong> (i.e.&nbsp;a model with <em>multiple outcome </em>variables*).</p>
 <p>The same steps we went through before can be applied to multiple outcome variables. In some cases, you will want to use the same model structure for all the outcome variables, while in others you might want to use a different model structure for each.</p>
@@ -339,7 +339,16 @@ In the Land of Inference where the distributions lie.</p>
 <ol>
 <li id="fn1"><p>Technically, the “simplest” linear model is <span class="math inline">\(y = f(x)\)</span>, but oh well…<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2021,
+  author = {Coretta, Stefano},
+  title = {Linear Models: A Cheat-Sheet},
+  date = {2021-08-21},
+  url = {https://stefanocoretta.github.io/posts/2021-08-21-regression-models-a-cheat-sheet/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2021. Linear models: a cheat-sheet. <a href="https://stefanocoretta.github.io/posts/2021-08-21-regression-models-a-cheat-sheet/">https://stefanocoretta.github.io/posts/2021-08-21-regression-models-a-cheat-sheet/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -413,7 +422,7 @@ In the Land of Inference where the distributions lie.</p>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -139,13 +139,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-literate-programming" id="toc-what-is-literate-programming" class="nav-link active" data-scroll-target="#what-is-literate-programming">What is literate programming?</a></li>
-  <li><a href="#necessary-software" id="toc-necessary-software" class="nav-link" data-scroll-target="#necessary-software">Necessary software</a></li>
-  <li><a href="#literate-praat" id="toc-literate-praat" class="nav-link" data-scroll-target="#literate-praat">Literate Praat</a>
+  <li><a href="#what-is-literate-programming" id="toc-what-is-literate-programming" class="nav-link active" data-scroll-target="#what-is-literate-programming"><span class="header-section-number">1</span> What is literate programming?</a></li>
+  <li><a href="#necessary-software" id="toc-necessary-software" class="nav-link" data-scroll-target="#necessary-software"><span class="header-section-number">2</span> Necessary software</a></li>
+  <li><a href="#literate-praat" id="toc-literate-praat" class="nav-link" data-scroll-target="#literate-praat"><span class="header-section-number">3</span> Literate Praat</a>
   <ul class="collapse">
-  <li><a href="#the-source-file" id="toc-the-source-file" class="nav-link" data-scroll-target="#the-source-file">The source file</a></li>
-  <li><a href="#tangle-the-code" id="toc-tangle-the-code" class="nav-link" data-scroll-target="#tangle-the-code">Tangle the code</a></li>
-  <li><a href="#weave-the-documentation" id="toc-weave-the-documentation" class="nav-link" data-scroll-target="#weave-the-documentation">Weave the documentation</a></li>
+  <li><a href="#the-source-file" id="toc-the-source-file" class="nav-link" data-scroll-target="#the-source-file"><span class="header-section-number">3.1</span> The source file</a></li>
+  <li><a href="#tangle-the-code" id="toc-tangle-the-code" class="nav-link" data-scroll-target="#tangle-the-code"><span class="header-section-number">3.2</span> Tangle the code</a></li>
+  <li><a href="#weave-the-documentation" id="toc-weave-the-documentation" class="nav-link" data-scroll-target="#weave-the-documentation"><span class="header-section-number">3.3</span> Weave the documentation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -190,8 +190,8 @@ ul.task-list li input[type="checkbox"] {
 
 <p><br> <br></p>
 <p>This post quickly illustrates how to apply a literate programming workflow to Praat scripting. To be able to reproduce the steps described here you need the latest version of <a href="https://pandoc.org">pandoc</a> and the <a href="https://github.com/driusan/lmt">Literate Markdown Tangler</a> (<code>lmt</code>, you will need to install <a href="https://golang.org">Go</a> first to install <code>lmt</code>).</p>
-<section id="what-is-literate-programming" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-literate-programming">What is literate programming?</h2>
+<section id="what-is-literate-programming" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="what-is-literate-programming"><span class="header-section-number">1</span> What is literate programming?</h2>
 <p>In <a href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a>, one writes both code and plain text which explains what the code does in a single document. Natural language and programming language are interleaved in the document in a way that is reader-oriented, rather than software oriented. So, for example, the code can be included in an order that is different from the order it should have had the document been a script.</p>
 <p>This programming paradigm allows developers to focus on documenting their code in a more natural way. This has the double advantage of aiding a new user in understanding what the code does and helping the author of the code to develop the code following a logic that can be different from the logic of the code’s programming language.</p>
 <p>In general, from a literate source file (a file containing both natural language and programming code) it is possible to obtain a documentation file (by the process called <em>weaving</em>) and a script file (by the process called <em>tangling</em>) which is interpretable by the target programming language.</p>
@@ -200,24 +200,24 @@ ul.task-list li input[type="checkbox"] {
 <p>The figure at the top of this post shows an example of a literate Praat source file.</p>
 <p>The following sections will point you to the software and files that need to be installed/copied and will show how to use literate programming with Praat scripting.</p>
 </section>
-<section id="necessary-software" class="level2">
-<h2 class="anchored" data-anchor-id="necessary-software">Necessary software</h2>
+<section id="necessary-software" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="necessary-software"><span class="header-section-number">2</span> Necessary software</h2>
 <ol type="1">
 <li>You need to install the latest version of Pandoc, which can be found <a href="https://pandoc.org/installing.html">here</a>. After installing, be sure you can run this command from your command line GUI: <code>pandoc --version</code>. If a version is returned, Pandoc is working on your system.</li>
 <li>Install Go from <a href="https://golang.org">here</a> and set it up, then download and install <code>lmt</code> from <a href="https://github.com/driusan/lmt">here</a>.</li>
 <li>Download and unzip the content of <a href="../../files/pandoc-praat.zip">this zip</a> to a convenient directory (usually, in <code>.pandoc/</code> in your user folder). This folder contains the files which allow Pandoc to highlight Praat syntax.</li>
 </ol>
 </section>
-<section id="literate-praat" class="level2">
-<h2 class="anchored" data-anchor-id="literate-praat">Literate Praat</h2>
+<section id="literate-praat" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="literate-praat"><span class="header-section-number">3</span> Literate Praat</h2>
 <p>To generate the Praat script and its documentation, you have to:</p>
 <ol type="1">
 <li>Write your script in a Markdown source file with Praat code enclosed in code chunks that follow the format required by <code>lmt</code>.</li>
 <li>Use <code>lmt</code> to tangle the code from the source file into a standalone Praat script.</li>
 <li>Use pandoc with a custom syntax highlighter to generate the documentation of the script.</li>
 </ol>
-<section id="the-source-file" class="level3">
-<h3 class="anchored" data-anchor-id="the-source-file">The source file</h3>
+<section id="the-source-file" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="the-source-file"><span class="header-section-number">3.1</span> The source file</h3>
 <p>The source file will contain text, Markdown markup, and code enclosed between back-ticks. The following is an example of how such file would look like.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -226,14 +226,14 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="tangle-the-code" class="level3">
-<h3 class="anchored" data-anchor-id="tangle-the-code">Tangle the code</h3>
+<section id="tangle-the-code" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="tangle-the-code"><span class="header-section-number">3.2</span> Tangle the code</h3>
 <p>To tangle the code into a standalone Praat script, run the following line from your command line GUI, where <code>my-script.praat.md</code> is your Praat source file:</p>
 <pre><code>lmt my-script.praat.md</code></pre>
 <p>The scripts defined in the source file will be output in the same directory as the source file (to learn more on how this works, check the <code>lmt</code> README on GitHub).</p>
 </section>
-<section id="weave-the-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="weave-the-documentation">Weave the documentation</h3>
+<section id="weave-the-documentation" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="weave-the-documentation"><span class="header-section-number">3.3</span> Weave the documentation</h3>
 <p>To weave the documentation, run the following by replacing the syntax definition path with the path to the <code>pandoc-praat/</code> folder on your computer:</p>
 <pre><code>pandoc -f gfm -o doc.pdf script.praat.md -N --syntax-definition=&lt;your-path-here&gt;/pandoc-praat/praat.xml</code></pre>
 <p>This line of code tells Pandoc to convert from Markdown to PDF and where to find the files for highlighting Praat code.</p>
@@ -243,7 +243,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2019,
+  author = {Coretta, Stefano},
+  title = {Literate Programming with {Praat}},
+  date = {2019-03-21},
+  url = {https://stefanocoretta.github.io/posts/2018-12-26-literate-programming-with-praat/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2019" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2019. Literate programming with Praat. <a href="https://stefanocoretta.github.io/posts/2018-12-26-literate-programming-with-praat/">https://stefanocoretta.github.io/posts/2018-12-26-literate-programming-with-praat/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -317,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

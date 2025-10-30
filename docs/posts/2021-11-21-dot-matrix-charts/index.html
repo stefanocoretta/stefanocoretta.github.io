@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -174,10 +174,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set up</a></li>
-  <li><a href="#create-data" id="toc-create-data" class="nav-link" data-scroll-target="#create-data">Create data</a></li>
-  <li><a href="#plot-dot-matrix-chart" id="toc-plot-dot-matrix-chart" class="nav-link" data-scroll-target="#plot-dot-matrix-chart">Plot dot matrix chart</a></li>
-  <li><a href="#to-do" id="toc-to-do" class="nav-link" data-scroll-target="#to-do">To do</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up"><span class="header-section-number">1</span> Set up</a></li>
+  <li><a href="#create-data" id="toc-create-data" class="nav-link" data-scroll-target="#create-data"><span class="header-section-number">2</span> Create data</a></li>
+  <li><a href="#plot-dot-matrix-chart" id="toc-plot-dot-matrix-chart" class="nav-link" data-scroll-target="#plot-dot-matrix-chart"><span class="header-section-number">3</span> Plot dot matrix chart</a></li>
+  <li><a href="#to-do" id="toc-to-do" class="nav-link" data-scroll-target="#to-do"><span class="header-section-number">4</span> To do</a></li>
   </ul>
 </nav>
     </div>
@@ -218,11 +218,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="set-up" class="level1">
-<h1>Set up</h1>
+<section id="set-up" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Set up</h1>
 </section>
-<section id="create-data" class="level1">
-<h1>Create data</h1>
+<section id="create-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Create data</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dots <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">as.character</span>(<span class="fu">unlist</span>(<span class="fu">mapply</span>(rep, <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>), <span class="fu">c</span>(<span class="dv">26</span>, <span class="dv">11</span>, <span class="dv">7</span>)))),</span>
@@ -231,8 +231,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="plot-dot-matrix-chart" class="level1">
-<h1>Plot dot matrix chart</h1>
+<section id="plot-dot-matrix-chart" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Plot dot matrix chart</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dots <span class="sc">%&gt;%</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="sc">-</span>y, <span class="at">colour =</span> group)) <span class="sc">+</span></span>
@@ -254,8 +254,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="to-do" class="level1">
-<h1>To do</h1>
+<section id="to-do" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> To do</h1>
 <ul>
 <li>Order groups by descending count.</li>
 <li>Reduce spacing.</li>
@@ -264,7 +264,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2021,
+  author = {Coretta, Stefano},
+  title = {R Gist — {Dot} Matrix Charts with Ggplot2},
+  date = {2021-11-21},
+  url = {https://stefanocoretta.github.io/posts/2021-11-21-dot-matrix-charts/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2021. R gist — Dot matrix charts with ggplot2. <a href="https://stefanocoretta.github.io/posts/2021-11-21-dot-matrix-charts/">https://stefanocoretta.github.io/posts/2021-11-21-dot-matrix-charts/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -338,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

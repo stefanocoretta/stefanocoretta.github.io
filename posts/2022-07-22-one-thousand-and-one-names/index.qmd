@@ -16,8 +16,8 @@ Note that different traditions/disciplines might use one particular name more of
 My usual recommendation is to move away from using specific names like "logistic regression" or "mixed-effects models" and instead just specify what kind of components your linear model has (see the Description column in the table).
 
 | Formula | Description | Names |
-|-----|-----|---|
-| `lm(y ~ x)` | Linear model with one predictor `x` using a Gaussian distribution for the outcome variable `y` | simple linear regression, simple linear model |   |
+|---------------------------|---------------------------|------------------|
+| `lm(y ~ x)` | Linear model with one predictor `x` using a Gaussian distribution for the outcome variable `y` | simple linear regression, simple linear model |
 | `lm(y ~ x + z + ...)` | Linear model with two predictors or more using a Gaussian distribution for the outcome variable `y` | multiple linear regression, multiple linear model |
 | `glm(y ~ x + ..., family = "binomial")` | Linear model with one or more predictors using a Bernoulli distribution for the outcome variable `y` | logistic regression, binomial regression, general(ised) linear model |
 | `lmer(y ~ x + ... + (1 | z))` | Linear model with one or more predictors, including one or more random intercepts, using a Gaussian distribution for the outcome variable `y`. | mixed-effects models, nested models, hierarchical models, multilevel models, cross-effects models (plus combinations of those and "linear" or "regression") |

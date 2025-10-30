@@ -76,16 +76,19 @@ My research interests span a range of topics within linguistics, although the ma
 -   Language endangerment.
 -   Computational modelling.
 
-The other strand of my research expertise is related to **research methods and statistics**. In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
+The other strand of my research expertise is related to **research methods and statistics**.
+In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
 
-For an overview of the research meta-models that inform my research, see the [Meta](meta.qmd) page. The following sections list current and past project by research area.
+For an overview of the research meta-models that inform my research, see the [Meta](meta.qmd) page.
+The following sections list current and past project by research area.
 
 # Phonetology
 
 :::: callout-note
 ## Intrinsic vowel duration and gestural distance
 
-Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.
+Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer.
+In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.
 
 ::: {#intrinsic-duration}
 :::
@@ -102,7 +105,8 @@ Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how audit
 :::: {.callout-note collapse="true"}
 ## Many Speech Analyses
 
-The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
+The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions.
+To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
 
 ::: {#many-speech}
 :::
@@ -120,7 +124,8 @@ In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nicho
 :::: {.callout-note collapse="true"}
 ## Human interaction and the evolution of spoken accent
 
-I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/). This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
+This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
 
 ::: {#speech-interaction}
 :::
@@ -135,7 +140,8 @@ I conducted research within the DFG project [*Nasal coarticulation and sound-cha
 :::: {.callout-note collapse="true"}
 ## Vowel duration and consonant voicing: a production study
 
-As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>. My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
+As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
+My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
 
 ::: {#phd-thesis}
 :::
@@ -148,7 +154,8 @@ These projects cover marginalised/minoritised languages, communities, knowledge 
 ::: callout-note
 ## Language and biological diversity
 
-This project with [Jessica Hampton](https://jesshampton.github.io) focusses on the relationship of linguistic and biological diversity. The project will be developed in three phases:
+This project with [Jessica Hampton](https://jesshampton.github.io) focusses on the relationship of linguistic and biological diversity.
+The project will be developed in three phases:
 
 -   Phase 1: Assessing the link between language endangerment and biodiversity intactness.
 
@@ -180,7 +187,9 @@ In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone
 :::: {.callout-note collapse="true"}
 ## Language practices of Emilian and Esperanto communities
 
-This project with [Jessica Hampton](https://jesshampton.github.io) investigated the relationship between language attitudes and competence in the communities of Emilian and Esperanto speakers. We find that the relationship is modulated by spaces of use: at lower proportions of spaces of use, language attitudes are more positively correlated with language competence, while at higher proportions of spaces of use, the relationship between attitude and competence is reduced. We propose that creating spaces for users of minoritised languages like Emilian could engender higher levels of language competence and hence language maintenance.
+This project with [Jessica Hampton](https://jesshampton.github.io) investigated the relationship between language attitudes and competence in the communities of Emilian and Esperanto speakers.
+We find that the relationship is modulated by spaces of use: at lower proportions of spaces of use, language attitudes are more positively correlated with language competence, while at higher proportions of spaces of use, the relationship between attitude and competence is reduced.
+We propose that creating spaces for users of minoritised languages like Emilian could engender higher levels of language competence and hence language maintenance.
 
 ::: {#emilianto}
 :::
@@ -227,7 +236,8 @@ As part of my ongoing work towards improving quantitative methods in linguistics
 :::: {.callout-note collapse="true"}
 ## Vowel reduction in Polish
 
-Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar. Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?
+Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar.
+Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?
 
 ::: {#polish}
 :::
@@ -243,7 +253,8 @@ Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar. Work on stre
 :::: {.callout-note collapse="true"}
 ## Infant gestures and language development
 
-Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead). [Website](https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/).
+Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead).
+[Website](https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/).
 
 I developed the statistical analysis for the package [Investigating prelinguistic development in three minority cultures](https://www.lucid.ac.uk/what-we-do/research/lucid-phase-1-completed-projects-2014-2019/variation-theme/prelinguistic-development-in-3-cultures/).
 

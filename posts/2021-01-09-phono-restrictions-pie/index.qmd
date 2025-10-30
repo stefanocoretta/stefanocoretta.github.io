@@ -11,8 +11,6 @@ tags:
   - typology
   - phonetics
   - phonology
-bibliography: /Users/ste/texmf/bibtex/bib/linguistics.bib
-cls: unified-style-sheet-for-linguistics.csl
 ---
 
 Proto-Indoeuropean lexicon is based on monosyllabic roots which have an alternating (ablaut) root vowel preceded and followed by consonants.

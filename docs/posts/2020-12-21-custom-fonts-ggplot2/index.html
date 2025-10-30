@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -174,10 +174,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf" id="toc-enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf" class="nav-link active" data-scroll-target="#enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf">Enable custom typefaces in ggplot2 plots when knitting to PDF</a></li>
-  <li><a href="#extra-saving-ggplot2-plots-to-a-file" id="toc-extra-saving-ggplot2-plots-to-a-file" class="nav-link" data-scroll-target="#extra-saving-ggplot2-plots-to-a-file">Extra: Saving ggplot2 plots to a file</a></li>
-  <li><a href="#supported-fonts" id="toc-supported-fonts" class="nav-link" data-scroll-target="#supported-fonts">Supported fonts</a></li>
-  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
+  <li><a href="#enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf" id="toc-enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf" class="nav-link active" data-scroll-target="#enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf"><span class="header-section-number">1</span> Enable custom typefaces in ggplot2 plots when knitting to PDF</a></li>
+  <li><a href="#extra-saving-ggplot2-plots-to-a-file" id="toc-extra-saving-ggplot2-plots-to-a-file" class="nav-link" data-scroll-target="#extra-saving-ggplot2-plots-to-a-file"><span class="header-section-number">2</span> Extra: Saving ggplot2 plots to a file</a></li>
+  <li><a href="#supported-fonts" id="toc-supported-fonts" class="nav-link" data-scroll-target="#supported-fonts"><span class="header-section-number">3</span> Supported fonts</a></li>
+  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info"><span class="header-section-number">4</span> Session info</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +224,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>So now I took the time to play around with different options and packages, and I found the minimal configuration one needs to use custom typefaces in ggplot2 plots and get a PDF document with those plots embedded in it (it is working as of December 2020, not sure what the year will bring).</p>
 <p>In the following sections I will show what this configuration looks like. Note that this post covers only R running on macOS and that things will be different perhaps on Linux and for sure on Windows (maybe I’ll cover those OSs in an update later on).</p>
 <p>You can check out my full session info below, but just be aware that I am using R 4.0.3 in macOS Big Sur 11.1, with the latest version of the tidyverse packages at the time of writing.</p>
-<section id="enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf" class="level2">
-<h2 class="anchored" data-anchor-id="enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf">Enable custom typefaces in ggplot2 plots when knitting to PDF</h2>
+<section id="enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="enable-custom-typefaces-in-ggplot2-plots-when-knitting-to-pdf"><span class="header-section-number">1</span> Enable custom typefaces in ggplot2 plots when knitting to PDF</h2>
 <p>I was surprised to find out that to include custom typefaces in ggplot2 plots and knit the <code>.Rmd</code> to a PDF document, you just need the following options in your YAML preamble (no need for extra packages!!!).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
@@ -241,8 +241,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I chose the <a href="https://fonts.google.com/specimen/Fira+Sans">Fira Sans</a> fonts here because they include the Unicode range of the IPA.</p>
 <p>Both when running a chunk with a ggplot2 plot interactively in the <code>.Rmd</code> file and when knitting the <code>.Rmd</code> to a PDF, the plot typeface will be Fira Sans. And we are done.</p>
 </section>
-<section id="extra-saving-ggplot2-plots-to-a-file" class="level2">
-<h2 class="anchored" data-anchor-id="extra-saving-ggplot2-plots-to-a-file">Extra: Saving ggplot2 plots to a file</h2>
+<section id="extra-saving-ggplot2-plots-to-a-file" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="extra-saving-ggplot2-plots-to-a-file"><span class="header-section-number">2</span> Extra: Saving ggplot2 plots to a file</h2>
 <p>Now, what if you want to save the plots with your custom typeface to a file that you can include in another document?</p>
 <p>You have two options:</p>
 <ul>
@@ -253,12 +253,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The magic is done by <code>ggsave(..., device = cairo_pdf)</code> (that’s the same <code>cairo_pdf</code> device we set in the YAML preamble). Note that it’s <code>cairo_pdf</code> and not <code>cairo_pdf()</code> (for reasons beyond my comprehension, it does not work if you add the parentheses).</p>
 <p>Here you find a <a href="https://gist.github.com/stefanocoretta/c9e3c0d8a72739c7ebb3a30d11e4c134">gist</a> with an example <code>.Rmd</code> file that you can download on your machine and knit as a test.</p>
 </section>
-<section id="supported-fonts" class="level2">
-<h2 class="anchored" data-anchor-id="supported-fonts">Supported fonts</h2>
+<section id="supported-fonts" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="supported-fonts"><span class="header-section-number">3</span> Supported fonts</h2>
 <p>As far as I can tell, any <code>.ttf</code> (TrueType font) installed on your system with Font Book can be set as the typeface to be used in the ggplot2 plots.</p>
 </section>
-<section id="session-info" class="level2">
-<h2 class="anchored" data-anchor-id="session-info">Session info</h2>
+<section id="session-info" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="session-info"><span class="header-section-number">4</span> Session info</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
@@ -342,7 +342,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol>
 <li id="fn1"><p><a href="https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif" class="uri">https://media.giphy.com/media/3o6gDY8zzwvNQdFCaQ/giphy.gif</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{coretta2020,
+  author = {Coretta, Stefano},
+  title = {How to Use Custom Typefaces in Ggplot2 {{[}macOS} Only{]}},
+  date = {2020-12-21},
+  url = {https://stefanocoretta.github.io/posts/2020-12-21-custom-fonts-ggplot2/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-coretta2020" class="csl-entry quarto-appendix-citeas" role="listitem">
+Coretta, Stefano. 2020. How to use custom typefaces in ggplot2 [macOS
+only]. <a href="https://stefanocoretta.github.io/posts/2020-12-21-custom-fonts-ggplot2/">https://stefanocoretta.github.io/posts/2020-12-21-custom-fonts-ggplot2/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -416,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/stefanocoretta\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

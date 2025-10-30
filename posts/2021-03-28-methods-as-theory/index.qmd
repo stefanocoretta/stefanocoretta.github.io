@@ -2,6 +2,7 @@
 title: Methods as theory
 author: 'Stefano Coretta'
 date: '2021-03-28'
+date-modified: '2025-10-30'
 categories:
   - Methods
   - Meta-models
@@ -39,7 +40,7 @@ Finally, **a scientific theory can be defined as a generally-recognised set of w
 
 [^1]: The tacit role of the "community" in the process of accepting theories is brilliantly explored and systematised in the classic work by @kuhn1962. See @bird2018 for an overview of Kuhn's ideas.
 
-In the remainder of the post I will use *theory* in this last sense [for an in-depth overview of the structure of scientific theories see @winther2021].
+In the remainder of the post I will use *theory* in this last sense [for an in-depth overview of the structure of theories see @winther2021] (but will not restrict the definition to "scientific" theories).
 
 # Are methods not theory?
 
@@ -67,9 +68,7 @@ With *concept*, I mean any statement, hypothesis, law, rule, constraint, princip
 
 For example, Heisenberg's uncertainty principle is a fundamental concept of quantum mechanics.
 
-The use of a quantum computer that manipulates photons to answer a research question is, unambiguously, a method of quantum mechanics. How the experiment is brought about by researchers and how the results are used for inference, together with many other factors related to conscious decisions and less conscious biases, all influence the resulting scientific contribution.[^2] This "subjective" aspect of science has been brilliantly labelled the [garden of forking paths]{.smallcaps} and the [researcher's degrees of freedom]{.smallcaps} [@gelman2014a].
-
-[^2]: I use *science* here in the most inclusive sense, as opposed to pseudo-science.
+The use of a quantum computer that manipulates photons to answer a research question is, unambiguously, a method of quantum mechanics. How the experiment is brought about by researchers and how the results are used for inference, together with many other factors related to conscious decisions and less conscious biases, all influence the resulting contribution. This "subjective" aspect of research has been brilliantly labelled the [garden of forking paths]{.smallcaps} and the [researcher's degrees of freedom]{.smallcaps} [@gelman2014a].
 
 In other words, the research methods end up being encapsulated in the theory by way of the numerous decisions that take place during the investigation and that shape the conceptual conclusions communicated at the end of it.
 
@@ -79,8 +78,8 @@ In sum, in the methods-as-theory view, theory is not opposed to methods, but rat
 
 Moreover, concepts and methods are not meant as categorically distinct entities. On the contrary, they are just two perspectives from which one can look at the constituents of theory, but in practice it is pointless to try and clearly segregate one from the other.
 
-To conclude, as I see it, a theory encompasses both concepts and methods. Concepts and methods are reciprocally entangled, and dismissing the latter for the former would be equivalent to scientific hand-waving.[^3]
+To conclude, as I see it, a theory encompasses both concepts and methods. Concepts and methods are reciprocally entangled, and dismissing the latter for the former would be equivalent to epistemological hand-waving.[^3]
 
-[^3]: In future posts I would like to expand on the idea that methods become embedded within theory by focussing on statistical modelling, and on the helpful but often neglected concepts of basic (pure) and applied science and how these can further illuminate the epistemology of theory I sketched here.
+[^3]: In future posts I would like to expand on the idea that methods become embedded within theory by focussing on statistical modelling, and on the helpful but often neglected concepts of knowlege-oriented vs applied research and how these can further illuminate the epistemology of theory I sketched here.
 
 #### References  {.unnumbered}

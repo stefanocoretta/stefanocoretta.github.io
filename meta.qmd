@@ -3,7 +3,8 @@ title: Research meta-models
 number-sections: true
 ---
 
-In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research. I hope these will some day make it into a proper publication, after some more thorough thinking.
+In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research.
+I hope these will some day make it into a proper publication, after some more thorough thinking.
 
 This is a work in progress, in two senses:
 
@@ -30,7 +31,8 @@ I am also a supporter of the **Slow Science** movement, part of the broader "slo
 
 <!-- TODO: philosophy of science: three books -->
 
-Philosophy and science might seem two very unrelated fields, but in fact **philosophy of science** is an extremely important intersection of the two, with broad implications for research methods, from experiment planning, through statistical modelling, to inference. I'll expand on this some time in the future, but for now I can strongly recommend the following books:
+Philosophy and science might seem two very unrelated fields, but in fact **philosophy of science** is an extremely important intersection of the two, with broad implications for research methods, from experiment planning, through statistical modelling, to inference.
+I'll expand on this some time in the future, but for now I can strongly recommend the following books:
 
 -   *Philosophy of science: Very short introduction* [@okasha2016].
 -   *Understanding psychology as a science: An introduction to scientific and statistical inference* [@dienes2008].
@@ -40,13 +42,18 @@ Philosophy and science might seem two very unrelated fields, but in fact **philo
 
 In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I suggest the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*) to refer to the study of what are traditionally investigated by phonology, phonetics and speech science.
 
-The postulation of three levels of analysis (phonological, phonetic and motor-perceptual) is compatible with neuro-biological specialisations of the brain cortex [@basilakos2018; @fedorenko2020; @ayyash2021; @fedorenko2024; @fedorenko2024a; @regev2024]. The tripartite nature of phonetological systems is reflected in the grammar architecture expounded in @bermudezotero2015 and @turk2020.
+The postulation of three levels of analysis (phonological, phonetic and motor-perceptual) is compatible with neuro-biological specialisations of the brain cortex [@basilakos2018; @fedorenko2020; @ayyash2021; @fedorenko2024; @fedorenko2024a; @regev2024].
+The tripartite nature of phonetological systems is reflected in the grammar architecture expounded in @bermudezotero2015 and @turk2020.
 
-Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be "discovered", are included. The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
+Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit.
+Sign languages, and other communicative systems yet to be "discovered", are included.
+The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
 
 ## Phonetological systems
 
-A *phonetological system* is comprised of a set of [phonetological units]{.smallcaps} and their [relationships]{.smallcaps}. Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.
+A *phonetological system* is comprised of a set of [phonetological units]{.smallcaps} and their [relationships]{.smallcaps}.
+Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems.
+Thoughts on this are much appreciated.
 
 In my view of phonetology, a phonetological system has the following properties:
 
@@ -65,19 +72,26 @@ I also consider these statements to be extendible more generally to Human Langua
 
 In light of the brilliant ideas expounded in @cysouw2013 and @vanrooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
 
-@cysouw2013 propose a meta-model based on linguistic documentation and description. From this model, I borrow two concepts:
+@cysouw2013 propose a meta-model based on linguistic documentation and description.
+From this model, I borrow two concepts:
 
 -   **Glossonym** (p. 339)
 
-    A [glossonym]{.smallcaps} is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
+    A [glossonym]{.smallcaps} is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages.
+    A glossonym does not have a referent nor a significant, but rather it is just a signifier.
+    For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
 
 -   **Doculect** (p 342)
 
-    A [doculect]{.smallcaps} (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is the pairing of a glossonym and a resource. An example: [@howard1986; *mawayana*].
+    A [doculect]{.smallcaps} (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.).
+    This term is agnostic as to the type of linguistic entity (family, language, variety, etc.).
+    A doculect is the pairing of a glossonym and a resource.
+    An example: [@howard1986; *mawayana*].
 
 @cysouw2013 [p. 347] also introduce the concept of "languoid" which refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family".
 
-I propose instead the term [glossolect]{.smallcaps}, which---unlike languoid---does not necessarily entail a strictly-nested hierarchical structure. This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
+I propose instead the term [glossolect]{.smallcaps}, which---unlike languoid---does not necessarily entail a strictly-nested hierarchical structure.
+This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
 
 A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.
 
@@ -99,7 +113,10 @@ In sum:
 
 # Linguistics
 
-The following sections provide a thought-out description of my ontological and epistemological beliefs in relation to "linguistics" and its object(s) of study. The reader should interpret all of the statements made here as "my personal opinion". In some cases *opinion* refers to my [expert opinion]{.smallcaps}, in others to my [intuitions]{.smallcaps} (for the use of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)). With time, I will add more references where/if relevant.
+The following sections provide a thought-out description of my ontological and epistemological beliefs in relation to "linguistics" and its object(s) of study.
+The reader should interpret all of the statements made here as "my personal opinion".
+In some cases *opinion* refers to my [expert opinion]{.smallcaps}, in others to my [intuitions]{.smallcaps} (for the use of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)).
+With time, I will add more references where/if relevant.
 
 ## Ontological
 

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stefanocoretta.github.io/blog.html</loc>
-    <lastmod>2024-01-16T12:25:32.885Z</lastmod>
+    <lastmod>2024-02-16T22:45:59.792Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/index.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/meta.html</loc>
-    <lastmod>2025-10-31T11:31:18.492Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.024Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-01-29-rgb-space/index.html</loc>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-03-28-methods-as-theory/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.567Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.028Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-12-01-how-to-simplify-your-study-design/index.html</loc>
@@ -54,23 +54,27 @@
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-01-09-phono-restrictions-pie/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.567Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.027Z</lastmod>
   </url>
   <url>
-    <loc>https://stefanocoretta.github.io/research.html</loc>
-    <lastmod>2025-10-31T11:05:16.570Z</lastmod>
+    <loc>https://stefanocoretta.github.io/posts/2025-10-31-research-and-society/index.html</loc>
+    <lastmod>2025-11-01T10:39:51.113Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/teaching.html</loc>
     <lastmod>2025-06-26T10:32:05.762Z</lastmod>
   </url>
   <url>
+    <loc>https://stefanocoretta.github.io/research.html</loc>
+    <lastmod>2025-11-01T10:01:11.033Z</lastmod>
+  </url>
+  <url>
     <loc>https://stefanocoretta.github.io/posts/2022-07-22-one-thousand-and-one-names/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.567Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.028Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2018-03-02-formants-tidy/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.566Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.026Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-04-22-vot-and-place-of-articulation/index.html</loc>
@@ -86,11 +90,11 @@
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2019-06-17-priors-ggplot2/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.567Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.027Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2015-08-04-dialects-italy/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.566Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.025Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-11-21-dot-matrix-charts/index.html</loc>
@@ -98,7 +102,7 @@
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2021-03-07-quotables-rebecca-posner/index.html</loc>
-    <lastmod>2025-10-31T11:05:16.567Z</lastmod>
+    <lastmod>2025-11-01T10:01:11.028Z</lastmod>
   </url>
   <url>
     <loc>https://stefanocoretta.github.io/posts/2018-08-23-tongue-ggplot2/index.html</loc>
@@ -119,9 +123,5 @@
   <url>
     <loc>https://stefanocoretta.github.io/about.html</loc>
     <lastmod>2024-02-16T22:45:59.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stefanocoretta.github.io/posts/2025-10-31-research-and-society/index.html</loc>
-    <lastmod>2025-10-31T11:57:18.301Z</lastmod>
   </url>
 </urlset>

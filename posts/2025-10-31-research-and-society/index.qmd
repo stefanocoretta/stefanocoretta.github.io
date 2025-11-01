@@ -13,7 +13,9 @@ bibliography: references.bib
 
 Through the years, I had a few encounters with other academics that ended on an underwhelming note.
 This is about different views on whether research can be conducted while not being academically interested in society.
-I will unpack my experience and my thoughts in this post.
+I will try to unpack (at least superficially) my experience and my thoughts in this post.[^1]
+
+[^1]: I am not considering here issues of research funding (how should we allocate funds to research), which are possibly relevant but tangential to the point I want to make in this post.
 
 ## The encounters
 
@@ -22,20 +24,29 @@ To which I reply: "well, I am not academically interested in society, although o
 This is normally followed by a sort of contorted facial expression and then just plain dismissal.
 
 I cannot say it has happened many times (and precisely like how described), but it has happened enough for me to decide to write about it.
-I want to stress that I am not saying that we should all not be interested in society (academically or otherwise).
+I want to stress that I am not saying that none of us should be interested in society (academically or otherwise).
 What I want to argue here is that it is OK not to be interested in society while still doing sound research.
 
 ## Society is just one aspect
 
-I very much agree that Language (in the sense of @haspelmath2020) is not devoid of societal aspects and in fact I argue that society is a very important aspect of Language (see [here](/meta.qmd#phonetological-systems)).
-However, Language is made of many (interconnected) components (and I also believe that Language is more than the sum of its parts, see @thelen1996, @thelen2006): while understanding Language in its entirety of course require understanding society and its part in Language, I argue that an equally valid endeavour is to look at some components of Language while not considering the others (of course this will produce a limited view on such components).
+I very much agree that Language [in the sense of @haspelmath2020] is not devoid of societal aspects and in fact I argue that society is a very important aspect of Language (see [here](/meta.qmd#phonetological-systems)).
+However, Language is made of many (interconnected) components [and I also believe that Language is more than the sum of its parts, see @thelen1996, @thelen2006; on this note, I want to highlight that I find the reductionist view of structuralism entertained by certain constructivist researchers to be problematic and based on a gross misunderstanding of structuralism, more on this in a work-in-progress paper with Jessica Hampton]: while understanding Language in its entirety of course require understanding society and its part in Language, I argue that an equally valid endeavour is to look at some components of Language while not considering the others (of course this will produce a limited view on such components, as much as just looking at society while rejecting any form of systematisation will produce a limited view).
 
 For example, one of my academic interests is how speech gestures are cognitively organised and physically executed.
 This is an area of what I call [phonetology](/meta.qmd#phonetology) on which there is still little agreement.
 An interesting aspect of the gestural organisation of speech is around what units organisation takes place and what type of hierarchies are involved in the organisation.
-An old hypothesis is that vocalic gestures take place at regular temporal intervals under certain constraints, and that other gestures are "overlaid" on them \[@ohman1966; @ohman1967; @fowler1980; @fowler1983; @fowler1992, see one of my presentations [here](https://stefanocoretta.github.io/vv-iso/presentations/2025-p-workshop.html#/title-slide)\].
+An old hypothesis is that vocalic gestures take place at regular temporal intervals under certain constraints, and that other gestures are "overlaid" on them [@ohman1966; @ohman1967; @fowler1980; @fowler1983; @fowler1992, see one of my presentations [here](https://stefanocoretta.github.io/vv-iso/presentations/2025-p-workshop.html#/title-slide)].
 
 What ultimately makes this interesting to me is my own academic curiosity.
 I have no interest in its applications, nor in how this can help society.
 I am not saying that nobody should be interested in its application, I am just saying I am not.
 There will be at least one academic on Earth interested in how what we learn about gestural organisation can be used in technological applications, language pedagogy and so on.
+
+## It is OK
+
+Knowledge for knowledge's sake is, or should, be something available as an option to any member of the academic and research community.
+Moreover, those academics and researcher that resonate with a "knowledge for knowledge's sake" approach should not be subjected to dismissal by other members.
+
+To conclude, I will just briefly mention something else, which is nonetheless related to the subject of this post: I've had academics assuming that my philosophical stance includes some form of positivism because they expect "quantitative methodologists" to automatically abide to such stance.
+This cannot be further from the truth.
+In fact, positivism is completely incompatible with my own philosophical stance and positionality, which are based on a syncretic synthesis of holistic monism, anti-realism, idealism, panpsychism, spiritualism and Bayesian epistemology.

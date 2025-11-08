@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/2025-11-08-expected-predictions/index.html",
       "/posts/2025-10-31-research-and-society/index.html",
       "/posts/2022-07-22-one-thousand-and-one-names/index.html",
       "/posts/2022-04-05-bayesian-ci-width-power-analysis/index.html",
@@ -29,11 +30,11 @@
     ]
   },
   {
-    "listing": "/research.html",
+    "listing": "/output/index.html",
     "items": []
   },
   {
-    "listing": "/output/index.html",
+    "listing": "/research.html",
     "items": []
   }
 ]

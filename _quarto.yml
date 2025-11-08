@@ -35,6 +35,7 @@ format:
     toc: true
     bibliography: references.bib
     csl: unified-style-sheet-for-linguistics.csl
+    df-print: paged
 
 execute: 
   echo: false

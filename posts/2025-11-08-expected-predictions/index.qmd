@@ -1,0 +1,256 @@
+---
+title: Obtaining expected values from the posterior predictive distribution in brms models
+author: Stefano Coretta
+date: 2025-11-08
+categories:
+  - Regression Models
+tags:
+  - Bayesian inference
+  - brms
+  - expected predictions
+  - bayesplot
+  - tidybayes
+bibliography: references.bib
+execute: 
+  echo: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+theme_set(theme_light())
+library(brms)
+library(posterior)
+library(ggdist)
+library(tidybayes)
+library(bayesplot)
+
+```
+
+Once you fit a Bayesian regression model with `brms::brm()`, virtually all subsequent operations are based on the model's MCMC draws.
+Once estimand of interest, that is derived from the MCMC draws, are the *expected values* of the posterior predictive distribution*.*
+
+There are several ways of calculating/extracting the expected values.
+This post is intended to showcase these methods.
+Prior familiarity with Bayesian regression modelling and the brms package [@burkner2017] are necessary.
+
+## Manual computation from the draws
+
+The most basic approach is to extract the MCMC draws from the model and compute the expected values from them.
+The following model uses data from @mclaughlin2022, a study of how pupil width covaries with lexical neighbourhood density.
+Let's read the data.
+
+```{r}
+#| label: pupil-width
+#| message: false
+
+library(tidyverse)
+
+pupil_width <- read_csv("https://raw.githubusercontent.com/uoelel/qml-data/refs/heads/main/data/mclaughlin2023/pupil-width.csv")
+
+pupil_width
+```
+
+Our variables of interest are `pupil_max`, the maximum pupil size within trial, scaled within trial and participant, and `Condition`, either `Dense` or `Sparse` neighbourhood.
+We can now fit a BRM.
+
+```{r}
+#| label: pupil-bm
+
+library(brms)
+
+pupil_bm <- brm(
+  pupil_max ~ Condition,
+  family = gaussian,
+  data = pupil_width,
+  cores = 4, seed = 732, file = "posts/2025-11-08-expected-predictions/pupil_bm"
+)
+
+summary(pupil_bm, prob = 0.8)
+```
+
+We can calculate the expected values for the dense and sparse neighbourhoods by transforming the draws, obtained with `as_draws_df()` from the posterior package.
+
+```{r}
+#| label: pupil-draws
+
+library(posterior)
+
+pupil_draws <- as_draws_df(pupil_bm) |> 
+  mutate(
+    dense = b_Intercept,
+    sparse = b_Intercept + b_ConditionSparse
+  )
+
+head(pupil_draws)
+```
+
+You can then summarise and plot as with any type of data.
+Summarising can be done either manually with `mutate()` or with the `summarise_draws()` from the posterior package.
+
+```{r}
+#| label: pupil-epred-summary
+
+pupil_draws |>
+  select(dense:sparse) |> 
+  summarise_draws() |> 
+  # Optional: show only 2 digits
+  mutate(across(where(is.numeric), ~round(.x, 2)))
+```
+
+For plotting the expected values with ggplot2, it is convenient to pivot the tibble.
+
+```{r}
+#| label: pupil-draws-long
+
+pupil_draws_long <- pupil_draws |> 
+  select(.chain, .iteration, .draw, dense, sparse) |> 
+  pivot_longer(dense:sparse, names_to = "Condition", values_to = "epred")
+
+head(pupil_draws_long)
+```
+
+We can use the `stat_halfeye()` function from the [ggdist](https://mjskay.github.io/ggdist/index.html) package.
+
+```{r}
+#| label: pupil-halfeye
+
+library(ggdist)
+
+pupil_draws_long |> 
+  ggplot(aes(epred, Condition)) +
+  stat_halfeye()
+```
+
+## Plotting with `conditional_effects()`
+
+Plotting the expected values can also be done with `conditional_effects()` from the brms package, which plots error bars with a central measure (by default, 95% CrI and the median).
+The function uses the `posterior_epred` method by default, which is the one that returns expected values (set explicitly in the code below for clarity).
+
+```{r}
+#| label: pupil-bm-cond
+#| message: false
+
+conditional_effects(pupil_bm, method = "posterior_epred")
+```
+
+## Computation with tidybayes
+
+An alternative to manual computation is to use the `epred_draws()` from the [tidybayes](https://mjskay.github.io/tidybayes/index.html) package.
+The function requires the user to input a "prediction grid" as `newdata`.
+For each row in the prediction grid, the expected value for each of the draws will be calculated.
+The returned tibble is in the "longer" format (like `pupil_draws_long`).
+
+```{r}
+#| label: pupil-epred
+
+library(tidybayes)
+
+pred_grid <- tibble(
+  Condition = c("Dense", "Sparse")
+)
+
+pupil_epred <- epred_draws(
+  pupil_bm,
+  newdata = pred_grid
+)
+
+head(pupil_epred)
+```
+
+Using `tidybayes::epred_draws()` is convenient when the model has one or more numeric predictors.
+For example, let's model data from @tucker2019. The data contains reactions times from an auditory lexical decision task in English.
+We can estimate the covariation between RTs, phone Levenshtein distance (higher values indicate the word is more unique compared to other words, `PhonLev`) and lexical status (real or non-real word, `IsWord`).
+
+```{r}
+#| label: mald
+
+mald <- readRDS("data/tucker2019/mald_1_1.rds")
+
+mald
+```
+
+Let's model RTs with a log-normal regression.
+
+```{r}
+#| label: mald-bm
+
+mald_bm <- brm(
+  RT ~ IsWord * PhonLev,
+  family = lognormal,
+  data = mald,
+  cores = 4, seed = 732, file = "posts/2025-11-08-expected-predictions/mald_bm"
+)
+
+summary(mald_bm, prob = 0.8)
+```
+
+Using the draws from `as_draws_df()` would require calculating expected prediction manually for a range of values of `PhonLev`.
+Instead, we can use `epred_draws()` by specifying a sequence of values with `seq()` when creating the prediction grid with `expand_grid()` from the tidyr package.
+
+```{r}
+#| label: mald-epred
+
+pred_grid <- expand_grid(
+  IsWord = c("FALSE", "TRUE"),
+  PhonLev = seq(min(mald$PhonLev), max(mald$PhonLev), by = 0.1)
+)
+
+mald_epred <- epred_draws(mald_bm, newdata = pred_grid)
+
+head(mald_epred)
+```
+
+We can plot the expected values with `geom_line()` and `geom_ribbon()`.
+
+```{r}
+#| label: mald-epred-plot
+
+mald_epred_summary <- mald_epred |> 
+  group_by(IsWord, PhonLev) |> 
+  summarise(
+    mean = mean(.epred),
+    lo = quantile2(.epred, 0.025),
+    hi = quantile2(.epred, 0.975),
+    .groups = "drop"
+  )
+
+mald_epred_summary |> 
+  ggplot(aes(PhonLev)) +
+  geom_ribbon(aes(ymin = lo, ymax = hi, group = IsWord), alpha = 0.25) +
+  geom_line(aes(y = mean, colour = IsWord)) +
+  ylab("RT (ms)")
+```
+
+For quick plotting, you can also use `conditional_effects()` as we have seen above.
+
+```{r}
+#| label: mald-bm-cond
+
+conditional_effects(mald_bm, "PhonLev:IsWord")
+
+```
+
+## Summary
+
+::: {.callout-note appearance="simple"}
+-   Expected predictions can be obtained:
+
+    -   Manually, with the help of `posterior::as_draws_df()` and `mutate()`.
+
+    -   With `tidybayes::epred_draws()` with the help of `expand_grid()`.
+
+-   Expected predictions can be summarised:
+
+    -   Manually, with `summarise()` and different summary functions, including `posterior::quantile2()`.
+
+    -   With `posterior::summarise_draws()`.
+
+-   Expected predictions can be plotted.
+
+    -   Manually with ggplot2 (or any other plotting system) and standard geoms or stats from the ggdist package.
+
+    -   With `brms::conditional_effects()`.
+:::

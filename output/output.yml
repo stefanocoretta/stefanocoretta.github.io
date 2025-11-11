@@ -3,7 +3,7 @@
 
 - title: "A vitality assessment of Gallo-Romance of Northern Italy"
   type: paper
-  year: in preparation
+  year: submitted
   author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
   submitted: "https://doi.org/10.31219/osf.io/fuzby_v1"
   compendium: "https://github.com/stefanocoretta/grni-vitality"
@@ -19,10 +19,10 @@
 
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   type: paper
-  year: submitted
+  year: accepted
   journal: "Language and Speech"
   author: "Stefano Coretta"
-  submitted: "https://doi.org/10.31219/osf.io/83afz"
+  accepted: "https://doi.org/10.31219/osf.io/83afz"
   compendium: "https://github.com/stefanocoretta/vow-height"
   project: "intrinsic-duration"
 
@@ -32,7 +32,7 @@
   author: "Stefano Coretta, Paul-Christian Bürkner"
   journal: "Journal of Phonetics"
   # doi: "10.31219/osf.io/f9rqg_v1"
-  submitted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
+  accepted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
   compendium: "https://github.com/stefanocoretta/beta-phon"
   project: "statistics"
 

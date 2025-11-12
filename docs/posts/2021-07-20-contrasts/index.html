@@ -106,6 +106,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -224,7 +226,7 @@ window.Quarto = {
 <h1 class="title">Factors, coding and contrasts</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Methods</div>
-    <div class="quarto-category">Linear models</div>
+    <div class="quarto-category">Regression Models</div>
   </div>
   </div>
 
@@ -317,26 +319,23 @@ Levels: carnivore herbivore omnivore</code></pre>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  dummy_1, dummy_2</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 2
-  dummy_1 dummy_2
-    &lt;dbl&gt;   &lt;dbl&gt;
-1       0       0
-2       0       0
-3       1       0
-4       0       1
-5       1       0</code></pre>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["dummy_1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["dummy_2"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"0","2":"0"},{"1":"0","2":"0"},{"1":"1","2":"0"},{"1":"0","2":"1"},{"1":"1","2":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 </div>
 <p>If this doesn’t make much sense, try and figure it out by checking the value of the two columns for each row with the following code:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># case_when() is a very helpful function from dplyr!</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">case_when</span>(</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"carnivore"</span>,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"herbivore"</span>,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"omnivore"</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># case_when() is a very helpful function from dplyr!</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">case_when</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"carnivore"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"herbivore"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  dummy_1 <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> dummy_2 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"omnivore"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>What if the factor has 4 levels? Then you can code it with 3 dummy variables. And what about 5 levels? Use 4 dummy variables. The number of dummy variables needed is equal to the number of levels minus 1 (<span class="math inline">\(n_{dummy} = n_{levels} - 1\)</span>).</p>
 <section id="summing-up" class="level2" data-number="1.1">
@@ -363,8 +362,8 @@ Levels: carnivore herbivore omnivore</code></pre>
 <p>Factors in R are coded with treatment contrasts by default. Also by default, the first level is set as the reference level (the order is alphabetical by default). The reference level is the level that gets coded only with <code>0</code>s, as we have seen above for the dinosaur’s diet factor (<code>carnivorous</code> had <code>dummy_1 = 0</code> and <code>dummy_2 = 0</code>).</p>
 <p>Let’s see an example using a data table with measurements of vowel duration.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./data/vowels.rda"</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(vowels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./data/vowels.rda"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(vowels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 886
 Columns: 9
@@ -382,17 +381,17 @@ $ speech_rate_c &lt;dbl&gt; -0.55937531, -0.43694485, -0.63303978, -0.42091937, 
 <p>For example, let’s take the <code>vowel</code> column. This column indicates which vowel the measurement was taken from, and that can be /a/, /o/, or /u/.</p>
 <p>If we convert the <code>vowel</code> column into a factor, the levels will be <code>a</code>, <code>o</code> and <code>u</code>, and <code>a</code> will be the reference level.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>vowels <span class="ot">&lt;-</span> vowels <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vowel =</span> <span class="fu">as.factor</span>(vowel))</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(vowels<span class="sc">$</span>vowel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>vowels <span class="ot">&lt;-</span> vowels <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vowel =</span> <span class="fu">as.factor</span>(vowel))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(vowels<span class="sc">$</span>vowel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a" "o" "u"</code></pre>
 </div>
 </div>
 <p>To get a sense of how a factor would be coded with treatment contrasts, we can print a dummy coding table with the <code>contr.treatment()</code> function.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contr.treatment</span>(<span class="fu">levels</span>(vowels<span class="sc">$</span>vowel))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contr.treatment</span>(<span class="fu">levels</span>(vowels<span class="sc">$</span>vowel))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  o u
 a 0 0
@@ -402,9 +401,9 @@ u 0 1</code></pre>
 </div>
 <p>Now, let’s run a regression model with <code>v1_duration</code> as the outcome variable and <code>vowel</code> as the predictor.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>vow_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> vowel, <span class="at">data =</span> vowels)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>vow_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> vowel, <span class="at">data =</span> vowels)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -445,7 +444,7 @@ F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Let’s see what happens to the factor <code>vowel</code> when using sum contrasts (remember that factors use treatment contrasts by default).</p>
 <p>This is how sum coding would look like for this factor:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contr.sum</span>(<span class="fu">levels</span>(vowels<span class="sc">$</span>vowel))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contr.sum</span>(<span class="fu">levels</span>(vowels<span class="sc">$</span>vowel))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [,1] [,2]
 a    1    0
@@ -456,17 +455,17 @@ u   -1   -1</code></pre>
 <p>Since there are 3 levels, we need two dummy variables. So <code>a</code> is coded as <code>1, 0</code>, <code>o</code> is coded as <code>0, 1</code>, and <code>u</code> as <code>-1, -1</code>.</p>
 <p>To set the contrasts of a factor to sum coding, we can run the following:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(vowels<span class="sc">$</span>vowel) <span class="ot">&lt;-</span> <span class="st">"contr.sum"</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to change it back to treatment contrasts you can run</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># contrasts(vowels$vowel) &lt;- "contr.treatment"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(vowels<span class="sc">$</span>vowel) <span class="ot">&lt;-</span> <span class="st">"contr.sum"</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># If you want to change it back to treatment contrasts you can run</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># contrasts(vowels$vowel) &lt;- "contr.treatment"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>With sum contrasts the reference level is in fact the grand mean.</p>
 <p>In our model of vowel duration this means that the <code>Intercept</code> coefficient will be the grand mean of vowel duration.</p>
 <p>Let’s rerun the model and look at the output.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>vow_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> vowel, <span class="at">data =</span> vowels)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>vow_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> vowel, <span class="at">data =</span> vowels)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -492,7 +491,7 @@ F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>The <code>Intercept</code> now is 116 ms, which mean that the mean of vowel duration across the three vowels is 116 ms.</p>
 <p>We can check this by taking the mean:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(vowels<span class="sc">$</span>v1_duration)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(vowels<span class="sc">$</span>v1_duration)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 117.2747</code></pre>
 </div>
@@ -510,9 +509,9 @@ F-statistic: 72.99 on 2 and 883 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Sum contrasts can be very handy when the model contains interactions between factors.</p>
 <p>Let’s say we want to include in our model of vowel duration a predictor that specifies the voicing of the stop following the vowel. We also add an interaction between vowel and voicing, so that we can model differences in the effect of voicing across vowels.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>vow_lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> c2_voicing <span class="sc">+</span> vowel <span class="sc">+</span> c2_voicing<span class="sc">:</span>vowel, <span class="at">data =</span> vowels)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm_2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>vow_lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(v1_duration <span class="sc">~</span> c2_voicing <span class="sc">+</span> vowel <span class="sc">+</span> c2_voicing<span class="sc">:</span>vowel, <span class="at">data =</span> vowels)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(vow_lm_2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:

@@ -1,16 +1,16 @@
 ---
-title: 'Linear models: a cheat-sheet'
+title: 'Regression models: a cheat-sheet'
 author: Stefano Coretta
 date: '2021-08-21'
 
-categories: ["Methods", "Linear models"]
+categories: ["Methods", "Regression models"]
 tags: ["linear models", "regression", "brms", "lmer", "gamm"]
 
 ---
 
 # One model to rule them all
 
-**Linear models**, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable $Y$ based on a function $f(X)$.
+**Regression models**, aka linear regression models or regression models, are a group of statistical models based on the simple idea that we can predict an outcome variable $Y$ based on a function $f(X)$.
 
 The "simplest" linear model is the formula of a line:^[Technically, the "simplest" linear model is $y = f(x)$, but oh well...]
 

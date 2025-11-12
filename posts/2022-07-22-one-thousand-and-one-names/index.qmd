@@ -4,25 +4,25 @@ author: Stefano Coretta
 date: '2022-07-22'
 categories:
   - Methods
-  - Linear models
+  - Regression Models
 tags:
   - statistics
   - rstats
 ---
 
-The following table lists common "portmanteau" names for linear models.
+The following table lists common "portmanteau" names for regression models.
 Note that different traditions/disciplines might use one particular name more often than the others.
 
 My usual recommendation is to move away from using specific names like "logistic regression" or "mixed-effects models" and instead just specify what kind of components your linear model has (see the Description column in the table).
 
 | Formula | Description | Names |
 |---------------------------|---------------------------|------------------|
-| `lm(y ~ x)` | Linear model with one predictor `x` using a Gaussian distribution for the outcome variable `y` | simple linear regression, simple linear model |
-| `lm(y ~ x + z + ...)` | Linear model with two predictors or more using a Gaussian distribution for the outcome variable `y` | multiple linear regression, multiple linear model |
-| `glm(y ~ x + ..., family = "binomial")` | Linear model with one or more predictors using a Bernoulli distribution for the outcome variable `y` | logistic regression, binomial regression, general(ised) linear model |
-| `lmer(y ~ x + ... + (1 | z))` | Linear model with one or more predictors, including one or more random intercepts, using a Gaussian distribution for the outcome variable `y`. | mixed-effects models, nested models, hierarchical models, multilevel models, cross-effects models (plus combinations of those and "linear" or "regression") |
-| `lmer(y ~ x + ... + (w | z))` | Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Gaussian distribution for the outcome variable `y`. | Same as above. Sometimes "random-slope models" |
-| `glmer(y ~ x + ... + (w | z), family = "binomial")` | Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Bernoulli distribution for the outcome variable `y`. | Same as above, but includes "logistic", "binomial" or "general(ised)" in the name |
-| `glm(..., family = "poisson")` | Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Poisson distribution for the outcome variable `y`. | Same as above but includes "Poisson" in the name |
+| `lm(y ~ x)` | Regression model with one predictor `x` using a Gaussian distribution for the outcome variable `y` | simple linear regression, simple linear model |
+| `lm(y ~ x + z + ...)` | Regression model with two predictors or more using a Gaussian distribution for the outcome variable `y` | multiple linear regression, multiple linear model |
+| `glm(y ~ x + ..., family = "binomial")` | Regression model with one or more predictors using a Bernoulli distribution for the outcome variable `y` | logistic regression, binomial regression, general(ised) linear model |
+| `lmer(y ~ x + ... + (1 | z))` | Regression model with one or more predictors, including one or more random intercepts, using a Gaussian distribution for the outcome variable `y`. | mixed-effects models, nested models, hierarchical models, multilevel models, cross-effects models (plus combinations of those and "linear" or "regression") |
+| `lmer(y ~ x + ... + (w | z))` | Regression model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Gaussian distribution for the outcome variable `y`. | Same as above. Sometimes "random-slope models" |
+| `glmer(y ~ x + ... + (w | z), family = "binomial")` | Regression model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Bernoulli distribution for the outcome variable `y`. | Same as above, but includes "logistic", "binomial" or "general(ised)" in the name |
+| `glm(..., family = "poisson")` | Regression model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Poisson distribution for the outcome variable `y`. | Same as above but includes "Poisson" in the name |
 
 **Note**: When specifying the binomial family in `glmer()`, the Bernoulli family is selected automatically under the hood

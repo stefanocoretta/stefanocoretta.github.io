@@ -4,7 +4,7 @@ author: Stefano Coretta
 date: '2021-03-15'
 categories:
   - Methods
-  - Linear models
+  - Regression Models
   - Rstats
 ---
 

@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">One Thousand and One names</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Methods</div>
-    <div class="quarto-category">Linear models</div>
+    <div class="quarto-category">Regression Models</div>
   </div>
   </div>
 
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The following table lists common “portmanteau” names for linear models. Note that different traditions/disciplines might use one particular name more often than the others.</p>
+<p>The following table lists common “portmanteau” names for regression models. Note that different traditions/disciplines might use one particular name more often than the others.</p>
 <p>My usual recommendation is to move away from using specific names like “logistic regression” or “mixed-effects models” and instead just specify what kind of components your linear model has (see the Description column in the table).</p>
 <table class="caption-top table">
 <colgroup>
@@ -193,37 +193,37 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><code>lm(y ~ x)</code></td>
-<td>Linear model with one predictor <code>x</code> using a Gaussian distribution for the outcome variable <code>y</code></td>
+<td>Regression model with one predictor <code>x</code> using a Gaussian distribution for the outcome variable <code>y</code></td>
 <td>simple linear regression, simple linear model</td>
 </tr>
 <tr class="even">
 <td><code>lm(y ~ x + z + ...)</code></td>
-<td>Linear model with two predictors or more using a Gaussian distribution for the outcome variable <code>y</code></td>
+<td>Regression model with two predictors or more using a Gaussian distribution for the outcome variable <code>y</code></td>
 <td>multiple linear regression, multiple linear model</td>
 </tr>
 <tr class="odd">
 <td><code>glm(y ~ x + ..., family = "binomial")</code></td>
-<td>Linear model with one or more predictors using a Bernoulli distribution for the outcome variable <code>y</code></td>
+<td>Regression model with one or more predictors using a Bernoulli distribution for the outcome variable <code>y</code></td>
 <td>logistic regression, binomial regression, general(ised) linear model</td>
 </tr>
 <tr class="even">
 <td><code>lmer(y ~ x + ... + (1 | z))</code></td>
-<td>Linear model with one or more predictors, including one or more random intercepts, using a Gaussian distribution for the outcome variable <code>y</code>.</td>
+<td>Regression model with one or more predictors, including one or more random intercepts, using a Gaussian distribution for the outcome variable <code>y</code>.</td>
 <td>mixed-effects models, nested models, hierarchical models, multilevel models, cross-effects models (plus combinations of those and “linear” or “regression”)</td>
 </tr>
 <tr class="odd">
 <td><code>lmer(y ~ x + ... + (w | z))</code></td>
-<td>Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Gaussian distribution for the outcome variable <code>y</code>.</td>
+<td>Regression model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Gaussian distribution for the outcome variable <code>y</code>.</td>
 <td>Same as above. Sometimes “random-slope models”</td>
 </tr>
 <tr class="even">
 <td><code>glmer(y ~ x + ... + (w | z), family = "binomial")</code></td>
-<td>Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Bernoulli distribution for the outcome variable <code>y</code>.</td>
+<td>Regression model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Bernoulli distribution for the outcome variable <code>y</code>.</td>
 <td>Same as above, but includes “logistic”, “binomial” or “general(ised)” in the name</td>
 </tr>
 <tr class="odd">
 <td><code>glm(..., family = "poisson")</code></td>
-<td>Linear model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Poisson distribution for the outcome variable <code>y</code>.</td>
+<td>Regression model with one or more predictors, including one or more random intercepts and one or more random slopes, using a Poisson distribution for the outcome variable <code>y</code>.</td>
 <td>Same as above but includes “Poisson” in the name</td>
 </tr>
 </tbody>

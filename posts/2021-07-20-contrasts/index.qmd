@@ -5,7 +5,7 @@ date: '2021-07-20'
 
 categories:
   - Methods
-  - Linear models
+  - Regression Models
 tags:
   - statistics
   - rstats

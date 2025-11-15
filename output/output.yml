@@ -28,11 +28,12 @@
 
 - title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
   type: paper
-  year: accepted
+  open: true
+  year: 2025
   author: "Stefano Coretta, Paul-Christian Bürkner"
   journal: "Journal of Phonetics"
-  # doi: "10.31219/osf.io/f9rqg_v1"
-  accepted: "https://doi.org/10.31219/osf.io/f9rqg_v1"
+  doi: "10.1016/j.wocn.2025.101455"
+  accepted: "https://doi.org/10.31219/osf.io/f9rqg_v3"
   compendium: "https://github.com/stefanocoretta/beta-phon"
   project: "statistics"
 

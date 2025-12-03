@@ -1,0 +1,141 @@
+---
+title: Normalising formant values for plotting and modelling
+author: Stefano Coretta
+date: 2025-12-03
+categories:
+  - Phonetics
+  - R
+execute: 
+  echo: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+theme_set(theme_light())
+library(brms)
+library(posterior)
+library(tidybayes)
+library(coretta2018itaegg)
+```
+
+```{r}
+data("formants")
+```
+
+```{r}
+formants <- formants |> 
+  separate(file, c("speaker", "token"))
+```
+
+
+```{r}
+formants |> 
+  ggplot(aes(f23, f13, colour = vowel)) +
+  geom_point(alpha = 0.5) +
+  scale_x_reverse() + scale_y_reverse()
+```
+
+```{r}
+formants <- formants |> 
+  group_by(speaker) |> 
+  mutate(
+    f1_z_sp = (f13 - mean(f13)) / sd(f13),
+    f2_z_sp = (f23 - mean(f23)) / sd(f23)
+  ) |> 
+  ungroup()
+```
+
+```{r}
+formants |> 
+  ggplot(aes(f2_z_sp, f1_z_sp, colour = vowel)) +
+  geom_point(alpha = 0.5) +
+  scale_x_reverse() + scale_y_reverse()
+```
+
+```{r}
+formants <- formants |> 
+  mutate(
+    f1_z_sp_hz = (f1_z_sp * sd(f13)) + mean(f13),
+    f2_z_sp_hz = (f2_z_sp * sd(f23)) + mean(f23)
+  )
+```
+
+```{r}
+formants |> 
+  ggplot(aes(f2_z_sp_hz, f1_z_sp_hz, colour = vowel)) +
+  geom_point(alpha = 0.5) +
+  scale_x_reverse() + scale_y_reverse()
+```
+
+```{r}
+formants <- formants |> 
+  mutate(
+    f1_z = (f13 - mean(f13)) / sd(f13),
+    f2_z = (f23 - mean(f23)) / sd(f23)
+  ) |> 
+  ungroup()
+```
+
+```{r}
+for_bm <- brm(
+  bf(mvbind(f1_z, f2_z) ~ vowel + (vowel | speaker)) + set_rescor(),
+  family = gaussian,
+  data = formants,
+  seed = 1923,
+  cores = 4,
+  file = "posts/2025-12-03-vowel-formants/for_bm"
+)
+```
+
+```{r}
+pred_grid <- tibble(
+  vowel = unique(formants$vowel)
+)
+
+for_draws <- epred_draws(for_bm, newdata = pred_grid, re_formula = NA)
+```
+
+```{r}
+for_draws_wide <- for_draws |> 
+  pivot_wider(names_from = .category, values_from = .epred)
+```
+
+```{r}
+for_draws_wide |> 
+  ggplot(aes(f2z, f1z, colour = vowel)) +
+  geom_point(alpha = 0.05) +
+  scale_x_reverse() + scale_y_reverse()
+```
+
+```{r}
+f1m <- mean(formants$f13)
+f1sd <- sd(formants$f13)
+f2m <- mean(formants$f23)
+f2sd <- sd(formants$f23)
+
+for_draws_wide <- for_draws_wide |> 
+  mutate(
+    f1z_hz = (f1z * f1sd) + f1m,
+    f2z_hz = (f2z * f2sd) + f2m
+  )
+```
+
+```{r}
+for_draws_wide |> 
+  ggplot(aes(f2z_hz, f1z_hz, colour = vowel)) +
+  stat_ellipse(type = "norm") +
+  scale_x_reverse() + scale_y_reverse()
+```
+
+```{r}
+for_draws_wide |> 
+  group_by(vowel) |> 
+  summarise(
+    `F1 90% CrI` = str_glue("[{round(quantile2(f1z_hz)[1])}, {round(quantile2(f1z_hz)[2])}]"),
+    `F2 90% CrI` = str_glue("[{round(quantile2(f2z_hz)[1])}, {round(quantile2(f2z_hz)[2])}]")
+  )
+```
+

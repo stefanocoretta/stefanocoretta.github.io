@@ -29,13 +29,14 @@ library(tidybayes)
 library(coretta2018itaegg)
 ```
 
-Now we can load the `formants` data, which has formant values from 5 points within the first (stressed) vowel of CVCV words.
+Now we can load the `ita_egg` data, which has formant values from 5 points within the first (stressed) vowel of CVCV words.
 Below you can see a preview of the data.
 
 ```{r}
-#| label: formants
-data("formants")
-formants
+#| label: ita_egg
+data("ita_egg")
+ita_egg <- ita_egg |> 
+  drop_na(f13, f23)
 ```
 
 The columns of interests are:
@@ -56,7 +57,7 @@ The following is a vowel space plot, with the raw formant values.
 ```{r}
 #| label: f1-f2
 
-formants |> 
+ita_egg |> 
   ggplot(aes(f23, f13, colour = vowel)) +
   geom_point(alpha = 0.5) +
   scale_x_reverse() + scale_y_reverse() +
@@ -71,7 +72,7 @@ Based on their vowel spaces, we can derive that IT02 has a shorter vocal tract t
 ```{r}
 #| label: f1-f2-speakers
 
-formants |> 
+ita_egg |> 
   filter(speaker %in% c("it02", "it03")) |> 
   ggplot(aes(f23, f13, colour = vowel)) +
   geom_point(alpha = 0.5) +
@@ -92,7 +93,7 @@ Z-scores are simply the value minus the mean divided by the standard deviation.
 ```{r}
 #| label: fzsp
 
-formants <- formants |> 
+ita_egg <- ita_egg |> 
   group_by(speaker) |> 
   mutate(
     f1_z_sp = (f13 - mean(f13)) / sd(f13),
@@ -105,7 +106,7 @@ If we plot the within-speaker normalised data, now the clouds of values for each
 
 ```{r}
 #| label: f1zsp-f2zsp
-formants |> 
+ita_egg |> 
   ggplot(aes(f2_z_sp, f1_z_sp, colour = vowel)) +
   geom_point(alpha = 0.5) +
   scale_x_reverse() + scale_y_reverse() +
@@ -126,7 +127,7 @@ The following code does that.
 
 ```{r}
 #| label: fzsphz
-formants <- formants |> 
+ita_egg <- ita_egg |> 
   mutate(
     f1_z_sp_hz = (f1_z_sp * sd(f13)) + mean(f13),
     f2_z_sp_hz = (f2_z_sp * sd(f23)) + mean(f23)
@@ -138,7 +139,7 @@ Now we can plot with the normalised Hz values.
 ```{r}
 #| label: f1zsphz-f2zsphz
 
-formants |> 
+ita_egg |> 
   ggplot(aes(f2_z_sp_hz, f1_z_sp_hz, colour = vowel)) +
   geom_point(alpha = 0.5) +
   scale_x_reverse() + scale_y_reverse() +
@@ -155,7 +156,7 @@ However, z-scoring across speakers can help with convergence.
 In the following code, we calculate z-scores *across* speakers (note that there is no `group_by()`).
 
 ```{r}
-formants <- formants |> 
+ita_egg <- ita_egg |> 
   mutate(
     f1_z = (f13 - mean(f13)) / sd(f13),
     f2_z = (f23 - mean(f23)) / sd(f23)
@@ -166,7 +167,7 @@ formants <- formants |>
 for_bm <- brm(
   bf(mvbind(f1_z, f2_z) ~ vowel + (vowel | speaker)) + set_rescor(),
   family = gaussian,
-  data = formants,
+  data = ita_egg,
   seed = 1923,
   cores = 4,
   file = "posts/2025-12-03-vowel-formants/for_bm"

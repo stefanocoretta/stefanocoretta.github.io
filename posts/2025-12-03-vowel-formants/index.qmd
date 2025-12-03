@@ -7,38 +7,91 @@ categories:
   - R
 execute: 
   echo: true
+bibliography: references.bib
 ---
+
+In this R tutorial, you will learn how to normalise formant values for plotting and for modelling.
+
+First, let's attach the necessary packages.
+We will use data from @coretta2025b, contained in the [coretta2018itaegg](https://github.com/stefanocoretta/coretta2018itaegg) package.
+You will have to install the package from GitHub (code below).
 
 ```{r}
 #| label: setup
-#| include: false
+#| message: false
 
 library(tidyverse)
 theme_set(theme_light())
 library(brms)
 library(posterior)
 library(tidybayes)
+# remotes::install_github("stefanocoretta/coretta2018itaegg)
 library(coretta2018itaegg)
 ```
 
+Now we can load the `formants` data, which has formant values from 5 points within the first (stressed) vowel of CVCV words.
+Below you can see a preview of the data.
+
 ```{r}
+#| label: formants
 data("formants")
+formants
 ```
 
-```{r}
-formants <- formants |> 
-  separate(file, c("speaker", "token"))
-```
+The columns of interests are:
 
+-   `f13`: first formant value in Hz (taken from the mid-point of the vowel).
+
+-   `f23`: second formant value in Hz (taken from the mid-point of the vowel).
+
+-   `vowel`: one of /a, e, i, o, u/.
+    The data comes from disyllabic CVCV words.
+
+-   `speaker`: the speaker's ID.
+
+## Raw Hz
+
+The following is a vowel space plot, with the raw formant values.
 
 ```{r}
+#| label: f1-f2
+
 formants |> 
   ggplot(aes(f23, f13, colour = vowel)) +
   geom_point(alpha = 0.5) +
-  scale_x_reverse() + scale_y_reverse()
+  scale_x_reverse() + scale_y_reverse() +
+  labs(x = "F2 (Hz)", y = "F1 (Hz)")
 ```
 
+We know that different baseline vocal tract lengths result in different placements of the speaker's vowel space within the vowel plot.
+Simplifying, longer vocal tracts correspond to lower formants on average.
+Compare for example speaker IT02 and IT03.
+Based on their vowel spaces, we can derive that IT02 has a shorter vocal tract than IT03.
+
 ```{r}
+#| label: f1-f2-speakers
+
+formants |> 
+  filter(speaker %in% c("it02", "it03")) |> 
+  ggplot(aes(f23, f13, colour = vowel)) +
+  geom_point(alpha = 0.5) +
+  scale_x_reverse() + scale_y_reverse() +
+  labs(x = "F2 (Hz)", y = "F1 (Hz)") +
+  facet_wrap(vars(speaker))
+```
+
+## Within-speaker normalisation
+
+Because of the different baseline vocal tract length, plotting raw formant values can result in misleading higher variance of formant values for each vowel.
+One common way to "normalise" for different baseline vocal tract lengths is to calculate z-scores *within* speaker.
+This is known as the Lobanov normalisation procedure due to @lobanov1971 having proposed the method.
+
+The following code calculates z-scores for each formant, within speaker (remember to ungroup the tibble at the end).
+Z-scores are simply the value minus the mean divided by the standard deviation.
+
+```{r}
+#| label: fzsp
+
 formants <- formants |> 
   group_by(speaker) |> 
   mutate(
@@ -48,14 +101,31 @@ formants <- formants |>
   ungroup()
 ```
 
+If we plot the within-speaker normalised data, now the clouds of values for each vowel look "tighter".
+
 ```{r}
+#| label: f1zsp-f2zsp
 formants |> 
   ggplot(aes(f2_z_sp, f1_z_sp, colour = vowel)) +
   geom_point(alpha = 0.5) +
-  scale_x_reverse() + scale_y_reverse()
+  scale_x_reverse() + scale_y_reverse() +
+  labs(x = "F2 (z-scores)", y = "F1 (z-scores)")
 ```
 
+However, z-scores are very difficult to interpret in this context.
+Technically, a z-score is a standardised measure of distance from the mean.
+The unit of z-scores is the standard deviation of the variable.
+So a z-score of +1 means that the value is one standard deviation above the mean (+1 SD).
+A z-score of -2 indicates that the value is two standard deviations below the mean (-2 SD).
+Since we have normalised within speaker, the mean and SD refer to the specific mean and SD of each speaker.
+
+## Within-speaker normalised Hz
+
+We can transform the z-scores back to Hz by using the *overall* mean and SD: this will results in "normalised" Hz, or in other words Hz values for an "average" speaker (averaged across all speakers).
+The following code does that.
+
 ```{r}
+#| label: fzsphz
 formants <- formants |> 
   mutate(
     f1_z_sp_hz = (f1_z_sp * sd(f13)) + mean(f13),
@@ -63,20 +133,33 @@ formants <- formants |>
   )
 ```
 
+Now we can plot with the normalised Hz values.
+
 ```{r}
+#| label: f1zsphz-f2zsphz
+
 formants |> 
   ggplot(aes(f2_z_sp_hz, f1_z_sp_hz, colour = vowel)) +
   geom_point(alpha = 0.5) +
-  scale_x_reverse() + scale_y_reverse()
+  scale_x_reverse() + scale_y_reverse() +
+  labs(x = "F2 (norm Hz)", y = "F1 (norm Hz)")
 ```
+
+## Across-speaker normalisation
+
+It seems to have become common to z-scores within speaker and then model this normalised data with multilevel regression models with by-speaker varying terms.
+Since the data is normalised within speaker, the by-speaker varying intercept is basically useless: there is no individual variability in intercept to account for, because of the normalisation.
+
+In reality, a multilevel model can efficiently deal with individual variation (and even pool that information for estimation), so there is no real need to use within-speaker normalise data.
+However, z-scoring across speakers can help with convergence.
+In the following code, we calculate z-scores *across* speakers (note that there is no `group_by()`).
 
 ```{r}
 formants <- formants |> 
   mutate(
     f1_z = (f13 - mean(f13)) / sd(f13),
     f2_z = (f23 - mean(f23)) / sd(f23)
-  ) |> 
-  ungroup()
+  )
 ```
 
 ```{r}
@@ -138,4 +221,3 @@ for_draws_wide |>
     `F2 90% CrI` = str_glue("[{round(quantile2(f2z_hz)[1])}, {round(quantile2(f2z_hz)[2])}]")
   )
 ```
-

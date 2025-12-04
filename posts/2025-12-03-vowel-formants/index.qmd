@@ -27,9 +27,12 @@ library(posterior)
 library(tidybayes)
 # remotes::install_github("stefanocoretta/coretta2018itaegg)
 library(coretta2018itaegg)
+library(kableExtra)
 ```
 
-Now we can load the `ita_egg` data, which has formant values from 5 points within the first (stressed) vowel of CVCV words.
+Now we can load the `ita_egg` data, which has formant values from 19 speakers of Northwestern Italian (Verbano-Cusio-Ossola province).
+Formant values were extracted from 5 points within the first (stressed) vowel of CVCV words.
+In this post, we will use values from the 3rd (central) point.
 Below you can see a preview of the data.
 
 ```{r}
@@ -153,9 +156,11 @@ Since the data is normalised within speaker, the by-speaker varying intercept is
 
 In reality, a multilevel model can efficiently deal with individual variation (and even pool that information for estimation), so there is no real need to use within-speaker normalise data.
 However, z-scoring across speakers can help with convergence.
-In the following code, we calculate z-scores *across* speakers (note that there is no `group_by()`).
+In the following code, we calculate z-scores *across* speakers (note that there is no `group_by()` in the code).
 
 ```{r}
+#| label: fz
+
 ita_egg <- ita_egg |> 
   mutate(
     f1_z = (f13 - mean(f13)) / sd(f13),
@@ -163,7 +168,12 @@ ita_egg <- ita_egg |>
   )
 ```
 
+We can now fit a multivariate multilevel regression model with F1 and F2 as outcome variables.
+To keep things simple we just add vowel as a predictor and we include speaker-specific varying terms for intercept and vowel.
+We use `set_rescor()` to estimate correlation between the residuals of F1 and F2.
+
 ```{r}
+#| label: for-bm
 for_bm <- brm(
   bf(mvbind(f1_z, f2_z) ~ vowel + (vowel | speaker)) + set_rescor(),
   family = gaussian,
@@ -174,7 +184,11 @@ for_bm <- brm(
 )
 ```
 
+We now proceed to obtain the draws of the expected predictions of F1 and F2.
+The `epred_draws()` function from the tidybayes package facilitates that (see my blog post on methods for [obtaining expected values](../2025-11-08-expected-predictions/index.qmd)).
+
 ```{r}
+#| label: for-draws
 pred_grid <- tibble(
   vowel = unique(formants$vowel)
 )
@@ -182,19 +196,30 @@ pred_grid <- tibble(
 for_draws <- epred_draws(for_bm, newdata = pred_grid, re_formula = NA)
 ```
 
+By default, `epred_draws()` returns a "long" tibble, where the two outcome variables are listed in the `.category` column.
+For transformation and plotting it is easier to work with a wide format.
+
 ```{r}
+#| label: for-draws-wide
 for_draws_wide <- for_draws |> 
   pivot_wider(names_from = .category, values_from = .epred)
 ```
 
+We can now plot the expected values draws.
+These are z-scores.
+
 ```{r}
+#| label: f1z-f2z
 for_draws_wide |> 
   ggplot(aes(f2z, f1z, colour = vowel)) +
   geom_point(alpha = 0.05) +
   scale_x_reverse() + scale_y_reverse()
 ```
 
+We can transform these values to Hz by using the overall mean and SD of F1 and F2, like we did above.
+
 ```{r}
+#| label: fzhz
 f1m <- mean(formants$f13)
 f1sd <- sd(formants$f13)
 f2m <- mean(formants$f23)
@@ -207,18 +232,44 @@ for_draws_wide <- for_draws_wide |>
   )
 ```
 
+And finally, we plot 95% ellipses for each vowel based on the draws.
+Note that, since these are *expected* values, they do not include uncertainty from the residuals nor from the varying terms of the model.
+In other words, there is a 95% probability that the mean F1/F2 for each vowel is within the ellipse.
+
 ```{r}
+#| label: f1zhz-f2zhz
 for_draws_wide |> 
   ggplot(aes(f2z_hz, f1z_hz, colour = vowel)) +
   stat_ellipse(type = "norm") +
   scale_x_reverse() + scale_y_reverse()
 ```
 
+We can also obtain Credible Intervals (CrI) for each vowel F1 and F2.
+Here, we get 90% CrIs (the default in `quantile2()` from the posterior package).
+
 ```{r}
+#| label: for-bm-table
 for_draws_wide |> 
   group_by(vowel) |> 
   summarise(
-    `F1 90% CrI` = str_glue("[{round(quantile2(f1z_hz)[1])}, {round(quantile2(f1z_hz)[2])}]"),
-    `F2 90% CrI` = str_glue("[{round(quantile2(f2z_hz)[1])}, {round(quantile2(f2z_hz)[2])}]")
-  )
+    f1_mean = round(mean(f1z_hz)), f1_sd = round(sd(f1z_hz)),
+    f1_90 = str_glue("[{round(quantile2(f1z_hz)[1])}, {round(quantile2(f1z_hz)[2])}]"),
+    f2_mean = round(mean(f2z_hz)), f2_sd = round(sd(f2z_hz)),
+    f2_90 = str_glue("[{round(quantile2(f2z_hz)[1])}, {round(quantile2(f2z_hz)[2])}]")
+  ) |> 
+  knitr::kable(col.names = rep("", 7), align = "c") |> 
+  add_header_above(c(" " = 1, rep(c("mean" = 1, "SD" = 1, "90% CrI" = 1), 2))) |> 
+  add_header_above(c(" " = 1, "F1" = 3, "F2" = 3))
 ```
+
+## Summary
+
+::: {.callout-note appearance="simple"}
+In sum, there are two main options for normalising formant values.
+
+-   *Within*-speaker normalisation (z-scores) and back-transformation in Hz with the overall mean and SD.
+    Ideal for plotting.
+
+-   *Across*-speaker normalisation (z-scores) and back-transformation in Hz with the overall mean and SD.
+    Ideal for modelling.
+:::

@@ -161,7 +161,8 @@ head(pupil_epred)
 ```
 
 Using `tidybayes::epred_draws()` is convenient when the model has one or more numeric predictors.
-For example, let's model data from @tucker2019. The data contains reactions times from an auditory lexical decision task in English.
+For example, let's model data from @tucker2019.
+The data contains reactions times from an auditory lexical decision task in English.
 We can estimate the covariation between RTs, phone Levenshtein distance (higher values indicate the word is more unique compared to other words, `PhonLev`) and lexical status (real or non-real word, `IsWord`).
 
 ```{r}

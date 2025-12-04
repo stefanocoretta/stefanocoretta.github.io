@@ -4,7 +4,8 @@ author: Stefano Coretta
 date: '2020-12-22'
 
 categories:
-  - Methods
+  - R
+  - ggplot2
 tags:
   - data viz
   - ggplot2

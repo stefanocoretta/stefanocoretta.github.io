@@ -4,7 +4,8 @@ author: Stefano Coretta
 date: '2018-03-02'
 
 categories:
-  - Linguistics
+  - Phonetics
+  - R
 tags:
   - rstats
   - tidy data

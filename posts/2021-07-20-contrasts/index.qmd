@@ -4,8 +4,8 @@ author: Stefano Coretta
 date: '2021-07-20'
 
 categories:
-  - Methods
-  - Regression Models
+  - Statistics
+  - Regression models
 tags:
   - statistics
   - rstats

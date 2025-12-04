@@ -4,7 +4,7 @@ author: Stefano Coretta
 date: 2014-06-30
 type: post
 categories:
-  - Linguistics
+  - Phonetology
 tags:
   - databases
   - distinctive features

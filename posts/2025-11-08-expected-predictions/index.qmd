@@ -3,7 +3,10 @@ title: Obtaining expected values from the posterior predictive distribution in b
 author: Stefano Coretta
 date: 2025-11-08
 categories:
-  - Regression Models
+  - Regression models
+  - Bayesian
+  - brms
+  - Statistics
 tags:
   - Bayesian inference
   - brms

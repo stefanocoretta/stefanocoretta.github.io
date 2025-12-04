@@ -5,6 +5,8 @@ date: '2021-01-29'
 
 categories:
   - Gist
+  - R
+  - plotly
 tags:
   - data viz
   - plotly

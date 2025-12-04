@@ -3,7 +3,7 @@ title: 'Regression models: a cheat-sheet'
 author: Stefano Coretta
 date: '2021-08-21'
 
-categories: ["Methods", "Regression models"]
+categories: ["Statistics", "Regression models"]
 tags: ["linear models", "regression", "brms", "lmer", "gamm"]
 
 ---

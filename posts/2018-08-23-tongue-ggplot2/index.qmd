@@ -4,7 +4,9 @@ author: Stefano Coretta
 date: '2018-08-23'
 
 categories:
-  - Linguistics
+  - Phonetics
+  - R
+  - ggplot2
 tags:
   - rstats
   - phonetics

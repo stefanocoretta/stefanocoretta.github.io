@@ -3,9 +3,9 @@ title: On random effects
 author: Stefano Coretta
 date: '2021-03-15'
 categories:
-  - Methods
-  - Regression Models
-  - Rstats
+  - Regression models
+  - R
+  - Statistics
 ---
 
 ![](/img/streamline/62-graph-dot.png){fig-align="center" width="100"}

@@ -3,8 +3,8 @@ title: One Thousand and One names
 author: Stefano Coretta
 date: '2022-07-22'
 categories:
-  - Methods
-  - Regression Models
+  - Statistics
+  - Regression models
 tags:
   - statistics
   - rstats

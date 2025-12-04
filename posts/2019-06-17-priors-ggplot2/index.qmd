@@ -4,8 +4,11 @@ author: Stefano Coretta
 date: '2019-06-17'
 
 categories:
-  - Methods
-  - Regression Models
+  - Statistics
+  - Regression models
+  - brms
+  - ggplot2
+  - R
 tags:
   - data viz
   - rstats

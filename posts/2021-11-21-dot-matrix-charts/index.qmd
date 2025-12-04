@@ -3,7 +3,7 @@ title: 'R gist — Dot matrix charts with ggplot2'
 author: Stefano Coretta
 date: '2021-11-21'
 
-categories: ["Gist"]
+categories: ["Gist", "ggplot2", "R"]
 tags: ["data-viz", "rstats", "ggplot2"]
 ---
 

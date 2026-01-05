@@ -19,9 +19,10 @@
 
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   type: paper
-  year: accepted
+  year: 2026
   journal: "Language and Speech"
   author: "Stefano Coretta"
+  doi: "10.1177/00238309251399657"
   accepted: "https://doi.org/10.31219/osf.io/83afz"
   compendium: "https://github.com/stefanocoretta/vow-height"
   project: "intrinsic-duration"

@@ -67,6 +67,18 @@ listing:
     template: html/ejs/pubs.ejs
     include:
       project: "polish"
+  - id: beyond
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "beyond"
+  - id: grni
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "grni"
 ---
 
 My research interests span a range of topics within linguistics, although the main focus is on the **study of speech sounds**, and in particular **speech production**, from a variety of intersecting perspectives, including:
@@ -174,12 +186,18 @@ As part of this project with [Jessica Hampton](https://jesshampton.github.io), w
 -   Paper 2: Beyond the quantitative/qualitative dichotomy.
 
 -   Paper 3: TBD
+
+::: {#beyond}
+:::
 :::
 
 ::: callout-note
 ## Vitality of Gallo-Romance of Northern Italy
 
 In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
+
+::: {#grni}
+:::
 :::
 
 **Past projects**

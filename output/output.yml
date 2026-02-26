@@ -1,7 +1,15 @@
 ---
 ## Papers
 
+- title: "Beyond the horizon: a more-than-human and holistic approach to language"
+  project: beyond
+  type: paper
+  year: submitted
+  author: "Gaya Seldon (pseud. Jessica Hampton, Stefano Coretta)"
+  submitted: "https://lingbuzz.net/lingbuzz/009790"
+
 - title: "A vitality assessment of Gallo-Romance of Northern Italy"
+  project: grni
   type: paper
   year: submitted
   author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
@@ -10,7 +18,7 @@
 
 - title: "Multivariate analyses of tongue contours from ultrasound tongue imaging"
   type: paper
-  year: submitted
+  year: accepted
   author: "Stefano Coretta, Georges Sakr"
   journal: "Language and Speech"
   submitted: "https://stefanocoretta.github.io/mv_uti/"
@@ -19,6 +27,7 @@
 
 - title: "Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian"
   type: paper
+  open: true
   year: 2026
   journal: "Language and Speech"
   author: "Stefano Coretta"

@@ -18,9 +18,11 @@
 
 - title: "Multivariate analyses of tongue contours from ultrasound tongue imaging"
   type: paper
-  year: accepted
+  year: 2026
+  open: true
   author: "Stefano Coretta, Georges Sakr"
   journal: "Language and Speech"
+  doi: "10.1177/00238309261419120"
   submitted: "https://stefanocoretta.github.io/mv_uti/"
   compendium: "https://github.com/stefanocoretta/mv_uti"
   project: "statistics"
@@ -83,6 +85,7 @@
   author: "Jessica Hampton, Stefano Coretta"
   year: 2024
   journal: "Journal of Multilingual and Multicultural Development"
+  info: "47(2)"
   doi: "10.1080/01434632.2024.2413933"
   accepted: "https://doi.org/10.31219/osf.io/jqgku"
   published: "https://doi.org/10.1080/01434632.2024.2413933"

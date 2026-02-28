@@ -208,6 +208,7 @@
 - title: "phonetisr: A Naive IPA Tokeniser"
   type: software
   year: 2025
+  firstrel: 2022
   author: "Stefano Coretta"
   version: "R package v0.1.0"
   url: "https://stefanocoretta.github.io/phonetisr/"
@@ -218,6 +219,7 @@
 - title: "rticulate: Ultrasound Tongue Imaging in R"
   type: software
   year: 2025
+  firstrel: 2017
   author: "Stefano Coretta"
   version: "R package v2.0.1"
   url: "https://stefanocoretta.github.io/rticulate/"
@@ -236,6 +238,7 @@
 - title: "tidygam: Tidy Prediction and Plotting of Generalised Additive Models"
   type: software
   year: 2024
+  firstrel: 2022
   author: "Stefano Coretta"
   version: "R package v1.0.0"
   url: "https://stefanocoretta.github.io/tidygam/"
@@ -246,6 +249,7 @@
 - title: "speakr: A Wrapper for the Phonetic Software Praat"
   type: software
   year: 2024
+  firstrel: 2017
   author: "Stefano Coretta"
   version: "R package v3.2.4"
   url: "https://stefanocoretta.github.io/speakr/"

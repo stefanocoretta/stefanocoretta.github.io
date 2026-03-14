@@ -4,36 +4,47 @@ format:
     page-layout: full
 ---
 
-::: grid
+:::::: grid
 ::: {.g-col-12 .g-col-md-4}
 ![](img/avatar.png){.rounded-circle fig-align="center" width="250"}
 :::
 
-::: {.g-col-12 .g-col-md-8}
+:::: {.g-col-12 .g-col-md-8}
 # Stefano Coretta
 
 | \[ˈsteˑfano koˈrɛtta\]
+| 
 | Lecturer (Assistant Professor)
+| 
 | **University of Edinburgh**
 | [s.coretta\@ed.ac.uk](mailto:s.coretta@ed.ac.uk){.email}
+| 
 
 ::: {style="font-size: 1.8rem"}
 [{{< iconify fa6-brands square-github >}}](https://github.com/stefanocoretta) [{{< iconify academicons osf-square >}}](https://osf.io/e84dv/) [{{< iconify academicons orcid >}}](https://orcid.org/0000-0001-9627-5532) [{{< iconify academicons clarivate >}}](https://www.webofscience.com/wos/author/record/AFQ-0204-2022) [{{< iconify academicons stackoverflow >}}](https://stackoverflow.com/users/2804314/stefano?tab=profile) [{{< iconify fa6-brands square-bluesky >}}](https://bsky.app/profile/scoretta.bsky.social)
 :::
-:::
-:::
+::::
+::::::
 
 <br>
 
-I am a Lecturer (= Assistant Professor) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK). As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students. I received my PhD degree in linguistics (with a thesis on ultrasound tongue imaging and electroglottography) from the University of Manchester (UK) in 2020. I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021, when I joined the University of Edinburgh.
+I am a Lecturer (= Assistant Professor) in the [Linguistics and English Language department](https://www.ed.ac.uk/ppls/linguistics-and-english-language) of the University of Edinburgh (UK).
+As part of my duties, I develop and coordinate the statistical curriculum of undergraduate and postgraduate degrees within the department, teach statistics and research methods courses, and provide training for staff and students.
+I received my PhD degree in linguistics (with a thesis on ultrasound tongue imaging and electroglottography) from the University of Manchester (UK) in 2020.
+I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021, when I joined the University of Edinburgh.
 
-I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses. Get in contact with me for info.
+I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses.
+Get in contact with me for info.
 
-My past and current research covers different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](meta.qmd#phonetology)---the study of speech sounds and their relation to Human Language---and [[research methods]{.smallcaps}](meta.qmd#research-methods) including statistics and Open Science practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org)). For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages. You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).
+My past and current research covers different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](meta.qmd#phonetology)---the study of speech sounds and their relation to Human Language---and [[research methods]{.smallcaps}](meta.qmd#research-methods) including statistics and Open Science practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org)).
+For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages.
+You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).
 
-My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness (I am a signatory of [Open Sciences for a Post-Materialist Science](https://opensciences.org)). See [] for more details. I engage in spiritual practices and pagan magick with a strong elemental basis, and in my free time I enjoy conlanging (the art of constructing artificial languages), watching sci-fi and fantasy movies, playing the recorder and taking care of plants.
+My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness (I am a signatory of [Open Sciences for a Post-Materialist Science](https://opensciences.org)).
+See [Positionality](meta.qmd#positionality) for more details.
+I engage in spiritual practices and pagan magick with a strong elemental basis, and in my free time I enjoy conlanging (the art of constructing artificial languages), watching sci-fi and fantasy movies, playing the recorder and taking care of plants.
 
-::: grid
+::::: grid
 ::: g-col-6
 #### Interests
 
@@ -47,8 +58,9 @@ My philosophical stance is a syncretic integration of non-dual monism, anti-real
 ::: g-col-6
 #### PhD supervision
 
-I am available for PhD supervision on topics from my interests list. Please note that I do **NOT** supervise projects in applied, developmental linguistics, second language acquisition, English as a second language/TESOL.
+I am available for PhD supervision on topics from my interests list.
+Please note that I do **NOT** supervise projects in applied, developmental linguistics, second language acquisition, English as a second language/TESOL.
 :::
-:::
+:::::
 
 ![](img/timeline.png){fig-align="center" width="500"}

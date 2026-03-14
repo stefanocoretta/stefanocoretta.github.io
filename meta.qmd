@@ -1,15 +1,40 @@
 ---
 title: Research meta-models
 number-sections: true
+bibliography: references.bib
 ---
 
-In the following sections, I outline some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research.
-I hope these will some day make it into a proper publication, after some more thorough thinking.
+In the following sections, you can find my positionality and an outline of some of the conceptual and methodological aspects ([meta-models]{.smallcaps}) that fuel and back-up my research.
 
 This is a work in progress, in two senses:
 
 -   In one sense, it is not exhaustive and I will be adding content as it occurs to me.
 -   In the other sense, it is an ever-changing document, since I will frequently change my mind about any part(s) of content herein.
+
+# Positionality
+
+Positionality statements are about a reflexive understanding of one's own world view and how it affects one’s own research [@darwinholmes2020; @goundar2025; @jafar2018; @lazard2020; @tomlinson2023].
+There isn't a single accepted way of writing a positionality statement nor what should be covered in them.
+I personally take a positionality statement to include a mix of lived experiences, philosophical stance and methodological theory.
+
+::: callout-tip
+## Stefano's positionality
+
+I identify as a neurodiverse academic of Mediterranean ethnicity.
+I was born and raised in Italy, but I have been living in the United Kingdom for a decade and I think of this country as my home.
+
+My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness.
+
+Ontologically, this framework entails an ultimate monistic reality that transcends Cartesian dualism (mental/physical plane), so that anti-realism is understood as rejecting the metaphysical framing of a strict mind-independent vs mind-dependent divide.
+Mind, consciousness, experience, and the cosmos are understood as manifestations of a single non-dual ultimate reality.
+Furthermore, cosmopsychism entails that the entire cosmos has a fundamental experiential aspect and that all entities have experience deriving from the cosmic experience.
+Holism, the idea of a unified whole which is more than the sum of its parts, is another central aspect of Stefano's philosophical stance, and it is intended as applied to ontology (reality is whole), epistemology (knowledge is relational) and methodological (description and explanation requires whole-level analyses).
+
+Bayesian epistemology, which I use in my research and teach in my courses, is grounded on belief updating under uncertainty and inference given priors representing belief and evidence.
+Under this stance, quantitative methods are viewed and practised not in a reductionist way (explaining phenomena based entirely on lower-level terms) but simply as representing phenomena numerically as one way of operationalise entities, events and relations.
+
+From the point of view of methodological theory and practice, I am an active advocate of Open Research practices for a more transparent, well-grounded and reflexive scholarship.
+:::
 
 # Research methods
 
@@ -124,6 +149,13 @@ With time, I will add more references where/if relevant.
 2.  [linguisticality]{.smallcaps} is the prerequisite for Human Language [@haspelmath2020].
 3.  If one defines [Human Language]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have Human Language is a tautology.
 4.  All living beings are capable of communicating [even plants and fungi, @mancuso2015].
+5.  There is no agreement as to what [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
+6.  There is no agreement as to whether [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
+7.  There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
+8.  There is no agreement as to what [innate]{.smallcaps} actually means.
+9.  There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
+    1.  If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
+10. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively). See @sec-lingsys.
 
 ## Epistemological
 
@@ -132,12 +164,5 @@ With time, I will add more references where/if relevant.
 3.  I prefer to use the term [research]{.smallcaps} instead of science for all purposes.
 4.  Research has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
 5.  Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].
-6.  There is no agreement as to what [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
-7.  There is no agreement as to whether [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
-8.  There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
-9.  There is no agreement as to what [innate]{.smallcaps} actually means.
-10. There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
-    1.  If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
-11. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively). See @sec-lingsys.
 
 ## References {.unnumbered}

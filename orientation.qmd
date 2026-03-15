@@ -42,7 +42,7 @@ Holism, the idea of a unified whole which is more than the sum of its parts, is 
 Bayesian epistemology, which I use in my research and teach in my courses, is grounded on belief updating under uncertainty and inference given priors representing belief and evidence.
 Under this stance, quantitative methods are viewed and practised not in a reductionist way (explaining phenomena based entirely on lower-level terms) but simply as representing phenomena numerically as one way of operationalise entities, events and relations.
 
-# Research methods
+# Methodological theory
 
 From the point of view of methodological theory and practice, I am an active advocate of Open Research practices for a more transparent, well-grounded and reflexive scholarship.
 **Open Research** encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruwell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].[^1]

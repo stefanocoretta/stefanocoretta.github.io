@@ -15,7 +15,7 @@ My research interests span a range of topics within linguistics, although the ma
 
 The other strand of my research expertise is related to **research methods and statistics**.
 In particular, I do work on developing and integrating **Open Research** (aka Open Science) practices and **Bayesian inference** into linguistic research.
-See the *Research methods* section on my researcher's [Orientation](orientation.qmd#research-methods) page.
+See the *Research methods* section on my researcher's [Orientation](orientation.qmd#methodological-theory) page.
 
 See the [Projects](projects.qmd) page for a list of current and past projects.
 

@@ -4,7 +4,15 @@ number-sections: true
 bibliography: references.bib
 ---
 
-In the following sections, you can find my positionality and an outline of some of the conceptual and methodological aspects that fuel and back-up my research.
+In the following sections, you can find my [researcher's orientation]{.smallcaps}.
+
+::: callout-note
+## Researcher's orientation
+
+The researcher's orientation is the combination of every aspect specific to an individual researcher that shape how the researcher approaches and practises research.
+
+This includes, but it is not limited to, lived experiences, social positionality, philosophical stance, personal beliefs, methodological theory, and more.
+:::
 
 This is a work in progress, in two senses:
 
@@ -15,13 +23,14 @@ This is a work in progress, in two senses:
 
 Positionality statements are about a reflexive understanding of one's own world view and how it affects one’s own research [@darwinholmes2020; @goundar2025; @jafar2018; @lazard2020; @tomlinson2023].
 There isn't a single accepted way of writing a positionality statement nor what should be covered in them.
-I personally take a positionality statement to include a mix of lived experiences, philosophical stance and methodological theory.
+I personally take a positionality statement to be the social position of the researcher in the research landscape.
 
-::: callout-tip
-## Stefano's positionality
+I identify as a neurodiverse male academic of Mediterranean ethnicity.
+I was born and raised in Northern Italy, but I have been living in the United Kingdom for a decade and I think of this country as my home.
+Most of my current research is about research methods and how research practices shape linguistic research.
+In this sense, I have an in-group point of view, being myself a researcher.
 
-I identify as a neurodiverse academic of Mediterranean ethnicity.
-I was born and raised in Italy, but I have been living in the United Kingdom for a decade and I think of this country as my home.
+# Philosophical stance
 
 My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness.
 
@@ -33,12 +42,10 @@ Holism, the idea of a unified whole which is more than the sum of its parts, is 
 Bayesian epistemology, which I use in my research and teach in my courses, is grounded on belief updating under uncertainty and inference given priors representing belief and evidence.
 Under this stance, quantitative methods are viewed and practised not in a reductionist way (explaining phenomena based entirely on lower-level terms) but simply as representing phenomena numerically as one way of operationalise entities, events and relations.
 
-From the point of view of methodological theory and practice, I am an active advocate of Open Research practices for a more transparent, well-grounded and reflexive scholarship.
-:::
-
 # Research methods
 
-As far as research methods are concerned, I am an enthusiastic advocate of **Open Research**, a term which encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruwell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].[^1]
+From the point of view of methodological theory and practice, I am an active advocate of Open Research practices for a more transparent, well-grounded and reflexive scholarship.
+**Open Research** encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruwell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].[^1]
 
 [^1]: *Open Research* is a more inclusive term than the more common *Open Science* term.
 

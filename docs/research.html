@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,8 +51,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./img/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -44,8 +62,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-731e68525a1d0304d5e120b0c7a12a36.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
-<link href="site_libs/quarto-contrib/Open-Science-icons-0.1.1/osi.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,416 +89,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-phd-thesis .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-author','listing-journal','listing-info','listing-doi','listing-accepted','listing-published','listing-compendium','listing-project','listing-open',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-year","listing-author","listing-journal","listing-info","listing-doi","listing-accepted","listing-published","listing-compendium","listing-project","listing-open"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-phd-thesis'] = new List('listing-phd-thesis', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-intrinsic-duration .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-open','listing-year','listing-journal','listing-author','listing-doi','listing-accepted','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-open","listing-year","listing-journal","listing-author","listing-doi","listing-accepted","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-intrinsic-duration'] = new List('listing-intrinsic-duration', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-r-packages .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-firstrel','listing-author','listing-version','listing-url','listing-github','listing-doi','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-year","listing-firstrel","listing-author","listing-version","listing-url","listing-github","listing-doi","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-r-packages'] = new List('listing-r-packages', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-many-speech .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-open','listing-rr','listing-author','listing-year','listing-journal','listing-info','listing-doi','listing-accepted','listing-published','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-open","listing-rr","listing-author","listing-year","listing-journal","listing-info","listing-doi","listing-accepted","listing-published","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-many-speech'] = new List('listing-many-speech', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-albanian .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-open','listing-author','listing-journal','listing-info','listing-doi','listing-accepted','listing-published','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-year","listing-open","listing-author","listing-journal","listing-info","listing-doi","listing-accepted","listing-published","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-albanian'] = new List('listing-albanian', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-speech-interaction .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-author','listing-journal','listing-info','listing-doi','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-year","listing-author","listing-journal","listing-info","listing-doi","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-speech-interaction'] = new List('listing-speech-interaction', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-statistics .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-open','listing-author','listing-journal','listing-doi','listing-submitted','listing-compendium','listing-project','listing-accepted','listing-published','listing-rr','listing-info',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-year","listing-open","listing-author","listing-journal","listing-doi","listing-submitted","listing-compendium","listing-project","listing-accepted","listing-published","listing-rr","listing-info"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-statistics'] = new List('listing-statistics', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-emilianto .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-open','listing-author','listing-year','listing-journal','listing-info','listing-doi','listing-accepted','listing-published','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-open","listing-author","listing-year","listing-journal","listing-info","listing-doi","listing-accepted","listing-published","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-emilianto'] = new List('listing-emilianto', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-old-english .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-author','listing-journal','listing-info','listing-year','listing-compendium','listing-project','listing-open','listing-doi','listing-published',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-author","listing-journal","listing-info","listing-year","listing-compendium","listing-project","listing-open","listing-doi","listing-published"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-old-english'] = new List('listing-old-english', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-infant-gestures .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-open','listing-year','listing-author','listing-journal','listing-info','listing-doi','listing-published','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-open","listing-year","listing-author","listing-journal","listing-info","listing-doi","listing-published","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-infant-gestures'] = new List('listing-infant-gestures', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-polish .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-type','listing-year','listing-author','listing-journal','listing-info','listing-doi','listing-compendium','listing-project',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-type","listing-year","listing-author","listing-journal","listing-info","listing-doi","listing-compendium","listing-project"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-polish'] = new List('listing-polish', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-beyond .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-project','listing-type','listing-year','listing-author','listing-submitted',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-project","listing-type","listing-year","listing-author","listing-submitted"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-beyond'] = new List('listing-beyond', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-grni .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-project','listing-type','listing-year','listing-author','listing-submitted','listing-compendium',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-project","listing-type","listing-year","listing-author","listing-submitted","listing-compendium"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-grni'] = new List('listing-grni', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
-<link href="site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet">
-<script src="site_libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
-<link href="site_libs/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet">
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -517,8 +124,12 @@ window.Quarto = {
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./meta.html"> 
-<span class="menu-text">Meta</span></a>
+    <a class="nav-link" href="./orientation.html"> 
+<span class="menu-text">Orientation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./output/index.html"> 
@@ -548,11 +159,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#phonetology" id="toc-phonetology" class="nav-link active" data-scroll-target="#phonetology">Phonetology</a></li>
-  <li><a href="#at-the-margins" id="toc-at-the-margins" class="nav-link" data-scroll-target="#at-the-margins">“At the margins”</a></li>
-  <li><a href="#research-methods" id="toc-research-methods" class="nav-link" data-scroll-target="#research-methods">Research methods</a></li>
-  <li><a href="#statistical-collaborations" id="toc-statistical-collaborations" class="nav-link" data-scroll-target="#statistical-collaborations">Statistical collaborations</a></li>
-  <li><a href="#glossolects" id="toc-glossolects" class="nav-link" data-scroll-target="#glossolects">Glossolects</a></li>
+  <li><a href="#research-interests" id="toc-research-interests" class="nav-link active" data-scroll-target="#research-interests"><span class="header-section-number">1</span> Research interests</a></li>
+  <li><a href="#linguistic-models" id="toc-linguistic-models" class="nav-link" data-scroll-target="#linguistic-models"><span class="header-section-number">2</span> Linguistic models</a>
+  <ul class="collapse">
+  <li><a href="#phonetology" id="toc-phonetology" class="nav-link" data-scroll-target="#phonetology"><span class="header-section-number">2.1</span> Phonetology</a></li>
+  <li><a href="#phonetological-systems" id="toc-phonetological-systems" class="nav-link" data-scroll-target="#phonetological-systems"><span class="header-section-number">2.2</span> Phonetological systems</a></li>
+  <li><a href="#sec-lingsys" id="toc-sec-lingsys" class="nav-link" data-scroll-target="#sec-lingsys"><span class="header-section-number">2.3</span> Linguistic systems</a></li>
+  <li><a href="#linguistics-and-language" id="toc-linguistics-and-language" class="nav-link" data-scroll-target="#linguistics-and-language"><span class="header-section-number">2.4</span> Linguistics and language</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -578,6 +193,8 @@ window.Quarto = {
 </header>
 
 
+<section id="research-interests" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="research-interests"><span class="header-section-number">1</span> Research interests</h2>
 <p>My research interests span a range of topics within linguistics, although the main focus is on the <strong>study of speech sounds</strong>, and in particular <strong>speech production</strong>, from a variety of intersecting perspectives, including:</p>
 <ul>
 <li>Acoustics and articulation.</li>
@@ -585,577 +202,194 @@ window.Quarto = {
 <li>Language endangerment.</li>
 <li>Computational modelling.</li>
 </ul>
-<p>The other strand of my research expertise is related to <strong>research methods and statistics</strong>. In particular, I am an enthusiastic advocate of <strong>Open Research</strong> (aka Open Science) and <strong>Bayesian inference</strong>.</p>
-<p>For an overview of the research meta-models that inform my research, see the <a href="./meta.html">Meta</a> page. The following sections list current and past project by research area.</p>
-<section id="phonetology" class="level1">
-<h1>Phonetology</h1>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Intrinsic vowel duration and gestural distance
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer. In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.</p>
-<div id="listing-intrinsic-duration" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2026
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Is 'intrinsic vowel duration' bio-mechanical or more? Preliminary results from Northwestern Italian</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language and Speech</em> <br> <a class="osi" href="https://www.doi.org/10.1177/00238309251399657"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/00238309251399657-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/83afz" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/vow-height" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Hemispheric differences in specificity effects of priming
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Project with <a href="https://jsteffman.github.io">Jeremy Steffman</a> looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.</p>
-</div>
-</div>
-<p><strong>Past projects</strong></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Many Speech Analyses
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The <em>Many Speech Analyses</em> project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions. To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.</p>
-<div id="listing-many-speech" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2023
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <i class="osi osi-rr"></i> <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas, …, Timo Roettger<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Advances in Methods and Practices in Psychological Science</em> 6(3)<br> <a class="osi" href="https://www.doi.org/10.1177/25152459231162567"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/25152459231162567-850000.svg"></a><br> <a class="osi" href="https://psyarxiv.com/q8t2k/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1177/25152459231162567" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/3bmcp/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>The sounds of Albanian
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and <a href="https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html">Stephen Nichols</a>, we have investigate the sound system of Albanian.</p>
-<div id="listing-albanian" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2023
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Northern Tosk Albanian (IPA Illustration)</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Josiane Riverin-Cutlée, Enkeleida Kapia, Stephen Nichols<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the International Phonetic Association</em> 53(3). 1122–1144<br> <a class="osi" href="https://www.doi.org/10.1017/S0025100322000044"><img class="doi" src="https://img.shields.io/badge/doi-10.1017/S0025100322000044-850000.svg"></a><br> <a class="osi" href="https://osf.io/mb2hg/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1017/S0025100322000044" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/vry3h/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Human interaction and the evolution of spoken accent
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>I worked within the ERC project <a href="https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html"><em>Human interaction and the evolution of spoken accent</em></a> (PI Prof.&nbsp;Jonathan Harrington) at the <a href="https://www.phonetik.uni-muenchen.de/">Institut für Phonetik und Sprachverarbeitung</a>. This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.</p>
-<div id="listing-speech-interaction" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2021
-</td>
-<td>
-<b>Planting the seed for sound change: Evidence from real-time MRI of velum kinematics in German</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Chris Carignan, Stefano Coretta, Jans Frahm, Jonathan Harrington, Phil Hoole, Arun Joseph, Esther Kunay, Dirk Voit<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language</em> 97(2), 333–364<br> <a class="osi" href="https://www.doi.org/10.1353/lan.2021.0020"><img class="doi" src="https://img.shields.io/badge/doi-10.1353/lan.2021.0020-850000.svg"></a><br> <a class="osi" href="https://github.com/ChristopherCarignan/journal-articles/tree/master/rtMRI-velum" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nasal coarticulation and sound-change: a real-time MRI study
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>I conducted research within the DFG project <a href="https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html"><em>Nasal coarticulation and sound-change: a real-time MRI study</em></a> (PI Prof.&nbsp;Jonathan Harrington).</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Vowel duration and consonant voicing: a production study
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>. My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.</p>
-<div id="listing-phd-thesis" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2020
-</td>
-<td>
-<b>Longer vowel duration correlates with greater tongue root advancement at vowel offset: Acoustic and articulatory data from Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the Acoustical Society of America</em> 147, 245–259<br> <a class="osi" href="https://www.doi.org/10.1111/cdev.13406"><img class="doi" src="https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/zrqyx" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="http://doi.org/10.1121/10.0000556" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/d245b/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2020
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>An exploratory study of voicing-related differences in vowel duration as compensatory temporal adjustment in Italian and Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Glossa: a journal of general linguistics</em> 4(1) 125, 1–25<br> <a class="osi" href="https://www.doi.org/10.5334/gjgl.869"><img class="doi" src="https://img.shields.io/badge/doi-10.5334/gjgl.869-850000.svg"></a><br> <a class="osi" href="http://doi.org/10.5334/gjgl.869" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/quy7k/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
+<p>The other strand of my research expertise is related to <strong>research methods and statistics</strong>. In particular, I do work on developing and integrating <strong>Open Research</strong> (aka Open Science) practices and <strong>Bayesian inference</strong> into linguistic research. See the <em>Research methods</em> section on my researcher’s <a href="./orientation.html#research-methods">Orientation</a> page.</p>
+<p>See the <a href="./projects.html">Projects</a> page for a list of current and past projects.</p>
 </section>
-<section id="at-the-margins" class="level1">
-<h1>“At the margins”</h1>
-<p>These projects cover marginalised/minoritised languages, communities, knowledge systems and ecologies.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Language and biological diversity
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This project with <a href="https://jesshampton.github.io">Jessica Hampton</a> focusses on the relationship of linguistic and biological diversity. The project will be developed in three phases:</p>
+<section id="linguistic-models" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="linguistic-models"><span class="header-section-number">2</span> Linguistic models</h2>
+<p>The following sections outline preliminary drafts of models of specific areas of language, of language and of linguistics I envision.</p>
+<section id="phonetology" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="phonetology"><span class="header-section-number">2.1</span> Phonetology</h3>
+<p>In a wish to transcend the phonetics/phonology divide <span class="citation" data-cites="soskuthy2013 ohala1990 ohala2005">(<a href="#ref-soskuthy2013" role="doc-biblioref">Sóskuthy 2013</a>; <a href="#ref-ohala1990" role="doc-biblioref">Ohala 1990</a>; <a href="#ref-ohala2005" role="doc-biblioref">Ohala 2005</a>)</span>, I suggest the term <span class="smallcaps">phonetology</span> (from a combination of <em>phonet</em>ics and phon<em>ology</em>) to refer to the study of what are traditionally investigated by phonology, phonetics and speech science.</p>
+<p>The postulation of three levels of analysis (phonological, phonetic and motor-perceptual) is compatible with neuro-biological specialisations of the brain cortex <span class="citation" data-cites="basilakos2018 fedorenko2020 ayyash2021 fedorenko2024 fedorenko2024a regev2024">(<a href="#ref-basilakos2018" role="doc-biblioref">Basilakos et al. 2018</a>; <a href="#ref-fedorenko2020" role="doc-biblioref">Fedorenko &amp; Blank 2020</a>; <a href="#ref-ayyash2021" role="doc-biblioref">Ayyash et al. 2021</a>; <a href="#ref-fedorenko2024" role="doc-biblioref">Fedorenko, Piantadosi &amp; Gibson 2024</a>; <a href="#ref-fedorenko2024a" role="doc-biblioref">Fedorenko, Ivanova &amp; Regev 2024</a>; <a href="#ref-regev2024" role="doc-biblioref">Regev et al. 2024</a>)</span>. The tripartite nature of phonetological systems is reflected in the grammar architecture expounded in <span class="citation" data-cites="bermudezotero2015">Bermúdez-Otero (<a href="#ref-bermudezotero2015" role="doc-biblioref">2015</a>)</span> and <span class="citation" data-cites="turk2020">Turk &amp; Shattuck-Hufnagel (<a href="#ref-turk2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>Although this newly-coined term contains the Greek root <em>phon-</em> ‘sound’, its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit. Sign languages, and other communicative systems yet to be “discovered”, are included. The term <span class="smallcaps">phonetological system</span> can be used as an umbrella term that covers both visual and sound systems.</p>
+</section>
+<section id="phonetological-systems" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="phonetological-systems"><span class="header-section-number">2.2</span> Phonetological systems</h3>
+<p>A <em>phonetological system</em> is comprised of a set of <span class="smallcaps">phonetological units</span> and their <span class="smallcaps">relationships</span>. Alas, I could not come up yet with a proper definition of “phonetological unit” that would subsume units of both visual and sound systems. Thoughts on this are much appreciated.</p>
+<p>In my view of phonetology, a phonetological system has the following properties:</p>
 <ul>
-<li><p>Phase 1: Assessing the link between language endangerment and biodiversity intactness.</p></li>
-<li><p>Phase 2: Developing an index of linguistic diversity intactness.</p></li>
-<li><p>Phase 3: Assessing the link between linguistic and biological diversity intactness.</p></li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><em>Beyond</em>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>As part of this project with <a href="https://jesshampton.github.io">Jessica Hampton</a>, we set out to write a triptych of papers united by the idea of going “beyond” current practices and dichotomies.</p>
+<li>It is a <strong>dynamic system</strong> <span class="citation" data-cites="thelen2006 vihman2014">(<a href="#ref-thelen2006" role="doc-biblioref">Thelen &amp; Smith 2006</a>; <a href="#ref-vihman2014" role="doc-biblioref">Vihman 2014</a>)</span>.</li>
+<li>It is a <strong>physio-neuro-cognitive</strong> system. It has:
 <ul>
-<li><p>Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).</p></li>
-<li><p>Paper 2: Beyond the quantitative/qualitative dichotomy.</p></li>
-<li><p>Paper 3: TBD</p></li>
-</ul>
-<div id="listing-beyond" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-submitted
-</td>
-<td>
-<b>Beyond the horizon: a more-than-human and holistic approach to language</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Gaya Seldon (pseud. Jessica Hampton, Stefano Coretta)<br> <a class="osi" href="https://lingbuzz.net/lingbuzz/009790" target="_blank"><i class="osi osi-submitted"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Vitality of Gallo-Romance of Northern Italy
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In this project with <a href="https://jesshampton.github.io">Jessica Hampton</a> and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.</p>
-<div id="listing-grni" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-submitted
-</td>
-<td>
-<b>A vitality assessment of Gallo-Romance of Northern Italy</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Simone De Cia, Jessica Hampton<br> <a class="osi" href="https://doi.org/10.31219/osf.io/fuzby_v1" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/grni-vitality" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-<p><strong>Past projects</strong></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Language practices of Emilian and Esperanto communities
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This project with <a href="https://jesshampton.github.io">Jessica Hampton</a> investigated the relationship between language attitudes and competence in the communities of Emilian and Esperanto speakers. We find that the relationship is modulated by spaces of use: at lower proportions of spaces of use, language attitudes are more positively correlated with language competence, while at higher proportions of spaces of use, the relationship between attitude and competence is reduced. We propose that creating spaces for users of minoritised languages like Emilian could engender higher levels of language competence and hence language maintenance.</p>
-<div id="listing-emilianto" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2024
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Language practices of Emilian and Esperanto communities: spaces of use, explicit language attitudes and self-reported competence</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Jessica Hampton, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of Multilingual and Multicultural Development</em> 47(2)<br> <a class="osi" href="https://www.doi.org/10.1080/01434632.2024.2413933"><img class="doi" src="https://img.shields.io/badge/doi-10.1080/01434632.2024.2413933-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/jqgku" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1080/01434632.2024.2413933" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/emilian-esperanto" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="research-methods" class="level1">
-<h1>Research methods</h1>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Statistics for linguistics
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.</p>
-<details>
-<summary>
-List
-</summary>
-<div class="markdown">
-<div id="listing-statistics" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2026
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Multivariate analyses of tongue contours from ultrasound tongue imaging</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Georges Sakr<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Language and Speech</em> <br> <a class="osi" href="https://www.doi.org/10.1177/00238309261419120"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/00238309261419120-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/mv_uti/" target="_blank"><i class="osi osi-submitted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/mv_uti" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2025
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>Bayesian beta regressions with brms in R: A tutorial for phoneticians</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Paul-Christian Bürkner<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of Phonetics</em> <br> <a class="osi" href="https://www.doi.org/10.1016/j.wocn.2025.101455"><img class="doi" src="https://img.shields.io/badge/doi-10.1016/j.wocn.2025.101455-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/f9rqg_v3" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://github.com/stefanocoretta/beta-phon" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2024
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>A tutorial on Generalised Additive Mixed Effects Models for bilingualism research</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Linguistic Approaches to Bilingualism</em> <br> <a class="osi" href="https://www.doi.org/10.1075/lab.23076.cor"><img class="doi" src="https://img.shields.io/badge/doi-10.1075/lab.23076.cor-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.31219/osf.io/8grj5" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1075/lab.23076.cor" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/gamm_biling" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2023
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <i class="osi osi-rr"></i> <b>Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta, Joseph V. Casillas, …, Timo Roettger<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Advances in Methods and Practices in Psychological Science</em> 6(3)<br> <a class="osi" href="https://www.doi.org/10.1177/25152459231162567"><img class="doi" src="https://img.shields.io/badge/doi-10.1177/25152459231162567-850000.svg"></a><br> <a class="osi" href="https://psyarxiv.com/q8t2k/" target="_blank"><i class="osi osi-accepted"></i></a> <a class="osi" href="https://doi.org/10.1177/25152459231162567" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://osf.io/3bmcp/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</details>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>R package development
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.</p>
-<details>
-<summary>
-List
-</summary>
-<div class="markdown">
-<div id="listing-r-packages" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2025
-</td>
-<td>
-<p><b>phonetisr: A Naive IPA Tokeniser</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v0.1.0</em><br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.14987854"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.14987854-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/phonetisr/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/phonetisr/" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a> [<i>first released in 2022</i>]</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2025
-</td>
-<td>
-<p><b>rticulate: Ultrasound Tongue Imaging in R</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v2.0.1</em><br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.1469038"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.1469038-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/rticulate/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/rticulate" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a> [<i>first released in 2017</i>]</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2024
-</td>
-<td>
-<p><b>tidygam: Tidy Prediction and Plotting of Generalised Additive Models</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v1.0.0</em><br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.14516084"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.14516084-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/tidygam/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/tidygam" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a> [<i>first released in 2022</i>]</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2024
-</td>
-<td>
-<p><b>speakr: A Wrapper for the Phonetic Software Praat</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Stefano Coretta<br> <em>R package v3.2.4</em><br> <a class="osi" href="https://www.doi.org/10.5281/zenodo.4014768"><img class="doi" src="https://img.shields.io/badge/doi-10.5281/zenodo.4014768-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/speakr/" target="_blank"><iconify-icon inline="" icon="fa6-solid:up-right-from-square"></iconify-icon></a> <a class="osi" href="https://github.com/stefanocoretta/speakr" target="_blank"><iconify-icon inline="" icon="fa6-brands:square-github"></iconify-icon></a> [<i>first released in 2017</i>]</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</details>
-</div>
-</div>
-</section>
-<section id="statistical-collaborations" class="level1">
-<h1>Statistical collaborations</h1>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Vowel reduction in Polish
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar. Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?</p>
-<div id="listing-polish" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2021
-</td>
-<td>
-<b>Distance vs.&nbsp;time: Acoustic and articulatory consequences of reduced vowel duration in Polish</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Patrycja Strycharczuk, Małgorzata Ćavar, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Journal of the Acoustical Society of America</em> 150(1), 592–607<br> <a class="osi" href="https://www.doi.org/10.1121/10.0005585"><img class="doi" src="https://img.shields.io/badge/doi-10.1121/10.0005585-850000.svg"></a><br> <a class="osi" href="https://stefanocoretta.github.io/polish-reduction/" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Historical syntax of English
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div id="listing-old-english" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2025
-</td>
-<td>
-<b>V2-Relatives in Old English</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Bettelou Los, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Discourse structure and narration. A diachronic view from Germanic</em> Ch 9, pp.&nbsp;305-341. Eds Ulrike Demske and Barthe Bloom<br> <a class="osi" href="https://github.com/stefanocoretta/aelfric-relatives" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: middle;">
-2023
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>The decline of local anchoring: A quantitative investigation</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Bettelou Los, Dreschler Gea, Ans van Kemenade, Erwin Komen, Stefano Coretta<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>English Language &amp; Linguistics</em> 27(2). 345–372<br> <a class="osi" href="https://www.doi.org/10.1017/S1360674323000047"><img class="doi" src="https://img.shields.io/badge/doi-10.1017/S1360674323000047-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.1017/S1360674323000047" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/2020-penta" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Infant gestures and language development
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead). <a href="https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/">Website</a>.</p>
-<p>I developed the statistical analysis for the package <a href="https://www.lucid.ac.uk/what-we-do/research/lucid-phase-1-completed-projects-2014-2019/variation-theme/prelinguistic-development-in-3-cultures/">Investigating prelinguistic development in three minority cultures</a>.</p>
-<div id="listing-infant-gestures" class="quarto-listing quarto-listing-container-custom">
-<table class="table">
-
-<tbody>
-<tr>
-<td style="vertical-align: middle;">
-2020
-</td>
-<td>
-<iconify-icon inline="" icon="academicons:open-access-square"></iconify-icon> <b>A cross cultural analysis of early prelinguistic gesture development and its relationship to language development</b><br> <iconify-icon inline="" icon="fa6-solid:user" style="font-size: 0.8em;"></iconify-icon> Thea Cameron-Faulkner, Nivedita Malik, Circle Steele, Stefano Coretta, Ludovica Serratrice, Elena Lieven<br> <iconify-icon inline="" icon="fa6-solid:book-open" style="font-size: 0.8em;"></iconify-icon> <em>Child Development</em> 92, 273–290<br> <a class="osi" href="https://www.doi.org/10.1111/cdev.13406"><img class="doi" src="https://img.shields.io/badge/doi-10.1111/cdev.13406-850000.svg"></a><br> <a class="osi" href="https://doi.org/10.1111/cdev.13406" target="_blank"><i class="osi osi-published"></i></a> <a class="osi" href="https://github.com/stefanocoretta/infant-gestures" target="_blank"><i class="osi osi-compendium"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="glossolects" class="level1">
-<h1>Glossolects</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-393e60f7f89d8b342d9f" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-393e60f7f89d8b342d9f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addAwesomeMarkers","args":[[41.3746242957521,45.4643408098844,53.4857099291728,52.3542599136831,51.1313716928508,53.3687697432817,2.36074750443743,-9.320409056569151,65.0332678523427,43.067982186246,48.9225822135745,-2.27384384345159,22.9550329236234,26.6891591999807,31.701049014734,8.940745305905221,46.9118992000112,52.0292214335183,27.2316739834057,41.9549524719067,39.402514583054],[19.8363991942167,9.189109987193691,-2.24234683895357,20.9786864360501,10.869930838569,-7.6640674124826,-56.6495935149114,160.011024240055,-18.2625244109019,12.3909410830752,44.3972197660087,147.985704688539,79.6585370929968,30.061133063625,34.819397408053,39.3633254709024,19.7839316507982,-4.20927524922827,72.9926578426692,13.264735543517,23.1421862640516],{"icon":"circle","markerColor":["blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","red","red","red","red","red","red","red","red","red"],"iconColor":"white","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Albanian","Lombard","Mancunian English","Polish","German","Old Irish","Mawayana","Santa Isabel","Icelandic","Italian","Proto-Indo-European","Proto-Oceanic","Sanskrit","Middle Egyptian","Classical Hebrew","Amharic","Hungarian","Middle Welsh","Romani","Latin","Ancient Greek"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-9.320409056569151,65.0332678523427],"lng":[-56.6495935149114,160.011024240055]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<p><br></p>
-<p>The map shows in blue the main <a href="./meta.html#linguistic-systems">glossolects</a> I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).</p>
-<p>Overall, my interests and expertise cover the following macro-glossolects:</p>
+<li>A <strong>physical</strong> component <span class="citation" data-cites="ohala1990 ohala2005">(<a href="#ref-ohala1990" role="doc-biblioref">Ohala 1990</a>; <a href="#ref-ohala2005" role="doc-biblioref">Ohala 2005</a>)</span>.</li>
+<li>A <strong>neuro-cognitive</strong> component.
 <ul>
-<li>Indo-European.</li>
-<li>Oceanic.</li>
-<li>South American.</li>
+<li>It is <em>rich</em> in details <span class="citation" data-cites="johnson1997 pierrehumbert2001 bybee2002">(<a href="#ref-johnson1997" role="doc-biblioref">Johnson 1997</a>; <a href="#ref-pierrehumbert2001" role="doc-biblioref">Pierrehumbert 2001</a>; <a href="#ref-bybee2002" role="doc-biblioref">Bybee 2002</a>)</span>.</li>
+<li>It is <em>self-organising</em> and <em>emergent</em> <span class="citation" data-cites="wedel2007 wedel2011">(<a href="#ref-wedel2007" role="doc-biblioref">Wedel 2007</a>; <a href="#ref-wedel2011" role="doc-biblioref">Wedel 2011</a>)</span>.</li>
+<li>It uses both <em>stored exemplars and stored abstractions</em> at multiple levels <span class="citation" data-cites="ambridge2020">(<a href="#ref-ambridge2020" role="doc-biblioref">Ambridge 2020</a>)</span>.</li>
+</ul></li>
+</ul></li>
+<li>It is part of a complex <strong>socio-cultural system</strong> <span class="citation" data-cites="deboer2015 foulkes2006 thompson2016">(<a href="#ref-deboer2015" role="doc-biblioref">de Boer 2015</a>; <a href="#ref-foulkes2006" role="doc-biblioref">Foulkes &amp; Docherty 2006</a>; <a href="#ref-thompson2016" role="doc-biblioref">Thompson, Kirby &amp; Smith 2016</a>)</span>.</li>
 </ul>
-<p>I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.</p>
+<p>I also consider these statements to be extendible more generally to Human Language as a holistic system.</p>
+</section>
+<section id="sec-lingsys" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="sec-lingsys"><span class="header-section-number">2.3</span> Linguistic systems</h3>
+<p>In light of the brilliant ideas expounded in <span class="citation" data-cites="cysouw2013">Cysouw &amp; Good (<a href="#ref-cysouw2013" role="doc-biblioref">2013</a>)</span> and <span class="citation" data-cites="vanrooy2021">van Rooy (<a href="#ref-vanrooy2021" role="doc-biblioref">2021</a>)</span>, I believe linguistics would benefit from a formalised notion of <span class="smallcaps">linguistic system</span> that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.</p>
+<p><span class="citation" data-cites="cysouw2013">Cysouw &amp; Good (<a href="#ref-cysouw2013" role="doc-biblioref">2013</a>)</span> propose a meta-model based on linguistic documentation and description. From this model, I borrow two concepts:</p>
+<ul>
+<li><p><strong>Glossonym</strong> (p.&nbsp;339)</p>
+<p>A <span class="smallcaps">glossonym</span> is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages. A glossonym does not have a referent nor a significant, but rather it is just a signifier. For example, the glossonym <em>Altaic</em>, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.</p></li>
+<li><p><strong>Doculect</strong> (p 342)</p>
+<p>A <span class="smallcaps">doculect</span> (i.e.&nbsp;documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.). This term is agnostic as to the type of linguistic entity (family, language, variety, etc.). A doculect is the pairing of a glossonym and a resource. An example: [<span class="citation" data-cites="howard1986">Howard (<a href="#ref-howard1986" role="doc-biblioref">1986</a>)</span>; <em>mawayana</em>].</p></li>
+</ul>
+<p><span class="citation" data-cites="cysouw2013">Cysouw &amp; Good (<a href="#ref-cysouw2013" role="doc-biblioref">2013: 347</a>)</span> also introduce the concept of “languoid” which refers to “any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family”.</p>
+<p>I propose instead the term <span class="smallcaps">glossolect</span>, which—unlike languoid—does not necessarily entail a strictly-nested hierarchical structure. This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.</p>
+<p>A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.</p>
+<p>In terms of types of linguistic variation, I borrow from classical sociolinguistics (references TBA):</p>
+<ul>
+<li><strong>Diachronic</strong>: variation in <em>time</em>.</li>
+<li><strong>Diatopic</strong>: variation in <em>geographical space</em> (less frequently used is <strong>diachoric</strong> for more restricted spatial variation).</li>
+<li><strong>Diastratic</strong>: variation based on <em>social class and groups</em>.</li>
+<li><strong>Diaphasic</strong>: variation based on <em>linguistic and social context</em> (includes <em>registers</em> and <em>slangs</em>).</li>
+<li><strong>Diamesic</strong>: variation based on the <em>means of communication</em> (e.g., visual/oral vs written, web vs print, etc.).</li>
+</ul>
+<p>In sum:</p>
+<ul>
+<li>A <strong>glossolect</strong> is a set of <em>doculects</em>.</li>
+<li>A <strong>doculect</strong> is a pairing of a <em>glossonym</em> and a <em>resource</em>.</li>
+<li>A <strong>glossonym</strong> is a name used to refer to a linguistic entity.</li>
+<li>A <strong>resource</strong> is any object (publication, media, etc.) containing linguistic materials.</li>
+<li>Glossolects can be situated within a specific <strong>diachronic, diatopic, diastratic, diaphasic, diamesic</strong> context.</li>
+</ul>
+</section>
+<section id="linguistics-and-language" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="linguistics-and-language"><span class="header-section-number">2.4</span> Linguistics and language</h3>
+<p>The following sections provide a thought-out description of my ontological and epistemological beliefs in relation to “linguistics” and its object(s) of study. The reader should interpret all of the statements made here as “my personal opinion”. In some cases <em>opinion</em> refers to my <span class="smallcaps">expert opinion</span>, in others to my <span class="smallcaps">intuitions</span> (for the use of intuition in science, see the work by physicist <a href="https://www.fritjofcapra.net">Fritjof Capra</a>). With time, I will add more references where/if relevant.</p>
+<section id="ontological" class="level4" data-number="2.4.1">
+<h4 data-number="2.4.1" class="anchored" data-anchor-id="ontological"><span class="header-section-number">2.4.1</span> Ontological</h4>
+<ol type="1">
+<li><span class="smallcaps">Human Language</span> is the human ability to communicate through a language, and a <span class="smallcaps">language</span> is a specific communicative system used by a specific group of humans.</li>
+<li><span class="smallcaps">linguisticality</span> is the prerequisite for Human Language <span class="citation" data-cites="haspelmath2020">(<a href="#ref-haspelmath2020" role="doc-biblioref">Haspelmath 2020</a>)</span>.</li>
+<li>If one defines <span class="smallcaps">Human Language</span> as the human ability to communicate through a language, then saying that only humans have Human Language is a tautology.</li>
+<li>All living beings are capable of communicating <span class="citation" data-cites="mancuso2015">(even plants and fungi, <a href="#ref-mancuso2015" role="doc-biblioref">Mancuso &amp; Viola 2015</a>)</span>.</li>
+<li>There is no agreement as to what <span class="smallcaps">language</span>, <span class="smallcaps">Human Language</span>, <span class="smallcaps">linguisticality</span> actually are.</li>
+<li>There is no agreement as to whether <span class="smallcaps">language</span>, <span class="smallcaps">Human Language</span>, <span class="smallcaps">linguisticality</span> are the same thing or if they in principle refer to different entities.</li>
+<li>There is no agreement as to which components of the human ability to communicate through a language are <span class="smallcaps">innate</span> and which are <span class="smallcaps">learned</span>.</li>
+<li>There is no agreement as to what <span class="smallcaps">innate</span> actually means.</li>
+<li>There is no agreement as to whether the human ability to communicate through a language is entirely <span class="smallcaps">domain-specific</span> or entirely <span class="smallcaps">domain-general</span>, or if it is a bit of both.
+<ol type="1">
+<li>If it is a bit of both, there is no agreement as to which components are <span class="smallcaps">domain-specific</span> and which are <span class="smallcaps">domain-general</span>.</li>
+</ol></li>
+<li>There is no agreement as to what a <span class="smallcaps">language</span> is. In fact, in English <em>language</em> is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written <em>Language</em> and <em>language</em> respectively). See <a href="#sec-lingsys" class="quarto-xref">Section&nbsp;2.3</a>.</li>
+</ol>
+</section>
+<section id="epistemological" class="level4" data-number="2.4.2">
+<h4 data-number="2.4.2" class="anchored" data-anchor-id="epistemological"><span class="header-section-number">2.4.2</span> Epistemological</h4>
+<ol type="1">
+<li>Linguistics is usually defined as a “science that studies Human Language”, however there is no agreement as to what <span class="smallcaps">science</span> actually is.</li>
+<li>Science is not the only way to obtain knowledge. There are many epistemological practices or “ways of knowing”. Like all ways of knowing, science is human activity.</li>
+<li>I prefer to use the term <span class="smallcaps">research</span> instead of science for all purposes.</li>
+<li>Research has both <span class="smallcaps">objective</span> and <span class="smallcaps">subjective</span> components.</li>
+<li>Statistics and statistical inference have both <span class="smallcaps">objective</span> and <span class="smallcaps">subjective</span> components <span class="citation" data-cites="gelman2017">(<a href="#ref-gelman2017" role="doc-biblioref">Gelman &amp; Hennig 2017</a>)</span>.</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="references" class="level2 unnumbered">
+
 
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ambridge2020" class="csl-entry" role="listitem">
+Ambridge, Ben. 2020. Abstractions made of exemplars or <span>“<span>You</span>’re all right, and <span>I</span>’ve changed my mind”</span>: <span>Response</span> to commentators. <em>First Language</em> 40(5-6). 640–659. <a href="https://doi.org/10.1177/0142723720949723">https://doi.org/10.1177/0142723720949723</a>.
+</div>
+<div id="ref-ayyash2021" class="csl-entry" role="listitem">
+Ayyash, Dima, Saima Malik-Moraleda, Jeanne Gallée, Josef Affourtit, Malte Hoffman, Zachary Mineroff, Olessia Jouravlev &amp; Evelina Fedorenko. 2021. The universal language network: <span>A</span> cross-linguistic investigation spanning 45 languages and 11 language families. <a href="https://doi.org/10.1101/2021.07.28.454040">https://doi.org/10.1101/2021.07.28.454040</a>.
+</div>
+<div id="ref-basilakos2018" class="csl-entry" role="listitem">
+Basilakos, Alexandra, Kimberly G Smith, Paul Fillmore, Julius Fridriksson &amp; Evelina Fedorenko. 2018. Functional <span>Characterization</span> of the <span>Human Speech Articulation Network</span>. <em>Cerebral Cortex</em> 28(5). 1816–1830. <a href="https://doi.org/10.1093/cercor/bhx100">https://doi.org/10.1093/cercor/bhx100</a> (24 December, 2024).
+</div>
+<div id="ref-bermudezotero2015" class="csl-entry" role="listitem">
+Bermúdez-Otero, Ricardo. 2015. Amphichronic explanation and the life cycle of phonological processes. In <em>The <span>Oxford</span> handbook of historical phonology</em>, 374–399. Oxford: Oxford University Press.
+</div>
+<div id="ref-bybee2002" class="csl-entry" role="listitem">
+Bybee, Joan. 2002. Phonological evidence for exemplar storage of multiword sequences. <em>Studies in Second Language Acquisition</em> 24(2). 215–221. <a href="https://doi.org/10.1017/S0272263102002061">https://doi.org/10.1017/S0272263102002061</a>.
+</div>
+<div id="ref-cysouw2013" class="csl-entry" role="listitem">
+Cysouw, Michael &amp; Jeff Good. 2013. Languoid, doculect, and glossonym: Formalizing the notion <span>“language.”</span> <em>Language Documentation &amp; Conservation</em> 7. 331–359.
+</div>
+<div id="ref-deboer2015" class="csl-entry" role="listitem">
+de Boer, Bart. 2015. Biology, culture, evolution and the cognitive nature of sound systems. <em>Journal of Phonetics</em> 53. 79–87. <a href="https://doi.org/10.1016/j.wocn.2015.07.001">https://doi.org/10.1016/j.wocn.2015.07.001</a>.
+</div>
+<div id="ref-fedorenko2020" class="csl-entry" role="listitem">
+Fedorenko, Evelina &amp; Idan A. Blank. 2020. Broca’s area is not a natural kind. <em>Trends in Cognitive Sciences</em> 1–15. <a href="https://doi.org/10.1016/j.tics.2020.01.001">https://doi.org/10.1016/j.tics.2020.01.001</a>.
+</div>
+<div id="ref-fedorenko2024a" class="csl-entry" role="listitem">
+Fedorenko, Evelina, Anna A. Ivanova &amp; Tamar I. Regev. 2024. The language network as a natural kind within the broader landscape of the human brain. <em>Nature Reviews Neuroscience</em> 25(5). 289–312. <a href="https://doi.org/10.1038/s41583-024-00802-4">https://doi.org/10.1038/s41583-024-00802-4</a> (6 January, 2025).
+</div>
+<div id="ref-fedorenko2024" class="csl-entry" role="listitem">
+Fedorenko, Evelina, Steven T. Piantadosi &amp; Edward A. F. Gibson. 2024. Language is primarily a tool for communication rather than thought. <em>Nature</em> 630(8017). 575–586. <a href="https://doi.org/10.1038/s41586-024-07522-w">https://doi.org/10.1038/s41586-024-07522-w</a> (29 December, 2024).
+</div>
+<div id="ref-foulkes2006" class="csl-entry" role="listitem">
+Foulkes, Paul &amp; Gerard Docherty. 2006. The social life of phonetics and phonology. <em>Journal of Phonetics</em>. Elsevier 34(4). 409–438. <a href="https://doi.org/10.1016/j.wocn.2005.08.002">https://doi.org/10.1016/j.wocn.2005.08.002</a>.
+</div>
+<div id="ref-gelman2017" class="csl-entry" role="listitem">
+Gelman, Andrew &amp; Christian Hennig. 2017. Beyond subjective and objective in statistics. <em>Journal of the Royal Statistical Society: Series A (Statistics in Society)</em> 180(4). 967–1033. <a href="https://doi.org/10.1111/rssa.12276">https://doi.org/10.1111/rssa.12276</a>.
+</div>
+<div id="ref-haspelmath2020" class="csl-entry" role="listitem">
+Haspelmath, Martin. 2020. General linguistics must be based on universals (or nonconventional aspects of language). <a href="https://ling.auf.net/lingbuzz/005158" class="uri">https://ling.auf.net/lingbuzz/005158</a>; LingBuzz.
+</div>
+<div id="ref-howard1986" class="csl-entry" role="listitem">
+Howard, C. V. 1986. <em>Mawayana: Formul<span>á</span>rio dos vocabul<span>á</span>rios padr<span>õ</span>es</em>. Rio de Janeiro: Museu Nacional. Ms.
+</div>
+<div id="ref-johnson1997" class="csl-entry" role="listitem">
+Johnson, Keith. 1997. Speech perception without speaker normalization: An exemplar model. In Keith Johnson &amp; John W. Mullenix (eds.), <em>Talker variability in speech processing</em>, 145–165. San Diego, CA: Academic Press.
+</div>
+<div id="ref-mancuso2015" class="csl-entry" role="listitem">
+Mancuso, Stefano &amp; Alessandra Viola. 2015. <em>Brilliant green: The surprising history and science of plant intelligence</em>. Island Press.
+</div>
+<div id="ref-ohala1990" class="csl-entry" role="listitem">
+Ohala, John J. 1990. There is no interface between phonology and phonetics: A personal view. <em>Journal of Phonetics</em> 18(2). 153–172. <a href="https://doi.org/10.1016/S0095-4470(19)30399-7">https://doi.org/10.1016/S0095-4470(19)30399-7</a>.
+</div>
+<div id="ref-ohala2005" class="csl-entry" role="listitem">
+Ohala, John J. 2005. The marriage of phonetics and phonology. <em>Acoustical science and technology</em> 26(5). 418–422. <a href="https://doi.org/10.1250/ast.26.418">https://doi.org/10.1250/ast.26.418</a>.
+</div>
+<div id="ref-pierrehumbert2001" class="csl-entry" role="listitem">
+Pierrehumbert, Janet B. 2001. Exemplar dynamics: Word frequency, lenition and contrast. In Joan L. Bybee &amp; Paul J. Hopper (eds.), <em>Frequency and the emergence of linguistic structure</em>, 137–157. Amsterdam Philadelphia: John Benjamins Publishing Company. <a href="https://doi.org/10.1075/tsl.45.08pie">https://doi.org/10.1075/tsl.45.08pie</a>.
+</div>
+<div id="ref-regev2024" class="csl-entry" role="listitem">
+Regev, Tamar I, Hee So Kim, Xuanyi Chen, Josef Affourtit, Abigail E Schipper, Leon Bergen, Kyle Mahowald &amp; Evelina Fedorenko. 2024. High-level language brain regions process sublexical regularities. <em>Cerebral Cortex</em> 34(3). bhae077. <a href="https://doi.org/10.1093/cercor/bhae077">https://doi.org/10.1093/cercor/bhae077</a> (24 December, 2024).
+</div>
+<div id="ref-soskuthy2013" class="csl-entry" role="listitem">
+Sóskuthy, Márton. 2013. Analogy in the emergence of intrusive-r in <span>English</span>. <em>English Language and Linguistics</em>. Cambridge Univ Press 17(1). 55–84.
+</div>
+<div id="ref-thelen2006" class="csl-entry" role="listitem">
+Thelen, Esther &amp; Linda B. Smith. 2006. Dynamic systems theories. In Richard M. Lerner (ed.), <em>Handbook of child psychology</em>, 258–312. Wiley &amp; Soons. <a href="https://doi.org/10.1002/9780470147658.chpsy0106">https://doi.org/10.1002/9780470147658.chpsy0106</a>.
+</div>
+<div id="ref-thompson2016" class="csl-entry" role="listitem">
+Thompson, Bill, Simon Kirby &amp; Kenny Smith. 2016. Culture shapes the evolution of cognition. <em>Proceedings of the National Academy of Sciences</em> 113(16). 4530–4535. <a href="https://doi.org/10.1073/pnas.1523631113">https://doi.org/10.1073/pnas.1523631113</a>.
+</div>
+<div id="ref-turk2020" class="csl-entry" role="listitem">
+Turk, Alice &amp; Stefanie Shattuck-Hufnagel. 2020. <em>Speech timing: <span>Implications</span> for <span>Theories</span> of <span>Phonology</span>, <span>Phonetics</span>, and <span>Speech Motor Control</span></em> (Oxford <span>Studies</span> in <span>Phonology</span> and <span>Phonetics</span>). Oxford: Oxford University Press.
+</div>
+<div id="ref-vanrooy2021" class="csl-entry" role="listitem">
+van Rooy, Raf. 2021. <em>Language or dialect? <span>The</span> history of a conceptual pair</em>. Oxford: Oxford University Press.
+</div>
+<div id="ref-vihman2014" class="csl-entry" role="listitem">
+Vihman, Marilyn May. 2014. <em>Phonological development: The first two years</em>. Oxford: Wiley-Blackwell.
+</div>
+<div id="ref-wedel2007" class="csl-entry" role="listitem">
+Wedel, Andrew B. 2007. Feedback and regularity in the lexicon. <em>Phonology</em> 24(1). 147–185. <a href="https://doi.org/10.1017/S0952675707001145">https://doi.org/10.1017/S0952675707001145</a>.
+</div>
+<div id="ref-wedel2011" class="csl-entry" role="listitem">
+Wedel, Andrew B. 2011. Self-organization in phonology. In Ewen C. J. Hume E. van Oostendorp Marc &amp; Keren Rice (eds.), <em>The <span>Blackwell Companion</span> to <span>Phonology</span></em>, vol. 1, 130–147. Blackwell, Oxford. <a href="https://doi.org/10.1002/9781444335262.wbctp0006">https://doi.org/10.1002/9781444335262.wbctp0006</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

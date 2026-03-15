@@ -13,12 +13,10 @@ format:
 # Stefano Coretta
 
 | \[ˈsteˑfano koˈrɛtta\]
-| 
+|
 | Lecturer (Assistant Professor)
-| 
 | **University of Edinburgh**
 | [s.coretta\@ed.ac.uk](mailto:s.coretta@ed.ac.uk){.email}
-| 
 
 ::: {style="font-size: 1.8rem"}
 [{{< iconify fa6-brands square-github >}}](https://github.com/stefanocoretta) [{{< iconify academicons osf-square >}}](https://osf.io/e84dv/) [{{< iconify academicons orcid >}}](https://orcid.org/0000-0001-9627-5532) [{{< iconify academicons clarivate >}}](https://www.webofscience.com/wos/author/record/AFQ-0204-2022) [{{< iconify academicons stackoverflow >}}](https://stackoverflow.com/users/2804314/stefano?tab=profile) [{{< iconify fa6-brands square-bluesky >}}](https://bsky.app/profile/scoretta.bsky.social)
@@ -36,19 +34,19 @@ I was a postdoc researcher at the [Institute of Phonetics and Speech Processing]
 I am available as **instructor for a range of [Workshops](teaching.qmd#workshops)** on statistics and research methods and as **collaborator on projects or papers** requiring the planning and execution of statistical analyses.
 Get in contact with me for info.
 
-My past and current research covers different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](meta.qmd#phonetology)---the study of speech sounds and their relation to Human Language---and [[research methods]{.smallcaps}](meta.qmd#research-methods) including statistics and Open Science practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org)).
-For more details on my research interests, past/current research projects, and an overview of meta-models informing my research, check out the [Research](research.qmd) and [Meta-models](meta.qmd) pages.
+My past and current research covers different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](research.qmd#phonetology)---the study of speech sounds and their relation to Human Language---and [[research methods]{.smallcaps}](orientation.qmd#research-methods) including statistics and Open Science practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org) and of [Open Sciences for a Post-Materialist Science](https://opensciences.org)).
+For more details on my research see [Research](research.qmd), [Projects](projects.qmd), and my researcher's [Orientation](orientation.qmd) page.
 You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).
 
-My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness (I am a signatory of [Open Sciences for a Post-Materialist Science](https://opensciences.org)).
-See [Positionality](meta.qmd#positionality) for more details.
+My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness.
+See [Orientation](orientation.qmd) for more details.
 I engage in spiritual practices and pagan magick with a strong elemental basis, and in my free time I enjoy conlanging (the art of constructing artificial languages), watching sci-fi and fantasy movies, playing the recorder and taking care of plants.
 
 ::::: grid
 ::: g-col-6
 #### Interests
 
--   [Phonetology](meta.qmd#phonetology) (i.e. Speech, Phonetics, Phonology)
+-   [Phonetology](research.qmd#phonetology) (i.e. Speech, Phonetics, Phonology)
 -   Research Methods and Statistics
 -   Language description
 -   Typology and Diachronic linguistics

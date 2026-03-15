@@ -19,8 +19,10 @@ website:
       - href: research.qmd
       - href: teaching.qmd
         text: Teaching
-      - href: meta.qmd
-        text: Meta
+      - href: orientation.qmd
+        text: Orientation
+      - href: projects.qmd
+        text: Projects
       - href: output/index.qmd
         text: Output
       - href: blog.qmd

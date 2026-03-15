@@ -30,11 +30,11 @@ What I want to argue here is that it is OK not to be interested in society while
 
 ## Society is just one aspect
 
-I very much agree that Language [in the sense of @haspelmath2020] is not devoid of societal aspects and in fact I argue that society is a very important aspect of Language (see [here](/meta.qmd#phonetological-systems)).
+I very much agree that Language [in the sense of @haspelmath2020] is not devoid of societal aspects and in fact I argue that society is a very important aspect of Language (see [here](/research.qmd#phonetological-systems)).
 However, Language is made of many (interconnected) components [and I also believe that Language is more than the sum of its parts, see @thelen1996, @thelen2006; on this note, I want to highlight that I find the reductionist view of structuralism entertained by certain constructivist researchers to be problematic and based on a gross misunderstanding of structuralism, more on this in a work-in-progress paper with Jessica Hampton]: while understanding Language in its entirety of course require understanding society and its part in Language, I argue that an equally valid endeavour is to look at some components of Language while not considering the others (of course this will produce a limited view on such components, as much as just looking at society while rejecting any form of systematisation will produce a limited view).
 
 For example, one of my academic interests is how speech gestures are cognitively organised and physically executed.
-This is an area of what I call [phonetology](/meta.qmd#phonetology) on which there is still little agreement.
+This is an area of what I call [phonetology](/research.qmd#phonetology) on which there is still little agreement.
 An interesting aspect of the gestural organisation of speech is around what units organisation takes place and what type of hierarchies are involved in the organisation.
 An old hypothesis is that vocalic gestures take place at regular temporal intervals under certain constraints, and that other gestures are "overlaid" on them [@ohman1966; @ohman1967; @fowler1980; @fowler1983; @fowler1992, see one of my presentations [here](https://stefanocoretta.github.io/vv-iso/presentations/2025-p-workshop.html#/title-slide)].
 

@@ -1,85 +1,10 @@
 ---
 title: Research
-listing: 
-  - id: phd-thesis
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "phd-thesis"
-  - id: intrinsic-duration
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "intrinsic-duration"
-  - id: r-packages
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "r-packages"
-  - id: many-speech
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "many-speech"
-  - id: albanian
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "albanian"
-  - id: speech-interaction
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "speech-interaction"
-  - id: statistics
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "statistics"
-  - id: emilianto
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "emilianto"
-  - id: old-english
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "old-english"
-  - id: infant-gestures
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "infant-gestures"
-  - id: polish
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "polish"
-  - id: beyond
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "beyond"
-  - id: grni
-    contents:
-      - output.yml
-    template: html/ejs/pubs.ejs
-    include:
-      project: "grni"
+number-sections: true
+bibliography: references.bib
 ---
+
+## Research interests
 
 My research interests span a range of topics within linguistics, although the main focus is on the **study of speech sounds**, and in particular **speech production**, from a variety of intersecting perspectives, including:
 
@@ -89,222 +14,115 @@ My research interests span a range of topics within linguistics, although the ma
 -   Computational modelling.
 
 The other strand of my research expertise is related to **research methods and statistics**.
-In particular, I am an enthusiastic advocate of **Open Research** (aka Open Science) and **Bayesian inference**.
+In particular, I do work on developing and integrating **Open Research** (aka Open Science) practices and **Bayesian inference** into linguistic research.
+See the *Research methods* section on my researcher's [Orientation](orientation.qmd#research-methods) page.
 
-For an overview of the research meta-models that inform my research, see the [Meta](meta.qmd) page.
-The following sections list current and past project by research area.
+See the [Projects](projects.qmd) page for a list of current and past projects.
 
-# Phonetology
+## Linguistic models
 
-:::: callout-note
-## Intrinsic vowel duration and gestural distance
+The following sections outline preliminary drafts of models of specific areas of language, of language and of linguistics I envision.
 
-Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer.
-In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.
+### Phonetology
 
-::: {#intrinsic-duration}
-:::
-::::
+In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I suggest the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*) to refer to the study of what are traditionally investigated by phonology, phonetics and speech science.
 
-::: callout-note
-## Hemispheric differences in specificity effects of priming
+The postulation of three levels of analysis (phonological, phonetic and motor-perceptual) is compatible with neuro-biological specialisations of the brain cortex [@basilakos2018; @fedorenko2020; @ayyash2021; @fedorenko2024; @fedorenko2024a; @regev2024].
+The tripartite nature of phonetological systems is reflected in the grammar architecture expounded in @bermudezotero2015 and @turk2020.
 
-Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.
-:::
+Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit.
+Sign languages, and other communicative systems yet to be "discovered", are included.
+The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
 
-**Past projects**
+### Phonetological systems
 
-:::: {.callout-note collapse="true"}
-## Many Speech Analyses
+A *phonetological system* is comprised of a set of [phonetological units]{.smallcaps} and their [relationships]{.smallcaps}.
+Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems.
+Thoughts on this are much appreciated.
 
-The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions.
-To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
+In my view of phonetology, a phonetological system has the following properties:
 
-::: {#many-speech}
-:::
-::::
+-   It is a **dynamic system** [@thelen2006; @vihman2014].
+-   It is a **physio-neuro-cognitive** system. It has:
+    -   A **physical** component [@ohala1990; @ohala2005].
+    -   A **neuro-cognitive** component.
+        -   It is *rich* in details [@johnson1997; @pierrehumbert2001; @bybee2002].
+        -   It is *self-organising* and *emergent* [@wedel2007; @wedel2011].
+        -   It uses both *stored exemplars and stored abstractions* at multiple levels [@ambridge2020].
+-   It is part of a complex **socio-cultural system** [@deboer2015; @foulkes2006; @thompson2016].
 
-:::: {.callout-note collapse="true"}
-## The sounds of Albanian
+I also consider these statements to be extendible more generally to Human Language as a holistic system.
 
-In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we have investigate the sound system of Albanian.
+### Linguistic systems {#sec-lingsys}
 
-::: {#albanian}
-:::
-::::
+In light of the brilliant ideas expounded in @cysouw2013 and @vanrooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
 
-:::: {.callout-note collapse="true"}
-## Human interaction and the evolution of spoken accent
+@cysouw2013 propose a meta-model based on linguistic documentation and description.
+From this model, I borrow two concepts:
 
-I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
-This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+-   **Glossonym** (p. 339)
 
-::: {#speech-interaction}
-:::
-::::
+    A [glossonym]{.smallcaps} is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages.
+    A glossonym does not have a referent nor a significant, but rather it is just a signifier.
+    For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
 
-::: {.callout-note collapse="true"}
-## Nasal coarticulation and sound-change: a real-time MRI study
+-   **Doculect** (p 342)
 
-I conducted research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html) (PI Prof. Jonathan Harrington).
-:::
+    A [doculect]{.smallcaps} (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.).
+    This term is agnostic as to the type of linguistic entity (family, language, variety, etc.).
+    A doculect is the pairing of a glossonym and a resource.
+    An example: [@howard1986; *mawayana*].
 
-:::: {.callout-note collapse="true"}
-## Vowel duration and consonant voicing: a production study
+@cysouw2013 [p. 347] also introduce the concept of "languoid" which refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family".
 
-As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
-My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
+I propose instead the term [glossolect]{.smallcaps}, which---unlike languoid---does not necessarily entail a strictly-nested hierarchical structure.
+This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
 
-::: {#phd-thesis}
-:::
-::::
+A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.
 
-# "At the margins"
+In terms of types of linguistic variation, I borrow from classical sociolinguistics (references TBA):
 
-These projects cover marginalised/minoritised languages, communities, knowledge systems and ecologies.
+-   **Diachronic**: variation in *time*.
+-   **Diatopic**: variation in *geographical space* (less frequently used is **diachoric** for more restricted spatial variation).
+-   **Diastratic**: variation based on *social class and groups*.
+-   **Diaphasic**: variation based on *linguistic and social context* (includes *registers* and *slangs*).
+-   **Diamesic**: variation based on the *means of communication* (e.g., visual/oral vs written, web vs print, etc.).
 
-::: callout-note
-## Language and biological diversity
+In sum:
 
-This project with [Jessica Hampton](https://jesshampton.github.io) focusses on the relationship of linguistic and biological diversity.
-The project will be developed in three phases:
+-   A **glossolect** is a set of *doculects*.
+-   A **doculect** is a pairing of a *glossonym* and a *resource*.
+-   A **glossonym** is a name used to refer to a linguistic entity.
+-   A **resource** is any object (publication, media, etc.) containing linguistic materials.
+-   Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
 
--   Phase 1: Assessing the link between language endangerment and biodiversity intactness.
+### Linguistics and language
 
--   Phase 2: Developing an index of linguistic diversity intactness.
+The following sections provide a thought-out description of my ontological and epistemological beliefs in relation to "linguistics" and its object(s) of study.
+The reader should interpret all of the statements made here as "my personal opinion".
+In some cases *opinion* refers to my [expert opinion]{.smallcaps}, in others to my [intuitions]{.smallcaps} (for the use of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)).
+With time, I will add more references where/if relevant.
 
--   Phase 3: Assessing the link between linguistic and biological diversity intactness.
-:::
+#### Ontological
 
-::: callout-note
-## *Beyond*
+1.  [Human Language]{.smallcaps} is the human ability to communicate through a language, and a [language]{.smallcaps} is a specific communicative system used by a specific group of humans.
+2.  [linguisticality]{.smallcaps} is the prerequisite for Human Language [@haspelmath2020].
+3.  If one defines [Human Language]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have Human Language is a tautology.
+4.  All living beings are capable of communicating [even plants and fungi, @mancuso2015].
+5.  There is no agreement as to what [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
+6.  There is no agreement as to whether [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
+7.  There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
+8.  There is no agreement as to what [innate]{.smallcaps} actually means.
+9.  There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
+    1.  If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
+10. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively). See @sec-lingsys.
 
-As part of this project with [Jessica Hampton](https://jesshampton.github.io), we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
+#### Epistemological
 
--   Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).
+1.  Linguistics is usually defined as a "science that studies Human Language", however there is no agreement as to what [science]{.smallcaps} actually is.
+2.  Science is not the only way to obtain knowledge. There are many epistemological practices or "ways of knowing". Like all ways of knowing, science is human activity.
+3.  I prefer to use the term [research]{.smallcaps} instead of science for all purposes.
+4.  Research has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
+5.  Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].
 
--   Paper 2: Beyond the quantitative/qualitative dichotomy.
-
--   Paper 3: TBD
-
-::: {#beyond}
-:::
-:::
-
-::: callout-note
-## Vitality of Gallo-Romance of Northern Italy
-
-In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
-
-::: {#grni}
-:::
-:::
-
-**Past projects**
-
-:::: {.callout-note collapse="true"}
-## Language practices of Emilian and Esperanto communities
-
-This project with [Jessica Hampton](https://jesshampton.github.io) investigated the relationship between language attitudes and competence in the communities of Emilian and Esperanto speakers.
-We find that the relationship is modulated by spaces of use: at lower proportions of spaces of use, language attitudes are more positively correlated with language competence, while at higher proportions of spaces of use, the relationship between attitude and competence is reduced.
-We propose that creating spaces for users of minoritised languages like Emilian could engender higher levels of language competence and hence language maintenance.
-
-::: {#emilianto}
-:::
-::::
-
-# Research methods
-
-::::: callout-note
-## Statistics for linguistics
-
-This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.
-
-<details>
-
-<summary>List</summary>
-
-:::: markdown
-::: {#statistics}
-:::
-::::
-
-</details>
-:::::
-
-::::: callout-note
-## R package development
-
-As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.
-
-<details>
-
-<summary>List</summary>
-
-:::: markdown
-::: {#r-packages}
-:::
-::::
-
-</details>
-:::::
-
-# Statistical collaborations
-
-:::: {.callout-note collapse="true"}
-## Vowel reduction in Polish
-
-Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar.
-Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?
-
-::: {#polish}
-:::
-::::
-
-:::: {.callout-note collapse="true"}
-## Historical syntax of English
-
-::: {#old-english}
-:::
-::::
-
-:::: {.callout-note collapse="true"}
-## Infant gestures and language development
-
-Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead).
-[Website](https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/).
-
-I developed the statistical analysis for the package [Investigating prelinguistic development in three minority cultures](https://www.lucid.ac.uk/what-we-do/research/lucid-phase-1-completed-projects-2014-2019/variation-theme/prelinguistic-development-in-3-cultures/).
-
-::: {#infant-gestures}
-:::
-::::
-
-# Glossolects
-
-```{r}
-library(leaflet)
-library(readr)
-
-glossolocs <- read_csv("data/glossolocs.csv")
-
-leaflet(data = glossolocs) %>%
-  addTiles() %>%
-  addAwesomeMarkers(popup = ~glosso, icon = ~awesomeIcons(
-    icon = "circle",
-    library = "fa",
-    markerColor = colour
-  ))
-```
-
-<br>
-
-The map shows in blue the main [glossolects](meta.qmd#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
-
-Overall, my interests and expertise cover the following macro-glossolects:
-
--   Indo-European.
--   Oceanic.
--   South American.
-
-I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.
+## References  {.unnumbered}

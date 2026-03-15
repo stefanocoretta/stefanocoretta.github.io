@@ -1,0 +1,299 @@
+---
+title: Projects
+listing: 
+  - id: phd-thesis
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "phd-thesis"
+  - id: intrinsic-duration
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "intrinsic-duration"
+  - id: r-packages
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "r-packages"
+  - id: many-speech
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "many-speech"
+  - id: albanian
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "albanian"
+  - id: speech-interaction
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "speech-interaction"
+  - id: statistics
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "statistics"
+  - id: emilianto
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "emilianto"
+  - id: old-english
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "old-english"
+  - id: infant-gestures
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "infant-gestures"
+  - id: polish
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "polish"
+  - id: beyond
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "beyond"
+  - id: grni
+    contents:
+      - output.yml
+    template: html/ejs/pubs.ejs
+    include:
+      project: "grni"
+---
+
+The following sections list current and past project by research area.
+
+# Phonetology
+
+:::: callout-note
+## Intrinsic vowel duration and gestural distance
+
+Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer.
+In this project I will investigate if articulator origin-to-target distance is sufficient to explain vowel duration or if vowels include category-specific durational targets.
+
+::: {#intrinsic-duration}
+:::
+::::
+
+::: callout-note
+## Hemispheric differences in specificity effects of priming
+
+Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.
+:::
+
+**Past projects**
+
+:::: {.callout-note collapse="true"}
+## Many Speech Analyses
+
+The *Many Speech Analyses* project (with Timo Roettger and Joseph V. Casillas) set out to quantify the analytic flexibility in the speech sciences and explored how it affects our scientific conclusions.
+To that end, we asked speech researchers to analyse the same data set in order to answer the same research question.
+
+::: {#many-speech}
+:::
+::::
+
+:::: {.callout-note collapse="true"}
+## The sounds of Albanian
+
+In collaboration with Lejda Kapia, Josianne Riverin-Coutlée, and [Stephen Nichols](https://personalpages.manchester.ac.uk/postgrad/stephen.nichols/home.html), we have investigate the sound system of Albanian.
+
+::: {#albanian}
+:::
+::::
+
+:::: {.callout-note collapse="true"}
+## Human interaction and the evolution of spoken accent
+
+I worked within the ERC project [*Human interaction and the evolution of spoken accent*](https://www.phonetik.uni-muenchen.de/Forschung/interaccent/interAccent.html) (PI Prof. Jonathan Harrington) at the [Institut für Phonetik und Sprachverarbeitung](https://www.phonetik.uni-muenchen.de/).
+This project employs real-time MRI data to investigate, among other things, how articulatory aspects of speech can pave the way for sound change.
+
+::: {#speech-interaction}
+:::
+::::
+
+::: {.callout-note collapse="true"}
+## Nasal coarticulation and sound-change: a real-time MRI study
+
+I conducted research within the DFG project [*Nasal coarticulation and sound-change: a real-time MRI study*](https://www.en.phonetik.uni-muenchen.de/research/current_projects/nasal_coarticulation.html) (PI Prof. Jonathan Harrington).
+:::
+
+:::: {.callout-note collapse="true"}
+## Vowel duration and consonant voicing: a production study
+
+As part of my PhD research at the University of Manchester, supervised by Dr <a href="http://www.bermudez-otero.com/index.htm" target="_blank" rel="noopener">Ricardo Bermúdez-Otero</a> and Dr <a href="https://sites.google.com/site/patrycjastrycharczuk/home" target="_blank" rel="noopener">Patrycja Strycharczuk</a>), I investigated the effect of consonant voicing on vowel duration, using a combination of acoustic analyses, <a href="https://en.wikipedia.org/wiki/Ultrasound_tongue_imaging" target="_blank" rel="noopener">ultrasound tongue imaging</a> and <a href="https://en.wikipedia.org/wiki/Electroglottograph" target="_blank" rel="noopener">electroglottography</a>.
+My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coretta-phd-thesis.pdf" target="_blank">here</a>.
+
+::: {#phd-thesis}
+:::
+::::
+
+# "At the margins"
+
+These projects cover marginalised/minoritised languages, communities, knowledge systems and ecologies.
+
+::: callout-note
+## Language and biological diversity
+
+This project with [Jessica Hampton](https://jesshampton.github.io) focusses on the relationship of linguistic and biological diversity.
+The project will be developed in three phases:
+
+-   Phase 1: Assessing the link between language endangerment and biodiversity intactness.
+
+-   Phase 2: Developing an index of linguistic diversity intactness.
+
+-   Phase 3: Assessing the link between linguistic and biological diversity intactness.
+:::
+
+::: callout-note
+## *Beyond*
+
+As part of this project with [Jessica Hampton](https://jesshampton.github.io), we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
+
+-   Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).
+
+-   Paper 2: Beyond the quantitative/qualitative dichotomy.
+
+-   Paper 3: TBD
+
+::: {#beyond}
+:::
+:::
+
+::: callout-note
+## Vitality of Gallo-Romance of Northern Italy
+
+In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
+
+::: {#grni}
+:::
+:::
+
+**Past projects**
+
+:::: {.callout-note collapse="true"}
+## Language practices of Emilian and Esperanto communities
+
+This project with [Jessica Hampton](https://jesshampton.github.io) investigated the relationship between language attitudes and competence in the communities of Emilian and Esperanto speakers.
+We find that the relationship is modulated by spaces of use: at lower proportions of spaces of use, language attitudes are more positively correlated with language competence, while at higher proportions of spaces of use, the relationship between attitude and competence is reduced.
+We propose that creating spaces for users of minoritised languages like Emilian could engender higher levels of language competence and hence language maintenance.
+
+::: {#emilianto}
+:::
+::::
+
+# Research methods
+
+::::: callout-note
+## Statistics for linguistics
+
+This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.
+
+<details>
+
+<summary>List</summary>
+
+:::: markdown
+::: {#statistics}
+:::
+::::
+
+</details>
+:::::
+
+::::: callout-note
+## R package development
+
+As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.
+
+<details>
+
+<summary>List</summary>
+
+:::: markdown
+::: {#r-packages}
+:::
+::::
+
+</details>
+:::::
+
+# Statistical collaborations
+
+:::: {.callout-note collapse="true"}
+## Vowel reduction in Polish
+
+Principal Investigators: Patrycja Strycharczuk, Małgorzata Ćavar.
+Work on stress-related vowel reduction in Polish: is vowel reduction in unstressed syllables the direct consequence of temporal reduction or temporal reduction alone is insufficient to explain the articulatory/spectral reduction?
+
+::: {#polish}
+:::
+::::
+
+:::: {.callout-note collapse="true"}
+## Historical syntax of English
+
+::: {#old-english}
+:::
+::::
+
+:::: {.callout-note collapse="true"}
+## Infant gestures and language development
+
+Project Team: Chen Zhao, Ludovica Serratrice and Thea Cameron-Faulkner (Lead).
+[Website](https://www.lucid.ac.uk/what-we-do/research/from-simple-to-complex/language-and-literacy-practices-in-uk-families/).
+
+I developed the statistical analysis for the package [Investigating prelinguistic development in three minority cultures](https://www.lucid.ac.uk/what-we-do/research/lucid-phase-1-completed-projects-2014-2019/variation-theme/prelinguistic-development-in-3-cultures/).
+
+::: {#infant-gestures}
+:::
+::::
+
+# Glossolects
+
+```{r}
+library(leaflet)
+library(readr)
+
+glossolocs <- read_csv("data/glossolocs.csv")
+
+leaflet(data = glossolocs) %>%
+  addTiles() %>%
+  addAwesomeMarkers(popup = ~glosso, icon = ~awesomeIcons(
+    icon = "circle",
+    library = "fa",
+    markerColor = colour
+  ))
+```
+
+<br>
+
+The map shows in blue the main [glossolects](research.qmd#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
+
+Overall, my interests and expertise cover the following macro-glossolects:
+
+-   Indo-European.
+-   Oceanic.
+-   South American.
+
+I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.

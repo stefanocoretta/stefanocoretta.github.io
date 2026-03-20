@@ -38,6 +38,16 @@
   compendium: "https://github.com/stefanocoretta/vow-height"
   project: "intrinsic-duration"
 
+- title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
+  type: paper
+  year: 2026
+  author: "Ziyuan Li, Stefano Coretta"
+  journal: "Aging, Neuropsychology, and Cognition"
+  info: "33(1). 1--28"
+  accepted: "https://doi.org/10.31234/osf.io/vjxtp_v1"
+  compendium: "https://github.com/Peter-Ziyuan/Meta-analysis_Bilingualism-and-Dementia"
+  doi: "10.1080/13825585.2025.2566699"
+
 - title: "Bayesian beta regressions with brms in R: A tutorial for phoneticians"
   type: paper
   open: true
@@ -48,15 +58,6 @@
   accepted: "https://doi.org/10.31219/osf.io/f9rqg_v3"
   compendium: "https://github.com/stefanocoretta/beta-phon"
   project: "statistics"
-
-- title: "Bilingualism Effect for Delaying Dementia Onset: A Bayesian Meta-Analysis"
-  type: paper
-  year: 2025
-  author: "Ziyuan Li, Stefano Coretta"
-  journal: "Aging, Neuropsychology, and Cognition"
-  accepted: "https://doi.org/10.31234/osf.io/vjxtp_v1"
-  compendium: "https://github.com/Peter-Ziyuan/Meta-analysis_Bilingualism-and-Dementia"
-  doi: "10.1080/13825585.2025.2566699"
 
 - title: "V2-Relatives in Old English"
   type: paper

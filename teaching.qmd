@@ -245,7 +245,7 @@ If you are looking for workshops run internally (in the LEL department of UoE), 
 ## Advanced
 
 ::: callout-important
-#### Ordinal models for Likert/rating-scale data
+#### `learnOrd`: Ordinal models for Likert/rating-scale data
 
 +-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Level**         | 🔴 Advanced                                                                                                                                                                                                                                                                                     |
@@ -263,19 +263,19 @@ If you are looking for workshops run internally (in the LEL department of UoE), 
 ::: callout-important
 #### Bayesian Priors in Linear Models
 
-+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Level**         | 🔴 Advanced                                                                                                                                                                                                                                                          |
-+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Prerequisites** | Need to be familiar with Bayesian Linear Models including Random Effects and/or have attended the *Introduction to Bayesian Linear Models* workshop. This is **not** suitable for students who have only attended the QML course (see below for dedicated workshop). |
-+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Materials**     | <https://stefanocoretta.github.io/learnBayes/> (Session 2)                                                                                                                                                                                                           |
-+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Recording**     | Unfortunately I forgot to record this, but you can watch the following videos from the [learnB4SS](https://learnb4ss.github.io) to learn about priors (these videos go into much more detail!).                                                                      |
-|                   |                                                                                                                                                                                                                                                                      |
-|                   | -   [learnB4SS — 03 Application to Regression II: Priors and Bayesian Updating (Part I)](https://media.ed.ac.uk/media/learnB4SS+%E2%80%94+03+Application+to+Regression+IIA+Priors+and+Bayesian+Updating+%28Part+I%29/1_vl395dhg)                                     |
-|                   |                                                                                                                                                                                                                                                                      |
-|                   | -   [learnB4SS — 03 Application to Regression II: Priors and Bayesian Updating (Part II)](https://media.ed.ac.uk/media/learnB4SS+%E2%80%94+03+Application+to+Regression+IIA+Priors+and+Bayesian+Updating+%28Part+II%29/1_6e35jw34)                                   |
-+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Level**         | 🔴 Advanced                                                                                                                                                                                                                        |
++-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Prerequisites** | Need to be familiar with Bayesian regression models including multilevel/mixed/hierarchical models.                                                                                                                                |
++-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Materials**     | [https://stefanocoretta.github.io/how-bayes-priors/](https://stefanocoretta.github.io/how-bayes-priors/#1)                                                                                                                         |
++-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Recording**     | Unfortunately I forgot to record this, but you can watch the following videos from the [learnB4SS](https://learnb4ss.github.io) to learn about priors (these videos go into much more detail!).                                    |
+|                   |                                                                                                                                                                                                                                    |
+|                   | -   [learnB4SS — 03 Application to Regression II: Priors and Bayesian Updating (Part I)](https://media.ed.ac.uk/media/learnB4SS+%E2%80%94+03+Application+to+Regression+IIA+Priors+and+Bayesian+Updating+%28Part+I%29/1_vl395dhg)   |
+|                   |                                                                                                                                                                                                                                    |
+|                   | -   [learnB4SS — 03 Application to Regression II: Priors and Bayesian Updating (Part II)](https://media.ed.ac.uk/media/learnB4SS+%E2%80%94+03+Application+to+Regression+IIA+Priors+and+Bayesian+Updating+%28Part+II%29/1_6e35jw34) |
++-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 :::
 
 ### References

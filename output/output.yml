@@ -1,13 +1,6 @@
 ---
 ## Papers
 
-- title: "Beyond the horizon: a more-than-human and holistic approach to language"
-  project: beyond
-  type: paper
-  year: submitted
-  author: "Gaya Seldon (pseud. Jessica Hampton, Stefano Coretta)"
-  submitted: "https://lingbuzz.net/lingbuzz/009790"
-
 - title: "A vitality assessment of Gallo-Romance of Northern Italy"
   project: grni
   type: paper
@@ -15,6 +8,14 @@
   author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
   submitted: "https://doi.org/10.31219/osf.io/fuzby_v1"
   compendium: "https://github.com/stefanocoretta/grni-vitality"
+
+- title: "Beyond the horizon: a more-than-human and holistic approach to language"
+  project: beyond
+  type: paper
+  year: accepted
+  journal: "Language & Ecology"
+  author: "Gaya Seldon (pseud. Jessica Hampton, Stefano Coretta)"
+  submitted: "https://doi.org/10.5281/zenodo.18800429"
 
 - title: "Multivariate analyses of tongue contours from ultrasound tongue imaging"
   type: paper
@@ -363,6 +364,13 @@
   location: "Aarhus University, 18 September, Denmark."
   
 ## Talks
+
+- title: "A comparison of the voicing effect in Northern English, Italian and Polish"
+  type: talk
+  year: 2024
+  location: "Poster presented at the British Association of Academic Phoneticians Colloquium (BAAP 2026)."
+  compendium: "https://github.com/stefanocoretta/ve-comp"
+  download: "../files/pubs/2026-baap.pdf"
 
 - title: "Comparing language attitudes in the speech communities of Emilian and Veneto"
   type: talk

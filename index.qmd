@@ -35,7 +35,7 @@ I was a postdoc researcher at the [Institute of Phonetics and Speech Processing]
 
 As part of my duties at the UoE LEL department, I develop and teach a statistics and research methods course ([QML](https://uoelel.github.io/qml/)); provide training for staff and students through topic-specific workshops ([STeW](https://uoelel.github.io/stew.html)); offer statistical support for dissertations, theses and academic research; and conduct research on methodological theory.
 
-My current research focusses on [[research methods]{.smallcaps}](orientation.qmd#methodological-theory) including statistics and Open Research practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org) and of [Open Sciences for a Post-Materialist Science](https://opensciences.org)).
+My current research focusses on [research methods]{.smallcaps} including statistics and Open Research practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org) and of [Open Sciences for a Post-Materialist Science](https://opensciences.org)).
 My past research covered different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](/posts/2026-05-29-views-on-language/index.qmd#phonetology)---the study of speech sounds and their relation to Human Language.
 For more details on my research see [Research](research.qmd) and my researcher's [Orientation](orientation.qmd) page.
 You can find a list of research outputs (papers, software, etc) in [Output](output/index.qmd).

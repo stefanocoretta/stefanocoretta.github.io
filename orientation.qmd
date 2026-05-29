@@ -19,7 +19,7 @@ This is a work in progress, in two senses:
 - In one sense, it is not exhaustive and I will be adding content as it occurs to me.
 - In the other sense, it is an ever-changing document, since I will frequently change my mind about any part(s) of content herein.
 
-# Positionality
+## Positionality
 
 Positionality statements are about a reflexive understanding of one's own world view and how it affects one’s own research [@darwinholmes2020; @goundar2025; @jafar2018; @lazard2020; @tomlinson2023].
 There isn't a single accepted way of writing a positionality statement nor what should be covered in them.
@@ -30,7 +30,7 @@ I was born and raised in Northern Italy, but I have been living in the United Ki
 Most of my current research is about research methods and how research practices shape linguistic research.
 In this sense, I have an in-group point of view, being myself a researcher.
 
-# Philosophical stance
+## Philosophical stance
 
 My philosophical stance is a syncretic integration of non-dual monism, anti-realism, holism, cosmopsychism, spiritualism, subjective Bayesian epistemology, and ecological awareness.[^1]
 
@@ -44,9 +44,14 @@ Holism (as in the systems view of life in @capra2018), the idea of a unified who
 Bayesian epistemology, which I use in my research and teach in my courses, is grounded on belief updating under uncertainty and inference given priors representing belief and evidence.
 Under this stance, quantitative methods are viewed and practised not in a reductionist way (explaining phenomena based entirely on lower-level terms) but simply as representing phenomena numerically as one way of operationalise entities, events and relations.
 
-# Methodological theory
+<!--1.  Science is not the only way to obtain knowledge. There are many epistemological practices or "ways of knowing". Like all ways of knowing, science is human activity.
+2.  I prefer to use the term [research]{.smallcaps} instead of science for all purposes.
+3.  Research has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
+4.  Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].-->
 
-From the point of view of methodological theory and practice, I am an active advocate of Open Research[^2] practices for a more transparent, well-grounded and reflexive scholarship.
+## Research practice
+
+From the point of view of research practice, I am an active advocate of Open Research[^2] practices for a more transparent, well-grounded and reflexive scholarship.
 **Open Research** encompasses "concepts of openness, transparency, rigor, reproducibility, replicability, and accumulation of knowledge" [@cruwell2019] put to the service of "making the content and process of producing evidence and claims transparent and accessible to others" [@munafo2017].
 
 [^2]: *Open Research* is a more inclusive term than the more common *Open Science* term.
@@ -55,21 +60,4 @@ I am also a supporter of the **Slow Research**[^3] movement, part of the broader
 
 [^3]: "Slow Research" is a more inclusive term for Open Science.
 
-Further ideas:
-
-1.  Science is not the only way to obtain knowledge. There are many epistemological practices or "ways of knowing". Like all ways of knowing, science is human activity.
-2.  I prefer to use the term [research]{.smallcaps} instead of science for all purposes.
-3.  Research has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
-4.  Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].
-
-<!-- TODO: ethics -->
-
-<!-- TODO: research project management -->
-
-<!-- TODO: methods as theory, theory = concepts + methods, theory and applications, basic science and applied science -->
-
-<!-- TODO: statistics -->
-
-<!-- TODO: philosophy of science: three books -->
-
-# References {.unnumbered}
+### References {.unnumbered}

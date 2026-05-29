@@ -83,9 +83,77 @@ listing:
 
 The following sections list current and past project by research area.
 
-# Phonetology
+# Research methods
+
+::::: callout-note
+## Statistics for linguistics
+
+This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.
+
+<details>
+
+<summary>List</summary>
+
+:::: markdown
+::: {#statistics}
+:::
+::::
+
+</details>
+:::::
 
 :::: callout-note
+## *Beyond*
+
+As part of this project with [Jessica Hampton](https://jesshampton.github.io), we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
+
+- Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).
+
+- Paper 2: Beyond the quantitative/qualitative dichotomy.
+
+- Paper 3: TBD
+
+::: {#beyond}
+:::
+::::
+
+::::: callout-note
+## R package development
+
+As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.
+
+<details>
+
+<summary>List</summary>
+
+:::: markdown
+::: {#r-packages}
+:::
+::::
+
+</details>
+:::::
+
+# Phonetology and linguistics
+
+:::: callout-note
+## Vitality of Gallo-Romance of Northern Italy
+
+In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
+
+::: {#grni}
+:::
+::::
+
+::: callout-note
+## Hemispheric differences in specificity effects of priming
+
+Project with [Jeremy Steffman](https://jsteffman.github.io) and Owen Raymond, looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.
+:::
+
+**Past projects**
+
+:::: {.callout-note collapse="true"}
 ## Intrinsic vowel duration and gestural distance
 
 Intrinsic vowel duration is the tendency for high vowels to be shorter and low vowels to be longer.
@@ -94,14 +162,6 @@ In this project I will investigate if articulator origin-to-target distance is s
 ::: {#intrinsic-duration}
 :::
 ::::
-
-::: callout-note
-## Hemispheric differences in specificity effects of priming
-
-Project with [Jeremy Steffman](https://jsteffman.github.io) looking at how auditory priming effects are modulated depending on which hemisphere processes the speech signal.
-:::
-
-**Past projects**
 
 :::: {.callout-note collapse="true"}
 ## Many Speech Analyses
@@ -148,48 +208,7 @@ My thesis is available <a href="https://stefanocoretta.github.io/docs/pubs/coret
 :::
 ::::
 
-# "At the margins"
-
-These projects cover marginalised/minoritised languages, communities, knowledge systems and ecologies.
-
-::: callout-note
-## Language and biological diversity
-
-This project with [Jessica Hampton](https://jesshampton.github.io) focusses on the relationship of linguistic and biological diversity.
-The project will be developed in three phases:
-
--   Phase 1: Assessing the link between language endangerment and biodiversity intactness.
-
--   Phase 2: Developing an index of linguistic diversity intactness.
-
--   Phase 3: Assessing the link between linguistic and biological diversity intactness.
-:::
-
-::: callout-note
-## *Beyond*
-
-As part of this project with [Jessica Hampton](https://jesshampton.github.io), we set out to write a triptych of papers united by the idea of going "beyond" current practices and dichotomies.
-
--   Paper 1: Beyond sociolinguistics (on the constructivist/structuralist dichotomy).
-
--   Paper 2: Beyond the quantitative/qualitative dichotomy.
-
--   Paper 3: TBD
-
-::: {#beyond}
-:::
-:::
-
-::: callout-note
-## Vitality of Gallo-Romance of Northern Italy
-
-In this project with [Jessica Hampton](https://jesshampton.github.io) and Simone De Cia, we are conducting a survey study of the vitality of Gallo-Romance in the north of Italy.
-
-::: {#grni}
-:::
-:::
-
-**Past projects**
+# Statistical collaborations
 
 :::: {.callout-note collapse="true"}
 ## Language practices of Emilian and Esperanto communities
@@ -201,44 +220,6 @@ We propose that creating spaces for users of minoritised languages like Emilian 
 ::: {#emilianto}
 :::
 ::::
-
-# Research methods
-
-::::: callout-note
-## Statistics for linguistics
-
-This is a long-term project about writing conceptual papers and practical tutorials on various statistical topics in linguistics.
-
-<details>
-
-<summary>List</summary>
-
-:::: markdown
-::: {#statistics}
-:::
-::::
-
-</details>
-:::::
-
-::::: callout-note
-## R package development
-
-As part of my ongoing work towards improving quantitative methods in linguistics, I develop and maintain a series of R packages.
-
-<details>
-
-<summary>List</summary>
-
-:::: markdown
-::: {#r-packages}
-:::
-::::
-
-</details>
-:::::
-
-# Statistical collaborations
 
 :::: {.callout-note collapse="true"}
 ## Vowel reduction in Polish
@@ -292,8 +273,8 @@ The map shows in blue the main [glossolects](research.qmd#linguistic-systems) I 
 
 Overall, my interests and expertise cover the following macro-glossolects:
 
--   Indo-European.
--   Oceanic.
--   South American.
+- Indo-European.
+- Oceanic.
+- South American.
 
 I would very much welcome offers of collaboration on glossolects from other areas of the world, especially from Africa and Asia, which are alas the ones I am the least familiar with.

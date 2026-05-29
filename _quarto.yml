@@ -21,8 +21,6 @@ website:
         text: Teaching
       - href: orientation.qmd
         text: Orientation
-      - href: projects.qmd
-        text: Projects
       - href: output/index.qmd
         text: Output
       - href: blog.qmd

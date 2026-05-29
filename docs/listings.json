@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/2026-05-29-views-on-language/index.html",
       "/posts/2025-12-03-vowel-formants/index.html",
       "/posts/2025-11-08-expected-predictions/index.html",
       "/posts/2025-10-31-research-and-society/index.html",
@@ -31,11 +32,11 @@
     ]
   },
   {
-    "listing": "/output/index.html",
+    "listing": "/research.html",
     "items": []
   },
   {
-    "listing": "/projects.html",
+    "listing": "/output/index.html",
     "items": []
   }
 ]

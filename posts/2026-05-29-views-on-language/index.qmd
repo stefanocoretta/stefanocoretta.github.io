@@ -1,0 +1,106 @@
+---
+title: My views on language and linguistics
+author: Stefano Coretta
+date: 2026-05-29
+execute: 
+  echo: true
+bibliography: ../../references.bib
+---
+
+
+The following sections outline preliminary drafts of models of specific areas of language, of language and of linguistics I envision.
+
+## Phonetology
+
+In a wish to transcend the phonetics/phonology divide [@soskuthy2013; @ohala1990; @ohala2005], I suggest the term [phonetology]{.smallcaps} (from a combination of *phonet*ics and phon*ology*) to refer to the study of what are traditionally investigated by phonology, phonetics and speech science.
+
+The postulation of three levels of analysis (phonological, phonetic and motor-perceptual) is compatible with neuro-biological specialisations of the brain cortex [@basilakos2018; @fedorenko2020; @ayyash2021; @fedorenko2024; @fedorenko2024a; @regev2024].
+The tripartite nature of phonetological systems is reflected in the grammar architecture expounded in @bermudezotero2015 and @turk2020.
+
+Although this newly-coined term contains the Greek root *phon-* 'sound', its meaning is by no means restricted to the realm of spoken languages, as its definition makes explicit.
+Sign languages, and other communicative systems yet to be "discovered", are included.
+The term [phonetological system]{.smallcaps} can be used as an umbrella term that covers both visual and sound systems.
+
+## Phonetological systems
+
+A *phonetological system* is comprised of a set of [phonetological units]{.smallcaps} and their [relationships]{.smallcaps}.
+Alas, I could not come up yet with a proper definition of "phonetological unit" that would subsume units of both visual and sound systems.
+Thoughts on this are much appreciated.
+
+In my view of phonetology, a phonetological system has the following properties:
+
+- It is a **dynamic system** [@thelen2006; @vihman2014].
+- It is a **physio-neuro-cognitive** system. It has:
+  - A **physical** component [@ohala1990; @ohala2005].
+  - A **neuro-cognitive** component.
+    - It is *rich* in details [@johnson1997; @pierrehumbert2001; @bybee2002].
+    - It is *self-organising* and *emergent* [@wedel2007; @wedel2011].
+    - It uses both *stored exemplars and stored abstractions* at multiple levels [@ambridge2020].
+- It is part of a complex **socio-cultural system** [@deboer2015; @foulkes2006; @thompson2016].
+
+I also consider these statements to be extendible more generally to Human Language as a holistic system.
+
+## Linguistic systems {#sec-lingsys}
+
+In light of the brilliant ideas expounded in @cysouw2013 and @vanrooy2021, I believe linguistics would benefit from a formalised notion of [linguistic system]{.smallcaps} that would encompass any kind of system, from linguistic families down to idiolects, and any type of variation.
+
+@cysouw2013 propose a meta-model based on linguistic documentation and description.
+From this model, I borrow two concepts:
+
+- **Glossonym** (p. 339)
+
+  A [glossonym]{.smallcaps} is a name (noun) used to refer to a linguistic system, whether a language, a lect, or a genealogically or areally related group of languages.
+  A glossonym does not have a referent nor a significant, but rather it is just a signifier.
+  For example, the glossonym *Altaic*, no actual reference is made to any linguistic entity, but only to the fact that this word has been used to refer to linguistic systems.
+
+- **Doculect** (p 342)
+
+  A [doculect]{.smallcaps} (i.e. documented lect) is a linguistic entity as it is documented/described in a specific resource (book, paper, booklet, website, etc.).
+  This term is agnostic as to the type of linguistic entity (family, language, variety, etc.).
+  A doculect is the pairing of a glossonym and a resource.
+  An example: [@howard1986; *mawayana*].
+
+@cysouw2013 [p. 347] also introduce the concept of "languoid" which refers to "any (possibly hierarchical) grouping of doculects, in principle ranging from a set of idiolects to a high-level language family".
+
+I propose instead the term [glossolect]{.smallcaps}, which---unlike languoid---does not necessarily entail a strictly-nested hierarchical structure.
+This difference accommodates those cases where linguistic grouping is not based on clear-cut splits, but rather based on a network of shared features (cases which are possibly more frequent), in which a doculect can in fact belong to different intersecting glossolects.
+
+A glossolect is thus a set of doculects and can refer to any of a macro-family, a family, a dialect continuum, a linkage, a language, a variety, an idiolect, etc.
+
+In terms of types of linguistic variation, I borrow from classical sociolinguistics (references TBA):
+
+- **Diachronic**: variation in *time*.
+- **Diatopic**: variation in *geographical space* (less frequently used is **diachoric** for more restricted spatial variation).
+- **Diastratic**: variation based on *social class and groups*.
+- **Diaphasic**: variation based on *linguistic and social context* (includes *registers* and *slangs*).
+- **Diamesic**: variation based on the *means of communication* (e.g., visual/oral vs written, web vs print, etc.).
+
+In sum:
+
+- A **glossolect** is a set of *doculects*.
+- A **doculect** is a pairing of a *glossonym* and a *resource*.
+- A **glossonym** is a name used to refer to a linguistic entity.
+- A **resource** is any object (publication, media, etc.) containing linguistic materials.
+- Glossolects can be situated within a specific **diachronic, diatopic, diastratic, diaphasic, diamesic** context.
+
+## Linguistics and language
+
+The following sections provide a thought-out description of my ontological and epistemological beliefs in relation to "linguistics" and its object(s) of study.
+The reader should interpret all of the statements made here as "my personal opinion".
+In some cases *opinion* refers to my [expert opinion]{.smallcaps}, in others to my [intuitions]{.smallcaps} (for the use of intuition in science, see the work by physicist [Fritjof Capra](https://www.fritjofcapra.net)).
+With time, I will add more references where/if relevant.
+
+1.  [Human Language]{.smallcaps} is the human ability to communicate through a language, and a [language]{.smallcaps} is a specific communicative system used by a specific group of humans.
+2.  [linguisticality]{.smallcaps} is the prerequisite for Human Language [@haspelmath2020].
+3.  If one defines [Human Language]{.smallcaps} as the human ability to communicate through a language, then saying that only humans have Human Language is a tautology.
+4.  All living beings are capable of communicating [even plants and fungi, @mancuso2015].
+5.  There is no agreement as to what [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} actually are.
+6.  There is no agreement as to whether [language]{.smallcaps}, [Human Language]{.smallcaps}, [linguisticality]{.smallcaps} are the same thing or if they in principle refer to different entities.
+7.  There is no agreement as to which components of the human ability to communicate through a language are [innate]{.smallcaps} and which are [learned]{.smallcaps}.
+8.  There is no agreement as to what [innate]{.smallcaps} actually means.
+9.  There is no agreement as to whether the human ability to communicate through a language is entirely [domain-specific]{.smallcaps} or entirely [domain-general]{.smallcaps}, or if it is a bit of both.
+    1.  If it is a bit of both, there is no agreement as to which components are [domain-specific]{.smallcaps} and which are [domain-general]{.smallcaps}.
+10. There is no agreement as to what a [language]{.smallcaps} is. In fact, in English *language* is used at times to mean either the human ability/capacity to communicate with a language or to mean a specific language (sometimes written *Language* and *language* respectively). See @sec-lingsys.
+11. Linguistics is usually defined as a "science that studies Human Language", however there is no agreement as to what [science]{.smallcaps} actually is.
+
+## References {.unnumbered}

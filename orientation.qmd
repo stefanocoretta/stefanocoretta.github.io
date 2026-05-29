@@ -16,8 +16,8 @@ This includes, but it is not limited to, lived experiences, social positionality
 
 This is a work in progress, in two senses:
 
--   In one sense, it is not exhaustive and I will be adding content as it occurs to me.
--   In the other sense, it is an ever-changing document, since I will frequently change my mind about any part(s) of content herein.
+- In one sense, it is not exhaustive and I will be adding content as it occurs to me.
+- In the other sense, it is an ever-changing document, since I will frequently change my mind about any part(s) of content herein.
 
 # Positionality
 
@@ -51,11 +51,16 @@ From the point of view of methodological theory and practice, I am an active adv
 
 [^2]: *Open Research* is a more inclusive term than the more common *Open Science* term.
 
-<!-- TODO: slow science -->
-
 I am also a supporter of the **Slow Research**[^3] movement, part of the broader "slow" movement (as in "slow-food"), which can be summarised with this quote from the [manifesto](http://slow-science.org): "We do need time to think. We do need time to digest. We do need time to misunderstand each other".
 
 [^3]: "Slow Research" is a more inclusive term for Open Science.
+
+Further ideas:
+
+1.  Science is not the only way to obtain knowledge. There are many epistemological practices or "ways of knowing". Like all ways of knowing, science is human activity.
+2.  I prefer to use the term [research]{.smallcaps} instead of science for all purposes.
+3.  Research has both [objective]{.smallcaps} and [subjective]{.smallcaps} components.
+4.  Statistics and statistical inference have both [objective]{.smallcaps} and [subjective]{.smallcaps} components [@gelman2017].
 
 <!-- TODO: ethics -->
 
@@ -67,4 +72,4 @@ I am also a supporter of the **Slow Research**[^3] movement, part of the broader
 
 <!-- TODO: philosophy of science: three books -->
 
-## References {.unnumbered}
+# References {.unnumbered}

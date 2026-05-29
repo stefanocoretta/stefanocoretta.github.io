@@ -33,7 +33,7 @@ I am a Lecturer (= Assistant Professor) in the [Linguistics and English Language
 I received my PhD degree in linguistics (with a thesis on ultrasound tongue imaging and electroglottography) from the University of Manchester (UK) in 2020.
 I was a postdoc researcher at the [Institute of Phonetics and Speech Processing](https://www.phonetik.uni-muenchen.de/) at the Ludwig-Maximilians-Universität München (Germany) from 2019 until 2021, when I joined the University of Edinburgh.
 
-As part of my duties at the UoE LEL department, I develop and teach a statistics and research methods course ([QML](https://uoelel.github.io/qml/)), provide training for staff and students through topic-specific workshops ([STeW](https://uoelel.github.io/stew.html)) and offer statistical support for dissertations, theses and academic research.
+As part of my duties at the UoE LEL department, I develop and teach a statistics and research methods course ([QML](https://uoelel.github.io/qml/)); provide training for staff and students through topic-specific workshops ([STeW](https://uoelel.github.io/stew.html)); offer statistical support for dissertations, theses and academic research; and conduct research on methodological theory.
 
 My current research focusses on [[research methods]{.smallcaps}](orientation.qmd#methodological-theory) including statistics and Open Research practices (I am a signatory of [Commitment to Research Transparency and Open Science](http://www.researchtransparency.org) and of [Open Sciences for a Post-Materialist Science](https://opensciences.org)).
 My past research covered different areas of *linguistics*, with a focus on [[phonetology]{.smallcaps}](research.qmd#phonetology)---the study of speech sounds and their relation to Human Language.

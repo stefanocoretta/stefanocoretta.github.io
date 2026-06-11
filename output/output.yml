@@ -4,9 +4,9 @@
 - title: "A vitality assessment of Gallo-Romance of Northern Italy"
   project: grni
   type: paper
-  year: submitted
+  year: accepted
   author: "Stefano Coretta, Simone De Cia, Jessica Hampton"
-  submitted: "https://doi.org/10.31219/osf.io/fuzby_v1"
+  accepted: "https://doi.org/10.31219/osf.io/fuzby_v1"
   compendium: "https://github.com/stefanocoretta/grni-vitality"
 
 - title: "Beyond the horizon: a more-than-human and holistic approach to language"
@@ -25,7 +25,7 @@
   author: "Stefano Coretta, Georges Sakr"
   journal: "Language and Speech"
   doi: "10.1177/00238309261419120"
-  submitted: "https://stefanocoretta.github.io/mv_uti/"
+  accepted: "https://stefanocoretta.github.io/mv_uti/"
   compendium: "https://github.com/stefanocoretta/mv_uti"
   project: "statistics"
 

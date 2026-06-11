@@ -5,7 +5,9 @@ set_up <- function() {
   remotes <- c(
     "stan-dev/cmdstanr",
     "stefanocoretta/coretta2018itapol",
-    "stefanocoretta/coretta2019eng"
+    "stefanocoretta/coretta2019eng",
+    "stefanocoretta/coretta2018itaegg",
+    "Mikata-Project/ggthemr"
   )
   
   # Install GitHub packages
@@ -17,7 +19,7 @@ set_up <- function() {
   # Drop GitHub packages from deps list. pak doesn't know where to find them.
   deps <- setdiff(
     deps,
-    c("cmdstanr", "coretta2018itapol", "coretta2019eng")
+    c("cmdstanr", "coretta2018itapol", "coretta2019eng", "coretta2018itaegg", "ggthemr")
   )
   
   # Install all dependencies (except the ones from GitHub)

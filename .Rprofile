@@ -1,23 +1,27 @@
-source("renv/activate.R")
-
-while(TRUE) {
+set_up <- function() {
+  if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
+  if (!requireNamespace("renv", quietly = TRUE)) pak::pak("renv")
   
-  t <- try(renv::restore(prompt=FALSE, clean=FALSE))
+  remotes <- c(
+    "stan-dev/cmdstanr",
+    "stefanocoretta/coretta2018itapol",
+    "stefanocoretta/coretta2019eng"
+  )
   
-  if(!inherits(t, "try-error")) {
-    break
-  }
+  # Install GitHub packages
+  pak::pak(remotes)
   
-  txt <- as.character(t)
-  r <- gregexec("install of package '(.*?)' failed", txt, perl=TRUE)
+  # Get list of necessary packages
+  deps <- unique(renv::dependencies()[,2])
   
-  if( any(r[[1]] == -1) ) {
-    break
-  }
+  # Drop GitHub packages from deps list. pak doesn't know where to find them.
+  deps <- setdiff(
+    deps,
+    c("cmdstanr", "coretta2018itapol", "coretta2019eng")
+  )
   
-  pkg <- regmatches(txt,r)[[1]][2,1]
+  # Install all dependencies (except the ones from GitHub)
+  pak::pak(deps)
   
-  renv::update(prompt=FALSE, packages=pkg)
-  renv::record(pkg)
-  
+  cmdstanr::check_cmdstan_toolchain()
 }

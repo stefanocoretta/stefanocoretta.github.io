@@ -95,13 +95,13 @@
   compendium: "https://github.com/stefanocoretta/emilian-esperanto"
   project: "emilianto"
 
-- title: "Glossolects"
-  type: paper
-  year: 2024
-  author: "Stefano Coretta, Jessica Hampton, Stephen Nichols"
-  journal: "Octopus"
-  doi: "10.57874/3k4a-5m61"
-  manuscript: "https://doi.org/10.57874/3k4a-5m61"
+# - title: "Glossolects"
+#   type: paper
+#   year: 2024
+#   author: "Stefano Coretta, Jessica Hampton, Stephen Nichols"
+#   journal: "Octopus"
+#   doi: "10.57874/3k4a-5m61"
+#   manuscript: "https://doi.org/10.57874/3k4a-5m61"
 
 - title: "Multidimensional signals and analytic flexibility: Estimating degrees of freedom in human speech analyses"
   type: paper

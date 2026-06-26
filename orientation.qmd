@@ -58,6 +58,6 @@ From the point of view of research practice, I am an active advocate of Open Res
 
 I am also a supporter of the **Slow Research**[^3] movement, part of the broader "slow" movement (as in "slow-food"), which can be summarised with this quote from the [manifesto](http://slow-science.org): "We do need time to think. We do need time to digest. We do need time to misunderstand each other".
 
-[^3]: "Slow Research" is a more inclusive term for Open Science.
+[^3]: "Slow Research" is a more inclusive term for Slow Science.
 
 ### References {.unnumbered}

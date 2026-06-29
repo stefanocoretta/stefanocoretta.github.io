@@ -1,7 +1,7 @@
 ---
 title: My views on language and linguistics
 author: Stefano Coretta
-date: 2026-05-29
+date: 2021-05-29
 execute: 
   echo: true
 bibliography: ../../references.bib

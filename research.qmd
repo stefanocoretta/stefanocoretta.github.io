@@ -288,7 +288,7 @@ leaflet(data = glossolocs) %>%
 
 <br>
 
-The map shows in blue the main [glossolects](/posts/2026-05-29-views-on-language/index.qmd#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
+The map shows in blue the main [glossolects](/posts/2021-05-29-views-on-language/index.qmd#linguistic-systems) I work(ed) with, and in red glossolects I have studied during my time at University and forgotten to different degrees (approximate locations).
 
 Overall, my interests and expertise cover the following macro-glossolects:
 

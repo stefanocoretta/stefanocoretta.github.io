@@ -2,7 +2,6 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/2026-05-29-views-on-language/index.html",
       "/posts/2025-12-03-vowel-formants/index.html",
       "/posts/2025-11-08-expected-predictions/index.html",
       "/posts/2025-10-31-research-and-society/index.html",
@@ -13,6 +12,7 @@
       "/posts/2021-08-21-regression-models-a-cheat-sheet/index.html",
       "/posts/2021-07-20-contrasts/index.html",
       "/posts/2021-07-04-plotting-the-area-under-the-curve/index.html",
+      "/posts/2021-05-29-views-on-language/index.html",
       "/posts/2021-04-24-on-phonologisation/index.html",
       "/posts/2021-04-22-vot-and-place-of-articulation/index.html",
       "/posts/2021-03-28-methods-as-theory/index.html",
